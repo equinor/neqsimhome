@@ -10,4 +10,4 @@ NeqSim toolboxes are avalable via GitHub for alternative programming languages. 
 * [NeqSim Python/Colab](https://github.com/EvenSol/NeqSim-Colab)
 
 ## Getting Started
-See the [NeqSim Java Wiki](https://github.com/equinor/neqsimsource/wiki) for how to use the NeqSim Java API.
+See the [NeqSim Java Wiki](https://github.com/equinor/neqsimsource/wiki) for how to use the NeqSim Java API. The NeqSim Matlab Wiki for how to use the [Matlab toolbox](https://github.com/equinor/neqsimmatlab/wiki)
