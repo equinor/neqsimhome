@@ -6,7 +6,7 @@ The basis for NeqSim is a library of fundamental mathematical models related to 
 
 The original NeqSim web page is hosted at [NTNU](http://folk.ntnu.no/solbraa/neqsim/NeqSim.htm)
 
-## The NeqSim project
+## NeqSim project
 The NeqSim library is written in the Java programming language. The source code and java libraries can be downloaded from [the NeqSim Java repository](https://github.com/equinor/neqsim)
 
 ## NeqSim toolboxes
