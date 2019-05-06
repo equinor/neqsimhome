@@ -1,37 +1,13 @@
-## Welcome to NeqSim GitHub Pages
+# NeqSim
+NeqSim (Non-Equilibrium Simulator) is a Java library for estimation of fluid behavior and process design for oil and gas production.
+The basis for NeqSim is a library of fundamental mathematical models related to phase behavior and physical properties of oil and gas.  NeqSim is easilly extended with new method.
 
-You can use the [editor on GitHub](https://github.com/equinor/neqsimhome/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## NeqSim Projects
+NeqSim toolboxes are avalable via GitHub for alternative programming languages. See the project wiki pages for how to use the tools.
+* [Java](https://github.com/equinor/neqsim)
+* [Matlab](https://github.com/equinor/neqsimmatlab)
+* [Python](https://github.com/equinor/neqsimpython)
+* [NeqSim Python/Colab](https://github.com/EvenSol/NeqSim-Colab)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/equinor/neqsimhome/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Getting Started
+See the [NeqSim Java Wiki](https://github.com/equinor/neqsimsource/wiki) for how to use the NeqSim Java API.
