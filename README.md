@@ -27,3 +27,15 @@ See the [NeqSim Java Wiki](https://github.com/equinor/neqsimsource/wiki) for how
 * Demo of NeqSim in Colab (Python)
 * Getting started as a NeqSim developer
 
+## Examples
+
+Java:
+* Thermodynamic calculations
+* Calculation of physical properties
+* Process simulation
+
+Matlab:
+* Thermodynamic and process calculations
+
+Python
+*  Thermodynamic and process calculations
