@@ -21,9 +21,9 @@ NeqSim toolboxes are avalable via GitHub for alternative programming languages. 
 ## Getting started
 See the [NeqSim Java Wiki](https://github.com/equinor/neqsimsource/wiki) for how to use the NeqSim Java API. The NeqSim Matlab Wiki for how to use the [Matlab toolbox](https://github.com/equinor/neqsimmatlab/wiki). 
 
-* Getting started using NeqSim in Java
-* Getting started using NeqSim in Matlab
-* Getting started using NeqSim in Python
+* [Getting started using NeqSim in Java](https://github.com/equinor/neqsim/wiki/Getting-started-with-NeqSim-and-Github)
+* [Getting started using NeqSim in Matlab](https://github.com/equinor/neqsimmatlab/wiki/Getting-started-with-NeqSim-in-Matlab)
+* [Getting started using NeqSim in Python](https://github.com/equinor/neqsimpython/wiki/Getting-started-with-NeqSim-in-Python)
 * Demo of NeqSim in Colab (Python)
 * Getting started as a NeqSim developer
 
