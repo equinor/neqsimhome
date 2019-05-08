@@ -26,14 +26,13 @@ See the [NeqSim Java Wiki](https://github.com/equinor/neqsimsource/wiki) for how
 * [Getting started as a NeqSim developer](https://github.com/equinor/neqsim/wiki/Getting-started-as-a-NeqSim-developer)
 
 ## Examples
-
-Java:
+#### Java:
 * [Thermodynamic calculations](https://github.com/equinor/neqsim/tree/master/src/main/java/neqsim/thermo/util/example)
 * [Calculation of physical properties](https://github.com/equinor/neqsim/tree/master/src/main/java/neqsim/physicalProperties/util/examples)
 * [Process simulation](https://github.com/equinor/neqsim/tree/master/src/main/java/neqsim/processSimulation/util/example)
-Matlab:
+#### Matlab:
 * [Thermodynamic and process calculations](https://github.com/equinor/neqsimmatlab/tree/master/example)
-Python
+#### Python
 *  [Thermodynamic and process calculations in Jupyter](https://github.com/equinor/neqsimpython/tree/master/jupyter)
 
 ## NeqSim web application
