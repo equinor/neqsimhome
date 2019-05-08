@@ -4,9 +4,6 @@ The basis for NeqSim is fundamental mathematical models related to phase behavio
 
 The original NeqSim web page is hosted at [NTNU](http://folk.ntnu.no/solbraa/neqsim/NeqSim.htm)
 
-## NeqSim Web interface
-A [NeqSim web interface](http://129.241.62.72:8080/NeqSimServer3/faces/Login.jsp) has been developed to run calculation via  a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium conditions can be simulated in the web application.
-
 ## NeqSim project in GitHub
 The NeqSim library is written in the Java programming language. The source code and libraries are hosted in GitHub
 
@@ -40,3 +37,6 @@ Matlab:
 
 Python
 *  [Thermodynamic and process calculations in Jupyter](https://github.com/equinor/neqsimpython/tree/master/jupyter)
+
+## NeqSim web application
+A [NeqSim web interface](http://129.241.62.72:8080/NeqSimServer3/faces/Login.jsp) has been developed to run calculation via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium evaluations can be run in the web application.
