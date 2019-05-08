@@ -36,4 +36,4 @@ See the [NeqSim Java Wiki](https://github.com/equinor/neqsimsource/wiki) for how
 *  [Thermodynamic and process calculations in Jupyter](https://github.com/equinor/neqsimpython/tree/master/jupyter)
 
 ## NeqSim web application
-A [NeqSim web interface](http://129.241.62.72:8080/NeqSimServer3/faces/Login.jsp) has been developed to run calculation via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium evaluations can be run in the web application.
+A [NeqSim web application](http://129.241.62.72:8080/NeqSimServer3/faces/Login.jsp) has been developed to run calculation via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium evaluations can be run in the web application.
