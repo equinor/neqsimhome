@@ -7,12 +7,12 @@ The basis for NeqSim is fundamental mathematical models related to phase behavio
 The original NeqSim web page is hosted at [NTNU](http://folk.ntnu.no/solbraa/neqsim/NeqSim.htm)
 
 ## NeqSim project in GitHub
-The NeqSim library is written in the Java programming language. The source code and library releases are hosted in GitHub
+The NeqSim library is written in the Java programming language. The source code and libraries are hosted in GitHub
 
 * [NeqSim Java](https://github.com/equinor/neqsim)
 
 ## NeqSim toolboxes in GitHub
-NeqSim toolboxes are avalable via GitHub for alternative programming languages. See the project wiki pages for how to use the tools.
+NeqSim toolboxes are avalable via GitHub for alternative programming languages.
 
 * [NeqSim Matlab](https://github.com/equinor/neqsimmatlab)
 * [NeqSim Python](https://github.com/equinor/neqsimpython)
