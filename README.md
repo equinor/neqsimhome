@@ -31,10 +31,8 @@ Java:
 * [Thermodynamic calculations](https://github.com/equinor/neqsim/tree/master/src/main/java/neqsim/thermo/util/example)
 * [Calculation of physical properties](https://github.com/equinor/neqsim/tree/master/src/main/java/neqsim/physicalProperties/util/examples)
 * [Process simulation](https://github.com/equinor/neqsim/tree/master/src/main/java/neqsim/processSimulation/util/example)
-
 Matlab:
 * [Thermodynamic and process calculations](https://github.com/equinor/neqsimmatlab/tree/master/example)
-
 Python
 *  [Thermodynamic and process calculations in Jupyter](https://github.com/equinor/neqsimpython/tree/master/jupyter)
 
