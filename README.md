@@ -26,7 +26,8 @@ See the [NeqSim Java Wiki](https://github.com/equinor/neqsimsource/wiki) for how
 * [Getting started as a NeqSim developer](https://github.com/equinor/neqsim/wiki/Getting-started-as-a-NeqSim-developer)
 
 ## NeqSim discussion
-Discussions related to NeqSim development and use is done in the using [Slack for NeqSim](https://join.slack.com/t/neqsim/shared_invite/enQtNjU1ODQ1MDQyMjEzLWU5MWEyNDA3YTlmNThmMGQ1OGMyODgzYzdlZTM5NTVjNDMzOGIyOTU4MTYwNzZkNmZiNDczZjBjMGZkNzlkZTE)
+Discussions related to NeqSim development and use is done in the using [Slack for NeqSim](https://neqsim.slack.com). 
+Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtNjU1ODQ1MDQyMjEzLWU5MWEyNDA3YTlmNThmMGQ1OGMyODgzYzdlZTM5NTVjNDMzOGIyOTU4MTYwNzZkNmZiNDczZjBjMGZkNzlkZTE) to join the group.
 
 ## Examples
 #### Java:
