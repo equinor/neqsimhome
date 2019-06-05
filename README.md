@@ -25,6 +25,9 @@ See the [NeqSim Java Wiki](https://github.com/equinor/neqsimsource/wiki) for how
 * [Demo of NeqSim in Colab (Python)](https://colab.research.google.com/drive/1DDeTi5iUjJqb_hCtqIZqosbLgW3b3SF6#scrollTo=9VqtmS_MpS6M)
 * [Getting started as a NeqSim developer](https://github.com/equinor/neqsim/wiki/Getting-started-as-a-NeqSim-developer)
 
+## NeqSim discussion
+Discussions related to NeqSim development and use is done in the using [Slack for NeqSim](https://join.slack.com/t/neqsim/shared_invite/enQtNjU1ODQ1MDQyMjEzLWU5MWEyNDA3YTlmNThmMGQ1OGMyODgzYzdlZTM5NTVjNDMzOGIyOTU4MTYwNzZkNmZiNDczZjBjMGZkNzlkZTE)
+
 ## Examples
 #### Java:
 * [Thermodynamic calculations](https://github.com/equinor/neqsim/tree/master/src/main/java/neqsim/thermo/util/example)
