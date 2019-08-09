@@ -41,6 +41,12 @@ Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtNzIw
 #### Python
 *  [Thermodynamic and process calculations in Jupyter](https://github.com/equinor/neqsimpython/tree/master/jupyter)
 
+#### .NET
+
+* NeqSim Excel user interface
+
+* Cape-Open plugin to process simulators
+
 ## NeqSim web application
 A  web application has been developed to run calculation using neqsim via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium calculations can be run in the web application.
 * [NeqSim Web on Github](https://github.com/equinor/neqsimweb)
