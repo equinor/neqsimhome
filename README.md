@@ -1,5 +1,5 @@
 ## What is NeqSim?
-NeqSim (Non-Equilibrium Simulator) is a library for estimation of fluid behavior for oil and gas production. NeqSim can be used as a stand alone tool via Excel or a web interface. It is also easilly integrated computer programs via java, python, .NET and Matlab interfaces. The basis for NeqSim is fundamental mathematical models related to phase behavior and physical properties of oil and gas.
+NeqSim (Non-Equilibrium Simulator) is a library for estimation of fluid behaviour for oil and gas production. NeqSim can be used as a stand-alone tool via Excel or NeqSimWeb. It can easily be integrated in computer programs via availabe interfaces in java, python, .NET and Matlab. The basis for NeqSim is fundamental mathematical models related to phase behaviour and physical properties of oil and gas.
 
 The original NeqSim web page is hosted at [NTNU](http://folk.ntnu.no/solbraa/neqsim/NeqSim.htm)
 
