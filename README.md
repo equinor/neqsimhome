@@ -41,7 +41,7 @@ Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtNzIw
 #### Python
 *  [Thermodynamic and process calculations in Jupyter](https://github.com/equinor/neqsimpython/tree/master/jupyter)
 
-#### .NET
+#### .NET  (to be available in Github)
 
 * NeqSim Excel user interface
 
