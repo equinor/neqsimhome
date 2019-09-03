@@ -27,7 +27,7 @@ NeqSim is integrated in computer programs via interfaces in java, python, .NET a
 
 ## NeqSim discussion
 Discussions related to NeqSim development and use is done using [Slack for NeqSim](https://neqsim.slack.com). 
-Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtNzIwMzk5MTcwMTMyLTQ4MDg3ZTM4NWE1MjQyMjQ1NjczZGVkMjVmNWY0MzNiMDdkMThlYjFkNTYyMTBmNjg0ZGJhOGVhNDE0MDIxYzYE) to join the group.
+Use the [invitation link](https://join.slack.com/t/neqsim/signup) to join the group.
 
 ## Examples
 #### Java:
