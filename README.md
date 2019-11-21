@@ -9,7 +9,7 @@ The NeqSim library is written in the Java programming language. The source code 
 * [NeqSim Java](https://github.com/equinor/neqsim)
 
 ## NeqSim toolboxes in GitHub
-NeqSim toolboxes are avalable via GitHub for alternative programming languages.The NeqSim .NET toolbox has restrected access.
+NeqSim toolboxes are avalable via GitHub for alternative programming languages.The NeqSim .NET toolbox has restricted access.
 
 * [NeqSim Matlab](https://github.com/equinor/neqsimmatlab)
 * [NeqSim Python](https://github.com/equinor/neqsimpython)
@@ -41,7 +41,7 @@ Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtODQ1
 #### Python
 *  [Thermodynamic and process calculations in Jupyter](https://github.com/equinor/neqsimpython/tree/master/jupyter)
 
-#### .NET  (internal)
+#### .NET  (restricted access)
 
 * NeqSim Excel user interface
 * Cape-Open plugin to process simulators
