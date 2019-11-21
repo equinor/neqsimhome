@@ -9,7 +9,7 @@ The NeqSim library is written in the Java programming language. The source code 
 * [NeqSim Java](https://github.com/equinor/neqsim)
 
 ## NeqSim toolboxes in GitHub
-NeqSim toolboxes are avalable via GitHub for alternative programming languages.
+NeqSim toolboxes are avalable via GitHub for alternative programming languages.The NeqSim .NET toolbox has restrected access.
 
 * [NeqSim Matlab](https://github.com/equinor/neqsimmatlab)
 * [NeqSim Python](https://github.com/equinor/neqsimpython)
