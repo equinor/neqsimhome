@@ -45,7 +45,7 @@ Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtODQ1
 #### NeqSim.NET
 * [NeqSim .NET](https://github.com/equinor/neqsimNET/tree/master/examples)
 
-#### Excel/Cape Open  (restricted access)
+#### Excel/Cape Open (restricted access)
 * NeqSim Excel user interface
 * Cape-Open plugin to process simulators
 
