@@ -42,7 +42,7 @@ Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtODQ1
 #### Python
 *  [Thermodynamic and process calculations in Jupyter](https://github.com/equinor/neqsimpython/tree/master/jupyter)
 
-#### .NET  (restricted access)
+#### NeqSim.NET
 [NeqSim .NET](https://github.com/equinor/neqsimNET/tree/master/examples)
 
 #### Excel/Cape Open  (restricted access)
