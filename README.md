@@ -14,7 +14,8 @@ NeqSim toolboxes are avalable via GitHub for alternative programming languages.T
 * [NeqSim Matlab](https://github.com/equinor/neqsimmatlab)
 * [NeqSim Python](https://github.com/equinor/neqsimpython)
 * [NeqSim Python/Colab](https://github.com/EvenSol/NeqSim-Colab)
-* [NeqSim .NET](https://github.com/equinor/neqsimcapeopen) 
+* [NeqSim .NET](https://github.com/equinor/neqsimNET)
+* [NeqSim Cape Open](https://github.com/equinor/neqsimcapeopen) 
 
 ## Getting started
 NeqSim is integrated in computer programs via interfaces in java, python, .NET and Matlab.
@@ -42,7 +43,9 @@ Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtODQ1
 *  [Thermodynamic and process calculations in Jupyter](https://github.com/equinor/neqsimpython/tree/master/jupyter)
 
 #### .NET  (restricted access)
+[NeqSim .NET](https://github.com/equinor/neqsimNET/tree/master/examples)
 
+#### Excel/Cape Open  (restricted access)
 * NeqSim Excel user interface
 * Cape-Open plugin to process simulators
 
