@@ -53,3 +53,6 @@ Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtODQ1
 A  web application has been developed to run calculation using neqsim via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium calculations can be run in the web application.
 * [NeqSim Web on Github](https://github.com/equinor/neqsimweb)
 * [NeqSim Web application](http://129.241.62.72:8080/NeqSimServer3/faces/Login.jsp) hosted at NTNU
+
+## Benchmark
+Benchmarks of computational speed of the different frameworks is published in the [benchmark page](/benchmark.html)
