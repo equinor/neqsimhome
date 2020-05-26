@@ -13,9 +13,8 @@ NeqSim toolboxes are avalable via GitHub for alternative programming languages.
 
 * [NeqSim Matlab](https://github.com/equinor/neqsimmatlab)
 * [NeqSim Python](https://github.com/equinor/neqsimpython)
-* [NeqSim Python/Colab](https://github.com/EvenSol/NeqSim-Colab)
 * [NeqSim .NET](https://github.com/equinor/neqsimNET)
-* [NeqSim Excel/Cape Open](https://github.com/equinor/neqsimcapeopen) 
+* [NeqSim Cape Open](https://github.com/equinor/neqsimcapeopen) 
 
 ## Getting started
 NeqSim is integrated in computer programs via interfaces in java, python, .NET and Matlab.
@@ -50,9 +49,10 @@ Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtODQ1
 * Cape-Open plugin to process simulators
 
 ## NeqSim web application
-A  web application has been developed to run calculation using neqsim via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium calculations can be run in the web application.
+A  web application has been developed to run calculation using neqsim via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium calculations can be run in the web application. An alternative web application is via Google Colab (Python).
 * [NeqSim Web on Github](https://github.com/equinor/neqsimweb)
 * [NeqSim Web application](http://129.241.62.72:8080/NeqSimServer3/faces/Login.jsp) hosted at NTNU
+* [NeqSim Colab](https://github.com/EvenSol/NeqSim-Colab)
 
 ## Benchmark
 A benchmark of computational speed of the frameworks is published in the [benchmark page](/benchmark.html)
