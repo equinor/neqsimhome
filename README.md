@@ -25,11 +25,6 @@ NeqSim is integrated in computer programs via interfaces in java, python, .NET a
 * [Demo of NeqSim in Colab (Python)](https://colab.research.google.com/github/EvenSol/NeqSim-Colab/blob/master/notebooks/examples_of_NeqSim_in_Colab.ipynb#scrollTo=9VqtmS_MpS6M)
 * [Getting started as a NeqSim developer](https://github.com/equinor/neqsim/wiki/Getting-started-as-a-NeqSim-developer)
 
-## Process simulation
-NeqSim can be used to develop full process simulation models (eg. top side process used for oil and gas processing).
-
-* [NeqSim process](https://github.com/equinor/neqsimprocess)
-
 ## NeqSim discussion
 Discussions related to NeqSim development and use is done using [Slack for NeqSim](https://neqsim.slack.com). 
 Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtODQ1MzE1ODQ5ODYzLTljMThiMDU1YzIyNzBhOWI3ODU2ZGQ0ZjU0ZTRhNjhlODYxYTc4MTU4YWQ5ZTkyYWJiNjY0M2U2NDNiNWFhMWE) to join the group.
@@ -45,6 +40,7 @@ Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtODQ1
 
 #### Python
 * [Thermodynamic and process calculations in Jupyter](https://github.com/equinor/neqsimpython/tree/master/jupyter)
+* [NeqSim process project](https://github.com/equinor/neqsimprocess) A project to build up a library of prebuilt process models
 
 #### NeqSim.NET
 * [NeqSim .NET](https://github.com/equinor/neqsimNET/tree/master/examples)
