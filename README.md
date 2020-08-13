@@ -28,7 +28,7 @@ NeqSim is integrated in computer programs via interfaces in java, python, .NET a
 ## NeqSim process simulation
 NeqSim can be used to develop full process simulation models (eg. top side process used for oil and gas processing).
 
-* [NeqSim process](https://github.com/equinor/neqsimproces)
+* [NeqSim process](https://github.com/equinor/neqsimprocess)
 
 ## NeqSim discussion
 Discussions related to NeqSim development and use is done using [Slack for NeqSim](https://neqsim.slack.com). 
