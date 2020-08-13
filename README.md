@@ -25,6 +25,11 @@ NeqSim is integrated in computer programs via interfaces in java, python, .NET a
 * [Demo of NeqSim in Colab (Python)](https://colab.research.google.com/github/EvenSol/NeqSim-Colab/blob/master/notebooks/examples_of_NeqSim_in_Colab.ipynb#scrollTo=9VqtmS_MpS6M)
 * [Getting started as a NeqSim developer](https://github.com/equinor/neqsim/wiki/Getting-started-as-a-NeqSim-developer)
 
+# NeqSim process simulation
+NeqSim can be used to develop full process simulation models (eg. top side process used for oil and gas processing).
+
+* [NeqSim process](https://github.com/equinor/neqsimproces)
+
 ## NeqSim discussion
 Discussions related to NeqSim development and use is done using [Slack for NeqSim](https://neqsim.slack.com). 
 Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtODQ1MzE1ODQ5ODYzLTljMThiMDU1YzIyNzBhOWI3ODU2ZGQ0ZjU0ZTRhNjhlODYxYTc4MTU4YWQ5ZTkyYWJiNjY0M2U2NDNiNWFhMWE) to join the group.
