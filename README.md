@@ -39,7 +39,8 @@ Use the [invitation link](https://join.slack.com/t/neqsim/shared_invite/enQtODQ1
 * [Thermodynamic and process calculations](https://github.com/equinor/neqsimmatlab/tree/master/example)
 
 #### Python
-* [Thermodynamic and process calculations in Jupyter](https://github.com/equinor/neqsimpython/tree/master/jupyter)
+* [Python examples](https://github.com/equinor/neqsimpython/tree/master/examples) 
+* [Notebook examples (Jupyter/Google Colab)](https://github.com/EvenSol/NeqSim-Colab)
 * [NeqSim process project](https://github.com/equinor/neqsimprocess) A project to build up a library of prebuilt process models
 
 #### NeqSim.NET
