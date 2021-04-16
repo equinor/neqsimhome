@@ -51,8 +51,7 @@ Questions related to use and development are asked on the [NeqSim github discuss
 
 ## NeqSim API
 The NeqSim API project uses NeqSim and the [Quarkus](https://quarkus.io/) framework as basis for developing an API for thermodynamic and process calculations.
-* NeqSim API
-* Examples of how to use the NeqSim API
+* [NeqSim API](https://github.com/equinor/NeqSimLive)
 
 ## NeqSim web application
 A  web application has been developed to run calculation using neqsim via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium calculations can be run in the web application. An alternative web application is via Google Colab (Python).
