@@ -50,7 +50,7 @@ Questions related to use and development are asked on the [NeqSim github discuss
 * Cape-Open plugin to process simulators
 
 ## NeqSim API
-The NeqSim API project uses NeqSim and the [Quarkus](https://quarkus.io/) framework as basis for developing an API for thermodynamic of process calculations.
+The NeqSim API project uses NeqSim and the [Quarkus](https://quarkus.io/) framework as basis for developing an API for thermodynamic and process calculations.
 * NeqSim API
 * Examples of how to use the NeqSim API
 
