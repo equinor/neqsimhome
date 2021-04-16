@@ -50,9 +50,9 @@ Questions related to use and development are asked on the [NeqSim github discuss
 * Cape-Open plugin to process simulators
 
 ## NeqSim API
-The NeqSim API project uses NeqSim as basis for developing a web API using containers. The NeqSim API is based on the [Quarkus](https://quarkus.io/) framework (a cloud native container first framework). THe API can be used for running fluid property and process calculations.
+The NeqSim API project uses NeqSim as basis for developing an API based on containers, making fluid properties and process calculations available via a client-server connection. The NeqSim API is based on the [Quarkus](https://quarkus.io/) framework (a cloud native container first framework).
 * NeqSim API
-* How to use the NeqSImAPI
+* Examples of how to use the NeqSim API
 
 ## NeqSim web application
 A  web application has been developed to run calculation using neqsim via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium calculations can be run in the web application. An alternative web application is via Google Colab (Python).
