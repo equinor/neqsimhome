@@ -14,7 +14,7 @@ NeqSim toolboxes are avalable via GitHub for alternative programming languages.
 * [NeqSim Matlab](https://github.com/equinor/neqsimmatlab)
 * [NeqSim Python](https://github.com/equinor/neqsimpython)
 * [NeqSim .NET](https://github.com/equinor/neqsimNET)
-* [NeqSim Cape Open](https://github.com/equinor/neqsimcapeopen)
+* [NeqSim Excel/Cape-Open](https://github.com/equinor/neqsimcapeopen)
 
 ## Getting started
 NeqSim is integrated in computer programs via interfaces in java, python, .NET and Matlab.
@@ -22,6 +22,7 @@ NeqSim is integrated in computer programs via interfaces in java, python, .NET a
 * [Getting started using NeqSim in Java](https://github.com/equinor/neqsim/wiki/Getting-started-with-NeqSim-and-Github)
 * [Getting started using NeqSim in Matlab](https://github.com/equinor/neqsimmatlab/wiki/Getting-started-with-NeqSim-in-Matlab)
 * [Getting started using NeqSim in Python](https://github.com/equinor/neqsimpython/wiki/Getting-started-with-NeqSim-in-Python)
+* [Getting started using NeqSim in Excel](https://github.com/equinor/neqsimpython/wiki/Getting-started-with-NeqSim-in-Excel)
 * [Demo of NeqSim in Colab (Python)](https://colab.research.google.com/github/EvenSol/NeqSim-Colab/blob/master/notebooks/examples_of_NeqSim_in_Colab.ipynb#scrollTo=9VqtmS_MpS6M)
 * [Getting started as a NeqSim developer](https://github.com/equinor/neqsim/wiki/Getting-started-as-a-NeqSim-developer)
 
@@ -45,7 +46,7 @@ Questions related to use and development are asked on the [NeqSim github discuss
 #### NeqSim.NET
 * [NeqSim .NET](https://github.com/equinor/neqsimNET/tree/master/examples)
 
-#### Excel/Cape Open (restricted access)
+#### Excel/Cape Open
 * NeqSim Excel user interface
 * Cape-Open plugin to process simulators
 
