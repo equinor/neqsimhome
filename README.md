@@ -22,7 +22,7 @@ NeqSim is integrated in computer programs via interfaces in java, python, .NET a
 * [Getting started using NeqSim in Java](https://github.com/equinor/neqsim/wiki/Getting-started-with-NeqSim-and-Github)
 * [Getting started using NeqSim in Matlab](https://github.com/equinor/neqsimmatlab/wiki/Getting-started-with-NeqSim-in-Matlab)
 * [Getting started using NeqSim in Python](https://github.com/equinor/neqsimpython/wiki/Getting-started-with-NeqSim-in-Python)
-* [Getting started using NeqSim in Excel](https://github.com/equinor/neqsimpython/wiki/Getting-started-with-NeqSim-in-Excel)
+* [Getting started using NeqSim in Excel](https://github.com/equinor/neqsim.NET/wiki/Getting-started-with-NeqSim-in-Excel)
 * [Demo of NeqSim in Colab (Python)](https://colab.research.google.com/github/EvenSol/NeqSim-Colab/blob/master/notebooks/examples_of_NeqSim_in_Colab.ipynb#scrollTo=9VqtmS_MpS6M)
 * [Getting started as a NeqSim developer](https://github.com/equinor/neqsim/wiki/Getting-started-as-a-NeqSim-developer)
 
