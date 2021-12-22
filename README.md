@@ -47,12 +47,13 @@ Questions related to use and development are asked on the [NeqSim github discuss
 * [NeqSim .NET](https://github.com/equinor/neqsimNET/tree/master/examples)
 
 #### Excel/Cape Open
-* NeqSim Excel user interface
+* [NeqSim Excel user interface](https://github.com/equinor/neqsim.NET/wiki/Getting-started-with-NeqSim-in-Excel)
 * Cape-Open plugin to process simulators
 
 ## NeqSim API
-The NeqSim API project uses NeqSim and the [Quarkus](https://quarkus.io/) framework as basis for developing an API for thermodynamic and process calculations.
-* [NeqSim API](https://github.com/equinor/NeqSimLive)
+NeqSim is well suited for beeing the basis for developing API's for thermodynamic and process calculations.
+* Example of API's - [Java API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java)/[Python API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java)
+* [Use of API's from Python](https://colab.research.google.com/github/EvenSol/NeqSim-Colab/blob/master/notebooks/examples_of_NeqSim_in_Colab.ipynb#scrollTo=9VqtmS_MpS6M)
 
 ## NeqSim web application
 A  web application has been developed to run calculation using neqsim via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium calculations can be run in the web application. An alternative web application is via Google Colab (Python).
