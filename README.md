@@ -48,7 +48,6 @@ Questions related to use and development are asked on the [NeqSim github discuss
 
 #### Excel/Cape Open
 * [NeqSim Excel user interface](https://github.com/equinor/neqsim.NET/wiki/Getting-started-with-NeqSim-in-Excel)
-* Cape-Open plugin to process simulators
 
 ## NeqSim API
 NeqSim is well suited for beeing the basis for developing API's for thermodynamic and process calculations.
