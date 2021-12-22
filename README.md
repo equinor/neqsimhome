@@ -51,8 +51,8 @@ Questions related to use and development are asked on the [NeqSim github discuss
 
 ## NeqSim API
 NeqSim is well suited for beeing the basis for developing API's for thermodynamic and process calculations.
-* Example of API's - [Java API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java)/[Python API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java)
-* [Use of API's from Python](https://colab.research.google.com/github/EvenSol/NeqSim-Colab/blob/master/notebooks/examples_of_NeqSim_in_Colab.ipynb#scrollTo=9VqtmS_MpS6M)
+* API development in [Java API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java) and [Python API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java)
+* [Example of use of API from Python](https://github.com/EvenSol/NeqSim-Colab/blob/master/API/java/example/TEGprocess.ipynb)
 
 ## NeqSim web application
 A  web application has been developed to run calculation using neqsim via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium calculations can be run in the web application. An alternative web application is via Google Colab (Python).
