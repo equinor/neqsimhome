@@ -31,9 +31,9 @@ Questions related to use and development are asked on the [NeqSim github discuss
 
 ## Examples
 #### Java:
-* [Thermodynamic calculations](https://github.com/equinor/neqsim/master/src/test/java/neqsim/thermo/util/example)
-* [Calculation of physical properties](https://github.com/equinor/neqsim/master/src/test/java/neqsim/physicalProperties/util/examples)
-* [Process simulation](https://github.com/equinor/neqsim/master/src/test/java/neqsim/processSimulation/util/example)
+* [Thermodynamic calculations](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/thermo/util/example)
+* [Calculation of physical properties](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/physicalProperties/util/examples)
+* [Process simulation](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/processSimulation/util/example)
 
 #### Matlab:
 * [Thermodynamic and process calculations](https://github.com/equinor/neqsimmatlab/tree/master/example)
