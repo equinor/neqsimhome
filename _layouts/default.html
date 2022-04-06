@@ -24,18 +24,9 @@
         <p>News:</p>
         <p>15/04/2022: Version 2.3.3 released</p>
         
-        Examples of use:
-        <ul>
-            <li>PVT Simulation</li>
-            <li>Process Digital Twins</li>
-            <li>Process Simulation</li>
-            <li>Education</li>
-            <li>Machine Learning</li>
-            <li>API development</li>
-        </ul>
-        
+
         {% if site.github.is_project_page %}
-        <p>For questions, proposals and support <a href = "mailto: even.solbraa@ntnu.no">contact NTNU developers</a></p>
+        <p>Contact project via <a href = "mailto: even.solbraa@ntnu.no">email</a></p>
         {% endif %}
        
 
@@ -52,9 +43,12 @@
       {{ content }}
 
       </section>
+      <footer>
+      
          {% if site.github.is_project_page %}
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
         {% endif %}
+      </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}
