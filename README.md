@@ -51,7 +51,7 @@ Questions related to use and development are asked on the [NeqSim github discuss
 
 ## NeqSim API
 NeqSim is well suited for beeing the basis for developing API's for thermodynamic and process calculations.
-* API development in [Java API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java) and [Python API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java)
+* API development in [Java API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java) and [Python API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/python)
 * [Example of use of API from Python](https://github.com/EvenSol/NeqSim-Colab/blob/master/API/java/example/TEGprocess.ipynb)
 
 ## NeqSim web application
