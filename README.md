@@ -58,8 +58,6 @@ NeqSim is well suited for beeing the basis for developing API's for thermodynami
 ## NeqSim web application
 A  web application has been developed to run calculation using neqsim via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium calculations can be run in the web application. An alternative web application is via Google Colab (Python).
 * [NeqSim Web on Github](https://github.com/equinor/neqsimweb)
-* [NeqSim Web application](http://129.241.62.72:8080/NeqSimServer3/faces/Login.jsp) hosted at NTNU
-* [NeqSim Colab](https://github.com/EvenSol/NeqSim-Colab)
 
 ## Benchmark
 A benchmark of computational speed of the frameworks is published in the [benchmark page](/benchmark.html)
