@@ -53,7 +53,11 @@ Questions related to use and development are asked on the [NeqSim github discuss
 NeqSim is well suited for beeing the basis for developing API's for thermodynamic and process calculations.
 * API development in [Java API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java) and [Python API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/python)
 * [Example of use of API from Python](https://github.com/EvenSol/NeqSim-Colab/blob/master/API/java/example/TEGprocess.ipynb)
+
+## NeqSimLive 
+NeqSimLive is a collection of APIs used for simulation and condition monitoring of process plants. Support on developing digital twins can be reqested from the [Energy and Process Technology group](https://www.ntnu.no/ansatte/even.solbraa) at NTNU.
 * API template for [NeqSimLive Process Digital Twin](https://github.com/equinor/NeqSimLive-api-template)
+* NeqSimLive API components
 
 ## NeqSim web application
 A  web application has been developed to run calculation using neqsim via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium calculations can be run in the web application. An alternative web application is via Google Colab (Python).
