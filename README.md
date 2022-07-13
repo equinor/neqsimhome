@@ -57,7 +57,7 @@ NeqSim is well suited for beeing the basis for developing API's for thermodynami
 ## NeqSimLive 
 NeqSimLive is a collection of container based APIs used for simulation and performance monitoring of process plants. NeqSimLive APIs are typically consumed by company specific tools for scheduling calculations, visualization and writing of data.  Support on developing digital twin components for flow assurance, process and transport can be reqested from the [Energy and Process Technology group](https://www.ntnu.no/ansatte/even.solbraa) at NTNU.
 * API template for [NeqSimLive Process Digital Twin](https://github.com/equinor/NeqSimLive-api-template)
-* NeqSimLive API components
+* [NeqSimLive API](https://github.com/equinor/NeqSimAPI) components
 
 ## NeqSim web application
 A  web application has been developed to run calculation using neqsim via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium calculations can be run in the web application. An alternative web application is via Google Colab (Python).
