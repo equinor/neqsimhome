@@ -28,6 +28,9 @@
         {% if site.github.is_project_page %}
         <p>Contact project via <a href = "mailto: even.solbraa@ntnu.no">email</a></p>
         {% endif %}
+        {% if site.github.is_project_page %}
+        <p>For Q&A use <a href = "https://github.com/equinor/neqsim/discussions">discussions page </a></p>
+        {% endif %}
        
 
         {% if site.show_downloads %}
@@ -47,9 +50,6 @@
       
          {% if site.github.is_project_page %}
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
-        {% if site.github.is_project_page %}
-        <p>For Q&A please use the <a href = "https://github.com/equinor/neqsim/discussions">discussions page </a></p>
         {% endif %}
       </footer>
     </div>
