@@ -66,4 +66,6 @@ A  web application has been developed to run calculation using neqsim via a web 
 * [NeqSim Web on Github](https://github.com/equinor/neqsimweb)
 
 ## Benchmark
+See [NeqSim-benchmark project](https://github.com/equinor/neqsim-benchmark). 
+
 A benchmark of computational speed of the frameworks is published in the [benchmark page](/benchmark.html)
