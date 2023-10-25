@@ -1,7 +1,7 @@
 ## NeqSim - an open source process simulation software
 [NeqSim](https://equinor.github.io/neqsimhome/) is a library for calculation of fluid behavior, phase equilibrium and process simulation. NeqSim can be used as a stand-alone tool via Excel or a web interface. It is integrated in computer programs via available interfaces in Java, Python, .NET, Matlab or in process simulators via the Cape Open interface. The basis for NeqSim is fundamental mathematical models related to unit operations, phase behaviour and physical properties of fluids. NeqSim is used for fluids such as oil and gas, carbon dioxide, refrigerants, hydrogen, ammonia, water and chemicals. 
 
-The original NeqSim web page is hosted at [NTNU](http://folk.ntnu.no/solbraa/neqsim/NeqSim.htm)
+Support and further development of tools and models using NeqSim can be requested from [Department of Energy and Process Engineering at NTNU](https://www.ntnu.no/ansatte/even.solbraa).
 
 ## NeqSim project in GitHub
 The NeqSim library is written in the Java programming language. The source code and libraries are hosted in GitHub.
