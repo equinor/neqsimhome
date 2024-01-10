@@ -63,6 +63,7 @@ NeqSimLive is a collection of container based APIs used for simulation and perfo
 
 ## NeqSim web application
 A  web application has been developed to run calculation using neqsim via a web interface. Calculations such as TPflash, dew points, phase envelopes and hydrate equilibrium calculations can be run in the web application. An alternative web application is via Google Colab (Python).
+* [NeqSim Streamlit Web application](https://github.com/equinor/neqsimweb2)
 * [NeqSim Web on Github](https://github.com/equinor/neqsimweb)
 
 ## Benchmark
