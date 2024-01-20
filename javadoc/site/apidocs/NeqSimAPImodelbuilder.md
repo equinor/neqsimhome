@@ -1,12 +1,12 @@
-Privacy Policy for NeqSimAPI model builder
+# Privacy Policy for NeqSimAPI model builder
 
 Last Updated: 20.01.2024
 
-Introduction
+# Introduction
 
 Welcome to NeqSimAPI model builder. This privacy policy outlines the types of information we collect, how we use it, and the steps we take to ensure your data is protected when you use our application.
 
-Information Collection and Use
+# Information Collection and Use
 
 We may collect the following types of information:
 
@@ -16,7 +16,7 @@ Usage Data: We collect information on how you interact with our software, such a
 
 Simulation Data: When you use NeqSimAPI model builder for process simulations, we may store the simulation models, input parameters, and results. This data is used to provide the service and is not shared with third parties.
 
-Data Storage and Security
+# Data Storage and Security
 
 Storage: Your data is stored on secure servers with restricted access.
 
@@ -36,6 +36,6 @@ Changes to This Privacy Policy
 
 We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the “Last Updated” date.
 
-Contact Us
+# Contact Us
 
 If you have any questions or concerns about this Privacy Policy, please contact us.
