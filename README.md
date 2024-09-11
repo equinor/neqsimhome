@@ -17,6 +17,7 @@ NeqSim toolboxes are avalable via GitHub for alternative programming languages.
 * [NeqSim Python](https://github.com/equinor/neqsimpython)
 * [NeqSim .NET](https://github.com/equinor/neqsimNET)
 * [NeqSim Excel/Cape-Open](https://github.com/equinor/neqsimcapeopen)
+* [NeqSim native compilation using GraalVM](https://github.com/equinor/neqsim-native)
 
 ## Getting started
 NeqSim is integrated in computer programs via interfaces in java, python, .NET and Matlab.
