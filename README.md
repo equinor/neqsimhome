@@ -68,7 +68,7 @@ A  web application has been developed to run calculation using neqsim via a web 
 * [NeqSim Web on Github](https://github.com/equinor/neqsimweb)
 
 ## NeqSim AI
-NeqSim Process Reinformance Learning Agents is an open-source project that leverages multi-agent reinforcement learning (RL) to optimize oil and gas processes simulated using the NeqSim package. This project provides a framework where intelligent agents control different process components, such as compressors, valves, pumps, and heat exchangers, to minimize emissions, CO2 footprint, power and heat input while maintaining operational stability.
+NeqSim Process Reinformance Learning Agents is an open-source project that leverages multi-agent reinforcement learning (RL) to optimize oil and gas processes simulated using the NeqSim package. This project provides a framework where intelligent agents control different process components, such as compressors, valves, pumps, and heat exchangers, to minimize emissions, CO2 footprint, power and heat input while maintaining product quality and operational stability.
 * [NeqSim-Process-RL-Agents](https://github.com/equinor/NeqSim-Process-RL-Agents)
 
 ## Benchmark
