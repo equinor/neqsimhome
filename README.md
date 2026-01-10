@@ -37,9 +37,10 @@ NeqSim toolboxes are available via GitHub for alternative programming languages.
 * [NeqSim Excel/Cape-Open](https://github.com/equinor/neqsimcapeopen)
 * [NeqSim native compilation using GraalVM](https://github.com/equinor/neqsim-native)
 
-## NeqSim User Manual
+## NeqSim User Documentation
 A comprehensive user manual is available for NeqSim, covering thermodynamic models, methods, and usage examples.
 
+* <a href="https://equinor.github.io/neqsim/" target="_blank">NeqSim Documentation Page</a>
 * <a href="https://equinor.github.io/neqsim/manual/neqsim_reference_manual.html" target="_blank">NeqSim User Manual (HTML)</a>
 * <a href="javadoc/site/apidocs/index.html" target="_blank">API Documentation (JavaDoc)</a>
 
