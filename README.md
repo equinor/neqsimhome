@@ -61,9 +61,9 @@ NeqSim toolboxes are available via GitHub for alternative programming languages.
 ## NeqSim User Manual
 A comprehensive user manual is available for NeqSim, covering thermodynamic models, methods, and usage examples.
 
-* [NeqSim User Manual (HTML)](doc/neqsim_reference_manual.html)
-* [NeqSim User Manual (PDF)](doc/NeqSim_user_manual_2026.pdf)
-* [API Documentation (JavaDoc)](javadoc/site/apidocs/index.html)
+* <a href="doc/neqsim_reference_manual.html" target="_blank">NeqSim User Manual (HTML)</a>
+* <a href="doc/NeqSim_user_manual_2026.pdf" target="_blank">NeqSim User Manual (PDF)</a>
+* <a href="javadoc/site/apidocs/index.html" target="_blank">API Documentation (JavaDoc)</a>
 
 ## Getting started
 NeqSim is integrated in computer programs via interfaces in java, python, .NET and Matlab.
