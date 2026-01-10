@@ -8,40 +8,23 @@ NeqSim is a library for calculation of fluid behavior, phase equilibrium and pro
 
 Support related to use and development of NeqSim is provided by [Department of Energy and Process Engineering at NTNU](https://www.ntnu.edu/employees/even.solbraa).
 
-### Key Features
-- Phase equilibrium calculations (TP flash, phase envelopes, dew/bubble points)
-- Physical property calculations (density, viscosity, thermal conductivity, etc.)
-- Process simulation with unit operations (separators, compressors, heat exchangers, etc.)
-- Hydrate and wax equilibrium predictions
-- Support for various equations of state (SRK, PR, CPA, PC-SAFT, GERG-2008, etc.)
-- Flow assurance calculations
+### NeqSim — Key Capabilities
 
-### Quick Start (Python)
-```python
-from neqsim.thermo import fluid, TPflash, printFrame
+- **Advanced Thermodynamics**  
+  Multiple EOS and activity-based models for accurate multiphase equilibrium and PVT calculations.
 
-# Create a natural gas fluid
-fluid1 = fluid("srk")
-fluid1.addComponent("methane", 0.9, 'mole/sec')
-fluid1.addComponent("ethane", 0.1, 'mole/sec')
-fluid1.setTemperature(25, "C")
-fluid1.setPressure(50, "bara")
-TPflash(fluid1)
-printFrame(fluid1)
-```
+- **Integrated Process Simulation**  
+  Steady-state and dynamic simulation with compressors, separators, heat exchangers, and full process flowsheets.
 
-### Table of Contents
-- [NeqSim Project in GitHub](#neqsim-project-in-github)
-- [NeqSim Toolboxes](#neqsim-toolboxes-in-github)
-- [User Manual](#neqsim-user-manual)
-- [Getting Started](#getting-started)
-- [Examples](#examples)
-- [API & Documentation](#neqsim-api)
-- [NeqSimLive](#neqsimlive)
-- [Web Application](#neqsim-web-application)
-- [NeqSim AI](#neqsim-ai)
-- [Benchmark](#benchmark)
+- **Flow Assurance & Production Chemistry**  
+  Hydrate, wax, dehydration, and gas treatment modeling for real-field operating conditions.
 
+- **Open, Scriptable & Extensible**  
+  Fully accessible via Python and Java APIs—ideal for automation, customization, and research.
+
+- **Built for Digital Twins & AI**  
+  Designed for real-time integration, optimization, and machine-learning-driven workflows.
+  
 ## NeqSim project in GitHub
 The NeqSim library is written in the Java programming language. The source code and libraries are hosted in GitHub.
 
