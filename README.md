@@ -40,7 +40,7 @@ NeqSim toolboxes are available via GitHub for alternative programming languages.
 ## NeqSim User Manual
 A comprehensive user manual is available for NeqSim, covering thermodynamic models, methods, and usage examples.
 
-* <a href="[doc/neqsim_reference_manual.html](https://github.com/equinor/neqsim/blob/master/docs/manual/neqsim_reference_manual.html)" target="_blank">NeqSim User Manual (HTML)</a>
+* <a href="https://github.com/equinor/neqsim/blob/master/docs/manual/neqsim_reference_manual.html" target="_blank">NeqSim User Manual (HTML)</a>
 * <a href="javadoc/site/apidocs/index.html" target="_blank">API Documentation (JavaDoc)</a>
 
 ## Getting started
