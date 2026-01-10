@@ -8,7 +8,7 @@ NeqSim is a library for calculation of fluid behavior, phase equilibrium and pro
 
 Support related to use and development of NeqSim is provided by [Department of Energy and Process Engineering at NTNU](https://www.ntnu.edu/employees/even.solbraa).
 
-### NeqSim — Key Capabilities
+## NeqSim — Key Capabilities
 
 - **Advanced Thermodynamics**  
   Multiple EOS and activity-based models for accurate multiphase equilibrium and PVT calculations.
