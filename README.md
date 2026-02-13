@@ -5,36 +5,17 @@ NeqSim is a library for calculation of fluid behavior, phase equilibrium and pro
 Support related to use and development of NeqSim is provided by [Department of Energy and Process Engineering at NTNU](https://www.ntnu.edu/employees/even.solbraa).
 
 ## NeqSim — Key Capabilities
-
-- **Advanced Thermodynamics**  
-  Multiple EOS and activity-based models for accurate multiphase equilibrium and PVT calculations.
-
-- **Integrated Process Simulation**  
-  Steady-state and dynamic simulation with compressors, separators, heat exchangers, electrolyzers, and full process flowsheets.
-
-- **Flow Assurance & Production Chemistry**  
-  Hydrate, wax, dehydration, and gas treatment modeling for real-field operating conditions.
-
-- **Fluid Flow & Pipeline Simulation**  
-  Single-phase and multiphase pipe flow with transient simulation, flow regime detection, pressure drop correlations, and non-equilibrium mass/heat transfer using Maxwell-Stefan multicomponent diffusion.
-
-- **Production Optimization & Calibration**  
-  Batch parameter estimation with Levenberg-Marquardt optimization, uncertainty quantification, capacity constraint analysis, bottleneck detection, and multi-objective Pareto optimization.
-
-- **Risk-Based Process Safety Analysis**  
-  Probabilistic risk analysis, automatic scenario generation, relief system sizing, and disposal network evaluation for comprehensive safety studies.
-
-- **Sustainability & Emissions Tracking**  
-  CO2e emissions accounting (Scope 1/2), energy monitoring, and regulatory reporting for EU ETS, EPA, and other frameworks.
-
-- **Field Development & Concept Screening**  
-  Rapid concept evaluation with integrated economics, production capacity, and flow assurance envelopes.
-
-- **Open, Scriptable & Extensible**  
-  Fully accessible via Python and Java APIs—ideal for automation, customization, and research.
-
-- **Built for Digital Twins & AI**  
-  Real-time integration, reinforcement learning environments (Gym-compatible), surrogate model training, and machine-learning-driven workflows.
+- Advanced Thermodynamics
+- Integrated Process Simulation
+- PVT simulation
+- Flow Assurance & Production Chemistry
+- Fluid Flow & Pipeline Simulation
+- Production Optimization & Calibration
+- Risk-Based Process Safety Analysis
+- Sustainability & Emissions Tracking
+- Field Development & Concept Screening
+- Open, Scriptable & Extensible
+- Digital Process Twins & AI integration
   
 ## NeqSim project in GitHub
 The NeqSim library is written in the Java programming language. The source code and libraries are hosted in GitHub.
