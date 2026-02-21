@@ -1,0 +1,15 @@
+steps:
+  - name: Setup Ruby
+    uses: ruby/setup-ruby@v1
+    with:
+      ruby-version: '3.3'
+      bundler-cache: true
+
+  - name: Install Jekyll and dependencies
+    run: |
+      gem install jekyll bundler
+      if [ -f Gemfile ]; then bundle install; fi
+
+  - name: Build site
+    run: |
+      bundle exec jekyll build || jekyll build
