@@ -1,1 +1,0 @@
-cmd.exe /X /D /C "C:\Users\ESOL\graalvm\graalvm-jdk-25.0.1+8.1\bin\javadoc.exe -J-Duser.language= -J-Duser.country= @options @packages"
