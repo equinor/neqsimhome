@@ -1,102 +1,217 @@
-## NeqSim — an Open-Source Process Simulation Software
+<!-- badges -->
+[![GitHub stars](https://img.shields.io/github/stars/equinor/neqsim?style=social)](https://github.com/equinor/neqsim)
+[![Maven Central](https://img.shields.io/maven-central/v/com.equinor.neqsim/neqsim.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.equinor.neqsim%22%20AND%20a:%22neqsim%22)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](https://github.com/equinor/neqsim/blob/master/LICENSE)
+[![CI](https://github.com/equinor/neqsim/actions/workflows/verify_build.yml/badge.svg?branch=master)](https://github.com/equinor/neqsim/actions/workflows/verify_build.yml?query=branch%3Amaster)
 
-NeqSim is a library for the calculation of fluid behavior, phase equilibrium, and process simulation. NeqSim can be used via various toolboxes or through a web interface. It can be integrated into computer programs via available interfaces in Java, Python, .NET, and MATLAB, or into process simulators via the CAPE-OPEN interface.
+## Open-source thermodynamics, process simulation, and AI-assisted engineering — in one library.
 
-The basis for NeqSim is fundamental mathematical models related to unit operations, phase behavior, and physical properties of fluids. NeqSim is used for fluids such as oil and gas, carbon dioxide, refrigerants, hydrogen, ammonia, water, and chemicals.
+**NeqSim** calculates fluid properties, simulates process equipment, and solves engineering design problems. Use it from Python, Java, .NET, MATLAB, Jupyter notebooks, or let an AI agent drive it via natural language.
 
-Support related to the use and development of NeqSim is provided by the [Department of Energy and Process Engineering at NTNU](https://www.ntnu.edu/employees/even.solbraa).
-
----
-
-## NeqSim — Key Capabilities
-- Advanced thermodynamics and property models  
-- Integrated process simulation  
-- PVT simulation  
-- Flow assurance & production chemistry  
-- Fluid flow & pipeline simulation  
-- Production optimization & calibration  
-- Risk-based process safety analysis  
-- Sustainability & emissions tracking  
-- Field development & concept screening  
-- Open, scriptable & extensible  
-- Digital process twins & AI integration  
+> Developed at [NTNU](https://www.ntnu.edu/employees/even.solbraa) and maintained by [Equinor](https://www.equinor.com/). Used for real-world oil & gas, carbon capture, hydrogen, and energy applications.
 
 ---
 
-## NeqSim Project on GitHub
-The NeqSim library is written in the Java programming language. The source code and libraries are hosted on GitHub.
+## Try it in 30 seconds
 
-* [NeqSim Java](https://github.com/equinor/neqsim)
+**Python** — the fastest way to start:
 
-Also see the [experimental data and parameter fitting project](https://github.com/equinor/neqsimParameterFittingProject).
+```bash
+pip install neqsim
+```
 
----
+```python
+from neqsim import jneqsim
 
-## NeqSim Toolboxes on GitHub
-NeqSim toolboxes are available on GitHub for alternative programming languages.
+fluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 25.0, 60.0)
+fluid.addComponent("methane", 0.85)
+fluid.addComponent("ethane", 0.10)
+fluid.addComponent("propane", 0.05)
+fluid.setMixingRule("classic")
 
-* [NeqSim MATLAB](https://github.com/equinor/neqsimmatlab)  
-* [NeqSim Python](https://github.com/equinor/neqsimpython)  
-* [NeqSim .NET](https://github.com/equinor/neqsimNET)  
-* [NeqSim Excel/CAPE-OPEN](https://github.com/equinor/neqsimcapeopen)  
-* [NeqSim native compilation using GraalVM](https://github.com/equinor/neqsim-native)
+ops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)
+ops.TPflash()
+fluid.initProperties()
 
----
+print(f"Gas density:   {fluid.getPhase('gas').getDensity('kg/m3'):.2f} kg/m³")
+print(f"Z-factor:      {fluid.getPhase('gas').getZ():.4f}")
+```
 
-## NeqSim User Documentation
-A comprehensive user manual is available for NeqSim, covering thermodynamic models, methods, and usage examples.
+**AI agent** — describe your problem in plain English:
 
-* [NeqSim Documentation Page](https://equinor.github.io/neqsim/)  
-* [NeqSim User Manual (HTML)](https://equinor.github.io/neqsim/manual/neqsim_reference_manual.html)  
-* [API Documentation (Javadoc)](javadoc/site/apidocs/index.html)
+```
+@solve.task hydrate formation temperature for wet gas at 100 bara
+```
 
----
+The agent builds a NeqSim simulation, validates results, and generates a report — no coding required.
 
-## Getting Started
-NeqSim can be integrated into computer programs via interfaces in Java, Python, .NET, and MATLAB.
-
-* [Getting started using NeqSim in Java](https://github.com/equinor/neqsim/wiki/Getting-started-with-NeqSim-and-Github)  
-* [Getting started using NeqSim in MATLAB](https://github.com/equinor/neqsimmatlab/wiki/Getting-started-with-NeqSim-in-Matlab)  
-* [Getting started using NeqSim in Python](https://github.com/equinor/neqsimpython/wiki/Getting-started-with-NeqSim-in-Python)  
-* [Getting started using NeqSim in Excel](https://github.com/equinor/neqsim.NET/wiki/Getting-started-with-NeqSim-in-Excel)  
-* [Demo of NeqSim in Colab (Python)](https://colab.research.google.com/github/EvenSol/NeqSim-Colab/blob/master/notebooks/examples_of_NeqSim_in_Colab.ipynb)  
-* [Getting started as a NeqSim developer](https://github.com/equinor/neqsim/wiki/Getting-started-as-a-NeqSim-developer)
+[▶ Run in Google Colab](https://colab.research.google.com/github/EvenSol/NeqSim-Colab/blob/master/notebooks/examples_of_NeqSim_in_Colab.ipynb) · [▶ Python quickstart](https://github.com/equinor/neqsimpython/wiki/Getting-started-with-NeqSim-in-Python) · [▶ Java quickstart](https://github.com/equinor/neqsim/wiki/Getting-started-with-NeqSim-and-Github) · [▶ MCP server](https://github.com/equinor/neqsim/tree/master/neqsim-mcp-server)
 
 ---
 
-## NeqSim Discussions
-Questions related to use and development can be asked on the [NeqSim GitHub Discussions](https://github.com/equinor/neqsim/discussions) page.
+## What can you do with NeqSim?
+
+| Domain | Capabilities |
+|--------|-------------|
+| **Thermodynamics** | 60+ equation-of-state models (SRK, PR, CPA, GERG-2008, …), flash calculations (TP, PH, PS, dew, bubble), phase envelopes |
+| **Physical properties** | Density, viscosity, thermal conductivity, surface tension, diffusion coefficients |
+| **Process simulation** | 33+ equipment types — separators, compressors, heat exchangers, valves, distillation, pumps, reactors |
+| **Pipeline & flow** | Steady-state and transient multiphase pipe flow, pipe networks |
+| **PVT simulation** | CME, CVD, differential liberation, separator tests, swelling tests, saturation pressure |
+| **Safety** | Depressurization/blowdown, PSV sizing (API 520/521), source term generation, safety envelopes |
+| **Standards** | ISO 6976 (gas quality), NORSOK, DNV, API, ASME compliance checks |
+| **Field development** | Production forecasting, concept screening, NPV/IRR economics, Monte Carlo uncertainty |
+| **AI / MCP** | Natural-language engineering via MCP server — any LLM can run rigorous thermodynamic calculations |
+
+---
+
+## AI-Powered Engineering with MCP
+
+The [NeqSim MCP Server](https://github.com/equinor/neqsim/tree/master/neqsim-mcp-server) lets **any MCP-compatible client** (VS Code Copilot, Claude Desktop, Cursor, etc.) run real calculations through natural language:
+
+| Ask the LLM | What happens |
+|---|---|
+| *"Dew point of 85% methane, 10% ethane, 5% propane at 50 bara?"* | Flash calculation via NeqSim |
+| *"Get density, viscosity, and thermal conductivity at 25 °C, 80 bara"* | Physical property lookup |
+| *"Simulate gas through a separator then compressor to 120 bara"* | Full process simulation |
+
+LLMs are excellent at engineering reasoning but hallucinate physics. NeqSim is exact on thermodynamics. **Together, they form a complete engineering system.**
+
+---
+
+## Get Started — Choose Your Path
+
+| Path | How to start |
+|------|-------------|
+| **Python** | `pip install neqsim` — [quickstart guide](https://github.com/equinor/neqsimpython/wiki/Getting-started-with-NeqSim-in-Python) |
+| **Google Colab** | [Open notebook now](https://colab.research.google.com/github/EvenSol/NeqSim-Colab/blob/master/notebooks/examples_of_NeqSim_in_Colab.ipynb) — zero install |
+| **Java** | [Maven Central dependency](https://github.com/equinor/neqsim/wiki/Getting-started-with-NeqSim-and-Github) |
+| **MATLAB** | [neqsimmatlab toolbox](https://github.com/equinor/neqsimmatlab/wiki/Getting-started-with-NeqSim-in-Matlab) |
+| **.NET / Excel** | [neqsimcapeopen](https://github.com/equinor/neqsim.NET/wiki/Getting-started-with-NeqSim-in-Excel) |
+| **MCP / AI agent** | [neqsim-mcp-server](https://github.com/equinor/neqsim/tree/master/neqsim-mcp-server) |
+| **VS Code devcontainer** | Clone → open in VS Code → container auto-builds |
+
+---
+
+## Engineering Cookbook — Common Recipes
+
+Quick copy-paste solutions for common engineering problems:
+
+| Recipe | Description |
+|--------|-------------|
+| [Calculate gas dew point](https://github.com/equinor/neqsim/wiki) | Find hydrocarbon and water dew points at pipeline conditions |
+| [Estimate hydrate formation temperature](https://github.com/equinor/neqsim/wiki) | Predict hydrate risk for wet gas systems |
+| [Simulate separator + compressor train](https://github.com/equinor/neqsim/wiki) | Build a basic gas processing flowsheet |
+| [Calculate density and viscosity](https://github.com/equinor/neqsim/wiki) | Get transport properties for natural gas or oil |
+| [Perform TP/PH/PS flash](https://github.com/equinor/neqsim/wiki) | Run any standard flash calculation |
+| [Estimate pipeline pressure drop](https://github.com/equinor/neqsim/wiki) | Multiphase flow with Beggs & Brill |
+| [TEG dehydration process](https://github.com/equinor/neqsim/wiki) | Full absorption/regeneration loop |
+| [Gas quality — ISO 6976](https://github.com/equinor/neqsim/wiki) | Calorific value, Wobbe index, density compliance |
+
+See 30+ Jupyter notebooks in the [examples collection](https://github.com/EvenSol/NeqSim-Colab).
+
+---
+
+## Showcase — End-to-End Case Studies
+
+Real engineering workflows solved with NeqSim:
+
+**Gas Compression Train Sizing** — Define feed gas, separate liquids, compress in stages with intercooling, calculate power and outlet conditions.
+
+**TEG Dehydration Workflow** — Model absorber, flash drum, regenerator, and recycle. Check water dew point spec at outlet.
+
+**PVT Lab Matching** — Import lab data (CME, CVD, separator tests), tune EOS parameters, predict reservoir fluid behavior.
+
+**Blowdown / Depressurization Study** — Simulate vessel blowdown, track minimum metal temperature, size PSV per API 520/521.
+
+**Sales Gas Quality Check** — Verify ISO 6976 compliance: calorific value, Wobbe index, hydrocarbon dew point, H₂S/CO₂ limits.
+
+**Offshore Field Process Model** — Wellhead → manifold → separator train → export pipeline, with production forecasting and economics.
+
+All examples are available as runnable notebooks in [NeqSim-Colab](https://github.com/EvenSol/NeqSim-Colab) and [examples/notebooks](https://github.com/equinor/neqsim/tree/master/examples/notebooks).
+
+---
+
+## How NeqSim Compares
+
+| Feature | NeqSim | Aspen HYSYS / UniSim | DWSIM | CoolProp |
+|---------|--------|---------------------|-------|----------|
+| **Open source** | ✅ Apache-2.0 | ❌ Commercial | ✅ GPL | ✅ MIT |
+| **Thermodynamic depth** | 60+ EOS, CPA, electrolytes | Extensive | Moderate | Pure fluids only |
+| **Process simulation** | 33+ unit ops, dynamic | Full-featured | Full-featured | ❌ Properties only |
+| **Scriptable / automatable** | ✅ Java, Python, .NET, MATLAB | Limited COM/scripting | Python | Python, C++ |
+| **AI / MCP ready** | ✅ MCP server, AI agents | ❌ | ❌ | ❌ |
+| **Notebook-friendly** | ✅ Jupyter / Colab | ❌ GUI-based | Partial | ✅ |
+| **PVT simulation** | ✅ Full suite | ✅ Full suite | Partial | ❌ |
+| **Safety / standards** | ✅ API, ISO, NORSOK | ✅ Built-in | Limited | ❌ |
+| **Multiphase flow** | ✅ Beggs & Brill, two-fluid | Via extensions | ❌ | ❌ |
+| **Cost** | Free | $10k–$100k+/year | Free | Free |
+
+**Where NeqSim excels:** Scriptability, AI integration, open-source flexibility, combined thermo + process + safety in one library.
+**Where it is maturing:** GUI/visual flowsheet editor, real-time training solver, graphic reports.
+
+---
+
+## Documentation & Resources
+
+| Resource | Link |
+|----------|------|
+| **User documentation** | [equinor.github.io/neqsim](https://equinor.github.io/neqsim/) |
+| **Reference manual** | [350+ page reference](https://equinor.github.io/neqsim/manual/neqsim_reference_manual.html) |
+| **JavaDoc API** | [API reference](javadoc/site/apidocs/index.html) |
+| **Jupyter notebooks** | [30+ examples](https://github.com/EvenSol/NeqSim-Colab) |
+| **WebApp** | [neqsim.streamlit.app](https://neqsim.streamlit.app/) |
+| **Discussion forum** | [GitHub Discussions](https://github.com/equinor/neqsim/discussions) |
+
+---
+
+## NeqSim on GitHub
+
+The NeqSim library is written in Java. Source code and releases are on GitHub:
+
+* [**NeqSim Java** (core library)](https://github.com/equinor/neqsim) — 104 ⭐ · 40 forks · 120+ releases
+* [NeqSim Python](https://github.com/equinor/neqsimpython) — `pip install neqsim`
+* [NeqSim MATLAB](https://github.com/equinor/neqsimmatlab)
+* [NeqSim .NET / Excel / CAPE-OPEN](https://github.com/equinor/neqsimcapeopen)
+* [NeqSim native (GraalVM)](https://github.com/equinor/neqsim-native)
+* [NeqSim process models](https://github.com/equinor/neqsimprocess)
+* [NeqSim-Colab notebooks](https://github.com/EvenSol/NeqSim-Colab)
+* [Parameter fitting project](https://github.com/equinor/neqsimParameterFittingProject)
+
+---
+
+## Contribute
+
+We welcome contributions — bug fixes, new models, examples, documentation, and notebook recipes.
+
+| Contribution type | Where to start |
+|-------------------|---------------|
+| **Bug fixes & features** | [CONTRIBUTING.md](https://github.com/equinor/neqsim/blob/master/CONTRIBUTING.md) |
+| **Documentation** | [docs/](https://github.com/equinor/neqsim/tree/master/docs) — improve guides and tutorials |
+| **Notebook recipes** | [examples/notebooks/](https://github.com/equinor/neqsim/tree/master/examples/notebooks) — add engineering examples |
+| **Validation & benchmarks** | Compare NeqSim vs. reference data and publish results |
+| **MCP / AI tools** | [neqsim-mcp-server/](https://github.com/equinor/neqsim/tree/master/neqsim-mcp-server) — add tool schemas |
+| **Good first issues** | [Browse issues](https://github.com/equinor/neqsim/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) |
 
 ---
 
 ## Examples
 
 ### Java
-* [Thermodynamic calculations](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/thermo/util/example)  
-* [Calculation of physical properties](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/physicalProperties/util/examples)  
+* [Thermodynamic calculations](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/thermo/util/example)
+* [Physical properties](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/physicalProperties/util/examples)
 * [Process simulation](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/processSimulation/util/example)
 
-### MATLAB
-* [Thermodynamic and process calculations](https://github.com/equinor/neqsimmatlab/tree/master/example)
-
 ### Python
-* [Python examples](https://github.com/equinor/neqsimpython/tree/master/examples)  
-* [Notebook examples (Jupyter/Google Colab)](https://github.com/EvenSol/NeqSim-Colab)  
-* [NeqSim process project](https://github.com/equinor/neqsimprocess) — A project to build a library of prebuilt process models
+* [Python examples](https://github.com/equinor/neqsimpython/tree/master/examples)
+* [Jupyter / Google Colab notebooks](https://github.com/EvenSol/NeqSim-Colab)
+* [NeqSim process project](https://github.com/equinor/neqsimprocess)
 
-### NeqSim.NET
-* [NeqSim .NET examples](https://github.com/equinor/neqsimNET/tree/master/examples)
-
-### Excel/CAPE-OPEN
-* [NeqSim Excel user interface](https://github.com/equinor/neqsim.NET/wiki/Getting-started-with-NeqSim-in-Excel)
-
----
-
-## NeqSim API
-NeqSim is well suited as a basis for developing APIs for thermodynamic and process calculations.
-
-* API development in [Java API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java) and [Python API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/python)  
-* [Example of API usage from Python](https://github.com/EvenSol/NeqSim-Colab/blob/master/API/java/example/TEGprocess.ipynb)
+### Other
+* [MATLAB examples](https://github.com/equinor/neqsimmatlab/tree/master/example)
+* [.NET examples](https://github.com/equinor/neqsimNET/tree/master/examples)
+* [Excel / CAPE-OPEN](https://github.com/equinor/neqsim.NET/wiki/Getting-started-with-NeqSim-in-Excel)
+* [Java & Python API development](https://github.com/EvenSol/NeqSim-Colab/tree/master/API)
 
 ---
 
