@@ -20,6 +20,8 @@ Support related to the use and development of NeqSim is provided by the [Departm
 - Field development & concept screening  
 - Open, scriptable & extensible  
 - Digital process twins & AI integration  
+- [Agentic Engineering Book](doc/agentic%20engineering/book.html)
+
 
 ---
 
