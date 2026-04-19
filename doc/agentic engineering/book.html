@@ -374,7 +374,7 @@ section.part-header h1::after {
 <h2>Industrial Agentic Engineering with NeqSim</h2>
 <ul>
 <li class="part">Part I: Foundations</li>
-<li><a href="#chapter-1">1. Getting Started with Industrial Agentic Engineering with NeqSim</a></li>
+<li><a href="#chapter-1">1. Getting Started</a></li>
 <li><a href="#chapter-2">2. Introduction — Why Agentic Engineering?</a></li>
 <li><a href="#chapter-3">3. The NeqSim Physics Engine</a></li>
 <li><a href="#chapter-4">4. AI Agents, Skills, and Tool-Use Architecture</a></li>
@@ -399,7 +399,7 @@ section.part-header h1::after {
 <section id="title_page" class="title-page">
 <div class="tp-decoration"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d3b66;stop-opacity:1"/><stop offset="100%" style="stop-color:#2980b9;stop-opacity:1"/></linearGradient><linearGradient id="g2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#2980b9;stop-opacity:0.3"/><stop offset="100%" style="stop-color:#0d3b66;stop-opacity:0.3"/></linearGradient></defs><circle cx="60" cy="60" r="56" fill="none" stroke="url(#g1)" stroke-width="3"/><circle cx="60" cy="60" r="48" fill="none" stroke="#1a5276" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.3"/><circle cx="60" cy="60" r="47" fill="url(#g2)"/><line x1="60" y1="30" x2="60" y2="60" stroke="#1a5276" stroke-width="2.2"/><line x1="34" y1="75" x2="60" y2="60" stroke="#1a5276" stroke-width="2.2"/><line x1="86" y1="75" x2="60" y2="60" stroke="#1a5276" stroke-width="2.2"/><line x1="60" y1="30" x2="34" y2="75" stroke="#0d3b66" stroke-width="1.2" opacity="0.35"/><line x1="60" y1="30" x2="86" y2="75" stroke="#0d3b66" stroke-width="1.2" opacity="0.35"/><line x1="34" y1="75" x2="86" y2="75" stroke="#0d3b66" stroke-width="1.2" opacity="0.35"/><circle cx="60" cy="18" r="2" fill="#2980b9" opacity="0.5"/><circle cx="24" cy="80" r="2" fill="#2980b9" opacity="0.5"/><circle cx="96" cy="80" r="2" fill="#2980b9" opacity="0.5"/><circle cx="95" cy="38" r="2" fill="#0d3b66" opacity="0.4"/><circle cx="25" cy="38" r="2" fill="#0d3b66" opacity="0.4"/><circle cx="60" cy="60" r="10" fill="#1a5276"/><circle cx="60" cy="60" r="6" fill="#fff" opacity="0.15"/><circle cx="60" cy="30" r="7" fill="#0d3b66"/><circle cx="34" cy="75" r="7" fill="#2980b9"/><circle cx="86" cy="75" r="7" fill="#2980b9"/><circle cx="58" cy="28" r="2" fill="#fff" opacity="0.25"/><circle cx="32" cy="73" r="2" fill="#fff" opacity="0.25"/><circle cx="84" cy="73" r="2" fill="#fff" opacity="0.25"/><circle cx="47" cy="45" r="3" fill="#2980b9" opacity="0.55"/><circle cx="73" cy="45" r="3" fill="#2980b9" opacity="0.55"/><circle cx="47" cy="68" r="3" fill="#0d3b66" opacity="0.55"/><circle cx="73" cy="68" r="3" fill="#0d3b66" opacity="0.55"/></svg></div>
 <div class="tp-title">Industrial Agentic Engineering with NeqSim</div>
-<div class="tp-subtitle">AI-Driven Process Simulation, Thermodynamics, and Field Development</div>
+<div class="tp-subtitle">AI Agents for Engineering Task Solving in Industry</div>
 <div class="tp-rule"></div>
 <div class="tp-author">Even Solbraa</div>
 <div class="tp-affiliation">Equinor ASA / NTNU</div>
@@ -409,7 +409,7 @@ section.part-header h1::after {
 </section>
 <section id="copyright" class="copyright-page">
 <div>
-<p class="cp-title">Industrial Agentic Engineering with NeqSim: AI-Driven Process Simulation, Thermodynamics, and Field Development</p>
+<p class="cp-title">Industrial Agentic Engineering with NeqSim: AI Agents for Engineering Task Solving in Industry</p>
 <p>Copyright &copy; 2026 Equinor ASA and the Norwegian University of Science and Technology (NTNU). All rights reserved.</p>
 <p>This work is the intellectual property of Equinor ASA and NTNU. No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of Equinor ASA and NTNU.</p>
 <p>Published by Equinor ASA and NTNU</p>
@@ -432,7 +432,7 @@ section.part-header h1::after {
 <li><strong>Engineering managers and technical leaders</strong> who need to evaluate whether agentic engineering is ready for their organization and what governance is required</li>
 </ol>
 <h3 id="how-this-book-is-organized">How This Book Is Organized</h3>
-<p><strong>Part I (Chapters 1–4)</strong> lays the foundation: why agentic engineering matters, how the NeqSim physics engine works, and the principles of AI agent architecture.</p>
+<p><strong>Part I (Chapters 1–4)</strong> lays the foundation: getting started with the system, why agentic engineering matters, how the NeqSim physics engine works, and the principles of AI agent architecture.</p>
 <p><strong>Part II (Chapters 5–8)</strong> describes the platform: the multi-agent system, the skills library, the task-solving workflow, and the MCP server that enables governed deployment of engineering calculations.</p>
 <p><strong>Part III (Chapters 9–11)</strong> presents worked examples at increasing complexity: from single property lookups to full process simulations to multi-discipline flow assurance studies.</p>
 <p><strong>Part IV (Chapters 12–13)</strong> covers industrial application: real case studies from the Norwegian Continental Shelf and a look at where agentic engineering is heading.</p>
@@ -452,18 +452,15 @@ pip install neqsim
 <hr/>
 <section class="part-header"><h1>Part I: Foundations</h1></section>
 <section id="chapter-1">
-<h1 id="1-getting-started-with-industrial-agentic-engineering-with-neqsim">1 Getting Started with Industrial Agentic Engineering with NeqSim</h1>
+<h1 id="1-getting-started">1 Getting Started</h1>
 <h2 id="learning-objectives">Learning Objectives</h2>
 <p>After reading this chapter, the reader will be able to:</p>
 <ol>
+<li>Understand the four-layer architecture: Agents, Skills, Physics Engine, and Data</li>
 <li>Set up a complete agentic engineering environment — either locally or in the cloud</li>
-<li>Identify and install the required software tools: Python, Java, Git, VS Code, and an AI coding assistant</li>
+<li>Install the required software tools: Git, Python, Java, VS Code, and an AI coding assistant</li>
 <li>Clone the NeqSim repository and verify a working build</li>
 <li>Run a first AI-assisted engineering calculation using natural language</li>
-<li>Understand the roles of each tool in the agentic engineering stack</li>
-<li>Understand how skills work — core, community, and local — and how to create your first one</li>
-<li>Know when to use the MCP server versus working directly in the repository</li>
-<li>Understand how PaperLab combines code development with scientific publication</li>
 </ol>
 <h2 id="quick-start-three-commands">Quick Start — Three Commands</h2>
 <p>If you want to skip the explanations and get running immediately, here is all you need:</p>
@@ -493,32 +490,70 @@ neqsim doctor              # quick diagnostic if something isn't working
 </code></pre>
 <p>The rest of this chapter explains each step in detail.</p>
 <p>---</p>
-<h2 id="1-1-overview-what-you-need">1.1 Overview: What You Need</h2>
-<h3 id="what-is-neqsim">What is NeqSim?</h3>
-<p><strong>NeqSim</strong> (Non-Equilibrium Simulator) is an open-source library for the calculation of fluid behavior, phase equilibrium, and process simulation. Originally developed at the Department of Energy and Process Engineering at NTNU and maintained by Equinor, NeqSim provides the mathematical models that underpin modern oil and gas engineering — equations of state, flash calculations, transport property correlations, and unit operation models.</p>
-<p>NeqSim handles fluids such as natural gas, oil, carbon dioxide, hydrogen, ammonia, refrigerants, water, and industrial chemicals. Its key capabilities include:</p>
-<ul>
-<li><strong>Advanced thermodynamics and property models</strong> — 60+ equation-of-state models (SRK, PR, CPA, UMR-PRU, GERG-2008), mixing rules, and transport property correlations for viscosity, thermal conductivity, surface tension, and diffusivity</li>
-<li><strong>Integrated process simulation</strong> — 33+ equipment types including separators, compressors, heat exchangers, distillation columns, reactors, valves, mixers, and complete process trains with recycles and adjusters</li>
-<li><strong>PVT simulation</strong> — constant mass expansion (CME), constant volume depletion (CVD), differential liberation, separator tests, swelling tests, saturation point calculations, and EOS parameter regression against lab data</li>
-<li><strong>Flow assurance and production chemistry</strong> — hydrate prediction and inhibitor dosing, wax appearance temperature, asphaltene stability, scale prediction, CO2/H2S corrosion, and MEG/DEG management</li>
-<li><strong>Fluid flow and pipeline simulation</strong> — multiphase pipe flow (Beggs & Brill), pressure drop and temperature profiles, liquid holdup, flow regime identification, and pipeline network modeling</li>
-<li><strong>Production optimization and calibration</strong> — model tuning against plant data, digital twin loops with PI/IP.21 historians, compressor curve matching, and equipment performance tracking</li>
-<li><strong>Risk-based process safety analysis</strong> — vessel depressurization and blowdown, relief valve sizing (API 520/521), fire case modeling, source term generation for consequence analysis, and Monte Carlo risk quantification</li>
-<li><strong>Sustainability and emissions tracking</strong> — CO2 equivalent calculations, fuel gas consumption, flare and vent inventories, carbon intensity metrics, and CCS value chain modeling (capture, transport, injection)</li>
-<li><strong>Field development and concept screening</strong> — production forecasting, concept selection, subsea tieback analysis, NPV/IRR economics with tax regimes, SURF cost estimation, and uncertainty analysis</li>
-<li><strong>Open, scriptable, and extensible</strong> — accessible from Java, Python, Jupyter notebooks, .NET, or MATLAB; modular architecture with community skills and pluggable extensions</li>
-<li><strong>Digital process twins and AI integration</strong> — string-addressable automation API, self-healing diagnostics, lifecycle state snapshots, JSON process builder, and MCP server for external AI tool integration</li>
-<li><strong>Agentic engineering</strong> — 25+ specialist AI agents and 26+ domain skills that autonomously plan, simulate, validate, and report engineering analyses using natural language</li>
-</ul>
-<p>In this book, we use NeqSim as the <strong>physics engine</strong> that AI agents call — the agent reasons about the problem, and NeqSim computes the answer.</p>
-<p>For more information, visit the NeqSim homepage at <code>https://equinor.github.io/neqsimhome</code>.</p>
-<h3 id="the-four-layer-stack">The Four-Layer Stack</h3>
-<p>Agentic engineering with NeqSim combines four layers of technology. At the bottom is the <strong>physics engine</strong> — the NeqSim Java library that performs rigorous thermodynamic and process calculations. Above it sits a <strong>programming environment</strong> — Python and Jupyter notebooks that let you script calculations and visualize results. Wrapping the programming environment is an <strong>editor with AI integration</strong> — VS Code with GitHub Copilot, or a similar tool — that gives an AI agent the ability to read files, write code, and run commands on your behalf. At the top is the <strong>AI model</strong> itself — a large language model such as Claude, GPT, or Gemini — that reasons about your engineering problem and orchestrates the tools below.</p>
+<h2 id="1-1-the-four-layer-stack">1.1 The Four-Layer Stack</h2>
+<p>Agentic engineering with NeqSim is built on four layers. Each layer has a distinct role, and understanding them is the key to understanding the entire system.</p>
 <figure><img src="figures/agentic_stack_overview.png" alt="The four layers of the agentic engineering stack: you (the engineer) communicate in natural language with AI agents, which use skills (domain knowledge) and the NeqSim physics engine to produce validated results"/>
 <figcaption>The four layers of the agentic engineering stack: you (the engineer) communicate in natural language with AI agents, which use skills (domain knowledge) and the NeqSim physics engine to produce validated results</figcaption>
 </figure>
-<p>You do not need to understand every layer in detail to get started. The purpose of this chapter is to walk you through the setup process, step by step, so that you can begin working with the system as quickly as possible.</p>
+<h3 id="layer-1-agents-the-reasoning-layer">Layer 1: Agents — The Reasoning Layer</h3>
+<p>At the top of the stack are <strong>AI agents</strong> — large language models (LLMs) such as Claude, GPT, or Gemini running inside a development environment like VS Code with GitHub Copilot. Agents are the layer you interact with directly. You describe an engineering problem in natural language, and the agent reasons about what needs to be done: which calculations to run, which standards apply, what validation is required, and how to present the results.</p>
+<p>Agents can read files, write code, run simulations, create figures, and generate reports — all autonomously. They are powerful reasoners but unreliable calculators. An agent can correctly decide that the density of methane at 200 bara requires the SRK equation of state with volume translation, but it cannot solve the cubic equation itself. That is why the agent delegates computation to the physics engine below.</p>
+<p>NeqSim includes 25+ specialist agents — for process simulation, flow assurance, field development, PVT analysis, mechanical design, safety studies, and more. Chapter 5 covers the multi-agent system in detail.</p>
+<h3 id="layer-2-skills-the-knowledge-layer">Layer 2: Skills — The Knowledge Layer</h3>
+<p>Between the agents and the physics engine sits the <strong>skills layer</strong> — a library of markdown files containing tested engineering knowledge. Each skill is a <code>SKILL.md</code> file with code patterns, design rules, standards references, and common mistakes for a specific topic. When an agent receives a task, it loads relevant skills before generating any code — using verified patterns instead of guessing.</p>
+<p>For example, the <code>neqsim-flow-assurance</code> skill contains hydrate prediction patterns, pipeline pressure drop code, and corrosion rate correlations, all tested against the actual NeqSim API. The <code>neqsim-platform-modeling</code> skill contains patterns for building multi-stage separation trains with recycles and compressor anti-surge control, derived from 15+ production platform models on the Norwegian Continental Shelf.</p>
+<p>Skills come in three tiers:</p>
+<table>
+<thead><tr>
+<th>Tier</th>
+<th>Location</th>
+<th>Visibility</th>
+<th>Example</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>Core</strong></td>
+<td><code>.github/skills/</code> in the NeqSim repo</td>
+<td>All users, automatically</td>
+<td><code>neqsim-flow-assurance</code></td>
+</tr>
+<tr>
+<td><strong>Community</strong></td>
+<td>Your GitHub repo, listed in <code>community-skills.yaml</code></td>
+<td>Anyone who installs it</td>
+<td><code>neqsim-ncs-fiscal-terms</code></td>
+</tr>
+<tr>
+<td><strong>Local</strong></td>
+<td>Your workspace or private repo</td>
+<td>Only you</td>
+<td><code>company-separator-sizing</code></td>
+</tr>
+</tbody></table>
+<p>The current core includes 26+ skills covering thermodynamics, process equipment, PVT, standards, mechanical design, CCS and hydrogen, field economics, dynamic simulation, and platform modeling. Contributing a skill is the easiest way to make the agentic system smarter — no Java required. Chapter 6 covers the skills system in full detail.</p>
+<h3 id="layer-3-physics-engine-the-computation-layer">Layer 3: Physics Engine — The Computation Layer</h3>
+<p>The physics engine is <strong>NeqSim</strong> itself — a comprehensive Java library for thermodynamic modeling, process simulation, and engineering design. When an agent needs to calculate a physical property, run a flash calculation, or simulate a piece of process equipment, it writes code that calls the NeqSim API. The engine performs the rigorous numerical computation and returns exact results.</p>
+<p><strong>NeqSim</strong> (Non-Equilibrium Simulator) was originally developed at the Department of Energy and Process Engineering at NTNU and is maintained by Equinor. It handles fluids such as natural gas, oil, carbon dioxide, hydrogen, ammonia, refrigerants, water, and industrial chemicals. Key capabilities include:</p>
+<ul>
+<li><strong>Thermodynamics</strong> — 60+ equation-of-state models (SRK, PR, CPA, UMR-PRU, GERG-2008), mixing rules, and transport property correlations</li>
+<li><strong>Process simulation</strong> — 33+ equipment types including separators, compressors, heat exchangers, distillation columns, reactors, and complete process trains with recycles</li>
+<li><strong>PVT and flow assurance</strong> — phase envelopes, hydrate prediction, wax, asphaltene, corrosion, and multiphase pipe flow</li>
+<li><strong>Field development</strong> — production forecasting, concept selection, NPV/IRR economics, and uncertainty analysis</li>
+</ul>
+<p>Chapter 3 provides a thorough introduction to the physics engine.</p>
+<h3 id="layer-4-data-the-foundation">Layer 4: Data — The Foundation</h3>
+<p>At the base of the stack is <strong>data</strong> — the inputs that feed the physics engine and the outputs that agents interpret. Data includes:</p>
+<ul>
+<li><strong>Fluid compositions</strong> — lab analyses, PVT reports, well test data</li>
+<li><strong>Operating conditions</strong> — pressures, temperatures, flow rates from design basis documents or plant historians (OSIsoft PI, Aspen IP.21)</li>
+<li><strong>Design parameters</strong> — equipment specifications, piping data, material properties</li>
+<li><strong>Standards and regulations</strong> — API, NORSOK, DNV, ISO, ASME requirements encoded in skills and CSV databases</li>
+<li><strong>Benchmarks and validation</strong> — NIST reference data, published experimental results, vendor performance curves</li>
+</ul>
+<p>Data can come from files in the repository, from documents the agent reads (PDFs, Excel, Word), or from live connections to plant data historians. The agent reads and interprets data; the physics engine consumes it for calculation.</p>
+<h3 id="how-the-layers-work-together">How the Layers Work Together</h3>
+<p>A typical interaction flows through all four layers. You ask an agent (Layer 1) to calculate the hydrate formation temperature for a gas pipeline. The agent loads the flow assurance skill (Layer 2), which contains the correct NeqSim code pattern for hydrate prediction. The agent writes code that calls the NeqSim thermodynamic engine (Layer 3) with the gas composition and pipeline conditions from the design basis (Layer 4). The engine returns a precise temperature; the agent formats the result, compares it to the standard requirement, and reports whether the pipeline is safe to operate.</p>
+<p>No single layer works well alone. Agents without a physics engine hallucinate numbers. A physics engine without skills requires expert users. Skills without agents are static documentation. Data without any of these is just files on a disk. Together, the four layers form an integrated system for engineering task solving.</p>
 <p>There are two paths to getting started:</p>
 <table>
 <thead><tr>
@@ -539,153 +574,7 @@ neqsim doctor              # quick diagnostic if something isn't working
 </tr>
 </tbody></table>
 <p>We describe both paths below.</p>
-<h2 id="1-2-the-tools-and-what-they-do">1.2 The Tools and What They Do</h2>
-<p>Before diving into the installation, let us briefly explain what each piece of software does and why it is needed. If you already know these tools, skip ahead to Section 1.3 (Codespaces) or Section 1.4 (local installation).</p>
-<h3 id="git-and-github">Git and GitHub</h3>
-<p><strong>Git</strong> is a version control system. It tracks changes to files over time, allowing multiple people to collaborate on the same codebase without overwriting each other's work. Think of it as "track changes" for code — but far more powerful. Every change is recorded with a timestamp, author, and description.</p>
-<p><strong>GitHub</strong> is a cloud platform that hosts Git repositories. The NeqSim source code lives at <code>https://github.com/equinor/neqsim</code>. When you "clone" the repository, you download a complete copy of the codebase — all source files, documentation, examples, and history — to your own computer.</p>
-<figure><img src="figures/neqsim_github_repo.png" alt="GitHub hosts the NeqSim repository — all source code, documentation, examples, and AI agent instructions are version-controlled and openly accessible"/>
-<figcaption>GitHub hosts the NeqSim repository — all source code, documentation, examples, and AI agent instructions are version-controlled and openly accessible</figcaption>
-</figure>
-<p><strong>You will need:</strong> A free GitHub account — sign up at <code>https://github.com</code>.</p>
-<h3 id="java">Java</h3>
-<p><strong>Java</strong> is a programming language and runtime environment. The NeqSim physics engine is written in Java. When NeqSim calculates the density of a gas mixture or simulates a separator, it is Java code that performs the computation.</p>
-<p>You do not need to <em>write</em> Java to use NeqSim — the Python interface handles the translation automatically. But a Java Development Kit (JDK) must be installed on your machine so that the physics engine can run. The JDK includes both the Java compiler and the Java Virtual Machine (JVM) that executes NeqSim's calculations.</p>
-<p>We recommend <strong>Eclipse Temurin JDK 21</strong> from <code>https://adoptium.net</code> — a free, open-source distribution. See Section 1.4, Step 3 for detailed installation instructions.</p>
-<p>> <strong>Note:</strong> The <code>neqsim onboard</code> command (described in Section 1.4) can also detect and install Java for you automatically.</p>
-<h3 id="python">Python</h3>
-<p><strong>Python</strong> is the scripting language you will use to interact with NeqSim. The <code>neqsim</code> Python package provides a bridge to the Java engine (via a library called JPype), so you can write Python code that calls NeqSim's thermodynamic models, process equipment, and simulation tools. Python is also the language used for Jupyter notebooks, data analysis with pandas, and visualization with matplotlib.</p>
-<p>We recommend <strong>Python 3.12</strong> or later from <code>https://www.python.org/downloads/</code>. See Section 1.4, Step 2 for detailed installation instructions.</p>
-<p>> <strong>Critical (Windows):</strong> When running the Python installer, check the box <strong>"Add python.exe to PATH"</strong> before clicking "Install Now." If you miss this step, Python will not be available from the command line.</p>
-<h3 id="visual-studio-code-vs-code">Visual Studio Code (VS Code)</h3>
-<p><strong>VS Code</strong> is a free, open-source code editor from Microsoft. It is the recommended environment for agentic engineering with NeqSim because it integrates tightly with GitHub Copilot and supports AI agents that can read your files, run commands, and execute code — all within the editor.</p>
-<figure><img src="figures/Visual studio code and GitHub Copilot.png" alt="VS Code with GitHub Copilot — the AI agent panel (right) communicates with the NeqSim physics engine to solve engineering problems described in natural language"/>
-<figcaption>VS Code with GitHub Copilot — the AI agent panel (right) communicates with the NeqSim physics engine to solve engineering problems described in natural language</figcaption>
-</figure>
-<p>VS Code provides:</p>
-<ul>
-<li>A file explorer for navigating the NeqSim codebase</li>
-<li>An integrated terminal for running build commands and Python scripts</li>
-<li>Jupyter notebook support for interactive calculations</li>
-<li>The Copilot Chat panel where you interact with AI agents</li>
-</ul>
-<p><strong>You will need:</strong> Download VS Code from <code>https://code.visualstudio.com</code> and run the installer.</p>
-<p><strong>Alternatives:</strong> You can also use other editors and AI tools:</p>
-<table>
-<thead><tr>
-<th>Tool</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><strong>GitHub Codespaces</strong></td>
-<td>VS Code in the browser — no local install needed</td>
-</tr>
-<tr>
-<td><strong>Cursor</strong></td>
-<td>AI-native code editor with built-in agent capabilities</td>
-</tr>
-<tr>
-<td><strong>Windsurf</strong></td>
-<td>AI-enhanced editor from Codeium</td>
-</tr>
-<tr>
-<td><strong>Claude Code</strong></td>
-<td>Anthropic's terminal-based coding agent (Claude CLI)</td>
-</tr>
-<tr>
-<td><strong>OpenAI Codex</strong></td>
-<td>OpenAI's cloud-based coding agent</td>
-</tr>
-</tbody></table>
-<p>All of these can work with NeqSim. This book uses VS Code with GitHub Copilot in most examples, but the concepts transfer directly to any of these tools.</p>
-<h3 id="github-copilot-and-the-ai-models-behind-it">GitHub Copilot and the AI Models Behind It</h3>
-<p><strong>GitHub Copilot</strong> is an AI coding assistant that runs inside VS Code (and other editors). In its simplest form, it suggests code completions as you type. In its more powerful "agent mode," it can autonomously plan and execute multi-step engineering tasks: reading files, writing code, running simulations, creating figures, and generating reports.</p>
-<figure><img src="figures/vscode_copilot_panel.png" alt="The VS Code Copilot panel showing agent mode — the engineer types a natural language request and the AI agent plans, writes code, executes simulations, and returns results"/>
-<figcaption>The VS Code Copilot panel showing agent mode — the engineer types a natural language request and the AI agent plans, writes code, executes simulations, and returns results</figcaption>
-</figure>
-<p>In a typical session, the agent reads the NeqSim codebase, writes simulation code, executes it, and presents results — all within the editor:</p>
-<figure><img src="figures/vscode_agent_chat.png" alt="An AI agent chat session in VS Code — the agent reads NeqSim code, executes calculations, and presents results directly in the editor"/>
-<figcaption>An AI agent chat session in VS Code — the agent reads NeqSim code, executes calculations, and presents results directly in the editor</figcaption>
-</figure>
-<p>Copilot is not a single AI model — it is a gateway to multiple large language models (LLMs). When you open the Copilot Chat panel, you can choose which model powers the agent:</p>
-<table>
-<thead><tr>
-<th>Model</th>
-<th>Provider</th>
-<th>Strengths</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><strong>Claude Opus 4.6</strong></td>
-<td>Anthropic</td>
-<td>Excellent at long, multi-step engineering tasks; strong reasoning and code generation</td>
-</tr>
-<tr>
-<td><strong>GPT 5.4</strong></td>
-<td>OpenAI</td>
-<td>Broad knowledge, fast responses, good at summarization and explanation</td>
-</tr>
-<tr>
-<td><strong>Gemini 2.5 Pro</strong></td>
-<td>Google</td>
-<td>Strong at mathematical reasoning and multimodal understanding</td>
-</tr>
-<tr>
-<td><strong>o3</strong></td>
-<td>OpenAI</td>
-<td>Deep analytical reasoning for complex problems</td>
-</tr>
-</tbody></table>
-<p>All of these models work with NeqSim's agent instructions and skills. The examples in this book were developed primarily with Claude Opus 4.6 and GPT 5.4, but the workflows are model-agnostic — you can switch between models at any time and get equivalent results.</p>
-<p><strong>You will need:</strong> A GitHub Copilot subscription — free tiers are available for students, open-source contributors, and individual developers. Enterprise licenses are available through corporate IT (for Equinor employees, access is available through AccessIT).</p>
-<h3 id="running-local-models-for-confidential-work">Running Local Models for Confidential Work</h3>
-<p>All of the cloud-based models send your prompts and code context to external servers. For most engineering work this is fine, but when working with <strong>proprietary fluid compositions, confidential design parameters, or pre-patent research</strong>, you may want everything to stay on your machine.</p>
-<p>For these cases, run a <strong>local language model</strong> using <strong>Ollama</strong> (<code>https://ollama.com</code>) or <strong>LM Studio</strong> (<code>https://lmstudio.ai</code>). These tools download open-weight models and run them on your hardware. Recommended local models:</p>
-<table>
-<thead><tr>
-<th>Model</th>
-<th>Parameters</th>
-<th>Hardware Needed</th>
-<th>Notes</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><strong>Gemma 4 27B</strong></td>
-<td>27 billion</td>
-<td>16+ GB RAM, GPU recommended</td>
-<td>Google's latest open model; multimodal, agentic tool use, strong coding and reasoning (<code>https://deepmind.google/models/gemma/gemma-4/</code>)</td>
-</tr>
-<tr>
-<td><strong>Llama 4 Scout</strong></td>
-<td>17 billion active (109B total)</td>
-<td>32+ GB RAM, GPU recommended</td>
-<td>Meta's mixture-of-experts model; strong at code</td>
-</tr>
-<tr>
-<td><strong>Qwen 3 32B</strong></td>
-<td>32 billion</td>
-<td>16+ GB RAM, GPU recommended</td>
-<td>Alibaba's model; competitive with cloud models on many tasks</td>
-</tr>
-<tr>
-<td><strong>DeepSeek-R1</strong></td>
-<td>Various sizes</td>
-<td>Depends on size</td>
-<td>Strong reasoning and code generation</td>
-</tr>
-<tr>
-<td><strong>Codestral</strong></td>
-<td>22 billion</td>
-<td>16+ GB RAM</td>
-<td>Mistral's code-focused model</td>
-</tr>
-</tbody></table>
-<p>Setup: install Ollama or LM Studio, download a model (<code>ollama pull gemma4:27b</code>), and configure VS Code to use the local endpoint. The agentic workflow is identical — but nothing leaves your machine.</p>
-<p>> <strong>Practical recommendation:</strong> Use cloud models for general work (faster, more capable). Switch to a local model when working with proprietary or confidential data.</p>
-<h3 id="maven-build-tool">Maven (Build Tool)</h3>
-<p><strong>Maven</strong> is the build tool for the NeqSim Java project. When you build NeqSim, Maven compiles the Java source code, runs tests, and produces the library file (JAR) that Python uses. You do not need to install Maven separately — the repository includes a Maven wrapper (<code>mvnw</code> on Linux/macOS, <code>mvnw.cmd</code> on Windows) that downloads and runs the correct version automatically.</p>
-<h2 id="1-3-path-a-github-codespaces-zero-install">1.3 Path A: GitHub Codespaces (Zero Install)</h2>
+<h2 id="1-2-path-a-github-codespaces-zero-install">1.2 Path A: GitHub Codespaces (Zero Install)</h2>
 <p>The fastest way to get started — with nothing to install — is GitHub Codespaces. This gives you a complete VS Code environment running in the cloud, with Java, Python, Maven, and NeqSim pre-configured.</p>
 <p><strong>Step 1.</strong> Go to <code>https://github.com/equinor/neqsim</code></p>
 <p><strong>Step 2.</strong> Click the green <strong>"Code"</strong> button, then select the <strong>"Codespaces"</strong> tab</p>
@@ -706,68 +595,71 @@ neqsim try
 </code></pre>
 <p>This opens an interactive playground where you can experiment with NeqSim immediately.</p>
 <p>> <strong>Tip:</strong> Codespaces is ideal for trying things out, following along with examples in this book, or contributing small fixes. For regular daily use with large simulations, a local installation gives better performance.</p>
-<h2 id="1-4-path-b-local-installation-step-by-step">1.4 Path B: Local Installation (Step by Step)</h2>
+<h2 id="1-3-path-b-local-installation-step-by-step">1.3 Path B: Local Installation (Step by Step)</h2>
 <p>For a permanent setup on your own machine, follow these steps. The entire process takes about 15–20 minutes.</p>
 <h3 id="step-1-install-git">Step 1: Install Git</h3>
+<p><strong>Git</strong> is a version control system that tracks changes to files over time and enables collaboration. The NeqSim source code is hosted on <strong>GitHub</strong> at <code>https://github.com/equinor/neqsim</code>. When you "clone" the repository, Git downloads a complete copy of the codebase to your computer.</p>
+<p>Download Git from <code>https://git-scm.com/downloads</code> and install it for your platform:</p>
 <ul>
 <li><strong>Windows:</strong> Download from <code>https://git-scm.com/download/win</code> and run the installer. Accept the defaults.</li>
-<li><strong>macOS:</strong> Open Terminal and type <code>git --version</code>. If Git is not installed, macOS will prompt you to install it.</li>
+<li><strong>macOS:</strong> Open Terminal and type <code>git --version</code>. If Git is not installed, macOS will prompt you to install it. Alternatively, download the installer from <code>https://git-scm.com/download/mac</code>.</li>
 <li><strong>Linux:</strong> Run <code>sudo apt install git</code> (Ubuntu/Debian) or <code>sudo dnf install git</code> (Fedora).</li>
 </ul>
+<p>Verify the installation by opening a new terminal and typing <code>git --version</code>.</p>
+<p>You will also need a free <strong>GitHub account</strong> — sign up at <code>https://github.com</code>.</p>
+<p>> <strong>New to Git?</strong> The free <em>Pro Git</em> book at <code>https://git-scm.com/book</code> covers everything from basic commits to branching workflows. For a quick interactive tutorial, try <code>https://learngitbranching.js.org</code>.</p>
 <h3 id="step-2-install-python">Step 2: Install Python</h3>
+<p><strong>Python</strong> is the scripting language you will use to interact with NeqSim. The <code>neqsim</code> Python package provides a bridge to the Java engine via JPype, so you can call NeqSim's thermodynamic models from Python code and Jupyter notebooks.</p>
 <ol>
 <li>Go to <code>https://www.python.org/downloads/</code></li>
-<li>Click the large <strong>"Download Python 3.12.x"</strong> button (the exact minor version may differ — any 3.12+ is fine)</li>
-<li>Run the downloaded installer:</li>
+<li>Download <strong>Python 3.12</strong> or later</li>
+<li>Run the installer:</li>
 </ol>
 <ul>
-<li><strong>Windows:</strong> The installer opens a dialog. <strong>Before clicking anything</strong>, check the box at the bottom that says <strong>"Add python.exe to PATH"</strong> — this is critical. Then click <strong>"Install Now"</strong></li>
-<li><strong>macOS:</strong> Open the <code>.pkg</code> file and follow the prompts. Python will be added to your PATH automatically</li>
-<li><strong>Linux:</strong> Use your package manager instead: <code>sudo apt install python3 python3-pip python3-venv</code> (Ubuntu/Debian) or <code>sudo dnf install python3 python3-pip</code> (Fedora)</li>
+<li><strong>Windows:</strong> <strong>Before clicking anything</strong>, check the box <strong>"Add python.exe to PATH"</strong> — this is critical. Then click <strong>"Install Now"</strong></li>
+<li><strong>macOS:</strong> Open the <code>.pkg</code> file and follow the prompts</li>
+<li><strong>Linux:</strong> <code>sudo apt install python3 python3-pip python3-venv</code> (Ubuntu/Debian) or <code>sudo dnf install python3 python3-pip</code> (Fedora)</li>
 </ul>
 <ol>
-<li>Verify the installation by opening a <strong>new</strong> terminal window and typing:</li>
+<li>Verify by opening a <strong>new</strong> terminal:</li>
 </ol>
 <pre><code class="language-bash">
 python --version
 
 
 </code></pre>
-<p>You should see something like <code>Python 3.12.x</code>. On some Linux/macOS systems, the command may be <code>python3</code> instead of <code>python</code>.</p>
-<p>> <strong>Troubleshooting (Windows):</strong> If <code>python --version</code> says "not recognized," it means Python was not added to PATH during installation. Uninstall Python (via Settings → Apps), re-run the installer, and this time check the "Add python.exe to PATH" box.</p>
+<p>> <strong>Troubleshooting (Windows):</strong> If <code>python --version</code> says "not recognized," Python was not added to PATH. Uninstall via Settings → Apps, re-run the installer, and check the PATH box this time.</p>
 <h3 id="step-3-install-java">Step 3: Install Java</h3>
+<p><strong>Java</strong> is the language the NeqSim physics engine is written in. You do not need to <em>write</em> Java — the Python interface handles the translation — but a Java Development Kit (JDK) must be installed so the engine can run.</p>
 <ol>
-<li>Go to <code>https://adoptium.net</code> (the Eclipse Temurin project — a free, open-source JDK)</li>
-<li>The website will auto-detect your operating system. Select <strong>JDK 21</strong> (LTS) from the version dropdown</li>
-<li>Click the <strong>installer download</strong> button:</li>
+<li>Go to <code>https://adoptium.net</code> (Eclipse Temurin — a free, open-source JDK)</li>
+<li>Select <strong>JDK 21</strong> (LTS) and download the installer for your operating system</li>
+<li>Run the installer:</li>
 </ol>
 <ul>
-<li><strong>Windows:</strong> Download the <code>.msi</code> installer. Run it and accept all defaults. When asked about optional features, ensure <strong>"Set JAVA_HOME variable"</strong> and <strong>"Add to PATH"</strong> are both checked</li>
-<li><strong>macOS:</strong> Download the <code>.pkg</code> installer. Open it and follow the prompts</li>
-<li><strong>Linux:</strong> Download the <code>.tar.gz</code> or use your package manager: <code>sudo apt install temurin-21-jdk</code> (Ubuntu — you may need to add the Adoptium repository first; see instructions on the website)</li>
+<li><strong>Windows:</strong> Ensure <strong>"Set JAVA_HOME variable"</strong> and <strong>"Add to PATH"</strong> are both checked</li>
+<li><strong>macOS:</strong> Open the <code>.pkg</code> file and follow the prompts</li>
+<li><strong>Linux:</strong> <code>sudo apt install temurin-21-jdk</code> (Ubuntu — you may need to add the Adoptium repository first)</li>
 </ul>
 <ol>
-<li>Verify by opening a <strong>new</strong> terminal window and typing:</li>
+<li>Verify by opening a <strong>new</strong> terminal:</li>
 </ol>
 <pre><code class="language-bash">
 java -version
 
 
 </code></pre>
-<p>You should see output like:</p>
-<pre><code class="language-">
-openjdk version &quot;21.0.x&quot; 2024-xx-xx LTS
-
-
-OpenJDK Runtime Environment Temurin-21.0.x+y (build 21.0.x+y)
-
-
-</code></pre>
-<p>> <strong>Alternative JDK distributions:</strong> If your company provides a managed JDK (e.g., Amazon Corretto, Microsoft Build of OpenJDK, or Oracle JDK), those work equally well. Any JDK version 17 or 21 is compatible.</p>
-<p>> <strong>Troubleshooting (Windows):</strong> If <code>java -version</code> says "not recognized," the JDK was not added to your system PATH. Re-run the Temurin installer, click "Change," and enable the "Set JAVA_HOME variable" and "Add to PATH" options.</p>
-<h3 id="step-4-install-vs-code">Step 4: Install VS Code</h3>
-<p>Download from <code>https://code.visualstudio.com</code> and run the installer.</p>
-<p>After installation, open VS Code and install these recommended extensions (click the Extensions icon in the sidebar, or press <code>Ctrl+Shift+X</code>):</p>
+<p>> <strong>Alternative JDKs:</strong> Amazon Corretto, Microsoft Build of OpenJDK, or Oracle JDK all work. Any version 17 or 21 is compatible.</p>
+<p>> <strong>Troubleshooting (Windows):</strong> If <code>java -version</code> says "not recognized," re-run the installer and enable the JAVA_HOME and PATH options.</p>
+<h3 id="step-4-install-vs-code-and-ai-assistant">Step 4: Install VS Code and AI Assistant</h3>
+<p><strong>VS Code</strong> is a free code editor from Microsoft. It is the recommended environment because it integrates tightly with GitHub Copilot, supporting AI agents that can read your files, run commands, and execute code — all within the editor.</p>
+<figure><img src="figures/Visual studio code and GitHub Copilot.png" alt="VS Code with GitHub Copilot — the AI agent panel (right) communicates with the NeqSim physics engine to solve engineering problems described in natural language"/>
+<figcaption>VS Code with GitHub Copilot — the AI agent panel (right) communicates with the NeqSim physics engine to solve engineering problems described in natural language</figcaption>
+</figure>
+<ol>
+<li>Download from <code>https://code.visualstudio.com</code> and install</li>
+<li>Open VS Code and install these extensions (<code>Ctrl+Shift+X</code>):</li>
+</ol>
 <table>
 <thead><tr>
 <th>Extension</th>
@@ -795,6 +687,34 @@ OpenJDK Runtime Environment Temurin-21.0.x+y (build 21.0.x+y)
 <td>Java development support</td>
 </tr>
 </tbody></table>
+<p><strong>GitHub Copilot</strong> is an AI coding assistant that runs inside VS Code. In its "agent mode," it can autonomously plan and execute multi-step engineering tasks: reading files, writing code, running simulations, creating figures, and generating reports. Copilot is a gateway to multiple LLMs — you can choose which model powers the agent:</p>
+<table>
+<thead><tr>
+<th>Model</th>
+<th>Provider</th>
+<th>Strengths</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>Claude Opus 4</strong></td>
+<td>Anthropic</td>
+<td>Excellent at long, multi-step engineering tasks</td>
+</tr>
+<tr>
+<td><strong>GPT-4o / o3</strong></td>
+<td>OpenAI</td>
+<td>Broad knowledge, fast responses, deep reasoning</td>
+</tr>
+<tr>
+<td><strong>Gemini 2.5 Pro</strong></td>
+<td>Google</td>
+<td>Strong mathematical reasoning</td>
+</tr>
+</tbody></table>
+<p>The examples in this book were developed primarily with Claude and GPT models, but the workflows are model-agnostic — you can switch models at any time. Model versions change frequently; check GitHub Copilot for the latest available options.</p>
+<p><strong>You will need:</strong> A GitHub Copilot subscription — free tiers are available for students, open-source contributors, and individual developers.</p>
+<p><strong>Alternatives:</strong> Cursor, Windsurf, Claude Code (terminal-based), and OpenAI Codex all work with NeqSim. This book uses VS Code with Copilot, but the concepts transfer directly.</p>
+<p>> <strong>Confidential work:</strong> For proprietary data, run a local model with <strong>Ollama</strong> (<code>https://ollama.com</code>) or <strong>LM Studio</strong> (<code>https://lmstudio.ai</code>) — nothing leaves your machine. Good options include Gemma 4 27B, Qwen 3 32B, and Llama 4 Scout. See Chapter 4 for details.</p>
 <h3 id="step-5-clone-the-repository-and-onboard">Step 5: Clone the Repository and Onboard</h3>
 <p>Open a terminal (in VS Code or your system terminal) and run:</p>
 <pre><code class="language-bash">
@@ -805,7 +725,7 @@ cd neqsim
 
 
 </code></pre>
-<p>This downloads the entire NeqSim codebase to your computer. Next, install the developer tools and run the interactive onboarding wizard:</p>
+<p>This downloads the entire NeqSim codebase. Next, install the developer tools and run the onboarding wizard:</p>
 <pre><code class="language-bash">
 pip install -e devtools/
 
@@ -814,29 +734,22 @@ neqsim onboard
 
 
 </code></pre>
-<p>The <code>neqsim onboard</code> command walks you through the remaining setup interactively. It will:</p>
-<ul>
-<li>Check that Java and Maven are correctly installed</li>
-<li>Build the NeqSim JAR file (the compiled physics engine)</li>
-<li>Install the NeqSim Python package</li>
-<li>Verify that everything works together</li>
-<li>Set up agent configuration files</li>
-</ul>
-<p>If anything goes wrong during onboarding, run the diagnostic tool:</p>
+<p>The <code>neqsim onboard</code> command walks you through the remaining setup: it checks Java, builds the NeqSim JAR file (the compiled physics engine), installs the Python package, and verifies everything works together.</p>
+<p>> <strong>Maven:</strong> The build tool that compiles NeqSim's Java code. You do not need to install it — the repository includes a <strong>Maven wrapper</strong> (<code>mvnw</code> on Linux/macOS, <code>mvnw.cmd</code> on Windows) that automatically downloads and installs the correct Maven version the first time you run it.</p>
+<p>If anything goes wrong, run the diagnostic tool:</p>
 <pre><code class="language-bash">
 neqsim doctor
 
 
 </code></pre>
-<p>This checks your entire environment and reports exactly what needs to be fixed.</p>
-<h3 id="step-6-open-in-vs-code">Step 6: Open in VS Code</h3>
-<p>If you cloned the repository from a system terminal, open it in VS Code:</p>
+<h3 id="step-6-open-in-vs-code-and-verify">Step 6: Open in VS Code and Verify</h3>
+<p>If you cloned from a system terminal, open the project in VS Code:</p>
 <pre><code class="language-bash">
 code .
 
 
 </code></pre>
-<p>You should see the NeqSim project in the file explorer. The repository structure looks like this:</p>
+<p>The repository structure:</p>
 <pre><code class="language-">
 neqsim/
 
@@ -878,22 +791,21 @@ neqsim/
 
 
 </code></pre>
-<h3 id="step-7-verify-with-a-first-calculation">Step 7: Verify with a First Calculation</h3>
-<p>Open the VS Code terminal and run:</p>
+<p>Verify everything works by running your first calculation:</p>
 <pre><code class="language-bash">
 neqsim try
 
 
 </code></pre>
-<p>Or open the GitHub Copilot Chat panel (<code>Ctrl+Shift+I</code> or click the Copilot icon) and type:</p>
+<p>Or open the Copilot Chat panel (<code>Ctrl+Shift+I</code>) and type:</p>
 <pre><code class="language-">
 Calculate the density of methane at 100 bar and 25°C
 
 
 </code></pre>
-<p>If Copilot is configured with agent mode, it will write NeqSim code, execute it, and return the result — a density value calculated from the Soave-Redlich-Kwong equation of state.</p>
-<h2 id="1-5-your-first-agentic-engineering-session">1.5 Your First Agentic Engineering Session</h2>
-<p>Once your environment is set up (either via Codespaces or local installation), let us walk through a simple example to see the system in action.</p>
+<p>The agent will write NeqSim code, execute it, and return the result — a density value calculated from the SRK equation of state.</p>
+<h2 id="1-4-your-first-agentic-engineering-session">1.4 Your First Agentic Engineering Session</h2>
+<p>Once your environment is set up (either via Codespaces or local installation), let us walk through a more substantial example.</p>
 <p>Open the Copilot Chat panel in VS Code and type:</p>
 <pre><code class="language-">
 Create a Jupyter notebook that calculates the phase envelope for a natural gas
@@ -906,12 +818,19 @@ Plot the result with matplotlib.
 
 
 </code></pre>
-<p>The agent will create a notebook, write the NeqSim code, run the flash calculations, generate a matplotlib plot, and save the result — all in about 30–60 seconds. You can watch it work in real time.</p>
+<p>The agent will:</p>
+<ol>
+<li>Load the <code>neqsim-api-patterns</code> skill (Layer 2) for the correct code pattern</li>
+<li>Create a notebook and write Python code calling the NeqSim engine (Layer 3)</li>
+<li>Run the flash calculations with the gas composition you provided (Layer 4)</li>
+<li>Generate a matplotlib plot of the phase envelope</li>
+<li>Save the result — all in about 30–60 seconds</li>
+</ol>
 <figure><img src="figures/presentation_title_slide.png" alt="The agentic engineering concept: natural language intent flows into an AI orchestration layer that drives rigorous physical simulation, producing structured and verified engineering outputs"/>
 <figcaption>The agentic engineering concept: natural language intent flows into an AI orchestration layer that drives rigorous physical simulation, producing structured and verified engineering outputs</figcaption>
 </figure>
-<p>This is agentic engineering: you describe what you want in plain English, and the AI agent orchestrates the physics engine to deliver validated results.</p>
-<h2 id="1-6-the-task-solving-workflow">1.6 The Task-Solving Workflow</h2>
+<p>This is agentic engineering: you describe what you want in plain English, and all four layers work together to deliver validated results.</p>
+<h2 id="1-5-the-task-solving-workflow">1.5 The Task-Solving Workflow</h2>
 <p>For more substantial engineering problems, NeqSim provides a structured task-solving workflow. Instead of ad-hoc chat interactions, you can invoke a dedicated task-solving agent:</p>
 <pre><code class="language-">
 @solve.task hydrate formation temperature for wet gas at 100 bara
@@ -928,247 +847,42 @@ Plot the result with matplotlib.
 <figcaption>The agentic engineering loop: an infinity-loop cycle where engineering tasks drive AI orchestration, which invokes the NeqSim physics core, producing results that feed back into the next iteration</figcaption>
 </figure>
 <p>All outputs are organized in a structured task folder under <code>task_solve/</code>, making results reproducible and auditable. This workflow is covered in detail in Chapter 7.</p>
-<h2 id="1-7-explore-and-contribute">1.7 Explore and Contribute</h2>
-<p>NeqSim welcomes contributions of all kinds — bug fixes, new models, examples, documentation, notebook recipes, and AI-assisted pull requests. The table below lists six good first contributions, ordered from easiest to most involved:</p>
+<h2 id="1-6-what-s-next">1.6 What's Next</h2>
+<p>With your environment working, here are the key topics covered in later chapters:</p>
+<p><strong>The multi-agent system (Chapter 5)</strong> — NeqSim includes 25+ specialist agents for different engineering domains. A router agent analyzes your request and delegates to the right specialist, or composes multi-agent pipelines for cross-discipline tasks.</p>
+<p><strong>The skills library (Chapter 6)</strong> — Skills are the knowledge layer that makes agents reliable. Contributing a skill — a markdown file with tested code patterns and engineering rules — is the easiest way to improve the system. No Java required. Run <code>neqsim new-skill "my-topic"</code> to get started.</p>
+<p><strong>The MCP server (Chapter 8)</strong> — For quick calculations, application integration, or governed corporate deployment, NeqSim ships an MCP server exposing 48 engineering tools as a structured JSON API. Any MCP-compatible client (VS Code, Claude Desktop, Cursor, ChatGPT) can connect.</p>
+<p><strong>PaperLab (Appendix)</strong> — NeqSim includes a publication framework that treats scientific writing and code development as a single activity. This book was written using PaperLab.</p>
+<p><strong>Contributing</strong> — NeqSim welcomes contributions of all kinds:</p>
 <table>
 <thead><tr>
-<th>#</th>
-<th>First Contribution</th>
+<th>Contribution</th>
 <th>Difficulty</th>
 <th>What to do</th>
 </tr></thead>
 <tbody>
 <tr>
-<td>1</td>
-<td><strong>Contribute a skill</strong></td>
+<td><strong>Write a skill</strong></td>
 <td>Easy</td>
-<td>Write a SKILL.md with domain knowledge — <code>neqsim new-skill "name"</code></td>
+<td><code>neqsim new-skill "name"</code> — domain knowledge, no coding</td>
 </tr>
 <tr>
-<td>2</td>
-<td><strong>Add a NIST validation benchmark</strong></td>
+<td><strong>Add a benchmark</strong></td>
 <td>Easy</td>
-<td>Compare NeqSim flash results to NIST data in <code>docs/benchmarks/</code></td>
+<td>Compare NeqSim results to NIST data in <code>docs/benchmarks/</code></td>
 </tr>
 <tr>
-<td>3</td>
-<td><strong>Create a Jupyter notebook example</strong></td>
+<td><strong>Create a notebook</strong></td>
 <td>Medium</td>
 <td>Add a worked example to <code>examples/notebooks/</code></td>
 </tr>
 <tr>
-<td>4</td>
-<td><strong>Add an MCP example to the catalog</strong></td>
-<td>Easy</td>
-<td>Add a new entry in <code>ExampleCatalog.java</code></td>
-</tr>
-<tr>
-<td>5</td>
-<td><strong>Fix a broken doc link</strong></td>
-<td>Easy</td>
-<td>Search <code>docs/**/*.md</code> for dead links and fix them</td>
-</tr>
-<tr>
-<td>6</td>
-<td><strong>Add a unit test for existing equipment</strong></td>
+<td><strong>Add a unit test</strong></td>
 <td>Medium</td>
 <td>Add tests under <code>src/test/java/neqsim/</code></td>
 </tr>
 </tbody></table>
-<p><strong>Skills</strong> are markdown files containing engineering knowledge that AI agents load automatically when solving related tasks. Contributing a skill is the easiest way to make the agentic system smarter — <strong>no Java required.</strong> Section 1.8 explains the skill system in detail, and Chapter 6 covers it fully.</p>
-<h2 id="1-8-understanding-skills-where-knowledge-lives">1.8 Understanding Skills — Where Knowledge Lives</h2>
-<p>A skill is a markdown file (<code>SKILL.md</code>) containing engineering rules, tested code patterns, design constraints, and standards references for a specific topic. When an agent receives a task, it loads relevant skills before generating any response — using verified patterns instead of guessing. For example, the <code>neqsim-flow-assurance</code> skill contains hydrate prediction patterns, pipeline pressure drop code, and corrosion rate correlations, all tested against the actual NeqSim API.</p>
-<h3 id="what-goes-in-the-main-repository">What Goes in the Main Repository</h3>
-<p>Skills that live in <code>.github/skills/</code> inside the NeqSim repository are <strong>core skills</strong>. These are loaded automatically by any agent working with the codebase. A skill belongs in the main repo when it:</p>
-<ul>
-<li><strong>References NeqSim Java classes</strong> — method signatures, constructors, package paths</li>
-<li><strong>Is used by multiple agents</strong> — not just one narrow workflow</li>
-<li><strong>Has been verified</strong> — every code example compiles and runs against the actual API</li>
-<li><strong>Covers a NeqSim subsystem</strong> — thermodynamics, process equipment, PVT, standards, mechanical design</li>
-</ul>
-<p>The current core includes 26+ skills covering topics such as API patterns, flow assurance, CCS and hydrogen, field economics, distillation design, dynamic simulation, reaction engineering, and platform modeling. These are maintained alongside the source code and updated when the API changes.</p>
-<h3 id="what-goes-in-your-local-workspace">What Goes in Your Local Workspace</h3>
-<p>Not all engineering knowledge belongs in the public repository. Some skills are best kept on your own machine — in your VS Code workspace settings or a local <code>.github/skills/</code> folder in a private project. A skill should stay local when it:</p>
-<ul>
-<li><strong>Contains proprietary information</strong> — company-specific fluid compositions, well data, cost models</li>
-<li><strong>Covers internal workflows</strong> — your organization's design review process, naming conventions, approval gates</li>
-<li><strong>References confidential systems</strong> — plant historian tag names, internal database schemas, contract terms</li>
-<li><strong>Is experimental</strong> — a new pattern you are still validating before sharing</li>
-</ul>
-<p>Local skills work identically to core skills — the agent loads them the same way.</p>
-<h3 id="what-should-be-contributed-as-a-community-skill">What Should Be Contributed as a Community Skill</h3>
-<p>Between core skills and purely local skills, there is a middle ground: <strong>community skills</strong>. These are hosted in your own GitHub repository but listed in NeqSim's community catalog (<code>community-skills.yaml</code>) so that anyone can discover and install them:</p>
-<pre><code class="language-bash">
-neqsim install-skill list                    # browse the catalog
-
-
-neqsim install-skill install &lt;name&gt;          # install a community skill
-
-
-neqsim install-skill publish user/repo-name  # publish your skill to the catalog
-
-
-</code></pre>
-<p>A skill fits the community model when it:</p>
-<ul>
-<li><strong>Is useful to others</strong> but does not reference NeqSim internals deeply enough for core</li>
-<li><strong>Covers a specialized niche</strong> — a particular industry segment, regional standard, or vendor workflow</li>
-<li><strong>Orchestrates existing capabilities</strong> rather than requiring new Java classes</li>
-<li><strong>May evolve independently</strong> of the NeqSim release cycle</li>
-</ul>
-<p>For example, a skill about Norwegian NCS-specific fiscal terms, or a skill about a particular vendor's compressor selection workflow, would be good community skills.</p>
-<h3 id="creating-your-first-skill">Creating Your First Skill</h3>
-<p>Run <code>neqsim new-skill "my-topic"</code> to generate a template at <code>.github/skills/neqsim-my-topic/SKILL.md</code>. The template includes sections for trigger conditions, tested code patterns, common mistakes, and standards references. The most important rule: <strong>every code example must work</strong> — test each snippet before submitting. A skill with broken patterns is worse than no skill.</p>
-<p>Anyone with engineering domain knowledge can contribute skills — no programming required. A petroleum engineer who documents hydrate management rules directly improves every AI agent's ability to handle those topics. Chapter 6 covers the skills system in full detail.</p>
-<h3 id="how-the-three-tiers-work-together">How the Three Tiers Work Together</h3>
-<p>The diagram below summarizes the relationship:</p>
-<table>
-<thead><tr>
-<th>Tier</th>
-<th>Location</th>
-<th>Visibility</th>
-<th>Maintained by</th>
-<th>Example</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><strong>Core</strong></td>
-<td><code>.github/skills/</code> in neqsim repo</td>
-<td>All users, automatically</td>
-<td>NeqSim maintainers</td>
-<td><code>neqsim-flow-assurance</code></td>
-</tr>
-<tr>
-<td><strong>Community</strong></td>
-<td>Your GitHub repo, listed in <code>community-skills.yaml</code></td>
-<td>Anyone who installs it</td>
-<td>You (the author)</td>
-<td><code>neqsim-ncs-fiscal-terms</code></td>
-</tr>
-<tr>
-<td><strong>Local</strong></td>
-<td>Your workspace or private repo</td>
-<td>Only you</td>
-<td>You</td>
-<td><code>company-separator-sizing</code></td>
-</tr>
-</tbody></table>
-<p>An agent can use skills from all three tiers simultaneously. Core skills are always available. Community skills are available after installation. Local skills are available in the workspace where they are placed.</p>
-<h2 id="1-9-the-mcp-server-neqsim-without-the-repository">1.9 The MCP Server — NeqSim Without the Repository</h2>
-<p>The approach used throughout this book — cloning the repository and working directly with the source code — gives full access for deep engineering studies. But there is a second way: the <strong>MCP server</strong>.</p>
-<p>The Model Context Protocol (MCP) is an open standard that lets AI applications call external tools through a structured JSON interface. NeqSim ships an MCP server as a single JAR file (~55 MB) exposing 48 engineering tools — flash calculations, process simulation, PVT experiments, pipeline flow, flow assurance, and equipment sizing. Any MCP-compatible client can connect: VS Code Copilot, Claude Desktop, Cursor, ChatGPT, or a custom application.</p>
-<h3 id="when-to-use-mcp-vs-working-in-the-repository">When to Use MCP vs. Working in the Repository</h3>
-<table>
-<thead><tr>
-<th>Scenario</th>
-<th>Use MCP server</th>
-<th>Use repository (this book)</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><strong>Quick calculations</strong> — dew points, densities, phase checks</td>
-<td>Yes — fast, no setup</td>
-<td>Overkill</td>
-</tr>
-<tr>
-<td><strong>App integration</strong> — dashboards, web apps, digital twins</td>
-<td>Yes — designed for this</td>
-<td>Not practical</td>
-</tr>
-<tr>
-<td><strong>Governed environments</strong> — corporate deployment with audit</td>
-<td>Yes — built-in governance</td>
-<td>No governance layer</td>
-</tr>
-<tr>
-<td><strong>Deep engineering studies</strong> — multi-step tasks, uncertainty, reports</td>
-<td>Possible but limited</td>
-<td>Yes — full agent access</td>
-</tr>
-<tr>
-<td><strong>Extending NeqSim</strong> — new models, skills, agents, bug fixes</td>
-<td>Not possible</td>
-<td>Yes — the only path</td>
-</tr>
-</tbody></table>
-<p>In short: the MCP server is a <strong>consumer interface</strong>; the repository is a <strong>developer interface</strong>. This book focuses on the developer path.</p>
-<h3 id="deployment-profiles-and-governance">Deployment Profiles and Governance</h3>
-<p>The MCP server includes four deployment profiles that control which tools are available:</p>
-<table>
-<thead><tr>
-<th>Profile</th>
-<th>Access</th>
-<th>Use case</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><strong>Desktop Engineer</strong></td>
-<td>All 48 tools</td>
-<td>Personal exploration and study</td>
-</tr>
-<tr>
-<td><strong>Study Team</strong></td>
-<td>Tier 1 + Tier 2 (25 tools)</td>
-<td>Team engineering studies</td>
-</tr>
-<tr>
-<td><strong>Digital Twin</strong></td>
-<td>Tier 1 advisory + calculation only</td>
-<td>Read-only operator decision support</td>
-</tr>
-<tr>
-<td><strong>Enterprise</strong></td>
-<td>Tier 1 only, approval gate on</td>
-<td>Production deployment with audit</td>
-</tr>
-</tbody></table>
-<p>Every tool automatically validates output and reports provenance metadata (EOS model, convergence status, assumptions).</p>
-<p>> <strong>Getting started with MCP:</strong> Download <code>neqsim-mcp-server-*-runner.jar</code> from GitHub Releases and configure your MCP client. See <code>neqsim-mcp-server/README.md</code> for setup and <code>MCP_CONTRACT.md</code> for the tool API.</p>
-<h2 id="1-10-writing-papers-and-books-while-developing">1.10 Writing Papers and Books While Developing</h2>
-<p>NeqSim is unusual among engineering software projects in that it includes a built-in <strong>publication framework</strong> — PaperLab — that treats scientific writing and code development as a single activity. The premise is simple: the best way to validate and document an engineering model is to write a paper about it.</p>
-<h3 id="how-it-works">How It Works</h3>
-<p>In PaperLab, writing a paper <em>drives</em> code development: the system scans NeqSim's capabilities, plans benchmarks against published data, runs calculations using NeqSim's Java engine, and drafts the manuscript with every claim traced to a specific result. If NeqSim lacks a needed capability, the code is written first. Benchmarks <em>are</em> the paper's results, and the paper <em>is</em> the code's documentation.</p>
-<p>PaperLab lives in <code>neqsim-paperlab/</code> and includes 11 specialist agents, journal-specific formatting profiles, quality checks (structure, evidence traceability, bibliography), and multi-format rendering (Word, HTML, PDF, LaTeX). A typical workflow:</p>
-<pre><code class="language-bash">
-# Create a new paper
-
-
-python paperflow.py new &quot;Hydrate Prediction Accuracy&quot; --journal fluid_phase_equilibria
-
-
-
-
-
-# Run benchmarks against NeqSim
-
-
-python paperflow.py benchmark papers/hydrate_prediction_2026/
-
-
-
-
-
-# Generate a manuscript draft
-
-
-python paperflow.py draft papers/hydrate_prediction_2026/
-
-
-
-
-
-# Iterative refinement — checks paper AND code quality
-
-
-python paperflow.py iterate papers/hydrate_prediction_2026/ --check all
-
-
-</code></pre>
-<h3 id="books-follow-the-same-pattern">Books Follow the Same Pattern</h3>
-<p>This book was written using PaperLab's book production system. Chapters are markdown files with LaTeX equations, figures, and citations, compiled via <code>python paperflow.py book-build books/.../ --format html</code>. Publisher profiles (Springer, Wiley, CRC Press, self-publishing) control layout, and the same source renders to HTML, Word, and PDF.</p>
-<p>> <strong>Why this matters:</strong> As you solve engineering tasks, you may find opportunities to validate NeqSim against published data or document a new workflow. PaperLab turns those contributions into publishable work.</p>
-<h2 id="1-11-documentation-and-resources">1.11 Documentation and Resources</h2>
-<p>The following resources are available as you work through this book and beyond:</p>
+<p><em><em>Resources:</em></em></p>
 <table>
 <thead><tr>
 <th>Resource</th>
@@ -1181,50 +895,27 @@ python paperflow.py iterate papers/hydrate_prediction_2026/ --check all
 </tr>
 <tr>
 <td><strong>Reference manual</strong></td>
-<td><code>REFERENCE_MANUAL_INDEX.md</code> — 350+ pages of documentation</td>
+<td><code>REFERENCE_MANUAL_INDEX.md</code> (350+ pages)</td>
 </tr>
 <tr>
 <td><strong>JavaDoc API</strong></td>
 <td><code>https://equinor.github.io/neqsimhome/javadoc/</code></td>
 </tr>
 <tr>
-<td><strong>Jupyter notebook examples</strong></td>
-<td><code>examples/notebooks/</code> — 30+ worked examples</td>
-</tr>
-<tr>
-<td><strong>Benchmark gallery</strong></td>
-<td><code>docs/benchmarks/</code> — validation against NIST and published data</td>
-</tr>
-<tr>
-<td><strong>MCP tool contract</strong></td>
-<td><code>neqsim-mcp-server/MCP_CONTRACT.md</code> — stable API for agent builders</td>
-</tr>
-<tr>
-<td><strong>Contributing guide</strong></td>
-<td><code>CONTRIBUTING.md</code> — PR process, code of conduct, AI-assisted contributions</td>
-</tr>
-<tr>
-<td><strong>Agent vision</strong></td>
-<td><code>VISION_AGENTS.md</code> — what belongs in the core vs. community system</td>
+<td><strong>Notebook examples</strong></td>
+<td><code>examples/notebooks/</code> (30+ worked examples)</td>
 </tr>
 <tr>
 <td><strong>Discussion forum</strong></td>
 <td><code>https://github.com/equinor/neqsim/discussions</code></td>
 </tr>
-<tr>
-<td><strong>Releases</strong></td>
-<td><code>https://github.com/equinor/neqsim/releases</code></td>
-</tr>
 </tbody></table>
-<h2 id="1-12-looking-ahead">1.12 Looking Ahead</h2>
-<p>The future of industrial agentic engineering with NeqSim is likely to move beyond isolated calculations and coding assistance toward continuous engineering support across the full lifecycle of industrial assets. AI agents will increasingly help engineers not only perform thermodynamic and process simulations, but also connect these results to live operational data, optimization workflows, documentation, decision support, and automated reporting. In this setting, NeqSim can serve as a rigorous physical and thermodynamic core inside a broader agentic system — one where engineering knowledge, validated models, and AI reasoning work together to support faster, more transparent, and more reproducible industrial decisions.</p>
-<h2 id="1-13-summary">1.13 Summary</h2>
-<p>This chapter has walked you through the complete setup process for agentic engineering with NeqSim. The key points are:</p>
+<h2 id="1-7-summary">1.7 Summary</h2>
 <ol>
-<li><strong>The tool stack</strong> consists of four layers: the NeqSim physics engine (Java), a programming environment (Python), an AI-integrated editor (VS Code), and a large language model (via GitHub Copilot or similar)</li>
+<li><strong>The four-layer stack</strong> — Agents (reasoning), Skills (knowledge), Physics Engine (computation), and Data (inputs and outputs) — is the architecture that makes agentic engineering work. No single layer is sufficient alone; together they form an integrated system for engineering task solving.</li>
 </ol>
 <ol>
-<li><strong>Two setup paths</strong> are available: GitHub Codespaces for zero-install cloud access, or a local installation for full performance</li>
+<li><strong>Two setup paths</strong> are available: GitHub Codespaces for zero-install cloud access, or a local installation for full performance.</li>
 </ol>
 <ol>
 <li><strong>Three commands</strong> get you from zero to a working environment:</li>
@@ -1241,21 +932,12 @@ python paperflow.py iterate papers/hydrate_prediction_2026/ --check all
 
 </code></pre>
 <ol>
-<li><strong>The AI agent</strong> does the heavy lifting — you describe problems in natural language, and the agent writes code, runs simulations, and generates reports</li>
+<li><strong>The AI agent</strong> does the heavy lifting — you describe problems in natural language, and the agent loads the right skills, writes code against the physics engine, and generates validated results.</li>
 </ol>
 <ol>
-<li><strong>Skills are the knowledge layer</strong> — core skills ship with NeqSim, community skills are shared via a catalog, and local skills keep proprietary knowledge private. Creating a skill is the easiest way to contribute — no programming required</li>
+<li><strong>The task-solving workflow</strong> provides structure for substantial engineering problems — from scoping through analysis to professional reports.</li>
 </ol>
-<ol>
-<li><strong>The MCP server</strong> provides a governed API for using NeqSim's capabilities without touching the codebase — ideal for quick calculations, application integration, and corporate deployment. Working in the repository (as in this book) gives full access for deep studies and code development</li>
-</ol>
-<ol>
-<li><strong>PaperLab</strong> turns code development and scientific publication into a single workflow — benchmarks are the paper's results, and the paper is the code's documentation</li>
-</ol>
-<ol>
-<li><strong>Contributing is accessible</strong> to everyone — from writing domain knowledge skills to creating notebook examples and adding unit tests</li>
-</ol>
-<p>With your environment set up, you are ready to dive into the foundations of agentic engineering. Chapter 2 explains <em>why</em> this approach works — the fundamental insight that AI reasoning and physics engines have complementary strengths. Chapter 3 introduces the NeqSim physics engine itself. And Chapter 4 details the AI agent architecture that ties everything together.</p>
+<p>With your environment set up, you are ready to dive into the foundations. Chapter 2 explains <em>why</em> agentic engineering works — the fundamental insight that AI reasoning and physics engines have complementary strengths. Chapter 3 introduces the NeqSim physics engine itself. And Chapter 4 details the AI agent architecture that ties everything together.</p>
 <p>Let us begin.</p>
 </section>
 <section id="chapter-2">
@@ -1398,8 +1080,8 @@ Engineer (natural language) → AI Agent → Code Generation → Physics Engine 
 <p>The agent executes a complete task-solving workflow: creates a task folder, writes a technical specification, builds a fluid model from the given composition, runs production profile simulations using decline curve analysis, models the pipeline and subsea system, estimates CAPEX and OPEX using parametric cost models, calculates NPV under the Norwegian petroleum tax regime, runs Monte Carlo simulations for uncertainty analysis (varying GIP, gas price, CAPEX multiplier), produces a tornado diagram for sensitivity ranking, creates a risk register with ISO 31000 risk matrix, and generates a professional engineering report in both Word and HTML formats with numbered figures, tables, and references. Total time: 1–3 hours, depending on the number of Monte Carlo iterations. The equivalent manual effort: 2–4 weeks for a team of engineers.</p>
 <h2 id="2-7-book-structure-overview">2.7 Book Structure Overview</h2>
 <p>This book is organized in four parts.</p>
-<p><strong>Part I: Foundations</strong> (Chapters 1–4) establishes the conceptual and technical groundwork. Chapter 2 (this chapter) introduces the motivation and concept of agentic engineering. Chapter 3 describes the NeqSim physics engine — its thermodynamic models, flash algorithms, process equipment, and Python interface. Chapter 4 explains the AI agent architecture: tools, skills, instructions, and the four-layer design (agents, skills, physics engine, and data).</p>
-<p><strong>Part II: The Agentic Platform</strong> (Chapters 5–8) presents the infrastructure that makes agentic engineering practical. Chapter 5 describes the multi-agent system — over sixteen specialist agents and the router that composes them into workflows. Chapter 6 covers the skills library: curated knowledge packages that encode domain expertise, code patterns, and error recovery strategies. Chapter 7 presents the task-solving workflow that structures how agents approach engineering problems, from scope and research through analysis to professional reports. Chapter 8 introduces the MCP server — a governed interface that wraps NeqSim calculations in standardised, validated, and auditable tool definitions.</p>
+<p><strong>Part I: Foundations</strong> (Chapters 1–4) establishes the conceptual and technical groundwork. Chapter 1 provides a hands-on getting started guide — the four-layer architecture, installation, a first agentic session, and the task-solving workflow. Chapter 2 (this chapter) introduces the motivation and concept of agentic engineering. Chapter 3 describes the NeqSim physics engine — its thermodynamic models, flash algorithms, process equipment, and Python interface. Chapter 4 explains the AI agent architecture: tools, skills, instructions, and the four-layer design (agents, skills, physics engine, and data).</p>
+<p><strong>Part II: The Agentic Platform</strong> (Chapters 5–8) presents the infrastructure that makes agentic engineering practical. Chapter 5 describes the multi-agent system — over twenty specialist agents and the router that composes them into workflows. Chapter 6 covers the skills library: curated knowledge packages that encode domain expertise, code patterns, and error recovery strategies. Chapter 7 presents the task-solving workflow that structures how agents approach engineering problems, from scope and research through analysis to professional reports. Chapter 8 introduces the MCP server — a governed interface that wraps NeqSim calculations in standardised, validated, and auditable tool definitions.</p>
 <p><strong>Part III: Worked Examples</strong> (Chapters 9–11) demonstrates agentic engineering solving progressively complex problems. Chapter 9 covers thermodynamic property calculations and PVT analysis — from simple lookups to multi-component phase envelopes and gas quality compliance. Chapter 10 addresses process simulation and equipment design — compressors, heat exchangers, separators, and complete process trains. Chapter 11 treats flow assurance and pipeline design: hydrate prediction, wax management, corrosion assessment, and pipeline hydraulics.</p>
 <p><strong>Part IV: Industrial Applications and Future</strong> (Chapters 12–13) connects the technical framework to real-world practice. Chapter 12 presents case studies from the Norwegian Continental Shelf, documenting how the agentic system has been applied to actual engineering problems across thermodynamics, process simulation, flow assurance, and field development. Chapter 13 looks forward — examining multi-model orchestration, web-based interfaces, organizational adoption, and the broader implications for engineering education and practice.</p>
 <p>Each chapter includes worked examples with complete code, exercises for the reader, and references to the NeqSim source code and documentation. The accompanying repository contains all notebooks, data files, and agent configurations used throughout the book.</p>
@@ -2223,7 +1905,7 @@ ProcessSystem = jneqsim.process.processmodel.ProcessSystem
 <p>The engineering disciplines required to design, operate, and optimise an oil and gas facility span an extraordinary breadth of knowledge. A single process engineer must reason about vapour–liquid equilibrium governed by cubic equations of state, pipeline hydraulics described by multiphase flow correlations, mechanical integrity dictated by ASME and API pressure vessel codes, economic viability assessed through discounted cash flow analysis, environmental compliance measured against regulatory emission limits, and safety cases built on consequence modelling and risk matrices. No human specialist masters all of these domains to the depth required for final design, and the same limitation applies to AI agents [<a href="#ref-18" class="cite">18</a>].</p>
 <p>The monolithic agent paradigm—a single large language model prompted with the entirety of the engineering knowledge base—encounters two fundamental constraints. First, the context window, however large, is finite. Loading every API pattern, every code template, every standards reference, and every troubleshooting playbook into a single prompt exhausts the available tokens and degrades the quality of reasoning across all domains simultaneously. Second, the cognitive demands of different engineering tasks are qualitatively different. Selecting an equation of state requires expertise in molecular thermodynamics and phase behaviour. Sizing a pressure vessel requires knowledge of material properties, corrosion allowances, and fabrication constraints. Evaluating project economics requires understanding fiscal regimes, discount rates, and commodity price forecasts. Attempting to hold all of these mental models simultaneously leads to the same dilution of expertise that afflicts a generalist engineer asked to perform every role on a project team [<a href="#ref-20" class="cite">20</a>].</p>
 <p>The multi-agent architecture resolves both constraints through specialisation. Each agent is an expert in a narrow domain: it carries only the skills, code patterns, and reference data relevant to its speciality. When a request arrives, it is routed to the appropriate specialist—or to a team of specialists working in concert. This mirrors the way engineering organisations function: a process engineer defines the flowsheet, a mechanical engineer sizes the vessels, an instrumentation engineer specifies the control system, and a project economist evaluates the business case. Each professional brings deep domain knowledge to their portion of the work, and they communicate through well-defined interfaces—design basis documents, equipment data sheets, and heat and material balances [<a href="#ref-11" class="cite">11</a>].</p>
-<p>The NeqSim multi-agent system implements this organisational metaphor in software. It comprises over sixteen specialist agents, a router agent that dispatches requests, a structured communication protocol for passing results between agents, and error handling mechanisms that enable graceful recovery when individual agents encounter difficulties. The remainder of this chapter describes each of these components in detail.</p>
+<p>The NeqSim multi-agent system implements this organisational metaphor in software. It comprises over twenty specialist agents, a router agent that dispatches requests, a structured communication protocol for passing results between agents, and error handling mechanisms that enable graceful recovery when individual agents encounter difficulties. The remainder of this chapter describes each of these components in detail.</p>
 <figure><img src="figures/multi_agent_orchestration.png" alt="Multi-agent orchestration: the router agent dispatches engineering queries to specialist agents (thermodynamic, process, flow assurance, PVT, safety), all sharing a common skills library, task memory, NeqSim engine, and data sources (plant historians, design databases, corporate knowledge)"/>
 <figcaption>Multi-agent orchestration: the router agent dispatches engineering queries to specialist agents (thermodynamic, process, flow assurance, PVT, safety), all sharing a common skills library, task memory, NeqSim engine, and data sources (plant historians, design databases, corporate knowledge)</figcaption>
 </figure>
@@ -2420,7 +2102,7 @@ ProcessSystem = jneqsim.process.processmodel.ProcessSystem
 <p>Key points from this chapter:</p>
 <ul>
 <li>No single AI agent can master the full breadth of oil and gas engineering. Multi-agent architectures enable specialisation, with each agent carrying deep domain expertise in a narrow area.</li>
-<li>The NeqSim system provides over sixteen specialist agents covering thermodynamics, process simulation, PVT analysis, flow assurance, mechanical design, economics, safety, control systems, emissions, and report generation.</li>
+<li>The NeqSim system provides over twenty specialist agents covering thermodynamics, process simulation, PVT analysis, flow assurance, mechanical design, economics, safety, control systems, emissions, and report generation.</li>
 <li>The router agent classifies requests along four dimensions—domain, complexity, dependencies, and resources—and generates routing plans that compose specialists into workflows.</li>
 <li>Three composition patterns address different types of complexity: sequential pipelines for dependent analyses, parallel fan-out for independent analyses, and iterative refinement for optimisation problems.</li>
 <li>Structured handoff schemas for fluid definitions, simulation results, and design outputs enable agent-to-agent communication without tight coupling between specialists.</li>
@@ -4216,19 +3898,22 @@ ops.calcPTphaseEnvelope()
 
 
 
-# Extract envelope data
+# Extract envelope data — dew and bubble branches
 
 
-temps = [fluid.getPhaseEnvelopeTemperature(i) - 273.15
+import numpy as np
 
 
-         for i in range(fluid.getPhaseEnvelopeSize())]
+dew_temps = np.array(list(ops.get(&quot;dewT&quot;))) - 273.15
 
 
-pressures = [fluid.getPhaseEnvelopePressure(i)
+dew_pressures = np.array(list(ops.get(&quot;dewP&quot;)))
 
 
-             for i in range(fluid.getPhaseEnvelopeSize())]
+bub_temps = np.array(list(ops.get(&quot;bubT&quot;))) - 273.15
+
+
+bub_pressures = np.array(list(ops.get(&quot;bubP&quot;)))
 
 
 
@@ -4240,7 +3925,10 @@ pressures = [fluid.getPhaseEnvelopePressure(i)
 fig, ax = plt.subplots(figsize=(10, 7))
 
 
-ax.plot(temps, pressures, 'b-', linewidth=2, label='Phase boundary')
+ax.plot(dew_temps, dew_pressures, 'b-', linewidth=2, label='Dew point')
+
+
+ax.plot(bub_temps, bub_pressures, 'r-', linewidth=2, label='Bubble point')
 
 
 ax.set_xlabel('Temperature (°C)', fontsize=12)
@@ -5835,7 +5523,7 @@ json_report = report.toJson()
 <p>When the flow assurance agent receives this query, it follows a well-defined sequence:</p>
 <ol>
 <li><strong>Create the fluid</strong>: Build a <code>SystemSrkEos</code> (or <code>SystemUMRPRUMCEos</code> for higher accuracy) with the specified composition, adding water as a component.</li>
-<li><strong>Run hydrate equilibrium</strong>: Use <code>ThermodynamicOperations.hydrateEquilibriumTemperature()</code> to find the hydrate formation temperature at 100 bara.</li>
+<li><strong>Run hydrate equilibrium</strong>: Use <code>ThermodynamicOperations.hydrateFormationTemperature()</code> to find the hydrate formation temperature at 100 bara.</li>
 <li><strong>Generate the hydrate curve</strong>: Sweep pressure from 20 to 300 bara and calculate the hydrate temperature at each point, producing the complete P-T hydrate phase boundary.</li>
 <li><strong>Validate</strong>: Compare the result against Sloan's published data or the CSMHyd correlation.</li>
 </ol>
@@ -5892,7 +5580,7 @@ fluid.setMultiPhaseCheck(True)
 ops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)
 
 
-ops.hydrateEquilibriumTemperature()
+ops.hydrateFormationTemperature()
 
 
 T_hydrate = fluid.getTemperature(&quot;C&quot;)
@@ -5936,7 +5624,7 @@ for P in pressures:
     try:
 
 
-        ops_copy.hydrateEquilibriumTemperature()
+        ops_copy.hydrateFormationTemperature()
 
 
         temperatures.append(fluid_copy.getTemperature(&quot;C&quot;))
@@ -6012,7 +5700,7 @@ fluid.setMultiPhaseCheck(True)
 ops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)
 
 
-ops.hydrateEquilibriumTemperature()
+ops.hydrateFormationTemperature()
 
 
 T_inhibited = fluid.getTemperature(&quot;C&quot;)
@@ -6113,7 +5801,7 @@ pipeline.setPipeWallRoughness(5e-5)       # 50 μm
 pipeline.setLength(50000.0)               # 50 km
 
 
-pipeline.setInnerDiameter(0.4699)         # 18.5 inches in meters
+pipeline.setDiameter(0.4699)              # 18.5 inches in meters
 
 
 pipeline.setAngle(-0.286)                 # Slight upward slope (degrees)
@@ -6122,7 +5810,7 @@ pipeline.setAngle(-0.286)                 # Slight upward slope (degrees)
 pipeline.setNumberOfIncrements(50)        # Integration steps
 
 
-pipeline.setOuterTemperature(277.15)      # 4°C seabed temperature
+pipeline.setConstantSurfaceTemperature(4.0, &quot;C&quot;)  # Seabed temperature
 
 
 pipeline.run()
@@ -6765,7 +6453,7 @@ polytropic_head = compressor.getPolytropicFluidHead()
 </ul>
 <p>Each page follows the same structural pattern: sidebar for fluid/model selection, main panel for data input and results display, expandable documentation sections with equations and references, and optional AI-powered analysis.</p>
 <h3 id="process-chat-conversational-process-simulation">Process Chat — Conversational Process Simulation</h3>
-<p>The Process Chat page (https://neqsim.streamlit.app/Process\_Chat) is the platform's most ambitious feature: a full conversational interface for building, interrogating, and modifying NeqSim process models through natural language. Unlike the individual calculator pages that address specific tasks, Process Chat provides an open-ended environment where an engineer can construct an entire process flowsheet, run what-if scenarios, perform risk analysis, generate compressor performance maps, run dynamic simulations, and export results — all through a chat interface backed by Gemini and NeqSim.</p>
+<p>The Process Chat page (https://neqsim.streamlit.app/Process_Chat) is the platform's most ambitious feature: a full conversational interface for building, interrogating, and modifying NeqSim process models through natural language. Unlike the individual calculator pages that address specific tasks, Process Chat provides an open-ended environment where an engineer can construct an entire process flowsheet, run what-if scenarios, perform risk analysis, generate compressor performance maps, run dynamic simulations, and export results — all through a chat interface backed by Gemini and NeqSim.</p>
 <p>The architecture comprises three layers of increasing capability:</p>
 <p><strong>Model management layer.</strong> The sidebar provides three entry points: upload an existing <code>.neqsim</code> process model file, upload a DEXPI P\&ID XML file for automatic topology extraction, or click "Start New Process" to build from scratch. When a DEXPI P\&ID is uploaded, the system parses the XML to extract equipment tags, piping connectivity, and instrumentation, then attempts to auto-generate a running NeqSim ProcessSystem from the topology. A default fluid composition is assigned based on piping fluid codes, with the user able to override via chat (e.g., <em>"rebuild with fluid: methane 0.9, ethane 0.05, propane 0.03, CO2 0.02"</em>).</p>
 <p><strong>Chat session layer.</strong> The <code>ProcessChatSession</code> class mediates between the Streamlit UI and a Gemini model. Each user message is sent to Gemini along with the current process model state — unit operations, stream conditions, and previous conversation history. The Gemini model generates both a natural-language response and, when appropriate, structured result objects (scenario comparisons, optimization results, risk matrices, dynamic time-series, compressor charts, emissions inventories) that are rendered inline with dedicated visualization functions:</p>
@@ -6837,7 +6525,7 @@ dynamic = session.get_last_dynamic()
 <p>The process model is mutable: scenario results propagate back to the model state, and the session tracks changes so that subsequent questions operate on the updated model. The sidebar provides download buttons for the generated Python script (fully reproducible NeqSim code) and the <code>.neqsim</code> model file, enabling engineers to move between the conversational interface and traditional scripting as needed.</p>
 <p>This represents the "lightweight agentic" deployment model — the LLM reasons about what NeqSim calculations to run, generates the code or structured calls, and presents the results with domain-expert interpretation. It does not have the full autonomy of the VS Code coding agent described in Chapters 4–7, but it makes a substantial fraction of NeqSim's capabilities accessible to engineers who do not write code.</p>
 <h3 id="task-solver-from-question-to-engineering-report">Task Solver — From Question to Engineering Report</h3>
-<p>The Task Solver page (https://neqsim.streamlit.app/Task\_Solver) brings the three-step engineering task workflow described in Chapter 7 to the browser. Where Process Chat provides an open-ended conversational environment, Task Solver is structured and goal-directed: the engineer describes an engineering question, and the system produces a complete report with validated results, reproducible Python code, and downloadable deliverables.</p>
+<p>The Task Solver page (https://neqsim.streamlit.app/Task_Solver) brings the three-step engineering task workflow described in Chapter 7 to the browser. Where Process Chat provides an open-ended conversational environment, Task Solver is structured and goal-directed: the engineer describes an engineering question, and the system produces a complete report with validated results, reproducible Python code, and downloadable deliverables.</p>
 <p>The workflow mirrors the task-solving framework from Chapter 7, compressed into a single page interaction:</p>
 <p><strong>Step 1 — Scope and Classification.</strong> The user describes their task in a free-text area (e.g., <em>"Calculate the JT cooling for a rich gas expanding from 200 to 50 bara"</em>) or selects from pre-built task templates. Optional inputs include custom fluid composition via an editable data table, override conditions (temperature and pressure), and uploaded reference documents (PDF, CSV, Excel). A report depth selector (Quick / Standard / Comprehensive) controls how thorough the analysis should be. The system sends the task description to Gemini, which classifies it by type (Property, Process, PVT, Standards, Phase Envelope, Flow Assurance, or Multi-Step), selects the appropriate equation of state, and generates a structured execution plan:</p>
 <pre><code class="language-python">
@@ -7078,7 +6766,7 @@ response = model.generate_content(task_prompt)
 <h2 id="about-the-author">About the Author</h2>
 <p><strong>Even Solbraa</strong> is a Senior Advisor at Equinor and the creator and lead developer of NeqSim (Non-Equilibrium Simulator), an open-source Java library for thermodynamic and process simulation that has been in continuous development since 2000. He received his PhD in thermodynamics from the Norwegian University of Science and Technology (NTNU) in 2002, where his research focused on non-equilibrium thermodynamics in natural gas processing. He also works as an Adjunct Professor at NTNU in Energy and Process Engineering.</p>
 <p>At Equinor, Dr. Solbraa has spent over two decades developing and applying thermodynamic models for production optimization, flow assurance, and process design across the Norwegian Continental Shelf. His work spans the full range of upstream oil and gas engineering—from equation-of-state parameter fitting to full-platform process simulation, and from hydrate prediction to field development concept studies.</p>
-<p>Since 2025, Dr. Solbraa has led the development of NeqSim’s agentic engineering platform—integrating AI agents with rigorous physics-based simulation to enable natural-language-driven engineering analysis. This system, which combines 16 specialist agents, 25+ domain skills, and a governed MCP server, has been used to solve more than 40 real engineering tasks and represents a new paradigm for how engineers interact with simulation tools.</p>
+<p>Since 2025, Dr. Solbraa has led the development of NeqSim’s agentic engineering platform—integrating AI agents with rigorous physics-based simulation to enable natural-language-driven engineering analysis. This system, which combines more than twenty specialist agents, nearly thirty domain skills, and a governed MCP server, has been used to solve more than 40 real engineering tasks and represents a new paradigm for how engineers interact with simulation tools.</p>
 <p>Dr. Solbraa is an active contributor to the open-source community and has published extensively on thermodynamic modeling, process simulation, and the application of AI in engineering workflows.</p>
 <ul>
 <li>NeqSim project: https://github.com/equinor/neqsim</li>
