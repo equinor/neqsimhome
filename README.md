@@ -14,7 +14,7 @@ Support related to the use and development of NeqSim is provided by the [Departm
 - PVT simulation  
 - Flow assurance & production chemistry  
 - Fluid flow & pipeline simulation  
-- Production optimization & calibration  
+- [Production optimization](doc/production%20optimization/book.html)  
 - Risk-based process safety analysis  
 - Sustainability & emissions tracking  
 - Field development & concept screening  
