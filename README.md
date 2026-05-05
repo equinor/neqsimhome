@@ -17,7 +17,7 @@ Support related to the use and development of NeqSim is provided by the [Departm
 - [Production optimization](doc/production%20optimization/book.html)  
 - Risk-based process safety analysis  
 - Sustainability & emissions tracking  
-- Field development & concept screening 
+- [Field development and operations](doc/field_development_and_operations/book_standalone.html) and [notebooks](doc/field_development_and_operations/notebooks) 
 - Open, scriptable & extensible  
 - Digital process twins & AI integration  
 - [Agentic Engineering](doc/agentic%20engineering/book.html)
