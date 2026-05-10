@@ -21,6 +21,7 @@ Support related to the use and development of NeqSim is provided by the [Departm
 - Open, scriptable & extensible  
 - Digital process twins & AI integration  
 - [Agentic Engineering](doc/agentic%20engineering/book.html)
+- [Agentic Engineering for Operation](doc/agentic_operations/book.html)
 
 
 ---
