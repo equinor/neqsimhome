@@ -52,6 +52,7 @@ A comprehensive user manual is available for NeqSim, covering thermodynamic mode
 * [NeqSim Documentation Page](https://equinor.github.io/neqsim/)  
 * [NeqSim User Manual (HTML)](https://equinor.github.io/neqsim/manual/neqsim_reference_manual.html)  
 * [API Documentation (Javadoc)](javadoc/site/apidocs/index.html)
+* [Process Modeling with NeqSim in Python](doc/neqsim-python/book_single.html)
 
 ---
 
