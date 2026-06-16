@@ -263,15 +263,15 @@
   #set text(size: 8.5pt, fill: luma(80))
   #set par(justify: false, leading: 0.8em)
 
-  Copyright \u00a9 2026 Equinor ASA and the Norwegian University of Science and Technology (NTNU). All rights reserved.
+  Copyright \u00a9 2026 Even Solbraa and the NeqSim Project. All rights reserved.
 
   #v(0.3cm)
 
-  This work is the intellectual property of Equinor ASA and NTNU. No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of Equinor ASA and NTNU.
+  This book is distributed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). You are free to share and adapt the material, including commercially, provided you give appropriate credit to the authors and the NeqSim Project.
 
   #v(0.3cm)
 
-  The NeqSim library is open-source software released under the Apache License 2.0. All code examples in this book are available at #link("https://github.com/equinor/neqsim")[github.com/equinor/neqsim] and may be freely used and modified under the terms of that license.
+  The NeqSim library is open-source software released under the Apache License 2.0. Code examples in this book are released under the MIT License and may be copied, modified, and embedded into proprietary or open-source projects without restriction.
 
   #v(0.5cm)
 
@@ -382,6 +382,11 @@ Even Solbraa Stavanger, 2026
 
 
 = Introduction to Production Optimization
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch01/00_ch01_opener.png", width: 100%)
+]
 <introduction-to-production-optimization>
 == Learning Objectives
 <learning-objectives>
@@ -1587,6 +1592,11 @@ Key points from this chapter:
 
 
 = Thermodynamic Foundations for Process Simulation
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch02/00_ch02_opener.png", width: 100%)
+]
 <thermodynamic-foundations-for-process-simulation>
 == Learning Objectives
 <learning-objectives>
@@ -2677,6 +2687,11 @@ Key points from this chapter:
 
 
 = Fluid Characterization and PVT Modeling
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch03/00_ch03_opener.png", width: 100%)
+]
 <fluid-characterization-and-pvt-modeling>
 == Learning Objectives
 <learning-objectives>
@@ -4533,6 +4548,11 @@ Key points from this chapter:
 
 
 = Reservoir Engineering and Inflow Performance
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch04/00_ch04_opener.png", width: 100%)
+]
 <reservoir-engineering-and-inflow-performance>
 == Learning Objectives
 <learning-objectives>
@@ -5342,6 +5362,35 @@ for yr in range(11):
     Production decline profile showing rate and cumulative production over 10 years
   ]
 )
+
+=== Analytical Drive Models for Integrated Production
+<analytical-drive-models-for-integrated-production>
+Alongside the compositional `SimpleReservoir`, NeqSim provides lightweight #strong[analytical drive models] (package `neqsim.process.fielddevelopment.integrated`) that express reservoir pressure as a function of cumulative production. They share the `ReservoirDrive` interface and plug directly into the integrated reservoir-to-market model of Chapter 28, where thousands of pressure evaluations over a field life would make full compositional simulation prohibitively expensive:
+
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (auto,auto,auto,),
+    table.header([Class], [Drive Mechanism], [Material-Balance Basis],),
+    table.hline(),
+    [`MaterialBalanceGasDrive`], [Volumetric gas expansion], [$p \/ Z$ vs cumulative gas],
+    [`OilTankDrive`], [Solution-gas / depletion oil], [Tank material balance],
+    [`AquiferDrive`], [Water influx support], [Aquifer pressure coupling],
+  )]
+  , kind: table
+  )
+
+Each model couples a `WellDeliverabilityCurve` (Chapter 5) to a declining reservoir pressure so that the integrated model can march a production profile forward in time:
+
+```python
+integ = jneqsim.process.fielddevelopment.integrated
+MaterialBalanceGasDrive = integ.MaterialBalanceGasDrive
+
+drive = MaterialBalanceGasDrive(initialPressureBara, gasInPlaceSm3)
+# pressure falls as cumulative production rises, following p/Z material balance
+```
+
+These drive objects are supplied to `IntegratedProductionModel.addWell(name, drive, deliverabilityCurve)` (Chapter 28) and to the `ReservoirToMarketOptimizer`, giving a closed reservoir-to-export model that runs in milliseconds per timestep.
 
 == Gas Condensate Reservoirs
 <gas-condensate-reservoirs>
@@ -6155,6 +6204,11 @@ Key points from this chapter:
 
 
 = Well Performance and Artificial Lift
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch05/00_ch05_opener.png", width: 100%)
+]
 <well-performance-and-artificial-lift>
 == Learning Objectives
 <learning-objectives>
@@ -6815,6 +6869,53 @@ $ q_(upright("actual")) = eta_(upright("vol")) dot.op q_(upright("theory")) $
 
 where $eta_(upright("vol"))$ is the volumetric efficiency (typically 50--90%).
 
+=== NeqSim Implementation: SuckerRodPump
+<neqsim-implementation-suckerrodpump>
+NeqSim models the beam pump directly with the `SuckerRodPump` equipment class (package `neqsim.process.equipment.pump`). The geometry and operating speed are set with fluent setters and the class returns both theoretical and effective displacement plus the polished-rod load used for surface-unit sizing:
+
+```python
+SuckerRodPump = jneqsim.process.equipment.pump.SuckerRodPump
+
+rodpump = SuckerRodPump("rod pump", wellStream)
+rodpump.setPlungerDiameter(0.0381)          # 1.5 in plunger [m]
+rodpump.setStrokeLength(1.68)               # effective stroke [m]
+rodpump.setStrokesPerMinute(8.0)
+rodpump.setVolumetricEfficiency(0.80)
+rodpump.setPumpDepth(1800.0)                # [m]
+rodpump.setFluidDensity(850.0)              # [kg/m3]
+rodpump.setRodWeightPerLength(35.0)         # [N/m]
+rodpump.setDischargePressure(15.0)          # [bara]
+rodpump.run()
+
+print("Theoretical:", rodpump.getTheoreticalDisplacement("Sm3/day"))
+print("Actual:", rodpump.getActualDisplacement("Sm3/day"))
+print("Polished rod load:", rodpump.getPolishedRodLoad(), "N")
+```
+
+`getTheoreticalDisplacement` evaluates the swept-volume formula above, `getActualDisplacement` applies the volumetric efficiency, and `getPolishedRodLoad` combines fluid load and rod weight for the peak surface load.
+
+=== Hydraulic Jet Pumps in NeqSim
+<hydraulic-jet-pumps-in-neqsim>
+For deviated or high-temperature wells where rod pumps and ESPs are unsuitable, the hydraulic `JetPump` class (package `neqsim.process.equipment.pump`) models a nozzle--throat--diffuser ejector driven by a high-pressure power fluid. It is characterised by the nozzle-to-throat #strong[area ratio] and the power-fluid pressure:
+
+```python
+JetPump = jneqsim.process.equipment.pump.JetPump
+
+jet = JetPump("jet pump", producedStream)
+jet.setAreaRatio(0.30)                       # nozzle area / throat area
+jet.setPowerFluidPressure(250.0)             # [bara]
+jet.setOperatingFlowRatio(0.8)               # produced / power-fluid flow
+jet.setPowerFluidDensity(1000.0)             # [kg/m3]
+jet.run()
+
+print("Head ratio:", jet.getHeadRatio())
+print("Discharge pressure:", jet.getDischargePressure(), "bara")
+print("Efficiency:", jet.getEfficiency())
+print("Produced rate:", jet.getProducedRate("Sm3/day"))
+```
+
+The dimensionless `getHeadRatio()` (also available pointwise via `headRatioAt(M)`) and `getEfficiency()` describe the classic jet-pump performance envelope, while `getDischargePressure()` and `getProducedRate()` give the operating point for the surrounding network.
+
 == Well Testing
 <well-testing>
 === Pressure Drawdown Test
@@ -6952,6 +7053,30 @@ The additional pressure drop due to skin is:
 $ Delta P_(s k i n) = frac(141.2 thin q thin B thin mu, k h) dot.op S $
 
 This pressure drop acts as a fixed "tax" on the well's deliverability and directly reduces the well's IPR. Reducing skin through stimulation can have a dramatic effect on production rate.
+
+=== Fitting Deliverability from Test Data in NeqSim
+<fitting-deliverability-from-test-data-in-neqsim>
+Once a multi-rate or multi-point test is available, NeqSim converts the raw rate/pressure pairs into a usable inflow model with `WellTestMatcher` (package `neqsim.process.fielddevelopment.integrated`). The matcher fits either a productivity index or a Vogel inflow and returns a `WellDeliverabilityCurve` that can be evaluated at any flowing pressure:
+
+```python
+integ = jneqsim.process.fielddevelopment.integrated
+WellTestMatcher = integ.WellTestMatcher
+
+matcher = WellTestMatcher()
+matcher.addTestPoint(1200.0, 180.0)        # rate [Sm3/day], flowing pressure [bara]
+matcher.addTestPoint(2100.0, 150.0)
+matcher.addTestPoint(2800.0, 120.0)
+
+match = matcher.fitVogel()                 # or matcher.fitProductivityIndex()
+print("Reservoir pressure:", match.getReservoirPressure(), "bara")
+print("RMS error:", match.getRmsError())
+
+curve = match.getCurve()                    # WellDeliverabilityCurve
+print("AOFP:", curve.getAbsoluteOpenFlowPotential(), "Sm3/day")
+print("Rate at 100 bara:", curve.rateAt(100.0), "Sm3/day")
+```
+
+A `WellDeliverabilityCurve` can also be built directly from tabulated points (`WellDeliverabilityCurve(pressureBara[], rateSm3PerDay[])`) or analytically with `WellDeliverabilityCurve.fromVogel(aofpSm3PerDay, shutInPressureBara)`. The curve exposes `rateAt(pBara)`, `slopeAt(pBara)`, `getShutInPressure()`, and `getAbsoluteOpenFlowPotential()`, and is the inflow object consumed by the integrated production model of Chapter 28.
 
 == VFP Table Generation
 <vfp-table-generation>
@@ -7421,6 +7546,11 @@ Key points from this chapter:
 
 
 = Production Wells, Artificial Lift, and Well Network Modeling
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch06/00_ch06_opener.png", width: 100%)
+]
 <production-wells-artificial-lift-and-well-network-modeling>
 == Learning Objectives
 <learning-objectives>
@@ -7732,6 +7862,35 @@ network.addWellIPRFetkovich("Reservoir-B", "BH-B", "Well-B Fetkovich",
   )]
   , kind: table
   )
+
+=== The WellFlow Equipment and Inflow Constraints
+<the-wellflow-equipment-and-inflow-constraints>
+The network convenience methods above attach an IPR to a `NetworkPipe`. For a self-contained well that participates in a `ProcessSystem` (or the integrated production model of Chapter 28), NeqSim provides the dedicated `WellFlow` equipment class (package `neqsim.process.equipment.reservoir`). A single instance can carry any of the inflow laws of Section 15.3:
+
+```python
+WellFlow = jneqsim.process.equipment.reservoir.WellFlow
+
+well = WellFlow("Well-A", reservoirStream)
+well.setVogelParameters(qTest, pwfTest, reservoirP)       # Vogel
+# well.setFetkovichParameters(c, n, reservoirP)           # Fetkovich
+# well.setBackpressureParameters(a, b, reservoirP)        # Rawlins-Schellhardt
+# well.setTableInflow(bhp_array, rate_array)              # tabulated IPR
+well.setOutletPressure(120.0, "bara")
+well.solveFlowFromOutletPressure()
+print("Rate:", well.getFlowRate("Sm3/day"),
+      "BHP:", well.getBottomHolePressure(),
+      "drawdown:", well.getDrawdown())
+```
+
+`WellFlow` adds #strong[inflow constraints] that the optimizers of Chapters 21 and 23 honour as capacity limits. They are activated with the fluent `useWellConstraints()` and bounded with reservoir-management limits:
+
+```python
+well.useWellConstraints()
+well.setMaxDrawdown(40.0, "bara")           # sand / coning management
+well.setMinBottomHolePressure(90.0, "bara")  # lift / stability limit
+```
+
+For commingled completions the class supports #strong[multi-layer inflow] --- `addLayer(name, stream, reservoirP, pi)`, `setFlowMode(FlowMode)`, `setTargetZone(...)`, with `getZoneAllocationFractions()` and `getLayerFlowRates()` reporting the crossflow split --- and #strong[fracture-containment screening] via `setFracturePressure(...)`, `setBarrierStressContrast(...)`, `isFractureContained(bhp)`, and `getFractureContainmentMargin()`. These features make `WellFlow` the inflow building block for the well-and-network optimization of Chapter 26.
 
 #horizontalrule
 
@@ -8762,6 +8921,11 @@ Key points from this chapter:
 
 
 = Subsea Production Systems
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch07/00_ch07_opener.png", width: 100%)
+]
 <subsea-production-systems>
 == Learning Objectives
 <learning-objectives>
@@ -10674,6 +10838,11 @@ Key points from this chapter:
 
 
 = Flowlines, Risers, and Pipeline Hydraulics
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch08/00_ch08_opener.png", width: 100%)
+]
 <flowlines-risers-and-pipeline-hydraulics>
 == Learning Objectives
 <learning-objectives>
@@ -11861,6 +12030,11 @@ Key points from this chapter:
 
 
 = Flow Assurance
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch09/00_ch09_opener.png", width: 100%)
+]
 <flow-assurance>
 == Learning Objectives
 <learning-objectives>
@@ -13277,6 +13451,11 @@ Key points from this chapter:
 
 
 = Separation Technology and Equipment Design
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch10/00_ch10_opener.png", width: 100%)
+]
 <separation-technology-and-equipment-design>
 == Learning Objectives
 <learning-objectives>
@@ -15391,6 +15570,11 @@ print(json_result[:500])  # Print first 500 chars
 
 
 = Oil Processing and Stabilization
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch11/00_ch11_opener.png", width: 100%)
+]
 <oil-processing-and-stabilization>
 == Learning Objectives
 <learning-objectives>
@@ -17374,6 +17558,11 @@ This chapter has covered the complete oil processing chain from multi-stage sepa
 
 
 = Gas Processing and Conditioning
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch12/00_ch12_opener.png", width: 100%)
+]
 <gas-processing-and-conditioning>
 == Learning Objectives
 <learning-objectives>
@@ -18504,6 +18693,11 @@ This chapter has covered the major gas processing operations required to convert
 
 
 = Produced Water Treatment
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch13/00_ch13_opener.png", width: 100%)
+]
 <produced-water-treatment>
 == Learning Objectives
 <learning-objectives>
@@ -19569,6 +19763,11 @@ This chapter covered the theory and practice of produced water treatment in oil 
 
 
 = Gas Compression Systems
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch14/00_ch14_opener.png", width: 100%)
+]
 <gas-compression-systems>
 == Learning Objectives
 <learning-objectives>
@@ -19980,6 +20179,25 @@ The trend toward electrification of offshore platforms favors electric motor dri
   )
 
 #emph[Table 12.5: Comparison of gas turbine and electric motor drives for compressors.]
+
+=== Modeling the Driver in NeqSim
+<modeling-the-driver-in-neqsim>
+In NeqSim a gas-turbine driver is modeled explicitly with the `GasTurbineUnit` class (package `neqsim.process.equipment.powergeneration.gasturbine`), which is attached to one or more compressors as power consumers:
+
+```python
+gtpkg = jneqsim.process.equipment.powergeneration.gasturbine
+GasTurbineUnit = gtpkg.GasTurbineUnit
+
+gt = GasTurbineUnit("GT-A", fuelGasStream, spec)
+gt.setAmbient(273.15 + 15.0, 1.01325)   # ambient derating (K, bara)
+gt.addPowerConsumer(compressor)          # turbine drives this compressor
+gt.run()
+print("Load fraction:", gt.getLoadFraction(),
+      "fuel:", gt.getFuelMassFlowKgPerHr(), "kg/hr",
+      "CO2:", gt.getCO2EmissionKgPerHr(), "kg/hr")
+```
+
+The driver reports available power, fuel burn, and emissions, and can act as the binding generation constraint for the production optimizer. The full driver model --- performance maps, degradation, emissions, and power allocation --- is covered in Chapter 18 (#emph[Power Production]).
 
 == NeqSim Implementation
 <neqsim-implementation>
@@ -21099,6 +21317,11 @@ Each option is modeled by modifying the compressor parameters in NeqSim and re-r
 
 
 = Compressor Characteristics and Performance Curves
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch15/00_ch15_opener.png", width: 100%)
+]
 <compressor-characteristics-and-performance-curves>
 == Learning Objectives
 <learning-objectives>
@@ -22367,6 +22590,11 @@ For many offshore platforms, a combination of types is used: centrifugal for the
 
 
 = Heat Exchangers and Thermal Design
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch16/00_ch16_opener.png", width: 100%)
+]
 <heat-exchangers-and-thermal-design>
 == Learning Objectives
 <learning-objectives>
@@ -23632,6 +23860,11 @@ Using the NeqSim `PinchAnalysis` class with $Delta T_min = 10$ °C: (a) Determin
 
 
 = Valves, Flow Control, and Pressure Relief
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch17/00_ch17_opener.png", width: 100%)
+]
 <valves-flow-control-and-pressure-relief>
 == Learning Objectives
 <learning-objectives>
@@ -24860,6 +25093,11 @@ This chapter covered the theory and practice of valves, flow control, and pressu
 
 
 = Power Production and Energy Sources for Oil and Gas Processing
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch18/00_ch18_opener.png", width: 100%)
+]
 <power-production-and-energy-sources-for-oil-and-gas-processing>
 == Introduction
 <introduction>
@@ -25608,6 +25846,31 @@ $ max sum_w Q_w quad upright("subject to") quad sum_c P_c \( Q \) + sum_p P_p \(
 
 where the total power demand from compressors ($P_c$), pumps ($P_p$), and auxiliaries ($P_(a u x)$) must not exceed the total generation capacity of all gas turbines ($P_(G T \, g)$), which itself depends on ambient temperature. This whole-facility power balance creates coupling between otherwise independent process trains.
 
+=== The GasTurbineUnit Driver Model
+<the-gasturbineunit-driver-model>
+NeqSim models the prime mover explicitly with the `GasTurbineUnit` class (package `neqsim.process.equipment.powergeneration.gasturbine`). Unlike a fixed power limit on a single compressor, `GasTurbineUnit` represents a real driver: it has a rated capacity that varies with ambient conditions and degradation, it aggregates the demand of one or more power consumers, and it reports fuel burn and emissions:
+
+```python
+gtpkg = jneqsim.process.equipment.powergeneration.gasturbine
+GasTurbineUnit = gtpkg.GasTurbineUnit
+
+gt = GasTurbineUnit("GT-A", fuelGasStream, spec)
+gt.setAmbient(273.15 + 15.0, 1.01325)        # ISO conditions (K, bara)
+gt.addPowerConsumer(exportCompressor)         # turbine drives the compressor
+gt.addPowerConsumer(injectionCompressor)
+gt.run()
+
+print("Available power:", gt.getAvailablePowerW() / 1e6, "MW")
+print("Load fraction:", gt.getLoadFraction())
+print("Thermal efficiency:", gt.getThermalEfficiency())
+print("Fuel burn:", gt.getFuelMassFlowKgPerHr(), "kg/hr")
+print("CO2:", gt.getCO2EmissionKgPerHr(), "kg/hr",
+      "(", gt.getCO2IntensityKgPerMWh(), "kg/MWh )")
+print("Overloaded:", gt.isOverloaded())
+```
+
+The driver couples directly to the demand side: `addPowerConsumer(Compressor)` (or a generic `PowerDemandConsumer`) sums the shaft-power requirement, while the supply side derates with `setAmbient(...)`, `setDegradation(...)`, and the `GasTurbinePerformanceMap` set through `setPerformanceMap(...)`. Diagnostics include `getLoadFraction()`, `getEffectiveHeatRateKJPerKWh()`, `getExhaustTemperatureK()` (for the waste-heat recovery of the HRSG section), `isOverloaded()`, `isBelowMinLoad()`, and `getPowerShortfallW()`. Emissions reporting (`getCO2EmissionKgPerHr`, `getCO2IntensityKgPerMWh`, `getNOxEmissionKgPerS`, `getMethaneSlipKgPerS`) feeds the CO$""_2$-tax term of the value-chain objective (Chapter 32). When `setEnforcePowerLimit(true)` is set, the unit caps allocated power (`getPowerAllocationW()`) at its available capacity so the optimizer treats the turbine itself as the binding generation constraint.
+
 == Power System Reliability
 <power-system-reliability>
 === Redundancy Philosophy
@@ -26146,6 +26409,11 @@ Power generation and energy management are integral to production optimization i
 
 
 = Export Systems and Fiscal Metering
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch19/00_ch19_opener.png", width: 100%)
+]
 <export-systems-and-fiscal-metering>
 == Learning Objectives
 <learning-objectives>
@@ -27286,6 +27554,11 @@ This chapter covered the design, operation, and measurement of export systems fo
 
 
 = Capacity Checks and Equipment Utilization
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch20/00_ch20_opener.png", width: 100%)
+]
 <capacity-checks-and-equipment-utilization>
 == Learning Objectives
 <learning-objectives>
@@ -28863,6 +29136,11 @@ As production facilities age and field conditions evolve, regular capacity asses
 
 
 = Debottlenecking and Capacity Management
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch21/00_ch21_opener.png", width: 100%)
+]
 <debottlenecking-and-capacity-management>
 == Learning Objectives
 <learning-objectives>
@@ -29027,6 +29305,7 @@ Each constraint is represented by a `CapacityConstraint` object with the followi
     [`valueSupplier`], [`DoubleSupplier`], [Lambda that returns the current value],
     [`warningThreshold`], [`double`], [Fraction at which to warn (default 0.9 = 90%)],
     [`enabled`], [`boolean`], [Whether this constraint is active],
+    [`shadowPrice`], [`double`], [Marginal economic value of relaxing the constraint (default 0)],
   )]
   , kind: table
   )
@@ -29051,6 +29330,15 @@ CapacityConstraint speedConstraint = new CapacityConstraint(
     .setWarningThreshold(0.9)
     .setValueSupplier(() -> compressor.getSpeed());
 ```
+
+Each constraint can also carry a #strong[shadow price] --- the marginal economic value of relaxing the limit by one unit:
+
+```java
+speedConstraint.setShadowPrice(shadowPriceNokPerRpm);  // fluent, returns the constraint
+double price = speedConstraint.getShadowPrice();         // 0.0 by default
+```
+
+The shadow price is zero until populated by an economic tool. The `DebottleneckingAdvisor` (Section 21.9.5) writes shadow prices back onto the binding constraints so that the same constraint objects used for capacity checking also rank the value of the production each bottleneck withholds.
 
 === The ConstraintType Enum
 <the-constrainttype-enum>
@@ -29317,6 +29605,36 @@ Map<String, Double> util = process.getCapacityUtilizationSummary();
 List<String> nearLimit = process.getEquipmentNearCapacityLimit(0.85);
 System.out.println("Equipment above 85%: " + nearLimit);
 ```
+
+=== Tracking Bottleneck Migration with BottleneckTracker
+<tracking-bottleneck-migration-with-bottlenecktracker>
+A single `findBottleneck()` call captures the binding constraint at one operating point. Over a production sweep, a field-life profile, or a real-time monitoring loop, the bottleneck #strong[migrates] from one equipment item to another (Section 21.3, "Bottleneck Shifting"). The `BottleneckTracker` (package `neqsim.process.equipment.capacity`) records a time series of `BottleneckResult` snapshots and analyses how the limiting constraint moves:
+
+```java
+BottleneckTracker tracker = new BottleneckTracker();
+
+for (double rate = 0.5; rate <= 1.3; rate += 0.05) {
+    setFeedRate(process, rate);     // user-defined helper
+    process.run();
+    tracker.record(rate, "rate=" + rate, process.findBottleneck());
+}
+
+System.out.println(tracker.getTimelineSummary());
+System.out.println("Distinct bottlenecks: "
+    + tracker.getDistinctBottleneckEquipment());
+System.out.println("Migration events: " + tracker.getMigrationCount());
+System.out.println("Peak utilization: "
+    + tracker.getPeakUtilizationPercent() + "%");
+```
+
+Each call to `record(time[, label], BottleneckResult)` returns a `Snapshot` exposing `getTime()`, `getLabel()`, `getEquipmentName()`, `getConstraintName()`, `getUtilizationPercent()`, and `isExceeded()`. The tracker derives:
+
+- `getMigrationEvents()` / `getMigrationCount()` --- the points at which the binding equipment changed
+- `getDistinctBottleneckEquipment()` --- the set of all equipment that limited the facility at some point
+- `getPeakSnapshot()` / `getPeakUtilizationPercent()` --- the most stressed point in the series
+- `getTimelineSummary()` --- a human-readable trace, and `toJson()` for export
+
+This converts a sequence of point-in-time capacity checks into a debottlenecking narrative: it shows #emph[which] equipment to address first and #emph[at what production level] the next constraint takes over, which is exactly the information needed to sequence the staged investments analysed in Section 21.9.
 
 #horizontalrule
 
@@ -30139,6 +30457,41 @@ for opt in options:
           f"{opt['delta_q_bpd']:>6.0f}  {npv:>7.0f}  {pi:>5.1f}")
 ```
 
+=== Economic Ranking with DebottleneckingAdvisor
+<economic-ranking-with-debottleneckingadvisor>
+The screening above is convenient but hand-coded. NeqSim provides `DebottleneckingAdvisor` (package `neqsim.process.fielddevelopment.integrated`) to perform the same discounted-cash-flow ranking with a consistent set of economic assumptions and, crucially, to write the resulting #strong[shadow prices] back onto the capacity constraints.
+
+The advisor is configured with an `EconomicParameters` object (shared with the value-chain tools of Chapter 32) and one `DebottleneckCandidate` per option:
+
+```java
+EconomicParameters econ = new EconomicParameters()
+    .setOilPrice(4500.0)        // NOK/Sm3
+    .setDiscountRate(0.08)
+    .setCurrency("NOK");
+
+DebottleneckingAdvisor advisor = new DebottleneckingAdvisor(econ);
+
+// addCandidate(name, targetEquipment, capexNok, firstYear, lastYear,
+//              annualIncrementalValueNok, CapacityConstraint (nullable))
+advisor.addCandidate(new DebottleneckingAdvisor.DebottleneckCandidate(
+    "Uprate HP compressor driver", "HP compressor",
+    45.0e6, 1, 10, 190.0e6,
+    compressor.getCapacityConstraints().get("power")));
+
+advisor.addCandidate(new DebottleneckingAdvisor.DebottleneckCandidate(
+    "Add cyclone inlet to HP sep", "HP separator",
+    15.0e6, 1, 10, 105.0e6, null));
+
+List<DebottleneckingAdvisor.Recommendation> ranked = advisor.evaluate();
+for (DebottleneckingAdvisor.Recommendation r : ranked) {
+    System.out.printf("%-32s NPV=%,.0f  BCR=%.2f  payback=%.1f yr  %s%n",
+        r.getCandidate().getName(), r.getNpvNok(), r.getBenefitCostRatio(),
+        r.getPaybackYears(), r.isAttractive() ? "ATTRACTIVE" : "reject");
+}
+```
+
+`evaluate()` returns the recommendations sorted by descending NPV. Each `Recommendation` exposes `getNpvNok()`, `getPvBenefitsNok()`, `getBenefitCostRatio()`, `getPaybackYears()`, and `isAttractive()` (NPV \> 0). Calling `applyShadowPrices()` then propagates the marginal value of each binding constraint back to the corresponding `CapacityConstraint` object (Section 21.2.3), so that a later utilization report shows not only #emph[how loaded] each equipment item is but #emph[how much production value] its limit is currently withholding. The full result set is available as JSON via `toJson()` for inclusion in a debottlenecking study.
+
 #horizontalrule
 
 == Case Study --- Offshore Platform Debottlenecking
@@ -30402,6 +30755,11 @@ The debottlenecking workflow presented here --- identify, quantify, evaluate, im
 
 
 = Production Optimization Theory and Methods
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch22/00_ch22_opener.png", width: 100%)
+]
 <production-optimization-theory-and-methods>
 == Learning Objectives
 <learning-objectives>
@@ -32129,6 +32487,11 @@ Total gas lift available: 0.90 MSm³/d.~Find the optimal allocation using the eq
 
 
 = The NeqSim Optimization Framework
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch23/00_ch23_opener.png", width: 100%)
+]
 <the-neqsim-optimization-framework>
 == Learning Objectives
 <learning-objectives>
@@ -32167,7 +32530,7 @@ NeqSim addresses this with three interlocking subsystems, illustrated in Figure 
 - #strong[Constraint engine] --- the `CapacityConstrainedEquipment` interface that endows every equipment unit with knowledge of its own operating limits
 - #strong[Optimizer] --- the `ProductionOptimizer` and `ProcessOptimizationEngine` classes that explore the decision-variable space, query the simulator, and respect all constraints
 
-This chapter explains how each layer works and how they combine into a coherent optimization framework. Earlier chapters have introduced optimization theory (Chapter 19) and production optimization workflows (Chapter 18). Here, we focus on the software architecture --- the classes, interfaces, and APIs that make it all work --- so that the reader can extend the framework for site-specific problems.
+This chapter explains how each layer works and how they combine into a coherent optimization framework. Earlier chapters have introduced optimization theory (Chapter 22) and production optimization workflows (Chapter 24). Here, we focus on the software architecture --- the classes, interfaces, and APIs that make it all work --- so that the reader can extend the framework for site-specific problems.
 
 === Design Philosophy
 <design-philosophy>
@@ -32389,6 +32752,31 @@ print(f"Outlet pressure: {pressure:.1f} bara, Power: {power:.0f} kW")
 
 This discovery process is how the optimizer identifies which variables are manipulable (INPUT type) and which are observable (OUTPUT type), forming the decision variables and objective/constraint evaluators for the optimization problem.
 
+=== The evaluate() Optimization Primitive
+<the-evaluate-optimization-primitive>
+The plain `process.run()` method returns `void`, so an agent or optimizer that calls it must separately inspect the run status, the convergence report, and every equipment constraint to decide whether a trial point is usable. `ProcessAutomation` collapses that bookkeeping into a single primitive, `evaluate()`, that applies a batch of setpoints, runs the model to convergence, gates feasibility, and reads back the requested objectives --- returning #strong[one schema-versioned JSON object that never throws]:
+
+```python
+import json
+
+auto = ProcessAutomation(plant)
+
+setpoints = {
+    "Compression::export compressor.outletPressure": 150.0,
+    "Separation::oil heater.outletTemperature": 78.0,
+}
+readbacks = ["Compression::export compressor.power"]
+
+# evaluate(setpoints, setpointUnit, readbacks, readbackUnit, maxIterations, tolerance)
+# Pass None as the unit to use each variable's default unit (bara, K, kg/hr).
+result = json.loads(str(auto.evaluate(setpoints, None, readbacks, "kW", 30, 5.0e-3)))
+
+if result["feasible"]:
+    power = result["readbacks"]["Compression::export compressor.power"]
+```
+
+Gate every optimizer trial on the single `feasible` flag --- it is `true` only when the run did not throw, the model converged, no unit failed, and #strong[every] setpoint was accepted. A bad address or an out-of-bounds value lands in `setpointsRejected` (good setpoints are still applied) and a bad read-back lands in `readbackErrors`, both without throwing, so a single malformed candidate degrades one trial instead of crashing the loop. The companion method `getAdjustableParameters()` enumerates the bounded decision space (each adjustable variable with its lower and upper limits) that the agent may perturb, and `getUtilizationSnapshotJson()` (Section 25.11.2) provides the matching capacity observation. Together, `getAdjustableParameters()` → `evaluate()` → `getUtilizationSnapshotJson()` form the action--reward--observation triple that the `AgenticProcessOptimizer` (Section 25.10) automates.
+
 #horizontalrule
 
 == The CapacityConstrainedEquipment Interface
@@ -32444,6 +32832,7 @@ A `CapacityConstraint` encapsulates:
 - #strong[Warning threshold] --- fraction of design value at which a warning fires (typically 0.9)
 - #strong[Current value] --- dynamically computed from simulation state via a supplier function
 - #strong[Utilization] --- the ratio $U = v_(upright("current")) \/ v_(upright("design"))$
+- #strong[Shadow price] --- the marginal economic value of relaxing the constraint by one unit, set with `setShadowPrice(double)` and read with `getShadowPrice()`. The shadow price is zero by default and is populated by economic tools such as the `DebottleneckingAdvisor` (Chapter 21) so that binding constraints can be ranked by the value of the production they unlock.
 
 The utilization is defined as:
 
@@ -33057,6 +33446,141 @@ These corrections improve the fidelity of the performance map at operating point
 
 #horizontalrule
 
+== The AgenticProcessOptimizer
+<the-agenticprocessoptimizer>
+The classic `ProductionOptimizer` (Section 25.5) and the external-solver bridges expect the engineer to assemble a configuration object, supply evaluator functions, and interpret a Java result. The `AgenticProcessOptimizer` (package `neqsim.process.automation`) is a higher-level, #strong[closed-loop optimizer purpose-built for machine-learning and autonomous-agent workflows]. It works entirely in terms of string addresses, a never-throwing schema-versioned JSON contract, and a replayable optimization trajectory, so an agent can build and solve an optimization problem directly from the output of `getAdjustableParameters()`.
+
+=== Obtaining and Configuring the Optimizer
+<obtaining-and-configuring-the-optimizer>
+The optimizer is created from the automation facade and configured with a fluent API:
+
+```python
+auto = ProcessAutomation(plant)
+opt = auto.newOptimizer()                      # returns an AgenticProcessOptimizer
+
+# Decision space (per-variable bounds and units)
+opt.addVariable("Compression::export compressor.outletPressure", 80.0, 200.0, "bara")
+# ... or auto-fill bounded variables from the process adjusters:
+# n = opt.useAdjustableParameters()
+
+# Objective (address-based)
+opt.minimize("Compression::export compressor.power", "kW")
+
+# Hard inequality constraint, folded in as a weighted quadratic penalty
+opt.addConstraintLessOrEqual("Export Oil.RVP", 0.79, "bara", 1.0e4)
+
+opt.setSeed(42).setMaxEvaluations(80)
+```
+
+The principal configuration methods are summarized in Table 25.3.
+
+#strong[Table 25.3.] `AgenticProcessOptimizer` configuration API.
+
+#figure(
+  align(center)[#table(
+    columns: 2,
+    align: (auto,auto,),
+    table.header([Method], [Purpose],),
+    table.hline(),
+    [`addVariable(addr, lo, hi, unit)`], [Add a bounded decision variable by address],
+    [`useAdjustableParameters()`], [Auto-fill bounded variables from process adjusters; returns the count added],
+    [`minimize(addr, unit)` / `maximize(addr, unit)`], [Set an address-based objective],
+    [`setObjective(addr, Sense, unit)`], [Set objective with an explicit `Sense` (MINIMIZE/MAXIMIZE)],
+    [`addWatch(addr, unit)`], [Track an observable that is not the objective],
+    [`addConstraintLessOrEqual(addr, limit, unit, penaltyWeight)`], [$g \( x \) lt.eq upright("limit")$ as a penalty],
+    [`addConstraintGreaterOrEqual(addr, limit, unit, penaltyWeight)`], [$g \( x \) gt.eq upright("limit")$ as a penalty],
+    [`setMaxEvaluations(n)`], [Evaluation budget],
+    [`setConvergenceTolerance(tol)`], [Simplex stop tolerance],
+    [`setSeed(long)`], [Seed for deterministic, reproducible runs],
+  )]
+  , kind: table
+  )
+
+=== The Search Algorithm
+<the-search-algorithm>
+Internally, `AgenticProcessOptimizer` runs a #strong[bounded Nelder013Mead simplex] with deterministic, seeded random initialization. A flowsheet behind `evaluate()` is a noisy, feasibility-gated black box with no usable analytic gradient, so a derivative-free method is the appropriate choice. The same seed and the same problem produce an identical trajectory, which makes experiments reproducible. Hard constraints are folded into the objective as weighted quadratic penalties:
+
+$ tilde(f) \( x \) = f \( x \) + sum_k w_k thin max #scale(x: 120%, y: 120%)[\(] 0 \, #h(0em) g_k \( x \) - L_k #scale(x: 120%, y: 120%)[\)]^2 $
+
+where $f$ is the (sign-adjusted) objective, $g_k$ is the constraint read-back, $L_k$ its limit, and $w_k$ its penalty weight. Infeasible trials are still logged but pushed to the back of the ranking by their large penalty.
+
+Each trial sets the decision variables, calls the `evaluate()` primitive (Section 25.3.7) for one gated run, then reads the objective and constraints individually. A malformed candidate degrades exactly one trial instead of crashing the loop, and `optimize()` itself never throws.
+
+=== Running the Optimizer and Reading Results
+<running-the-optimizer-and-reading-results>
+```python
+import json
+
+result = opt.optimize()              # OptimizationResult, never throws
+print("success:", result.isSuccess())
+print("best objective:", result.getBestObjective())
+print("best setpoints:", dict(result.getBestSetpoints()))
+
+# Full schema-versioned JSON including the trajectory tape
+report = json.loads(str(opt.optimizeToJson()))
+```
+
+Every evaluated point is logged as a `Trial` (setpoints, read-backs, raw objective, penalty, feasibility, and minimized score) accessible through `result.getTrajectory()` and embedded in the result JSON. This trajectory is the (state, action, reward) tape used for offline reinforcement learning, surrogate-model fitting, and agent post-mortems.
+
+=== Machine-Readable Self-Rating
+<machine-readable-self-rating>
+Before committing an evaluation budget, an agent can query the optimizer's own capability self-assessment:
+
+```python
+readiness = json.loads(str(opt.getReadinessJson()))
+```
+
+`getReadinessJson()` rates each capability `full`, `partial`, or `none`. The never-throwing JSON contract, deterministic seeding, bounded action space, reward shaping, constraint handling, trajectory logging, and feasibility gating are all rated `full`\; gradient information is `none`\; the global-optimum guarantee is `partial`\; and parallel evaluation is `none`. This self-rating lets an autonomous planner decide whether `AgenticProcessOptimizer` is the right tool for a given problem or whether a global or gradient-based method should be used instead.
+
+#horizontalrule
+
+== Multi-Area Optimization and the Utilization Snapshot
+<multi-area-optimization-and-the-utilization-snapshot>
+Production facilities are modeled as multi-area `ProcessModel` plants (Section 25.2.3). Two additions in this framework make a full plant directly optimizable.
+
+=== ProcessModelOptimizationView
+<processmodeloptimizationview>
+`ProcessModelOptimizationView` (package `neqsim.process.util.optimizer`) wraps a `ProcessModel` and exposes plant-wide constraint introspection through the same interface the optimizer uses for a single `ProcessSystem`:
+
+```python
+ProcessModelOptimizationView = jneqsim.process.util.optimizer.ProcessModelOptimizationView
+
+view = ProcessModelOptimizationView(plant)            # or (plant, maxIterations, tolerance)
+view.run(None)                                         # solve all areas to convergence
+
+bottleneck = view.getBottleneck()                      # plant-wide limiting unit
+print("Bottleneck:", bottleneck.getName(),
+      f"{view.getBottleneckUtilization() * 100:.1f}%")
+print("Any overloaded:", view.isAnyEquipmentOverloaded())
+print("Any hard limit exceeded:", view.isAnyHardLimitExceeded())
+
+for eq in view.getConstrainedEquipment():
+    print(eq.getName(), eq.getMaxUtilization())
+```
+
+The view aggregates `getUnitOperations()` and `getConstrainedEquipment()` across all areas, so the plant-wide bottleneck 014 which may be in the compression area while the remedy is in separation 014 is identified in a single call via `findBottleneck()`.
+
+=== The Utilization Snapshot
+<the-utilization-snapshot>
+Both `ProcessSystem` and `ProcessModel` expose `getUtilizationSnapshotJson()`, a #strong[side-effect-free] observation of plant capacity. It never calls `run()`\; it only reads the utilization already computed by each unit's capacity constraints, so it is cheap to call on every optimization step:
+
+```python
+import json
+
+snapshot = json.loads(str(plant.getUtilizationSnapshotJson()))
+print("bottleneck:", snapshot["bottleneck"])
+print("any overloaded:", snapshot["anyOverloaded"])
+for unit in snapshot["units"]:
+    print(unit["area"], unit["name"], unit["maxUtilizationPercent"],
+          unit["limitingConstraint"])
+```
+
+Per unit the snapshot reports `name`, `type`, `maxUtilization` (00131), `maxUtilizationPercent`, `limitingConstraint`, `feasible`, `hardLimitExceeded`, `power_kW` (for compressors and pumps), and a `constraints[]` breakdown; for a `ProcessModel` each unit also carries its `area`. Plant-wide it gives `bottleneck`, `anyOverloaded`, and `anyHardLimitExceeded`.
+
+This snapshot is the #strong[observation] half of a closed-loop optimization: the observation is `getUtilizationSnapshotJson()`, the action is the setpoint batch passed to `evaluate()`, and the reward is an objective read-back penalized whenever `anyOverloaded` is true or any unit's `maxUtilization` exceeds 1. The `BottleneckTracker` (Chapter 21) consumes successive snapshots to record how the binding constraint migrates as operating conditions change.
+
+#horizontalrule
+
 == Architecture Summary and Extension Points
 <architecture-summary-and-extension-points>
 === Component Diagram
@@ -33128,6 +33652,8 @@ The key concepts are:
 + #strong[Custom objectives and constraints] extend the framework beyond throughput maximization to multi-objective optimization combining production, energy, and emissions targets. Pareto front generation with knee-point detection supports decision-making under competing objectives.
 + #strong[ProcessOptimizationEngine] wraps common workflows (maximum throughput, sensitivity analysis, lift curve generation) into single-method calls, reducing the barrier to entry for routine optimization tasks.
 + #strong[CompressorChartGenerator] integration ensures that compressor-limited systems are optimized with full performance-map fidelity, including surge margin enforcement and operating point tracking.
++ #strong[The evaluate() primitive and AgenticProcessOptimizer] turn a flowsheet into a steppable optimization target. `evaluate()` applies a setpoint batch, runs to convergence, gates feasibility, and reads back objectives in one never-throwing JSON call; `AgenticProcessOptimizer` wraps it in a bounded, seeded Nelder013Mead search with quadratic-penalty constraints, a replayable trajectory tape, and a machine-readable readiness self-rating 014 a closed-loop optimizer designed for autonomous-agent and machine-learning workflows.
++ #strong[ProcessModelOptimizationView and the utilization snapshot] extend optimization to full multi-area plants. The view exposes plant-wide bottleneck and constraint introspection, while `getUtilizationSnapshotJson()` provides a cheap, side-effect-free capacity observation that serves as the observation half of a closed-loop optimization loop and feeds the `BottleneckTracker`.
 
 The framework is designed for extensibility: new search algorithms, new constraint types, and new equipment classes can be integrated without modifying existing code. For problems that exceed the built-in capabilities, the `ProcessSimulationEvaluator` provides a bridge to external optimization libraries.
 
@@ -33168,6 +33694,11 @@ The framework is designed for extensibility: new search algorithms, new constrai
 
 
 = Production Optimization
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch24/00_ch24_opener.png", width: 100%)
+]
 <production-optimization>
 == Learning Objectives
 <learning-objectives>
@@ -36305,6 +36836,11 @@ Compare the number of iterations required in each case. By what factor does warm
 
 
 = Real-Time Utilization Monitoring
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch25/00_ch25_opener.png", width: 100%)
+]
 <real-time-utilization-monitoring>
 == Learning Objectives
 <learning-objectives>
@@ -36618,6 +37154,37 @@ for name, util in utilization.items():
         status = "RED"
     print(f"{name:<25} {util:>11.1%} {status:>10}")
 ```
+
+=== The Utilization Snapshot JSON API
+<the-utilization-snapshot-json-api>
+The hand-built table above iterates the utilization summary and applies colour thresholds in Python. NeqSim now exposes the same information directly as a structured, schema-versioned snapshot through `getUtilizationSnapshotJson()`, available on both `ProcessSystem` and `ProcessModel`. The call is #strong[side-effect-free] --- it never triggers a `run()`, it only reads the utilization already computed by each unit's capacity constraints --- so it is cheap enough to poll on every monitoring cycle:
+
+```python
+import json
+
+snapshot = json.loads(str(process.getUtilizationSnapshotJson()))
+
+print("Bottleneck:", snapshot["bottleneck"])
+print("Any overloaded:", snapshot["anyOverloaded"])
+print("Any hard limit exceeded:", snapshot["anyHardLimitExceeded"])
+
+for unit in snapshot["units"]:
+    print(f"{unit['name']:<25} {unit['maxUtilizationPercent']:>6.1f}%  "
+          f"limited by {unit['limitingConstraint']}")
+```
+
+Each unit entry reports `name`, `type`, `maxUtilization` (0--1), `maxUtilizationPercent`, `limitingConstraint`, `feasible`, `hardLimitExceeded`, `power_kW` (for compressors and pumps), and a `constraints[]` breakdown (`name`, `utilization`, `current`, `design`, `unit`, `enabled`, `violated`). For a multi-area `ProcessModel`, every unit additionally carries its `area` label so the dashboard can group equipment by process area. At the plant level the snapshot reports the `bottleneck` (the highest-utilization unit, or `null`), `anyOverloaded`, and `anyHardLimitExceeded`.
+
+Two convenience predicates back the snapshot for fast alarm logic without parsing the JSON:
+
+```python
+if process.isAnyHardLimitExceeded():
+    raise_alarm("HARD limit exceeded — investigate immediately")
+elif process.isAnyEquipmentOverloaded():
+    raise_warning("Equipment above design utilization")
+```
+
+Because the snapshot is the structured, machine-readable form of the dashboard, it is also the #strong[observation vector] for closed-loop optimization (Chapter 23): a controller reads `getUtilizationSnapshotJson()`, decides on a setpoint move, applies it through `evaluate()`, and penalizes any move that drives `anyOverloaded` true.
 
 === Detailed Constraint Breakdown
 <detailed-constraint-breakdown>
@@ -37426,6 +37993,11 @@ The case study demonstrated that utilization monitoring is not a luxury --- it i
 
 
 = Well and Network Optimization
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch26/00_ch26_opener.png", width: 100%)
+]
 <well-and-network-optimization>
 == Learning Objectives
 <learning-objectives>
@@ -37640,6 +38212,63 @@ The operating point is where IPR and TPR intersect:
 $ p_(w f \, upright("IPR")) \( q \) = p_(w f \, upright("TPR")) \( q \) $
 
 This intersection gives the natural flow rate of the well at the specified wellhead pressure.
+
+=== WellFlow Equipment and Deliverability Curves
+<wellflow-equipment-and-deliverability-curves>
+The IPR helper above operates at the network level. For a well that participates directly in a process flowsheet, the `WellFlow` equipment (package `neqsim.process.equipment.reservoir`) carries the inflow model on the unit itself and couples it to the rest of the simulation. Any of the four standard inflow models can be assigned:
+
+```python
+WellFlow = jneqsim.process.equipment.reservoir.WellFlow
+
+well = WellFlow("Well-A", wellstream)
+well.setVogelParameters(qTest, pwfTest, reservoirP)        # Vogel
+# well.setFetkovichParameters(c, n, reservoirP)            # Fetkovich
+# well.setBackpressureParameters(a, b, reservoirP)         # Rawlins–Schellhardt
+# well.setTableInflow(bhp_array, rate_array)               # tabulated IPR
+
+well.useWellConstraints()                                  # fluent; enables limits
+well.setMaxDrawdown(40.0, "bara")
+well.setMinBottomHolePressure(120.0, "bara")
+well.setOutletPressure(90.0, "bara")
+well.run()
+
+print("BHP:", well.getBottomHolePressure(), "bara")
+print("Drawdown:", well.getDrawdown(), "bara")
+print("PI:", well.getWellProductionIndex())
+```
+
+When `useWellConstraints()` is active, the well reports drawdown and minimum-BHP utilization through the same capacity-constraint framework as the rest of the facility, so sand-control or coning limits enter the bottleneck analysis of Chapter 21. `WellFlow` also supports multi-layer commingled completions via `addLayer(name, stream, reservoirPressure, productivityIndex)` with a `setFlowMode(FlowMode)` selector, and fracture-containment screening through `setFracturePressure(...)` / `isFractureContained(bhp)`.
+
+For lighter-weight studies that do not need a full flowsheet, `WellDeliverabilityCurve` (package `neqsim.process.fielddevelopment.integrated`) represents the IPR as a reusable curve object:
+
+```python
+WellDeliverabilityCurve = jneqsim.process.fielddevelopment.integrated.WellDeliverabilityCurve
+
+# From a Vogel description (AOFP and shut-in pressure)
+curve = WellDeliverabilityCurve.fromVogel(aofpSm3PerDay=6000.0, shutInPressureBara=250.0)
+
+q = curve.rateAt(120.0)            # rate at 120 bara flowing pressure
+slope = curve.slopeAt(120.0)       # local deliverability slope
+aofp = curve.getAbsoluteOpenFlowPotential()
+```
+
+When only well-test points are available, `WellTestMatcher` fits the curve to the data:
+
+```python
+WellTestMatcher = jneqsim.process.fielddevelopment.integrated.WellTestMatcher
+
+matcher = WellTestMatcher()
+matcher.addTestPoint(rateSm3PerDay=3200.0, flowingPressureBara=180.0)
+matcher.addTestPoint(rateSm3PerDay=4500.0, flowingPressureBara=150.0)
+matcher.addTestPoint(rateSm3PerDay=5300.0, flowingPressureBara=120.0)
+
+match = matcher.fitVogel()         # or matcher.fitProductivityIndex()
+fitted = match.getCurve()
+print("Reservoir pressure:", match.getReservoirPressure(),
+      "RMS error:", match.getRmsError())
+```
+
+The fitted `WellDeliverabilityCurve` is then consumed directly by the `IntegratedProductionModel` (Section 27.9) and the gas-lift and network optimizers that follow.
 
 #horizontalrule
 
@@ -38020,6 +38649,35 @@ The equal-slope principle leads to a practical algorithm:
 + #strong[Re-evaluate marginals] after each increment (they decrease due to diminishing returns)
 + #strong[Stop] when the total gas allocation equals the available supply
 
+=== GasLiftNetworkOptimizer in NeqSim
+<gasliftnetworkoptimizer-in-neqsim>
+NeqSim implements the equal-slope algorithm directly through `GasLiftPerformanceCurve` and `GasLiftNetworkOptimizer` (package `neqsim.process.fielddevelopment.integrated`). Each well is described by a performance curve --- either from a measured lift-rate/oil-rate table or from a fitted exponential --- and the optimizer distributes a fixed total lift-gas supply to maximize field oil:
+
+```python
+GasLiftPerformanceCurve = jneqsim.process.fielddevelopment.integrated.GasLiftPerformanceCurve
+GasLiftNetworkOptimizer = jneqsim.process.fielddevelopment.integrated.GasLiftNetworkOptimizer
+
+# Build per-well performance curves from lift-rate / oil-rate samples
+curve_a = GasLiftPerformanceCurve(
+    [0.0, 0.5e6, 1.0e6, 1.5e6, 2.0e6],     # lift gas (Sm3/d)
+    [2400.0, 3200.0, 3700.0, 3950.0, 4050.0])  # oil (Sm3/d)
+curve_b = GasLiftPerformanceCurve(
+    [0.0, 0.5e6, 1.0e6, 1.5e6, 2.0e6],
+    [1800.0, 2600.0, 3100.0, 3350.0, 3450.0])
+
+optimizer = GasLiftNetworkOptimizer()
+optimizer.addWell("Well-A", curve_a)
+optimizer.addWell("Well-B", curve_b)
+
+result = optimizer.allocate(totalLiftGasSm3PerDay=2.5e6)
+print("Lift allocation:", dict(result.getLiftRates()))
+print("Oil rates:", dict(result.getOilRates()))
+print("Total oil:", result.getTotalOil(), "Sm3/d")
+print("Total lift used:", result.getTotalLift(), "Sm3/d")
+```
+
+The `AllocationResult` exposes `getLiftRates()`, `getOilRates()`, `getTotalOil()`, and `getTotalLift()`. Each `GasLiftPerformanceCurve` independently provides `oilRateAt(liftRate)`, `incrementalSlope(liftRate)`, `optimalLiftRate()`, `getMaxLiftRate()`, and `getBaseOilRate()` for plotting and diagnostics. Because the optimizer equalizes `incrementalSlope` across wells, the allocation it returns satisfies the equal-slope optimality condition derived above.
+
 This greedy algorithm converges to the global optimum because the gas lift performance curves are concave (diminishing returns).
 
 ```python
@@ -38197,6 +38855,45 @@ for well_name in network.getWellNames():
 result = optimizer.optimize()
 print(f"Optimized total oil: {result.getObjectiveValue():.0f} Sm3/d")
 ```
+
+=== NetworkAllocationOptimizer and the IntegratedProductionModel
+<networkallocationoptimizer-and-the-integratedproductionmodel>
+For the pure allocation problem --- splitting a fixed total (lift gas, water-injection volume, or a shared compression duty) across several legs to maximize a single objective --- NeqSim provides the lightweight `NetworkAllocationOptimizer` (package `neqsim.process.fielddevelopment.integrated`). It takes the total to be allocated and the number of legs, accepts per-leg bounds, and drives a user-supplied evaluator:
+
+```python
+NetworkAllocationOptimizer = jneqsim.process.fielddevelopment.integrated.NetworkAllocationOptimizer
+
+optimizer = NetworkAllocationOptimizer(2.5e6, 3)   # total, number of legs
+optimizer.setBounds([0.0, 0.0, 0.0], [1.2e6, 1.2e6, 1.2e6])
+optimizer.setTolerance(1.0e-4)
+
+# evaluator returns the objective for a candidate allocation vector
+result = optimizer.optimize(evaluator)
+print("Allocation:", list(result.getAllocation()))
+print("Objective:", result.getObjective(), "feasible:", result.isFeasible())
+```
+
+When the wells and network are described physically rather than as black-box curves, the `IntegratedProductionModel` couples reservoir drives, well deliverability curves, and the export node into a single converged solution. It is solved with a Newton method (`NetworkNewtonSolver`) over the network nodes and branches:
+
+```python
+IntegratedProductionModel = jneqsim.process.fielddevelopment.integrated.IntegratedProductionModel
+
+model = IntegratedProductionModel("Field")
+model.addWell("Well-A", driveA, curveA)     # ReservoirDrive + WellDeliverabilityCurve
+model.addWell("Well-B", driveB, curveB)
+model.setExportPressure(90.0)               # bara
+model.setHydrocarbonPrice(3.0)              # per Sm3
+model.setEnergyIntensity(0.12)              # kWh/Sm3
+model.setEmissionIntensity(0.02)            # kg CO2/Sm3
+
+solve = model.solve()
+print("Converged:", solve.isConverged(), "in", solve.getIterations(), "iters")
+print("Field rate:", solve.getFieldRate(), "Sm3/d")
+print("Well rates:", dict(solve.getWellRates()))
+print("Revenue:", solve.getRevenue(), "energy:", solve.getEnergyKWhPerDay(), "kWh/d")
+```
+
+`IntegratedSolveResult` reports `isConverged()`, `getIterations()`, `getFieldRate()`, `getWellRates()`, `getNodePressures()`, `getRevenue()`, `getEnergyKWhPerDay()`, and `getEmissionsKgPerDay()`. The model can also project a full production profile with `runProfile(years, dtYears)`, which honours reservoir-pressure depletion through the attached `ReservoirDrive` objects (material-balance gas drive, oil-tank drive, or aquifer drive). The same `IntegratedProductionModel` is the foundation for the reservoir-to-market optimization of Chapter 28.
 
 #horizontalrule
 
@@ -38443,6 +39140,11 @@ The case study demonstrated that well allocation optimization can recover signif
 
 
 = Multi-Scenario and Stochastic Optimization
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch27/00_ch27_opener.png", width: 100%)
+]
 <multi-scenario-and-stochastic-optimization>
 == Learning Objectives
 <learning-objectives>
@@ -39103,6 +39805,42 @@ In production optimization, robust constraints are particularly relevant for:
 
 The NeqSim constraint framework (Chapter 25) supports this through the `SOFT` constraint type, which applies a penalty rather than a hard cutoff. By increasing the penalty weight, the optimizer is incentivized to maintain a margin from the constraint boundary.
 
+=== RobustOptimizationStudy in NeqSim
+<robustoptimizationstudy-in-neqsim>
+NeqSim packages the scenario-based robustness evaluation in `RobustOptimizationStudy` (package `neqsim.process.fielddevelopment.integrated`). The study evaluates a candidate decision across a set of scenarios --- supplied explicitly or drawn from a sampler --- and returns the percentile spread and the fraction of scenarios in which the decision stays feasible:
+
+```python
+RobustOptimizationStudy = jneqsim.process.fielddevelopment.integrated.RobustOptimizationStudy
+
+study = RobustOptimizationStudy()
+study.addScenario([3.0, 0.85, 250.0])     # e.g. [gasPrice, recoveryFactor, reservoirP]
+study.addScenario([2.2, 0.78, 240.0])
+study.addScenario([3.8, 0.90, 255.0])
+study.setRequiredConfidence(0.90)          # accept only ≥90% feasible decisions
+
+# evaluator maps (decision, scenario) -> ScenarioOutcome(objective, feasible)
+result = study.evaluateDecision(decision, evaluator)
+print("P10/P50/P90:", result.getP10(), result.getP50(), result.getP90())
+print("Mean:", result.getMean(),
+      "feasible fraction:", result.getFeasibleFraction())
+```
+
+Instead of enumerating scenarios, a `ScenarioSampler` can generate them stochastically with `setSampler(sampler, count)` and a fixed `setSeed(...)` for reproducibility. The `RobustResult` exposes `getP10()`, `getP50()`, `getP90()`, `getMean()`, `getFeasibleFraction()`, and `getDecision()`. When several candidate decisions are compared, `selectRobust(...)` returns the one that maximizes the chosen percentile while honouring the required confidence --- the direct implementation of the robust formulation above.
+
+=== Parallel Scenario Evaluation with ParallelSweep
+<parallel-scenario-evaluation-with-parallelsweep>
+Robustness and Monte Carlo studies multiply the number of simulation runs by the scenario count, so NeqSim provides `ParallelSweep` to evaluate independent cases concurrently:
+
+```python
+ParallelSweep = jneqsim.process.fielddevelopment.integrated.ParallelSweep
+
+sweep = ParallelSweep()
+sweep.setParallelism(8)                    # worker threads
+outputs = sweep.run(scenario_inputs, sweep_evaluator)
+```
+
+`run(inputs, evaluator)` returns one result per input vector in the same order, allowing the percentile and tornado post-processing of Sections 28.6--28.7 to scale to thousands of cases. Because each case is independent, the speed-up is near-linear in the number of cores.
+
 #horizontalrule
 
 == Stochastic Programming
@@ -39436,6 +40174,11 @@ Van Essen, G. M., Van den Hof, P. M. J., and Jansen, J. D. (2011). Hierarchical 
 
 
 = Field Development Planning
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch28/00_ch28_opener.png", width: 100%)
+]
 <field-development-planning>
 == Learning Objectives
 <learning-objectives>
@@ -40533,6 +41276,37 @@ $ P_r^(c r i t i c a l) = P_(W H) + Delta P_(t u b i n g) \( Q_(m i n) \) + Delt
 
 The digital twin monitors these criteria continuously, providing early warning of approaching economic limits.
 
+=== Integrated Reservoir-to-Market Optimization
+<integrated-reservoir-to-market-optimization>
+The feedback loop sketched in Section 19.8.2 is realized in NeqSim by the `IntegratedProductionModel` and `ReservoirToMarketOptimizer` (package `neqsim.process.fielddevelopment.integrated`). The integrated model couples each well's reservoir drive and deliverability curve to a shared export node, while the optimizer searches the choke settings that maximize a market-facing objective subject to a facility capacity:
+
+```python
+IntegratedProductionModel = jneqsim.process.fielddevelopment.integrated.IntegratedProductionModel
+ReservoirToMarketOptimizer = jneqsim.process.fielddevelopment.integrated.ReservoirToMarketOptimizer
+
+model = IntegratedProductionModel("Field")
+model.addWell("Well-A", driveA, curveA)     # ReservoirDrive + WellDeliverabilityCurve
+model.addWell("Well-B", driveB, curveB)
+model.setExportPressure(90.0)               # bara
+model.setHydrocarbonPrice(3.0)              # per Sm3
+model.setEnergyIntensity(0.12)              # kWh/Sm3
+model.setEmissionIntensity(0.02)            # kg CO2/Sm3
+
+optimizer = ReservoirToMarketOptimizer(model)
+optimizer.setFacilityCapacity(40000.0)      # Sm3/d export limit
+optimizer.setMaxIterations(60)
+
+result = optimizer.optimize()
+print("Feasible:", result.isFeasible(),
+      "objective:", result.getObjectiveValue())
+print("Field rate:", result.getFieldRate(), "Sm3/d",
+      "revenue:", result.getRevenue())
+print("Choke settings:", list(result.getChokeSettings()))
+print("Well rates:", dict(result.getWellRates()))
+```
+
+The optimizer's `OptimizationResult` reports `isFeasible()`, `getObjectiveValue()`, `getFieldRate()`, `getRevenue()`, `getChokeSettings()`, `getWellRates()`, and `getEvaluations()`, and serializes to JSON via `toJson()`. Because the reservoir drives deplete as cumulative production accumulates, calling `model.runProfile(years, dtYears)` projects the optimized field forward in time, yielding a `ProductionProfile` whose points carry rate, revenue, energy, emissions, and reservoir pressure --- the quantitative backbone of the digital-twin forecast. The reservoir-to-market objective also underpins the life-of-field value-chain economics treated in Chapter 32.
+
 #horizontalrule
 
 == Python Implementation
@@ -40800,6 +41574,11 @@ Key points from this chapter:
 
 
 = Dynamic Simulation and Process Control
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch29/00_ch29_opener.png", width: 100%)
+]
 <dynamic-simulation-and-process-control>
 == Learning Objectives
 <learning-objectives>
@@ -42300,6 +43079,11 @@ Consider a two-phase separator with pressure control (gas valve) and level contr
 
 
 = Digital Twins, Automation, and AI-Assisted Optimization
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch30/00_ch30_opener.png", width: 100%)
+]
 <digital-twins-automation-and-ai-assisted-optimization>
 == Learning Objectives
 <learning-objectives>
@@ -42733,6 +43517,27 @@ Industry experience shows that RTO systems in oil and gas production typically d
 - Faster recovery from upsets
 
 The economic value depends on the facility size and the complexity of the optimization problem. For a platform producing 50,000 bbl/d of oil, a 3% production increase is worth approximately \$50 million per year at \$100/bbl.
+
+=== The RealTimeOptimizationLoop API
+<the-realtimeoptimizationloop-api>
+NeqSim packages the seven-step RTO cycle of Section 21.4.1 into a single composable object, `RealTimeOptimizationLoop` (package `neqsim.process.fielddevelopment.integrated`). Each stage of the loop is supplied as a pluggable component through a fluent builder, and `run(cycles)` executes the closed loop for the requested number of iterations:
+
+```python
+RealTimeOptimizationLoop = jneqsim.process.fielddevelopment.integrated.RealTimeOptimizationLoop
+
+loop = (RealTimeOptimizationLoop()
+        .setReader(historian_reader)        # supplies current measurements
+        .setCalibrator(model_calibrator)    # reconciles the model to data
+        .setOptimizer(setpoint_optimizer)   # computes new setpoints
+        .setWriter(setpoint_writer)         # pushes setpoints back to the DCS
+        .setObjectiveProbe(objective_probe))  # records the objective each cycle
+
+records = loop.run(24)                       # e.g. 24 hourly cycles
+for rec in records:
+    print(f"cycle {rec.getCycle()}: objective = {rec.getObjective():.1f}")
+```
+
+Each `CycleRecord` captures the cycle index, the `measurements`, the applied `setpoints`, and the resulting `objective`, so the full optimization history is available via `getHistory()` or serialized with `toJson()` for audit and trend analysis. The reader, calibrator, optimizer, and writer interfaces map directly onto the data-acquisition (Section 21.2), reconciliation (Section 21.3), optimization (Section 21.4.3), and implementation steps --- letting a digital twin be assembled from the building blocks introduced earlier in this chapter. The optimizer stage is typically backed by the `AgenticProcessOptimizer` of Section 21.11.
 
 #horizontalrule
 
@@ -43455,6 +44260,36 @@ result = optimize_separator_pressure(auto, process)
 print(f"Optimal separator pressure: {result['optimal_pressure']:.1f} bara")
 print(f"Max liquid flow: {result['max_liquid_flow']:.0f} kg/hr")
 ```
+
+=== The AgenticProcessOptimizer
+<the-agenticprocessoptimizer>
+The hand-rolled sweep above illustrates the perceive--reason--act cycle, but NeqSim ships a production-grade closed-loop search that an agent can drive from string addresses alone: `AgenticProcessOptimizer` (package `neqsim.process.automation`). It is obtained from the automation facade with `auto.newOptimizer()` and is built on the gated `evaluate()` primitive (Chapter 23), so a malformed candidate degrades a single trial instead of crashing the loop --- `optimize()` never throws:
+
+```python
+opt = auto.newOptimizer()
+opt.addVariable("Separation::HP Separator.pressure", 30.0, 70.0, "bara")
+opt.addVariable("Compression::Export Compressor.outletPressure",
+                80.0, 200.0, "bara")
+opt.maximize("Separation::HP Separator.liquidOutStream.flowRate", "kg/hr")
+opt.addConstraintLessOrEqual("Export Oil.RVP", 0.79, "bara", 1.0e4)
+opt.setSeed(42).setMaxEvaluations(80)
+
+result = opt.optimize()                      # never throws
+print("Feasible:", result.isFeasible(),
+      "objective:", result.getBestObjective())
+print("Best setpoints:", dict(result.getBestSetpoints()))
+```
+
+Key properties that make it agent-friendly:
+
+- #strong[String-addressable decision space] --- `addVariable(address, lo, hi, unit)`, or `useAdjustableParameters()` to auto-populate bounded variables from the model's adjusters.
+- #strong[Flexible objective] --- `minimize`/`maximize`/`setObjective(addr, Sense, unit)` for an address goal, or `setObjectiveFunction(...)` for a custom reward over decisions, constraint read-backs, and watches.
+- #strong[Constraint handling] --- `addConstraintLessOrEqual` / `addConstraintGreaterOrEqual` fold inequalities in as weighted quadratic penalties.
+- #strong[Deterministic and reproducible] --- bounded Nelder--Mead with a seeded start (`setSeed`), so the same problem replays identically.
+- #strong[Replayable trajectory] --- every trial (setpoints, read-backs, objective, penalty, feasibility) is logged via `result.getTrajectory()`, providing the (state, action, reward) tape for offline learning.
+- #strong[Self-rating] --- `getReadinessJson()` returns a machine-readable capability assessment so an agent can decide whether to commit a budget before running.
+
+Because the optimizer never throws and emits schema-versioned JSON (`optimizeToJson()`), it slots directly into the `RealTimeOptimizationLoop` of Section 21.4.5 as the optimizer stage.
 
 #horizontalrule
 
@@ -44319,6 +45154,11 @@ Apply your detection algorithm and plot the SS/non-SS classification against the
 
 
 = Numerical Methods and Solver Convergence
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch31/00_ch31_opener.png", width: 100%)
+]
 <numerical-methods-and-solver-convergence>
 == Learning Objectives
 <learning-objectives>
@@ -45172,6 +46012,11 @@ Broyden, C. G. (1965). A class of methods for solving nonlinear simultaneous equ
 
 
 = Advanced Topics and Emerging Technologies
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch32/00_ch32_opener.png", width: 100%)
+]
 <advanced-topics-and-emerging-technologies>
 == Learning Objectives
 <learning-objectives>
@@ -46870,6 +47715,33 @@ The mapping from utilization metrics to control actions provides a structured wa
 
 These heuristic translations serve as initialization strategies for RL agents (curriculum learning) and as interpretability aids for operators reviewing AI recommendations.
 
+=== Economic Reward with the Value-Chain Objective
+<economic-reward-with-the-value-chain-objective>
+The constraint-penalty reward of Section 22.13.3 keeps the agent feasible, but the #emph[driving] term of the reward should be monetary. NeqSim provides `EconomicParameters` and `ValueChainObjective` (package `neqsim.process.fielddevelopment.integrated`) to convert a flowsheet's export rates and power draw into a single net-value-per-day signal that already accounts for energy cost and carbon:
+
+```python
+EconomicParameters = jneqsim.process.fielddevelopment.integrated.EconomicParameters
+ValueChainObjective = jneqsim.process.fielddevelopment.integrated.ValueChainObjective
+
+econ = (EconomicParameters()
+        .setGasPrice(3.0)                       # NOK/Sm3
+        .setOilPrice(4500.0)                    # NOK/Sm3
+        .setPowerCost(0.6)                      # NOK/kWh
+        .setCo2Tax(1200.0)                      # NOK/tonne
+        .setCo2IntensityTonnePerMWh(0.20)
+        .setDiscountRate(0.08))
+
+objective = ValueChainObjective(econ)
+value = objective.evaluate(exportGasSm3PerDay, exportOilSm3PerDay, totalPowerKw)
+reward = value.getNetValueNokPerDay()           # revenue − energy − carbon cost
+```
+
+The `ValueResult` decomposes the reward into `getRevenueNokPerDay()`, `getEnergyCostNokPerDay()`, `getCarbonCostNokPerDay()`, `getCo2TonnePerDay()`, and `getNetValueNokPerDay()`, so an RL reward can be shaped from interpretable economic components rather than a single opaque number. The combined reward used in practice is
+
+$ r = underbrace(V_(upright("net")) \( upright("export, power") \), upright("ValueChainObjective")) #h(0em) - #h(0em) underbrace(sum_i w_i max \( 0 \, u_i - u_(upright("target") \, i) \), upright("utilization penalty")) $
+
+pairing the economic driver with the utilization snapshot penalty (Chapter 23). For multi-year investment timing rather than instantaneous operation, `LifeOfFieldOptimizer(nYears, econ)` enumerates installation-year combinations of candidate `Investment` items and returns the discounted-cash-flow optimum via `optimize(evaluator)`, with `presentValueOfAnnualCashFlow(...)` on the objective discounting each year's net value back to present.
+
 #horizontalrule
 
 == Uncertainty Quantification for AI-Driven Optimization
@@ -47256,6 +48128,11 @@ These figures establish that modern process simulators are fast enough for direc
 
 
 = Onshore Gas Processing Plants
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch33/00_ch33_opener.png", width: 100%)
+]
 <onshore-gas-processing-plants>
 == Learning Objectives
 <learning-objectives>
@@ -48560,6 +49437,11 @@ This chapter has covered the design, simulation, and optimization of onshore gas
 
 
 = Integrated Case Studies
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch34/00_ch34_opener.png", width: 100%)
+]
 <integrated-case-studies>
 == Learning Objectives
 <learning-objectives>
@@ -50005,6 +50887,11 @@ All three case studies used NeqSim's `ProcessModel` to build multi-area models a
 
 
 = Future Directions in Production Optimization
+
+#v(0.4em)
+#block(width: 100%, below: 1.0em)[
+  #image("figures_ch35/00_ch35_opener.png", width: 100%)
+]
 <future-directions-in-production-optimization>
 == Learning Objectives
 <learning-objectives>
