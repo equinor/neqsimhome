@@ -6473,7 +6473,7 @@ session = ProcessChatSession(
     api_key=api_key_val,
 
 
-    ai_model=&quot;gemini-2.0-flash&quot;,
+    ai_model=&quot;gemini-2.5-flash&quot;,
 
 
 )
@@ -6550,7 +6550,7 @@ spec = classify_and_scope(
     uploaded_docs=uploaded_text,
 
 
-    ai_model=&quot;gemini-2.0-flash&quot;,
+    ai_model=&quot;gemini-2.5-flash&quot;,
 
 
 )
@@ -6586,7 +6586,7 @@ task_step = generate_and_run_code(
     step_number=step_num,
 
 
-    ai_model=&quot;gemini-2.0-flash&quot;,
+    ai_model=&quot;gemini-2.5-flash&quot;,
 
 
     progress_cb=progress_callback,
@@ -6627,7 +6627,7 @@ genai.configure(api_key=api_key)
 model = genai.GenerativeModel(
 
 
-    'gemini-2.0-flash',
+    'gemini-2.5-flash',
 
 
     system_instruction=domain_expert_prompt,
@@ -6640,7 +6640,7 @@ response = model.generate_content(task_prompt)
 
 
 </code></pre>
-<p>AI features are opt-in: users provide their own Gemini API key (via sidebar input or Streamlit secrets). The <code>gemini-2.0-flash</code> model is used by default for its balance of speed and capability, though the model selection is configurable. System instructions inject domain expertise — the compressor performance page uses an instruction grounded in ASME PTC 10, ISO 5389, API 617, and other standards; the Task Solver uses the NeqSim Task Solving Guide as its instruction set.</p>
+<p>AI features are opt-in: users provide their own Gemini API key (via sidebar input or Streamlit secrets). The <code>gemini-2.5-flash</code> model is used by default for its balance of speed and capability, though the model selection is configurable. System instructions inject domain expertise — the compressor performance page uses an instruction grounded in ASME PTC 10, ISO 5389, API 617, and other standards; the Task Solver uses the NeqSim Task Solving Guide as its instruction set.</p>
 <p>This architecture keeps the AI cost low (Gemini Flash is significantly cheaper than frontier models), the latency acceptable for interactive use (1-3 seconds per call), and the integration simple enough for a small team to maintain.</p>
 <h3 id="patterns-for-building-engineering-web-applications">Patterns for Building Engineering Web Applications</h3>
 <p>The NeqSim Streamlit platform illustrates several reusable patterns for deploying thermodynamic and process simulation capabilities as web applications:</p>
