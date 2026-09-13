@@ -1,0 +1,249 @@
+# Symbols may be reused across disciplines; local definitions and stated units govern.
+alpha:
+  symbol: $\alpha$
+  description: Alpha function in cubic EOS
+  unit: dimensionless
+gamma:
+  symbol: $\gamma$
+  description: Specific heat ratio ($C_p/C_v$)
+  unit: dimensionless
+eta:
+  symbol: $\eta$
+  description: Efficiency (isentropic, polytropic, or mechanical)
+  unit: dimensionless
+mu:
+  symbol: $\mu$
+  description: Dynamic viscosity
+  unit: Pa·s
+rho:
+  symbol: $\rho$
+  description: Density
+  unit: kg/m³
+omega:
+  symbol: $\omega$
+  description: Acentric factor
+  unit: dimensionless
+sigma:
+  symbol: $\sigma$
+  description: Surface tension
+  unit: N/m
+kappa:
+  symbol: $\kappa$
+  description: Polytropic exponent
+  unit: dimensionless
+epsilon:
+  symbol: $\varepsilon$
+  description: Roughness or effectiveness
+  unit: m or dimensionless
+a:
+  symbol: $a$
+  description: Attraction parameter in cubic EOS
+  unit: Pa·m⁶/mol²
+b:
+  symbol: $b$
+  description: Co-volume parameter in cubic EOS
+  unit: m³/mol
+Cp:
+  symbol: $C_p$
+  description: Molar heat capacity at constant pressure
+  unit: J/(mol·K)
+Cv:
+  symbol: $C_v$
+  description: Molar heat capacity at constant volume
+  unit: J/(mol·K)
+D:
+  symbol: $D$
+  description: Diameter
+  unit: m
+f:
+  symbol: $f_i$
+  description: Component fugacity
+  unit: Pa
+G:
+  symbol: $G$
+  description: Molar Gibbs free energy in molar thermodynamic equations
+  unit: J/mol
+g:
+  symbol: $g$
+  description: Gravitational acceleration
+  unit: m/s²
+H:
+  symbol: $H$
+  description: Enthalpy on the stated molar, mass or extensive basis
+  unit: J/mol, J/kg or J; defined locally
+h:
+  symbol: $h$
+  description: Heat transfer coefficient
+  unit: W/(m²·K)
+K:
+  symbol: $K_i$
+  description: Phase-equilibrium ratio y_i/x_i
+  unit: dimensionless
+k_ij:
+  symbol: $k_{ij}$
+  description: Binary interaction parameter
+  unit: dimensionless
+L:
+  symbol: $L$
+  description: Length
+  unit: m
+M:
+  symbol: $M$
+  description: Molar mass; convert g/mol to kg/mol in SI mass balances
+  unit: kg/mol
+m_dot:
+  symbol: $\dot{m}$
+  description: Mass flow rate
+  unit: kg/s
+N:
+  symbol: $N$
+  description: Rotational speed
+  unit: rpm
+P:
+  symbol: $P$
+  description: Absolute pressure unless explicitly marked gauge
+  unit: Pa or bara; 1 bar = 100000 Pa
+Q:
+  symbol: $Q$
+  description: Heat or volumetric flow, distinguished by local definition
+  unit: J or m³/s; defined locally
+R:
+  symbol: $R$
+  description: Universal gas constant, approximately 8.314462618
+  unit: J/(mol·K)
+Re:
+  symbol: $\text{Re}$
+  description: Reynolds number
+  unit: dimensionless
+S:
+  symbol: $S$
+  description: Entropy
+  unit: J/(mol·K)
+T:
+  symbol: $T$
+  description: Absolute temperature in thermodynamic ratios; Celsius may label reported states
+  unit: K; °C only where stated
+Tc:
+  symbol: $T_c$
+  description: Critical temperature
+  unit: K
+Tr:
+  symbol: $T_r$
+  description: Reduced temperature ($T/T_c$)
+  unit: dimensionless
+U:
+  symbol: $U$
+  description: Overall heat transfer coefficient
+  unit: W/(m²·K)
+V:
+  symbol: $V$
+  description: Volume or molar volume
+  unit: m³ or m³/mol
+v:
+  symbol: $v$
+  description: Velocity
+  unit: m/s
+W:
+  symbol: $W$
+  description: Work crossing a stated system boundary
+  unit: J
+x:
+  symbol: $x_i$
+  description: Liquid phase mole fraction of component $i$
+  unit: dimensionless
+y:
+  symbol: $y_i$
+  description: Vapor phase mole fraction of component $i$
+  unit: dimensionless
+z:
+  symbol: $z_i$
+  description: Overall mole fraction of component $i$
+  unit: dimensionless
+Z:
+  symbol: $Z$
+  description: Compressibility factor ($PV/nRT$)
+  unit: dimensionless
+subscripts:
+  bubble: Bubble point
+  c: Critical
+  dew: Dew point
+  g: Gas phase
+  i: Component index
+  in: Inlet
+  is: Isentropic
+  l: Liquid phase
+  o: Oil phase
+  out: Outlet
+  p: Polytropic
+  r: Reduced
+  s: Suction / standard conditions
+  w: Water phase
+abbreviations:
+  EOS: Equation of state
+  SRK: Soave-Redlich-Kwong
+  PR: Peng-Robinson
+  CPA: Cubic Plus Association
+  VLE: Vapor-liquid equilibrium
+  VLLE: Vapor-liquid-liquid equilibrium
+  GOR: Gas-oil ratio
+  WGR: Water-gas ratio
+  IPR: Inflow performance relationship
+  VFP: Vertical flow performance
+  TEG: Triethylene glycol
+  MEG: Mono-ethylene glycol
+  NGL: Natural gas liquids
+  LNG: Liquefied natural gas
+  LPG: Liquefied petroleum gas
+  FPSO: Floating production, storage, and offloading
+  CAPEX: Capital expenditure
+  OPEX: Operational expenditure
+  NPV: Net present value
+  LMTD: Log-mean temperature difference
+  TEMA: Tubular Exchanger Manufacturers Association
+  API: American Petroleum Institute
+  ASME: American Society of Mechanical Engineers
+  ISO: International Organization for Standardization
+Cv_valve:
+  symbol: $C_{v,\mathrm{valve}}$
+  description: 'Valve coefficient: water flow at 60 °F and 1 psi differential'
+  unit: US gpm on the stated reference basis
+cp_mass:
+  symbol: $c_p$
+  description: Mass-specific heat capacity at constant pressure
+  unit: J/(kg·K)
+f_D:
+  symbol: $f_D$
+  description: Darcy friction factor; four times the Fanning factor
+  unit: dimensionless
+H_dot:
+  symbol: $\dot{H}$
+  description: Enthalpy flow rate
+  unit: W
+H_head:
+  symbol: $H_p$
+  description: Polytropic compressor head as specific work
+  unit: J/kg; sometimes kJ/kg
+h_head:
+  symbol: $h_{\mathrm{head}}$
+  description: Hydraulic head as energy per unit weight
+  unit: m
+K_SB:
+  symbol: $K_{SB}$
+  description: Souders–Brown separator gas-capacity factor
+  unit: m/s
+Q_dot:
+  symbol: $\dot{Q}$
+  description: Heat-transfer rate, positive into the stated control volume
+  unit: W
+q_volume:
+  symbol: $q$
+  description: Volumetric flow at stated actual or reference conditions
+  unit: m³/s
+W_dot:
+  symbol: $\dot{W}$
+  description: Shaft power, with sign convention defined locally
+  unit: W
+beta:
+  symbol: $\beta$
+  description: Vapor mole fraction in the two-phase flash equations
+  unit: dimensionless

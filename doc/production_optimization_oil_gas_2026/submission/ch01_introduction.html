@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Production Optimization of Oil and Gas Fields Using NeqSim</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"/>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #222;
+    background: #f9f9f9;
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+nav.sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+nav.sidebar h2 {
+  font-size: 1.1rem;
+  color: #1a5276;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #1a5276;
+}
+nav.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+nav.sidebar li {
+  margin-bottom: 0.3rem;
+}
+nav.sidebar li.part {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #1a5276;
+}
+nav.sidebar a {
+  color: #444;
+  text-decoration: none;
+}
+nav.sidebar a:hover {
+  color: #1a5276;
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    background: #fff;
+}
+main h1 {
+  font-size: 1.8rem;
+  color: #1a5276;
+  margin: 2rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #eee;
+}
+main h1:first-child { border-top: none; padding-top: 0; }
+main h2 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 1.5rem 0 0.7rem;
+}
+main h3 {
+  font-size: 1.15rem;
+  color: #34495e;
+  margin: 1.2rem 0 0.5rem;
+}
+main p {
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+main img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+main pre {
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  padding: 0.9rem 1.1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 1rem 0;
+}
+main code {
+  font-family: 'Consolas', 'Courier New', monospace;
+  background: #f0f0f0;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+main pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: pre;
+}
+main table {
+  border-collapse: collapse;
+  margin: 1.5rem auto;
+  font-size: 0.9rem;
+  width: auto;
+}
+main th, main td {
+  padding: 0.45rem 1rem;
+  text-align: left;
+  border-left: none;
+  border-right: none;
+}
+main thead tr {
+  border-top: 2px solid #222;
+  border-bottom: 1px solid #222;
+}
+main tbody tr:last-child {
+  border-bottom: 2px solid #222;
+}
+main th {
+  font-weight: bold;
+  color: #1a1a1a;
+}
+main figure {
+    margin: 1.5rem auto;
+    text-align: center;
+}
+main figure.numbered-figure {
+    max-width: 82%;
+}
+main figure.numbered-figure img {
+    max-width: 100%;
+    max-height: 460px;
+    object-fit: contain;
+}
+main figcaption {
+  font-size: 0.88rem;
+  color: #444;
+  margin-top: 0.4rem;
+  font-style: italic;
+  text-align: center;
+}
+main .katex-display {
+  margin: 1.2rem 0;
+  font-size: 1.05em;
+}
+main blockquote {
+  border-left: 4px solid #1a5276;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  color: #555;
+  background: #f9f9f9;
+}
+main ul, main ol {
+  margin: 0.5rem 0 0.5rem 1.5rem;
+  line-height: 1.7;
+}
+
+/* ── Professional frontmatter pages ── */
+
+.title-page {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  position: relative;
+  page-break-after: always;
+}
+.title-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #0d3b66, #1a5276, #2980b9, #1a5276, #0d3b66);
+}
+.title-page::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0d3b66, #1a5276, #2980b9, #1a5276, #0d3b66);
+}
+.title-page .tp-decoration {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+.title-page .tp-decoration svg {
+  width: 100%;
+  height: 100%;
+}
+.title-page .tp-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #0d3b66;
+  line-height: 1.25;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.02em;
+  max-width: 600px;
+}
+.title-page .tp-subtitle {
+  font-size: 1.15rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  line-height: 1.5;
+}
+.title-page .tp-rule {
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1a5276, transparent);
+  margin: 0 auto 2.5rem;
+}
+.title-page .tp-author {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 0.3rem;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+.title-page .tp-affiliation {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+.title-page .tp-edition {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.3rem;
+}
+.title-page .tp-year {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+.title-page .tp-publisher {
+  font-size: 1rem;
+  color: #444;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Image-cover variant: full-bleed front-cover artwork */
+.title-page.cover-image {
+  padding: 0;
+  background: #0d3b66;
+  min-height: 100vh;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.title-page.cover-image::before,
+.title-page.cover-image::after {
+  display: none;
+}
+.title-page.cover-image img.cover-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: contain;
+  margin: 0 auto;
+  background: #0d3b66;
+}
+.title-page.cover-image .cover-publisher {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #ffffff;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.book-cover-page {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0 -2.5rem;
+    width: calc(100% + 5rem);
+    background: #0d3b66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    page-break-after: always;
+    break-after: page;
+}
+.book-cover-page.back-cover {
+    page-break-before: always;
+    break-before: page;
+}
+main > .book-cover-page:first-child {
+    margin-top: -2rem;
+}
+main > .book-cover-page:last-child {
+    margin-bottom: -2rem;
+}
+.book-cover-page img.cover-art {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    background: #0d3b66;
+}
+
+.half-title-page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  page-break-after: always;
+}
+.half-title-page .htp-title {
+  font-size: 1.6rem;
+  color: #1a5276;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+}
+
+.toc-page {
+  padding: 2rem 0 1rem;
+  page-break-after: always;
+}
+.toc-page h1 {
+  font-size: 1.8rem;
+  color: #1a5276;
+  border-bottom: 2px solid #1a5276;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.2rem;
+}
+.toc-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.toc-list .toc-part {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #1a5276;
+  margin: 1.1rem 0 0.4rem;
+  font-size: 0.95rem;
+}
+.toc-list .toc-chapter {
+  margin: 0.25rem 0;
+}
+.toc-list .toc-chapter a {
+  display: flex;
+  align-items: baseline;
+  text-decoration: none;
+  color: #333;
+}
+.toc-list .toc-chapter a:hover {
+  color: #1a5276;
+}
+.toc-list .toc-num {
+  flex: 0 0 2.2rem;
+  font-weight: bold;
+  color: #1a5276;
+}
+.toc-list .toc-title {
+  flex: 1 1 auto;
+}
+
+.copyright-page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 3rem 4rem;
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.8;
+  page-break-after: always;
+}
+.copyright-page .cp-title {
+  font-weight: bold;
+  color: #222;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.copyright-page p {
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+.copyright-page .cp-isbn {
+  font-family: 'Consolas', monospace;
+  color: #444;
+}
+
+.dedication-page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 3rem;
+  page-break-after: always;
+}
+.dedication-page p {
+  font-style: italic;
+  color: #555;
+  font-size: 1.05rem;
+  max-width: 400px;
+  line-height: 1.8;
+}
+
+section.part-header {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  page-break-before: always;
+  page-break-after: always;
+  padding: 4rem 2rem;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 2rem 0;
+}
+section.part-header .part-eyebrow {
+  font-size: 0.85rem;
+  color: #1a5276;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+section.part-header h1 {
+  font-size: 2.1rem;
+  color: #0d3b66;
+  border-top: none;
+  padding-top: 0;
+  margin: 0;
+  letter-spacing: -0.01em;
+  max-width: 700px;
+  line-height: 1.25;
+}
+section.part-header h1::after {
+  content: '';
+  display: block;
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1a5276, transparent);
+  margin: 1.4rem auto 0;
+}
+
+/* ── Chapter opener (book-style chapter heading with hero illustration) ── */
+section.chapter > .chapter-opener {
+  margin: 2.5rem 0 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  page-break-before: always;
+}
+.chapter-opener .ch-eyebrow {
+  font-size: 0.8rem;
+  color: #1a5276;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+.chapter-opener .ch-number {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: #1a5276;
+  line-height: 1;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.04em;
+}
+.chapter-opener h1.ch-title {
+  font-size: 2rem;
+  color: #0d3b66;
+  border-top: none;
+  padding-top: 0;
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.chapter-opener .ch-rule {
+  width: 90px;
+  height: 2px;
+  background: #1a5276;
+  margin: 0.8rem 0 1.4rem;
+  border: none;
+}
+.chapter-opener figure.ch-hero {
+  margin: 1.5rem 0 0;
+  text-align: center;
+}
+.chapter-opener figure.ch-hero img {
+  max-width: 100%;
+  max-height: 360px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.chapter-opener figure.ch-hero figcaption {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+/* Drop cap on first paragraph after chapter opener */
+section.chapter > .chapter-opener + p::first-letter {
+  font-size: 3.2rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: bold;
+  color: #1a5276;
+  float: left;
+  line-height: 0.9;
+  margin: 0.15rem 0.5rem 0 0;
+}
+
+/* Inline lecture figures (auto-extracted from course slide decks) */
+figure.lecture-fig {
+  margin: 1.8rem auto;
+  padding: 0.9rem 1rem 0.7rem;
+  background: #fafbfc;
+    border: none;
+    border-radius: 4px;
+  max-width: 92%;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+figure.lecture-fig img {
+  display: block;
+  max-width: 100%;
+  max-height: 420px;
+  width: auto;
+  height: auto;
+  margin: 0 auto 0.5rem;
+  background: #fff;
+}
+figure.lecture-fig figcaption {
+  font-size: 0.86rem;
+  color: #444;
+  line-height: 1.45;
+  text-align: left;
+  padding: 0 0.2rem;
+}
+figure.lecture-fig figcaption strong {
+  color: #0d3b66;
+  margin-right: 0.3rem;
+}
+
+p.figure-discussion {
+    max-width: 92%;
+    margin: 1.2rem auto 0.35rem;
+    color: #2c3e50;
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+p.figure-discussion strong {
+    color: #0d3b66;
+}
+p.figure-discussion em {
+    color: #475569;
+}
+
+.figure-inset {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* Worked-example callout */
+.worked-example {
+  background: #f7faff;
+  border: 1px solid #d6e4f5;
+  border-left: 4px solid #1a5276;
+  border-radius: 0 6px 6px 0;
+  padding: 0.85rem 1.15rem 0.7rem;
+  margin: 1.4rem 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.worked-example h4 {
+  margin: 0 0 0.45rem 0;
+  font-size: 1.02rem;
+  color: #0d3b66;
+  border: none;
+  padding: 0;
+}
+.worked-example p {
+  margin: 0.35rem 0;
+  font-size: 0.95rem;
+}
+.worked-example .we-meta {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.45rem;
+}
+.worked-example .we-meta code {
+  background: #eaf1fb;
+  padding: 0.05rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    nav.sidebar { display: none; }
+    main { padding: 1rem; }
+    main figure.numbered-figure { max-width: 100%; }
+    .book-cover-page { margin-left: -1rem; margin-right: -1rem; width: calc(100% + 2rem); }
+    .title-page .tp-title { font-size: 1.6rem; }
+    .title-page .tp-decoration { width: 100px; height: 100px; }
+}
+
+@media print {
+  nav.sidebar { display: none; }
+  body { background: #fff; }
+  main { max-width: 100%; padding: 0; }
+  .title-page { min-height: auto; padding: 8rem 2rem; }
+  .title-page::before, .title-page::after { display: none; }
+    .book-cover-page { min-height: 100vh; }
+    .book-cover-page img.cover-art { max-height: 100vh; }
+}
+</style>
+</head>
+
+<body>
+<main>
+<section class="chapter" id="chapter-1">
+<div class="chapter-opener"><div class="ch-eyebrow">Chapter</div><div class="ch-number">1</div><h1 class="ch-title">Introduction to Production Optimization</h1><hr class="ch-rule"/><figure class="ch-hero"><img src="figures/00_chapter_opener.png" alt="Introduction to Production Optimization — chapter illustration"/><figcaption>Introduction to Production Optimization</figcaption></figure></div>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>After reading this chapter, the reader will be able to:</p>
+<ol>
+<li>Define production optimization formally and state the general constrained optimization problem that underlies all production decisions</li>
+<li>Distinguish between short-term (daily) and long-term (life-of-field) optimization, and explain why both are needed</li>
+<li>Describe the major components of a production system — reservoir, wells, subsea, topside, compression, power, export — and explain how they interact as an integrated chain</li>
+<li>Explain why local equipment optima do not guarantee a global system optimum, using back-pressure coupling as the primary example</li>
+<li>Articulate the role of process simulation in optimization, including the distinction between steady-state and dynamic simulation</li>
+<li>Install NeqSim, create a fluid, run a flash calculation, build a process model, and extract results using Python</li>
+<li>Describe the NeqSim software architecture — <code>ProcessSystem</code>, <code>ProcessModel</code>, and the Automation API — at a conceptual level</li>
+<li>Outline the three-step optimization workflow (model → calibrate → optimize) and relate it to the structure of this book</li>
+</ol>
+<p>---</p>
+<h2 id="1-1-what-is-production-optimization">1.1 What Is Production Optimization?</h2>
+<p>Production optimization is the systematic process of maximizing the economic value extracted from a hydrocarbon reservoir while respecting safety, environmental, regulatory, and equipment constraints. It encompasses every decision that affects the rate, efficiency, and quality of production — from reservoir management and well operations to subsea transport, topside process control, and export specification compliance.</p>
+<p>In its simplest form, production optimization answers a daily question: <em>given the current state of the reservoir, wells, and facilities, what operating set points maximize today's value?</em> In its most comprehensive form, it is a life-of-field discipline that integrates reservoir simulation, well modeling, process simulation, and economic analysis to guide investment decisions and operating strategies over decades.</p>
+<h3 id="1-1-1-a-formal-statement">1.1.1 A Formal Statement</h3>
+<p>At its mathematical core, production optimization is a constrained optimization problem. Let $u$ denote the vector of decision variables (choke openings, separator pressures, compressor speeds, gas-lift rates, etc.), and let $J(u)$ be an objective function representing economic value — typically net present value (NPV) or daily revenue. The optimization problem is:</p>
+<p>$$ \max_{u} \; J(u) \quad \text{subject to} \quad g_i(u) \leq 0, \;\; i = 1, \ldots, m \quad \text{and} \quad h_j(u) = 0, \;\; j = 1, \ldots, p $$</p>
+<p>where $g_i(u) \leq 0$ are inequality constraints (equipment capacities, safety limits, environmental limits) and $h_j(u) = 0$ are equality constraints (mass balances, energy balances, thermodynamic equilibrium). The decision variables $u$ live in a feasible set $\mathcal{U}$ defined by the physical system.</p>
+<p>For example, a daily optimization problem for a platform producing oil and gas might be stated as:</p>
+<p>$$ \max_{q_1, \ldots, q_N} \; \sum_{k=1}^{N} \left( p_{\text{oil}} \, q_{\text{oil},k} + p_{\text{gas}} \, q_{\text{gas},k} \right) $$</p>
+<p>subject to:</p>
+<p>$$ \sum_{k=1}^{N} q_{\text{gas},k} \leq Q_{\text{gas,max}} \quad \text{(compression capacity)} $$</p>
+<p>$$ \sum_{k=1}^{N} q_{\text{water},k} \leq Q_{\text{water,max}} \quad \text{(water treatment capacity)} $$</p>
+<p>$$ \sum_{k=1}^{N} q_{\text{oil},k} \leq Q_{\text{oil,max}} \quad \text{(separation/export capacity)} $$</p>
+<p>$$ q_k \geq 0, \quad T_{\text{arrival},k} \geq T_{\text{hydrate},k} + \Delta T_{\text{margin}} \quad \text{(flow assurance)} $$</p>
+<p>where $q_k$ is the total well production rate for well $k$, $p_{\text{oil}}$ and $p_{\text{gas}}$ are commodity prices, $Q_{\text{gas,max}}$, $Q_{\text{water,max}}$, and $Q_{\text{oil,max}}$ are facility capacities, $T_{\text{arrival},k}$ is the arrival temperature at the topside, and $T_{\text{hydrate},k}$ is the hydrate formation temperature for the fluid from well $k$.</p>
+<p>Even this simplified formulation reveals the essential character of production optimization: it is a <em>system-level</em> problem. Changing one well's rate affects the pressure in shared manifolds and flowlines, which in turn changes the rates achievable by other wells. Increasing total gas production demands more compression power, which increases fuel gas consumption, which reduces the gas available for export. The coupling is pervasive and often nonlinear.</p>
+<h3 id="1-1-2-short-term-vs-long-term-optimization">1.1.2 Short-Term vs. Long-Term Optimization</h3>
+<p>Production optimization operates on two distinct time scales:</p>
+<p><strong>Short-term optimization</strong> (hourly to weekly) focuses on maximizing value from the <em>current</em> state of the production system. Decision variables include well choke openings, gas-lift rates, separator pressures, compressor set points, and routing decisions. The reservoir state is treated as given — pressures and compositions change too slowly to be influenced within the optimization horizon. Short-term optimization is often called <em>production allocation</em> or <em>rate optimization</em>.</p>
+<p><strong>Long-term optimization</strong> (months to decades) focuses on maximizing the <em>total</em> value recovered over the field life. Decision variables include well drilling and completion schedules, water and gas injection strategies, facility capacity investments (debottlenecking, new compression, additional separation stages), and field abandonment timing. Here the reservoir state is a dynamic variable that evolves in response to the production strategy.</p>
+<p>The two time scales are linked through the concept of <em>reservoir voidage replacement</em>. A short-term strategy that maximizes today's production by drawing down reservoir pressure faster than it can be maintained through injection may reduce total recovery and long-term value. Conversely, an overly conservative long-term strategy may leave significant value unrealized during periods of high commodity prices.</p>
+<p>Throughout this book, we address both time scales. Chapters on well performance, separation, and compression focus primarily on short-term optimization — finding the best operating point for the current conditions. Chapters on field development, multi-scenario optimization, and reservoir coupling address the long-term perspective.</p>
+<h3 id="1-1-3-the-production-system-as-an-integrated-chain">1.1.3 The Production System as an Integrated Chain</h3>
+<p>A production system is not a collection of independent equipment items — it is an integrated chain where every element constrains and is constrained by the others. Figure 1.1 illustrates this chain schematically.</p>
+<figure><img src="figures/production_system_schematic.png" alt="Schematic of a complete production system from reservoir to export, showing the coupling between reservoir, wells, subsea, topside processing, compression, and export systems."/>
+<figcaption>Schematic of a complete production system from reservoir to export, showing the coupling between reservoir, wells, subsea, topside processing, compression, and export systems.</figcaption>
+</figure>
+<p>The reservoir delivers fluid at a rate that depends on the difference between the average reservoir pressure $\bar{p}_R$ and the bottomhole flowing pressure $p_{wf}$. For a simple Productivity Index model:</p>
+<p>$$ q = \text{PI} \cdot (\bar{p}_R - p_{wf}) $$</p>
+<p>The bottomhole pressure $p_{wf}$ depends on the wellhead pressure $p_{wh}$ plus the hydrostatic head and friction losses in the tubing:</p>
+<p>$$ p_{wf} = p_{wh} + \Delta p_{\text{hydrostatic}} + \Delta p_{\text{friction}} $$</p>
+<p>The wellhead pressure depends on the downstream system: flowline pressure drop, riser pressure drop, manifold pressure, and ultimately the first-stage separator pressure $p_{\text{sep}}$. The separator pressure is set by a balance between liquid level control and the suction pressure of the first-stage compressor. The compressor discharge pressure must overcome the export pipeline back-pressure.</p>
+<p>This chain of pressure dependencies means that <em>reducing the separator pressure by 5 bar can increase well deliverability by 10% or more</em>, because the back-pressure reduction propagates all the way to the sandface. This is the most common and most valuable optimization lever in production operations.</p>
+<h3 id="1-1-4-why-local-optima-are-not-global-optima">1.1.4 Why Local Optima Are Not Global Optima</h3>
+<p>The integrated nature of the production system means that optimizing a single piece of equipment in isolation rarely finds the system optimum. Consider a simple example:</p>
+<p>A compressor engineer, seeking to minimize compressor power, increases the first-stage separator pressure from 30 bara to 50 bara. This reduces the compression ratio, lowers the compressor power consumption by 15%, and reduces wear on the compressor. Viewed in isolation, this is clearly beneficial.</p>
+<p>However, the higher separator pressure increases the back-pressure on the wells. The field production rate drops by 8%. The revenue loss from reduced production far exceeds the energy savings from the compressor. The <em>system</em> optimum lies at a lower separator pressure than the <em>compressor</em> optimum.</p>
+<p>This example illustrates a fundamental principle: <strong>production optimization must be performed at the system level, not the equipment level.</strong> Process simulation — the subject of this book — provides the tool for system-level analysis by modeling the entire production chain in a single integrated model.</p>
+<h3 id="1-1-5-the-value-of-optimization">1.1.5 The Value of Optimization</h3>
+<p>The economic value of production optimization is substantial and well-documented in the industry literature. Table 1.1 summarizes typical improvements reported from systematic optimization programs.</p>
+<table>
+<thead><tr>
+<th>Improvement Area</th>
+<th>Typical Gain</th>
+<th>Mechanism</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Increased oil production rate</td>
+<td>2–5%</td>
+<td>Reduced back-pressure through separator and compressor optimization</td>
+</tr>
+<tr>
+<td>Increased gas production rate</td>
+<td>3–8%</td>
+<td>Compression optimization and export pipeline capacity management</td>
+</tr>
+<tr>
+<td>Improved recovery factor</td>
+<td>1–3% over field life</td>
+<td>Better pressure maintenance and sweep through optimized injection</td>
+</tr>
+<tr>
+<td>Reduced energy consumption</td>
+<td>5–15%</td>
+<td>Compressor anti-surge recycling reduction, optimal pressure staging</td>
+</tr>
+<tr>
+<td>Extended equipment life</td>
+<td>10–25% longer maintenance intervals</td>
+<td>Reduced fouling, vibration, surge, and thermal cycling</td>
+</tr>
+<tr>
+<td>Fewer unplanned shutdowns</td>
+<td>20–40% reduction</td>
+<td>Better flow assurance management and proactive constraint monitoring</td>
+</tr>
+<tr>
+<td>Export specification compliance</td>
+<td>50–80% reduction in off-spec events</td>
+<td>Tighter process control around quality constraints</td>
+</tr>
+<tr>
+<td>Reduced chemical consumption</td>
+<td>10–20%</td>
+<td>Optimized hydrate inhibitor and corrosion inhibitor dosing</td>
+</tr>
+<tr>
+<td>Deferred investment</td>
+<td>1–3 years</td>
+<td>Debottlenecking existing capacity before building new facilities</td>
+</tr>
+</tbody></table>
+<p>For a field producing 100,000 boe/d, even a 2% improvement in production rate at \$60/bbl translates to over \$40 million per year in additional revenue. For large offshore developments with CAPEX exceeding \$5 billion, deferring a compression upgrade by two years through operational optimization can save hundreds of millions of dollars in net present value.</p>
+<h3 id="1-1-6-historical-perspective">1.1.6 Historical Perspective</h3>
+<p>The practice of production optimization has evolved significantly over the past fifty years:</p>
+<p><strong>1970s–1980s: Trial and error.</strong> Operators adjusted well chokes and separator pressures based on experience and intuition. Optimization was performed field-by-field with limited instrumentation and no computer models. Production engineers relied on rules of thumb developed over decades of operational experience.</p>
+<p><strong>1990s: Nodal analysis and well models.</strong> The widespread adoption of nodal analysis software (PROSPER, PIPESIM) enabled systematic well optimization. Well deliverability could be predicted as a function of operating conditions, but topside processing was still modeled separately. The disconnect between well and facility models meant that system-level optimization remained difficult.</p>
+<p><strong>2000s: Integrated production modeling.</strong> The concept of <em>integrated asset modeling</em> (IAM) — coupling reservoir, well, network, and process models in a single workflow — gained traction. Commercial tools such as Petex GAP, SPT Group (now Schlumberger), and Petroleum Experts' integrated modeling suite emerged. For the first time, it became practical to optimize the entire production system simultaneously, albeit with simplified thermodynamic models.</p>
+<p><strong>2010s: Real-time optimization and digital twins.</strong> Increased instrumentation (subsea multiphase meters, topside analyzers, wireless sensors) and compute power enabled real-time optimization and &quot;digital twin&quot; concepts. Cloud computing and data analytics became integral to optimization workflows. Machine learning supplemented physics-based models for rapid screening and anomaly detection.</p>
+<p><strong>2020s and beyond: AI-assisted and model-based optimization.</strong> The convergence of rigorous process simulation, machine learning, and automation APIs enables a new generation of optimization tools. Open-source simulation engines, accessible via Python and web APIs, lower the barrier to entry and enable rapid prototyping. NeqSim, with its open-source design, Python interface, and automation API, represents this generation — providing rigorous engineering models that can be embedded in automated decision-support workflows.</p>
+<p>---</p>
+<h2 id="1-2-the-production-value-chain">1.2 The Production Value Chain</h2>
+<p>This section describes each major element of the production chain in detail, establishing the physical and engineering context that subsequent chapters will model in NeqSim.</p>
+<h3 id="1-2-1-reservoir">1.2.1 Reservoir</h3>
+<p>The reservoir is the source of all production and imposes the ultimate constraint: once the pressure is depleted and the mobile hydrocarbons are swept, production ends regardless of the facility capacity.</p>
+<p><strong>Reservoir pressure</strong> is the primary driving force for production. Initial reservoir pressure depends on the burial depth — typically 1.0–1.2 psi per foot of true vertical depth subsea (TVDss), corresponding to a normal hydrostatic gradient. For a reservoir at 3,000 m TVDss, initial pressures of 300–400 bara are typical. As production proceeds without pressure support, the average reservoir pressure declines, and the well deliverability decreases accordingly.</p>
+<p><strong>Reservoir temperature</strong> increases with depth at a geothermal gradient of approximately 25–35°C per kilometer. For the same 3,000 m reservoir, temperatures of 100–130°C are common. The temperature, together with the pressure and composition, determines the phase behavior of the reservoir fluid — whether it exists as an undersaturated oil, a saturated oil, a gas condensate, a wet gas, or a dry gas.</p>
+<p><strong>Fluid composition</strong> is the fundamental input to all thermodynamic calculations. Reservoir fluids are mixtures of hundreds of hydrocarbon species plus non-hydrocarbons (nitrogen, CO$_2$, H$_2$S, water). For engineering purposes, the composition is typically lumped into defined components (methane, ethane, propane, butanes, pentanes) and pseudo-components representing the heavier fractions (C$_7$+, C$_{10}$+, C$_{20}$+). The characterization of these heavy fractions — their molecular weight, density, and critical properties — is the subject of Chapter 3.</p>
+<p><strong>Drive mechanisms</strong> determine how pressure is maintained (or not) as fluids are withdrawn. The primary mechanisms are:</p>
+<ul>
+<li><em>Depletion drive</em> — pressure declines as fluids expand; recovery factors are typically 10–30% for oil and 60–80% for gas</li>
+<li><em>Water drive</em> — an active aquifer replaces the withdrawn volume with water influx; recovery factors of 30–60% for oil</li>
+<li><em>Gas cap drive</em> — an overlying gas cap expands as pressure drops</li>
+<li><em>Compaction drive</em> — rock compaction provides energy in unconsolidated formations</li>
+<li><em>Combination drive</em> — most reservoirs exhibit a combination of mechanisms</li>
+</ul>
+<p><strong>Decline curves</strong> are empirical models that describe how production rate changes over time. The Arps decline model is the most widely used:</p>
+<p>$$ q(t) = \frac{q_i}{(1 + b \, D_i \, t)^{1/b}} $$</p>
+<p>where $q_i$ is the initial rate, $D_i$ is the initial decline rate, and $b$ is the decline exponent ($b = 0$ for exponential, $0 &lt; b &lt; 1$ for hyperbolic, $b = 1$ for harmonic decline).</p>
+<p><strong>Inflow Performance Relationship (IPR)</strong> describes the relationship between bottomhole flowing pressure $p_{wf}$ and flow rate $q$. For single-phase liquid flow above the bubble point, the IPR is linear (the Productivity Index model). Below the bubble point, where two-phase flow develops near the wellbore, the Vogel correlation is commonly used:</p>
+<p>$$ \frac{q}{q_{\max}} = 1 - 0.2 \left(\frac{p_{wf}}{\bar{p}_R}\right) - 0.8 \left(\frac{p_{wf}}{\bar{p}_R}\right)^2 $$</p>
+<p>where $q_{\max}$ is the absolute open flow (AOF) potential. Chapter 4 develops reservoir engineering and IPR modeling in detail.</p>
+<h3 id="1-2-2-wells">1.2.2 Wells</h3>
+<p>Wells connect the reservoir to the surface facilities. Their design and performance directly affect both the achievable production rate and the ultimate recovery from the field.</p>
+<p><strong>Inflow Performance Relationship (IPR)</strong> — as introduced above — characterizes the ability of the reservoir to deliver fluid into the wellbore. It depends on reservoir properties (permeability, thickness, skin factor), fluid properties (viscosity, formation volume factor), and the pressure drawdown.</p>
+<p><strong>Vertical Flow Performance (VFP)</strong> — also called the tubing performance curve — describes the pressure loss in the tubing as a function of flow rate, for given tubing geometry, fluid composition, and wellhead pressure. The VFP accounts for:</p>
+<ul>
+<li>Hydrostatic pressure difference due to the column of fluid (dominant in most wells)</li>
+<li>Frictional pressure loss (significant at high rates in small-diameter tubing)</li>
+<li>Acceleration effects (usually negligible except near critical flow)</li>
+</ul>
+<p>The intersection of the IPR and VFP curves on a pressure-rate plot defines the natural <em>operating point</em> of the well. This graphical construction, known as <em>nodal analysis</em>, is the foundation of well performance engineering and is developed in Chapter 5.</p>
+<p><strong>Artificial lift</strong> methods augment natural flow when the reservoir pressure is insufficient to lift fluids to the surface at economic rates. The principal methods are:</p>
+<ul>
+<li><em>Gas lift</em> — injecting high-pressure gas into the tubing annulus to reduce the hydrostatic gradient. Gas lift is the most common artificial lift method in offshore production. The optimal gas-lift rate balances the benefit of reduced hydrostatic head against the cost of compressing and injecting the lift gas. Gas lift performance is characterized by the gas-lift performance curve (GLPC), which shows the incremental oil production per unit of injected gas.</li>
+<li><em>Electric Submersible Pump (ESP)</em> — a downhole centrifugal pump driven by an electric motor, capable of high liquid rates (up to 30,000 bbl/d per pump). ESPs are widely used in high-watercut wells and in onshore fields. Their selection and sizing depend on the required head, flow rate, fluid properties, and power supply.</li>
+<li><em>Rod pump (sucker rod)</em> — a reciprocating pump driven by a surface beam unit, the most common lift method in onshore U.S. wells. Economical for low-rate wells (under 500 bbl/d) with moderate depths.</li>
+<li><em>Jet pump, progressive cavity pump (PCP)</em> — niche applications for specific fluid types and rate ranges. PCPs are well-suited for viscous crude oil production.</li>
+</ul>
+<p><strong>Well completions</strong> — the design of the production zone — critically affect well productivity. Completion types include open-hole, cased and perforated, slotted liners, and gravel packs. The completion efficiency is expressed as the skin factor $S$, where $S = 0$ is an undamaged well, $S &gt; 0$ indicates damage, and $S &lt; 0$ represents a stimulated well (e.g., after hydraulic fracturing).</p>
+<p><strong>Sand management</strong> — in poorly consolidated formations, producing at high drawdown can mobilize formation sand, leading to erosion, equipment damage, and well failure. Sand screens, gravel packs, and chemical consolidation are used to manage sand production. The allowable drawdown becomes an optimization constraint in Chapter 5.</p>
+<h3 id="1-2-3-subsea-production-systems">1.2.3 Subsea Production Systems</h3>
+<p>In offshore developments, the subsea production system connects the wellheads on the seabed to the surface processing facility. The complexity and cost of subsea systems make them a critical area for optimization.</p>
+<p><strong>Subsea trees (Christmas trees)</strong> are valve assemblies mounted on the wellhead at the seabed. They control well flow, provide barriers for well intervention, and house production and annulus sensors. Modern subsea trees include pressure and temperature transmitters, multiphase flow meters, and sand detection probes. Subsea trees are rated for water depths up to 3,000 m and pressures up to 15,000 psi (1,035 bara) for high-pressure/high-temperature (HPHT) applications.</p>
+<p><strong>Manifolds</strong> collect production from multiple wells into a single flowline. A typical subsea manifold serves 4–8 wells and includes valving for individual well isolation. The manifold pressure is a key optimization variable: it is the downstream boundary condition for all connected wells and the upstream boundary for the flowline.</p>
+<p><strong>Flowlines</strong> transport the multiphase production (oil, gas, water) from the manifold to the riser base. Flowline design must account for pressure drop (minimized by large diameter), heat loss (managed by insulation or pipe-in-pipe systems), and flow assurance threats (hydrates, wax, slugging). Typical flowline lengths range from 5 km for near-platform tiebacks to 150 km or more for long-distance tiebacks.</p>
+<p><strong>Risers</strong> carry the production from the seabed to the surface facility. Riser systems include steel catenary risers (SCRs), flexible risers, and hybrid riser towers. The riser geometry (vertical height, catenary shape) creates significant hydrostatic pressure loss, particularly for deep-water developments where water depths exceed 1,000 m.</p>
+<p><strong>Subsea boosting and processing</strong> — for long-distance tiebacks or low-pressure fields, subsea multiphase pumps can boost the wellstream pressure, overcoming flowline losses that would otherwise choke production. Subsea separation and water re-injection allow water to be removed before transport, reducing flowline size and hydrate risk. These systems are modeled in NeqSim as pump and separator equipment within a subsea <code>ProcessSystem</code> (Chapter 7).</p>
+<p><strong>Tieback distance</strong> has a profound effect on production performance. As the distance between wells and the host facility increases, the pressure lost in the flowline and riser increases, reducing the pressure available at the wellhead and hence the achievable production rate. For a gas-condensate field, a 50 km tieback might require 50–80 bar of flowing pressure at the manifold, compared to 20–30 bar for a 10 km tieback. This difference directly impacts well deliverability and field economics. The pressure budget for a subsea tieback can be expressed as:</p>
+<p>$$ p_{\text{res}} = p_{wf} + \Delta p_{\text{tubing}} + \Delta p_{\text{tree}} + \Delta p_{\text{flowline}} + \Delta p_{\text{riser}} + p_{\text{sep}} $$</p>
+<p>Minimizing the downstream pressure terms (flowline loss, riser hydrostatic, separator pressure) maximizes the drawdown available for production.</p>
+<h3 id="1-2-4-topside-processing-facilities">1.2.4 Topside Processing Facilities</h3>
+<p>The topside facility — whether a fixed platform, a floating production storage and offloading (FPSO) vessel, or an onshore plant — separates, treats, and conditions the produced fluids for export. Understanding the topside process is essential for production optimization because the facility capacities define the constraints on total field production.</p>
+<p><strong>Separation</strong> is the first and most important processing step. Production from the wells enters the first-stage (HP) separator, where the three phases — gas, oil, and water — are separated by gravity. Typical HP separator pressures range from 40 to 100 bara, depending on the field pressure and export requirements.</p>
+<p>Gas from the HP separator flows to gas processing (dehydration, dew point control) and compression. Liquid from the HP separator flows to the second-stage (MP) separator at a lower pressure (typically 10–30 bara), where additional gas is liberated. A third-stage (LP) separator at 2–5 bara recovers the final flash gas. This multi-stage pressure let-down is the cornerstone of topside process design, and the optimal separator pressures are a key optimization target (Chapter 10).</p>
+<p>The optimal pressure staging can be estimated by the equal compression ratio rule. For $n$ stages with inlet pressure $p_1$ and final pressure $p_n$, the optimal stage pressures follow:</p>
+<p>$$ \frac{p_{k+1}}{p_k} = \left(\frac{p_n}{p_1}\right)^{1/n} \quad \text{for } k = 1, \ldots, n-1 $$</p>
+<p>In practice, the optimal pressures deviate from this rule due to the nonlinear phase behavior of real fluids — the amount of gas liberated at each stage depends on the composition and temperature, not just the pressure ratio. NeqSim's flash calculations capture these effects rigorously.</p>
+<p><strong>Oil processing</strong> downstream of the LP separator includes electrostatic coalescers for water removal, heat exchangers for oil heating (to reduce viscosity and improve separation), and stabilization columns for light-end removal. The oil must meet export specifications — typically less than 0.5% basic sediment and water (BS&amp;W) and a Reid vapor pressure (RVP) below 12 psia for safe tanker transport.</p>
+<p><strong>Gas processing</strong> treats the separated gas to meet pipeline or LNG specifications. Key processes include:</p>
+<ul>
+<li><em>Dehydration</em> — removal of water vapor, typically using triethylene glycol (TEG) contactors, to prevent hydrate formation and corrosion in the export pipeline. The water dew point specification is typically $-18°\text{C}$ or lower at the delivery pressure.</li>
+<li><em>Dew point control</em> — removal of heavy hydrocarbons using Joule-Thomson (JT) valves, turbo-expanders, or mechanical refrigeration to prevent liquid condensation in the export pipeline. The hydrocarbon dew point (cricondentherm) must typically be below $0°\text{C}$.</li>
+<li><em>Acid gas removal</em> — removal of CO$_2$ and H$_2$S using amine absorption (MDEA, DEA), membrane separation, or molecular sieves when concentrations exceed pipeline specifications</li>
+<li><em>NGL recovery</em> — fractionation of the gas into methane (sales gas), ethane, propane, butanes (LPG), and natural gasoline (C$_5$+) in onshore processing facilities</li>
+</ul>
+<p><strong>Water treatment</strong> processes produced water to meet discharge or reinjection specifications. Typical requirements are less than 30 mg/L dispersed oil for offshore discharge (OSPAR convention) and less than 5 mg/L for reservoir reinjection (to avoid formation damage). Produced water volumes typically increase over the field life as the water-oil ratio rises, and water treatment capacity often becomes the binding constraint on total production in the later years of a field's life.</p>
+<figure><img src="figures/topside_process_schematic.png" alt="Simplified schematic of a typical topside process flow: HP/MP/LP separation, gas compression, oil export, and water treatment."/>
+<figcaption>Simplified schematic of a typical topside process flow: HP/MP/LP separation, gas compression, oil export, and water treatment.</figcaption>
+</figure>
+<h3 id="1-2-5-gas-compression">1.2.5 Gas Compression</h3>
+<p>Compression is typically the most capital-intensive and energy-intensive equipment on a production facility, and it is often the bottleneck that limits total field production. A thorough understanding of compression systems is essential for production optimization.</p>
+<p><strong>Recompression</strong> handles gas from the MP and LP separators, boosting it from low pressure (2–30 bara) to the HP system pressure (60–100 bara) for export or further processing. Recompression trains typically consist of 2–4 stages with intercoolers and scrubbers at each stage to remove condensed liquids.</p>
+<p><strong>Export compression</strong> boosts the HP gas to the export pipeline pressure (100–250 bara, depending on the pipeline length and delivery pressure). Export compressors are typically the largest and most expensive machines on the platform, driven by gas turbines of 15–40 MW.</p>
+<p><strong>Gas lift compression</strong> provides high-pressure gas (150–350 bara) for injection into the tubing annulus of gas-lifted wells. Gas lift compression is dedicated, because the lift gas pressure must exceed the casing head pressure at the wellhead.</p>
+<p><strong>Injection compression</strong> boosts gas to reservoir pressure (200–500 bara) for pressure maintenance or enhanced recovery by gas injection. Injection compressors operate at the highest pressures on the platform and may require multiple stages of compression.</p>
+<p>The total compression power $W$ for an ideal gas compressing from $p_1$ to $p_2$ in $n_s$ stages with a polytropic efficiency $\eta_p$ is:</p>
+<p>$$ W = \frac{n_s}{\eta_p} \cdot \frac{\gamma}{\gamma - 1} \cdot Z \, R \, T_1 \cdot \dot{m} \cdot \left[\left(\frac{p_2}{p_1}\right)^{(\gamma - 1)/(\gamma \, n_s)} - 1\right] $$</p>
+<p>where $\gamma$ is the heat capacity ratio, $Z$ is the compressibility factor, $R$ is the specific gas constant, $T_1$ is the suction temperature, and $\dot{m}$ is the mass flow rate. In practice, real-gas effects, interstage cooling, and compressor characteristic curves make the calculation more complex — these are the subjects of Chapters 12 and 13.</p>
+<p><strong>Why compression is often the bottleneck:</strong> As reservoir pressure declines over the field life, the wellhead pressure drops, and more gas is released at lower pressures in the separation train. The recompression duty increases while the total gas volume also increases. Eventually, the installed compression capacity is fully utilized, and total production must be reduced — the field is &quot;compression-constrained.&quot; The crossover from &quot;well-constrained&quot; to &quot;facility-constrained&quot; production is a critical transition in the life of every field. Identifying and relieving this bottleneck is one of the most valuable applications of production optimization (Chapter 21).</p>
+<h3 id="1-2-6-power-and-utilities">1.2.6 Power and Utilities</h3>
+<p>Platform operations require substantial power — typically 20–100 MW for a large offshore facility. The power demand is dominated by gas compression (often 60–80% of total demand), with additional loads from pumps, heat tracing, lighting, drilling, and accommodation.</p>
+<p><strong>Gas turbines</strong> are the primary power source on most offshore platforms. They burn produced gas (fuel gas) to generate electricity or drive compressors directly through a mechanical coupling. The fuel gas consumption is typically 8–12% of the total gas production, which means that fuel gas demand competes directly with gas export revenue. Optimizing compression efficiency therefore has a double benefit: it reduces the power demand <em>and</em> increases the gas available for export.</p>
+<p>Simple-cycle gas turbine efficiency is typically 30–38%, depending on the ambient temperature and the turbine model. The thermal efficiency $\eta_{\text{th}}$ is defined as:</p>
+<p>$$ \eta_{\text{th}} = \frac{W_{\text{net}}}{Q_{\text{fuel}}} = \frac{W_{\text{net}}}{\dot{m}_{\text{fuel}} \cdot \text{LHV}} $$</p>
+<p>where $W_{\text{net}}$ is the net shaft power, $\dot{m}_{\text{fuel}}$ is the fuel gas mass flow rate, and LHV is the lower heating value of the fuel gas.</p>
+<p><strong>Waste heat recovery</strong> from gas turbine exhaust (typically 450–550°C) can generate steam for heating, power generation (via a steam turbine in a combined cycle), or process use. Combined cycle efficiencies of 45–55% are achievable, compared to 30–38% for simple cycle gas turbines. The economics of waste heat recovery depend on the value of the recovered energy and the weight and space constraints of the facility.</p>
+<p><strong>Platform electrical system</strong> distributes power from the generators to all consumers. Modern platforms increasingly use variable-speed drives (VSDs) on compressors and pumps, which allow continuous adjustment of speed, improving part-load efficiency and providing an optimization degree of freedom. The interaction between power generation, compression, and production is a system-level optimization problem addressed in Chapter 18.</p>
+<h3 id="1-2-7-export-and-metering">1.2.7 Export and Metering</h3>
+<p>The final stage of the production chain delivers products to the buyer at the custody transfer point.</p>
+<p><strong>Oil export</strong> is accomplished by pipeline (to an onshore terminal) or by shuttle tanker (for FPSOs and remote platforms). Pipeline export requires sufficient pressure to overcome friction and elevation changes. Tanker export requires oil storage on the FPSO (typically 1–2 million barrels capacity) and offloading via a swivel turret or bow loading system. The offloading rate and storage capacity can constrain production during periods of bad weather when tanker operations are suspended.</p>
+<p><strong>Gas export</strong> is almost exclusively by pipeline from offshore platforms. The export pipeline may be hundreds of kilometers long, and the required inlet pressure depends on the pipeline diameter, length, and delivery pressure. For very long pipelines, the required inlet pressure can be 200 bara or more, placing heavy demands on the export compression system. The pipeline capacity depends on the inlet pressure, the gas composition (density and viscosity), and the delivery pressure — all of which can be modeled in NeqSim.</p>
+<p><strong>Fiscal metering</strong> is the measurement of oil and gas quantities at the custody transfer point, forming the basis for revenue calculation, royalty payments, and tax assessment. Fiscal metering must meet stringent accuracy requirements — typically $\pm 0.25\%$ for oil and $\pm 1.0\%$ for gas — as specified in standards such as ISO 5167 (orifice plates), AGA Report No. 9 (ultrasonic meters), and NORSOK I-104 (fiscal metering systems).</p>
+<p><strong>Quality specifications</strong> for export gas typically include:</p>
+<table>
+<thead><tr>
+<th>Parameter</th>
+<th>Typical Specification</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Gross heating value</td>
+<td>36–43 MJ/Sm$^3$</td>
+</tr>
+<tr>
+<td>Wobbe index</td>
+<td>46–53 MJ/Sm$^3$</td>
+</tr>
+<tr>
+<td>Water dew point</td>
+<td>$&lt; -18°\text{C}$ at delivery pressure</td>
+</tr>
+<tr>
+<td>Hydrocarbon dew point</td>
+<td>$&lt; 0°\text{C}$ (cricondentherm)</td>
+</tr>
+<tr>
+<td>H$_2$S content</td>
+<td>$&lt; 3.5$ mg/Sm$^3$</td>
+</tr>
+<tr>
+<td>Total sulfur</td>
+<td>$&lt; 30$ mg/Sm$^3$</td>
+</tr>
+<tr>
+<td>CO$_2$ content</td>
+<td>$&lt; 2.5$ mol%</td>
+</tr>
+<tr>
+<td>O$_2$ content</td>
+<td>$&lt; 10$ ppmv</td>
+</tr>
+</tbody></table>
+<p>Meeting these specifications is an <em>equality constraint</em> in the optimization problem: the gas must be processed <em>just enough</em> to meet spec, since over-processing wastes energy and capacity. NeqSim's thermodynamic models can predict all of these quality parameters from the fluid composition and processing conditions, enabling direct specification tracking in the optimization (Chapter 17).</p>
+<p>---</p>
+<h2 id="1-3-the-role-of-process-simulation">1.3 The Role of Process Simulation</h2>
+<p>Process simulation is the computational backbone of production optimization. A calibrated process model predicts how the production system responds to changes in operating conditions — flow rates, pressures, temperatures, compositions — without the cost and risk of physical experimentation.</p>
+<h3 id="1-3-1-what-a-process-simulator-does">1.3.1 What a Process Simulator Does</h3>
+<p>A process simulator solves the coupled material balance, energy balance, and momentum balance equations for a defined flowsheet of interconnected equipment. At each piece of equipment, the simulator:</p>
+<ol>
+<li><strong>Receives inlet stream conditions</strong> — temperature, pressure, flow rate, composition</li>
+<li><strong>Applies the equipment model</strong> — e.g., adiabatic flash for a separator, polytropic compression for a compressor, pressure drop correlation for a pipe</li>
+<li><strong>Calculates outlet stream conditions</strong> — using thermodynamic equilibrium (flash calculations) and transport property models</li>
+<li><strong>Iterates</strong> if the flowsheet contains recycle streams or specifications that create feedback loops</li>
+</ol>
+<p>The thermodynamic calculations are the foundation of everything else. They answer questions such as: given a fluid of known composition at temperature $T$ and pressure $P$, how many phases exist? What is the composition of each phase? What are the densities, viscosities, enthalpies, and heat capacities?</p>
+<h3 id="1-3-2-the-simulation-loop">1.3.2 The Simulation Loop</h3>
+<p>The inner loop of a process simulator can be summarized as:</p>
+<ol>
+<li><strong>Equation of state (EOS)</strong> — a mathematical model relating pressure, volume, temperature, and composition. Common choices include the Soave-Redlich-Kwong (SRK) and Peng-Robinson (PR) cubic equations of state, and the CPA (Cubic Plus Association) model for polar systems. The general form of a cubic EOS is:</li>
+</ol>
+<p>$$ P = \frac{RT}{v - b} - \frac{a(T)}{(v + \epsilon b)(v + \sigma b)} $$</p>
+<p>where $v$ is the molar volume, $a(T)$ is the attraction parameter (temperature-dependent), $b$ is the co-volume, and $\epsilon$ and $\sigma$ are EOS-specific constants ($\epsilon = 0, \sigma = 1$ for SRK; $\epsilon = 1 - \sqrt{2}, \sigma = 1 + \sqrt{2}$ for PR). The EOS provides fugacity coefficients $\hat{\phi}_i$ that drive phase equilibrium calculations.</p>
+<ol>
+<li><strong>Flash calculation</strong> — given the total composition $z_i$, temperature $T$, and pressure $P$, determine the number and amounts of phases (vapor fraction $\beta$, liquid fraction $1-\beta$) and the composition of each phase ($y_i$ for vapor, $x_i$ for liquid) by solving the Rachford-Rice equation:</li>
+</ol>
+<p>$$ \sum_{i=1}^{N_c} \frac{z_i \, (K_i - 1)}{1 + \beta \, (K_i - 1)} = 0 $$</p>
+<p>where $K_i = y_i / x_i$ is the equilibrium ratio (K-value) for component $i$, determined from the fugacity coefficients: $K_i = \hat{\phi}_i^L / \hat{\phi}_i^V$.</p>
+<ol>
+<li><strong>Property calculation</strong> — once phase compositions and amounts are known, calculate physical properties: density from the EOS, viscosity from correlations such as Lohrenz-Bray-Clark (LBC), thermal conductivity, surface tension, and diffusion coefficients.</li>
+</ol>
+<ol>
+<li><strong>Equipment model</strong> — apply the specific equipment model using the calculated properties (e.g., compressor work from the enthalpy change across the compression, pipe pressure drop from the Beggs and Brill correlation, separator performance from the retention time and K-factor).</li>
+</ol>
+<ol>
+<li><strong>Iterate</strong> — repeat until all recycle streams converge and all specifications are met.</li>
+</ol>
+<h3 id="1-3-3-steady-state-vs-dynamic-simulation">1.3.3 Steady-State vs. Dynamic Simulation</h3>
+<p><strong>Steady-state simulation</strong> calculates the equilibrium operating point of a process given fixed inputs. Time does not appear in the equations — the system is assumed to have reached a stable state. Steady-state simulation is used for:</p>
+<ul>
+<li>Design studies and equipment sizing</li>
+<li>Capacity checks and equipment rating</li>
+<li>&quot;What-if&quot; scenario analysis (what happens if we increase well rates by 10%?)</li>
+<li>Optimization (find the best operating point among all feasible points)</li>
+<li>Production forecasting (combined with a reservoir decline model)</li>
+</ul>
+<p><strong>Dynamic simulation</strong> tracks how the process evolves over time, solving the ordinary and partial differential equations that describe accumulation of mass, energy, and momentum in vessels, pipes, and control loops. The governing equation for mass accumulation in a vessel of volume $V$ is:</p>
+<p>$$ \frac{d(\rho V)}{dt} = \dot{m}_{\text{in}} - \dot{m}_{\text{out}} $$</p>
+<p>and for energy:</p>
+<p>$$ \frac{d(U)}{dt} = \dot{m}_{\text{in}} h_{\text{in}} - \dot{m}_{\text{out}} h_{\text{out}} + \dot{Q} - \dot{W} $$</p>
+<p>where $\rho$ is density, $U$ is internal energy, $h$ is specific enthalpy, $\dot{Q}$ is heat transfer, and $\dot{W}$ is work. Dynamic simulation is used for:</p>
+<ul>
+<li>Control system design and PID controller tuning</li>
+<li>Startup, shutdown, and load change procedures</li>
+<li>Slug flow impact assessment (liquid surges from terrain slugging in flowlines)</li>
+<li>Emergency depressurization and blowdown studies</li>
+<li>Compressor anti-surge system verification</li>
+</ul>
+<p>NeqSim supports both modes: <code>process.run()</code> performs a steady-state calculation, while <code>process.runTransient(dt)</code> advances the simulation by a time step $dt$ seconds. Chapter 20 develops dynamic simulation in detail.</p>
+<h3 id="1-3-4-calibrated-models-vs-design-models">1.3.4 Calibrated Models vs. Design Models</h3>
+<p>A <strong>design model</strong> is built from equipment specifications, design data sheets, and vendor information before the facility is constructed. It predicts how the facility <em>should</em> perform at design conditions and is used for engineering design, procurement, and construction.</p>
+<p>A <strong>calibrated model</strong> (also called an <em>operations model</em>) has been adjusted to match measured operating data — actual separator efficiencies, real compressor performance curves, measured pipeline pressure drops, and tuned IPR curves from well tests. A calibrated model predicts how the facility <em>actually</em> performs and is therefore far more useful for optimization.</p>
+<p>The workflow for model calibration is:</p>
+<ol>
+<li><strong>Collect measured data</strong> — flow rates, pressures, temperatures, compositions from process sensors. Data quality is critical: sensor drift, measurement noise, and missing data must be addressed.</li>
+<li><strong>Compare model predictions to measurements</strong> — identify systematic discrepancies (bias) and random scatter.</li>
+<li><strong>Adjust model parameters</strong> — equipment efficiencies, heat transfer coefficients, friction factors, well productivity indices — to minimize the discrepancy, typically in a least-squares sense.</li>
+<li><strong>Validate</strong> the calibrated model against an independent data set (not used in the calibration) to ensure the model generalizes rather than overfitting.</li>
+</ol>
+<p>Throughout this book, we emphasize the importance of model calibration and provide practical guidance for tuning NeqSim models to match plant data.</p>
+<h3 id="1-3-5-model-fidelity-vs-computational-cost">1.3.5 Model Fidelity vs. Computational Cost</h3>
+<p>There is an inherent trade-off between model fidelity and computational cost. A full-compositional process model with 30+ components and rigorous thermodynamics may take 5–30 seconds to evaluate a single operating point. An optimization algorithm that requires 10,000 function evaluations would then take 14–80 hours — impractical for daily operations.</p>
+<p>Strategies for managing this trade-off include:</p>
+<ul>
+<li><em>Reduced compositions</em> — lumping heavy components to reduce the number of species from 30+ to 8–12, with proportional speedup</li>
+<li><em>Surrogate models</em> — training machine learning models (neural networks, Gaussian processes, polynomial response surfaces) on simulation outputs and using them as fast approximations in the optimization loop</li>
+<li><em>Decomposition</em> — optimizing subsystems sequentially (wells first, then topside, then compression) rather than simultaneously</li>
+<li><em>Gradient-based methods</em> — using derivative information (adjoint methods, finite differences) to reduce the number of function evaluations needed to find the optimum</li>
+<li><em>Parallel evaluation</em> — running multiple simulation cases simultaneously on multi-core hardware</li>
+</ul>
+<p>NeqSim's fast computation speed (Java-based with efficient EOS solvers) makes it practical to embed rigorous models directly in optimization loops for many problems, reducing the need for surrogate approximations. A typical NeqSim flash calculation completes in 1–5 milliseconds, and a full process model with 20 equipment items evaluates in 0.5–5 seconds.</p>
+<p>---</p>
+<h2 id="1-4-why-neqsim">1.4 Why NeqSim?</h2>
+<p>NeqSim (Non-Equilibrium Simulator) is an open-source Java library for thermodynamic and process simulation, developed since 2000 at NTNU (Norwegian University of Science and Technology) and Equinor. It is designed from the ground up for rigorous engineering calculations and has been used in production, research, and teaching across the oil and gas industry.</p>
+<h3 id="1-4-1-open-source-and-extensible">1.4.1 Open Source and Extensible</h3>
+<p>NeqSim is released under the Apache 2.0 license, making it freely available for commercial and academic use. The source code is publicly hosted on GitHub (<code>github.com/equinor/neqsim</code>), enabling:</p>
+<ul>
+<li><strong>Full transparency</strong> — inspect and verify every calculation, from the EOS implementation to the flash algorithm to the property correlations. This is essential for engineering applications where results must be auditable.</li>
+<li><strong>Extensibility</strong> — add new equations of state, equipment models, or optimization algorithms by extending the Java classes.</li>
+<li><strong>Reproducibility</strong> — share complete simulation models (code, fluid definitions, process configurations) with colleagues and reviewers, ensuring identical results.</li>
+<li><strong>No license cost</strong> — democratizes access to rigorous process simulation, particularly for universities, research institutions, and small companies.</li>
+</ul>
+<h3 id="1-4-2-comparison-with-commercial-tools">1.4.2 Comparison with Commercial Tools</h3>
+<p>Table 1.2 compares NeqSim with widely used commercial process simulators.</p>
+<table>
+<thead><tr>
+<th>Feature</th>
+<th>NeqSim</th>
+<th>Aspen HYSYS / UniSim</th>
+<th>ProMax</th>
+<th>DWSIM</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>License</td>
+<td>Open source (Apache 2.0)</td>
+<td>Commercial</td>
+<td>Commercial</td>
+<td>Open source (GPL)</td>
+</tr>
+<tr>
+<td>Core language</td>
+<td>Java</td>
+<td>Fortran / C++</td>
+<td>Fortran / C++</td>
+<td>.NET (VB/C#)</td>
+</tr>
+<tr>
+<td>Python interface</td>
+<td>Yes (jpype, native)</td>
+<td>COM automation</td>
+<td>COM automation</td>
+<td>Limited</td>
+</tr>
+<tr>
+<td>EOS library</td>
+<td>SRK, PR, CPA, Electrolyte CPA, GERG-2008, PC-SAFT, UMR-PRU</td>
+<td>SRK, PR, CPA, NRTL, UNIQUAC</td>
+<td>SRK, PR, AMINE</td>
+<td>SRK, PR, UNIQUAC</td>
+</tr>
+<tr>
+<td>Multiphase flow</td>
+<td>Beggs &amp; Brill, OLGA interfaces</td>
+<td>OLGA integration</td>
+<td>Limited</td>
+<td>Limited</td>
+</tr>
+<tr>
+<td>Dynamic simulation</td>
+<td>Yes (transient process)</td>
+<td>Yes (Aspen Dynamics)</td>
+<td>Limited</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Automation API</td>
+<td>Yes (ProcessAutomation)</td>
+<td>COM/OPC</td>
+<td>COM</td>
+<td>Limited</td>
+</tr>
+<tr>
+<td>Jupyter integration</td>
+<td>Native (jpype bridge)</td>
+<td>Via COM</td>
+<td>Via COM</td>
+<td>Partial</td>
+</tr>
+<tr>
+<td>MCP server</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Electrolyte systems</td>
+<td>CPA-Electrolyte</td>
+<td>Electrolyte NRTL</td>
+<td>Amine models</td>
+<td>Limited</td>
+</tr>
+<tr>
+<td>Equipment library</td>
+<td>40+ equipment types</td>
+<td>100+</td>
+<td>50+</td>
+<td>30+</td>
+</tr>
+<tr>
+<td>Hydrate prediction</td>
+<td>Yes (CPA-based)</td>
+<td>Yes (CSMHyd)</td>
+<td>Yes (ProMax)</td>
+<td>No</td>
+</tr>
+</tbody></table>
+<p>NeqSim's primary strengths are its rigorous thermodynamic models (particularly for gas-condensate, CCS, and electrolyte systems), its native Python integration (enabling Jupyter-based workflows without COM automation), and its automation API that makes it suitable for embedding in real-time optimization and digital twin applications.</p>
+<h3 id="1-4-3-key-capabilities">1.4.3 Key Capabilities</h3>
+<p>The NeqSim capabilities most relevant to this book are:</p>
+<ul>
+<li><strong>Equation of state library</strong> — SRK, PR (both with volume translation), CPA (for polar systems like water, methanol, MEG), Electrolyte CPA (for brine chemistry and scale prediction), GERG-2008 (custody transfer reference for natural gas), PC-SAFT, and UMR-PRU</li>
+<li><strong>Flash calculations</strong> — TP flash, PH flash, PS flash, TV flash, bubble point and dew point calculations, hydrate equilibrium temperature and pressure</li>
+<li><strong>Transport properties</strong> — viscosity (LBC, PFCT, corresponding states), thermal conductivity, surface tension, and diffusion coefficients for all phases</li>
+<li><strong>Process equipment</strong> — streams, separators (2-phase, 3-phase), compressors (with performance curves), heat exchangers (shell-and-tube, plate), valves (Cv-based), pipes (Beggs and Brill), mixers, splitters, distillation columns, absorbers, reactors</li>
+<li><strong>Dynamic simulation</strong> — transient equipment models with PID controllers, transmitters (PT, TT, LT, FT), and alarm logic</li>
+<li><strong>Multiphase pipe flow</strong> — Beggs and Brill correlation with pipeline elevation profile and heat transfer to surroundings</li>
+<li><strong>Reservoir models</strong> — simple reservoir with drive mechanism and decline, suitable for integrated production modeling</li>
+</ul>
+<h3 id="1-4-4-the-neqsim-ecosystem">1.4.4 The NeqSim Ecosystem</h3>
+<p>NeqSim operates as an ecosystem of interconnected components:</p>
+<ul>
+<li><strong>Java core</strong> (<code>neqsim-*.jar</code>) — the main library, containing all thermodynamic and process simulation classes. Can be used directly from Java applications or any JVM-compatible language.</li>
+<li><strong>Python interface</strong> (<code>pip install neqsim</code>) — uses jpype to bridge Python and the Java core, enabling use from Jupyter notebooks, scripts, and automation systems. All Java classes are accessible from Python with automatic type conversion.</li>
+<li><strong>Jupyter notebooks</strong> — the primary working environment for this book. Each chapter includes companion notebooks with runnable code examples that can be executed, modified, and extended.</li>
+<li><strong>MCP server</strong> — a Model Context Protocol server that exposes NeqSim calculations as web services, enabling integration with AI assistants, web applications, and external optimization engines.</li>
+<li><strong>Automation API</strong> — the <code>ProcessAutomation</code> class provides string-addressable access to all simulation variables, designed for programmatic access from optimization algorithms, digital twin systems, and real-time advisory tools.</li>
+</ul>
+<p>---</p>
+<h2 id="1-5-getting-started-with-neqsim">1.5 Getting Started with NeqSim</h2>
+<p>This section walks through the essential first steps: installing NeqSim, creating a fluid, running a flash calculation, building a process, and accessing results programmatically.</p>
+<h3 id="1-5-1-installation">1.5.1 Installation</h3>
+<p>Install the NeqSim Python package from PyPI:</p>
+<pre><code class="language-bash">
+pip install neqsim
+</code></pre>
+<p>The installation includes the Java core library and handles the JVM setup automatically. Verify the installation:</p>
+<pre><code class="language-python">
+from neqsim import jneqsim
+print(&quot;NeqSim loaded successfully&quot;)
+</code></pre>
+<p>For development work or access to the latest features, the Java source can be built from the GitHub repository using Maven:</p>
+<pre><code class="language-bash">
+git clone https://github.com/equinor/neqsim.git
+cd neqsim
+./mvnw install
+</code></pre>
+<h3 id="1-5-2-creating-a-fluid">1.5.2 Creating a Fluid</h3>
+<p>A fluid in NeqSim is represented by a <code>SystemInterface</code> object — an instance of an equation-of-state system containing a defined set of components with their mole fractions. The most common choice for oil and gas work is the SRK (Soave-Redlich-Kwong) equation of state:</p>
+<pre><code class="language-python">
+from neqsim import jneqsim
+
+# Create an SRK EOS system at 80°C (353.15 K) and 150 bara
+fluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 80.0, 150.0)
+
+# Add components with mole fractions (will be normalized automatically)
+fluid.addComponent(&quot;nitrogen&quot;, 0.5)
+fluid.addComponent(&quot;CO2&quot;, 2.0)
+fluid.addComponent(&quot;methane&quot;, 70.0)
+fluid.addComponent(&quot;ethane&quot;, 8.0)
+fluid.addComponent(&quot;propane&quot;, 5.0)
+fluid.addComponent(&quot;n-butane&quot;, 3.0)
+fluid.addComponent(&quot;n-pentane&quot;, 2.0)
+fluid.addComponent(&quot;n-hexane&quot;, 1.5)
+fluid.addComponent(&quot;n-heptane&quot;, 3.0)
+fluid.addComponent(&quot;n-octane&quot;, 2.5)
+fluid.addComponent(&quot;n-nonane&quot;, 1.5)
+fluid.addComponent(&quot;water&quot;, 1.0)
+
+# Set the mixing rule — this must ALWAYS be called
+fluid.setMixingRule(&quot;classic&quot;)
+
+# Enable multiphase check (important for three-phase systems)
+fluid.setMultiPhaseCheck(True)
+</code></pre>
+<p>Key points to remember:</p>
+<ul>
+<li>The constructor takes temperature in <strong>Kelvin</strong> and pressure in <strong>bara</strong></li>
+<li>Components are specified by name; NeqSim has a database of 100+ pure components with validated critical properties, acentric factors, and binary interaction parameters</li>
+<li><code>setMixingRule(&quot;classic&quot;)</code> activates the standard van der Waals one-fluid mixing rule. <strong>Never skip this call</strong> — without it, the EOS cannot compute mixture fugacities.</li>
+<li><code>setMultiPhaseCheck(True)</code> enables detection of aqueous, liquid hydrocarbon, and vapor phases simultaneously, which is essential for production system modeling where water is always present</li>
+</ul>
+<p>The EOS selection matters for accuracy. Table 1.3 provides guidance:</p>
+<table>
+<thead><tr>
+<th>EOS</th>
+<th>Best For</th>
+<th>Limitations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>SRK</td>
+<td>General oil and gas, gas condensates, gas processing</td>
+<td>Less accurate for liquid densities without volume translation</td>
+</tr>
+<tr>
+<td>PR</td>
+<td>Similar to SRK, slightly better liquid densities</td>
+<td>Default in many commercial tools; good general choice</td>
+</tr>
+<tr>
+<td>CPA</td>
+<td>Systems with water, methanol, glycol, amines (polar)</td>
+<td>More parameters to tune; needed for accurate water content</td>
+</tr>
+<tr>
+<td>GERG-2008</td>
+<td>Custody transfer, natural gas, high accuracy gas phase</td>
+<td>Gas phase only; limited composition range</td>
+</tr>
+<tr>
+<td>Electrolyte CPA</td>
+<td>Brine chemistry, scale prediction, produced water</td>
+<td>Complex setup; for specialized applications</td>
+</tr>
+</tbody></table>
+<p>Chapter 2 develops the thermodynamic foundations in depth.</p>
+<h3 id="1-5-3-running-a-flash-calculation">1.5.3 Running a Flash Calculation</h3>
+<p>A flash calculation determines the phase equilibrium at given conditions. The most common type is the <em>TP flash</em> — given temperature and pressure, calculate the number of phases, their amounts, and their compositions:</p>
+<pre><code class="language-python">
+from neqsim import jneqsim
+
+# Create a gas-condensate fluid at HP separator conditions
+fluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 80.0, 60.0)
+fluid.addComponent(&quot;methane&quot;, 0.80)
+fluid.addComponent(&quot;ethane&quot;, 0.06)
+fluid.addComponent(&quot;propane&quot;, 0.04)
+fluid.addComponent(&quot;n-butane&quot;, 0.03)
+fluid.addComponent(&quot;n-pentane&quot;, 0.02)
+fluid.addComponent(&quot;n-hexane&quot;, 0.01)
+fluid.addComponent(&quot;n-heptane&quot;, 0.02)
+fluid.addComponent(&quot;n-octane&quot;, 0.015)
+fluid.addComponent(&quot;water&quot;, 0.005)
+fluid.setMixingRule(&quot;classic&quot;)
+fluid.setMultiPhaseCheck(True)
+
+# Run TP flash
+ops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)
+ops.TPflash()
+
+# CRITICAL: Initialize physical properties AFTER the flash
+fluid.initProperties()
+
+# Read results
+num_phases = fluid.getNumberOfPhases()
+print(f&quot;Number of phases: {num_phases}&quot;)
+
+if fluid.hasPhaseType(&quot;gas&quot;):
+    gas = fluid.getPhase(&quot;gas&quot;)
+    print(f&quot;Gas density: {gas.getDensity('kg/m3'):.2f} kg/m3&quot;)
+    print(f&quot;Gas viscosity: {gas.getViscosity('kg/msec'):.6f} kg/(m·s)&quot;)
+    print(f&quot;Gas Cp: {gas.getCp('J/molK'):.2f} J/(mol·K)&quot;)
+    print(f&quot;Gas Z-factor: {gas.getZ():.4f}&quot;)
+
+if fluid.hasPhaseType(&quot;oil&quot;):
+    oil = fluid.getPhase(&quot;oil&quot;)
+    print(f&quot;Oil density: {oil.getDensity('kg/m3'):.2f} kg/m3&quot;)
+    print(f&quot;Oil viscosity: {oil.getViscosity('kg/msec'):.6f} kg/(m·s)&quot;)
+</code></pre>
+<blockquote><p><strong>Important:</strong> After any flash calculation, you <strong>must</strong> call <code>fluid.initProperties()</code> before reading transport properties (viscosity, thermal conductivity). The flash alone initializes thermodynamic properties (fugacities, enthalpies), but transport property models require an additional initialization step. Without this call, <code>getViscosity()</code> and <code>getThermalConductivity()</code> may return zero.</p></blockquote>
+<h3 id="1-5-4-building-a-process">1.5.4 Building a Process</h3>
+<p>NeqSim's process simulation framework models interconnected equipment — streams, separators, compressors, heat exchangers, valves, and pipes — as a sequential flowsheet:</p>
+<pre><code class="language-python">
+from neqsim import jneqsim
+
+# Create fluid
+fluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 80.0, 150.0)
+fluid.addComponent(&quot;nitrogen&quot;, 0.5)
+fluid.addComponent(&quot;CO2&quot;, 2.0)
+fluid.addComponent(&quot;methane&quot;, 70.0)
+fluid.addComponent(&quot;ethane&quot;, 8.0)
+fluid.addComponent(&quot;propane&quot;, 5.0)
+fluid.addComponent(&quot;n-butane&quot;, 3.0)
+fluid.addComponent(&quot;n-pentane&quot;, 2.0)
+fluid.addComponent(&quot;n-hexane&quot;, 1.5)
+fluid.addComponent(&quot;n-heptane&quot;, 3.0)
+fluid.addComponent(&quot;n-octane&quot;, 2.5)
+fluid.addComponent(&quot;n-nonane&quot;, 1.5)
+fluid.addComponent(&quot;water&quot;, 1.0)
+fluid.setMixingRule(&quot;classic&quot;)
+fluid.setMultiPhaseCheck(True)
+
+# Create equipment
+Stream = jneqsim.process.equipment.stream.Stream
+Separator = jneqsim.process.equipment.separator.Separator
+ThrottlingValve = jneqsim.process.equipment.valve.ThrottlingValve
+ProcessSystem = jneqsim.process.processmodel.ProcessSystem
+
+# Well stream
+feed = Stream(&quot;Well Stream&quot;, fluid)
+feed.setFlowRate(50000.0, &quot;kg/hr&quot;)
+feed.setTemperature(80.0, &quot;C&quot;)
+feed.setPressure(80.0, &quot;bara&quot;)
+
+# HP Separator
+hp_sep = Separator(&quot;HP Separator&quot;, feed)
+
+# Valve to reduce liquid pressure before MP separator
+valve = ThrottlingValve(&quot;HP-MP Valve&quot;, hp_sep.getLiquidOutStream())
+valve.setOutletPressure(25.0, &quot;bara&quot;)
+
+# MP Separator
+mp_sep = Separator(&quot;MP Separator&quot;, valve.getOutletStream())
+
+# Build and run
+process = ProcessSystem()
+process.add(feed)
+process.add(hp_sep)
+process.add(valve)
+process.add(mp_sep)
+process.run()
+
+# Read results
+hp_gas = hp_sep.getGasOutStream().getFlowRate(&quot;MSm3/day&quot;)
+mp_gas = mp_sep.getGasOutStream().getFlowRate(&quot;MSm3/day&quot;)
+oil_out = mp_sep.getLiquidOutStream().getFlowRate(&quot;m3/hr&quot;)
+
+print(f&quot;HP separator gas: {hp_gas:.3f} MSm3/day&quot;)
+print(f&quot;MP separator gas: {mp_gas:.3f} MSm3/day&quot;)
+print(f&quot;Total gas: {hp_gas + mp_gas:.3f} MSm3/day&quot;)
+print(f&quot;Oil export: {oil_out:.2f} m3/hr&quot;)
+</code></pre>
+<p>This example illustrates the core NeqSim workflow that will be used throughout this book:</p>
+<ol>
+<li><strong>Define the fluid</strong> using an appropriate equation of state and component list</li>
+<li><strong>Create equipment</strong> — each equipment item takes its inlet stream as a constructor argument</li>
+<li><strong>Connect equipment</strong> by using outlet streams from upstream equipment as inlet streams for downstream equipment</li>
+<li><strong>Build a ProcessSystem</strong> by adding equipment in sequence</li>
+<li><strong>Run the simulation</strong> with <code>process.run()</code></li>
+<li><strong>Extract results</strong> from equipment and stream accessor methods</li>
+</ol>
+<h3 id="1-5-5-the-processsystem-architecture">1.5.5 The ProcessSystem Architecture</h3>
+<p>NeqSim organizes process simulations around two key classes:</p>
+<p><strong><code>ProcessSystem</code></strong> represents a single process area — a connected set of equipment with a defined execution order. Equipment is added using <code>process.add(equipment)</code>, and <code>process.run()</code> evaluates all equipment in sequence. If the flowsheet contains recycles, <code>ProcessSystem</code> handles the iterative convergence automatically.</p>
+<p>Key features of <code>ProcessSystem</code>:</p>
+<ul>
+<li>Enforces unique equipment names (duplicate names cause an error)</li>
+<li>Provides <code>getUnit(&quot;name&quot;)</code> to retrieve equipment by name</li>
+<li>Supports <code>copy()</code> for duplicating equipment configurations</li>
+<li>Handles recycle loops and specification convergence</li>
+</ul>
+<p><strong><code>ProcessModel</code></strong> composes multiple <code>ProcessSystem</code> objects into a multi-area plant model. This is essential for large facilities where the separation train, compression system, gas processing, and water treatment are modeled as separate process areas that share streams at their boundaries:</p>
+<pre><code class="language-python">
+ProcessModel = jneqsim.process.processmodel.ProcessModel
+
+plant = ProcessModel()
+plant.add(&quot;Separation&quot;, separation_system)
+plant.add(&quot;Compression&quot;, compression_system)
+plant.add(&quot;Gas Processing&quot;, gas_processing_system)
+plant.run()  # Iterates all areas until convergence
+</code></pre>
+<p>The <code>ProcessModel</code> iterates between the areas until the shared boundary streams converge, enabling full-plant optimization where changes in one area propagate to all others. This architecture mirrors the physical structure of a production facility, where different process areas are designed and operated by different engineering disciplines but are coupled through shared streams.</p>
+<h3 id="1-5-6-the-automation-api-preview">1.5.6 The Automation API Preview</h3>
+<p>For optimization and digital twin applications, NeqSim provides the <code>ProcessAutomation</code> class — a string-addressable interface to all simulation variables. Instead of navigating Java object hierarchies, you can read and write variables by name:</p>
+<pre><code class="language-python">
+# Get the automation facade
+auto = process.getAutomation()
+
+# Discover equipment
+units = auto.getUnitList()    # [&quot;Well Stream&quot;, &quot;HP Separator&quot;, ...]
+
+# List variables for a specific unit
+variables = auto.getVariableList(&quot;HP Separator&quot;)
+for v in variables:
+    print(f&quot;  {v.getAddress()} ({v.getType()}) [{v.getUnit()}]&quot;)
+
+# Read a variable by address
+temp = auto.getVariableValue(&quot;HP Separator.gasOutStream.temperature&quot;, &quot;C&quot;)
+pres = auto.getVariableValue(&quot;HP Separator.pressure&quot;, &quot;bara&quot;)
+
+# Write an input variable and re-run
+auto.setVariableValue(&quot;HP-MP Valve.outletPressure&quot;, 20.0, &quot;bara&quot;)
+process.run()  # Propagate changes through the process
+</code></pre>
+<p>The Automation API includes self-healing diagnostics: if you misspell an equipment name, it uses fuzzy matching to suggest the correct name. This makes it robust for use in automated workflows where exact variable names may not be known in advance. We will use it extensively in the optimization chapters (Part VII).</p>
+<p>---</p>
+<h2 id="1-6-optimization-workflow-overview">1.6 Optimization Workflow Overview</h2>
+<p>Production optimization using process simulation follows a three-step workflow that is conceptually simple but practically demanding. This workflow forms the backbone of the applied chapters in this book.</p>
+<h3 id="step-1-model">Step 1: Model</h3>
+<p>Build a process model that represents the production system from reservoir to export. The model should include:</p>
+<ul>
+<li>Reservoir inflow (IPR curves or simple reservoir models with decline)</li>
+<li>Wells (VFP curves or multiphase pipe flow models)</li>
+<li>Subsea systems (flowlines with Beggs and Brill, risers, manifolds)</li>
+<li>Topside processing (separators, compressors, heat exchangers, valves)</li>
+<li>Export systems (pipelines, metering stations)</li>
+</ul>
+<p>The model is constructed in NeqSim using the <code>ProcessSystem</code> and <code>ProcessModel</code> framework. Each element is connected through streams, and the entire system is solved simultaneously.</p>
+<h3 id="step-2-calibrate">Step 2: Calibrate</h3>
+<p>Adjust the model parameters to match measured operating data. Key calibration targets include:</p>
+<ul>
+<li>Well productivity indices (matched to well test data)</li>
+<li>Separator efficiencies (matched to composition analyses of gas and liquid outlets)</li>
+<li>Compressor performance (matched to operating points on the manufacturer's performance map)</li>
+<li>Heat exchanger UA values (matched to measured duty and temperature approaches)</li>
+<li>Pipeline friction factors (matched to measured inlet-to-outlet pressure drops)</li>
+</ul>
+<p>Calibration transforms a <em>design model</em> into an <em>operations model</em> that accurately reflects the current state of the facility. The quality of the optimization is directly limited by the quality of the calibration.</p>
+<h3 id="step-3-optimize">Step 3: Optimize</h3>
+<p>Use the calibrated model to find the operating conditions that maximize the objective function while respecting all constraints. The optimization problem is:</p>
+<p>$$ \max_{u \in \mathcal{U}} \; J(u) = \sum_{k} \left( p_{\text{oil}} \, q_{\text{oil},k}(u) + p_{\text{gas}} \, q_{\text{gas},k}(u) \right) - C_{\text{fuel}}(u) - C_{\text{chem}}(u) $$</p>
+<p>where the production rates $q_{\text{oil},k}$ and $q_{\text{gas},k}$ depend on the operating conditions $u$ through the process model, and $C_{\text{fuel}}$ and $C_{\text{chem}}$ are the costs of fuel gas and chemicals.</p>
+<p>Decision variables $u$ typically include:</p>
+<ul>
+<li>Individual well choke openings or production rates</li>
+<li>Gas-lift injection rates per well</li>
+<li>Separator pressures (HP, MP, LP)</li>
+<li>Compressor speeds or set points</li>
+<li>Heat exchanger duties</li>
+<li>Routing decisions (which wells produce to which manifold/separator)</li>
+</ul>
+<p>Constraints include:</p>
+<ul>
+<li>Equipment capacities (compressor power, separator liquid handling, water treatment)</li>
+<li>Export specifications (heating value, water dew point, H$_2$S content)</li>
+<li>Safety limits (maximum pressures, minimum temperatures for material integrity)</li>
+<li>Flow assurance limits (minimum arrival temperature above hydrate formation)</li>
+<li>Environmental limits (flaring, CO$_2$ emissions, produced water discharge)</li>
+</ul>
+<p>The optimization can be performed using gradient-based methods (for smooth, well-behaved problems), evolutionary algorithms (for non-convex problems with discrete variables), or exhaustive search over a discretized decision space (practical when the number of decision variables is small). NeqSim provides the <code>ProductionOptimizer</code> and <code>CapacityConstrainedEquipment</code> classes to support these workflows, developed in Chapter 23.</p>
+<figure><img src="figures/optimization_workflow.png" alt="Schematic of the three-step production optimization workflow: Model → Calibrate → Optimize, with feedback from operating data."/>
+<figcaption>Schematic of the three-step production optimization workflow: Model → Calibrate → Optimize, with feedback from operating data.</figcaption>
+</figure>
+<p>---</p>
+<h2 id="1-7-book-organization-and-road-map">1.7 Book Organization and Road Map</h2>
+<p>This book is organized into nine parts containing 35 chapters that systematically develop every element of production optimization — from thermodynamic foundations through topside processing to advanced optimization methods and integrated case studies.</p>
+<h3 id="part-i-foundations-chapters-1-3">Part I: Foundations (Chapters 1–3)</h3>
+<p>Part I lays the groundwork for all subsequent chapters.</p>
+<ul>
+<li><strong>Chapter 1 — Introduction to Production Optimization</strong> (this chapter): Defines production optimization, describes the production value chain, introduces NeqSim, and provides the first working examples.</li>
+<li><strong>Chapter 2 — Thermodynamic Foundations for Process Simulation</strong>: Develops the thermodynamic framework underlying all process calculations — equations of state, mixing rules, fugacity, phase equilibrium, and property calculation methods. This chapter provides the theoretical basis for understanding <em>why</em> NeqSim produces the results it does.</li>
+<li><strong>Chapter 3 — Fluid Characterization and PVT Modeling</strong>: Covers the practical art of representing reservoir fluids in a process simulator — component selection, C$_7$+ characterization, lumping and delumping strategies, PVT experiments (constant mass expansion, constant volume depletion, differential liberation), and EOS parameter tuning to match laboratory data.</li>
+</ul>
+<h3 id="part-ii-reservoir-and-wells-chapters-4-6">Part II: Reservoir and Wells (Chapters 4–6)</h3>
+<p>Part II covers the upstream elements of the production chain.</p>
+<ul>
+<li><strong>Chapter 4 — Reservoir Engineering and Inflow Performance</strong>: Develops reservoir inflow models (Productivity Index, Vogel, Fetkovich), material balance methods, decline curve analysis, and the NeqSim <code>SimpleReservoir</code> class for integrated modeling.</li>
+<li><strong>Chapter 5 — Well Performance and Tubing Design</strong>: Covers vertical flow performance, nodal analysis, tubing sizing, wellhead choke modeling, and the coupling between IPR and VFP that determines the well operating point.</li>
+<li><strong>Chapter 6 — Well Networks, Artificial Lift, and Lift Optimization</strong>: Extends to multi-well systems, gas lift design and optimization, ESP selection, and network balancing with shared facility constraints.</li>
+</ul>
+<h3 id="part-iii-subsea-systems-and-transport-chapters-7-9">Part III: Subsea Systems and Transport (Chapters 7–9)</h3>
+<p>Part III addresses the transport of multiphase fluids from wellhead to processing facility.</p>
+<ul>
+<li><strong>Chapter 7 — Subsea Production Systems</strong>: Covers subsea trees, manifolds, flowlines, risers, subsea boosting and processing equipment, and tieback architecture design.</li>
+<li><strong>Chapter 8 — Flowlines, Risers, and Pipeline Hydraulics</strong>: Develops multiphase flow correlations (Beggs and Brill), pipeline sizing, thermal analysis, terrain-induced slugging, and the NeqSim <code>PipeBeggsAndBrills</code> class with elevation profiles.</li>
+<li><strong>Chapter 9 — Flow Assurance</strong>: Addresses hydrate prediction and inhibition (MEG, methanol), wax appearance temperature and deposition, asphaltene stability, CO$_2$/H$_2$S corrosion prediction, scale risk, and slugging mitigation.</li>
+</ul>
+<h3 id="part-iv-topside-processing-chapters-10-13">Part IV: Topside Processing (Chapters 10–13)</h3>
+<p>Part IV covers the core process engineering of the production facility.</p>
+<ul>
+<li><strong>Chapter 10 — Separation Technology and Equipment Design</strong>: Develops separator design (gravity separation theory, retention time, Souders-Brown K-factor), multi-stage separation optimization, three-phase separator modeling, and the NeqSim <code>Separator</code> and <code>ThreePhaseSeparator</code> classes.</li>
+<li><strong>Chapter 11 — Oil Processing and Stabilization</strong>: Covers crude oil dehydration, electrostatic coalescers, desalting, stabilization columns, vapor pressure control, and oil export preparation.</li>
+<li><strong>Chapter 12 — Gas Processing and Conditioning</strong>: Addresses gas dehydration (TEG absorbers), hydrocarbon dew point control (JT, turbo-expander, mechanical refrigeration), acid gas removal (amine absorption), and NGL recovery (turbo-expander, refrigeration).</li>
+<li><strong>Chapter 13 — Produced Water Treatment</strong>: Covers oil-water separation mechanisms, hydrocyclones, flotation units, water injection quality, and the increasing importance of water treatment capacity as a production constraint.</li>
+</ul>
+<h3 id="part-v-compression-heat-transfer-and-power-chapters-14-18">Part V: Compression, Heat Transfer, and Power (Chapters 14–18)</h3>
+<p>Part V covers the energy-intensive equipment that often constrains production.</p>
+<ul>
+<li><strong>Chapter 14 — Gas Compression Systems</strong>: Develops compression thermodynamics, staging optimization, intercooling, anti-surge control, and the NeqSim compressor model with polytropic efficiency.</li>
+<li><strong>Chapter 15 — Compressor Characteristics and Performance Curves</strong>: Covers centrifugal compressor maps (head vs. flow at various speeds), surge line, stonewall, reciprocating compressor modeling, and operating point prediction.</li>
+<li><strong>Chapter 16 — Heat Exchangers and Thermal Design</strong>: Addresses shell-and-tube and plate heat exchanger design, LMTD and effectiveness-NTU methods, fouling factors, and the NeqSim <code>HeatExchanger</code> class.</li>
+<li><strong>Chapter 17 — Valves, Flow Control, and Pressure Relief</strong>: Covers control valve sizing (ISA/IEC Cv method), choke flow modeling (critical and subcritical), and relief valve sizing per API 520/521.</li>
+<li><strong>Chapter 18 — Power Production and Energy Sources</strong>: Addresses gas turbines, waste heat recovery, combined cycle systems, fuel gas system management, and platform power optimization.</li>
+</ul>
+<h3 id="part-vi-export-capacity-and-debottlenecking-chapters-19-21">Part VI: Export, Capacity, and Debottlenecking (Chapters 19–21)</h3>
+<p>Part VI addresses the constraints that limit total production.</p>
+<ul>
+<li><strong>Chapter 19 — Export Systems and Fiscal Metering</strong>: Covers oil and gas export systems, pipeline hydraulics for long-distance transport, fiscal metering technology, and gas quality specification tracking.</li>
+<li><strong>Chapter 20 — Capacity Checks and Equipment Utilization</strong>: Develops methods for rating each piece of equipment against its design capacity, calculating utilization factors, and identifying the binding constraint (the &quot;bottleneck&quot;) on total production.</li>
+<li><strong>Chapter 21 — Systematic Debottlenecking and Utilization Analysis</strong>: Presents a structured approach to identifying and relieving bottlenecks — evaluating options (re-wheeling compressors, adding separation stages, upgrading pumps) and quantifying their production and economic impact.</li>
+</ul>
+<h3 id="part-vii-production-optimization-chapters-22-28">Part VII: Production Optimization (Chapters 22–28)</h3>
+<p>Part VII is the heart of the book, applying all preceding theory to optimization.</p>
+<ul>
+<li><strong>Chapter 22 — Production Optimization Theory and Methods</strong>: Develops the mathematical foundations — objective functions, constraints, gradient-based methods (sequential quadratic programming), derivative-free methods (Nelder-Mead, pattern search), and evolutionary algorithms (genetic algorithms, particle swarm).</li>
+<li><strong>Chapter 23 — The NeqSim Optimization Framework</strong>: Introduces NeqSim's <code>ProductionOptimizer</code>, <code>CapacityConstrainedEquipment</code>, and the optimization workflow classes that connect process models to optimization solvers.</li>
+<li><strong>Chapter 24 — Production Optimization Implementation</strong>: Provides complete worked examples of production optimization for realistic field scenarios — separator pressure optimization, gas-lift allocation, compression scheduling.</li>
+<li><strong>Chapter 25 — Real-Time Utilization Monitoring</strong>: Covers continuous monitoring of equipment utilization against capacity, automated constraint identification, and advisory systems for operations engineers.</li>
+<li><strong>Chapter 26 — Well and Network Optimization</strong>: Addresses multi-well rate allocation (the &quot;well allocation problem&quot;), gas-lift optimization across multiple wells sharing a common gas supply, and network balancing with looped systems.</li>
+<li><strong>Chapter 27 — Multi-Scenario and Stochastic Optimization</strong>: Extends optimization to uncertain parameters — uncertain reservoir performance, uncertain commodity prices, and uncertain equipment availability — using Monte Carlo methods and robust optimization.</li>
+<li><strong>Chapter 28 — Field Development Optimization and VFP Tables</strong>: Connects facility optimization to field development decisions, including VFP table generation for reservoir simulators, integrated production forecasting, and investment timing optimization.</li>
+</ul>
+<h3 id="part-viii-dynamic-operations-and-advanced-methods-chapters-29-32">Part VIII: Dynamic Operations and Advanced Methods (Chapters 29–32)</h3>
+<p>Part VIII covers time-dependent behavior and advanced computational methods.</p>
+<ul>
+<li><strong>Chapter 29 — Dynamic Simulation and Process Control</strong>: Develops transient simulation methodology, PID controller design and tuning, anti-surge control, level and pressure control, and dynamic optimization for startup, shutdown, and load change.</li>
+<li><strong>Chapter 30 — Digital Twins, Automation, and AI-Assisted Optimization</strong>: Covers the integration of NeqSim models with real-time data streams, the Automation API for digital twin applications, and machine learning augmentation of physics-based models.</li>
+<li><strong>Chapter 31 — Numerical Methods and Solver Convergence</strong>: Addresses the mathematical algorithms underlying flash calculations (successive substitution, Newton-Raphson, inside-out), process convergence (Wegstein, Broyden, direct substitution), and optimization solvers.</li>
+<li><strong>Chapter 32 — Advanced Optimization Methods</strong>: Covers surrogate-assisted optimization, multi-objective optimization (Pareto-optimal solutions), stochastic programming, and model predictive control (MPC) for production systems.</li>
+</ul>
+<h3 id="part-ix-applications-and-outlook-chapters-33-35">Part IX: Applications and Outlook (Chapters 33–35)</h3>
+<p>Part IX brings everything together with integrated applications.</p>
+<ul>
+<li><strong>Chapter 33 — Onshore Gas Processing Plants</strong>: Applies the full methodology to an onshore gas plant with NGL recovery, fractionation, acid gas treatment, and product optimization.</li>
+<li><strong>Chapter 34 — Integrated Case Studies</strong>: Presents three complete case studies — a North Sea gas-condensate field with declining reservoir pressure, a deepwater oil field with gas lift and subsea boosting, and a mature field approaching tail production with high watercut.</li>
+<li><strong>Chapter 35 — Future Directions in Production Optimization</strong>: Discusses emerging trends — CCS integration (using platforms for CO$_2$ injection), hydrogen production and blending, electrification of offshore installations, autonomous operations, and the expanding role of AI and digital twins.</li>
+</ul>
+<h3 id="how-to-use-this-book">How to Use This Book</h3>
+<p><strong>For students</strong> taking a production engineering or process simulation course: Read Part I (Chapters 1–3) sequentially to build the foundation, then select chapters from Parts II–V according to the course syllabus. The exercises at the end of each chapter provide graded problems from conceptual to computational. The companion Jupyter notebooks can be run on any laptop with Python installed.</p>
+<p><strong>For practicing engineers</strong> working on production optimization: Start with this chapter for orientation, then jump directly to the chapters relevant to your current challenge — separator optimization (Chapter 10), compressor debottlenecking (Chapter 21), gas-lift allocation (Chapter 26), or digital twin implementation (Chapter 30). Each chapter is designed to be largely self-contained, with explicit cross-references to prerequisite material.</p>
+<p><strong>For researchers</strong> exploring new optimization methods or thermodynamic models: Part VII provides the optimization framework, Part VIII covers advanced methods, and the companion Jupyter notebooks provide a starting point for computational experiments. The open-source nature of NeqSim means you can extend the models, implement new algorithms, and contribute improvements back to the community.</p>
+<p>---</p>
+<h2 id="1-8-summary">1.8 Summary</h2>
+<p>This chapter has established the foundations for the remainder of the book. The key points are:</p>
+<ol>
+<li><strong>Production optimization</strong> is the discipline of maximizing economic value from hydrocarbon production while respecting safety, environmental, and equipment constraints. It is formally a constrained optimization problem operating on both daily and life-of-field time scales.</li>
+</ol>
+<ol>
+<li><strong>The production system</strong> is an integrated chain — reservoir, wells, subsea, topside, compression, power, export — where every element constrains the others. The coupling through pressure, flow, and composition means that system-level optimization is essential; local equipment optima do not guarantee a global system optimum.</li>
+</ol>
+<ol>
+<li><strong>Process simulation</strong> is the computational backbone of optimization. It solves mass, energy, and momentum balances coupled with thermodynamic equilibrium (flash calculations) to predict system behavior. Both steady-state and dynamic simulation are needed for comprehensive optimization.</li>
+</ol>
+<ol>
+<li><strong>NeqSim</strong> is an open-source Java/Python library for rigorous thermodynamic and process simulation. Its key strengths — multiple equations of state, complete equipment library, Python/Jupyter integration, and automation API — make it well-suited for production optimization workflows.</li>
+</ol>
+<ol>
+<li><strong>The optimization workflow</strong> is: Model → Calibrate → Optimize. Build a process model, calibrate it against measured data, then search for the operating conditions that maximize value within constraints.</li>
+</ol>
+<ol>
+<li><strong>This book</strong> develops every element of the production chain systematically across nine parts — from thermodynamic foundations (Part I) through reservoir and wells (Part II), subsea transport (Part III), topside processing (Part IV), compression and power (Part V), capacity and debottlenecking (Part VI), optimization methods (Part VII), dynamic operations (Part VIII), and integrated applications (Part IX) — with 35 chapters, companion Jupyter notebooks, and exercises.</li>
+</ol>
+<p>---</p>
+<h2 id="exercises">Exercises</h2>
+<ol>
+<li><strong>Exercise 1.1 — First simulation.</strong> Install NeqSim and run the two-stage separation example from Section 1.5.4. Record the gas and oil production rates. Then change the HP separator pressure from 80 bara to 40 bara and re-run. How do the gas and oil rates change? Explain the physical reason for the change, referencing the flash calculation and the effect of pressure on vapor-liquid equilibrium.</li>
+</ol>
+<ol>
+<li><strong>Exercise 1.2 — Three-stage separation.</strong> Extend the two-stage separation model by adding a third (LP) separator at 5 bara downstream of the MP separator liquid outlet. Calculate the total gas production from all three stages. How does the total gas production compare to the two-stage case? Plot the gas production from each stage as a bar chart using matplotlib.</li>
+</ol>
+<ol>
+<li><strong>Exercise 1.3 — Bubble point calculation.</strong> For the fluid composition in Section 1.5.3, calculate the bubble point pressure at 80°C using NeqSim's <code>ThermodynamicOperations</code> class with <code>bubblePointPressureFlash()</code>. What fraction of the feed is gas at the HP separator conditions (60 bara, 80°C)? At what pressure does the fluid become entirely liquid (single-phase)?</li>
+</ol>
+<ol>
+<li><strong>Exercise 1.4 — Back-pressure sensitivity.</strong> Using the two-stage separation model from Section 1.5.4, vary the HP separator pressure from 20 bara to 100 bara in steps of 10 bara. For each case, record the total gas production from both stages and the oil density from the MP separator. Plot both quantities against separator pressure. At what HP separator pressure is total gas production maximized? Why does increasing the pressure above this point reduce gas production?</li>
+</ol>
+<ol>
+<li><strong>Exercise 1.5 — System coupling.</strong> Consider a system where reducing the HP separator pressure from 60 to 40 bara would increase well production by 10% (due to lower back-pressure). However, the lower separator pressure means the gas must be compressed from 40 bara to 200 bara instead of from 60 bara to 200 bara. Using the ideal compression power formula from Section 1.2.5, calculate the ratio of compression power at 40 bara suction vs. 60 bara suction, assuming $\gamma = 1.3$, $Z = 0.9$, $T_1 = 313$ K, $\eta_p = 0.80$, and 3 stages. Is the revenue gain from 10% increased production (at \$60/bbl, 100,000 bbl/d base rate) likely to exceed the additional compression cost (at \$0.05/kWh fuel cost)?</li>
+</ol>
+<ol>
+<li><strong>Exercise 1.6 — Industry examples.</strong> Research and describe three published case studies where production optimization delivered measurable value (use SPE papers, OTC papers, or company reports). For each case, identify: (a) the optimization objective, (b) the key decision variables, (c) the binding constraints, and (d) the reported economic improvement.</li>
+</ol>
+<ol>
+<li><strong>Exercise 1.7 — Automation API exploration.</strong> Using the NeqSim Automation API (<code>process.getAutomation()</code>), list all the variables available on the HP Separator in the example process from Section 1.5.4. Identify which variables are inputs (writable) and which are outputs (read-only). Change one input variable, re-run the process, and report the effect on at least two output variables.</li>
+</ol>
+<ol>
+<li><strong>Exercise 1.8 — Optimization formulation.</strong> Formulate the HP separator pressure optimization from Exercise 1.4 as a formal constrained optimization problem. Define: (a) the decision variable $u$, (b) the objective function $J(u) = R_{\text{oil}}(u) + R_{\text{gas}}(u) - C_{\text{comp}}(u)$ where $R$ is revenue and $C$ is compression cost, and (c) at least three inequality constraints (one equipment capacity, one quality specification, one safety limit). Write the mathematical statement using the notation from Section 1.1.1.</li>
+</ol>
+<p>---</p>
+<ol>
+<li>Beggs, H. D. (2003). <em>Production Optimization Using Nodal Analysis</em>, 2nd edition. OGCI Publications.</li>
+<li>Golan, M. and Whitson, C. H. (1991). <em>Well Performance</em>, 2nd edition. Prentice Hall.</li>
+<li>Economides, M. J., Hill, A. D., Ehlig-Economides, C., and Zhu, D. (2013). <em>Petroleum Production Systems</em>, 2nd edition. Prentice Hall.</li>
+<li>Svalheim, S. and King, D. C. (2003). Life of Field Energy Performance. SPE 83993, presented at the SPE Offshore Europe Conference, Aberdeen, September 2–5.</li>
+<li>Bieker, H. P., Slupphaug, O., and Johansen, T. A. (2007). Real-Time Production Optimization of Oil and Gas Production Systems: A Technology Survey. <em>SPE Production &amp; Operations</em>, 22(4), 382–391.</li>
+<li>Codas, A., Campos, S., Misener, R., Camponogara, E., and Experiment, M. (2012). Integrated Production Optimization of Oil Fields with Pressure and Routing Constraints. <em>Computers &amp; Chemical Engineering</em>, 46, 1–17.</li>
+<li>Gunnerud, V. and Foss, B. (2010). Oil Production Optimization — A Piecewise Linear Model, Solved with Two Decomposition Strategies. <em>Computers &amp; Chemical Engineering</em>, 34(11), 1803–1812.</li>
+<li>Soave, G. (1972). Equilibrium Constants from a Modified Redlich-Kwong Equation of State. <em>Chemical Engineering Science</em>, 27(6), 1197–1203.</li>
+<li>Peng, D. Y. and Robinson, D. B. (1976). A New Two-Constant Equation of State. <em>Industrial &amp; Engineering Chemistry Fundamentals</em>, 15(1), 59–64.</li>
+<li>Beggs, H. D. and Brill, J. P. (1973). A Study of Two-Phase Flow in Inclined Pipes. <em>Journal of Petroleum Technology</em>, 25(5), 607–617.</li>
+<li>Arps, J. J. (1945). Analysis of Decline Curves. <em>Transactions of the AIME</em>, 160(1), 228–247.</li>
+<li>Vogel, J. V. (1968). Inflow Performance Relationships for Solution-Gas Drive Wells. <em>Journal of Petroleum Technology</em>, 20(1), 83–92.</li>
+<li>Rachford, H. H. and Rice, J. D. (1952). Procedure for Use of Electronic Digital Computers in Calculating Flash Vaporization Hydrocarbon Equilibrium. <em>Journal of Petroleum Technology</em>, 4(10), 19–20.</li>
+<li>Lohrenz, J., Bray, B. G., and Clark, C. R. (1964). Calculating Viscosities of Reservoir Fluids from Their Compositions. <em>Journal of Petroleum Technology</em>, 16(10), 1171–1176.</li>
+<li>Kontogeorgis, G. M. and Folas, G. K. (2010). <em>Thermodynamic Models for Industrial Applications: From Classical and Advanced Mixing Rules to Association Theories</em>. Wiley.</li>
+</ol>
+<h1 id="introduction-to-production-optimization">Introduction to Production Optimization</h1>
+<h2 id="learning-objectives-2">Learning Objectives</h2>
+<p>After reading this chapter, the reader will be able to:</p>
+<ol>
+<li>Define production optimization and explain its role in the oil and gas value chain</li>
+<li>Describe the major components of a production system from reservoir to market</li>
+<li>Explain the economic drivers for production optimization</li>
+<li>Understand the role of process simulation in optimization workflows</li>
+<li>Set up NeqSim and run a first production system simulation</li>
+</ol>
+<h2 id="1-1-what-is-production-optimization-2">1.1 What Is Production Optimization?</h2>
+<p>Production optimization is the systematic process of maximizing the economic value extracted from a hydrocarbon reservoir while respecting safety, environmental, and equipment constraints. It encompasses every decision that affects the rate, efficiency, and quality of production — from reservoir management and well operations to topside process control and export specification compliance.</p>
+<p>In its simplest form, production optimization answers a daily question: <em>given the current state of the reservoir, wells, and facilities, what operating set points maximize today's value?</em> In its most comprehensive form, it is a life-of-field discipline that integrates reservoir simulation, well modeling, process simulation, and economic analysis to guide investment decisions and operating strategies over decades.</p>
+<h3 id="1-1-1-the-production-system-as-an-integrated-chain">1.1.1 The Production System as an Integrated Chain</h3>
+<p>A production system is not a collection of independent equipment items — it is an integrated chain where every element constrains and is constrained by the others. The reservoir delivers fluid at a rate that depends on pressure and the wellbore flowing pressure. The wellbore flowing pressure depends on the tubing, flowline, riser, and topside back-pressure. The topside back-pressure depends on the separator pressures, compressor suction conditions, and export pipeline pressure. Changing any one element ripples through the entire system.</p>
+<p>This integrated nature is what makes production optimization both challenging and rewarding. A local optimum — for example, running a compressor at maximum speed — may not be a global optimum if it increases back-pressure on the wells and reduces total field production.</p>
+<figure><img src="figures/production_system_schematic.png" alt="Schematic of a complete production system from reservoir to export"/>
+<figcaption>Schematic of a complete production system from reservoir to export</figcaption>
+</figure>
+<h3 id="1-1-2-the-value-of-optimization">1.1.2 The Value of Optimization</h3>
+<p>The value of production optimization is significant. Typical improvements from systematic optimization include:</p>
+<table>
+<thead><tr>
+<th>Improvement Area</th>
+<th>Typical Gain</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Increased production rate</td>
+<td>2–5% through reduced back-pressure</td>
+</tr>
+<tr>
+<td>Improved recovery factor</td>
+<td>1–3% over field life</td>
+</tr>
+<tr>
+<td>Reduced energy consumption</td>
+<td>5–15% through compressor optimization</td>
+</tr>
+<tr>
+<td>Extended equipment life</td>
+<td>Reduced fouling, vibration, surge</td>
+</tr>
+<tr>
+<td>Fewer unplanned shutdowns</td>
+<td>Better flow assurance management</td>
+</tr>
+<tr>
+<td>Export specification compliance</td>
+<td>Reduced off-spec events</td>
+</tr>
+</tbody></table>
+<p>For a field producing 100,000 boe/d, even a 2% improvement in production rate at \$60/bbl translates to over \$40 million per year in additional revenue.</p>
+<h2 id="1-2-the-production-value-chain-2">1.2 The Production Value Chain</h2>
+<h3 id="1-2-1-reservoir-2">1.2.1 Reservoir</h3>
+<p>The reservoir is the source of all production. Key properties include:</p>
+<ul>
+<li><strong>Reservoir pressure</strong> — the driving force for production, declining over time</li>
+<li><strong>Reservoir temperature</strong> — affects fluid properties and phase behavior</li>
+<li><strong>Fluid composition</strong> — determines the products (oil, gas, condensate, water) and processing requirements</li>
+<li><strong>Permeability and porosity</strong> — control the rate at which fluids flow to the wellbore</li>
+</ul>
+<p>The reservoir imposes the ultimate constraint on production: once the pressure is depleted and the mobile hydrocarbons are swept, production ends regardless of the facility capacity.</p>
+<h3 id="1-2-2-wells-2">1.2.2 Wells</h3>
+<p>Wells connect the reservoir to the surface. Their design and performance directly affect production rate:</p>
+<ul>
+<li><strong>Inflow Performance Relationship (IPR)</strong> — the rate at which fluid flows from the reservoir into the wellbore as a function of bottomhole pressure</li>
+<li><strong>Vertical Flow Performance (VFP)</strong> — the pressure loss in the tubing from bottomhole to wellhead</li>
+<li><strong>Artificial lift</strong> — gas lift, ESPs, or rod pumps to augment natural flow when reservoir pressure declines</li>
+<li><strong>Choke control</strong> — wellhead chokes regulate production rate and protect downstream equipment</li>
+</ul>
+<h3 id="1-2-3-subsea-production-systems-2">1.2.3 Subsea Production Systems</h3>
+<p>In offshore fields, the subsea system is often the link between wells and surface facilities:</p>
+<ul>
+<li><strong>Subsea trees (Christmas trees)</strong> — wellhead valve assemblies on the seabed</li>
+<li><strong>Manifolds</strong> — collect production from multiple wells</li>
+<li><strong>Flowlines</strong> — transport multiphase flow from manifold to riser base</li>
+<li><strong>Risers</strong> — carry production from seabed to the surface facility</li>
+<li><strong>Subsea boosting and processing</strong> — pumps, compressors, and separators on the seabed</li>
+</ul>
+<h3 id="1-2-4-topside-processing-facilities-2">1.2.4 Topside Processing Facilities</h3>
+<p>The topside facility (platform, FPSO, or onshore plant) separates, treats, and conditions the produced fluids:</p>
+<ul>
+<li><strong>Separation</strong> — HP, MP, LP separators to separate gas, oil, and water</li>
+<li><strong>Oil processing</strong> — dewatering, desalting, stabilization</li>
+<li><strong>Gas processing</strong> — dehydration, dew point control, NGL recovery, CO$_2$ removal</li>
+<li><strong>Gas compression</strong> — recompression, export compression, gas lift compression, injection compression</li>
+<li><strong>Produced water treatment</strong> — oil removal, chemical treatment, discharge or reinjection</li>
+<li><strong>Utilities</strong> — power generation, heat medium, flare system</li>
+</ul>
+<h3 id="1-2-5-export-and-market">1.2.5 Export and Market</h3>
+<p>The final stage delivers products to market:</p>
+<ul>
+<li><strong>Oil export</strong> — pipeline or shuttle tanker offloading</li>
+<li><strong>Gas export</strong> — pipeline to onshore terminal or LNG plant</li>
+<li><strong>Fiscal metering</strong> — custody transfer measurement per ISO and AGA standards</li>
+<li><strong>Quality specification compliance</strong> — heating value, Wobbe index, water content, H$_2$S content</li>
+</ul>
+<h2 id="1-3-the-role-of-process-simulation-2">1.3 The Role of Process Simulation</h2>
+<p>Process simulation is the computational backbone of production optimization. A calibrated process model predicts how the production system responds to changes in operating conditions — flow rates, pressures, temperatures, compositions — without the cost and risk of physical experimentation.</p>
+<h3 id="1-3-1-steady-state-vs-dynamic-simulation">1.3.1 Steady-State vs. Dynamic Simulation</h3>
+<p><strong>Steady-state simulation</strong> calculates the equilibrium operating point of a process given fixed inputs. It is used for:</p>
+<ul>
+<li>Capacity checks and equipment rating</li>
+<li>Design verification</li>
+<li>&quot;What-if&quot; scenarios (what happens if we increase well rates?)</li>
+<li>Optimization (find the best operating point)</li>
+</ul>
+<p><strong>Dynamic simulation</strong> tracks how the process evolves over time, including startup, shutdown, and transient events. It is used for:</p>
+<ul>
+<li>Control system design and tuning</li>
+<li>Slug flow impact assessment</li>
+<li>Emergency depressurization studies</li>
+<li>Compressor anti-surge system verification</li>
+</ul>
+<p>NeqSim supports both steady-state and dynamic simulation through its <code>ProcessSystem</code> framework.</p>
+<h3 id="1-3-2-why-neqsim">1.3.2 Why NeqSim?</h3>
+<p>NeqSim is an open-source Java library for thermodynamic and process simulation with several characteristics that make it well-suited for production optimization:</p>
+<ul>
+<li><strong>Rigorous thermodynamics</strong> — multiple equations of state (SRK, PR, CPA, Electrolyte CPA) ensure accurate fluid property predictions</li>
+<li><strong>Complete process equipment library</strong> — separators, compressors, heat exchangers, valves, pipes, columns, and more</li>
+<li><strong>Multiphase pipe flow</strong> — Beggs and Brill correlation for pipelines and risers</li>
+<li><strong>Dynamic simulation</strong> — transient capability with PID controllers and measurement devices</li>
+<li><strong>Python interface</strong> — access the full Java engine from Python/Jupyter notebooks</li>
+<li><strong>Equipment rating</strong> — capacity checks, compressor curves, valve Cv calculations</li>
+<li><strong>Open source</strong> — inspect, modify, and extend the source code</li>
+</ul>
+<h2 id="1-4-getting-started-with-neqsim">1.4 Getting Started with NeqSim</h2>
+<h3 id="1-4-1-installation">1.4.1 Installation</h3>
+<p>Install the NeqSim Python package:</p>
+<pre><code class="language-bash">
+pip install neqsim
+</code></pre>
+<h3 id="1-4-2-a-first-example-simple-production-system">1.4.2 A First Example: Simple Production System</h3>
+<p>The following example creates a minimal production system — a well stream flowing into a separator — and demonstrates the NeqSim workflow:</p>
+<pre><code class="language-python">
+from neqsim import jneqsim
+
+# 1. Define the reservoir fluid
+fluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 80.0, 150.0)
+fluid.addComponent(&quot;nitrogen&quot;, 0.5)
+fluid.addComponent(&quot;CO2&quot;, 2.0)
+fluid.addComponent(&quot;methane&quot;, 70.0)
+fluid.addComponent(&quot;ethane&quot;, 8.0)
+fluid.addComponent(&quot;propane&quot;, 5.0)
+fluid.addComponent(&quot;n-butane&quot;, 3.0)
+fluid.addComponent(&quot;n-pentane&quot;, 2.0)
+fluid.addComponent(&quot;n-hexane&quot;, 1.5)
+fluid.addComponent(&quot;n-heptane&quot;, 3.0)
+fluid.addComponent(&quot;n-octane&quot;, 2.5)
+fluid.addComponent(&quot;n-nonane&quot;, 1.5)
+fluid.addComponent(&quot;water&quot;, 1.0)
+fluid.setMixingRule(&quot;classic&quot;)
+fluid.setMultiPhaseCheck(True)
+
+# 2. Create a feed stream
+Stream = jneqsim.process.equipment.stream.Stream
+feed = Stream(&quot;Well Stream&quot;, fluid)
+feed.setFlowRate(50000.0, &quot;kg/hr&quot;)
+feed.setTemperature(80.0, &quot;C&quot;)
+feed.setPressure(80.0, &quot;bara&quot;)
+
+# 3. Create a separator
+Separator = jneqsim.process.equipment.separator.Separator
+hp_sep = Separator(&quot;HP Separator&quot;, feed)
+
+# 4. Build and run the process
+ProcessSystem = jneqsim.process.processmodel.ProcessSystem
+process = ProcessSystem()
+process.add(feed)
+process.add(hp_sep)
+process.run()
+
+# 5. Read results
+gas_rate = hp_sep.getGasOutStream().getFlowRate(&quot;MSm3/day&quot;)
+oil_rate = hp_sep.getLiquidOutStream().getFlowRate(&quot;m3/hr&quot;)
+print(f&quot;Gas production: {gas_rate:.2f} MSm3/day&quot;)
+print(f&quot;Oil production: {oil_rate:.2f} m3/hr&quot;)
+</code></pre>
+<p>This simple example illustrates the core NeqSim workflow that will be used throughout this book:</p>
+<ol>
+<li><strong>Define the fluid</strong> using an appropriate equation of state</li>
+<li><strong>Create equipment</strong> (streams, separators, compressors, etc.)</li>
+<li><strong>Build a process</strong> by adding equipment to a <code>ProcessSystem</code></li>
+<li><strong>Run the simulation</strong> and extract results</li>
+</ol>
+<h3 id="1-4-3-the-processsystem-architecture">1.4.3 The ProcessSystem Architecture</h3>
+<p>NeqSim organizes process simulations around the <code>ProcessSystem</code> class:</p>
+<ul>
+<li>Equipment is added in sequence using <code>process.add(equipment)</code></li>
+<li>Each equipment item has inlet and outlet streams</li>
+<li><code>process.run()</code> calculates the steady-state operating point</li>
+<li>Results are accessed through equipment and stream methods</li>
+</ul>
+<p>For large facilities with multiple process areas, NeqSim provides <code>ProcessModel</code> to compose multiple <code>ProcessSystem</code> objects:</p>
+<pre><code class="language-python">
+ProcessModel = jneqsim.process.processmodel.ProcessModel
+plant = ProcessModel()
+plant.add(&quot;Separation&quot;, separation_system)
+plant.add(&quot;Compression&quot;, compression_system)
+plant.add(&quot;Gas Processing&quot;, gas_processing_system)
+plant.run()
+</code></pre>
+<h2 id="1-5-book-overview-and-road-map">1.5 Book Overview and Road Map</h2>
+<p>The remainder of this book systematically develops every element of the production system — from reservoir to market — with the dual focus of understanding the underlying theory and learning how to model it in NeqSim.</p>
+<p>Each chapter follows a consistent pattern:</p>
+<ol>
+<li><strong>Theory and background</strong> — the physics and engineering of the topic</li>
+<li><strong>NeqSim implementation</strong> — how the concepts are modeled in NeqSim</li>
+<li><strong>Code examples</strong> — complete, runnable Python examples</li>
+<li><strong>Figures and illustrations</strong> — generated from Jupyter notebooks</li>
+<li><strong>Exercises</strong> — computational and conceptual problems</li>
+</ol>
+<p>The progressive development means that by the end of the book, the reader will be able to build a complete production optimization model — from reservoir inflow curves through subsea transport, topside processing, compression, and export — and use it for capacity analysis, bottleneck identification, and optimization.</p>
+<h2 id="1-6-summary">1.6 Summary</h2>
+<p>Key points from this chapter:</p>
+<ul>
+<li>Production optimization is the discipline of maximizing economic value from hydrocarbon production while respecting constraints</li>
+<li>A production system is an integrated chain — reservoir, wells, subsea, topside, export — where every element constrains the others</li>
+<li>Process simulation is the computational backbone of optimization, enabling &quot;what-if&quot; analysis and systematic optimization</li>
+<li>NeqSim provides rigorous thermodynamics, complete process equipment, and both steady-state and dynamic simulation from Python</li>
+<li>This book develops every element of the production chain with theory, NeqSim code, and practical examples</li>
+</ul>
+<h2 id="exercises-2">Exercises</h2>
+<ol>
+<li><strong>Exercise 1.1:</strong> Install NeqSim and run the simple production system example. Modify the separator pressure from 80 bara to 40 bara and observe how the gas and oil rates change. Explain the result.</li>
+</ol>
+<ol>
+<li><strong>Exercise 1.2:</strong> Add a second separator (LP separator at 5 bara) downstream of the HP separator liquid outlet. Calculate the total gas production from both separators.</li>
+</ol>
+<ol>
+<li><strong>Exercise 1.3:</strong> For the example fluid composition, calculate the bubble point pressure at 80°C. What fraction of the total production is gas vs. liquid at the HP separator conditions?</li>
+</ol>
+<ol>
+<li><strong>Exercise 1.4:</strong> Research and list five real-world examples where production optimization has delivered measurable value. For each, identify which element of the production chain was optimized.</li>
+</ol>
+<h2 id="figures">Figures</h2>
+<figure class="numbered-figure"><img src="figures/fig01_density_vs_pressure.png" alt="Figure 1.1: Fig01 Density Vs Pressure"/>
+<figcaption>Figure 1.1: Fig01 Density Vs Pressure</figcaption>
+</figure>
+<p><em>Figure 1.1: Fig01 Density Vs Pressure</em></p>
+<figure class="numbered-figure"><img src="figures/fig02_z_factor_vs_pressure.png" alt="Figure 1.2: Fig02 Z Factor Vs Pressure"/>
+<figcaption>Figure 1.2: Fig02 Z Factor Vs Pressure</figcaption>
+</figure>
+<p><em>Figure 1.2: Fig02 Z Factor Vs Pressure</em></p>
+<figure class="numbered-figure"><img src="figures/fig03_phase_envelope.png" alt="Figure 1.3: Fig03 Phase Envelope"/>
+<figcaption>Figure 1.3: Fig03 Phase Envelope</figcaption>
+</figure>
+<p><em>Figure 1.3: Fig03 Phase Envelope</em></p>
+<figure class="numbered-figure"><img src="figures/fig04_production_sensitivity.png" alt="Figure 1.4: Fig04 Production Sensitivity"/>
+<figcaption>Figure 1.4: Fig04 Production Sensitivity</figcaption>
+</figure>
+<p><em>Figure 1.4: Fig04 Production Sensitivity</em></p>
+</section>
+</main>
+</body>
+</html>

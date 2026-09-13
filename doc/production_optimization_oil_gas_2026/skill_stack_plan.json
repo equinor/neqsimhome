@@ -1,0 +1,908 @@
+{
+  "generated_at": "2026-09-12T22:45:23+00:00",
+  "book_dir": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026",
+  "summary": {
+    "chapters": 35,
+    "notebooks": 35,
+    "figures": 201,
+    "dimensions_ready": 4,
+    "dimensions_total": 9
+  },
+  "dimensions": [
+    {
+      "dimension": "figure_intelligence",
+      "skills": [
+        "technical_figure_understanding",
+        "figure-discussion",
+        "generate_publication_figures"
+      ],
+      "status": "needs-work",
+      "evidence": "194 figures have no explicit discussion marker nearby; 0 captions need review.",
+      "next_action": "Prioritize the top non-cover figures in figure_dossier.json for reviewed discussion blocks."
+    },
+    {
+      "dimension": "traceability",
+      "skills": [
+        "paperlab_scientific_traceability_audit",
+        "neqsim-professional-reporting",
+        "neqsim_in_writing",
+        "neqsim-notebook-patterns"
+      ],
+      "status": "ready",
+      "evidence": "Found 8 claim markers, 1 figure markers, 0 equation markers, and 35 notebooks.",
+      "next_action": "Add @neqsim:claim, @neqsim:figure, and @neqsim:eq markers for high-value numerical claims."
+    },
+    {
+      "dimension": "student_readability",
+      "skills": [
+        "paperlab_student_readability",
+        "paperlab-exam-alignment"
+      ],
+      "status": "ready",
+      "evidence": "Learning objectives in 35/35 chapters; summaries in 35/35; exercises in 35/35.",
+      "next_action": "Review chapters missing objectives, summaries, or exercises with paperlab_student_readability."
+    },
+    {
+      "dimension": "chapter_flow",
+      "skills": [
+        "paperlab_chapter_flow_editor"
+      ],
+      "status": "needs-work",
+      "evidence": "conciseness_audit.json has not been generated yet.",
+      "next_action": "Use the conciseness audit to review merge candidates and move audit metadata out of the reading path."
+    },
+    {
+      "dimension": "standards_mapping",
+      "skills": [
+        "neqsim-standards-lookup",
+        "neqsim-process-safety",
+        "neqsim-subsea-and-wells"
+      ],
+      "status": "needs-work",
+      "evidence": "standards_map.json has not been generated yet.",
+      "next_action": "Run book-standards-map and review chapter-level NORSOK/DNV/API/ISO mappings."
+    },
+    {
+      "dimension": "notebook_backed_claims",
+      "skills": [
+        "neqsim-notebook-patterns",
+        "neqsim-api-patterns",
+        "neqsim-regression-baselines"
+      ],
+      "status": "ready",
+      "evidence": "35 notebooks are available; 8 notebook-backed claim markers were found.",
+      "next_action": "Use claim markers for the most important notebook-derived figures and tables."
+    },
+    {
+      "dimension": "exam_alignment",
+      "skills": [
+        "paperlab-exam-alignment",
+        "technical_figure_understanding"
+      ],
+      "status": "needs-work",
+      "evidence": "exam_alignment.json has not been generated yet.",
+      "next_action": "Run book-exam-alignment and patch weakly covered exam topics in Chapter 26."
+    },
+    {
+      "dimension": "source_conversion",
+      "skills": [
+        "paperlab-source-pdf-to-html",
+        "neqsim-pdf-ocr",
+        "neqsim-technical-document-reading"
+      ],
+      "status": "needs-work",
+      "evidence": "source_pdf_html_plan.json has not been generated yet.",
+      "next_action": "Run book-source-pdf-html-plan for searchable source conversion and figure extraction."
+    },
+    {
+      "dimension": "typesetting_release",
+      "skills": [
+        "paperlab_book_typesetting_release"
+      ],
+      "status": "ready",
+      "evidence": "Rendered release outputs present: book.html, book.docx, book.pdf, book.odt.",
+      "next_action": "Render and inspect HTML, PDF, DOCX, and ODF before release."
+    }
+  ],
+  "chapter_profiles": [
+    {
+      "chapter": "ch01_introduction",
+      "chapter_number": 1,
+      "title": "Introduction to Production Optimization",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe",
+        "neqsim-capability-map",
+        "neqsim-professional-reporting",
+        "paperlab_chapter_flow_editor"
+      ],
+      "action": "Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility. Keep the case thread and capability claims consistent with the book's verified evidence.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "optimization-and-capacity",
+        "case-and-book-framing"
+      ],
+      "notebooks": 1,
+      "figures": 7,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch02_thermodynamic_foundations",
+      "chapter_number": 2,
+      "title": "Thermodynamic Foundations for Process Simulation",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-api-patterns",
+        "neqsim-eos-regression",
+        "neqsim-physics-explanations"
+      ],
+      "action": "Tie fluid-property results to equations, phase identification, units, and reference data.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "foundations"
+      ],
+      "notebooks": 1,
+      "figures": 7,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch03_fluid_characterization",
+      "chapter_number": 3,
+      "title": "Fluid Characterization and PVT Modeling",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-api-patterns",
+        "neqsim-eos-regression",
+        "neqsim-physics-explanations"
+      ],
+      "action": "Tie fluid-property results to equations, phase identification, units, and reference data.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "foundations"
+      ],
+      "notebooks": 1,
+      "figures": 7,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch04_reservoir_engineering",
+      "chapter_number": 4,
+      "title": "Reservoir Engineering and Inflow Performance",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-subsea-and-wells",
+        "neqsim-flow-assurance",
+        "neqsim-physics-explanations"
+      ],
+      "action": "Check well and transport boundaries, pressure direction, flow feasibility, and field assumptions.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "wells-and-transport"
+      ],
+      "notebooks": 1,
+      "figures": 9,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch05_well_performance",
+      "chapter_number": 5,
+      "title": "Well Performance and Tubing Design",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-subsea-and-wells",
+        "neqsim-flow-assurance",
+        "neqsim-physics-explanations"
+      ],
+      "action": "Check well and transport boundaries, pressure direction, flow feasibility, and field assumptions.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "wells-and-transport"
+      ],
+      "notebooks": 1,
+      "figures": 9,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch06_wells_artificial_lift",
+      "chapter_number": 6,
+      "title": "Well Networks, Artificial Lift, and Lift Optimization",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-subsea-and-wells",
+        "neqsim-flow-assurance",
+        "neqsim-physics-explanations",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe"
+      ],
+      "action": "Check well and transport boundaries, pressure direction, flow feasibility, and field assumptions. Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "wells-and-transport",
+        "optimization-and-capacity"
+      ],
+      "notebooks": 1,
+      "figures": 2,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch07_subsea_production_systems",
+      "chapter_number": 7,
+      "title": "Subsea Production Systems",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-subsea-and-wells",
+        "neqsim-flow-assurance",
+        "neqsim-physics-explanations"
+      ],
+      "action": "Check well and transport boundaries, pressure direction, flow feasibility, and field assumptions.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "wells-and-transport"
+      ],
+      "notebooks": 1,
+      "figures": 8,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch08_flowlines_and_risers",
+      "chapter_number": 8,
+      "title": "Flowlines, Risers, and Pipeline Hydraulics",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-subsea-and-wells",
+        "neqsim-flow-assurance",
+        "neqsim-physics-explanations"
+      ],
+      "action": "Check well and transport boundaries, pressure direction, flow feasibility, and field assumptions.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "wells-and-transport"
+      ],
+      "notebooks": 1,
+      "figures": 6,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch09_flow_assurance",
+      "chapter_number": 9,
+      "title": "Flow Assurance",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-flow-assurance",
+        "neqsim-controllability-operability"
+      ],
+      "action": "Separate thermodynamic boundaries from transient blockage and operability evidence.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "flow-assurance"
+      ],
+      "notebooks": 1,
+      "figures": 5,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch10_separation_technology",
+      "chapter_number": 10,
+      "title": "Separation Technology and Equipment Design",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-platform-modeling",
+        "neqsim-distillation-design",
+        "neqsim-electrolyte-systems"
+      ],
+      "action": "Verify process-train balances, product reference conditions, and the applicability of unit models.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "processing"
+      ],
+      "notebooks": 1,
+      "figures": 10,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch11_oil_processing",
+      "chapter_number": 11,
+      "title": "Oil Processing and Stabilization",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-platform-modeling",
+        "neqsim-distillation-design",
+        "neqsim-electrolyte-systems"
+      ],
+      "action": "Verify process-train balances, product reference conditions, and the applicability of unit models.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "processing"
+      ],
+      "notebooks": 1,
+      "figures": 6,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch12_gas_processing",
+      "chapter_number": 12,
+      "title": "Gas Processing and Conditioning",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-platform-modeling",
+        "neqsim-distillation-design",
+        "neqsim-electrolyte-systems"
+      ],
+      "action": "Verify process-train balances, product reference conditions, and the applicability of unit models.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "processing"
+      ],
+      "notebooks": 1,
+      "figures": 6,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch13_produced_water_treatment",
+      "chapter_number": 13,
+      "title": "Produced Water Treatment",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-platform-modeling",
+        "neqsim-distillation-design",
+        "neqsim-electrolyte-systems"
+      ],
+      "action": "Verify process-train balances, product reference conditions, and the applicability of unit models.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "processing"
+      ],
+      "notebooks": 1,
+      "figures": 3,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch14_gas_compression",
+      "chapter_number": 14,
+      "title": "Gas Compression Systems",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-power-generation",
+        "neqsim-utilities-specification",
+        "neqsim-equipment-cost-estimation"
+      ],
+      "action": "Check energy balances, equipment characteristic curves, physical dimensions, and operating limits.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "energy-and-equipment"
+      ],
+      "notebooks": 1,
+      "figures": 9,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch15_compressor_characteristics",
+      "chapter_number": 15,
+      "title": "Compressor Characteristics and Performance Curves",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-power-generation",
+        "neqsim-utilities-specification",
+        "neqsim-equipment-cost-estimation"
+      ],
+      "action": "Check energy balances, equipment characteristic curves, physical dimensions, and operating limits.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "energy-and-equipment"
+      ],
+      "notebooks": 1,
+      "figures": 6,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch16_heat_exchangers",
+      "chapter_number": 16,
+      "title": "Heat Exchangers and Thermal Design",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-power-generation",
+        "neqsim-utilities-specification",
+        "neqsim-equipment-cost-estimation"
+      ],
+      "action": "Check energy balances, equipment characteristic curves, physical dimensions, and operating limits.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "energy-and-equipment"
+      ],
+      "notebooks": 1,
+      "figures": 5,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch17_valves_and_flow_control",
+      "chapter_number": 17,
+      "title": "Valves, Flow Control, and Pressure Relief",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-power-generation",
+        "neqsim-utilities-specification",
+        "neqsim-equipment-cost-estimation",
+        "neqsim-controllability-operability",
+        "neqsim-api-patterns",
+        "neqsim-model-calibration-and-data-reconciliation"
+      ],
+      "action": "Check energy balances, equipment characteristic curves, physical dimensions, and operating limits. Verify control and automation contracts against process state and operational constraints.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "energy-and-equipment",
+        "operations-and-automation"
+      ],
+      "notebooks": 1,
+      "figures": 5,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch18_power_production",
+      "chapter_number": 18,
+      "title": "Power Production and Energy Sources",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-power-generation",
+        "neqsim-utilities-specification",
+        "neqsim-equipment-cost-estimation"
+      ],
+      "action": "Check energy balances, equipment characteristic curves, physical dimensions, and operating limits.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "energy-and-equipment"
+      ],
+      "notebooks": 1,
+      "figures": 7,
+      "claim_markers": 1,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch19_export_and_metering",
+      "chapter_number": 19,
+      "title": "Export Systems and Fiscal Metering",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-standards-lookup",
+        "neqsim-process-safety",
+        "neqsim-ccs-hydrogen",
+        "neqsim-technical-document-reading"
+      ],
+      "action": "Verify exact source editions, applicable clauses, and the scope of compliance claims. Declare composition and reference conditions for quality, transport, metering, and injection.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "standards-and-safety",
+        "gas-quality-and-ccs"
+      ],
+      "notebooks": 1,
+      "figures": 5,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch20_capacity_checks_and_utilization",
+      "chapter_number": 20,
+      "title": "Capacity Checks and Equipment Utilization",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe"
+      ],
+      "action": "Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "optimization-and-capacity"
+      ],
+      "notebooks": 1,
+      "figures": 7,
+      "claim_markers": 1,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch21_debottlenecking",
+      "chapter_number": 21,
+      "title": "Systematic Debottlenecking and Utilization Analysis",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe"
+      ],
+      "action": "Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "optimization-and-capacity"
+      ],
+      "notebooks": 1,
+      "figures": 4,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch22_production_optimization_theory",
+      "chapter_number": 22,
+      "title": "Production Optimization Theory and Methods",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe"
+      ],
+      "action": "Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "optimization-and-capacity"
+      ],
+      "notebooks": 1,
+      "figures": 7,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch23_neqsim_optimization_framework",
+      "chapter_number": 23,
+      "title": "The NeqSim Optimization Framework",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe"
+      ],
+      "action": "Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "optimization-and-capacity"
+      ],
+      "notebooks": 1,
+      "figures": 5,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch24_production_optimization",
+      "chapter_number": 24,
+      "title": "Production Optimization Implementation",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe"
+      ],
+      "action": "Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "optimization-and-capacity"
+      ],
+      "notebooks": 1,
+      "figures": 4,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch25_utilization_monitoring",
+      "chapter_number": 25,
+      "title": "Real-Time Utilization Monitoring",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe",
+        "neqsim-controllability-operability",
+        "neqsim-api-patterns",
+        "neqsim-model-calibration-and-data-reconciliation"
+      ],
+      "action": "Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility. Verify control and automation contracts against process state and operational constraints.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "optimization-and-capacity",
+        "operations-and-automation"
+      ],
+      "notebooks": 1,
+      "figures": 5,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch26_well_network_optimization",
+      "chapter_number": 26,
+      "title": "Well and Network Optimization",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-subsea-and-wells",
+        "neqsim-flow-assurance",
+        "neqsim-physics-explanations",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe"
+      ],
+      "action": "Check well and transport boundaries, pressure direction, flow feasibility, and field assumptions. Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "wells-and-transport",
+        "optimization-and-capacity"
+      ],
+      "notebooks": 1,
+      "figures": 4,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch27_multi_scenario_optimization",
+      "chapter_number": 27,
+      "title": "Multi-Scenario and Stochastic Optimization",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe",
+        "neqsim-model-calibration-and-data-reconciliation"
+      ],
+      "action": "Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility. Declare uncertain inputs, independent references, reconciliation residuals, and sensitivity scope.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "optimization-and-capacity",
+        "calibration-and-uncertainty"
+      ],
+      "notebooks": 1,
+      "figures": 4,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch28_field_development",
+      "chapter_number": 28,
+      "title": "Field Development Optimization and VFP Tables",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-subsea-and-wells",
+        "neqsim-flow-assurance",
+        "neqsim-physics-explanations",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe",
+        "neqsim-field-development",
+        "neqsim-field-economics",
+        "neqsim-equipment-cost-estimation"
+      ],
+      "action": "Check well and transport boundaries, pressure direction, flow feasibility, and field assumptions. Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility. Keep production, resource, cost, currency, timing, and uncertainty assumptions consistent.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "wells-and-transport",
+        "optimization-and-capacity",
+        "economics-and-development"
+      ],
+      "notebooks": 1,
+      "figures": 5,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch29_dynamic_simulation_and_control",
+      "chapter_number": 29,
+      "title": "Dynamic Simulation and Process Control",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-controllability-operability",
+        "neqsim-api-patterns",
+        "neqsim-model-calibration-and-data-reconciliation"
+      ],
+      "action": "Verify control and automation contracts against process state and operational constraints.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "operations-and-automation"
+      ],
+      "notebooks": 1,
+      "figures": 7,
+      "claim_markers": 2,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch30_digital_twins_and_automation",
+      "chapter_number": 30,
+      "title": "Digital Twins, Automation, and AI-Assisted Optimization",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe",
+        "neqsim-controllability-operability",
+        "neqsim-api-patterns",
+        "neqsim-model-calibration-and-data-reconciliation"
+      ],
+      "action": "Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility. Verify control and automation contracts against process state and operational constraints.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "optimization-and-capacity",
+        "operations-and-automation"
+      ],
+      "notebooks": 1,
+      "figures": 6,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch31_solver_methods",
+      "chapter_number": 31,
+      "title": "Numerical Methods and Solver Convergence",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-api-patterns",
+        "neqsim-physics-explanations",
+        "neqsim-optimization-and-doe"
+      ],
+      "action": "Distinguish numerical convergence from physical acceptance using residuals and analytical limits.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "numerical-methods"
+      ],
+      "notebooks": 1,
+      "figures": 4,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch32_advanced_topics",
+      "chapter_number": 32,
+      "title": "AI-Driven and Advanced Optimization Methods",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe",
+        "neqsim-controllability-operability",
+        "neqsim-api-patterns",
+        "neqsim-model-calibration-and-data-reconciliation"
+      ],
+      "action": "Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility. Verify control and automation contracts against process state and operational constraints.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "optimization-and-capacity",
+        "operations-and-automation"
+      ],
+      "notebooks": 1,
+      "figures": 3,
+      "claim_markers": 1,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch33_onshore_processing_plants",
+      "chapter_number": 33,
+      "title": "Onshore Gas Processing Plants",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-platform-modeling",
+        "neqsim-distillation-design",
+        "neqsim-electrolyte-systems"
+      ],
+      "action": "Verify process-train balances, product reference conditions, and the applicability of unit models.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "processing"
+      ],
+      "notebooks": 1,
+      "figures": 6,
+      "claim_markers": 3,
+      "figure_markers": 1
+    },
+    {
+      "chapter": "ch34_case_studies",
+      "chapter_number": 34,
+      "title": "Integrated Case Studies",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-capability-map",
+        "neqsim-professional-reporting",
+        "paperlab_chapter_flow_editor"
+      ],
+      "action": "Keep the case thread and capability claims consistent with the book's verified evidence.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "case-and-book-framing"
+      ],
+      "notebooks": 1,
+      "figures": 6,
+      "claim_markers": 0,
+      "figure_markers": 0
+    },
+    {
+      "chapter": "ch35_future_directions",
+      "chapter_number": 35,
+      "title": "Future Directions in Production Optimization",
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit",
+        "paperlab_student_readability",
+        "neqsim-production-optimization",
+        "neqsim-optimization-and-doe",
+        "neqsim-capability-map",
+        "neqsim-professional-reporting",
+        "paperlab_chapter_flow_editor"
+      ],
+      "action": "Replay candidate solutions and verify objective values, active constraints, bounds, and feasibility. Keep the case thread and capability claims consistent with the book's verified evidence.",
+      "routing_basis": "title",
+      "matched_topics": [
+        "optimization-and-capacity",
+        "case-and-book-framing"
+      ],
+      "notebooks": 1,
+      "figures": 2,
+      "claim_markers": 0,
+      "figure_markers": 0
+    }
+  ]
+}

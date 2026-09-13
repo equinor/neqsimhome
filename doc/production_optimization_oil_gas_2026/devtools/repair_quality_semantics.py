@@ -1,0 +1,50 @@
+from pathlib import Path
+import re
+BOOK=Path(__file__).resolve().parents[1]
+p=next((BOOK/'chapters').glob('ch12*/chapter.md'))
+t=p.read_text(encoding='utf-8')
+t=t.replace('absorber.addGasInStream(gas_feed)', 'absorber.setSourGasInStream(gas_feed)')
+t=t.replace('absorber.addSolventInStream(amine_feed)', 'absorber.setLeanAmineInStream(amine_feed)')
+t=t.replace('sweet_gas = absorber.getGasOutStream()', 'sweet_gas = absorber.getSweetGasOutStream()')
+t=t.replace('lean_amine.addComponent("MDEA", 50.0)', 'lean_amine.addComponent("MDEA", 50.0 / 0.11916)  # 50 kg on a molar basis')
+t=t.replace('lean_amine.addComponent("water", 50.0)', 'lean_amine.addComponent("water", 50.0 / 0.018015)  # 50 kg water')
+t=t.replace('absorber.setNumberOfStages(15)', 'absorber.setNumberOfStages(15)\nabsorber.setCO2RemovalEfficiency(0.90)  # explicitly assumed, not a rate-based prediction')
+t=t.replace('# Amine absorber column', '# Simplified amine removal model: calibrate removal and loading before design')
+pos=t.index('```python')
+t=t[:pos]+('The current `SimpleAmineAbsorber` is the appropriate simplified amine class; a TEG absorber is not an acid-gas removal model. The following example specifies the CO$_2$ removal efficiency as an assumption. Its outlet is a screening calculation, not a validated prediction of solvent kinetics or an assurance that the circulation rate meets the specification.\n\n')+t[pos:]
+p.write_text(t,encoding='utf-8')
+
+p=next((BOOK/'chapters').glob('ch11*/chapter.md'))
+t=p.read_text(encoding='utf-8')
+t=t.replace('The following example compares flash stabilization and column stabilization side-by-side on the same feed, demonstrating the superior liquid recovery of column stabilization:', 'The following example compares two operating schemes using the same feed composition. Their different pressures, temperatures, and duties give different product quality. The calculated column liquid rate is lower for these settings; recovery superiority cannot be inferred without matching the export vapor-pressure specification and accounting for energy.')
+t=t.replace('The RVP calculation requires mimicking the ASTM D323 test procedure by performing a flash at 37.8°C with a vapor-to-liquid volume ratio of 4:1:', 'A method-specific RVP estimate requires reproducing the applicable test conditions, including the vapor-to-liquid ratio and sample handling. A bubble-point flash at 37.8°C calculates equilibrium vapor pressure and is not ASTM D323 RVP. The following example reports only equilibrium vapor pressure:')
+start=t.index('def calculate_rvp(oil_stream):')
+end=t.index('# Example:',start)
+t=t[:start]+t[end:]
+t=t.replace('# Example: Calculate RVP and TVP for stabilized crude','# Example: Calculate equilibrium vapor pressure of stabilized crude')
+t=t.replace('calculate_rvp(stream)', 'calculate_tvp(stream, 37.8)')
+t=t.replace('RVP (at 37.8', 'TVP (at 37.8')
+t=t.replace('oil_sg = oil_density / 999.1  # SG relative to water at 15 C', '''# API gravity uses oil and water densities at 60 F, not the 40 C viscosity state.
+reference_oil = fluid.clone()
+reference_oil.setTemperature(288.7056)
+reference_oil.setPressure(1.01325)
+jneqsim.thermodynamicoperations.ThermodynamicOperations(reference_oil).TPflash()
+reference_oil.initProperties()
+oil_sg = reference_oil.getDensity("kg/m3") / 999.016''')
+t=t.replace('print("=== Stabilizer Results ===")','print(stabilizer.getConvergenceDiagnostics())\nprint("=== Stabilizer Results ===")')
+t=t.replace('print("=== Flash vs. Column Stabilization ===")','print(stabilizer.getConvergenceDiagnostics())\nprint("=== Flash vs. Column Stabilization ===")')
+p.write_text(t,encoding='utf-8')
+
+p=next((BOOK/'chapters').glob('ch03*/chapter.md'))
+t=p.read_text(encoding='utf-8')
+t=t.replace('oil_density = lp_sep.getLiquidOutStream().getFluid().getPhase("oil").getDensity("kg/m3")\nsg = oil_density / 999.1', '''# Reflash a product sample at the 60 F API reference temperature.
+sample = lp_sep.getLiquidOutStream().getFluid().clone()
+sample.setTemperature(288.7056)
+sample.setPressure(1.01325)
+jneqsim.thermodynamicoperations.ThermodynamicOperations(sample).TPflash()
+sample.initProperties()
+oil_density = sample.getPhase("oil").getDensity("kg/m3")
+sg = oil_density / 999.016''')
+t=t.replace('Stock tank oil rate:', 'LP separator liquid rate:')
+t=t.replace('Stock tank oil API gravity:', 'Flashed sample API gravity at 60 F:')
+p.write_text(t,encoding='utf-8')

@@ -1,0 +1,396 @@
+# Evidence Report
+
+Generated: 2026-09-12T23:15:54+00:00
+
+## Summary
+
+- Issues: 385
+- warning: 385
+
+## Issues
+
+- **warning / page_estimate**: Estimated 1348 pages exceeds publisher limit of 1000
+- **warning / figure_discussion**: ch01_introduction:111: no explicit nearby discussion marker detected: production_system_schematic.png
+- **warning / figure_discussion**: ch01_introduction:281: no explicit nearby discussion marker detected: topside_process_schematic.png
+- **warning / figure_reference**: ch01_introduction:281: nearby text does not reference Figure 1.2: topside_process_schematic.png
+- **warning / figure_discussion**: ch01_introduction:848: no explicit nearby discussion marker detected: optimization_workflow.png
+- **warning / figure_reference**: ch01_introduction:848: nearby text does not reference Figure 1.3: optimization_workflow.png
+- **warning / figure_discussion**: ch01_introduction:956: no explicit nearby discussion marker detected: fig01_density_vs_pressure.png
+- **warning / figure_reference**: ch01_introduction:956: nearby text does not reference Figure 1.4: fig01_density_vs_pressure.png
+- **warning / figure_discussion**: ch01_introduction:962: no explicit nearby discussion marker detected: fig02_z_factor_vs_pressure.png
+- **warning / figure_reference**: ch01_introduction:962: nearby text does not reference Figure 1.5: fig02_z_factor_vs_pressure.png
+- **warning / figure_discussion**: ch01_introduction:968: no explicit nearby discussion marker detected: fig03_phase_envelope.png
+- **warning / figure_reference**: ch01_introduction:968: nearby text does not reference Figure 1.6: fig03_phase_envelope.png
+- **warning / figure_discussion**: ch01_introduction:974: no explicit nearby discussion marker detected: fig04_production_sensitivity.png
+- **warning / figure_reference**: ch01_introduction:974: nearby text does not reference Figure 1.7: fig04_production_sensitivity.png
+- **warning / figure_discussion**: ch02_thermodynamic_foundations:698: no explicit nearby discussion marker detected: phase_envelope.png
+- **warning / figure_reference**: ch02_thermodynamic_foundations:698: nearby text does not reference Figure 2.1: phase_envelope.png
+- **warning / figure_discussion**: ch02_thermodynamic_foundations:1075: no explicit nearby discussion marker detected: eos_comparison.png
+- **warning / figure_reference**: ch02_thermodynamic_foundations:1075: nearby text does not reference Figure 2.2: eos_comparison.png
+- **warning / figure_discussion**: ch02_thermodynamic_foundations:1087: no explicit nearby discussion marker detected: fig01_density_srk_vs_pr.png
+- **warning / figure_reference**: ch02_thermodynamic_foundations:1087: nearby text does not reference Figure 2.3: fig01_density_srk_vs_pr.png
+- **warning / figure_discussion**: ch02_thermodynamic_foundations:1093: no explicit nearby discussion marker detected: fig02_cp_vs_temperature.png
+- **warning / figure_reference**: ch02_thermodynamic_foundations:1093: nearby text does not reference Figure 2.4: fig02_cp_vs_temperature.png
+- **warning / figure_discussion**: ch02_thermodynamic_foundations:1099: no explicit nearby discussion marker detected: fig03_enthalpy_vs_temperature.png
+- **warning / figure_reference**: ch02_thermodynamic_foundations:1099: nearby text does not reference Figure 2.5: fig03_enthalpy_vs_temperature.png
+- **warning / figure_discussion**: ch02_thermodynamic_foundations:1105: no explicit nearby discussion marker detected: fig04_viscosity_vs_pressure.png
+- **warning / figure_reference**: ch02_thermodynamic_foundations:1105: nearby text does not reference Figure 2.6: fig04_viscosity_vs_pressure.png
+- **warning / figure_discussion**: ch02_thermodynamic_foundations:1111: no explicit nearby discussion marker detected: fig05_jt_coefficient_vs_pressure.png
+- **warning / figure_reference**: ch02_thermodynamic_foundations:1111: nearby text does not reference Figure 2.7: fig05_jt_coefficient_vs_pressure.png
+- **warning / figure_discussion**: ch03_fluid_characterization:29: no explicit nearby discussion marker detected: fluid_characterization_workflow.png
+- **warning / figure_reference**: ch03_fluid_characterization:29: nearby text does not reference Figure 3.1: fluid_characterization_workflow.png
+- **warning / figure_discussion**: ch03_fluid_characterization:795: no explicit nearby discussion marker detected: gas_condensate_phase_envelope.png
+- **warning / figure_reference**: ch03_fluid_characterization:795: nearby text does not reference Figure 3.2: gas_condensate_phase_envelope.png
+- **warning / figure_discussion**: ch03_fluid_characterization:1083: no explicit nearby discussion marker detected: fig01_molecular_weight_distribution.png
+- **warning / figure_reference**: ch03_fluid_characterization:1083: nearby text does not reference Figure 3.3: fig01_molecular_weight_distribution.png
+- **warning / figure_discussion**: ch03_fluid_characterization:1089: no explicit nearby discussion marker detected: fig02_phase_envelope_condensate.png
+- **warning / figure_reference**: ch03_fluid_characterization:1089: nearby text does not reference Figure 3.4: fig02_phase_envelope_condensate.png
+- **warning / figure_discussion**: ch03_fluid_characterization:1095: no explicit nearby discussion marker detected: fig03_liquid_dropout_curve.png
+- **warning / figure_reference**: ch03_fluid_characterization:1095: nearby text does not reference Figure 3.5: fig03_liquid_dropout_curve.png
+- **warning / figure_discussion**: ch03_fluid_characterization:1101: no explicit nearby discussion marker detected: fig04_gor_vs_pressure.png
+- **warning / figure_reference**: ch03_fluid_characterization:1101: nearby text does not reference Figure 3.6: fig04_gor_vs_pressure.png
+- **warning / figure_discussion**: ch03_fluid_characterization:1107: no explicit nearby discussion marker detected: fig05_bo_vs_pressure.png
+- **warning / figure_reference**: ch03_fluid_characterization:1107: nearby text does not reference Figure 3.7: fig05_bo_vs_pressure.png
+- **warning / figure_discussion**: ch04_reservoir_engineering:194: no explicit nearby discussion marker detected: horner_plot.png
+- **warning / figure_reference**: ch04_reservoir_engineering:194: nearby text does not reference Figure 4.1: horner_plot.png
+- **warning / figure_discussion**: ch04_reservoir_engineering:272: no explicit nearby discussion marker detected: ipr_curves.png
+- **warning / figure_reference**: ch04_reservoir_engineering:272: nearby text does not reference Figure 4.2: ipr_curves.png
+- **warning / figure_discussion**: ch04_reservoir_engineering:498: no explicit nearby discussion marker detected: pz_plot.png
+- **warning / figure_reference**: ch04_reservoir_engineering:498: nearby text does not reference Figure 4.3: pz_plot.png
+- **warning / figure_discussion**: ch04_reservoir_engineering:735: no explicit nearby discussion marker detected: nodal_analysis.png
+- **warning / figure_reference**: ch04_reservoir_engineering:735: nearby text does not reference Figure 4.4: nodal_analysis.png
+- **warning / figure_discussion**: ch04_reservoir_engineering:891: no explicit nearby discussion marker detected: decline_curve.png
+- **warning / figure_reference**: ch04_reservoir_engineering:891: nearby text does not reference Figure 4.5: decline_curve.png
+- **warning / figure_discussion**: ch04_reservoir_engineering:1038: no explicit nearby discussion marker detected: ch04_fig01_ipr_curves.png
+- **warning / figure_reference**: ch04_reservoir_engineering:1038: nearby text does not reference Figure 4.6: ch04_fig01_ipr_curves.png
+- **warning / figure_discussion**: ch04_reservoir_engineering:1044: no explicit nearby discussion marker detected: ch04_fig02_gor_vs_pressure.png
+- **warning / figure_reference**: ch04_reservoir_engineering:1044: nearby text does not reference Figure 4.7: ch04_fig02_gor_vs_pressure.png
+- **warning / figure_discussion**: ch04_reservoir_engineering:1050: no explicit nearby discussion marker detected: ch04_fig03_density_vs_depth.png
+- **warning / figure_reference**: ch04_reservoir_engineering:1050: nearby text does not reference Figure 4.8: ch04_fig03_density_vs_depth.png
+- **warning / figure_discussion**: ch04_reservoir_engineering:1056: no explicit nearby discussion marker detected: ch04_fig04_rel_perm_curves.png
+- **warning / figure_reference**: ch04_reservoir_engineering:1056: nearby text does not reference Figure 4.9: ch04_fig04_rel_perm_curves.png
+- **warning / figure_discussion**: ch05_well_performance:82: no explicit nearby discussion marker detected: flow_patterns_vertical.png
+- **warning / figure_reference**: ch05_well_performance:82: nearby text does not reference Figure 5.1: flow_patterns_vertical.png
+- **warning / figure_discussion**: ch05_well_performance:457: no explicit nearby discussion marker detected: gas_lift_performance.png
+- **warning / figure_reference**: ch05_well_performance:457: nearby text does not reference Figure 5.2: gas_lift_performance.png
+- **warning / figure_discussion**: ch05_well_performance:820: no explicit nearby discussion marker detected: log_log_diagnostic.png
+- **warning / figure_reference**: ch05_well_performance:820: nearby text does not reference Figure 5.3: log_log_diagnostic.png
+- **warning / figure_discussion**: ch05_well_performance:1009: no explicit nearby discussion marker detected: vfp_curves.png
+- **warning / figure_reference**: ch05_well_performance:1009: nearby text does not reference Figure 5.4: vfp_curves.png
+- **warning / figure_discussion**: ch05_well_performance:1197: no explicit nearby discussion marker detected: nodal_analysis.png
+- **warning / figure_reference**: ch05_well_performance:1197: nearby text does not reference Figure 5.5: nodal_analysis.png
+- **warning / figure_discussion**: ch05_well_performance:1311: no explicit nearby discussion marker detected: ch05_fig01_vlp_curves.png
+- **warning / figure_reference**: ch05_well_performance:1311: nearby text does not reference Figure 5.6: ch05_fig01_vlp_curves.png
+- **warning / figure_discussion**: ch05_well_performance:1317: no explicit nearby discussion marker detected: ch05_fig02_operating_point.png
+- **warning / figure_reference**: ch05_well_performance:1317: nearby text does not reference Figure 5.7: ch05_fig02_operating_point.png
+- **warning / figure_discussion**: ch05_well_performance:1323: no explicit nearby discussion marker detected: ch05_fig03_gas_lift_optimization.png
+- **warning / figure_reference**: ch05_well_performance:1323: nearby text does not reference Figure 5.8: ch05_fig03_gas_lift_optimization.png
+- **warning / figure_discussion**: ch05_well_performance:1329: no explicit nearby discussion marker detected: ch05_fig04_watercut_effect.png
+- **warning / figure_reference**: ch05_well_performance:1329: nearby text does not reference Figure 5.9: ch05_fig04_watercut_effect.png
+- **warning / figure_discussion**: ch06_wells_artificial_lift:1504: no explicit nearby discussion marker detected: ch15w_choke_sensitivity.png
+- **warning / figure_reference**: ch06_wells_artificial_lift:1504: nearby text does not reference Figure 6.1: ch15w_choke_sensitivity.png
+- **warning / figure_discussion**: ch06_wells_artificial_lift:1510: no explicit nearby discussion marker detected: ch15w_well_network_comparison.png
+- **warning / figure_reference**: ch06_wells_artificial_lift:1510: nearby text does not reference Figure 6.2: ch15w_well_network_comparison.png
+- **warning / figure_discussion**: ch07_subsea_production_systems:37: no explicit nearby discussion marker detected: subsea_system_overview.png
+- **warning / figure_reference**: ch07_subsea_production_systems:37: nearby text does not reference Figure 7.1: subsea_system_overview.png
+- **warning / figure_discussion**: ch07_subsea_production_systems:198: no explicit nearby discussion marker detected: subsea_field_layout.png
+- **warning / figure_reference**: ch07_subsea_production_systems:198: nearby text does not reference Figure 7.2: subsea_field_layout.png
+- **warning / figure_discussion**: ch07_subsea_production_systems:935: no explicit nearby discussion marker detected: surf_cost_breakdown.png
+- **warning / figure_reference**: ch07_subsea_production_systems:935: nearby text does not reference Figure 7.3: surf_cost_breakdown.png
+- **warning / figure_discussion**: ch07_subsea_production_systems:1002: no explicit nearby discussion marker detected: ch06_fig01_pressure_profile.png
+- **warning / figure_reference**: ch07_subsea_production_systems:1002: nearby text does not reference Figure 7.4: ch06_fig01_pressure_profile.png
+- **warning / figure_discussion**: ch07_subsea_production_systems:1008: no explicit nearby discussion marker detected: ch06_fig02_temperature_profile.png
+- **warning / figure_reference**: ch07_subsea_production_systems:1008: nearby text does not reference Figure 7.5: ch06_fig02_temperature_profile.png
+- **warning / figure_discussion**: ch07_subsea_production_systems:1014: no explicit nearby discussion marker detected: ch06_fig03_hydrate_risk.png
+- **warning / figure_reference**: ch07_subsea_production_systems:1014: nearby text does not reference Figure 7.6: ch06_fig03_hydrate_risk.png
+- **warning / figure_discussion**: ch07_subsea_production_systems:1020: no explicit nearby discussion marker detected: ch06_fig04_flow_regime_map.png
+- **warning / figure_reference**: ch07_subsea_production_systems:1020: nearby text does not reference Figure 7.7: ch06_fig04_flow_regime_map.png
+- **warning / figure_discussion**: ch07_subsea_production_systems:1026: no explicit nearby discussion marker detected: ch06_fig05_pressure_budget.png
+- **warning / figure_reference**: ch07_subsea_production_systems:1026: nearby text does not reference Figure 7.8: ch06_fig05_pressure_budget.png
+- **warning / figure_discussion**: ch08_flowlines_and_risers:61: no explicit nearby discussion marker detected: pipeline_system_overview.png
+- **warning / figure_reference**: ch08_flowlines_and_risers:61: nearby text does not reference Figure 8.1: pipeline_system_overview.png
+- **warning / figure_discussion**: ch08_flowlines_and_risers:1187: no explicit nearby discussion marker detected: flowline_riser_profile.png
+- **warning / figure_reference**: ch08_flowlines_and_risers:1187: nearby text does not reference Figure 8.2: flowline_riser_profile.png
+- **warning / figure_discussion**: ch08_flowlines_and_risers:1199: no explicit nearby discussion marker detected: fig01_pressure_drop_vs_diameter.png
+- **warning / figure_reference**: ch08_flowlines_and_risers:1199: nearby text does not reference Figure 8.3: fig01_pressure_drop_vs_diameter.png
+- **warning / figure_discussion**: ch08_flowlines_and_risers:1205: no explicit nearby discussion marker detected: fig02_pressure_drop_vs_flow.png
+- **warning / figure_reference**: ch08_flowlines_and_risers:1205: nearby text does not reference Figure 8.4: fig02_pressure_drop_vs_flow.png
+- **warning / figure_discussion**: ch08_flowlines_and_risers:1211: no explicit nearby discussion marker detected: fig03_liquid_holdup.png
+- **warning / figure_reference**: ch08_flowlines_and_risers:1211: nearby text does not reference Figure 8.5: fig03_liquid_holdup.png
+- **warning / figure_discussion**: ch08_flowlines_and_risers:1217: no explicit nearby discussion marker detected: fig04_pipeline_capacity.png
+- **warning / figure_reference**: ch08_flowlines_and_risers:1217: nearby text does not reference Figure 8.6: fig04_pipeline_capacity.png
+- **warning / figure_discussion**: ch09_flow_assurance:40: no explicit nearby discussion marker detected: flow_assurance_threats.png
+- **warning / figure_reference**: ch09_flow_assurance:40: nearby text does not reference Figure 9.1: flow_assurance_threats.png
+- **warning / figure_discussion**: ch09_flow_assurance:1305: no explicit nearby discussion marker detected: fig01_hydrate_equilibrium.png
+- **warning / figure_reference**: ch09_flow_assurance:1305: nearby text does not reference Figure 9.2: fig01_hydrate_equilibrium.png
+- **warning / figure_discussion**: ch09_flow_assurance:1311: no explicit nearby discussion marker detected: fig02_meg_inhibition.png
+- **warning / figure_reference**: ch09_flow_assurance:1311: nearby text does not reference Figure 9.3: fig02_meg_inhibition.png
+- **warning / figure_discussion**: ch09_flow_assurance:1317: no explicit nearby discussion marker detected: fig03_water_dewpoint.png
+- **warning / figure_reference**: ch09_flow_assurance:1317: nearby text does not reference Figure 9.4: fig03_water_dewpoint.png
+- **warning / figure_discussion**: ch09_flow_assurance:1323: no explicit nearby discussion marker detected: fig04_hydrate_operating_envelope.png
+- **warning / figure_reference**: ch09_flow_assurance:1323: nearby text does not reference Figure 9.5: fig04_hydrate_operating_envelope.png
+- **warning / figure_discussion**: ch10_separation_technology:12: no explicit nearby discussion marker detected: separator_cutaway_2026.png
+- **warning / figure_reference**: ch10_separation_technology:12: nearby text does not reference Figure 10.1: separator_cutaway_2026.png
+- **warning / figure_discussion**: ch10_separation_technology:63: no explicit nearby discussion marker detected: three_stage_separation.png
+- **warning / figure_reference**: ch10_separation_technology:63: nearby text does not reference Figure 10.2: three_stage_separation.png
+- **warning / figure_discussion**: ch10_separation_technology:165: no explicit nearby discussion marker detected: horizontal_two_phase_separator.png
+- **warning / figure_reference**: ch10_separation_technology:165: nearby text does not reference Figure 10.3: horizontal_two_phase_separator.png
+- **warning / figure_discussion**: ch10_separation_technology:1026: no explicit nearby discussion marker detected: mp_pressure_lp_liquid_recovery.png
+- **warning / figure_reference**: ch10_separation_technology:1026: nearby text does not reference Figure 10.4: mp_pressure_lp_liquid_recovery.png
+- **warning / figure_discussion**: ch10_separation_technology:1207: no explicit nearby discussion marker detected: fig01_phase_split.png
+- **warning / figure_reference**: ch10_separation_technology:1207: nearby text does not reference Figure 10.5: fig01_phase_split.png
+- **warning / figure_discussion**: ch10_separation_technology:1213: no explicit nearby discussion marker detected: fig02_souders_brown.png
+- **warning / figure_reference**: ch10_separation_technology:1213: nearby text does not reference Figure 10.6: fig02_souders_brown.png
+- **warning / figure_discussion**: ch10_separation_technology:1219: no explicit nearby discussion marker detected: fig03_separator_optimization.png
+- **warning / figure_reference**: ch10_separation_technology:1219: nearby text does not reference Figure 10.7: fig03_separator_optimization.png
+- **warning / figure_discussion**: ch10_separation_technology:1225: no explicit nearby discussion marker detected: fig04_separation_train.png
+- **warning / figure_reference**: ch10_separation_technology:1225: nearby text does not reference Figure 10.8: fig04_separation_train.png
+- **warning / figure_discussion**: ch10_separation_technology:1822: no explicit nearby discussion marker detected: separator_utilization_profile.png
+- **warning / figure_reference**: ch10_separation_technology:1822: nearby text does not reference Figure 10.9: separator_utilization_profile.png
+- **warning / figure_discussion**: ch10_separation_technology:2026: no explicit nearby discussion marker detected: separator_pressure_optimization.png
+- **warning / figure_reference**: ch10_separation_technology:2026: nearby text does not reference Figure 10.10: separator_pressure_optimization.png
+- **warning / figure_discussion**: ch11_oil_processing:33: no explicit nearby discussion marker detected: oil_processing_train_overview.png
+- **warning / figure_reference**: ch11_oil_processing:33: nearby text does not reference Figure 11.1: oil_processing_train_overview.png
+- **warning / figure_discussion**: ch11_oil_processing:674: no explicit nearby discussion marker detected: mp_pressure_optimization.png
+- **warning / figure_reference**: ch11_oil_processing:674: nearby text does not reference Figure 11.2: mp_pressure_optimization.png
+- **warning / figure_discussion**: ch11_oil_processing:1114: no explicit nearby discussion marker detected: fig10_1_rvp_vs_temperature.png
+- **warning / figure_reference**: ch11_oil_processing:1114: nearby text does not reference Figure 11.3: fig10_1_rvp_vs_temperature.png
+- **warning / figure_discussion**: ch11_oil_processing:1120: no explicit nearby discussion marker detected: fig10_2_api_vs_pressure.png
+- **warning / figure_reference**: ch11_oil_processing:1120: nearby text does not reference Figure 11.4: fig10_2_api_vs_pressure.png
+- **warning / figure_discussion**: ch11_oil_processing:1126: no explicit nearby discussion marker detected: fig10_3_multistage_oil_quality.png
+- **warning / figure_reference**: ch11_oil_processing:1126: nearby text does not reference Figure 11.5: fig10_3_multistage_oil_quality.png
+- **warning / figure_discussion**: ch11_oil_processing:1132: no explicit nearby discussion marker detected: fig10_4_gas_shrinkage.png
+- **warning / figure_reference**: ch11_oil_processing:1132: nearby text does not reference Figure 11.6: fig10_4_gas_shrinkage.png
+- **warning / figure_discussion**: ch12_gas_processing:36: no explicit nearby discussion marker detected: gas_processing_overview.png
+- **warning / figure_reference**: ch12_gas_processing:36: nearby text does not reference Figure 12.1: gas_processing_overview.png
+- **warning / figure_discussion**: ch12_gas_processing:1060: no explicit nearby discussion marker detected: phase_envelope_gas.png
+- **warning / figure_reference**: ch12_gas_processing:1060: nearby text does not reference Figure 12.2: phase_envelope_gas.png
+- **warning / figure_discussion**: ch12_gas_processing:1122: no explicit nearby discussion marker detected: fig11_1_water_content.png
+- **warning / figure_reference**: ch12_gas_processing:1122: nearby text does not reference Figure 12.3: fig11_1_water_content.png
+- **warning / figure_discussion**: ch12_gas_processing:1128: no explicit nearby discussion marker detected: fig11_2_jt_cooling.png
+- **warning / figure_reference**: ch12_gas_processing:1128: nearby text does not reference Figure 12.4: fig11_2_jt_cooling.png
+- **warning / figure_discussion**: ch12_gas_processing:1134: no explicit nearby discussion marker detected: fig11_3_turbo_expander_profile.png
+- **warning / figure_reference**: ch12_gas_processing:1134: nearby text does not reference Figure 12.5: fig11_3_turbo_expander_profile.png
+- **warning / figure_discussion**: ch12_gas_processing:1140: no explicit nearby discussion marker detected: fig11_4_dewpoint_control.png
+- **warning / figure_reference**: ch12_gas_processing:1140: nearby text does not reference Figure 12.6: fig11_4_dewpoint_control.png
+- **warning / figure_discussion**: ch13_produced_water_treatment:841: no explicit nearby discussion marker detected: water_lifecycle_profile.png
+- **warning / figure_reference**: ch13_produced_water_treatment:841: nearby text does not reference Figure 13.1: water_lifecycle_profile.png
+- **warning / figure_discussion**: ch13_produced_water_treatment:929: no explicit nearby discussion marker detected: ch16_watercut_sensitivity.png
+- **warning / figure_reference**: ch13_produced_water_treatment:929: nearby text does not reference Figure 13.2: ch16_watercut_sensitivity.png
+- **warning / figure_discussion**: ch13_produced_water_treatment:935: no explicit nearby discussion marker detected: ch16_pressure_effect.png
+- **warning / figure_reference**: ch13_produced_water_treatment:935: nearby text does not reference Figure 13.3: ch16_pressure_effect.png
+- **warning / figure_discussion**: ch14_gas_compression:12: no explicit nearby discussion marker detected: compression_train_2026.png
+- **warning / figure_reference**: ch14_gas_compression:12: nearby text does not reference Figure 14.1: compression_train_2026.png
+- **warning / figure_discussion**: ch14_gas_compression:740: no explicit nearby discussion marker detected: compression_pr_sensitivity.png
+- **warning / figure_reference**: ch14_gas_compression:740: nearby text does not reference Figure 14.2: compression_pr_sensitivity.png
+- **warning / figure_discussion**: ch14_gas_compression:821: no explicit nearby discussion marker detected: fig12_1_power_vs_ratio.png
+- **warning / figure_reference**: ch14_gas_compression:821: nearby text does not reference Figure 14.3: fig12_1_power_vs_ratio.png
+- **warning / figure_discussion**: ch14_gas_compression:827: no explicit nearby discussion marker detected: fig12_2_compressor_curve.png
+- **warning / figure_reference**: ch14_gas_compression:827: nearby text does not reference Figure 14.4: fig12_2_compressor_curve.png
+- **warning / figure_discussion**: ch14_gas_compression:833: no explicit nearby discussion marker detected: fig12_3_multistage_profile.png
+- **warning / figure_reference**: ch14_gas_compression:833: nearby text does not reference Figure 14.5: fig12_3_multistage_profile.png
+- **warning / figure_discussion**: ch14_gas_compression:839: no explicit nearby discussion marker detected: fig12_4_power_comparison.png
+- **warning / figure_reference**: ch14_gas_compression:839: nearby text does not reference Figure 14.6: fig12_4_power_comparison.png
+- **warning / figure_discussion**: ch14_gas_compression:845: no explicit nearby discussion marker detected: fig12_5_discharge_temperature.png
+- **warning / figure_reference**: ch14_gas_compression:845: nearby text does not reference Figure 14.7: fig12_5_discharge_temperature.png
+- **warning / figure_discussion**: ch14_gas_compression:1467: no explicit nearby discussion marker detected: compressor_performance_map.png
+- **warning / figure_reference**: ch14_gas_compression:1467: nearby text does not reference Figure 14.8: compressor_performance_map.png
+- **warning / figure_discussion**: ch14_gas_compression:1547: no explicit nearby discussion marker detected: compressor_speed_sensitivity.png
+- **warning / figure_reference**: ch14_gas_compression:1547: nearby text does not reference Figure 14.9: compressor_speed_sensitivity.png
+- **warning / figure_discussion**: ch15_compressor_characteristics:40: no explicit nearby discussion marker detected: compressor_map_overview.png
+- **warning / figure_reference**: ch15_compressor_characteristics:40: nearby text does not reference Figure 15.1: compressor_map_overview.png
+- **warning / figure_discussion**: ch15_compressor_characteristics:173: no explicit nearby discussion marker detected: operating_envelope.png
+- **warning / figure_reference**: ch15_compressor_characteristics:173: nearby text does not reference Figure 15.2: operating_envelope.png
+- **warning / figure_discussion**: ch15_compressor_characteristics:860: no explicit nearby discussion marker detected: compressor_map_complete.png
+- **warning / figure_reference**: ch15_compressor_characteristics:860: nearby text does not reference Figure 15.3: compressor_map_complete.png
+- **warning / figure_discussion**: ch15_compressor_characteristics:1150: no explicit nearby discussion marker detected: ch13_head_vs_flow.png
+- **warning / figure_reference**: ch15_compressor_characteristics:1150: nearby text does not reference Figure 15.4: ch13_head_vs_flow.png
+- **warning / figure_discussion**: ch15_compressor_characteristics:1156: no explicit nearby discussion marker detected: ch13_efficiency_vs_flow.png
+- **warning / figure_reference**: ch15_compressor_characteristics:1156: nearby text does not reference Figure 15.5: ch13_efficiency_vs_flow.png
+- **warning / figure_discussion**: ch15_compressor_characteristics:1162: no explicit nearby discussion marker detected: ch13_operating_envelope.png
+- **warning / figure_reference**: ch15_compressor_characteristics:1162: nearby text does not reference Figure 15.6: ch13_operating_envelope.png
+- **warning / figure_discussion**: ch16_heat_exchangers:73: no explicit nearby discussion marker detected: shell_tube_hx_cross_section.png
+- **warning / figure_reference**: ch16_heat_exchangers:73: nearby text does not reference Figure 16.1: shell_tube_hx_cross_section.png
+- **warning / figure_discussion**: ch16_heat_exchangers:698: no explicit nearby discussion marker detected: composite_curves.png
+- **warning / figure_reference**: ch16_heat_exchangers:698: nearby text does not reference Figure 16.2: composite_curves.png
+- **warning / figure_discussion**: ch16_heat_exchangers:1208: no explicit nearby discussion marker detected: ch14_temperature_profile.png
+- **warning / figure_reference**: ch16_heat_exchangers:1208: nearby text does not reference Figure 16.3: ch14_temperature_profile.png
+- **warning / figure_discussion**: ch16_heat_exchangers:1214: no explicit nearby discussion marker detected: ch14_duty_vs_flow.png
+- **warning / figure_reference**: ch16_heat_exchangers:1214: nearby text does not reference Figure 16.4: ch14_duty_vs_flow.png
+- **warning / figure_discussion**: ch16_heat_exchangers:1220: no explicit nearby discussion marker detected: ch14_ua_sizing.png
+- **warning / figure_reference**: ch16_heat_exchangers:1220: nearby text does not reference Figure 16.5: ch14_ua_sizing.png
+- **warning / figure_discussion**: ch17_valves_and_flow_control:97: no explicit nearby discussion marker detected: valve_characteristics_curves.png
+- **warning / figure_reference**: ch17_valves_and_flow_control:97: nearby text does not reference Figure 17.1: valve_characteristics_curves.png
+- **warning / figure_discussion**: ch17_valves_and_flow_control:1205: no explicit nearby discussion marker detected: ch15_cv_and_jt_vs_flow.png
+- **warning / figure_reference**: ch17_valves_and_flow_control:1205: nearby text does not reference Figure 17.2: ch15_cv_and_jt_vs_flow.png
+- **warning / figure_discussion**: ch17_valves_and_flow_control:1211: no explicit nearby discussion marker detected: ch15_jt_cooling_vs_dp.png
+- **warning / figure_reference**: ch17_valves_and_flow_control:1211: nearby text does not reference Figure 17.3: ch15_jt_cooling_vs_dp.png
+- **warning / figure_discussion**: ch17_valves_and_flow_control:1217: no explicit nearby discussion marker detected: ch15_pt_path.png
+- **warning / figure_reference**: ch17_valves_and_flow_control:1217: nearby text does not reference Figure 17.4: ch15_pt_path.png
+- **warning / figure_discussion**: ch17_valves_and_flow_control:1223: no explicit nearby discussion marker detected: ch15_valve_opening.png
+- **warning / figure_reference**: ch17_valves_and_flow_control:1223: nearby text does not reference Figure 17.5: ch15_valve_opening.png
+- **warning / figure_discussion**: ch18_power_production:50: no explicit nearby discussion marker detected: brayton_cycle_ts.png
+- **warning / figure_reference**: ch18_power_production:50: nearby text does not reference Figure 18.1: brayton_cycle_ts.png
+- **warning / figure_discussion**: ch18_power_production:200: no explicit nearby discussion marker detected: gt_ambient_performance.png
+- **warning / figure_reference**: ch18_power_production:200: nearby text does not reference Figure 18.2: gt_ambient_performance.png
+- **warning / figure_discussion**: ch18_power_production:1228: no explicit nearby discussion marker detected: power_demand_profile.png
+- **warning / figure_reference**: ch18_power_production:1228: nearby text does not reference Figure 18.3: power_demand_profile.png
+- **warning / figure_discussion**: ch18_power_production:1240: no explicit nearby discussion marker detected: ch30_fuel_consumption.png
+- **warning / figure_reference**: ch18_power_production:1240: nearby text does not reference Figure 18.4: ch30_fuel_consumption.png
+- **warning / figure_discussion**: ch18_power_production:1246: no explicit nearby discussion marker detected: ch30_power_demand_pie.png
+- **warning / figure_reference**: ch18_power_production:1246: nearby text does not reference Figure 18.5: ch30_power_demand_pie.png
+- **warning / figure_discussion**: ch18_power_production:1252: no explicit nearby discussion marker detected: ch30_gt_ambient_temp.png
+- **warning / figure_reference**: ch18_power_production:1252: nearby text does not reference Figure 18.6: ch30_gt_ambient_temp.png
+- **warning / figure_discussion**: ch18_power_production:1258: no explicit nearby discussion marker detected: ch30_co2_emissions.png
+- **warning / figure_reference**: ch18_power_production:1258: nearby text does not reference Figure 18.7: ch30_co2_emissions.png
+- **warning / figure_discussion**: ch19_export_and_metering:344: no explicit nearby discussion marker detected: gcv_wobbe_vs_ngl.png
+- **warning / figure_reference**: ch19_export_and_metering:344: nearby text does not reference Figure 19.1: gcv_wobbe_vs_ngl.png
+- **warning / figure_discussion**: ch19_export_and_metering:462: no explicit nearby discussion marker detected: phase_envelope_export_gas.png
+- **warning / figure_reference**: ch19_export_and_metering:462: nearby text does not reference Figure 19.2: phase_envelope_export_gas.png
+- **warning / figure_discussion**: ch19_export_and_metering:920: no explicit nearby discussion marker detected: pipeline_sizing_dp_vs_diameter.png
+- **warning / figure_reference**: ch19_export_and_metering:920: nearby text does not reference Figure 19.3: pipeline_sizing_dp_vs_diameter.png
+- **warning / figure_discussion**: ch19_export_and_metering:1090: no explicit nearby discussion marker detected: ch17_pipeline_profiles.png
+- **warning / figure_reference**: ch19_export_and_metering:1090: nearby text does not reference Figure 19.4: ch17_pipeline_profiles.png
+- **warning / figure_discussion**: ch19_export_and_metering:1096: no explicit nearby discussion marker detected: ch17_diameter_sensitivity.png
+- **warning / figure_reference**: ch19_export_and_metering:1096: nearby text does not reference Figure 19.5: ch17_diameter_sensitivity.png
+- **warning / figure_discussion**: ch20_capacity_checks_and_utilization:281: no explicit nearby discussion marker detected: separator_capacity_diagram.png
+- **warning / figure_reference**: ch20_capacity_checks_and_utilization:281: nearby text does not reference Figure 20.1: separator_capacity_diagram.png
+- **warning / figure_discussion**: ch20_capacity_checks_and_utilization:443: no explicit nearby discussion marker detected: compressor_capacity_map.png
+- **warning / figure_reference**: ch20_capacity_checks_and_utilization:443: nearby text does not reference Figure 20.2: compressor_capacity_map.png
+- **warning / figure_discussion**: ch20_capacity_checks_and_utilization:973: no explicit nearby discussion marker detected: capacity_staircase.png
+- **warning / figure_reference**: ch20_capacity_checks_and_utilization:973: nearby text does not reference Figure 20.3: capacity_staircase.png
+- **warning / figure_discussion**: ch20_capacity_checks_and_utilization:1314: no explicit nearby discussion marker detected: utilization_vs_production.png
+- **warning / figure_reference**: ch20_capacity_checks_and_utilization:1314: nearby text does not reference Figure 20.4: utilization_vs_production.png
+- **warning / figure_discussion**: ch20_capacity_checks_and_utilization:1438: no explicit nearby discussion marker detected: utilization_trend_field_life.png
+- **warning / figure_reference**: ch20_capacity_checks_and_utilization:1438: nearby text does not reference Figure 20.5: utilization_trend_field_life.png
+- **warning / figure_discussion**: ch20_capacity_checks_and_utilization:1614: no explicit nearby discussion marker detected: ch18_utilization_bar_chart.png
+- **warning / figure_reference**: ch20_capacity_checks_and_utilization:1614: nearby text does not reference Figure 20.6: ch18_utilization_bar_chart.png
+- **warning / figure_discussion**: ch20_capacity_checks_and_utilization:1620: no explicit nearby discussion marker detected: ch18_utilization_vs_feed_rate.png
+- **warning / figure_reference**: ch20_capacity_checks_and_utilization:1620: nearby text does not reference Figure 20.7: ch18_utilization_vs_feed_rate.png
+- **warning / figure_discussion**: ch21_debottlenecking:1711: no explicit nearby discussion marker detected: ch21_debottleneck_cascade.png
+- **warning / figure_reference**: ch21_debottlenecking:1711: nearby text does not reference Figure 21.4: ch21_debottleneck_cascade.png
+- **warning / figure_discussion**: ch22_production_optimization_theory:318: no explicit nearby discussion marker detected: ch22_verified_nodal_solution.png
+- **warning / figure_reference**: ch22_production_optimization_theory:318: nearby text does not reference Figure 22.1: ch22_verified_nodal_solution.png
+- **warning / figure_discussion**: ch22_production_optimization_theory:715: no explicit nearby discussion marker detected: separator_pressure_contour.png
+- **warning / figure_reference**: ch22_production_optimization_theory:715: nearby text does not reference Figure 22.2: separator_pressure_contour.png
+- **warning / figure_discussion**: ch22_production_optimization_theory:827: no explicit nearby discussion marker detected: gas_lift_performance_curves.png
+- **warning / figure_reference**: ch22_production_optimization_theory:827: nearby text does not reference Figure 22.3: gas_lift_performance_curves.png
+- **warning / figure_discussion**: ch22_production_optimization_theory:1031: no explicit nearby discussion marker detected: ch22_verified_interstage_power.png
+- **warning / figure_reference**: ch22_production_optimization_theory:1031: nearby text does not reference Figure 22.4: ch22_verified_interstage_power.png
+- **warning / figure_discussion**: ch22_production_optimization_theory:1158: no explicit nearby discussion marker detected: ch22_verified_pareto_samples.png
+- **warning / figure_reference**: ch22_production_optimization_theory:1158: nearby text does not reference Figure 22.5: ch22_verified_pareto_samples.png
+- **warning / figure_discussion**: ch22_production_optimization_theory:1648: no explicit nearby discussion marker detected: ch19_objective_function_landscape.png
+- **warning / figure_reference**: ch22_production_optimization_theory:1648: nearby text does not reference Figure 22.6: ch19_objective_function_landscape.png
+- **warning / figure_discussion**: ch22_production_optimization_theory:1654: no explicit nearby discussion marker detected: ch19_sensitivity_tornado.png
+- **warning / figure_reference**: ch22_production_optimization_theory:1654: nearby text does not reference Figure 22.7: ch19_sensitivity_tornado.png
+- **warning / figure_discussion**: ch23_neqsim_optimization_framework:34: no explicit nearby discussion marker detected: fig25_1_architecture.png
+- **warning / figure_discussion**: ch23_neqsim_optimization_framework:1151: no explicit nearby discussion marker detected: fig25_2_component_diagram.png
+- **warning / figure_discussion**: ch23_neqsim_optimization_framework:1211: no explicit nearby discussion marker detected: optimization_evidence_loop_2026.svg
+- **warning / figure_reference**: ch23_neqsim_optimization_framework:1211: nearby text does not reference Figure 23.3: optimization_evidence_loop_2026.svg
+- **warning / figure_discussion**: ch23_neqsim_optimization_framework:1235: no explicit nearby discussion marker detected: ch25_utilization_vs_rate.png
+- **warning / figure_reference**: ch23_neqsim_optimization_framework:1235: nearby text does not reference Figure 23.4: ch25_utilization_vs_rate.png
+- **warning / figure_discussion**: ch23_neqsim_optimization_framework:1241: no explicit nearby discussion marker detected: ch25_feasibility_curve.png
+- **warning / figure_reference**: ch23_neqsim_optimization_framework:1241: nearby text does not reference Figure 23.5: ch25_feasibility_curve.png
+- **warning / figure_discussion**: ch24_production_optimization:3350: no explicit nearby discussion marker detected: ch18_optimization_convergence.png
+- **warning / figure_reference**: ch24_production_optimization:3350: nearby text does not reference Figure 24.3: ch18_optimization_convergence.png
+- **warning / figure_discussion**: ch24_production_optimization:3356: no explicit nearby discussion marker detected: ch18_algorithm_comparison.png
+- **warning / figure_reference**: ch24_production_optimization:3356: nearby text does not reference Figure 24.4: ch18_algorithm_comparison.png
+- **warning / figure_discussion**: ch25_utilization_monitoring:153: no explicit nearby discussion marker detected: fig26_1_utilization_profiles.png
+- **warning / figure_reference**: ch25_utilization_monitoring:153: nearby text does not reference Figure 25.1: fig26_1_utilization_profiles.png
+- **warning / figure_discussion**: ch25_utilization_monitoring:165: no explicit nearby discussion marker detected: fig26_2_monitoring_architecture.png
+- **warning / figure_discussion**: ch25_utilization_monitoring:878: no explicit nearby discussion marker detected: fig26_3_utilization_heatmap.png
+- **warning / figure_reference**: ch25_utilization_monitoring:878: nearby text does not reference Figure 25.3: fig26_3_utilization_heatmap.png
+- **warning / figure_discussion**: ch25_utilization_monitoring:1163: no explicit nearby discussion marker detected: ch26_utilization_heatmap.png
+- **warning / figure_reference**: ch25_utilization_monitoring:1163: nearby text does not reference Figure 25.4: ch26_utilization_heatmap.png
+- **warning / figure_discussion**: ch25_utilization_monitoring:1169: no explicit nearby discussion marker detected: ch26_bottleneck_transition.png
+- **warning / figure_reference**: ch25_utilization_monitoring:1169: nearby text does not reference Figure 25.5: ch26_bottleneck_transition.png
+- **warning / figure_discussion**: ch26_well_network_optimization:214: no explicit nearby discussion marker detected: fig27_1_ipr_curves.png
+- **warning / figure_reference**: ch26_well_network_optimization:214: nearby text does not reference Figure 26.1: fig27_1_ipr_curves.png
+- **warning / figure_discussion**: ch26_well_network_optimization:403: no explicit nearby discussion marker detected: fig27_2_vfp_curve.png
+- **warning / figure_reference**: ch26_well_network_optimization:403: nearby text does not reference Figure 26.2: fig27_2_vfp_curve.png
+- **warning / figure_discussion**: ch26_well_network_optimization:1087: no explicit nearby discussion marker detected: ch27_manifold_pressure_sweep.png
+- **warning / figure_reference**: ch26_well_network_optimization:1087: nearby text does not reference Figure 26.3: ch27_manifold_pressure_sweep.png
+- **warning / figure_discussion**: ch26_well_network_optimization:1093: no explicit nearby discussion marker detected: ch27_choke_sensitivity.png
+- **warning / figure_reference**: ch26_well_network_optimization:1093: nearby text does not reference Figure 26.4: ch27_choke_sensitivity.png
+- **warning / figure_discussion**: ch27_multi_scenario_optimization:519: no explicit nearby discussion marker detected: fig28_tornado.png
+- **warning / figure_reference**: ch27_multi_scenario_optimization:519: nearby text does not reference Figure 27.1: fig28_tornado.png
+- **warning / figure_discussion**: ch27_multi_scenario_optimization:854: no explicit nearby discussion marker detected: ch27_verified_resource_npv.png
+- **warning / figure_reference**: ch27_multi_scenario_optimization:854: nearby text does not reference Figure 27.2: ch27_verified_resource_npv.png
+- **warning / figure_discussion**: ch27_multi_scenario_optimization:883: no explicit nearby discussion marker detected: ch28_scenario_utilization.png
+- **warning / figure_reference**: ch27_multi_scenario_optimization:883: nearby text does not reference Figure 27.3: ch28_scenario_utilization.png
+- **warning / figure_discussion**: ch27_multi_scenario_optimization:889: no explicit nearby discussion marker detected: ch28_scenario_comparison.png
+- **warning / figure_reference**: ch27_multi_scenario_optimization:889: nearby text does not reference Figure 27.4: ch28_scenario_comparison.png
+- **warning / figure_discussion**: ch28_field_development:1267: no explicit nearby discussion marker detected: ch28_verified_recombination_density.png
+- **warning / figure_reference**: ch28_field_development:1267: nearby text does not reference Figure 28.1: ch28_verified_recombination_density.png
+- **warning / figure_discussion**: ch28_field_development:1311: no explicit nearby discussion marker detected: ch28_verified_screening_surface.png
+- **warning / figure_reference**: ch28_field_development:1311: nearby text does not reference Figure 28.2: ch28_verified_screening_surface.png
+- **warning / figure_discussion**: ch28_field_development:1353: no explicit nearby discussion marker detected: ch28_verified_gor_pressure.png
+- **warning / figure_reference**: ch28_field_development:1353: nearby text does not reference Figure 28.3: ch28_verified_gor_pressure.png
+- **warning / figure_discussion**: ch28_field_development:1446: no explicit nearby discussion marker detected: ch19_vfp_curves.png
+- **warning / figure_reference**: ch28_field_development:1446: nearby text does not reference Figure 28.4: ch19_vfp_curves.png
+- **warning / figure_discussion**: ch28_field_development:1452: no explicit nearby discussion marker detected: ch19_vfp_surface.png
+- **warning / figure_reference**: ch28_field_development:1452: nearby text does not reference Figure 28.5: ch19_vfp_surface.png
+- **warning / figure_discussion**: ch29_dynamic_simulation_and_control:182: no explicit nearby discussion marker detected: feedback_control_loop.png
+- **warning / figure_reference**: ch29_dynamic_simulation_and_control:182: nearby text does not reference Figure 29.1: feedback_control_loop.png
+- **warning / figure_discussion**: ch29_dynamic_simulation_and_control:450: no explicit nearby discussion marker detected: ch29_verified_level_inventory.png
+- **warning / figure_reference**: ch29_dynamic_simulation_and_control:450: nearby text does not reference Figure 29.2: ch29_verified_level_inventory.png
+- **warning / figure_discussion**: ch29_dynamic_simulation_and_control:565: no explicit nearby discussion marker detected: ch20_compressor_map_antisurge.png
+- **warning / figure_reference**: ch29_dynamic_simulation_and_control:565: nearby text does not reference Figure 29.3: ch20_compressor_map_antisurge.png
+- **warning / figure_discussion**: ch29_dynamic_simulation_and_control:805: no explicit nearby discussion marker detected: ch29_verified_blowdown.png
+- **warning / figure_reference**: ch29_dynamic_simulation_and_control:805: nearby text does not reference Figure 29.4: ch29_verified_blowdown.png
+- **warning / figure_discussion**: ch29_dynamic_simulation_and_control:880: no explicit nearby discussion marker detected: ch29_verified_feed_pulse.png
+- **warning / figure_reference**: ch29_dynamic_simulation_and_control:880: nearby text does not reference Figure 29.5: ch29_verified_feed_pulse.png
+- **warning / figure_discussion**: ch29_dynamic_simulation_and_control:1099: no explicit nearby discussion marker detected: ch20_level_controller_response.png
+- **warning / figure_reference**: ch29_dynamic_simulation_and_control:1099: nearby text does not reference Figure 29.6: ch20_level_controller_response.png
+- **warning / figure_discussion**: ch29_dynamic_simulation_and_control:1105: no explicit nearby discussion marker detected: ch20_pid_tuning_comparison.png
+- **warning / figure_reference**: ch29_dynamic_simulation_and_control:1105: nearby text does not reference Figure 29.7: ch20_pid_tuning_comparison.png
+- **warning / figure_discussion**: ch30_digital_twins_and_automation:50: no explicit nearby discussion marker detected: ch21_digital_twin_architecture.png
+- **warning / figure_reference**: ch30_digital_twins_and_automation:50: nearby text does not reference Figure 30.1: ch21_digital_twin_architecture.png
+- **warning / figure_discussion**: ch30_digital_twins_and_automation:316: no explicit nearby discussion marker detected: ch21_rto_cycle.png
+- **warning / figure_reference**: ch30_digital_twins_and_automation:316: nearby text does not reference Figure 30.2: ch21_rto_cycle.png
+- **warning / figure_discussion**: ch30_digital_twins_and_automation:1083: no explicit nearby discussion marker detected: ch21_digital_twin_tracking.png
+- **warning / figure_reference**: ch30_digital_twins_and_automation:1083: nearby text does not reference Figure 30.4: ch21_digital_twin_tracking.png
+- **warning / figure_discussion**: ch30_digital_twins_and_automation:1305: no explicit nearby discussion marker detected: ch21_domain_architecture.png
+- **warning / figure_reference**: ch30_digital_twins_and_automation:1305: nearby text does not reference Figure 30.5: ch21_domain_architecture.png
+- **warning / figure_discussion**: ch30_digital_twins_and_automation:1703: no explicit nearby discussion marker detected: ch21_digital_twin_comparison.png
+- **warning / figure_reference**: ch30_digital_twins_and_automation:1703: nearby text does not reference Figure 30.6: ch21_digital_twin_comparison.png
+- **warning / figure_discussion**: ch31_solver_methods:918: no explicit nearby discussion marker detected: ch29_flash_convergence.png
+- **warning / figure_reference**: ch31_solver_methods:918: nearby text does not reference Figure 31.1: ch29_flash_convergence.png
+- **warning / figure_discussion**: ch31_solver_methods:924: no explicit nearby discussion marker detected: ch29_initial_guess_effect.png
+- **warning / figure_reference**: ch31_solver_methods:924: nearby text does not reference Figure 31.2: ch29_initial_guess_effect.png
+- **warning / figure_discussion**: ch31_solver_methods:930: no explicit nearby discussion marker detected: ch29_recycle_convergence.png
+- **warning / figure_reference**: ch31_solver_methods:930: nearby text does not reference Figure 31.3: ch29_recycle_convergence.png
+- **warning / figure_discussion**: ch31_solver_methods:936: no explicit nearby discussion marker detected: ch29_component_scaling.png
+- **warning / figure_reference**: ch31_solver_methods:936: nearby text does not reference Figure 31.4: ch29_component_scaling.png
+- **warning / figure_discussion**: ch32_advanced_topics:1454: no explicit nearby discussion marker detected: ch22_pareto_front.png
+- **warning / figure_reference**: ch32_advanced_topics:1454: nearby text does not reference Figure 32.2: ch22_pareto_front.png
+- **warning / figure_discussion**: ch32_advanced_topics:1460: no explicit nearby discussion marker detected: ch22_scenario_comparison.png
+- **warning / figure_reference**: ch32_advanced_topics:1460: nearby text does not reference Figure 32.3: ch22_scenario_comparison.png
+- **warning / figure_discussion**: ch33_onshore_processing_plants:35: no explicit nearby discussion marker detected: ch22_onshore_plant_block_diagram.png
+- **warning / figure_reference**: ch33_onshore_processing_plants:35: nearby text does not reference Figure 33.1: ch22_onshore_plant_block_diagram.png
+- **warning / figure_discussion**: ch33_onshore_processing_plants:211: no explicit nearby discussion marker detected: ch22_amine_unit_pfd.png
+- **warning / figure_reference**: ch33_onshore_processing_plants:211: nearby text does not reference Figure 33.2: ch22_amine_unit_pfd.png
+- **warning / figure_discussion**: ch33_onshore_processing_plants:382: no explicit nearby discussion marker detected: ch22_turboexpander_pfd.png
+- **warning / figure_reference**: ch33_onshore_processing_plants:382: nearby text does not reference Figure 33.3: ch22_turboexpander_pfd.png
+- **warning / figure_discussion**: ch33_onshore_processing_plants:737: no explicit nearby discussion marker detected: ch22_ngl_sensitivity.png
+- **warning / figure_reference**: ch33_onshore_processing_plants:737: nearby text does not reference Figure 33.4: ch22_ngl_sensitivity.png
+- **warning / figure_discussion**: ch33_onshore_processing_plants:777: no explicit nearby discussion marker detected: ch22_teg_water_content.png
+- **warning / figure_reference**: ch33_onshore_processing_plants:777: nearby text does not reference Figure 33.5: ch22_teg_water_content.png
+- **warning / figure_discussion**: ch33_onshore_processing_plants:783: no explicit nearby discussion marker detected: ch22_compression_power.png
+- **warning / figure_reference**: ch33_onshore_processing_plants:783: nearby text does not reference Figure 33.6: ch22_compression_power.png
+- **warning / figure_discussion**: ch34_case_studies:99: no explicit nearby discussion marker detected: ch23_case1_platform_schematic.png
+- **warning / figure_reference**: ch34_case_studies:99: nearby text does not reference Figure 34.1: ch23_case1_platform_schematic.png
+- **warning / figure_discussion**: ch34_case_studies:262: no explicit nearby discussion marker detected: ch23_case1_hp_optimization.png
+- **warning / figure_reference**: ch34_case_studies:262: nearby text does not reference Figure 34.2: ch23_case1_hp_optimization.png
+- **warning / figure_discussion**: ch34_case_studies:559: no explicit nearby discussion marker detected: ch23_case2_water_cut_sensitivity.png
+- **warning / figure_reference**: ch34_case_studies:559: nearby text does not reference Figure 34.3: ch23_case2_water_cut_sensitivity.png
+- **warning / figure_discussion**: ch34_case_studies:809: no explicit nearby discussion marker detected: ch23_case3_debottleneck_analysis.png
+- **warning / figure_reference**: ch34_case_studies:809: nearby text does not reference Figure 34.4: ch23_case3_debottleneck_analysis.png
+- **warning / figure_discussion**: ch34_case_studies:856: no explicit nearby discussion marker detected: ch23_process_conditions.png
+- **warning / figure_reference**: ch34_case_studies:856: nearby text does not reference Figure 34.5: ch23_process_conditions.png
+- **warning / figure_discussion**: ch34_case_studies:862: no explicit nearby discussion marker detected: ch23_power_consumption.png
+- **warning / figure_reference**: ch34_case_studies:862: nearby text does not reference Figure 34.6: ch23_power_consumption.png
+- **warning / figure_discussion**: ch35_future_directions:1174: no explicit nearby discussion marker detected: ch35_co2_density_compressibility.png
+- **warning / figure_reference**: ch35_future_directions:1174: nearby text does not reference Figure 35.1: ch35_co2_density_compressibility.png
+- **warning / figure_discussion**: ch35_future_directions:1180: no explicit nearby discussion marker detected: ch24_h2_blending_wobbe.png
+- **warning / figure_reference**: ch35_future_directions:1180: nearby text does not reference Figure 35.2: ch24_h2_blending_wobbe.png
