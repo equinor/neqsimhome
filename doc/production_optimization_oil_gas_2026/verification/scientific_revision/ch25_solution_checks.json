@@ -1,0 +1,1350 @@
+{
+  "chapter": "ch25_utilization_monitoring",
+  "source_commit": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "python_executable": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "hook_module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\optimization_solution_hooks.py",
+  "hook_sha256": "265e3eea22ad989a9db81c032078ad38894790b454e1d8d0abe6a7956015c7df",
+  "hook_snapshot": "verification\\scientific_revision\\hook_sources\\265e3eea22ad989a9db81c032078ad38894790b454e1d8d0abe6a7956015c7df.py",
+  "helper_sources": [
+    {
+      "module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\verify_optimization_solution_hooks.py",
+      "sha256": "57ad44d5e87dd4aaa28e1fe34698976f0645f7b397658b3621b4bf854dab275b",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\57ad44d5e87dd4aaa28e1fe34698976f0645f7b397658b3621b4bf854dab275b.py"
+    },
+    {
+      "module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\optimization_solution_helpers.py",
+      "sha256": "066c566b280e6e5177b2fb30700f6d2d05cdd004e546c667a7b52c227e84514c",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\066c566b280e6e5177b2fb30700f6d2d05cdd004e546c667a7b52c227e84514c.py"
+    },
+    {
+      "module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\optimization_additional_solution_checks.py",
+      "sha256": "01a818429cec010878bb8da214f7e80c745f11858faee8f88856540f5370f907",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\01a818429cec010878bb8da214f7e80c745f11858faee8f88856540f5370f907.py"
+    }
+  ],
+  "interpretation": "Exact literal execution with supplementary numerical/physical/software solution checks; not field calibration.",
+  "prerequisite_fences": [
+    {
+      "number": 1,
+      "sha256": "c06228da8e6091763a25f7759958cef26321e5b2236fdb6c2537ae45bcdb1c25",
+      "status": "passed"
+    },
+    {
+      "number": 2,
+      "sha256": "740447843438c868f1eb6e2fb377035a5bbe82b134dc378f64fdcb824561fbff",
+      "status": "passed"
+    },
+    {
+      "number": 4,
+      "sha256": "ea4e4f85fd429e4e70bc9c382c2424b2cb9e4debe8748535f6356b71b2cc5d03",
+      "status": "passed"
+    },
+    {
+      "number": 5,
+      "sha256": "2ff6bb8042a50e6f6429ef9e010ffafcbf7b1d35a9c4ce7bd9288c7c9cdb4980",
+      "status": "passed"
+    },
+    {
+      "number": 6,
+      "sha256": "d66ac77cf4f6c7d1c2b32f2e4e3ba1c795f403839939d11815e05fd05cb0cb51",
+      "status": "passed"
+    },
+    {
+      "number": 7,
+      "sha256": "a15afd3a7cce85015ee39d29cb1d58a0a44f012f3fb599fa4c9daf5bc5711e85",
+      "status": "passed"
+    },
+    {
+      "number": 8,
+      "sha256": "948d59e6156ed24a701728b2a2a7bce6bc4f421f02cc3c3c099bf44f77e7cf9a",
+      "status": "passed"
+    },
+    {
+      "number": 9,
+      "sha256": "f072d0e489f78295dd2087040f40dc61fcf11cc62e5ce7f16ca666feecc5a479",
+      "status": "passed"
+    },
+    {
+      "number": 10,
+      "sha256": "7b1ec94be62aeeb521f9ac565a47fa0df510618caec9c6ae31ed81974ff955b2",
+      "status": "passed"
+    },
+    {
+      "number": 11,
+      "sha256": "665a5db85ec179c66b60312571cba260572b2f99bdaf64d32a80cd56dd37a99d",
+      "status": "passed"
+    },
+    {
+      "number": 12,
+      "sha256": "740ec4c239d5bf8630c92ebe462b7f9a7a89a4152a31c5305694830ec88e0559",
+      "status": "passed"
+    },
+    {
+      "number": 13,
+      "sha256": "e8454b133afccd5997e282e11e7d1906995c7f1ef5089bd36e9142d0e06677b5",
+      "status": "passed"
+    },
+    {
+      "number": 14,
+      "sha256": "7bbc194cc86810cd7aa075fa3456bb4fbc9c69f0977fead568746abc16caad29",
+      "status": "passed"
+    },
+    {
+      "number": 15,
+      "sha256": "bdbfb55729f6e9ebe7d79fdae4e9b1c30d11e66696f1ae041bfff62bedfe7ab4",
+      "status": "passed"
+    },
+    {
+      "number": 16,
+      "sha256": "a900fb68d4c82ee7bc18352e27a6f0fd68760ce84c59049e940ee6ae4c98294c",
+      "status": "passed"
+    },
+    {
+      "number": 17,
+      "sha256": "2f597718646262135ec070946381a68b384d1d748f454313f404fcad94a50a54",
+      "status": "passed"
+    }
+  ],
+  "entries": [
+    {
+      "number": 1,
+      "sha256": "c06228da8e6091763a25f7759958cef26321e5b2236fdb6c2537ae45bcdb1c25",
+      "code_sha256": "c06228da8e6091763a25f7759958cef26321e5b2236fdb6c2537ae45bcdb1c25",
+      "language": "python",
+      "checks": [
+        {
+          "name": "HP separator mass relative",
+          "passed": true,
+          "observed": 2.861071379811619e-12,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator component relative",
+          "passed": true,
+          "observed": 1.260623302641761e-12,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "HP separator energy relative",
+          "passed": true,
+          "observed": 1.2545338931700127e-16,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Every observed literal process.run state passes unit boundaries",
+          "passed": true,
+          "observed": 1,
+          "states": [
+            {
+              "line": 15,
+              "checks": [
+                {
+                  "name": "HP separator mass relative",
+                  "passed": true,
+                  "observed": 2.861071379811619e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator component relative",
+                  "passed": true,
+                  "observed": 1.260623302641761e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP separator energy relative",
+                  "passed": true,
+                  "observed": 1.2545338931700127e-16,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "passed",
+      "seconds": 1.5780000000013388,
+      "output": "Governing utilization: 83.1%\n  gasLoadFactor: 83.1% (SOFT)\n  kValue: 117.5% (SOFT)\n  dropletCutSize: 42.4% (SOFT)\n  inletMomentum: 35.1% (SOFT)\n  oilRetentionTime: 617.4% (SOFT)\n  waterRetentionTime: 0.3% (SOFT)\n"
+    },
+    {
+      "number": 4,
+      "sha256": "ea4e4f85fd429e4e70bc9c382c2424b2cb9e4debe8748535f6356b71b2cc5d03",
+      "code_sha256": "ea4e4f85fd429e4e70bc9c382c2424b2cb9e4debe8748535f6356b71b2cc5d03",
+      "language": "python",
+      "checks": [
+        {
+          "name": "HP separator mass relative",
+          "passed": true,
+          "observed": 2.861071379811619e-12,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator component relative",
+          "passed": true,
+          "observed": 1.260623302641761e-12,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "HP separator energy relative",
+          "passed": true,
+          "observed": 1.2545338931700127e-16,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "HP separator dashboard fraction versus native equipment readback",
+          "passed": true,
+          "observed": 0.8314516266430934,
+          "expected": 0.8314516266430934,
+          "tolerance": 1e-12
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.01600000000325963,
+      "output": ""
+    },
+    {
+      "number": 5,
+      "sha256": "2ff6bb8042a50e6f6429ef9e010ffafcbf7b1d35a9c4ce7bd9288c7c9cdb4980",
+      "code_sha256": "2ff6bb8042a50e6f6429ef9e010ffafcbf7b1d35a9c4ce7bd9288c7c9cdb4980",
+      "language": "python",
+      "checks": [
+        {
+          "name": "HP separator mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator component relative",
+          "passed": true,
+          "observed": 1.3807146274302795e-16,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "HP separator energy relative",
+          "passed": true,
+          "observed": 1.978861250122423e-11,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Gas cooler mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Gas cooler component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Gas cooler finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Gas cooler energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Compressor suction KO mass relative",
+          "passed": true,
+          "observed": 8.511919643031032e-15,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Compressor suction KO component relative",
+          "passed": true,
+          "observed": 3.706514980508368e-15,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Compressor suction KO finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Compressor suction KO energy relative",
+          "passed": true,
+          "observed": 4.629865191907845e-14,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Export compressor mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export compressor component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export compressor finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export compressor energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Export compressor single-phase compressor inlet",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export compressor compression pressure ratio",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export compressor positive shaft work",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Every observed literal process.run state passes unit boundaries",
+          "passed": true,
+          "observed": 2,
+          "states": [
+            {
+              "line": 49,
+              "checks": [
+                {
+                  "name": "HP separator mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator component relative",
+                  "passed": true,
+                  "observed": 1.3807146274302795e-16,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP separator energy relative",
+                  "passed": true,
+                  "observed": 1.978861250122423e-11,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Gas cooler mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Gas cooler component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Gas cooler finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Gas cooler energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Compressor suction KO mass relative",
+                  "passed": true,
+                  "observed": 8.511919643031032e-15,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Compressor suction KO component relative",
+                  "passed": true,
+                  "observed": 3.706514980508368e-15,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Compressor suction KO finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Compressor suction KO energy relative",
+                  "passed": true,
+                  "observed": 4.629865191907845e-14,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ]
+            },
+            {
+              "line": 64,
+              "checks": [
+                {
+                  "name": "HP separator mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator component relative",
+                  "passed": true,
+                  "observed": 1.3807146274302795e-16,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP separator energy relative",
+                  "passed": true,
+                  "observed": 1.978861250122423e-11,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Gas cooler mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Gas cooler component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Gas cooler finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Gas cooler energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Compressor suction KO mass relative",
+                  "passed": true,
+                  "observed": 8.511919643031032e-15,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Compressor suction KO component relative",
+                  "passed": true,
+                  "observed": 3.706514980508368e-15,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Compressor suction KO finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Compressor suction KO energy relative",
+                  "passed": true,
+                  "observed": 4.629865191907845e-14,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "passed",
+      "seconds": 3.0469999999986612,
+      "output": "Equipment                  Utilization     Status\n--------------------------------------------------\nWell fluid                       0.0%      GREEN\nHP separator                   117.8%        RED\nGas cooler                      83.3%     YELLOW\nCompressor suction KO          117.8%        RED\nExport compressor               83.3%     YELLOW\n"
+    },
+    {
+      "number": 9,
+      "sha256": "f072d0e489f78295dd2087040f40dc61fcf11cc62e5ce7f16ca666feecc5a479",
+      "code_sha256": "f072d0e489f78295dd2087040f40dc61fcf11cc62e5ce7f16ca666feecc5a479",
+      "language": "python",
+      "checks": [
+        {
+          "name": "HP separator mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator component relative",
+          "passed": true,
+          "observed": 1.3807146274302795e-16,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "HP separator energy relative",
+          "passed": true,
+          "observed": 1.978861250122423e-11,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Gas cooler mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Gas cooler component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Gas cooler finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Gas cooler energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Compressor suction KO mass relative",
+          "passed": true,
+          "observed": 8.511919643031032e-15,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Compressor suction KO component relative",
+          "passed": true,
+          "observed": 3.706514980508368e-15,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Compressor suction KO finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Compressor suction KO energy relative",
+          "passed": true,
+          "observed": 4.629865191907845e-14,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Export compressor mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export compressor component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export compressor finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export compressor energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Export compressor single-phase compressor inlet",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export compressor compression pressure ratio",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export compressor positive shaft work",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "HP separator dashboard fraction versus native equipment readback",
+          "passed": true,
+          "observed": 1.1779717555274576,
+          "expected": 1.1779717555274576,
+          "tolerance": 1e-12
+        },
+        {
+          "name": "Gas cooler dashboard fraction versus native equipment readback",
+          "passed": true,
+          "observed": 0.8333333333333335,
+          "expected": 0.8333333333333334,
+          "tolerance": 1e-12
+        },
+        {
+          "name": "Compressor suction KO dashboard fraction versus native equipment readback",
+          "passed": true,
+          "observed": 1.1779774679511588,
+          "expected": 1.1779774679511588,
+          "tolerance": 1e-12
+        },
+        {
+          "name": "Export compressor dashboard fraction versus native equipment readback",
+          "passed": true,
+          "observed": 0.8333333333333335,
+          "expected": 0.8333333333333335,
+          "tolerance": 1e-12
+        },
+        {
+          "name": "independent utilization trend perday",
+          "passed": true,
+          "observed": 0.09999999999999998,
+          "expected": 0.1,
+          "tolerance": 1e-12
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 10,
+      "sha256": "7b1ec94be62aeeb521f9ac565a47fa0df510618caec9c6ae31ed81974ff955b2",
+      "code_sha256": "7b1ec94be62aeeb521f9ac565a47fa0df510618caec9c6ae31ed81974ff955b2",
+      "language": "python",
+      "checks": [
+        {
+          "name": "HP separator mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator component relative",
+          "passed": true,
+          "observed": 1.3807146274302795e-16,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "HP separator energy relative",
+          "passed": true,
+          "observed": 1.978861250122423e-11,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Gas cooler mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Gas cooler component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Gas cooler finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Gas cooler energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Compressor suction KO mass relative",
+          "passed": true,
+          "observed": 8.511919643031032e-15,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Compressor suction KO component relative",
+          "passed": true,
+          "observed": 3.706514980508368e-15,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Compressor suction KO finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Compressor suction KO energy relative",
+          "passed": true,
+          "observed": 4.629865191907845e-14,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Export compressor mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export compressor component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export compressor finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export compressor energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Export compressor single-phase compressor inlet",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export compressor compression pressure ratio",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export compressor positive shaft work",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "gas capacity ratio identity",
+          "passed": true,
+          "observed": 4.96003793407407e-310,
+          "expected": 4.96003793407407e-310,
+          "tolerance": 1e-12
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "Gas capacity utilization: 0.0%\n"
+    },
+    {
+      "number": 11,
+      "sha256": "665a5db85ec179c66b60312571cba260572b2f99bdaf64d32a80cd56dd37a99d",
+      "code_sha256": "665a5db85ec179c66b60312571cba260572b2f99bdaf64d32a80cd56dd37a99d",
+      "language": "python",
+      "checks": [
+        {
+          "name": "HP separator mass relative",
+          "passed": true,
+          "observed": 8.415668162342627e-14,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator component relative",
+          "passed": true,
+          "observed": 2.6928458464681172e-14,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "HP separator energy relative",
+          "passed": true,
+          "observed": 1.71734605838995e-12,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Every observed literal process.run state passes unit boundaries",
+          "passed": true,
+          "observed": 2,
+          "states": [
+            {
+              "line": 31,
+              "checks": [
+                {
+                  "name": "HP separator mass relative",
+                  "passed": true,
+                  "observed": 8.415668162342627e-14,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator component relative",
+                  "passed": true,
+                  "observed": 2.6928458464681172e-14,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP separator energy relative",
+                  "passed": true,
+                  "observed": 1.71734605838995e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                }
+              ]
+            },
+            {
+              "line": 36,
+              "checks": [
+                {
+                  "name": "HP separator mass relative",
+                  "passed": true,
+                  "observed": 8.415668162342627e-14,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator component relative",
+                  "passed": true,
+                  "observed": 2.6928458464681172e-14,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP separator energy relative",
+                  "passed": true,
+                  "observed": 1.71734605838995e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.17199999999866122,
+      "output": "HP Separator - Governing utilization: 83.3%\n  gasLoadFactor: 0.0% (current=0.089, max=179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000)\n  kValue: 117.8% (current=0.177, max=0.150)\n  dropletCutSize: 36.5% (current=54.763, max=150.000)\n  inletMomentum: 39.4% (current=6311.274, max=16000.000)\n  oilRetentionTime: 0.0% (current=3.795, max=179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000)\n  waterRetentionTime: 0.0% (current=9.538, max=179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000)\n"
+    },
+    {
+      "number": 12,
+      "sha256": "740ec4c239d5bf8630c92ebe462b7f9a7a89a4152a31c5305694830ec88e0559",
+      "code_sha256": "740ec4c239d5bf8630c92ebe462b7f9a7a89a4152a31c5305694830ec88e0559",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Export compressor mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export compressor component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export compressor finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export compressor energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Export compressor single-phase compressor inlet",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export compressor compression pressure ratio",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export compressor positive shaft work",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "Export Compressor - Governing utilization: 83.3%\n\n  power: 75.8%\n  speed: 100.0%\n\n  Power: 3937 kW\n  Pressure ratio: 2.14\n"
+    },
+    {
+      "number": 13,
+      "sha256": "e8454b133afccd5997e282e11e7d1906995c7f1ef5089bd36e9142d0e06677b5",
+      "code_sha256": "e8454b133afccd5997e282e11e7d1906995c7f1ef5089bd36e9142d0e06677b5",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Gas cooler mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Gas cooler component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Gas cooler finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Gas cooler energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "Gas Cooler - Governing utilization: 83.3%\n  duty: 0.0%\n\n  Heat duty: -5.15 MW\n"
+    },
+    {
+      "number": 14,
+      "sha256": "7bbc194cc86810cd7aa075fa3456bb4fbc9c69f0977fead568746abc16caad29",
+      "code_sha256": "7bbc194cc86810cd7aa075fa3456bb4fbc9c69f0977fead568746abc16caad29",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Export pipeline mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export pipeline component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export pipeline finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export pipeline horizontal passive pressure decline",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "pressure-drop utilization identity",
+          "passed": true,
+          "observed": 0.002379971155377092,
+          "expected": 0.002379971155377092,
+          "tolerance": 1e-12
+        },
+        {
+          "name": "velocity equals actual volume flow over area",
+          "passed": true,
+          "observed": 1.5620436513760017,
+          "expected": 1.5620436513760017,
+          "tolerance": 1e-10
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.23399999999674037,
+      "output": "Pressure drop utilization: 0.2%\nVelocity utilization: 13.9% (v=1.6 m/s, v_e=11.3 m/s)\n"
+    },
+    {
+      "number": 15,
+      "sha256": "bdbfb55729f6e9ebe7d79fdae4e9b1c30d11e66696f1ae041bfff62bedfe7ab4",
+      "code_sha256": "bdbfb55729f6e9ebe7d79fdae4e9b1c30d11e66696f1ae041bfff62bedfe7ab4",
+      "language": "python",
+      "checks": [
+        {
+          "name": "HP separator mass relative",
+          "passed": true,
+          "observed": 8.415668162342627e-14,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator component relative",
+          "passed": true,
+          "observed": 2.6928458464681172e-14,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "HP separator energy relative",
+          "passed": true,
+          "observed": 1.71734605838995e-12,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "HP separator dashboard fraction versus native equipment readback",
+          "passed": true,
+          "observed": 0.8333308403330788,
+          "expected": 0.8333308403330788,
+          "tolerance": 1e-12
+        },
+        {
+          "name": "status categories partition all records",
+          "passed": true,
+          "observed": 1,
+          "expected": 1
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.01600000000325963,
+      "output": "Bottleneck: HP separator at 83.3%\nStatus: 0 green, 1 yellow, 0 red\n"
+    },
+    {
+      "number": 17,
+      "sha256": "2f597718646262135ec070946381a68b384d1d748f454313f404fcad94a50a54",
+      "code_sha256": "2f597718646262135ec070946381a68b384d1d748f454313f404fcad94a50a54",
+      "language": "python",
+      "checks": [
+        {
+          "name": "HP separator mass relative",
+          "passed": true,
+          "observed": 8.415668162342627e-14,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator component relative",
+          "passed": true,
+          "observed": 2.6928458464681172e-14,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "HP separator energy relative",
+          "passed": true,
+          "observed": 1.71734605838995e-12,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "HP separator dashboard fraction versus native equipment readback",
+          "passed": true,
+          "observed": 0.833,
+          "expected": 0.8333308403330788,
+          "tolerance": 0.000500001
+        },
+        {
+          "name": "Every observed literal process.run state passes unit boundaries",
+          "passed": true,
+          "observed": 1,
+          "states": [
+            {
+              "line": 35,
+              "checks": [
+                {
+                  "name": "HP separator mass relative",
+                  "passed": true,
+                  "observed": 8.415668162342627e-14,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator component relative",
+                  "passed": true,
+                  "observed": 2.6928458464681172e-14,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP separator energy relative",
+                  "passed": true,
+                  "observed": 1.71734605838995e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HP separator dashboard traffic-light rule",
+          "passed": true,
+          "observed": "YELLOW",
+          "expected": "YELLOW"
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.07800000000133878,
+      "output": "{\n  \"timestamp\": 1789250151.7799487,\n  \"utilization\": {\n    \"HP separator\": {\n      \"value\": 0.833,\n      \"status\": \"YELLOW\"\n    }\n  },\n  \"alerts\": [],\n  \"bottleneck\": \"HP separator\"\n}\n"
+    }
+  ],
+  "all_targeted_checks_passed": true
+}

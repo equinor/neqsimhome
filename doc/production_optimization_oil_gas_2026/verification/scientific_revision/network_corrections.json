@@ -1,0 +1,251 @@
+[
+  {
+    "chapter": 25,
+    "before": "Chapters 18–19 and implemented in Chapters 25 and 28",
+    "after": "Chapters 22–24"
+  },
+  {
+    "chapter": 25,
+    "before": "Chapter 25 introduced",
+    "after": "Chapter 23 introduced"
+  },
+  {
+    "chapter": 25,
+    "before": "`ProcessAutomation` API (Chapter 25)",
+    "after": "`ProcessAutomation` API (Chapter 23)"
+  },
+  {
+    "chapter": 25,
+    "before": "`ProductionOptimizer` (Chapter 25)",
+    "after": "`ProductionOptimizer` (Chapter 23)"
+  },
+  {
+    "chapter": 25,
+    "before": "Chapter 21 on digital twins and automation",
+    "after": "Chapter 30 on digital twins and automation"
+  },
+  {
+    "chapter": 25,
+    "before": "For example, a compressor with 50 kW of power margin may be acceptable regardless of whether the rated power is 500 kW ($U = 0.90$) or 5000 kW ($U = 0.99$).",
+    "after": "For example, 50 kW is the same absolute power margin on 500 and 5000 kW drivers, but its adequacy depends on disturbances, uncertainty and the driver response; neither the absolute nor relative margin alone establishes acceptance."
+  },
+  {
+    "chapter": 25,
+    "before": "In practice, this integral is approximated by averaging discrete samples from the plant historian:",
+    "after": "For equally spaced, valid samples this integral is approximated by their arithmetic mean. For irregular historian samples use time weighting and explicitly handle gaps:"
+  },
+  {
+    "chapter": 25,
+    "before": "| Compressor surge monitoring | 1–5 seconds | Fast dynamics near surge |",
+    "after": "| Compressor-map advisory trending | Site-specific display interval | Does not replace dedicated fast anti-surge protection |"
+  },
+  {
+    "chapter": 25,
+    "before": "`maxUtilization` (0–1)",
+    "after": "`maxUtilization` (dimensionless, possibly above one)"
+  },
+  {
+    "chapter": 25,
+    "before": "U_{\\text{surge}} = 1 - \\frac{\\text{SM}}{\\text{SM}_{\\text{design}}}",
+    "after": "U_{\\text{surge}} = \\frac{\\text{SM}_{\\text{min}}}{\\text{SM}}\\quad (\\text{SM}>0)"
+  },
+  {
+    "chapter": 25,
+    "before": "### 25.6.2 Power Utilization",
+    "after": "At the minimum positive margin this ratio is one. Treat zero/negative margin as a violation rather than evaluating a negative utilization; a missing map is unavailable evidence. This is an explicit engineering ratio, not a promise that every NeqSim constraint supplier uses the same normalization.\n\n### 25.6.2 Power Utilization"
+  },
+  {
+    "chapter": 25,
+    "before": "A 2–3% drop in polytropic efficiency from the as-new baseline typically triggers a maintenance recommendation.",
+    "after": "Correct for gas properties, speed and operating point before attributing efficiency changes to degradation. Maintenance thresholds require uncertainty, vendor guidance and a cost/availability assessment."
+  },
+  {
+    "chapter": 25,
+    "before": "Tracking $R_f$ over time provides a direct measure of fouling progression. Typical fouling rates range from 0.0001 to 0.001 m² K/W per year depending on the service (clean gas vs. crude oil vs. produced water).",
+    "after": "Back-calculated $R_f$ is an apparent resistance relative to the clean baseline. Changes in flow, properties, bypass, heat loss and sensor bias can imitate fouling; normalize or model these effects before estimating a growth rate."
+  },
+  {
+    "chapter": 25,
+    "before": "Exceeding the erosional velocity limit causes accelerated pipe wall thinning and eventual failure. Monitoring $U_v$ is especially important in wells and flowlines with sand production.",
+    "after": "The API velocity criterion is an empirical screen, not a prediction of wall-loss rate or proof of protection. Sand size/loading, impact geometry, corrosion and material response require a separate erosion assessment."
+  },
+  {
+    "chapter": 25,
+    "before": "These trends are gradual (months to years) but inexorable.",
+    "after": "These trends are scenario-dependent; pressure support, reservoir architecture and well interventions can change their direction."
+  },
+  {
+    "chapter": 25,
+    "before": "This section presents a comprehensive case study demonstrating how utilization monitoring reveals evolving constraints over a three-year period on a representative North Sea oil production platform.",
+    "after": "This section is an assumed three-year planning scenario, not a field dataset or output from the reduced compression example. The utilization tables illustrate interpretation only; the reproduced calculations later in the chapter have their own explicit inputs and do not validate these scenario values."
+  },
+  {
+    "chapter": 25,
+    "before": "Change from Year 1",
+    "after": "Change from Year 1 (percentage points)"
+  },
+  {
+    "chapter": 25,
+    "before": "Change from Year 2",
+    "after": "Change from Year 2 (percentage points)"
+  },
+  {
+    "chapter": 25,
+    "before": "The water treatment system is now in the yellow zone and trending upward.",
+    "after": "Water treatment is still green under the stated 70% threshold, but its upward trend warrants review."
+  },
+  {
+    "chapter": 25,
+    "before": "Consider wellhead compression to maintain wellhead flowing pressure",
+    "after": "Consider wellhead compression to lower the upstream backpressure seen by the well while meeting downstream delivery pressure"
+  },
+  {
+    "chapter": 25,
+    "before": "The net value of the monitoring system is the avoided deferment minus the cost of implementation. For a typical offshore platform, the monitoring system costs $0.5–2M to implement (software, instrumentation, engineering) and $0.2–0.5M/year to operate. The avoided production deferment of $25.5M provides a payback period of less than one month — making utilization monitoring one of the highest-return investments available to production operations.",
+    "after": "The 25.5 million USD figure is the undiscounted value of 182.5 days × 2,000 bbl/day × 70 USD/bbl under the assumed scenario. Deferred production is not necessarily permanently lost: value recovery timing, discounting and any lost reserves explicitly. No implementation costs, net present value or payback period have been measured here."
+  },
+  {
+    "chapter": 25,
+    "before": "the deferred production costs $25.5M.",
+    "after": "the deferred gross revenue is $25.5M before considering subsequent recovery."
+  },
+  {
+    "chapter": 25,
+    "before": "Calculate the gas capacity utilization $U_{\\text{gas}}$ and the liquid capacity utilization $U_{\\text{liquid}}$.",
+    "after": "Assume horizontal half-full geometry and standard gas density 0.80 kg/Sm³. Convert gas standard volume to mass and then actual volume before calculating $U_{\\text{gas}}$ and $U_{\\text{liquid}}$."
+  },
+  {
+    "chapter": 25,
+    "before": "Calculate the UA utilization and the fouling resistance.",
+    "after": "Assume heat-transfer area 1,000 m². Calculate the UA utilization and the apparent fouling resistance on this area basis."
+  },
+  {
+    "chapter": 26,
+    "before": "dynamic simulation (Chapter 20)",
+    "after": "dynamic simulation (Chapter 29)"
+  },
+  {
+    "chapter": 26,
+    "before": "Chapter 29 for advanced solver strategies",
+    "after": "Chapter 31 for advanced solver strategies"
+  },
+  {
+    "chapter": 26,
+    "before": "`ProductionOptimizer` (Chapter 25)",
+    "after": "`ProductionOptimizer` (Chapter 23)"
+  },
+  {
+    "chapter": 26,
+    "before": "These nonlinearities mean that simple linear programming (LP) is insufficient.",
+    "after": "These nonlinearities generally require a nonlinear model. A fixed-GOR, fixed-water-cut allocation approximation can be linear, as demonstrated in Section 26.11, provided its missing network coupling is explicit."
+  },
+  {
+    "chapter": 26,
+    "before": "**Vogel's equation** (1968) accounts for this effect:",
+    "after": "**Vogel's equation** (1968) is an empirical saturated solution-gas-drive IPR approximation. For an initially undersaturated reservoir with $p_r>p_b$, use a composite linear/Vogel relation rather than applying the saturated formula across the whole pressure range:"
+  },
+  {
+    "chapter": 26,
+    "before": "For $n = 1$, this reduces to a form similar to Darcy flow for gas wells. For $n = 0.5$, it represents fully turbulent (non-Darcy) flow.",
+    "after": "The fitted exponent describes test response. Its limiting values resemble linear/quadratic resistance when using a pressure-squared gas formulation, but they do not uniquely identify a turbulence regime in an oil well."
+  },
+  {
+    "chapter": 26,
+    "before": "For wells where non-Darcy flow near the wellbore is significant (high-rate gas wells, gravel-packed wells),",
+    "after": "For liquid wells where inertial near-wellbore pressure loss is significant (for example gravel-packed completions),"
+  },
+  {
+    "chapter": 26,
+    "before": "The first term represents viscous pressure drop; the second represents inertial pressure drop near the wellbore.",
+    "after": "The first term represents viscous pressure loss and the second inertial loss. For gas, use pressure-squared or gas pseudopressure differences with consistently fitted coefficient units; do not reuse the liquid pressure-difference coefficients."
+  },
+  {
+    "chapter": 26,
+    "before": "+ \\Delta p_{\\text{friction}} - \\Delta p_{\\text{acceleration}}",
+    "after": "+ \\Delta p_{\\text{friction}} + \\Delta p_{\\text{acceleration}}"
+  },
+  {
+    "chapter": 26,
+    "before": "steady-state energy equation for multiphase flow",
+    "after": "steady-state momentum balance for multiphase flow"
+  },
+  {
+    "chapter": 26,
+    "before": "\\frac{dp}{dz} = \\frac{g \\rho_m \\sin\\theta}{g_c} + \\frac{f \\rho_m v_m^2}{2 d} + \\rho_m v_m \\frac{dv_m}{dz}",
+    "after": "-\\frac{dp}{ds}=\\rho_h g\\sin\\theta+\\frac{f_D\\rho_fv_m^2}{2d}+\\rho_av_m\\frac{dv_m}{ds}"
+  },
+  {
+    "chapter": 26,
+    "before": "Here $\\rho_m$ is the mixture density, $v_m$ is the mixture velocity, $d$ is the tubing internal diameter, $f$ is the friction factor, $\\theta$ is the inclination angle, and $z$ is the distance along the flow path.",
+    "after": "Here $s$ increases along the flow, $\\theta>0$ uphill, $f_D$ is Darcy friction factor and all quantities are SI. Holdup density $\\rho_h$ generally differs from the densities used in the friction/acceleration closure. The displayed balance is schematic; a named multiphase correlation supplies those closures."
+  },
+  {
+    "chapter": 26,
+    "before": "- Tubing head pressure $p_{th}$ (for VFPPROD tables) or bottomhole pressure (for VFPINJ tables)",
+    "after": "- Tubing-head pressure at a defined reference location (both production and injection tables store BHP responses; the axis sets and flow direction differ)"
+  },
+  {
+    "chapter": 26,
+    "before": "At sufficiently high pressure ratios,",
+    "after": "At sufficiently low downstream-to-upstream pressure ratios,"
+  },
+  {
+    "chapter": 26,
+    "before": "In critical flow, the choke acts as a **decoupler** — upstream pressure variations do not propagate downstream, and vice versa.",
+    "after": "For ideal single-phase gas choking, further downstream-pressure reductions do not increase the mass flow while upstream stagnation state and throat area remain fixed. Upstream changes still alter flow and downstream conditions; this is not two-way hydraulic decoupling. The ideal-nozzle ratio is not a universal multiphase choke criterion."
+  },
+  {
+    "chapter": 26,
+    "before": "- Optimization of wells in critical flow requires only adjusting the choke opening, not re-solving the entire network",
+    "after": "- Even if a well remains choked, recompute the downstream network, phase rates and facility constraints for each changed allocation"
+  },
+  {
+    "chapter": 26,
+    "before": "and repeat until all constraints are active.",
+    "after": "and repeat until no feasible improving move is found. An optimum generally leaves many constraints inactive."
+  },
+  {
+    "chapter": 26,
+    "before": "This greedy algorithm converges to the global optimum because the gas lift performance curves are concave (diminishing returns).",
+    "after": "For separable concave response curves with one shared budget and simple bounds, a properly solved equal-slope allocation has a global certificate. Discrete greedy steps give only a step-size approximation; coupled network constraints invalidate the simple guarantee. Chapter 22 includes a native allocation with independent KKT and grid checks."
+  },
+  {
+    "chapter": 26,
+    "before": "where $q_{o,\\text{max}}$ is the maximum achievable oil rate with unlimited gas lift and $\\alpha$ is a well-specific constant that depends on the well depth, tubing size, reservoir deliverability, and fluid properties.",
+    "after": "This exponential is only an assumed monotone response with zero natural-flow intercept. It cannot describe the falling branch at excessive injection or infer a maximum from tubing physics. Fit a nonzero base and a friction-loss term or tabulate a qualified well response when those effects matter."
+  },
+  {
+    "chapter": 26,
+    "before": "- The bubble point pressure at separator temperature (to maintain single-phase liquid oil)",
+    "after": "- Product stability, flash-gas handling and downstream minimum-pressure requirements; separation intentionally permits flashing below the feed bubble point"
+  },
+  {
+    "chapter": 26,
+    "before": "This sensitivity is negative (lower separator pressure yields more production) and its magnitude depends on the network geometry and well characteristics. Typical values range from 50–500 Sm³/d per bar for oil-producing platforms.",
+    "after": "For a supply-limited stable branch this derivative is often negative. Facility constraints, lift behavior and phase changes can alter the overall response; evaluate it rather than assuming a universal magnitude or sign."
+  },
+  {
+    "chapter": 26,
+    "before": "Subsea networks have flow assurance constraints that do not apply to topside systems:",
+    "after": "Subsea networks face especially demanding flow-assurance constraints, although hydrates and wax can also affect topside systems:"
+  },
+  {
+    "chapter": 26,
+    "before": "This algorithm naturally handles multiple constraints",
+    "after": "A simple single-resource rank does not solve general multi-resource allocation. A full constrained solve or valid multiplier update is needed as constraints interact. Sequential rate bumping can be used as a heuristic"
+  },
+  {
+    "chapter": 26,
+    "before": "For a gas-handling constraint:",
+    "after": "For a single active gas constraint and wells strictly inside their bounds (with a separable response):"
+  },
+  {
+    "chapter": 26,
+    "topic": "Replaced fabricated 6-well result with solved LP, independent dual certificate and fresh NeqSim compression replay"
+  },
+  {
+    "chapter": 26,
+    "before": "The case study demonstrated that well allocation optimization can recover significant production compared to naive equal-rate or proportional-rate strategies, particularly when wells have different GOR and water cut characteristics.",
+    "after": "The case study demonstrates a certified allocation optimum for fixed fluid-yield assumptions and a checked NeqSim compression duty. The remaining hydraulic and reservoir coupling is stated explicitly."
+  }
+]

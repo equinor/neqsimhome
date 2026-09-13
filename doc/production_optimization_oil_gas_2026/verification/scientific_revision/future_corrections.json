@@ -1,0 +1,327 @@
+{
+  "changes": [
+    {
+      "before": "two primary routes for hydrogen production from natural gas \u2014 blue hydrogen (SMR/ATR with CCS) and green hydrogen (electrolysis powered by renewables)",
+      "after": "two hydrogen pathways \u2014 natural-gas reforming with CCS, and water electrolysis powered by renewable electricity"
+    },
+    {
+      "before": "Traditional production optimization minimizes a single objective \u2014 often maximizing",
+      "after": "A conventional production optimization may maximize a scalar objective such as"
+    },
+    {
+      "before": "where $w_i$ are weighting factors reflecting corporate strategy and regulatory requirements,",
+      "after": "Use a common currency, valuation date and discounted time basis for every cost/revenue term; exclude energy and carbon costs from the production NPV term if they are subtracted separately. Here $w_i$ are explicitly declared preference factors,"
+    },
+    {
+      "pattern": "\\| Carbon Price .*?\\*Table 35\\.1:.*?\\*",
+      "after": "A carbon price changes economics through the emissions difference between alternatives. There is no universal price at which electrification, CCS or hydrogen becomes profitable: utility price, plant scale, load factor, capture boundary, transport/storage costs and financing all matter. Use a discounted cash-flow comparison with explicit uncertainty, rather than the former unsupported technology-threshold table."
+    },
+    {
+      "before": "The major sources of CO$_2$ emissions from oil and gas production are:",
+      "after": "Major greenhouse-gas sources include combustion CO\u2082, methane releases and separated reservoir CO\u2082. Report chemical species and conversion to CO\u2082-equivalent separately:"
+    },
+    {
+      "before": "Redesign processes to avoid emissions (e.g., replace gas turbines with electric motors)",
+      "after": "Avoid on-site combustion where appropriate; include the electricity supply\u2019s emissions in a consistent system boundary"
+    },
+    {
+      "before": "Compression is the largest energy consumer on most production platforms, accounting for 60\u201380% of total power demand.",
+      "after": "Compression can dominate platform shaft-power demand, but its share must be calculated for the defined plant and operating state."
+    },
+    {
+      "before": "typically 2.75 kg CO$_2$/kg natural gas for methane",
+      "after": "approximately 2.744 kg CO$_2$/kg pure methane for complete combustion; calculate the actual mixture carbon content"
+    },
+    {
+      "pattern": "\\Delta \\\\dot\\{m\\}_\\{\\\\text\\{CO\\}_2\\} =.*?\\n\\$\\$",
+      "after": "\\Delta \\dot m_{\\mathrm{CO_2}}=\n\\dot m_{\\mathrm{CO_2,GT}}-\n\\frac{W_{\\mathrm{shaft}}}{\\eta_{\\mathrm{motor}}\\eta_{\\mathrm{delivery}}}\n\\,EF_{\\mathrm{electricity}}\n$$"
+    },
+    {
+      "before": "For Norwegian power-from-shore (essentially zero-carbon hydroelectric grid), the reduction is nearly 100% of turbine emissions.",
+      "after": "Here the electricity factor must use units consistent with electrical power (for example kg CO\u2082e/kWh with kW gives kg CO\u2082e/hr). Include motor and delivery losses, the stated grid factor and allocation method; low-carbon supply can greatly reduce emissions but is not automatically zero-carbon. On-site Scope 1 reduction and full-system reduction are different quantities."
+    },
+    {
+      "before": "Global flaring burned approximately 140 billion cubic meters of gas in 2023, equivalent to 270 million tonnes of CO$_2$ emissions.",
+      "after": "The World Bank reports 148 billion m\u00b3 flared in 2023 and approximately 381 million tonnes CO\u2082-equivalent including unburned methane. Its June 2026 data release reports 167 billion m\u00b3 for 2025. Keep the year and CO\u2082-versus-CO\u2082e basis attached to each number \\cite{worldbankflaring2024,worldbankflaring2026}."
+    },
+    {
+      "before": "NeqSim can model the flare header system and predict when the gas handling system will be overwhelmed:",
+      "after": "The following steady-state example imposes an 80/20 compressor/flare split and checks the diverted mass and complete-combustion carbon accounting with the native `Flare` class. It is not a calculated transient surge, header hydraulic limit or radiation/dispersion assessment:"
+    },
+    {
+      "before": "Methane pyrolysis is particularly attractive as it produces solid carbon (no CO$_2$):",
+      "after": "Methane pyrolysis produces solid carbon rather than CO\u2082 in the reaction itself. Lifecycle emissions still depend on energy supply, methane leakage and the fate of the solid carbon:"
+    },
+    {
+      "before": "Electrification of compression using renewable power can reduce platform CO$_2$ emissions by 50\u201380%.",
+      "after": "Calculate the emissions change from time-resolved power dispatch, efficiency and energy-source emission factors; no universal reduction percentage is implied."
+    },
+    {
+      "before": "gas sweetening process described in Chapter 22",
+      "after": "gas sweetening process described in Chapter 33"
+    },
+    {
+      "before": "The energy penalty for CO$_2$ capture is significant \u2014 typically 15\u201325% of the gas turbine power output is consumed by the capture plant's reboiler duty and compression.",
+      "after": "Capture requires both heat and electrical/shaft work. A reboiler duty is thermal energy, so it cannot simply be deducted from turbine electrical output; model steam extraction, waste-heat recovery, heat pumps or other utility conversion explicitly."
+    },
+    {
+      "before": "The CO$_2$ is compressed to supercritical conditions (typically >80 bara) for pipeline transport in dense phase.",
+      "after": "Dense transport can be liquid-like below the critical temperature or supercritical above it. Pressure above 80 bara alone does not establish a supercritical or qualified single-phase state, especially for mixtures."
+    },
+    {
+      "before": "31.1\u00b0C and 73.8 bar",
+      "after": "approximately 30.98\u00b0C and 73.77 bara \\cite{nistco2properties}"
+    },
+    {
+      "before": "The CO$_2$ is miscible with crude oil above a minimum miscibility pressure (MMP),",
+      "after": "For a specified oil, injection composition, temperature and multicontact displacement process, a minimum miscibility pressure (MMP) may be established; above it, multicontact miscibility can develop,"
+    },
+    {
+      "before": "or, more accurately, from slim-tube simulations using equation of state calculations.",
+      "after": "or from a calibrated multicontact/slim-tube calculation compared with independent displacement data. Greater model detail alone does not ensure greater accuracy."
+    },
+    {
+      "before": "ATR produces a higher-concentration CO$_2$ stream than SMR, making CCS more efficient.",
+      "after": "The displayed partial-oxidation reaction is one contribution to ATR, which combines oxidation, reforming and shift chemistry. Oxygen-blown ATR places much of the carbon in a pressurized syngas stream; capture performance depends on the full flowsheet and capture boundary, including furnace emissions for SMR."
+    },
+    {
+      "before": "where $W_{\\text{CCS}}$ is the energy consumed by the CCS system (compression, capture). Typical values are 60\u201370% for SMR+CCS and 65\u201375% for ATR+CCS.",
+      "after": "All denominator terms must be powers on the same energy basis. Include total methane feed **and fuel**, externally supplied heat, oxygen production, compression and auxiliary electricity without double counting. Report LHV versus HHV explicitly. The abbreviated formula is a boundary definition, not an efficiency prediction; lifecycle emissions also include uncaptured carbon and upstream methane."
+    },
+    {
+      "before": "### 35.4.2 Blue Hydrogen Model in NeqSim",
+      "after": "### 35.4.2 Syngas Conditioning Submodel"
+    },
+    {
+      "before": "The following example demonstrates a simplified blue hydrogen production model using NeqSim's thermodynamic capabilities:",
+      "after": "The following model conditions a prescribed wet syngas and compresses it. It does not simulate reforming, shift, CO\u2082 capture or hydrogen purification. The total stream rate is therefore a mixed-syngas rate, not a hydrogen product rate. Native reactor classes such as `CatalyticTubeReformer` and `AutothermalReformer` provide separate reaction-model capabilities requiring their own feed, heat/oxygen and reaction acceptance checks \\cite{neqsim2026update}."
+    },
+    {
+      "before": "2\\text{H}_2\\text{O} \\rightarrow 2\\text{H}_2 + \\text{O}_2 \\quad \\Delta H = +286 \\text{ kJ/mol}",
+      "after": "\\text{H}_2\\text{O}_{(l)} \\rightarrow \\text{H}_2 + \\tfrac12\\text{O}_2 \\quad \\Delta H_{298}^{\\circ}\\approx+285.83\\ \\text{kJ/mol H}_2"
+    },
+    {
+      "pattern": "\\| Technology \\| Operating Temp.*?\\*Table 35\\.3:.*?\\*",
+      "after": "Alkaline, proton-exchange-membrane and solid-oxide electrolyzers have different temperature, materials and heat-supply requirements. Compare efficiency only at a shared HHV/LHV and stack/system boundary. High-temperature electrolysis can use supplied heat to reduce electrical work; ignoring that heat would overstate total-energy efficiency."
+    },
+    {
+      "pattern": "E_\\{\\\\text\\{specific\\}\\} =.*?where \\$F\\$ is Faraday\\'s constant and \\$\\\\eta\\$ is the cell efficiency\\.",
+      "after": "E_{\\mathrm{specific,DC}}=\n\\frac{2F V_{\\mathrm{cell}}}{\\eta_F M_{\\mathrm{H_2}}\\,3.6\\times10^6}\n\\quad[\\mathrm{kWh/kg}]\n$$\n\nHere $F$ is C/mol, $V_{\\mathrm{cell}}$ is volts, $\\eta_F$ is Faradaic efficiency and $M_{\\mathrm{H_2}}$ is kg/mol. Add rectifier, auxiliaries and compression at the system boundary. Alternatively an HHV efficiency gives $E_{\\mathrm{specific}}\\approx39.4/\\eta_{\\mathrm{HHV}}$ kWh/kg. The thermoneutral energy is distinct from reversible electrical work because heat can enter the electrolyzer \\cite{ivy2004electrolysis}."
+    },
+    {
+      "before": "up to 5\u201320 vol% depending on jurisdiction",
+      "after": "at a blend limit qualified for the specific network and end users"
+    },
+    {
+      "before": "It is a pure Java library with no native dependencies",
+      "after": "Its core simulation is Java; optional ONNX and Python integration can introduce native runtime dependencies"
+    },
+    {
+      "before": "from Chapter 21",
+      "after": "from Chapter 30"
+    },
+    {
+      "before": "(Chapter 21)",
+      "after": "(Chapter 30)"
+    },
+    {
+      "before": "in Chapter 21",
+      "after": "in Chapter 30"
+    },
+    {
+      "before": "Chapter 19.",
+      "after": "Chapter 22."
+    },
+    {
+      "before": "(adapted from SAE J3016 for automotive)",
+      "after": "(illustrative analogy only; SAE J3016 does not classify process-plant safety or operational assurance)"
+    },
+    {
+      "before": "Most production facilities currently operate at Level 0\u20131, with some advanced installations at Level 2.",
+      "after": "No survey of current installation maturity is supplied here."
+    },
+    {
+      "before": "This architecture ensures that predictions respect physical laws even when the ML component is uncertain, and significantly reduces the training data requirements compared to pure ML approaches.",
+      "after": "Adding an unconstrained residual does not preserve conservation or thermodynamic consistency. Enforce admissible variables and recompute dependent balances; then test prediction error and physical residuals independently. Reduced training-data requirements are a hypothesis to benchmark, not a guarantee."
+    },
+    {
+      "before": "BIPs change slowly (monthly recalibration), while fouling factors may change weekly.",
+      "after": "EOS binary interaction parameters are model parameters for a specified fluid description, not equipment aging indicators. Retune them against suitable phase/property data only when justified; do not fit composition errors or sensor drift into arbitrary monthly BIP changes. Equipment degradation has a different time scale and evidence basis."
+    },
+    {
+      "before": "exact gradients of any output with respect to any input",
+      "after": "derivatives of the implemented smooth numerical model with respect to its inputs"
+    },
+    {
+      "before": "provides exact gradients at $O(1)$ cost relative to the forward pass",
+      "after": "can compute a scalar-objective reverse derivative at a modest multiple of forward cost, with memory/checkpointing and solver costs accounted for"
+    },
+    {
+      "before": "In adjoint mode, the cost of computing $dL/d\\mathbf{x}$ is independent of the dimension of $\\mathbf{x}$ \u2014 it requires roughly the same computational effort as a single forward simulation, regardless of whether there are 10 or 10,000 input parameters.",
+      "after": "Reverse differentiation can avoid one full solve per input for a scalar objective. Its absolute cost still scales with model size and the number of operations, and memory/checkpointing can be substantial. A full many-output Jacobian needs additional reverse seeds. For implicit process equations the adjoint also requires a transposed linear solve."
+    },
+    {
+      "before": "This approach avoids the numerical instabilities of differentiating through iteration histories and is applicable to any iterative solver",
+      "after": "This expression requires a sufficiently converged smooth residual and nonsingular state Jacobian. At phase appearance, active-set changes or critical singularities, derivatives may be discontinuous or undefined. It can be applied to eligible implicit models"
+    },
+    {
+      "before": "with confidence that the physical constraints (thermodynamic equilibrium, conservation laws, equipment capacity) are respected.",
+      "after": "provided each candidate is independently checked for model convergence, balance closure and the declared equipment limits."
+    },
+    {
+      "pattern": "Proprietary simulators, however capable, cannot serve as RL training environments.*?An open-source simulator like NeqSim enables researchers to:",
+      "after": "Some proprietary simulators support scripted/RL integration subject to their APIs and licenses. Source availability improves inspectability, modification and redistribution. An open-source simulator like NeqSim enables researchers to:"
+    },
+    {
+      "before": "The simulator serves as a \"ground truth\" check on the AI's proposals.",
+      "after": "The simulator provides a numerical reference under its assumptions; independent data and balance/constraint checks are still required. It is not universal ground truth."
+    },
+    {
+      "before": "Such models are not yet available, but the trajectory of foundation model development \u2014 from text to images to code to scientific domains \u2014 suggests that domain-specific process engineering models will emerge within the coming decade.",
+      "after": "These are research directions rather than a verified ten-year delivery forecast. Evaluate any claimed process foundation model against reproducible domain-specific benchmarks and uncertainty tests."
+    },
+    {
+      "before": "a physics-based model degrades gracefully because the underlying physical laws remain valid.",
+      "after": "a physics-based model also can fail abruptly at omitted phase transitions, invalid constitutive ranges or numerical failures. Conservation laws remain valid, but equilibrium, transport closures and equipment assumptions are approximations."
+    },
+    {
+      "before": "The uncertainty in a physics-based model is primarily parametric (uncertainty in model parameters) rather than structural (uncertainty in the form of the model), making it amenable to systematic treatment.",
+      "after": "Both parameter uncertainty and structural discrepancy can dominate. Separate input uncertainty, parameter uncertainty, numerical error and model-form inadequacy; simulation alone does not bound missing physics."
+    },
+    {
+      "before": "C_v \\sim \\mathcal{N}(C_{v,\\text{design}}, 0.05 C_{v,\\text{design}})",
+      "after": "\\ln C_v \\sim \\mathcal{N}(\\ln C_{v,\\text{design}},0.05^2)"
+    },
+    {
+      "before": "Feed composition: individual component mole fractions perturbed by $\\pm5\\%$",
+      "after": "Feed composition: sample on the nonnegative simplex with declared correlations and renormalization"
+    },
+    {
+      "before": "When deployed on the real plant, the actual parameter values fall somewhere within the training distribution, and the agent's policy generalizes.",
+      "after": "Real operating states may fall outside this assumed distribution. Hold-out scenarios, distribution-shift tests and constraint checks are needed; randomization by itself provides no robust-feasibility or transfer guarantee."
+    },
+    {
+      "before": "As more data is collected, the posterior distribution narrows, reducing uncertainty and improving the fidelity of the simulation.",
+      "after": "Posterior concentration requires informative, sufficiently independent data, identifiable parameters and a suitable likelihood/model. Additional biased data or changing equipment can shift or broaden uncertainty instead."
+    },
+    {
+      "before": "The system should match or improve upon historical performance.",
+      "after": "Historical replay can test predictive consistency and decisions, but unobserved counterfactual outcomes cannot be proven from recorded operator actions alone; use a defensible causal or prospective evaluation."
+    },
+    {
+      "pattern": "Industry experience from pilot implementations of integrated optimization on NCS fields suggests:.*?\\*\\*The role of data and collaboration\\.\\*\\*",
+      "after": "No field pilot dataset is supplied, so no 2\u20135% uplift, 5\u201310% energy saving or 1\u20133-year intervention deferral is claimed. As an **assumed gross-revenue sensitivity**, 50,000 bbl/day \u00d7 3% \u00d7 USD 75/bbl \u00d7 365 days gives USD 41.06 million/year before decline, downtime, costs and tax. Energy and emissions benefits require separate balances.\n\n**The role of data and collaboration.**"
+    },
+    {
+      "before": "The Norwegian Petroleum Directorate maintains",
+      "after": "The Norwegian Offshore Directorate maintains"
+    },
+    {
+      "before": "demonstrates genuine understanding of the underlying physics.",
+      "after": "provides stronger evidence of transfer performance within the tested domains."
+    },
+    {
+      "before": "| CPA (SRK) | Cubic + association (in NeqSim) | Water, glycol, amines, methanol |",
+      "after": "| CPA (related association approach) | Cubic reference plus association; not a SAFT variant | Water, glycol and methanol; reactive amines need electrolyte chemistry |"
+    },
+    {
+      "before": "| SAFT-$\\gamma$ Mie | Group contribution SAFT | Predictive, no binary parameter fitting |",
+      "after": "| SAFT-$\\gamma$ Mie | Group-contribution parameters and unlike-group interactions | Prediction only within the validated parameter set |"
+    },
+    {
+      "before": "Future integration of full SAFT variants (PC-SAFT, SAFT-$\\gamma$ Mie) into NeqSim would enable:",
+      "after": "PC-SAFT is already implemented in the pinned source (`SystemPCSAFT`); broader parameterization and other SAFT variants remain separate development/validation work. Candidate applications include:"
+    },
+    {
+      "before": "This approach preserves thermodynamic consistency (the ML correction is added to a thermodynamically consistent base model) while improving accuracy for systems where the standard EOS is inadequate.",
+      "after": "An additive pressure correction alone does **not** preserve thermodynamic consistency. A differentiable Helmholtz/Gibbs energy correction with consistently derived pressure, chemical potentials and caloric derivatives is one route; stability, limits and experimental agreement still require checks."
+    },
+    {
+      "before": "This pipeline would enable truly predictive process simulation without requiring any fluid-specific experimental data \u2014 a transformational capability for early-stage field development and screening of novel processes.",
+      "after": "This pipeline can reduce dependence on fitted data, but quantum and coarse-grained models introduce approximations and parameter-transfer error. Independent fluid-specific validation remains necessary before consequential engineering decisions."
+    },
+    {
+      "before": "reduces operating costs and eliminates personnel exposure to hazards.",
+      "after": "can reduce staffing costs and routine personnel exposure; inspection, maintenance and emergency visits still create exposure."
+    },
+    {
+      "before": "with wider operating envelopes and better exception handling.",
+      "after": "within explicitly qualified operating envelopes and with tested exception handling."
+    },
+    {
+      "before": "| Cubic EOS (SRK, PR, GERG-2008) | Mature |",
+      "after": "| Cubic EOS (SRK, PR) and multiparameter Helmholtz GERG-2008 | Implemented; distinct model families and validity domains |"
+    },
+    {
+      "before": "| Standards compliance | Growing |",
+      "after": "| Standards-related calculation methods | Implemented methods require edition, scope and independent compliance review |"
+    },
+    {
+      "before": "The NeqSim project roadmap includes several areas aligned with the trends discussed in this chapter:",
+      "after": "The following research priorities are editorial suggestions, not a project delivery commitment. Current implemented optimizer, agent, dynamic and MCP capabilities are distinguished from research below:"
+    },
+    {
+      "before": "**Near-term (1\u20132 years)**",
+      "after": "**Near-term research priorities (no delivery commitment)**"
+    },
+    {
+      "before": "**Medium-term (3\u20135 years)**",
+      "after": "**Additional research priorities**"
+    },
+    {
+      "before": "**Long-term (5+ years)**",
+      "after": "**Longer-range research topics**"
+    },
+    {
+      "before": "Built-in multi-objective optimization with constraint handling",
+      "after": "Extend the already implemented multi-objective optimization and explicit constraint/evidence handling"
+    },
+    {
+      "before": "Simulation results can be exactly reproduced by anyone with access to the code",
+      "after": "Reproduction also requires the exact source revision, dependencies, inputs, numerical settings and external resources"
+    },
+    {
+      "before": "Plot the phase envelopes and identify the safe operating window.",
+      "after": "Plot the phase envelopes and distinguish the thermodynamic phase window from qualified transport limits."
+    },
+    {
+      "before": "the typical pipeline specification of 45\u201355 MJ/Sm$^3$",
+      "after": "an assumed teaching interval of 45\u201355 MJ/Sm$^3$ at the declared reference conditions"
+    },
+    {
+      "before": "Given a wind profile that provides 5 MW for 60% of the time and 0 MW for 40%, calculate:",
+      "after": "A duration percentage alone is insufficient to size storage. First construct and disclose a chronological wind profile with low-wind spell lengths, battery efficiency, power limits and initial/final state of charge; then calculate:"
+    },
+    {
+      "before": "Case Study 1 (Chapter 23)",
+      "after": "Case Study 1 (Chapter 34)"
+    },
+    {
+      "fence": 1,
+      "scope": "physical checks and corrected calculation basis"
+    },
+    {
+      "fence": 2,
+      "scope": "physical checks and corrected calculation basis"
+    },
+    {
+      "fence": 3,
+      "scope": "physical checks and corrected calculation basis"
+    },
+    {
+      "fence": 4,
+      "scope": "physical checks and corrected calculation basis"
+    },
+    {
+      "fence": 5,
+      "scope": "physical checks and corrected calculation basis"
+    },
+    {
+      "before": "### 35.4.4 Hydrogen Blending in Natural Gas Pipelines",
+      "after": "The native `Electrolyzer` can also be checked directly. This deliberately simple water-feed case uses unit Faradaic efficiency, 2.0 V and a 25\u00b0C thermoneutral heat approximation. It checks atom stoichiometry, electrical work and heat accounting. It excludes stack kinetics, gas crossover, auxiliaries and downstream compression; non-unit Faradaic-efficiency cases require accounting for unreacted water and side reactions rather than assuming a closed two-product balance.\n\n```python\nimport jpype\njneqsim=jpype.JPackage('neqsim')\nwater=jneqsim.thermo.Fluid().create('water')\nwater_feed=jneqsim.process.equipment.stream.Stream('Electrolysis water',water)\nwater_feed.setTemperature(298.15,'K');water_feed.setPressure(1.0,'bara')\nwater_feed.setFlowRate(2.0,'mole/sec');water_feed.run()\nelectrolyzer=jneqsim.process.equipment.electrolyzer.Electrolyzer('Teaching stack',water_feed)\nelectrolyzer.setCellVoltage(2.0);electrolyzer.setFaradaicEfficiency(1.0)\nelectrolyzer.run()\nh2=electrolyzer.getHydrogenOutStream();o2=electrolyzer.getOxygenOutStream()\nn_h2=float(h2.getFlowRate('mole/sec'));n_o2=float(o2.getFlowRate('mole/sec'))\nassert abs(n_h2-2.0)<1e-9 and abs(n_o2-1.0)<1e-9\nassert abs(2*n_h2-2*water_feed.getFlowRate('mole/sec'))<1e-9\nassert abs(2*n_o2-water_feed.getFlowRate('mole/sec'))<1e-9\npower=float(electrolyzer.getStackPower());heat=float(electrolyzer.getWasteHeat())\nexpected_power=n_h2*2*96485.3329*2.0\nassert abs(power-expected_power)<1e-6\nreaction_power=n_h2*285830.0 # J/mol H2, liquid water at25C\nassert abs(power-reaction_power-heat)/power<1e-3\nspecific_kWhkg=power/1000/float(h2.getFlowRate('kg/hr'))\nassert 52.0<specific_kWhkg<54.0\nprint('H2 mol/s, O2 mol/s, stack kW, rejected heat kW, DC kWh/kg:',\n      n_h2,n_o2,power/1000,heat/1000,specific_kWhkg)\n```\n\n### 35.4.4 Hydrogen Blending in Natural Gas Pipelines"
+    }
+  ],
+  "unmatched": [
+    "Identify the safe operating window."
+  ]
+}

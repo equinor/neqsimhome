@@ -1,0 +1,80 @@
+{
+  "chapter": "ch27_multi_scenario_optimization",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "execution_model": "sequential Python fences, fresh JVM per chapter",
+  "examples": [
+    {
+      "number": 1,
+      "language": "python",
+      "line": 182,
+      "sha256": "0d62b84440acae29e222d4df154bef67e10dc5cc759cf22a85c8ab4c4ff36275",
+      "status": "passed",
+      "seconds": 3.516,
+      "output": "Created 5 scenarios\n  Low rate, low water mole fraction: probability = 0.15\n  Base case: probability = 0.40\n  High rate: probability = 0.20\n  High water mole fraction: probability = 0.15\n  Late life depleted: probability = 0.10\n"
+    },
+    {
+      "number": 2,
+      "language": "python",
+      "line": 256,
+      "sha256": "1048470f571f0ee99b9b24df422a0429b6b337124402d65e9ee5ef91655e033d",
+      "status": "passed",
+      "seconds": 18.984,
+      "output": "neqsim.process.util.optimizer.ProductionOptimizer$ScenarioComparisonResult@726a17c4\n"
+    },
+    {
+      "number": 3,
+      "language": "python",
+      "line": 295,
+      "sha256": "6aeef9d65fc156da48c6e28dc418993e83dc4cfd3ac28ff3dedf8f34743ce647",
+      "status": "passed",
+      "seconds": 0.016,
+      "output": "VFP table dimensions:\n  Rates: 5 points\n  THP: 6 points\n  Water cuts: 6 points\n  GORs: 4 points\n  Total evaluations: 720\n"
+    },
+    {
+      "number": 4,
+      "language": "python",
+      "line": 372,
+      "sha256": "d4563b93411620afce6c9d112e54a0ace199835d1e01df06af11d44b7078f869",
+      "status": "passed",
+      "seconds": 30.062,
+      "output": "Gas rate CDF P10/P50/P90 kg/hr: [24622.80136632 38088.59461162 52731.17496653]\n"
+    },
+    {
+      "number": 5,
+      "language": "python",
+      "line": 480,
+      "sha256": "f4534247f55d90e1d375a01487385d9439cae50b7a9500b5146a0d7f34196a24",
+      "status": "passed",
+      "seconds": 1.813,
+      "output": "{\n  \"base_gas_kghr\": 39353.10572530252,\n  \"base_power_kW\": 1526.3616973544886,\n  \"ranked_swings_kghr\": [\n    [\n      \"Feed rate (kg/hr)\",\n      34433.96750963968\n    ],\n    [\n      \"Water mole fraction (-)\",\n      14186.33046184984\n    ],\n    [\n      \"Feed pressure (bara)\",\n      1951.1413675448275\n    ],\n    [\n      \"Temperature (C)\",\n      1238.1575341965436\n    ],\n    [\n      \"Isentropic efficiency (-)\",\n      0.0\n    ]\n  ]\n}\n"
+    },
+    {
+      "number": 6,
+      "language": "python",
+      "line": 584,
+      "sha256": "45cc5159553b232eac620723f158a77843917fd000f348b6c4f26b210d6b4cdb",
+      "status": "passed",
+      "seconds": 0.015,
+      "output": "376.56000000000006 510.0 649.2 1.0\n"
+    },
+    {
+      "number": 7,
+      "language": "python",
+      "line": 605,
+      "sha256": "20b3e0c3b80e0de2e09f5081e7f0dcac6fb9e7170185a955177f75a876e53f1d",
+      "status": "passed",
+      "seconds": 0.016,
+      "output": "[80.0, 120.0, 160.0]\n"
+    },
+    {
+      "number": 8,
+      "language": "python",
+      "line": 746,
+      "sha256": "7b644188dfaf9e6a6b86cfa6889c2cfeebef57fc30553cf3d27df258a4f3bea6",
+      "status": "passed",
+      "seconds": 9.422,
+      "output": "{\n  \"Conservative\": {\n    \"N\": 200,\n    \"npv_cdf_P10_P50_P90_MNOK\": [\n      26799.680981055702,\n      42572.618177312674,\n      63551.70832926569\n    ],\n    \"probability_negative_sample\": 0.0,\n    \"mean_npv_MNOK\": 44139.78212645974,\n    \"recovery_cdf_P10_P50_P90\": [\n      0.6141312832067639,\n      0.6668016836847455,\n      0.7154885136929812\n    ],\n    \"total_gas_cdf_P10_P50_P90_GSm3\": [\n      58.677642234720906,\n      68.393221257165,\n      77.23549952068295\n    ],\n    \"max_relative_mass_error\": 5.213776599685469e-16\n  },\n  \"Aggressive\": {\n    \"N\": 200,\n    \"npv_cdf_P10_P50_P90_MNOK\": [\n      30946.097682060416,\n      50776.62036414444,\n      81058.62912309937\n    ],\n    \"probability_negative_sample\": 0.0,\n    \"mean_npv_MNOK\": 53631.0037301327,\n    \"recovery_cdf_P10_P50_P90\": [\n      0.7306055509416135,\n      0.760076423665207,\n      0.78045215797952\n    ],\n    \"total_gas_cdf_P10_P50_P90_GSm3\": [\n      64.0054139958619,\n      77.96033147680176,\n      91.88376705154353\n    ],\n    \"max_relative_mass_error\": 5.298468117601663e-16\n  },\n  \"gip_cdf_P10_P50_P90_GSm3\": [\n    82.01071810496107,\n    102.569077281621,\n    125.76387772154028\n  ]\n}\n"
+    }
+  ]
+}

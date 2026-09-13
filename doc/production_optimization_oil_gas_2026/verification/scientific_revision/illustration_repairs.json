@@ -1,0 +1,1471 @@
+[
+  {
+    "chapter": "ch04_reservoir_engineering",
+    "file": "horner_plot.png",
+    "path": "chapters\\ch04_reservoir_engineering\\figures\\horner_plot.png",
+    "sha256": "048ae0ab4e8aed157c477ed0ca1fd34976087ff9005435d15a312ec2a963809a",
+    "caption": "Analytical Horner buildup illustration with increasing shut-in time toward the right",
+    "discussion": "As shut-in time increases, the Horner ratio approaches one and the modeled pressure rises toward 330 bara. The 10 bar-per-decade slope and 100 h preceding production time are specified teaching inputs; no measured well test is represented.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "tp_h": 100.0,
+      "slope_bar_per_decade": 10.0,
+      "pressure_star_bara": 330.0
+    },
+    "checks": {
+      "pressure_increases_with_shutin_time": true
+    }
+  },
+  {
+    "chapter": "ch04_reservoir_engineering",
+    "file": "nodal_analysis.png",
+    "path": "chapters\\ch04_reservoir_engineering\\figures\\nodal_analysis.png",
+    "sha256": "7d8ef9e93e5535daf4da59d6dfd3b6f48ddb5096e10424cf6a0c26d980ba0ecd",
+    "caption": "Checked analytical nodal intersections with fixed hydrostatic head and diameter-dependent friction",
+    "discussion": "This illustrative incompressible limit holds wellhead plus hydrostatic pressure at 60 bara and friction proportional to rate squared divided by diameter to the fifth power. Larger diameter lowers the required BHP at a fixed rate and raises the intersection rate. Multiphase wells require the coupled model developed in Chapters 5\u20138.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "diameters_in": [
+        3.5,
+        4.5,
+        5.5
+      ],
+      "intersection_m3_day": [
+        2497.8986772920794,
+        3268.139372653459,
+        3662.921148034056
+      ]
+    },
+    "checks": {
+      "root_pressure_residual_bar": 1e-09,
+      "diameter_order_verified": true
+    }
+  },
+  {
+    "chapter": "ch05_well_performance",
+    "file": "log_diagnostic.png",
+    "path": "chapters\\ch05_well_performance\\figures\\log_diagnostic.png",
+    "sha256": "2beaa5d163328ed5bfbbcb5fab599cc751ee1521520a5c53c85e4417e7478ff5",
+    "caption": "Analytical log\u2013log pressure and logarithmic-derivative curves with a radial-flow plateau",
+    "discussion": "The early-time pressure and derivative approach a unit-slope trend; the derivative then approaches 10 bar before a deliberately imposed late boundary response. The derivative is evaluated from the same pressure function and checked by numerical differentiation. This is a diagnostic-shape illustration, not a reservoir test interpretation.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "pressure_formula": "10*ln(1+t/0.1)+5*max(t/100-1,0)^2"
+    },
+    "checks": {
+      "derivative_relative_error_below": 0.002
+    }
+  },
+  {
+    "chapter": "ch13_produced_water_treatment",
+    "file": "water_lifecycle_profile.png",
+    "path": "chapters\\ch13_produced_water_treatment\\figures\\water_lifecycle_profile.png",
+    "sha256": "368dd53475843e0f7ad21da97feed984d0558fccb4adb1a46d6c383625c57752",
+    "caption": "Specified oil/water production scenario with water cut calculated from the same liquid volumes",
+    "discussion": "Water cut is water volume divided by total liquid volume on the common stated reference basis. The scenario uses an assumed exponential oil-rate decline and linear water-rate increase; it illustrates treatment load and is not a NeqSim reservoir forecast or field history.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "year": [
+        2026,
+        2027,
+        2028,
+        2029,
+        2030,
+        2031,
+        2032,
+        2033,
+        2034,
+        2035,
+        2036,
+        2037,
+        2038,
+        2039,
+        2040,
+        2041,
+        2042,
+        2043,
+        2044,
+        2045,
+        2046
+      ],
+      "oil_thousand_m3_day": [
+        18.0,
+        16.86721434079326,
+        15.805717756570104,
+        14.811023845008332,
+        13.878928544464193,
+        13.0054923655573,
+        12.187023740966964,
+        11.420063423068108,
+        10.7013698634635,
+        10.02790551261913,
+        9.396823981698288,
+        8.805458012333967,
+        8.251308203494023,
+        7.732032447793305,
+        7.245436032605447,
+        6.789462364136824,
+        6.362184275258043,
+        5.961795880355657,
+        5.586604942778731,
+        5.235025722621328,
+        4.905572274612227
+      ],
+      "water_thousand_m3_day": [
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        11.0,
+        12.0,
+        13.0,
+        14.0,
+        15.0,
+        16.0,
+        17.0,
+        18.0,
+        19.0,
+        20.0,
+        21.0,
+        22.0,
+        23.0
+      ],
+      "water_cut_pct": [
+        14.285714285714286,
+        19.168825961500815,
+        24.03185537024351,
+        28.83087369792785,
+        33.52662463063014,
+        38.085277225482216,
+        42.47883095820444,
+        46.68520257148542,
+        50.688044437782885,
+        54.476354972221756,
+        58.04394413521772,
+        61.38881311845754,
+        64.51249911927931,
+        67.41942577062228,
+        70.11628900853039,
+        72.61149812607792,
+        74.91468319049854,
+        77.03627319223038,
+        78.98714426004165,
+        80.77833384136247,
+        82.42081464469665
+      ]
+    },
+    "checks": {
+      "water_cut_identity": true
+    }
+  },
+  {
+    "chapter": "ch16_heat_exchangers",
+    "file": "composite_curves.png",
+    "path": "chapters\\ch16_heat_exchangers\\figures\\composite_curves.png",
+    "sha256": "9f30d2c98bc5c2912324cb62c937ffcdeb7929835a4614128f6ff618ff2cb88b",
+    "caption": "Specified noncrossing hot and cold composite curves with a 25 K minimum vertical temperature gap",
+    "discussion": "Both composites increase with their cumulative enthalpy coordinate. Their closest vertical separation is 25 K at 5 MW in this constructed example. Utility targets require the underlying stream heat-capacity flows, temperature intervals and enthalpy alignment; this diagram alone is not a solved plant heat-integration study.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "enthalpy_MW": [
+        0.0,
+        2.0,
+        5.0,
+        8.0,
+        12.0
+      ],
+      "hot_C": [
+        65.0,
+        85.0,
+        115.0,
+        165.0,
+        205.0
+      ],
+      "cold_C": [
+        30.0,
+        55.0,
+        90.0,
+        125.0,
+        155.0
+      ]
+    },
+    "checks": {
+      "minimum_gap_K": 25
+    }
+  },
+  {
+    "chapter": "ch18_power_production",
+    "file": "brayton_cycle_ts.png",
+    "path": "chapters\\ch18_power_production\\figures\\brayton_cycle_ts.png",
+    "sha256": "59f89427c54bc05c48e8a6519f176c17bba39f81a1dade9482332d4bbb138e4c",
+    "caption": "Checked ideal Brayton cycle with isentropic compression/expansion and constant-pressure heat transfer",
+    "discussion": "The two vertical legs are isentropic and both use pressure ratio 10. Constant-pressure heating and cooling satisfy ds = cp dT/T. With the specified constant heat capacities, thermal efficiency is 48.21 percent. Real turbine performance requires irreversible component models, pressure losses and temperature-dependent properties.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "T_K": [
+        300.0,
+        579.209318664975,
+        1400.0,
+        725.1264550923697
+      ],
+      "pressure_ratio": 10.0,
+      "cp_kJ_kg_K": 1.005,
+      "efficiency": 0.4820525320768787
+    },
+    "checks": {
+      "pressure_ratio_consistency": true,
+      "cycle_efficiency_identity": true
+    }
+  },
+  {
+    "chapter": "ch20_capacity_checks_and_utilization",
+    "file": "utilization_vs_production.png",
+    "path": "chapters\\ch20_capacity_checks_and_utilization\\figures\\utilization_vs_production.png",
+    "sha256": "9c5682e1e7a4971f4ae75e2ddf11b92ee666d866845b1c24f7f3cb6c65bf2b47",
+    "caption": "Unclipped utilization for three explicitly assumed independent equipment ratings",
+    "discussion": "Utilization is demand divided by a fixed rating. At a demand above 92 percent of reference, the assumed compressor limit is exceeded; curves remain above 100 percent so the overload is visible. These ratings illustrate constraint arithmetic and do not establish installed-equipment capacity.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "capacities_pct_reference": [
+        105.0,
+        92.0,
+        100.0
+      ]
+    },
+    "checks": {
+      "overload_values_retained": true
+    }
+  },
+  {
+    "chapter": "ch22_production_optimization_theory",
+    "file": "pareto_front_oil_vs_power.png",
+    "path": "chapters\\ch22_production_optimization_theory\\figures\\pareto_front_oil_vs_power.png",
+    "sha256": "c25a1c5296216485a12bff81025517f8f7abc0dc58bf6f210721b333a086afa7",
+    "caption": "Explicitly enumerated synthetic Pareto set; the selected point passes a nondominance check",
+    "discussion": "The alternatives use the declared teaching relation P = 14 + 8\u00d710\u207b\u2077(q \u2212 3000)\u00b2 MW, with additional dominated alternatives placed above it. Oil rate is maximized and power minimized. The selected point minimizes squared normalized distance to the ideal objective values within the enumerated front; it is a preference choice, not a NeqSim field optimum.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "points": [
+        [
+          3000.0,
+          14.0
+        ],
+        [
+          3022.4719101123596,
+          14.000403989395279
+        ],
+        [
+          3044.9438202247193,
+          14.001615957581114
+        ],
+        [
+          3067.4157303370785,
+          14.003635904557505
+        ],
+        [
+          3089.887640449438,
+          14.006463830324455
+        ],
+        [
+          3112.3595505617977,
+          14.01009973488196
+        ],
+        [
+          3134.8314606741574,
+          14.014543618230022
+        ],
+        [
+          3157.303370786517,
+          14.019795480368641
+        ],
+        [
+          3179.775280898876,
+          14.025855321297815
+        ],
+        [
+          3202.247191011236,
+          14.032723141017549
+        ],
+        [
+          3224.7191011235955,
+          14.040398939527837
+        ],
+        [
+          3247.191011235955,
+          14.048882716828683
+        ],
+        [
+          3269.6629213483147,
+          14.058174472920086
+        ],
+        [
+          3292.134831460674,
+          14.068274207802045
+        ],
+        [
+          3314.6067415730336,
+          14.07918192147456
+        ],
+        [
+          3337.078651685393,
+          14.090897613937635
+        ],
+        [
+          3359.550561797753,
+          14.103421285191263
+        ],
+        [
+          3382.0224719101125,
+          14.11675293523545
+        ],
+        [
+          3404.494382022472,
+          14.130892564070193
+        ],
+        [
+          3426.9662921348317,
+          14.145840171695493
+        ],
+        [
+          3449.438202247191,
+          14.16159575811135
+        ],
+        [
+          3471.9101123595506,
+          14.178159323317763
+        ],
+        [
+          3494.38202247191,
+          14.195530867314734
+        ],
+        [
+          3516.85393258427,
+          14.21371039010226
+        ],
+        [
+          3539.3258426966295,
+          14.232697891680344
+        ],
+        [
+          3561.7977528089887,
+          14.252493372048983
+        ],
+        [
+          3584.2696629213483,
+          14.27309683120818
+        ],
+        [
+          3606.741573033708,
+          14.294508269157935
+        ],
+        [
+          3629.2134831460676,
+          14.316727685898245
+        ],
+        [
+          3651.685393258427,
+          14.339755081429113
+        ],
+        [
+          3674.1573033707864,
+          14.363590455750536
+        ],
+        [
+          3696.629213483146,
+          14.388233808862518
+        ],
+        [
+          3719.1011235955057,
+          14.413685140765056
+        ],
+        [
+          3741.5730337078653,
+          14.43994445145815
+        ],
+        [
+          3764.044943820225,
+          14.4670117409418
+        ],
+        [
+          3786.516853932584,
+          14.494887009216008
+        ],
+        [
+          3808.9887640449438,
+          14.523570256280772
+        ],
+        [
+          3831.4606741573034,
+          14.553061482136094
+        ],
+        [
+          3853.932584269663,
+          14.583360686781973
+        ],
+        [
+          3876.4044943820227,
+          14.614467870218407
+        ],
+        [
+          3898.876404494382,
+          14.646383032445398
+        ],
+        [
+          3921.3483146067415,
+          14.679106173462946
+        ],
+        [
+          3943.820224719101,
+          14.712637293271051
+        ],
+        [
+          3966.2921348314608,
+          14.746976391869714
+        ],
+        [
+          3988.7640449438204,
+          14.782123469258933
+        ],
+        [
+          4011.2359550561796,
+          14.818078525438708
+        ],
+        [
+          4033.7078651685397,
+          14.85484156040904
+        ],
+        [
+          4056.179775280899,
+          14.892412574169928
+        ],
+        [
+          4078.6516853932585,
+          14.930791566721373
+        ],
+        [
+          4101.123595505618,
+          14.969978538063376
+        ],
+        [
+          4123.595505617977,
+          15.009973488195934
+        ],
+        [
+          4146.067415730337,
+          15.050776417119051
+        ],
+        [
+          4168.539325842697,
+          15.092387324832723
+        ],
+        [
+          4191.011235955057,
+          15.134806211336953
+        ],
+        [
+          4213.483146067416,
+          15.178033076631738
+        ],
+        [
+          4235.955056179775,
+          15.22206792071708
+        ],
+        [
+          4258.426966292135,
+          15.26691074359298
+        ],
+        [
+          4280.898876404494,
+          15.312561545259436
+        ],
+        [
+          4303.370786516854,
+          15.35902032571645
+        ],
+        [
+          4325.842696629214,
+          15.40628708496402
+        ],
+        [
+          4348.314606741573,
+          15.454361823002145
+        ],
+        [
+          4370.786516853933,
+          15.50324453983083
+        ],
+        [
+          4393.258426966292,
+          15.55293523545007
+        ],
+        [
+          4415.730337078652,
+          15.603433909859866
+        ],
+        [
+          4438.202247191011,
+          15.65474056306022
+        ],
+        [
+          4460.6741573033705,
+          15.70685519505113
+        ],
+        [
+          4483.146067415731,
+          15.759777805832597
+        ],
+        [
+          4505.61797752809,
+          15.81350839540462
+        ],
+        [
+          4528.08988764045,
+          15.868046963767203
+        ],
+        [
+          4550.561797752809,
+          15.923393510920338
+        ],
+        [
+          4573.033707865168,
+          15.979548036864031
+        ],
+        [
+          4595.505617977528,
+          16.036510541598282
+        ],
+        [
+          4617.9775280898875,
+          16.09428102512309
+        ],
+        [
+          4640.449438202248,
+          16.152859487438455
+        ],
+        [
+          4662.921348314607,
+          16.212245928544377
+        ],
+        [
+          4685.393258426966,
+          16.272440348440853
+        ],
+        [
+          4707.865168539326,
+          16.33344274712789
+        ],
+        [
+          4730.337078651685,
+          16.39525312460548
+        ],
+        [
+          4752.808988764045,
+          16.457871480873628
+        ],
+        [
+          4775.2808988764045,
+          16.521297815932332
+        ],
+        [
+          4797.752808988764,
+          16.58553212978159
+        ],
+        [
+          4820.224719101124,
+          16.65057442242141
+        ],
+        [
+          4842.696629213483,
+          16.716424693851785
+        ],
+        [
+          4865.168539325843,
+          16.783082944072717
+        ],
+        [
+          4887.640449438202,
+          16.850549173084207
+        ],
+        [
+          4910.112359550561,
+          16.918823380886252
+        ],
+        [
+          4932.5842696629215,
+          16.987905567478855
+        ],
+        [
+          4955.056179775281,
+          17.05779573286201
+        ],
+        [
+          4977.528089887641,
+          17.12849387703573
+        ],
+        [
+          5000.0,
+          17.2
+        ],
+        [
+          3210.2530953517066,
+          20.59315458188236
+        ],
+        [
+          4334.961532691761,
+          17.235723873321604
+        ],
+        [
+          3938.576032382584,
+          21.90115509962129
+        ],
+        [
+          3054.219773955603,
+          17.190867933671438
+        ],
+        [
+          3339.066167886884,
+          18.954096025884976
+        ],
+        [
+          4627.141090496402,
+          18.577625038653927
+        ],
+        [
+          3069.4443771126957,
+          19.36887562840895
+        ],
+        [
+          4454.955400850666,
+          18.84027677662324
+        ],
+        [
+          4178.185217244685,
+          23.10132024586326
+        ],
+        [
+          4086.428823579571,
+          17.884313137912567
+        ],
+        [
+          3306.119775591608,
+          19.89437195665362
+        ],
+        [
+          3897.4321965566464,
+          20.011036925691034
+        ],
+        [
+          4573.556315194606,
+          16.75489996300109
+        ],
+        [
+          4122.25385455263,
+          15.431484817326862
+        ],
+        [
+          4692.109304673481,
+          16.922803432221933
+        ],
+        [
+          3330.1260522718853,
+          21.915458048859016
+        ],
+        [
+          4163.522096896553,
+          19.10064057685021
+        ],
+        [
+          3320.553283899216,
+          15.09357230670944
+        ],
+        [
+          4748.750279645946,
+          21.826721161728805
+        ],
+        [
+          3739.222611508482,
+          20.781192893265953
+        ],
+        [
+          3310.39983226029,
+          19.74409674691362
+        ],
+        [
+          3939.453652923729,
+          19.82097498542487
+        ],
+        [
+          4997.402911439976,
+          22.330804604332656
+        ],
+        [
+          4703.23830760107,
+          18.944740133548734
+        ],
+        [
+          3168.7052389710325,
+          21.31138396327025
+        ],
+        [
+          3682.1735851106073,
+          15.903879088710601
+        ],
+        [
+          4530.352003648264,
+          23.581222338896023
+        ],
+        [
+          3063.099708958028,
+          16.326020795072843
+        ],
+        [
+          3532.5963719664596,
+          18.73285492234689
+        ],
+        [
+          4557.744269845465,
+          17.553950360824995
+        ],
+        [
+          4978.8131880164165,
+          24.879367906930504
+        ],
+        [
+          3889.7556023203324,
+          15.692445786677304
+        ],
+        [
+          4673.936684971964,
+          23.83733862763758
+        ],
+        [
+          3801.5592376840013,
+          17.772127519903748
+        ],
+        [
+          3397.3843795318962,
+          19.323856363821555
+        ],
+        [
+          4131.693554233677,
+          18.81745398821817
+        ],
+        [
+          4455.696158702791,
+          22.491489036932727
+        ],
+        [
+          4117.129977317894,
+          15.559239728355598
+        ],
+        [
+          4446.008250902207,
+          18.675570443227265
+        ],
+        [
+          3195.966307741947,
+          18.28226856422053
+        ],
+        [
+          4727.11498014396,
+          21.321365392606822
+        ],
+        [
+          4275.044220612536,
+          22.577518867052678
+        ],
+        [
+          4953.877585134528,
+          24.855937019496036
+        ],
+        [
+          3570.639445191129,
+          20.24576761380198
+        ],
+        [
+          4954.513523649379,
+          19.572390708014666
+        ],
+        [
+          3843.509710500228,
+          22.32207970266083
+        ],
+        [
+          3767.8718685433328,
+          16.49925641822539
+        ],
+        [
+          4418.8231614084025,
+          16.80415267014732
+        ],
+        [
+          3504.120502786687,
+          20.91045440041539
+        ],
+        [
+          3555.88920211086,
+          21.842550345865487
+        ],
+        [
+          3919.34712655487,
+          16.619012120127383
+        ],
+        [
+          4437.934053208804,
+          20.758592966045686
+        ],
+        [
+          3241.4067148658987,
+          21.506220763088166
+        ],
+        [
+          4799.961115290142,
+          18.360067613443302
+        ],
+        [
+          4987.625432633079,
+          23.185481467748733
+        ],
+        [
+          4511.7705943909405,
+          21.941656188500613
+        ],
+        [
+          4707.46484167609,
+          18.42509341763223
+        ],
+        [
+          3040.65842996651,
+          21.984853498125638
+        ],
+        [
+          4389.110633566426,
+          17.6348296442252
+        ],
+        [
+          3113.4522447852055,
+          17.750949122026007
+        ],
+        [
+          4256.756647573536,
+          21.33970068286404
+        ],
+        [
+          4823.655911653748,
+          23.105555066963397
+        ],
+        [
+          4189.344476608987,
+          17.208344440488943
+        ],
+        [
+          3680.7397817592405,
+          18.13472145995585
+        ],
+        [
+          4560.5452154340965,
+          17.337139433026547
+        ],
+        [
+          4998.402562803828,
+          21.10087280986785
+        ],
+        [
+          4239.041532806394,
+          20.24792463776647
+        ],
+        [
+          4976.500349359632,
+          24.95427877307592
+        ],
+        [
+          3283.996622749125,
+          18.994841245893767
+        ],
+        [
+          4490.730242808228,
+          16.86951504619014
+        ],
+        [
+          4982.300815594329,
+          22.72734950183365
+        ],
+        [
+          4104.902462504879,
+          16.365712292715887
+        ],
+        [
+          3541.6458545709424,
+          20.933527684376642
+        ],
+        [
+          4947.91258374782,
+          23.740935204597296
+        ],
+        [
+          3927.8247383726016,
+          17.773754834577723
+        ],
+        [
+          4459.70034474781,
+          18.459741925246885
+        ],
+        [
+          3532.2183949803443,
+          16.531503636516906
+        ],
+        [
+          3982.438695385405,
+          19.445139995687935
+        ],
+        [
+          3267.226290086196,
+          17.06806133166066
+        ],
+        [
+          4575.298091381261,
+          19.30359583487599
+        ],
+        [
+          3005.3580943807674,
+          16.39127491591422
+        ],
+        [
+          3285.722791536992,
+          18.12894183300139
+        ],
+        [
+          4145.907244332288,
+          18.209651224938522
+        ],
+        [
+          3950.480046034888,
+          22.221507407930723
+        ],
+        [
+          3648.068804771975,
+          20.248867258344447
+        ],
+        [
+          3386.1428040964975,
+          15.065991236377755
+        ],
+        [
+          3334.2370406067676,
+          19.758385054789883
+        ],
+        [
+          3637.050355103911,
+          15.786850227914861
+        ],
+        [
+          3478.9158510317834,
+          15.683061254441572
+        ],
+        [
+          3460.0880445609323,
+          19.684728803519324
+        ],
+        [
+          4814.729932451535,
+          22.755176625080647
+        ],
+        [
+          3800.404457906066,
+          18.55375845060516
+        ],
+        [
+          3417.3346361256954,
+          21.751732428245738
+        ],
+        [
+          4250.281373469854,
+          22.199762073938462
+        ],
+        [
+          4696.471908026522,
+          22.61445379259753
+        ],
+        [
+          4091.6749113935384,
+          17.021269371891993
+        ],
+        [
+          4662.615738568194,
+          17.841018162512945
+        ],
+        [
+          4458.508302740109,
+          22.54604697594141
+        ],
+        [
+          3728.335065504628,
+          17.495820478721463
+        ],
+        [
+          3717.877822136213,
+          18.73000962608245
+        ],
+        [
+          4441.287687183784,
+          23.60861736928655
+        ],
+        [
+          4335.255352218996,
+          17.05318575096836
+        ],
+        [
+          3738.828195862557,
+          19.08482902175055
+        ],
+        [
+          3177.4456160926056,
+          20.11868498725272
+        ],
+        [
+          3053.99005759451,
+          20.133303003161018
+        ],
+        [
+          4114.309886789565,
+          22.29426706319937
+        ],
+        [
+          3834.8328813962817,
+          18.99466013984953
+        ],
+        [
+          4297.692556956328,
+          21.0533253527932
+        ],
+        [
+          4613.487574230117,
+          20.373460589360672
+        ],
+        [
+          4212.862818036763,
+          15.684262223582408
+        ],
+        [
+          4605.269894615625,
+          21.610178261713077
+        ],
+        [
+          3932.823135347939,
+          22.27295281490882
+        ],
+        [
+          4182.523255663473,
+          16.270008340902752
+        ],
+        [
+          4589.931377894189,
+          19.241509153598518
+        ],
+        [
+          4480.310605432527,
+          23.070130460244712
+        ],
+        [
+          4558.4416595850535,
+          23.65467237201054
+        ],
+        [
+          4275.930731904349,
+          18.57952904821281
+        ],
+        [
+          3328.532756012825,
+          15.859159167680739
+        ],
+        [
+          4223.229287323838,
+          20.401577979774036
+        ],
+        [
+          3293.6060126693465,
+          21.098795221482902
+        ],
+        [
+          4372.186180105209,
+          16.701656205073935
+        ],
+        [
+          4267.211767342624,
+          22.16844126693815
+        ],
+        [
+          4026.232238840623,
+          17.137885969799385
+        ],
+        [
+          3568.8787796959614,
+          21.299510896980657
+        ],
+        [
+          4538.216703634526,
+          17.53971668517891
+        ],
+        [
+          3018.1018229300403,
+          21.819979897275545
+        ],
+        [
+          3854.7341093458977,
+          21.479129450179563
+        ],
+        [
+          3230.7720207231096,
+          20.324409878443515
+        ],
+        [
+          3991.942631596338,
+          19.397927196284833
+        ],
+        [
+          3110.5209555014158,
+          19.196582211569712
+        ],
+        [
+          3204.489597316625,
+          15.57111983976796
+        ],
+        [
+          3618.5501187073896,
+          20.981703517089663
+        ],
+        [
+          4996.847518597379,
+          24.674521148658286
+        ],
+        [
+          3676.9273528151944,
+          15.524462324040117
+        ],
+        [
+          4646.56278126523,
+          20.241402251728214
+        ],
+        [
+          4400.393830933819,
+          21.21328039246291
+        ],
+        [
+          4178.49757507719,
+          21.842444420290438
+        ],
+        [
+          3634.476009593245,
+          16.0982183096817
+        ],
+        [
+          3229.8148935581494,
+          15.031298743777791
+        ],
+        [
+          4429.6216878125615,
+          16.883866172413555
+        ],
+        [
+          4814.384494473193,
+          18.3849463285306
+        ],
+        [
+          3048.440201632898,
+          19.151126813943804
+        ],
+        [
+          4837.032506794991,
+          17.978307819339904
+        ],
+        [
+          3924.7562243914635,
+          18.061211637374935
+        ],
+        [
+          4441.79105963873,
+          22.844079360012152
+        ],
+        [
+          4749.619949028749,
+          18.026214615106685
+        ],
+        [
+          4434.278395141684,
+          21.461199706047964
+        ],
+        [
+          4631.965196716029,
+          19.747803642664273
+        ],
+        [
+          3839.572298770503,
+          19.118463716731
+        ],
+        [
+          3293.3712277308355,
+          20.96048872733805
+        ],
+        [
+          3279.8136091151,
+          21.592276301258785
+        ],
+        [
+          3983.342913959349,
+          18.74892526952621
+        ],
+        [
+          4592.773593022528,
+          23.077214906770465
+        ],
+        [
+          4709.115743719398,
+          18.03067116641595
+        ],
+        [
+          4816.198475356783,
+          23.28743186704791
+        ],
+        [
+          3708.387934805415,
+          21.609289884071973
+        ],
+        [
+          3843.461703495178,
+          19.954581915825315
+        ],
+        [
+          3895.729200195762,
+          16.32373184596551
+        ],
+        [
+          3995.9980513041332,
+          19.95986434770716
+        ],
+        [
+          3207.654957554809,
+          16.798366671049152
+        ]
+      ],
+      "selected": [
+        4168.539325842697,
+        15.092387324832723
+      ]
+    },
+    "checks": {
+      "front_points": 90,
+      "selected_nondominated": true
+    }
+  },
+  {
+    "chapter": "ch29_dynamic_simulation_and_control",
+    "file": "ch20_compressor_map_antisurge.png",
+    "path": "chapters\\ch29_dynamic_simulation_and_control\\figures\\ch20_compressor_map_antisurge.png",
+    "sha256": "6e6648df71f93579150940215d60489cbe8e50cdeafc88101f9bf600cde34f25",
+    "caption": "Conceptual anti-surge action: opening recycle raises compressor inlet throughflow toward the right",
+    "discussion": "The arrow indicates increased compressor throughflow when recycle opens, even though net export can decrease. The speed curve, surge boundary and margin shown here are specified illustrations. Actual control design must use the installed map and evaluate the connected pressure system and valve dynamics.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "start_m3_hr": 5600.0,
+      "end_m3_hr": 8500.0
+    },
+    "checks": {
+      "recycle_arrow_increases_compressor_flow": true
+    }
+  },
+  {
+    "chapter": "ch30_digital_twins_and_automation",
+    "file": "ch21_digital_twin_tracking.png",
+    "path": "chapters\\ch30_digital_twins_and_automation\\figures\\ch21_digital_twin_tracking.png",
+    "sha256": "329ea09edf9dc632dfbcebd24a7fd2f52f316ed2b0b2416736f3bea3be9b9064",
+    "caption": "Synthetic sensor/model residuals with a known 3 K injected offset and a declared rolling-mean correction",
+    "discussion": "The shaded 24\u201336 h interval contains an imposed 3 K sensor offset. The correction uses the latest 20 residuals against a specified reference; it lags the offset changes. No field measurements, automated fault diagnosis or calibrated digital twin are claimed. Distinguishing sensor bias from model error needs additional independent evidence.",
+    "basis": "checked synthetic statistical teaching exercise",
+    "data": {
+      "seed": 2409,
+      "known_offset_K": 3,
+      "window_samples": 20,
+      "mean_corrected_residual_K": 0.0027698948593287095
+    },
+    "checks": {
+      "corrected_mean_error_below_K": 0.2
+    }
+  },
+  {
+    "chapter": "ch12_gas_processing",
+    "file": "gas_processing_overview.png",
+    "path": "chapters\\ch12_gas_processing\\figures\\gas_processing_overview.png",
+    "sha256": "0abef1e514081c4d80dfc65d98b71ea093c75b03f8206d99be0a912e610f7a34",
+    "caption": "Conceptual treatment sequence placing required contaminant removal before cryogenic processing",
+    "discussion": "The sequence locates acid-gas treatment and deep drying upstream of cold equipment. Mercury control is included when required by feed and materials. Product requirements determine the actual treatment train; TEG dehydration alone does not establish a cryogenic water specification.",
+    "basis": "analytical teaching illustration",
+    "data": {},
+    "checks": {}
+  },
+  {
+    "chapter": "ch30_digital_twins_and_automation",
+    "file": "ch21_rto_cycle.png",
+    "path": "chapters\\ch30_digital_twins_and_automation\\figures\\ch21_rto_cycle.png",
+    "sha256": "008beaccbd2b044837cd1128760e8296531f6b874948282e5528b16291386552",
+    "caption": "Operational optimization cycle with verification and authorization before implementation",
+    "discussion": "Each recommendation is checked against the accepted model and operating limits before authorized implementation. Monitoring returns new observations to the reconciliation step. The diagram specifies a workflow; it does not demonstrate a live plant connection.",
+    "basis": "analytical teaching illustration",
+    "data": {},
+    "checks": {}
+  },
+  {
+    "chapter": "ch33_onshore_processing_plants",
+    "file": "ch22_amine_unit_pfd.png",
+    "path": "chapters\\ch33_onshore_processing_plants\\figures\\ch22_amine_unit_pfd.png",
+    "sha256": "3075f5e4d54beadf4d1da92a44d51984512bccdf055fc574dbf61cc57304ed84",
+    "caption": "Simplified amine circuit with separate rich/lean sides of solvent heat recovery",
+    "discussion": "Rich solvent is depressurized, preheated by regenerated lean solvent, and sent to the regenerator. The hot lean solvent returns through the exchanger, cooler and pump to the absorber. The dashed connection denotes heat transfer, not solvent mixing; condenser/reflux and reboiler circulation are omitted from this conceptual circuit.",
+    "basis": "analytical teaching illustration",
+    "data": {},
+    "checks": {}
+  },
+  {
+    "chapter": "ch33_onshore_processing_plants",
+    "file": "ch22_onshore_plant_block_diagram.png",
+    "path": "chapters\\ch33_onshore_processing_plants\\figures\\ch22_onshore_plant_block_diagram.png",
+    "sha256": "95e79a4b36998db25d7eb22fb5872efffa93aa84ebd1db900f0b4ad639f6277e",
+    "caption": "Block diagram of the executed dry-hydrocarbon plant with four external product streams",
+    "discussion": "The four product boundaries are inlet condensate, recompressed residue gas, stabilizer overhead and stabilizer bottoms. Feed and products are reconciled component by component. The separate standalone TEG example and a complete raw-gas pretreatment train are outside this numerical flowsheet.",
+    "basis": "diagram of the executed Chapter33 flowsheet",
+    "data": {},
+    "checks": {}
+  },
+  {
+    "chapter": "ch33_onshore_processing_plants",
+    "file": "ch22_turboexpander_pfd.png",
+    "path": "chapters\\ch33_onshore_processing_plants\\figures\\ch22_turboexpander_pfd.png",
+    "sha256": "75d2f8b0d94c2718d0dfccb0a05b05272e555b2d1e384f69506b21e48f4e01b0",
+    "caption": "Verified process topology with gas-only expansion, liquid bypass letdown, remixing and cold separation",
+    "discussion": "Upstream knockout prevents routing the entire two-phase cooled feed through the gas expander. The liquid takes a throttling bypass and rejoins the expanded gas before separation. The worked model reports expander recovery and compressor demand separately; this diagram does not impose an unmodeled common shaft.",
+    "basis": "diagram of the executed Chapter33 flowsheet",
+    "data": {},
+    "checks": {}
+  },
+  {
+    "chapter": "ch02_thermodynamic_foundations",
+    "file": "eos_comparison.png",
+    "path": "chapters\\ch02_thermodynamic_foundations\\figures\\eos_comparison.png",
+    "sha256": "26cb6604e75ea9e6deac74de028192df89fbbe35ea9fedac7ec6ad298546e7d2",
+    "basis": "18 executed comparisons with 9 NIST methane reference-EOS states",
+    "caption": "SRK and Peng\u2013Robinson methane density compared with independent NIST reference-fluid data at nine states",
+    "discussion": "The parity and deviation panels compare 300, 350 and 400 K at 1, 50 and 100 bara. Maximum absolute relative deviations are 1.421 percent for SRK and 0.811 percent for Peng\u2013Robinson, within the declared 3 percent teaching budget. These are NIST reference-EOS values, not invented experimental points or a general mixture-accuracy claim. The separate benchmark notebook retains inputs, raw reference tables, computed values and tolerances.",
+    "data": {
+      "record": "verification/scientific_revision/benchmark_results.json"
+    },
+    "checks": {
+      "benchmark_status": "passed"
+    }
+  },
+  {
+    "chapter": "ch20_capacity_checks_and_utilization",
+    "file": "compressor_capacity_map.png",
+    "path": "chapters\\ch20_capacity_checks_and_utilization\\figures\\compressor_capacity_map.png",
+    "sha256": "0702beed5f3322addd94d80ac45e8d5ece67f178bde057668565006d3d27da21",
+    "caption": "Analytical compressor-map illustration with explicit surge and high-flow endpoints",
+    "discussion": "The curves obey the stated similarity form H = 180N\u00b2[1 \u2212 0.25(q/(6000N))\u00b2] kJ/kg, where N is relative speed. Endpoints are specified for this geometry illustration; there is no shaded region implying that points beyond those bounds are accepted. These curves are not measured vendor data or an installed-machine rating.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "relative_speeds": [
+        0.8,
+        1.0,
+        1.1
+      ],
+      "surge": [
+        [
+          2400.0,
+          108.00000000000001
+        ],
+        [
+          3000.0,
+          168.75
+        ],
+        [
+          3300.0000000000005,
+          204.18750000000003
+        ]
+      ],
+      "high_flow": [
+        [
+          7600.0,
+          43.000000000000014
+        ],
+        [
+          9500.0,
+          67.18750000000001
+        ],
+        [
+          10450.0,
+          81.29687500000007
+        ]
+      ]
+    },
+    "checks": {
+      "head_decreases_with_flow": true
+    }
+  },
+  {
+    "chapter": "ch22_production_optimization_theory",
+    "file": "separator_pressure_contour.png",
+    "path": "chapters\\ch22_production_optimization_theory\\figures\\separator_pressure_contour.png",
+    "sha256": "b3ba84e68add2d01395285a5836e7c7ab15b83e2792a6776473bd9553cb27435",
+    "caption": "Explicit algebraic objective surface for illustrating a constrained pressure-search problem",
+    "discussion": "The contour is the declared dimensionless function 1 \u2212 [(pHP \u2212 60)/30]\u00b2 \u2212 [(pMP \u2212 15)/15]\u00b2, whose gradient vanishes at 60 and 15 bara and whose Hessian is negative definite. It explains a search landscape; it does not represent computed oil recovery. Actual separation optima require the verified process calculations elsewhere in the book.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "stationary_HP_bara": 60,
+      "stationary_MP_bara": 15,
+      "hessian_diagonal": [
+        -0.0022222222222222222,
+        -0.008888888888888889
+      ]
+    },
+    "checks": {
+      "negative_definite_hessian": true
+    }
+  },
+  {
+    "chapter": "ch04_reservoir_engineering",
+    "file": "ipr_curves.png",
+    "path": "chapters\\ch04_reservoir_engineering\\figures\\ipr_curves.png",
+    "sha256": "ff618f544d489042af0a0f672d89d6a4c8c86bb6c7b42e15bc6995b85dd7eed3",
+    "caption": "Analytical PI, Vogel and Fetkovich inflow curves with all assumed parameters stated",
+    "discussion": "Each equation gives zero rate at 300 bara flowing BHP. At zero BHP the respective absolute-open-flow extrapolations are 6000, 4500 and 5500 m\u00b3/d. Different parameters are deliberately used to illustrate the forms; this is not a fit of three models to one well or permission to produce at zero BHP.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "reservoir_bara": 300,
+      "PI_m3_day_bar": 20,
+      "Vogel_AOF_m3_day": 4500,
+      "Fetkovich_AOF_m3_day": 5500,
+      "Fetkovich_exponent": 0.8
+    },
+    "checks": {
+      "zero_drawdown_zero_rate": true
+    }
+  },
+  {
+    "chapter": "ch05_well_performance",
+    "file": "gas_lift_performance.png",
+    "path": "chapters\\ch05_well_performance\\figures\\gas_lift_performance.png",
+    "sha256": "d4f54d6b1bd631b1463729d7411a5302ac0cf26dc45b14ad1ed712094db50ef0",
+    "caption": "Analytical gas-lift illustration with an explicit marginal cost-equivalent assumption",
+    "discussion": "The declared response has diminishing incremental oil yield. With the stated cost-equivalent slope of 5 m\u00b3 oil per thousand standard m\u00b3 lift gas, the stationary net-benefit injection is 77.71 thousand standard m\u00b3/d. This synthetic trade-off is checked by differentiation; it is not a calibrated lift curve, a current market-price forecast or a native gas-lift allocation result.",
+    "basis": "analytical teaching illustration",
+    "data": {
+      "response": "500+2000*(1-exp(-g/30))",
+      "cost_equivalent": 5,
+      "stationary_injection_thousand_Sm3_day": 77.70801496337481
+    },
+    "checks": {
+      "marginal_condition_residual_below": 1e-12
+    }
+  }
+]

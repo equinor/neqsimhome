@@ -1,0 +1,3721 @@
+{
+  "chapter": "ch17_valves_and_flow_control",
+  "source_sha256": "9be32450be392b8e2130e952596d2ac1ea5dab41b3db924a8dbecf2bb2794588",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "literal_blocks": [
+    {
+      "index": 1,
+      "code_sha256": "85105ccda56e365f9c70ef62f1bb64fa216ea25bb3863a9a214d09bc1f2d63e5",
+      "line": 203,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 50.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 27.777777777777768,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 50.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 60.0,
+          "getTemperature_C": 42.490034939113514,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-100 out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 2.7810000000026776,
+      "output": "Outlet temperature: 42.5 \u00b0C\nOutlet pressure: 60.0 bara\nPressure drop: 20.0 bar\nCalculated Cv (US): 155.8\nCalculated Kv (SI): 134.8\n"
+    },
+    {
+      "index": 2,
+      "code_sha256": "3dc52afecf91a18ffeca309b52ce8e123442464696293a6cd566ab7eff743f99",
+      "line": 250,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 50.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 27.777777777777768,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 50.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 60.0,
+          "getTemperature_C": 42.490034939113514,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-100 out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "valve2",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 40.443592344967215,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-101 out stream"
+          ]
+        },
+        {
+          "name": "process2",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 0.030999999995401595,
+      "output": "Flow at 70% opening: 100000 kg/hr\nOutlet temperature: 40.4 \u00b0C\n"
+    },
+    {
+      "index": 3,
+      "code_sha256": "2ff401f8d8076977cd5391c570b7df9350171abf606e6b1d4325debf6b36b7c0",
+      "line": 380,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 50.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 27.777777777777768,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 50.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 60.0,
+          "getTemperature_C": 42.490034939113514,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-100 out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "valve2",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 40.443592344967215,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-101 out stream"
+          ]
+        },
+        {
+          "name": "process2",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888895,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "well_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.888888888888893,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 44.75823764887963,
+          "inlets": [
+            "Wellhead"
+          ],
+          "outlets": [
+            "Production Choke out stream"
+          ]
+        }
+      ],
+      "seconds": 0.20300000000133878,
+      "output": "Inlet: 80.0 \u00b0C, 250.0 bara\nOutlet: 44.8 \u00b0C, 70.0 bara\nJT cooling: 35.2 \u00b0C\nPressure drop: 180.0 bar\n"
+    },
+    {
+      "index": 4,
+      "code_sha256": "99081123ac056bf65fd7b868d4ccbdfd222a02b1fd1641a248abee4a12045e6d",
+      "line": 474,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 20.0,
+          "getTemperature_C": 12.442116302025397,
+          "inlets": [
+            "Rich Gas"
+          ],
+          "outlets": [
+            "JT Valve out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "valve2",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 40.443592344967215,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-101 out stream"
+          ]
+        },
+        {
+          "name": "process2",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888895,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "well_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.888888888888893,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 44.75823764887963,
+          "inlets": [
+            "Wellhead"
+          ],
+          "outlets": [
+            "Production Choke out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 1.139999999999418,
+      "output": "P_out (bara) | T_out (\u00b0C) | \u0394T (\u00b0C)\n------------------------------------------\n     100      |    53.2    |   6.8\n      80      |    45.0    |  15.0\n      60      |    35.2    |  24.8\n      40      |    25.0    |  35.0\n      20      |    12.4    |  47.6\n"
+    },
+    {
+      "index": 5,
+      "code_sha256": "a7cee548f52705cdfc9383b1a4025845b056c5e8562e1270ea7db9a9cdd02cca",
+      "line": 738,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "inlets": [
+            "Rich Gas"
+          ],
+          "outlets": [
+            "V-1 out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "valve2",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 40.443592344967215,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-101 out stream"
+          ]
+        },
+        {
+          "name": "process2",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888895,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "well_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.888888888888893,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 44.75823764887963,
+          "inlets": [
+            "Wellhead"
+          ],
+          "outlets": [
+            "Production Choke out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 0.01599999999598367,
+      "output": ""
+    },
+    {
+      "index": 6,
+      "code_sha256": "ff4392740fd40e9b747ec38ad26197be3b73adcf512aa5df0faa419e2175afbc",
+      "line": 745,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "inlets": [
+            "Rich Gas"
+          ],
+          "outlets": [
+            "V-2 out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "valve2",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 40.443592344967215,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-101 out stream"
+          ]
+        },
+        {
+          "name": "process2",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888895,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "well_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.888888888888893,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 44.75823764887963,
+          "inlets": [
+            "Wellhead"
+          ],
+          "outlets": [
+            "Production Choke out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "index": 7,
+      "code_sha256": "e6164e430868996fc70c5a08110b073996e41b074974e7180ead8e2cd77646b6",
+      "line": 754,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "inlets": [
+            "Rich Gas"
+          ],
+          "outlets": [
+            "V-3 out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "valve2",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 40.443592344967215,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-101 out stream"
+          ]
+        },
+        {
+          "name": "process2",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888895,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "well_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.888888888888893,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 44.75823764887963,
+          "inlets": [
+            "Wellhead"
+          ],
+          "outlets": [
+            "Production Choke out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "index": 8,
+      "code_sha256": "fa123633e8c99bb5bd6817b49d30d018b1620839a0372111a4b99c05c894981b",
+      "line": 763,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "inlets": [
+            "Rich Gas"
+          ],
+          "outlets": [
+            "V-3 out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "valve2",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 40.443592344967215,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-101 out stream"
+          ]
+        },
+        {
+          "name": "process2",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888895,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "well_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.888888888888893,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 58.208047330441616,
+          "inlets": [
+            "Wellhead"
+          ],
+          "outlets": [
+            "Production Choke out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222218,
+          "getPressure_bara": 300.0,
+          "getTemperature_C": 90.0
+        },
+        {
+          "name": "wellhead",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222218,
+          "getPressure_bara": 300.0,
+          "getTemperature_C": 90.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "separator",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 58.208047330441616,
+          "inlets": [
+            "Production Choke out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "export_valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 65.0,
+          "getTemperature_C": 56.53223055666706,
+          "inlets": [
+            "gasOutStream"
+          ],
+          "outlets": [
+            "Export Valve out stream"
+          ]
+        }
+      ],
+      "seconds": 0.4219999999986612,
+      "output": "=== Production System Results ===\n\nWellhead:  90.0 \u00b0C, 300 bara\n\nAfter choke: 58.2 \u00b0C, 70 bara\nJT cooling: 31.8 \u00b0C\n\nSeparator gas:    60867 kg/hr\nSeparator liquid: 19133 kg/hr\n\nExport gas: 56.5 \u00b0C, 65 bara\n"
+    },
+    {
+      "index": 11,
+      "code_sha256": "59e2b175a7ca1ad8b505d6800695d5d22ce26ffc4fc8a6d25a43d700cd03f80f",
+      "line": 1005,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 38.88888888888889,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "inlets": [
+            "Rich Gas"
+          ],
+          "outlets": [
+            "V-3 out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "valve2",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 40.443592344967215,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-101 out stream"
+          ]
+        },
+        {
+          "name": "process2",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888895,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "well_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.888888888888893,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 43.27984154223657,
+          "inlets": [
+            "Wellhead"
+          ],
+          "outlets": [
+            "Production Choke out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222218,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "wellhead",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222218,
+          "getPressure_bara": 300.0,
+          "getTemperature_C": 90.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "separator",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 58.208047330441616,
+          "inlets": [
+            "Production Choke out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "export_valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 65.0,
+          "getTemperature_C": 56.53223055666706,
+          "inlets": [
+            "gasOutStream"
+          ],
+          "outlets": [
+            "Export Valve out stream"
+          ]
+        }
+      ],
+      "seconds": 1.110000000000582,
+      "output": "Valve opening: 100.0%\nFlow rate: 80000 kg/hr\n\n  Flow (kg/hr)    Opening (%)               Status\n--------------------------------------------------\n        40,000          100.0           BOTTLENECK\n        60,000          100.0           BOTTLENECK\n        80,000          100.0           BOTTLENECK\n       100,000          100.0           BOTTLENECK\n       120,000          100.0           BOTTLENECK\n       140,000          100.0           BOTTLENECK\n"
+    },
+    {
+      "index": 12,
+      "code_sha256": "d9682a45f74cb94e4ab943918a99aeb71771feb20e22e3f93b43a0cf9934fa7d",
+      "line": 1087,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222236,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "inlets": [
+            "Rich Gas"
+          ],
+          "outlets": [
+            "V-3 out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "valve2",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 40.443592344967215,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-101 out stream"
+          ]
+        },
+        {
+          "name": "process2",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888895,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "well_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.888888888888893,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 20.0,
+          "getTemperature_C": 14.469938554687985,
+          "inlets": [
+            "Wellhead"
+          ],
+          "outlets": [
+            "Production Choke out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222218,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "wellhead",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222218,
+          "getPressure_bara": 300.0,
+          "getTemperature_C": 90.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "separator",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 58.208047330441616,
+          "inlets": [
+            "Production Choke out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "export_valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 65.0,
+          "getTemperature_C": 56.53223055666706,
+          "inlets": [
+            "gasOutStream"
+          ],
+          "outlets": [
+            "Export Valve out stream"
+          ]
+        }
+      ],
+      "seconds": 0.13999999999941792,
+      "output": "  P_out (bara)   Flow (kg/hr)    Critical?\n------------------------------------------\n           150         80,000           No\n           120         80,000           No\n           100         80,000          Yes\n            80         80,000          Yes\n            60         80,000          Yes\n            40         80,000          Yes\n            20         80,000          Yes\n"
+    },
+    {
+      "index": 13,
+      "code_sha256": "cd072c578f8dc96d084e5bf1bae7bc71d5d345d7281df2a4c7c98bfcb1932524",
+      "line": 1105,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222236,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "inlets": [
+            "Rich Gas"
+          ],
+          "outlets": [
+            "V-3 out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "valve2",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 40.443592344967215,
+          "inlets": [
+            "Feed Gas"
+          ],
+          "outlets": [
+            "PV-101 out stream"
+          ]
+        },
+        {
+          "name": "process2",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888895,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "well_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.888888888888893,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 49.184150067637745,
+          "inlets": [
+            "Well-1"
+          ],
+          "outlets": [
+            "Production Choke out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 16.66666666666667,
+          "getPressure_bara": 150.0,
+          "getTemperature_C": 70.0
+        },
+        {
+          "name": "wellhead",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222218,
+          "getPressure_bara": 300.0,
+          "getTemperature_C": 90.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "separator",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 58.208047330441616,
+          "inlets": [
+            "Production Choke out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "export_valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 65.0,
+          "getTemperature_C": 56.53223055666706,
+          "inlets": [
+            "gasOutStream"
+          ],
+          "outlets": [
+            "Export Valve out stream"
+          ]
+        },
+        {
+          "name": "well",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 44.44444444444444,
+          "getPressure_bara": 150.0,
+          "getTemperature_C": 70.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 49.184150067637745,
+          "inlets": [
+            "Production Choke out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "gas_valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 65.0,
+          "getTemperature_C": 47.34694509151859,
+          "inlets": [
+            "gasOutStream"
+          ],
+          "outlets": [
+            "Gas Export Valve out stream"
+          ]
+        },
+        {
+          "name": "liq_valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 15.0,
+          "getTemperature_C": 36.22809949238223,
+          "inlets": [
+            "liquidOutStream"
+          ],
+          "outlets": [
+            "Liquid Valve out stream"
+          ]
+        },
+        {
+          "name": "v",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 49.184150067637745,
+          "inlets": [
+            "Well-1"
+          ],
+          "outlets": [
+            "Production Choke out stream"
+          ]
+        }
+      ],
+      "seconds": 0.625,
+      "output": "=== Valve Capacity Report ===\n                 Valve    Cv (US)   Opening%         Status\n----------------------------------------------------------\n      Production Choke      250.0      100.0     BOTTLENECK\n      Gas Export Valve      330.9       50.0             OK\n          Liquid Valve        1.6      100.0     BOTTLENECK\n\n=== Bottleneck Analysis: Increasing Production ===\nFlow:   40,000 kg/hr -> Bottleneck: Production Choke\nFlow:   60,000 kg/hr -> Bottleneck: Production Choke\nFlow:   80,000 kg/hr -> Bottleneck: Production Choke\nFlow:  100,000 kg/hr -> Bottleneck: Production Choke\nFlow:  120,000 kg/hr -> Bottleneck: Production Choke\nFlow:  140,000 kg/hr -> Bottleneck: Production Choke\nFlow:  160,000 kg/hr -> Bottleneck: Production Choke\n"
+    }
+  ],
+  "physical_checks": [
+    {
+      "block": 1,
+      "equipment": "PV-100",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.190659413925986e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.777777777777768,
+        "mass_out_kg_s": 27.777777777777768,
+        "enthalpy_in_W": 734418.2879161104,
+        "enthalpy_out_W": 734418.2880035546,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "PV-101",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.5099502843257384e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.777777777777768,
+        "mass_out_kg_s": 27.777777777777768,
+        "enthalpy_in_W": 734418.2879161104,
+        "enthalpy_out_W": 734418.2880270039,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.097752124334058e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.888888888888893,
+        "mass_out_kg_s": 13.888888888888893,
+        "enthalpy_in_W": -796404.2709012949,
+        "enthalpy_out_W": -796404.2711480012,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "JT Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 5.5717176865831396e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333332,
+        "mass_out_kg_s": 8.333333333333332,
+        "enthalpy_in_W": -78557.16165571345,
+        "enthalpy_out_W": -78557.16165133647,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "JT Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.1921739040646855e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333332,
+        "mass_out_kg_s": 8.333333333333332,
+        "enthalpy_in_W": -78557.16165571345,
+        "enthalpy_out_W": -78557.16164634808,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "JT Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.50262103906184e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333332,
+        "mass_out_kg_s": 8.333333333333332,
+        "enthalpy_in_W": -78557.16165571345,
+        "enthalpy_out_W": -78557.16164390929,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "JT Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.849075817015722e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333332,
+        "mass_out_kg_s": 8.333333333333332,
+        "enthalpy_in_W": -78557.16165571345,
+        "enthalpy_out_W": -78557.16187952876,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "JT Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.204815387176349e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333332,
+        "mass_out_kg_s": 8.333333333333332,
+        "enthalpy_in_W": -78557.16165571345,
+        "enthalpy_out_W": -78557.16132539509,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 8,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.866571666551927e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222218,
+        "mass_out_kg_s": 22.222222222222218,
+        "enthalpy_in_W": -486853.5953493621,
+        "enthalpy_out_W": -486853.5951124313,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 8,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.3211671756607759e-11,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 4.365491973186409e-12,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222218,
+        "mass_out_kg_s": 22.22222222251581,
+        "enthalpy_in_W": -486853.5951124313,
+        "enthalpy_out_W": -486853.5951124313,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 8,
+      "equipment": "Export Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.6650885093087843e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.907547515085366,
+        "mass_out_kg_s": 16.907547515085366,
+        "enthalpy_in_W": 744043.135554601,
+        "enthalpy_out_W": 744043.1356784907,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 11,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.2004451183673236e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222218,
+        "mass_out_kg_s": 22.222222222222218,
+        "enthalpy_in_W": -31127.32141796267,
+        "enthalpy_out_W": -31127.321408000542,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 11,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.2004451183673236e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111109,
+        "mass_out_kg_s": 11.111111111111109,
+        "enthalpy_in_W": -15563.660708981335,
+        "enthalpy_out_W": -15563.660704000271,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 11,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.2007166559440236e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.666666666666664,
+        "mass_out_kg_s": 16.666666666666664,
+        "enthalpy_in_W": -23345.49106347235,
+        "enthalpy_out_W": -23345.49105600012,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 11,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.2008167781211993e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222214,
+        "mass_out_kg_s": 22.222222222222214,
+        "enthalpy_in_W": -31127.321417959403,
+        "enthalpy_out_W": -31127.321407996118,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 11,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.202134417134182e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.77777777777778,
+        "enthalpy_in_W": -38909.151772449724,
+        "enthalpy_out_W": -38909.15175999049,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 11,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.201216877247977e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 33.33333333333334,
+        "mass_out_kg_s": 33.33333333333334,
+        "enthalpy_in_W": -46690.98212693818,
+        "enthalpy_out_W": -46690.98211199138,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 11,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.2003050363673026e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 38.88888888888889,
+        "mass_out_kg_s": 38.88888888888889,
+        "enthalpy_in_W": -54472.8124814257,
+        "enthalpy_out_W": -54472.81246399274,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 5.527679152017911e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222236,
+        "mass_out_kg_s": 22.222222222222236,
+        "enthalpy_in_W": -31127.321417958476,
+        "enthalpy_out_W": -31127.32140075229,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.713998385455043e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222236,
+        "mass_out_kg_s": 22.222222222222236,
+        "enthalpy_in_W": -31127.321417958476,
+        "enthalpy_out_W": -31127.321415868588,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 7.025164086028717e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222236,
+        "mass_out_kg_s": 22.222222222222236,
+        "enthalpy_in_W": -31127.321417958476,
+        "enthalpy_out_W": -31127.32141577173,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.3256644139992e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222236,
+        "mass_out_kg_s": 22.222222222222236,
+        "enthalpy_in_W": -31127.321417958476,
+        "enthalpy_out_W": -31127.321410719305,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.743918164356358e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222236,
+        "mass_out_kg_s": 22.222222222222236,
+        "enthalpy_in_W": -31127.321417958476,
+        "enthalpy_out_W": -31127.321415859275,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.9308051490556975e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222236,
+        "mass_out_kg_s": 22.222222222222236,
+        "enthalpy_in_W": -31127.321417958476,
+        "enthalpy_out_W": -31127.32132673036,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.147999958081078e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222236,
+        "mass_out_kg_s": 22.222222222222236,
+        "enthalpy_in_W": -31127.321417958476,
+        "enthalpy_out_W": -31127.321288842348,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.3345872610961428e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.666666666666664,
+        "mass_out_kg_s": 16.666666666666664,
+        "enthalpy_in_W": -306867.99522683583,
+        "enthalpy_out_W": -306867.9951858816,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 4.263256414560602e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.5821783563296777e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.666666666666664,
+        "mass_out_kg_s": 16.66666666666667,
+        "enthalpy_in_W": -306867.9951858816,
+        "enthalpy_out_W": -306867.9951858816,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Gas Export Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.418501553098685e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 14.529703134743643,
+        "mass_out_kg_s": 14.529703134743643,
+        "enthalpy_in_W": 229363.79094461584,
+        "enthalpy_out_W": 229363.79093677504,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Liquid Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.771125704889849e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 2.1369635319230262,
+        "mass_out_kg_s": 2.1369635319230262,
+        "enthalpy_in_W": -536231.7861304975,
+        "enthalpy_out_W": -536231.7863863404,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.3346877931189143e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111112,
+        "mass_out_kg_s": 11.111111111111112,
+        "enthalpy_in_W": -204578.6634845573,
+        "enthalpy_out_W": -204578.66345725243,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 4.796163466380676e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.3732675344945163e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 5.690491855777534e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111112,
+        "mass_out_kg_s": 11.111111111111118,
+        "enthalpy_in_W": -204578.66345725243,
+        "enthalpy_out_W": -204578.66345725232,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Gas Export Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.4115099479653385e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 9.686468756495767,
+        "mass_out_kg_s": 9.686468756495767,
+        "enthalpy_in_W": 152909.19396307843,
+        "enthalpy_out_W": 152909.19395786192,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Liquid Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.771109422473648e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 1.4246423546153502,
+        "mass_out_kg_s": 1.4246423546153502,
+        "enthalpy_in_W": -357487.85742033075,
+        "enthalpy_out_W": -357487.8575908921,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.3345872610961428e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.666666666666664,
+        "mass_out_kg_s": 16.666666666666664,
+        "enthalpy_in_W": -306867.99522683583,
+        "enthalpy_out_W": -306867.9951858816,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 4.263256414560602e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.5821783563296777e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.666666666666664,
+        "mass_out_kg_s": 16.66666666666667,
+        "enthalpy_in_W": -306867.9951858816,
+        "enthalpy_out_W": -306867.9951858816,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Gas Export Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 7.429335445994999e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 14.529703134743643,
+        "mass_out_kg_s": 14.529703134743643,
+        "enthalpy_in_W": 229363.79094461584,
+        "enthalpy_out_W": 229363.79092757564,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Liquid Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.858253999541976e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 2.1369635319230262,
+        "mass_out_kg_s": 2.1369635319230262,
+        "enthalpy_in_W": -536231.7861304975,
+        "enthalpy_out_W": -536231.7863910125,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.3348599304975331e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.22222222222222,
+        "mass_out_kg_s": 22.22222222222222,
+        "enthalpy_in_W": -409157.3269691132,
+        "enthalpy_out_W": -409157.3269144964,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 3.559901301741774e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 9.95836074761089e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.22222222222222,
+        "mass_out_kg_s": 22.22222222222222,
+        "enthalpy_in_W": -409157.3269144964,
+        "enthalpy_out_W": -409157.326914496,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Gas Export Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 9.157454031314393e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.37293751299155,
+        "mass_out_kg_s": 19.37293751299155,
+        "enthalpy_in_W": 305818.38792615826,
+        "enthalpy_out_W": 305818.38820621005,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Liquid Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2585461043567369e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 2.84928470923067,
+        "mass_out_kg_s": 2.84928470923067,
+        "enthalpy_in_W": -714975.7148406543,
+        "enthalpy_out_W": -714975.7157404842,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.334871026956659e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.777777777777775,
+        "mass_out_kg_s": 27.777777777777775,
+        "enthalpy_in_W": -511446.65871138824,
+        "enthalpy_out_W": -511446.6586431167,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.2789769243681805e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.493070137978064e-17,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 9.104786969244311e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.777777777777775,
+        "mass_out_kg_s": 27.77777777777778,
+        "enthalpy_in_W": -511446.6586431167,
+        "enthalpy_out_W": -511446.65864311624,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Gas Export Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.4460444557440456e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 24.216171891239416,
+        "mass_out_kg_s": 24.216171891239416,
+        "enthalpy_in_W": 382272.98490770627,
+        "enthalpy_out_W": 382272.986225036,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Liquid Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.449558777984813e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 3.561605886538362,
+        "mass_out_kg_s": 3.561605886538362,
+        "enthalpy_in_W": -893719.6435508225,
+        "enthalpy_out_W": -893719.6422553234,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.3348148807703556e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 33.33333333333332,
+        "mass_out_kg_s": 33.33333333333332,
+        "enthalpy_in_W": -613735.9904536661,
+        "enthalpy_out_W": -613735.9903717437,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 4.2632564145606024e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 3.164356712659355e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 33.33333333333332,
+        "mass_out_kg_s": 33.333333333333336,
+        "enthalpy_in_W": -613735.9903717437,
+        "enthalpy_out_W": -613735.9903717437,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Gas Export Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.7781161834555203e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 29.059406269487276,
+        "mass_out_kg_s": 29.059406269487276,
+        "enthalpy_in_W": 458727.58188924985,
+        "enthalpy_out_W": 458727.58197081694,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Liquid Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.959148534353405e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 4.273927063846062,
+        "mass_out_kg_s": 4.273927063846062,
+        "enthalpy_in_W": -1072463.5722609935,
+        "enthalpy_out_W": -1072463.5727928441,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.33475201438415e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 38.8888888888889,
+        "mass_out_kg_s": 38.8888888888889,
+        "enthalpy_in_W": -716025.3221959425,
+        "enthalpy_out_W": -716025.3221003709,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.6542197839090856e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.6951910960675107e-17,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 38.8888888888889,
+        "mass_out_kg_s": 38.888888888888914,
+        "enthalpy_in_W": -716025.3221003709,
+        "enthalpy_out_W": -716025.3221003709,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Gas Export Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.852015892249424e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 33.90264064773519,
+        "mass_out_kg_s": 33.90264064773519,
+        "enthalpy_in_W": 535182.1788707864,
+        "enthalpy_out_W": 535182.1791304577,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Liquid Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.860297633276025e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 4.986248241153725,
+        "mass_out_kg_s": 4.986248241153725,
+        "enthalpy_in_W": -1251207.5009711573,
+        "enthalpy_out_W": -1251207.5006132748,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Production Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.3347859541034118e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 44.44444444444444,
+        "mass_out_kg_s": 44.44444444444444,
+        "enthalpy_in_W": -818314.6539382301,
+        "enthalpy_out_W": -818314.6538290026,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.4832922090590727e-17,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 7.113114819721975e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 44.44444444444444,
+        "mass_out_kg_s": 44.44444444444444,
+        "enthalpy_in_W": -818314.6538290026,
+        "enthalpy_out_W": -818314.6538290032,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Gas Export Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.7799852644180895e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 38.74587502598306,
+        "mass_out_kg_s": 38.74587502598306,
+        "enthalpy_in_W": 611636.7758523156,
+        "enthalpy_out_W": 611636.7757434451,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Liquid Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2232251473912095e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.69856941846138,
+        "mass_out_kg_s": 5.69856941846138,
+        "enthalpy_in_W": -1429951.4296813188,
+        "enthalpy_out_W": -1429951.4314304714,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    }
+  ]
+}

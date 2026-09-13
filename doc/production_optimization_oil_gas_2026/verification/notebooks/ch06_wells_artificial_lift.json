@@ -1,0 +1,381 @@
+{
+  "notebook": "chapters\\ch06_wells_artificial_lift\\notebooks\\ch15w_well_networks.ipynb",
+  "status": "passed",
+  "executed_at": "2026-09-12T20:09:02.141289+00:00",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "runtime_seconds": 12.16,
+  "code_cells": 8,
+  "executed_cells": 8,
+  "cell_runs": [
+    {
+      "cell_index": 1,
+      "execution_count": 1,
+      "runtime_seconds": 3.422,
+      "sha256": "c6b39cb92ef3f1acdbc7f2f13af76f46e41ade4b55b5cfcb98699380767a12da",
+      "status": "passed"
+    },
+    {
+      "cell_index": 3,
+      "execution_count": 2,
+      "runtime_seconds": 1.968,
+      "sha256": "dbb5f6660872935efc84ebf70843a337240e3345ad127e6a43433b0e3f288fe6",
+      "status": "passed"
+    },
+    {
+      "cell_index": 5,
+      "execution_count": 3,
+      "runtime_seconds": 4.078,
+      "sha256": "95ca8b20b513cdb6ba11296960930c874f6464f19ca80232afa1411069325823",
+      "status": "passed"
+    },
+    {
+      "cell_index": 6,
+      "execution_count": 4,
+      "runtime_seconds": 0.641,
+      "sha256": "e3b1c537dbcafcf59d23d989b16630315c0d1130e29d00b15bc1553577f086d0",
+      "status": "passed"
+    },
+    {
+      "cell_index": 9,
+      "execution_count": 5,
+      "runtime_seconds": 0.516,
+      "sha256": "df4e99a71fbf127fefd4fa02f11f26052cd7de3c6ac4a2613bb0c820a31f467c",
+      "status": "passed"
+    },
+    {
+      "cell_index": 10,
+      "execution_count": 6,
+      "runtime_seconds": 0.765,
+      "sha256": "44dce50a558d542eef2f09db84164fdd26dc3facc59653807c6d22df349614a0",
+      "status": "passed"
+    },
+    {
+      "cell_index": 14,
+      "execution_count": 7,
+      "runtime_seconds": 0.75,
+      "sha256": "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+      "status": "passed"
+    },
+    {
+      "cell_index": 16,
+      "execution_count": 8,
+      "runtime_seconds": 0.016,
+      "sha256": "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "source_revision": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "java_version": "25.0.4.1",
+  "neqsim_class_origin": "file:/C:/Users/solbraa/OneDrive%20-%20NTNU/Documents/ChatGPT/NeqSim/target/classes/",
+  "figures": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch06_wells_artificial_lift\\figures\\ch15w_choke_sensitivity.png",
+      "sha256": "bad3ff299f96749b0babe133e87949d66fabf561f3dba523edfbe6a04cebc50c",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "",
+          "series": "Choke Outlet P",
+          "value_axis": "y",
+          "x_label": "Choke Opening (%)",
+          "y_label": "Choke Outlet Pressure (bara)",
+          "n_points": 10,
+          "n_nonfinite": 2,
+          "x_min": 30.0,
+          "x_max": 100.0,
+          "y_min": 45.610899714267674,
+          "y_max": 141.55213585795497,
+          "x_at_y_max": 100.0
+        },
+        {
+          "panel": 2,
+          "title": "Choke Sensitivity Study: Pressure vs Choke Opening",
+          "series": "Manifold P",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Manifold Arrival Pressure (bara)",
+          "n_points": 10,
+          "n_nonfinite": 2,
+          "x_min": 30.0,
+          "x_max": 100.0,
+          "y_min": 41.41244102644955,
+          "y_max": 140.25356271921115,
+          "x_at_y_max": 100.0
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch06_wells_artificial_lift\\figures\\ch15w_well_network_comparison.png",
+      "sha256": "58d709a53e8d298b72078e7964c03c592b414fc3993ffb051cc62b664d1bdb04",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Wellhead vs Manifold Arrival Pressure",
+          "series": "Wellhead P",
+          "value_axis": "y",
+          "x_label": "Well",
+          "y_label": "Pressure (bara)",
+          "n_points": 3,
+          "n_nonfinite": 0,
+          "x_min": -0.175,
+          "x_max": 1.825,
+          "y_min": 180.0,
+          "y_max": 280.0,
+          "x_at_y_max": -0.175
+        },
+        {
+          "panel": 1,
+          "title": "Wellhead vs Manifold Arrival Pressure",
+          "series": "Manifold Arrival P",
+          "value_axis": "y",
+          "x_label": "Well",
+          "y_label": "Pressure (bara)",
+          "n_points": 3,
+          "n_nonfinite": 0,
+          "x_min": 0.175,
+          "x_max": 2.175,
+          "y_min": 177.89067150844247,
+          "y_max": 278.9584285637799,
+          "x_at_y_max": 0.175
+        },
+        {
+          "panel": 2,
+          "title": "Flow Rate vs Pressure Drop",
+          "series": "Points 1",
+          "value_axis": "y",
+          "x_label": "Flow Rate (kg/hr)",
+          "y_label": "Flowline Pressure Drop (bar)",
+          "n_points": 3,
+          "n_nonfinite": 0,
+          "x_min": 25000.000000000004,
+          "x_max": 40000.00000000001,
+          "y_min": 1.0415714362201243,
+          "y_max": 2.109328491557534,
+          "x_at_y_max": 25000.000000000004
+        }
+      ]
+    }
+  ],
+  "nonfinite_series": [
+    {
+      "panel": 1,
+      "title": "",
+      "series": "Choke Outlet P",
+      "value_axis": "y",
+      "x_label": "Choke Opening (%)",
+      "y_label": "Choke Outlet Pressure (bara)",
+      "n_points": 10,
+      "n_nonfinite": 2,
+      "x_min": 30.0,
+      "x_max": 100.0,
+      "y_min": 45.610899714267674,
+      "y_max": 141.55213585795497,
+      "x_at_y_max": 100.0
+    },
+    {
+      "panel": 2,
+      "title": "Choke Sensitivity Study: Pressure vs Choke Opening",
+      "series": "Manifold P",
+      "value_axis": "y",
+      "x_label": "",
+      "y_label": "Manifold Arrival Pressure (bara)",
+      "n_points": 10,
+      "n_nonfinite": 2,
+      "x_min": 30.0,
+      "x_max": 100.0,
+      "y_min": 41.41244102644955,
+      "y_max": 140.25356271921115,
+      "x_at_y_max": 100.0
+    }
+  ],
+  "numeric_results": {
+    "choke_openings": [
+      10.0,
+      20.0,
+      30.0,
+      40.0,
+      50.0,
+      60.0,
+      70.0,
+      80.0,
+      90.0,
+      100.0
+    ],
+    "choke_outlet_pressures": [
+      null,
+      null,
+      45.610899714267674,
+      91.73649401411733,
+      113.08605480433344,
+      124.68334708543851,
+      131.6761485536373,
+      136.21474566040092,
+      139.3263928949146,
+      141.55213585795497
+    ],
+    "manifold_pressures": [
+      null,
+      null,
+      41.41244102644955,
+      89.77000631381402,
+      111.48710251093993,
+      123.22564996232686,
+      130.29008749588974,
+      134.870702625994,
+      138.0093464690362,
+      140.25356271921115
+    ],
+    "flow_rates_kg_hr": [
+      null,
+      null,
+      50000.0,
+      50000.0,
+      50000.0,
+      50000.0,
+      50000.0,
+      50000.0,
+      50000.0,
+      50000.0
+    ],
+    "opening": 100.0,
+    "p_choke_out": 141.55213585795497,
+    "p_manifold": 140.25356271921115,
+    "flow": 25000.000000000004,
+    "i": 2.0,
+    "op": 100.0,
+    "pin": 180.0,
+    "pout": 177.89067150844247,
+    "dp": 2.109328491557534,
+    "inlet_pressures": [
+      280.0,
+      220.0,
+      180.0
+    ],
+    "arrival_pressures": [
+      278.9584285637799,
+      218.49472525236192,
+      177.89067150844247
+    ],
+    "pressure_drops": [
+      1.0415714362201243,
+      1.505274747638083,
+      2.109328491557534
+    ],
+    "flow_rates": [
+      40000.00000000001,
+      35000.0,
+      25000.000000000004
+    ],
+    "x": [
+      0.0,
+      1.0,
+      2.0
+    ],
+    "width": 0.35
+  },
+  "figure_discussions": [
+    {
+      "chapter": "ch06_wells_artificial_lift",
+      "chapter_number": 6,
+      "figure": "ch15w_choke_sensitivity.png",
+      "figure_path": "figures/ch15w_choke_sensitivity.png",
+      "caption": "Choke Sensitivity Study: Pressure vs Choke Opening.",
+      "title": "Choke Sensitivity Study: Pressure vs Choke Opening",
+      "observation": "Choke Outlet P: choke outlet pressure spans 45.61–141.6 bara across the plotted cases. Manifold P: manifold arrival pressure spans 41.41–140.3 bara across the plotted cases. Gaps retain undefined phase quantities or hydraulic states that fail the stated operating boundary; they are not interpolated.",
+      "mechanism": "At imposed upstream flow, closing a fixed-Cv choke requires more pressure drop; sufficiently restricted openings may have no feasible positive outlet pressure.",
+      "implication": "This pressure-mode experiment is not a prediction that the same well rate remains deliverable at every opening.",
+      "recommendation": "Reject infeasible pressure solutions and use the coupled reservoir–tubing–network model when translating a choke opening into a production rate.",
+      "notebook": "notebooks/ch15w_well_networks.ipynb",
+      "dpi": 220,
+      "sha256": "bad3ff299f96749b0babe133e87949d66fabf561f3dba523edfbe6a04cebc50c",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Choke Outlet P: choke outlet pressure",
+            45.610899714267674,
+            141.55213585795497,
+            "bara"
+          ],
+          [
+            "Manifold P: manifold arrival pressure",
+            41.41244102644955,
+            140.25356271921115,
+            "bara"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    },
+    {
+      "chapter": "ch06_wells_artificial_lift",
+      "chapter_number": 6,
+      "figure": "ch15w_well_network_comparison.png",
+      "figure_path": "figures/ch15w_well_network_comparison.png",
+      "caption": "Wellhead vs Manifold Arrival Pressure.",
+      "title": "Wellhead vs Manifold Arrival Pressure",
+      "observation": "Wellhead P: pressure spans 180–280 bara across the plotted cases. Manifold Arrival P: pressure spans 177.9–279 bara across the plotted cases.",
+      "mechanism": "Each well’s pressure budget depends on its inlet condition and the resistance of its branch to the common manifold.",
+      "implication": "The well with the highest wellhead pressure is not necessarily the largest contributor once branch losses and common backpressure are included.",
+      "recommendation": "Compare branch residuals and rates on one basis before adjusting chokes or assigning a debottlenecking priority.",
+      "notebook": "notebooks/ch15w_well_networks.ipynb",
+      "dpi": 220,
+      "sha256": "58d709a53e8d298b72078e7964c03c592b414fc3993ffb051cc62b664d1bdb04",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Wellhead P: pressure",
+            180.0,
+            280.0,
+            "bara"
+          ],
+          [
+            "Manifold Arrival P: pressure",
+            177.89067150844247,
+            278.9584285637799,
+            "bara"
+          ],
+          [
+            "Flowline Pressure Drop",
+            1.0415714362201243,
+            2.109328491557534,
+            "bar"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    }
+  ],
+  "notebook_sha256": "fc7023b0ff7376887bd81ab8066f6d91b2cd6805b13e294d284288b282b0c552",
+  "editorial_review": {
+    "reviewed_at": "2026-09-12T20:15:02.087089+00:00",
+    "pre_review_notebook_sha256": "cd92931cf9ccc25cde97e7a9d23cc9ed549b62bd04951d8e217ceee10efe749e",
+    "code_and_outputs_unchanged": true,
+    "description": "Replaced generated discussion prose with plot-specific reviewed interpretation; every executed code hash rechecked."
+  },
+  "scientific_validation": {
+    "physics_report": "verification\\scientific_revision\\notebooks\\ch06_wells_artificial_lift.json",
+    "validation_helper_sha256": {
+      "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+      "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+      "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+    },
+    "pre_scope_markdown_sha256": "fc7023b0ff7376887bd81ab8066f6d91b2cd6805b13e294d284288b282b0c552",
+    "post_execution_edit": "Added scope and independent benchmark links only; every executed code-cell hash rechecked."
+  }
+}

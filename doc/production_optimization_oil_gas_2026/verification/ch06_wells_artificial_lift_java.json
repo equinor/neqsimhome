@@ -1,0 +1,267 @@
+{
+  "chapter": "ch06_wells_artificial_lift",
+  "source_sha256": "93da516016be5dc1a4d739fb0d443d379bc1be72ec32960f73010f7bc1f9a33d",
+  "engine": "JShell, Java snippets constrained to Java 8 syntax",
+  "returncode": 0,
+  "blocks": [
+    {
+      "index": 1,
+      "line": 92,
+      "code": "import org.apache.logging.log4j.LogManager;\nimport org.apache.logging.log4j.Logger;\nLogger logger = LogManager.getLogger(\"BookChapter6\");\nimport neqsim.process.equipment.network.LoopedPipeNetwork;\nimport neqsim.process.equipment.network.LoopedPipeNetwork.*;\nimport neqsim.thermo.system.SystemInterface;\nimport neqsim.thermo.system.SystemSrkEos;\n\n// Create a fluid template for the network\nSystemInterface gas = new SystemSrkEos(273.15 + 80.0, 200.0);\ngas.addComponent(\"methane\", 0.80);\ngas.addComponent(\"ethane\", 0.08);\ngas.addComponent(\"propane\", 0.04);\ngas.addComponent(\"n-butane\", 0.02);\ngas.addComponent(\"n-heptane\", 0.04);\ngas.addComponent(\"water\", 0.02);\ngas.setMixingRule(\"classic\");\ngas.setMultiPhaseCheck(true);\n\n// Create the network\nLoopedPipeNetwork network = new LoopedPipeNetwork(\"Production Network\");\nnetwork.setFluidTemplate(gas);\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_001_BEGIN\"\n\njshell> \njshell> $22 ==> "
+    },
+    {
+      "index": 2,
+      "line": 123,
+      "code": "// Reservoir nodes (fixed pressure sources)\nnetwork.addSourceNode(\"Reservoir-A\", 250.0, 0.0);  // 250 bar, flow determined by IPR\nnetwork.addSourceNode(\"Reservoir-B\", 220.0, 0.0);  // 220 bar\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_002_BEGIN\"\n\njshell> \njshell> $26 ==> "
+    },
+    {
+      "index": 3,
+      "line": 131,
+      "code": "// Platform manifold (fixed back-pressure)\nnetwork.addSinkNode(\"Manifold\", 0.0);  // demand determined by network solution\n\n// Alternative: fixed pressure at sink\nNetworkNode manifold = network.getNode(\"Manifold\");\nmanifold.setPressure(40.0e5);        // 40 bara in Pa\nmanifold.setPressureFixed(true);\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_003_BEGIN\"\n\njshell> \njshell> $32 ==> "
+    },
+    {
+      "index": 4,
+      "line": 143,
+      "code": "// Wellhead and subsea junction nodes\nnetwork.addJunctionNode(\"WH-A\");        // Wellhead of Well A\nnetwork.addJunctionNode(\"WH-B\");        // Wellhead of Well B\nnetwork.addJunctionNode(\"BH-A\");        // Bottomhole of Well A\nnetwork.addJunctionNode(\"BH-B\");        // Bottomhole of Well B\nnetwork.addJunctionNode(\"Subsea-Manifold\");\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_004_BEGIN\"\n\njshell> \njshell> $39 ==> "
+    },
+    {
+      "index": 5,
+      "line": 162,
+      "code": "// Subsea flowline (single-phase pipe)\nnetwork.addPipe(\"Subsea-Manifold\", \"Manifold\", \"Export Flowline\",\n    15000.0,    // length [m]\n    0.254);     // diameter [m] (10-inch)\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_005_BEGIN\"\n\njshell> \njshell> $42 ==> "
+    },
+    {
+      "index": 6,
+      "line": 171,
+      "code": "// Multiphase gathering line\nNetworkPipe gatherLine = network.addPipe(\"WH-A\", \"Subsea-Manifold\",\n    \"Gathering Line A\", 5000.0, 0.2032);  // 8-inch, 5 km\ngatherLine.setElementType(NetworkElementType.MULTIPHASE_PIPE);\ngatherLine.setMultiphaseSegments(20);\ngatherLine.setRoughness(4.5e-5);\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_006_BEGIN\"\n\njshell> \njshell> $48 ==> "
+    },
+    {
+      "index": 7,
+      "line": 225,
+      "code": "// Select the NR-GGA solver\nnetwork.setSolverType(SolverType.NEWTON_RAPHSON);\n\n// Convergence settings\nnetwork.setTolerance(1e-6);       // Residual tolerance (Pa)\nnetwork.setMaxIterations(100);    // Maximum iterations\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_007_BEGIN\"\n\njshell> \njshell> $53 ==> "
+    },
+    {
+      "index": 8,
+      "line": 244,
+      "code": "// The solver handles initialization internally, but you can override:\nnetwork.getPipe(\"Export Flowline\").setFlowRate(50.0);  // kg/s\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_008_BEGIN\"\n\njshell> \njshell> $56 ==> "
+    },
+    {
+      "index": 9,
+      "line": 283,
+      "code": "// Oil well with PI = 15 Sm3/d/bar (converted internally to SI)\nnetwork.addWellIPR(\"Reservoir-A\", \"BH-A\", \"Well-A IPR\",\n    15.0 * 800.0 / 86400.0 / 1e5, // SI PI from 15 Sm3/day/bar and 800 kg/Sm3\n    false);    // oil IPR; source node supplies reservoir pressure\n\n// Gas well (set gasIPR flag)\nNetworkPipe gasIPR = network.addWellIPR(\"Reservoir-B\", \"BH-B\", \"Well-B IPR\",\n    0.5 * 0.8 / 86400.0 / 1e10, // kg/s/Pa2 from 0.8 kg/Sm3 gas\n    true);     // gas pressure-squared IPR\ngasIPR.setGasIPR(true);\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_009_BEGIN\"\n\njshell> \njshell> $61 ==> "
+    },
+    {
+      "index": 10,
+      "line": 318,
+      "code": "// Vogel IPR: Qmax = absolute open flow (AOF) in kg/s\nnetwork.addWellIPRVogel(\"Reservoir-A\", \"BH-A\", \"Well-A Vogel\", 50.0);       // Qmax (AOF) [kg/s]\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_010_BEGIN\"\n\njshell> \njshell> $64 ==> "
+    },
+    {
+      "index": 11,
+      "line": 346,
+      "code": "// Fetkovich IPR: C and n from well test analysis\nnetwork.addWellIPRFetkovich(\"Reservoir-B\", \"BH-B\", \"Well-B Fetkovich\", 1.5e-8,      // C coefficient\n    0.85);       // n exponent\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_011_BEGIN\"\n\njshell> \njshell> $67 ==> "
+    },
+    {
+      "index": 14,
+      "line": 459,
+      "code": "// Production choke with Kv = 25 m3/hr/sqrt(bar), 60% open\nnetwork.addJunctionNode(\"Downstream-A\");\nnetwork.addChoke(\"WH-A\", \"Downstream-A\", \"Choke-A\",\n    25.0,    // Kv [m3/hr/sqrt(bar)]\n    60.0);   // opening [%]\n\n// Adjust choke opening later\nNetworkPipe choke = network.getPipe(\"Choke-A\");\nchoke.setChokeOpening(75.0);  // Open to 75%\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_014_BEGIN\"\n\njshell> \njshell> $73 ==> "
+    },
+    {
+      "index": 15,
+      "line": 527,
+      "code": "// Vertical tubing: 2500 m depth, 4-inch ID, 20 segments\nnetwork.addTubing(\"BH-A\", \"WH-A\", \"Tubing-A\",\n    2500.0,    // measured depth [m]\n    0.1016,    // ID [m] (4-inch)\n    90.0);     // inclination from horizontal [degrees] (90 = vertical)\n\n// Deviated well: 3500 m MD, 60\u00b0 average inclination\nnetwork.addTubing(\"BH-B\", \"WH-B\", \"Tubing-B\",\n    3500.0,    // measured depth [m]\n    0.1016,    // ID [m]\n    60.0);     // inclination [degrees]\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_015_BEGIN\"\n\njshell> \njshell> $77 ==> "
+    },
+    {
+      "index": 16,
+      "line": 602,
+      "code": "import neqsim.process.equipment.network.LoopedPipeNetwork;\nimport neqsim.process.equipment.network.LoopedPipeNetwork.*;\nimport neqsim.thermo.system.SystemInterface;\nimport neqsim.thermo.system.SystemSrkEos;\n\n// Step 1: Fluid template\nSystemInterface fluid = new SystemSrkEos(273.15 + 80.0, 200.0);\nfluid.addComponent(\"nitrogen\", 0.5);\nfluid.addComponent(\"CO2\", 1.5);\nfluid.addComponent(\"methane\", 72.0);\nfluid.addComponent(\"ethane\", 8.0);\nfluid.addComponent(\"propane\", 4.5);\nfluid.addComponent(\"i-butane\", 1.0);\nfluid.addComponent(\"n-butane\", 2.0);\nfluid.addComponent(\"n-pentane\", 1.5);\nfluid.addComponent(\"n-hexane\", 1.0);\nfluid.addComponent(\"n-heptane\", 4.0);\nfluid.addComponent(\"n-octane\", 2.5);\nfluid.addComponent(\"water\", 1.5);\nfluid.setMixingRule(\"classic\");\nfluid.setMultiPhaseCheck(true);\n\nLoopedPipeNetwork network = new LoopedPipeNetwork(\"Subsea Field\");\nnetwork.setFluidTemplate(fluid);\n\n// Step 2: Source nodes (reservoirs)\nnetwork.addSourceNode(\"Res-A\", 250.0, 0.0);\nnetwork.addSourceNode(\"Res-B\", 220.0, 0.0);\nnetwork.addSourceNode(\"Res-C\", 200.0, 0.0);\n\n// Step 3: Junction nodes\nnetwork.addJunctionNode(\"BH-A\");\nnetwork.addJunctionNode(\"BH-B\");\nnetwork.addJunctionNode(\"BH-C\");\nnetwork.addJunctionNode(\"WH-A\");\nnetwork.addJunctionNode(\"WH-B\");\nnetwork.addJunctionNode(\"WH-C\");\nnetwork.addJunctionNode(\"Down-A\");\nnetwork.addJunctionNode(\"Down-B\");\nnetwork.addJunctionNode(\"Down-C\");\nnetwork.addJunctionNode(\"Subsea-Manifold\");\n\n// Step 4: Sink node (platform)\nnetwork.addSinkNode(\"Platform\", 0.0);\nNetworkNode platform = network.getNode(\"Platform\");\nplatform.setPressure(35.0e5);  // 35 bara back-pressure\nplatform.setPressureFixed(true);\n\n// Step 5: Elements \u2014 IPRs\nnetwork.addWellIPR(\"Res-A\", \"BH-A\", \"IPR-A\", 15.0 * 800.0 / 86400.0 / 1e5, false);\nnetwork.addWellIPRVogel(\"Res-B\", \"BH-B\", \"IPR-B\", 80.0);\nnetwork.addWellIPRFetkovich(\"Res-C\", \"BH-C\", \"IPR-C\", 2.0e-8, 0.80);\n\n// Step 5: Elements \u2014 Tubing\nnetwork.addTubing(\"BH-A\", \"WH-A\", \"Tubing-A\", 2500.0, 0.1016, 90.0);\nnetwork.addTubing(\"BH-B\", \"WH-B\", \"Tubing-B\", 3000.0, 0.1016, 75.0);\nnetwork.addTubing(\"BH-C\", \"WH-C\", \"Tubing-C\", 2000.0, 0.1016, 90.0);\n\n// Step 5: Elements \u2014 Chokes\nnetwork.addChoke(\"WH-A\", \"Down-A\", \"Choke-A\", 25.0, 80.0);\nnetwork.addChoke(\"WH-B\", \"Down-B\", \"Choke-B\", 30.0, 70.0);\nnetwork.addChoke(\"WH-C\", \"Down-C\", \"Choke-C\", 20.0, 90.0);\n\n// Step 5: Elements \u2014 Gathering flowlines (multiphase)\nNetworkPipe fl_a = network.addPipe(\"Down-A\", \"Subsea-Manifold\",\n    \"Flowline-A\", 5000.0, 0.2032);\nfl_a.setElementType(NetworkElementType.MULTIPHASE_PIPE);\nfl_a.setMultiphaseSegments(15);\n\nNetworkPipe fl_b = network.addPipe(\"Down-B\", \"Subsea-Manifold\",\n    \"Flowline-B\", 8000.0, 0.2032);\nfl_b.setElementType(NetworkElementType.MULTIPHASE_PIPE);\nfl_b.setMultiphaseSegments(20);\n\nNetworkPipe fl_c = network.addPipe(\"Down-C\", \"Subsea-Manifold\",\n    \"Flowline-C\", 3000.0, 0.2032);\nfl_c.setElementType(NetworkElementType.MULTIPHASE_PIPE);\nfl_c.setMultiphaseSegments(10);\n\n// API assembly only: no elevation profile is supplied for this nominal riser.\n// Step 5: Elements \u2014 Riser\nNetworkPipe riser = network.addPipe(\"Subsea-Manifold\", \"Platform\",\n    \"Production Riser\", 1500.0, 0.254);\nriser.setElementType(NetworkElementType.MULTIPHASE_PIPE);\nriser.setMultiphaseSegments(15);\n\n// Step 6: Solver configuration\nnetwork.setSolverType(SolverType.NEWTON_RAPHSON);\nnetwork.setTolerance(1e-6);\nnetwork.setMaxIterations(100);\n\n// Step 7: Solve\nnetwork.run();\n\n// Step 7: Results\nMap<String, Object> summary = network.getSolutionSummary();\nlogger.info(\"Converged: \" + summary.get(\"converged\"));\nlogger.info(\"Iterations: \" + summary.get(\"iterations\"));\nlogger.info(\"Total production: {} kg/s\", network.getTotalSinkFlow());\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_016_BEGIN\"\n\njshell> 2026-09-12 22:37:48 INFO  BookChapter6:5 - Converged: true\n2026-09-12 22:37:48 INFO  BookChapter6:5 - Iterations: 100\n2026-09-12 22:37:48 INFO  BookChapter6:5 - Total production: 45.68648891166163 kg/s\n\njshell> $146 ==> "
+    },
+    {
+      "index": 17,
+      "line": 710,
+      "code": "Map<String, Object> summary = network.getSolutionSummary();\n// Keys: converged, iterations, residualNorm, totalSourceFlow,\n//       totalSinkFlow, maxVelocity, maxErosionalRatio\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_017_BEGIN\"\n\njshell> \njshell> $149 ==> "
+    },
+    {
+      "index": 18,
+      "line": 718,
+      "code": "logger.info(\"Hydraulic summary: {}\", network.getSolutionSummary());\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_018_BEGIN\"\n\njshell> 2026-09-12 22:37:48 INFO  BookChapter6:5 - Hydraulic summary: {pipeFlowRates_kghr={Tubing-A=39628.625721182085, Tubing-C=78289.13280616932, Tubing-B=46553.60155463044, IPR-B=46553.60155463044, IPR-C=78289.13280616932, Flowline-A=39628.625721182085, IPR-A=39628.625721182085, Flowline-B=46553.60155463044, Flowline-C=78289.13280616932, Production Riser=164471.36008198187, Choke-C=78289.13280616932, Choke-B=46553.60155463044, Choke-A=39628.625721182085}, numberOfLoops=0, converged=true, nodePressures_bara={Subsea-Manifold=43.068790988190386, BH-C=199.95063094135082, BH-B=199.3849064713886, Platform=35.0, Res-C=200.0, BH-A=170.74274855763585, Down-C=52.28893839464664, Res-B=220.0, Res-A=250.0, Down-B=51.88387705814054, Down-A=47.314252174361854, WH-A=94.62850434872195, WH-B=103.76775411628599, WH-C=104.57787678929236}, numberOfPipes=13, massBalanceError_kgs=0.0, networkName=Subsea Field, maxResidual_Pa=8.288770914077759E-7, numberOfNodes=14, solverType=NEWTON_RAPHSON, iterations=100, tolerance_Pa=1.0E-6}\n\njshell> $152 ==> "
+    },
+    {
+      "index": 19,
+      "line": 724,
+      "code": "logger.info(\"Mass balance error: {} kg/s\", network.getMassBalanceError());\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_019_BEGIN\"\n\njshell> 2026-09-12 22:37:48 INFO  BookChapter6:5 - Mass balance error: 0.0 kg/s\n\njshell> $155 ==> "
+    },
+    {
+      "index": 20,
+      "line": 730,
+      "code": "// Get pressure at any node\ndouble whPressure = network.getNodePressure(\"WH-A\");  // bara\n\n// Get flow rate through any element\ndouble pipeFlow = network.getPipeFlowRate(\"Flowline-A\") / 3600.0;  // kg/s\n\n// Get element details\nNetworkPipe pipe = network.getPipe(\"Flowline-A\");\ndouble velocity = pipe.getVelocity();        // m/s\ndouble reynolds = pipe.getReynoldsNumber();  // dimensionless\ndouble holdup = pipe.getLiquidHoldup();       // fraction\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_020_BEGIN\"\n\njshell> \njshell> $163 ==> "
+    },
+    {
+      "index": 21,
+      "line": 756,
+      "code": "// Apply gas lift to Well A: 5000 kg/hr of lift gas\nnetwork.setGasLift(\"Tubing-A\", 5000.0);  // kg/hr\n\n// Solve again to see the effect\nnetwork.run();\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_021_BEGIN\"\n\njshell> \njshell> $167 ==> "
+    },
+    {
+      "index": 22,
+      "line": 782,
+      "code": "// ESP on Well B: 150 kW rated power, 55% efficiency\nnetwork.setESP(\"Tubing-B\", 150.0, 0.55);  // power [kW], efficiency\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_022_BEGIN\"\n\njshell> \njshell> $170 ==> "
+    },
+    {
+      "index": 23,
+      "line": 791,
+      "code": "// Jet pump on Well C: 100 kW equivalent, 40% efficiency\nnetwork.setJetPump(\"Tubing-C\", 100.0, 0.40);\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_023_BEGIN\"\n\njshell> \njshell> $173 ==> "
+    },
+    {
+      "index": 24,
+      "line": 800,
+      "code": "// Rod pump: 30 kW, 50% efficiency\nnetwork.setRodPump(\"Tubing-A\", 30.0, 0.50);\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_024_BEGIN\"\n\njshell> \njshell> $176 ==> "
+    },
+    {
+      "index": 25,
+      "line": 821,
+      "code": "// Set water cut for Well A's tubing\nNetworkPipe tubing_a = network.getPipe(\"Tubing-A\");\ntubing_a.setWaterCut(0.30);  // 30% water cut\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_025_BEGIN\"\n\njshell> \njshell> $180 ==> "
+    },
+    {
+      "index": 26,
+      "line": 837,
+      "code": "LoopedPipeNetwork variant = new LoopedPipeNetwork(\"Topology illustration\");\nvariant.setFluidTemplate(fluid);\nvariant.addSourceNode(\"Platform\", 250.0, 0.0);\n// Independent injection topology illustration\nvariant.addJunctionNode(\"WI-Wellhead\");\nvariant.addJunctionNode(\"WI-BH\");\nvariant.addSourceNode(\"WI-Reservoir\", 180.0, 0.0);\nvariant.addPipe(\"Platform\", \"WI-Wellhead\", \"WI-Flowline\", 10000.0, 0.2032);\nvariant.addTubing(\"WI-Wellhead\", \"WI-BH\", \"WI-Tubing\", 3000.0, 0.1778, 90.0);\nvariant.addWellIPR(\"WI-BH\", \"WI-Reservoir\", \"WI-IPR\", 25.0 * 1000.0 / 86400.0 / 1e5, false);\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_026_BEGIN\"\n\njshell> \njshell> $191 ==> "
+    },
+    {
+      "index": 27,
+      "line": 868,
+      "code": "// Set sand rate for a well's tubing\nNetworkPipe tubing = network.getPipe(\"Tubing-A\");\ntubing.setSandRate(0.001);  // kg/s of sand\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_027_BEGIN\"\n\njshell> \njshell> $195 ==> "
+    },
+    {
+      "index": 28,
+      "line": 900,
+      "code": "Map<String, double[]> emissions = network.calculateEmissions();\n// Compressor combustion emissions only; flaring, venting and fugitives need separate models.\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_028_BEGIN\"\n\njshell> \njshell> $198 ==> "
+    },
+    {
+      "index": 29,
+      "line": 919,
+      "code": "// Small, independently bounded network for the optimization tutorial.\n// The detailed four-well multiphase calculation is demonstrated in Python below.\nLoopedPipeNetwork study = new LoopedPipeNetwork(\"Choke optimization tutorial\");\nSystemSrkEos studyFluid = new SystemSrkEos(303.15, 90.0);\nstudyFluid.addComponent(\"methane\", 0.95);\nstudyFluid.addComponent(\"ethane\", 0.05);\nstudyFluid.setMixingRule(\"classic\");\nstudy.setFluidTemplate(studyFluid);\nstudy.addSourceNode(\"Source-A\", 90.0, 0.0);\nstudy.addSourceNode(\"Source-B\", 85.0, 0.0);\nstudy.addJunctionNode(\"Down-A\");\nstudy.addJunctionNode(\"Down-B\");\nstudy.addSinkNode(\"Plant\", 0.0);\nstudy.getNode(\"Plant\").setPressure(40.0e5);\nstudy.getNode(\"Plant\").setPressureFixed(true);\nstudy.addChoke(\"Source-A\", \"Down-A\", \"Choke-A\", 20.0, 80.0);\nstudy.addChoke(\"Source-B\", \"Down-B\", \"Choke-B\", 15.0, 80.0);\nstudy.getPipe(\"Choke-A\").setChokeUseValveModel(true);\nstudy.getPipe(\"Choke-B\").setChokeUseValveModel(true);\nstudy.setRelaxationFactor(1.0);\nstudy.addPipe(\"Down-A\", \"Plant\", \"Line-A\", 5000.0, 0.2032);\nstudy.addPipe(\"Down-B\", \"Plant\", \"Line-B\", 4000.0, 0.2032);\nstudy.setSolverType(SolverType.NEWTON_RAPHSON);\nstudy.setMaxIterations(200);\nstudy.setTolerance(100.0);  // Pa = 0.001 bar for this teaching solve\ndouble[] openings = {40.0, 60.0, 80.0, 100.0};\nfor (double opening : openings) {\n    study.getPipe(\"Choke-A\").setChokeOpening(opening);\n    study.run();\n    double residualPa = study.getMaxResidual();\n    double massErrorKgS = Math.abs(study.getMassBalanceError());\n    double sinkKgS = study.getTotalSinkFlow();\n    String chokeStatus = study.getPipe(\"Choke-A\").getChokeModelStatus();\n    if (!study.isConverged() || !Double.isFinite(residualPa)\n        || residualPa > 100.0 || massErrorKgS > 1.0e-6\n        || !Double.isFinite(sinkKgS) || sinkKgS <= 0.0\n        || !chokeStatus.startsWith(\"IEC_GAS_\")) {\n        throw new IllegalStateException(\"Rejected hydraulic operating point\");\n    }\n    double downAPa = study.getNode(\"Down-A\").getPressure();\n    double downBPa = study.getNode(\"Down-B\").getPressure();\n    if (!(40.0e5 < downAPa && downAPa < 90.0e5\n        && 40.0e5 < downBPa && downBPa < 85.0e5)) {\n        throw new IllegalStateException(\"Invalid passive-network pressure ordering\");\n    }\n    logger.info(\"Accepted: residual {} Pa, mass error {} kg/s, status {}\",\n        residualPa, massErrorKgS, chokeStatus);\n    logger.info(\"Opening {}%, flow {} kg/hr, converged {}\", opening,\n        study.getPipeFlowRate(\"Line-A\"), study.getSolutionSummary().get(\"converged\"));\n    logger.info(\"Hydraulic residual {} Pa\", study.getSolutionSummary().get(\"maxResidual_Pa\"));\n}\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_029_BEGIN\"\n\njshell> 2026-09-12 22:38:10 INFO  BookChapter6:24 - Accepted: residual 11.445194067946431 Pa, mass error 0.0 kg/s, status IEC_GAS_CRITICAL\n2026-09-12 22:38:10 INFO  BookChapter6:26 - Opening 40.0%, flow 9114.398027218225 kg/hr, converged true\n2026-09-12 22:38:10 INFO  BookChapter6:28 - Hydraulic residual 11.445194067946431 Pa\n2026-09-12 22:38:10 INFO  BookChapter6:24 - Accepted: residual 1.3096723705530167E-10 Pa, mass error 0.0 kg/s, status IEC_GAS_CRITICAL\n2026-09-12 22:38:10 INFO  BookChapter6:26 - Opening 60.0%, flow 13671.597040827353 kg/hr, converged true\n2026-09-12 22:38:10 INFO  BookChapter6:28 - Hydraulic residual 1.3096723705530167E-10 Pa\n2026-09-12 22:38:10 INFO  BookChapter6:24 - Accepted: residual 1.964508555829525E-10 Pa, mass error 0.0 kg/s, status IEC_GAS_CRITICAL\n2026-09-12 22:38:10 INFO  BookChapter6:26 - Opening 80.0%, flow 18228.796054436458 kg/hr, converged true\n2026-09-12 22:38:10 INFO  BookChapter6:28 - Hydraulic residual 1.964508555829525E-10 Pa\n2026-09-12 22:38:10 INFO  BookChapter6:24 - Accepted: residual 1.1641532182693481E-10 Pa, mass error 0.0 kg/s, status IEC_GAS_CRITICAL\n2026-09-12 22:38:10 INFO  BookChapter6:26 - Opening 100.0%, flow 22785.99506804557 kg/hr, converged true\n2026-09-12 22:38:10 INFO  BookChapter6:28 - Hydraulic residual 1.1641532182693481E-10 Pa\n\njshell> $225 ==> "
+    },
+    {
+      "index": 30,
+      "line": 983,
+      "code": "import neqsim.process.equipment.network.NetworkOptimizer;\nNetworkOptimizer optimizer = study.createOptimizer();\noptimizer.setMaxEvaluations(50);\nNetworkOptimizer.OptimizationResult result = optimizer.optimize();\nstudy.run();\nlogger.info(\"Optimizer converged {}, hydraulics converged {}, message {}\",\n    result.converged, study.getSolutionSummary().get(\"converged\"), result.message);\nlogger.info(\"Candidate production {} kg/hr, choke openings {}\",\n    result.totalProductionKgHr, Arrays.toString(result.chokeOpenings));\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_030_BEGIN\"\n\njshell> 2026-09-12 22:38:11 INFO  BookChapter6:5 - Optimizer converged true, hydraulics converged true, message Optimization completed\n2026-09-12 22:38:11 INFO  BookChapter6:5 - Candidate production 38889.57263659438 kg/hr, choke openings [100.0, 100.0]\n\njshell> $234 ==> "
+    },
+    {
+      "index": 31,
+      "line": 997,
+      "code": "NetworkOptimizer optimizer = study.createOptimizer();\noptimizer.setAlgorithm(NetworkOptimizer.Algorithm.CMAES);\noptimizer.setDeterministicSeed(2026L);\noptimizer.setMaxEvaluations(60);\nNetworkOptimizer.OptimizationResult result = optimizer.optimize();\nlogger.info(\"CMA-ES search converged {}, unvalidated candidate {} kg/hr: {}\",\n    result.converged, result.totalProductionKgHr, result.message);\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_031_BEGIN\"\n\njshell> 2026-09-12 22:38:13 INFO  BookChapter6:5 - CMA-ES search converged true, unvalidated candidate 38889.572636594356 kg/hr: Optimization completed\n\njshell> $242 ==> "
+    },
+    {
+      "index": 32,
+      "line": 1011,
+      "code": "NetworkOptimizer optimizer = study.createOptimizer();\noptimizer.setParetoPoints(3);\noptimizer.setMaxEvaluations(60);\nList<NetworkOptimizer.OptimizationResult> pareto = optimizer.optimizeMultiObjective();\nfor (NetworkOptimizer.OptimizationResult point : pareto) {\n    logger.info(\"Unvalidated candidate {} kg/hr, compressor power {} kW, weight {}\",\n        point.totalProductionKgHr, point.totalCompressorPowerKW, point.paretoWeight);\n}\n// This unpowered teaching network has no production/power trade-off.\n// Introduce a calibrated compressor and constraints before interpreting a Pareto front.\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_032_BEGIN\"\n\njshell> 2026-09-12 22:38:13 INFO  BookChapter6:6 - Unvalidated candidate 38889.57263659438 kg/hr, compressor power 0.0 kW, weight 0.0\n2026-09-12 22:38:13 INFO  BookChapter6:6 - Unvalidated candidate 38889.57263659438 kg/hr, compressor power 0.0 kW, weight 0.5\n2026-09-12 22:38:13 INFO  BookChapter6:6 - Unvalidated candidate 38889.57263659438 kg/hr, compressor power 0.0 kW, weight 1.0\n\njshell> $249 ==> "
+    },
+    {
+      "index": 36,
+      "line": 1240,
+      "code": "LoopedPipeNetwork variant = new LoopedPipeNetwork(\"Topology illustration\");\nvariant.setFluidTemplate(fluid);\nfor (String node : Arrays.asList(\"Down-A\", \"Down-B\", \"Down-C\")) { variant.addJunctionNode(node); }\n// Add the explicitly named junctions before their connections.\nfor (String node : Arrays.asList(\"Down-D\", \"Manifold-1\", \"Manifold-2\")) {\n    variant.addJunctionNode(node);\n}\nvariant.addPipe(\"Down-A\", \"Manifold-1\", \"FL-A1\", 5000.0, 0.2032);\nvariant.addPipe(\"Down-B\", \"Manifold-2\", \"FL-B1\", 4000.0, 0.2032);\nvariant.addPipe(\"Down-C\", \"Manifold-1\", \"FL-A2\", 6000.0, 0.2032);\nvariant.addPipe(\"Down-D\", \"Manifold-2\", \"FL-B2\", 3500.0, 0.2032);\n\n// Crossover creates the loop\nvariant.addPipe(\"Manifold-1\", \"Manifold-2\", \"Crossover\",\n    2000.0, 0.1524);  // 6-inch tie-in\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_036_BEGIN\"\n\njshell> \njshell> $260 ==> "
+    },
+    {
+      "index": 37,
+      "line": 1262,
+      "code": "LoopedPipeNetwork variant = new LoopedPipeNetwork(\"Topology illustration\");\nvariant.setFluidTemplate(fluid);\n// Compressor proxy: a liquid booster requires an actual pump model.\nvariant.addJunctionNode(\"Manifold\");\nvariant.addJunctionNode(\"Boosted-Manifold\");\nNetworkPipe booster = variant.addPipe(\"Manifold\", \"Boosted-Manifold\",\n    \"Subsea Booster\", 10.0, 0.254);\nbooster.setElementType(NetworkElementType.COMPRESSOR);\nbooster.setCompressorEfficiency(0.72);\nbooster.setCompressorSpeed(4500.0);  // RPM\n\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_037_BEGIN\"\n\njshell> \njshell> $270 ==> "
+    },
+    {
+      "index": 38,
+      "line": 1282,
+      "code": "LoopedPipeNetwork variant = new LoopedPipeNetwork(\"Topology illustration\");\nvariant.setFluidTemplate(fluid);\n// Pressure regulator maintaining 20 bar downstream\nvariant.addSourceNode(\"HP-Header\", 40.0, 0.0);\nvariant.addJunctionNode(\"LP-Header\");\nNetworkPipe reg = variant.addPipe(\"HP-Header\", \"LP-Header\",\n    \"PRV-001\", 1.0, 0.1016);\nreg.setElementType(NetworkElementType.REGULATOR);\nreg.setRegulatorSetPoint(20.0e5);  // 20 bara in Pa\n\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_038_BEGIN\"\n\njshell> \njshell> $279 ==> "
+    },
+    {
+      "index": 39,
+      "line": 1305,
+      "code": "// Check erosional velocity after solving\nfor (String pipeName : network.getPipeNames()) {\n    NetworkPipe pipe = network.getPipe(pipeName);\n    double ratio = pipe.getErosionalVelocityRatio();\n    if (ratio > 0.8) {\n        logger.info(String.format(\"WARNING: %s erosional ratio = %.2f%n\",\n            pipeName, ratio));\n    }\n}\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_039_BEGIN\"\n\njshell> \njshell> $282 ==> "
+    },
+    {
+      "index": 40,
+      "line": 1321,
+      "code": "// Set ambient temperature and heat transfer for a subsea flowline\nNetworkPipe flowline = network.getPipe(\"Flowline-A\");\nflowline.setAmbientTemperature(277.15);  // 4\u00b0C seabed\nflowline.setOverallHeatTransferCoeff(5.0);  // W/m2K (insulated pipe)\n// Overall U represents the selected insulation; geometric sizing is a separate calculation.\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_040_BEGIN\"\n\njshell> \njshell> $287 ==> "
+    },
+    {
+      "index": 41,
+      "line": 1343,
+      "code": "// Diagnostic: check if the network is physically feasible\nnetwork.setMaxIterations(200);\nnetwork.setTolerance(1e-4);  // Relaxed tolerance first\nnetwork.run();\n\nMap<String, Object> summary = network.getSolutionSummary();\nboolean converged = (boolean) summary.get(\"converged\");\nif (!converged) {\n    logger.info(\"Residual norm: \" + summary.get(\"maxResidual_Pa\"));\n    logger.info(\"Check supply/demand balance and element sizing\");\n}\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_041_BEGIN\"\n\njshell> \njshell> $295 ==> "
+    },
+    {
+      "index": 42,
+      "line": 1410,
+      "code": "// Comparison example\nnetwork.setSolverType(SolverType.HARDY_CROSS);\nlong t1 = System.nanoTime();\nnetwork.run();\nlong hardyCrossTime = System.nanoTime() - t1;\nint hcIter = network.getIterationCount();\n\nnetwork.setSolverType(SolverType.NEWTON_RAPHSON);\nlong t2 = System.nanoTime();\nnetwork.run();\nlong nrTime = System.nanoTime() - t2;\nint nrIter = network.getIterationCount();\n\nlogger.info(String.format(\"Hardy Cross: %d iterations, %.1f ms%n\",\n    hcIter, hardyCrossTime / 1e6));\nlogger.info(String.format(\"Newton-Raphson: %d iterations, %.1f ms%n\",\n    nrIter, nrTime / 1e6));\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_042_BEGIN\"\n\njshell> 2026-09-12 22:38:39 INFO  BookChapter6:5 - Hardy Cross: 1 iterations, 562,3 ms\n\n2026-09-12 22:38:39 INFO  BookChapter6:5 - Newton-Raphson: 67 iterations, 11461,8 ms\n\n\njshell> $309 ==> "
+    }
+  ]
+}

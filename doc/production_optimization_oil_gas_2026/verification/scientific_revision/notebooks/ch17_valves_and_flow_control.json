@@ -1,0 +1,3986 @@
+{
+  "chapter": "ch17_valves_and_flow_control",
+  "notebook": "chapters\\ch17_valves_and_flow_control\\notebooks\\ch15_valves_flow_control.ipynb",
+  "status": "passed",
+  "checked_at": "2026-09-12T20:11:02.000568+00:00",
+  "checks": [
+    {
+      "label": "calculation_cell_3:process/HP Gas nonnegative flow",
+      "category": "physical_domain",
+      "unit": "kg/s",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 13.88888888888889,
+      "maximum_actual": 13.88888888888889
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 323.15
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 150.0,
+      "maximum_actual": 150.0
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.005000000000000001,
+      "maximum_actual": 0.005000000000000001
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.8500000000000001,
+      "maximum_actual": 0.8500000000000001
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.005000000000000001,
+      "maximum_actual": 0.005000000000000001
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.8500000000000001,
+      "maximum_actual": 0.8500000000000001
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 132.93131631127278,
+      "maximum_actual": 132.93131631127278
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_3:process/HP Gas flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 323.15
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 150.0,
+      "maximum_actual": 150.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.005000000000000001,
+      "maximum_actual": 0.005000000000000001
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.8500000000000001,
+      "maximum_actual": 0.8500000000000001
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.005000000000000001,
+      "maximum_actual": 0.005000000000000001
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.8500000000000001,
+      "maximum_actual": 0.8500000000000001
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 132.93131631127278,
+      "maximum_actual": 132.93131631127278
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 300.11198595380944,
+      "maximum_actual": 300.11198595380944
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 80.0,
+      "maximum_actual": 80.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.005000000000000001,
+      "maximum_actual": 0.005000000000000001
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.8500000000000001,
+      "maximum_actual": 0.8500000000000001
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.005000000000000001,
+      "maximum_actual": 0.005000000000000001
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.8500000000000001,
+      "maximum_actual": 0.8500000000000001
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 76.6836776313626,
+      "maximum_actual": 76.6836776313626
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.88888888888889
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.13421e-05",
+      "tolerance": {
+        "absolute": 7.134211803076863e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 6.35221",
+      "tolerance": {
+        "absolute": 6.352208489891901,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0002581145381554961,
+      "maximum_actual": 0.0002581145381554961
+    },
+    {
+      "label": "calculation_cell_3:process/Choke Valve pressure direction",
+      "category": "physical_domain",
+      "unit": "bar",
+      "expected": "nonpositive drop",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": -70.0,
+      "maximum_actual": -70.0
+    },
+    {
+      "label": "calculation_cell_5:feed nonnegative flow",
+      "category": "physical_domain",
+      "unit": "kg/s",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 2.777777777777778,
+      "maximum_actual": 22.22222222222222
+    },
+    {
+      "label": "calculation_cell_5:feed absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 323.15
+    },
+    {
+      "label": "calculation_cell_5:feed absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 150.0,
+      "maximum_actual": 150.0
+    },
+    {
+      "label": "calculation_cell_5:feed overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_5:feed overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0049999999999999975,
+      "maximum_actual": 0.005000000000000002
+    },
+    {
+      "label": "calculation_cell_5:feed overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999995,
+      "maximum_actual": 0.8500000000000002
+    },
+    {
+      "label": "calculation_cell_5:feed overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 4.440892098500626e-16
+    },
+    {
+      "label": "calculation_cell_5:feed phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_5:feed phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_5:feed phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0049999999999999975,
+      "maximum_actual": 0.005000000000000002
+    },
+    {
+      "label": "calculation_cell_5:feed phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999995,
+      "maximum_actual": 0.8500000000000002
+    },
+    {
+      "label": "calculation_cell_5:feed phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 4.440892098500626e-16
+    },
+    {
+      "label": "calculation_cell_5:feed phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 132.93131631127267,
+      "maximum_actual": 132.93131631127287
+    },
+    {
+      "label": "calculation_cell_5:feed phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:feed flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 323.15
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 150.0,
+      "maximum_actual": 150.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0049999999999999975,
+      "maximum_actual": 0.005000000000000002
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999995,
+      "maximum_actual": 0.8500000000000002
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 4.440892098500626e-16
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0049999999999999975,
+      "maximum_actual": 0.005000000000000002
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999995,
+      "maximum_actual": 0.8500000000000002
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 4.440892098500626e-16
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 132.93131631127267,
+      "maximum_actual": 132.93131631127287
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 300.1119859538093,
+      "maximum_actual": 300.11198595380944
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 80.0,
+      "maximum_actual": 80.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0049999999999999975,
+      "maximum_actual": 0.005000000000000002
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999995,
+      "maximum_actual": 0.8500000000000002
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 4.440892098500626e-16
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0049999999999999975,
+      "maximum_actual": 0.005000000000000002
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999995,
+      "maximum_actual": 0.8500000000000002
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 4.440892098500626e-16
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 76.68367763136247,
+      "maximum_actual": 76.68367763136267
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 2.87778e-07",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 2.777777777777778
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 1.42684e-05",
+      "tolerance": {
+        "absolute": 1.4268423606153726e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:sized_valve first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 1.27044",
+      "tolerance": {
+        "absolute": 1.2704416979783857,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 5.162252637092024e-05,
+      "maximum_actual": 0.00041298731230199337
+    },
+    {
+      "label": "calculation_cell_5:sized_valve pressure direction",
+      "category": "physical_domain",
+      "unit": "bar",
+      "expected": "nonpositive drop",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": -70.0,
+      "maximum_actual": -70.0
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas nonnegative flow",
+      "category": "physical_domain",
+      "unit": "kg/s",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 13.888888888888893,
+      "maximum_actual": 13.888888888888893
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 323.15
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 150.0,
+      "maximum_actual": 150.0
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 132.93131631127255,
+      "maximum_actual": 132.93131631127255
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:process/HP Gas flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 323.15
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 150.0,
+      "maximum_actual": 150.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 132.93131631127255,
+      "maximum_actual": 132.93131631127255
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 300.11198595380944,
+      "maximum_actual": 300.11198595380944
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 80.0,
+      "maximum_actual": 80.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 76.68367763136246,
+      "maximum_actual": 76.68367763136246
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.888888888888893
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.13421e-05",
+      "tolerance": {
+        "absolute": 7.13421180307686e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 6.35221",
+      "tolerance": {
+        "absolute": 6.352208489891873,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0002581147709861398,
+      "maximum_actual": 0.0002581147709861398
+    },
+    {
+      "label": "calculation_cell_5:process/Choke Valve pressure direction",
+      "category": "physical_domain",
+      "unit": "bar",
+      "expected": "nonpositive drop",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": -70.0,
+      "maximum_actual": -70.0
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas nonnegative flow",
+      "category": "physical_domain",
+      "unit": "kg/s",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 13.888888888888893,
+      "maximum_actual": 13.888888888888893
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 323.15
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 150.0,
+      "maximum_actual": 150.0
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 132.93131631127255,
+      "maximum_actual": 132.93131631127255
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_7:process/HP Gas flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 323.15
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 150.0,
+      "maximum_actual": 150.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 132.93131631127255,
+      "maximum_actual": 132.93131631127255
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 272.0845846207259,
+      "maximum_actual": 320.694989782721
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 30.0,
+      "maximum_actual": 140.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 28.982888794368055,
+      "maximum_actual": 125.74553441385814
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.888888888888893
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.13421e-05",
+      "tolerance": {
+        "absolute": 7.13421180307686e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 6.35221",
+      "tolerance": {
+        "absolute": 6.352208489891873,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": 3.038696013391018e-05,
+      "maximum_actual": 0.0003685231786221266
+    },
+    {
+      "label": "calculation_cell_7:process/Choke Valve pressure direction",
+      "category": "physical_domain",
+      "unit": "bar",
+      "expected": "nonpositive drop",
+      "tolerance": null,
+      "evaluations": 21,
+      "passed": 21,
+      "failed": 0,
+      "minimum_actual": -120.0,
+      "maximum_actual": -10.0
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas nonnegative flow",
+      "category": "physical_domain",
+      "unit": "kg/s",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 13.888888888888893,
+      "maximum_actual": 13.888888888888893
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 323.15
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 150.0,
+      "maximum_actual": 150.0
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 132.93131631127255,
+      "maximum_actual": 132.93131631127255
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_9:process/HP Gas flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 323.15
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 150.0,
+      "maximum_actual": 150.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 132.93131631127255,
+      "maximum_actual": 132.93131631127255
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 278.64314973005366,
+      "maximum_actual": 321.9501899648163
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 40.0,
+      "maximum_actual": 145.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 38.78604098551201,
+      "maximum_actual": 129.37173306117208
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.888888888888893
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.13421e-05",
+      "tolerance": {
+        "absolute": 7.13421180307686e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 6.35221",
+      "tolerance": {
+        "absolute": 6.352208489891873,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": 4.143803380429745e-05,
+      "maximum_actual": 0.00042684655636548996
+    },
+    {
+      "label": "calculation_cell_9:process/Choke Valve pressure direction",
+      "category": "physical_domain",
+      "unit": "bar",
+      "expected": "nonpositive drop",
+      "tolerance": null,
+      "evaluations": 26,
+      "passed": 26,
+      "failed": 0,
+      "minimum_actual": -110.0,
+      "maximum_actual": -5.0
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas nonnegative flow",
+      "category": "physical_domain",
+      "unit": "kg/s",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 13.888888888888893,
+      "maximum_actual": 13.888888888888893
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 323.15
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 150.0,
+      "maximum_actual": 150.0
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 132.93131631127255,
+      "maximum_actual": 132.93131631127255
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_11:process/HP Gas flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 323.15
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 150.0,
+      "maximum_actual": 150.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 132.93131631127255,
+      "maximum_actual": 132.93131631127255
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 300.11198595380944,
+      "maximum_actual": 322.9998339184397
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 80.0,
+      "maximum_actual": 149.36176099216937
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.004999999999999996,
+      "maximum_actual": 0.004999999999999996
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.8499999999999993,
+      "maximum_actual": 0.8499999999999993
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 7.771561172376096e-16,
+      "maximum_actual": 7.771561172376096e-16
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 76.68367763136246,
+      "maximum_actual": 132.48060214570498
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.888888888888893
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.13421e-05",
+      "tolerance": {
+        "absolute": 7.13421180307686e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 6.35221",
+      "tolerance": {
+        "absolute": 6.352208489891873,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.178324110805988e-05,
+      "maximum_actual": 0.0004937590565532446
+    },
+    {
+      "label": "calculation_cell_11:process/Choke Valve pressure direction",
+      "category": "physical_domain",
+      "unit": "bar",
+      "expected": "nonpositive drop",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": -70.0,
+      "maximum_actual": -0.6382390078306344
+    },
+    {
+      "label": "cv_values finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=15",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 15.0,
+      "maximum_actual": 15.0
+    },
+    {
+      "label": "cv_values lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 5.657170791732662,
+      "maximum_actual": 5.657170791732662
+    },
+    {
+      "label": "effective_cv finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=9",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 9.0,
+      "maximum_actual": 9.0
+    },
+    {
+      "label": "effective_cv lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 40.0,
+      "maximum_actual": 40.0
+    },
+    {
+      "label": "fixed inlet/outlet state JT is independent of mass rate",
+      "category": "analytic_identity",
+      "unit": "K",
+      "expected": "absolute error <= 1e-05",
+      "tolerance": {
+        "absolute": 1e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.1368683772161603e-13,
+      "maximum_actual": 1.1368683772161603e-13
+    },
+    {
+      "label": "valve pressure-drop definition",
+      "category": "analytic_identity",
+      "unit": "bar",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 70.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "ch15_cv_and_jt_vs_flow.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 15.0,
+      "maximum_actual": 15.0
+    },
+    {
+      "label": "ch15_cv_and_jt_vs_flow.png panel 2 curve 2 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 15.0,
+      "maximum_actual": 15.0
+    },
+    {
+      "label": "ch15_jt_cooling_vs_dp.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 20.0,
+      "maximum_actual": 20.0
+    },
+    {
+      "label": "ch15_pt_path.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 25.0,
+      "maximum_actual": 25.0
+    },
+    {
+      "label": "ch15_pt_path.png panel 1 curve 2 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "ch15_pt_path.png panel 1 curve 3 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "ch15_valve_opening.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 9.0,
+      "maximum_actual": 9.0
+    },
+    {
+      "label": "ch15_valve_opening.png panel 2 curve 2 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 9.0,
+      "maximum_actual": 9.0
+    },
+    {
+      "label": "ch15_valve_opening.png panel 3 curve 3 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 9.0,
+      "maximum_actual": 9.0
+    }
+  ],
+  "failures": [],
+  "rejected_candidates": [],
+  "uncovered_equipment": [],
+  "finished": true,
+  "scope": "Computed-case physical verification. Does not establish independent model accuracy or field calibration.",
+  "domain_scope": {
+    "checked": "Valve mass and enthalpy conservation",
+    "limitations": "Fixed-state Cv sizing and opening sweeps do not validate cavitation, noise or vendor trim performance."
+  },
+  "case_evidence": null
+}

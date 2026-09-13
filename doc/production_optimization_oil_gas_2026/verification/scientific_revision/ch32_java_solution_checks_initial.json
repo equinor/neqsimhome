@@ -1,0 +1,3361 @@
+{
+  "status": "fail",
+  "chapter": "ch32_advanced_topics",
+  "source_sha256": "bed8f334e39ee9e9d4869d887d391f8f95bd211f137617ac63da73ce2245da41",
+  "source_revision": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "harness": "Sequential literal Java fences in JShell local mode; supplementary checks use Java8-compatible APIs and write report files",
+  "script_sha256": "9d1872f2b4caab7972d34529a007af0678f99768d139ebcb81fa1159e2d661f1",
+  "java_script_sha256": "60fa00c816820168b29c924c8715ad5c2ef280043a8a36180076546f7206e8d6",
+  "check_count": 359,
+  "diagnostics": [],
+  "entries": [
+    {
+      "number": 1,
+      "language": "java",
+      "code_sha256": "49b2e6ad6a7efc9bbe4228c9dc0b9ac81ec42994fb1d14e2cd6572f72c8b7755",
+      "classification": "solution_checks",
+      "status": "fail",
+      "checks": [
+        {
+          "fence": 1,
+          "test": "polytropic mode enabled",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "HP Sep mass relative",
+          "actual": 0.999999284743751,
+          "expected": 1.0,
+          "absolute_error": 7.152562490064795e-07,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "HP Sep component ethane",
+          "actual": -7.152562491153273e-08,
+          "expected": 0.0,
+          "absolute_error": 7.152562491153273e-08,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "HP Sep component methane",
+          "actual": -6.437306242394949e-07,
+          "expected": 0.0,
+          "absolute_error": 6.437306242394949e-07,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "HP Sep energy relative",
+          "actual": -7.152562469944776e-07,
+          "expected": 0.0,
+          "absolute_error": 7.152562469944776e-07,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "HP Sep positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "HP Sep positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Compressor positive finite state Compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "nonempty feasible Pareto sample",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Pareto feasibility",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Pareto flow within declared bounds",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Pareto objective fresh replay kW",
+          "actual": 10411.270206743535,
+          "expected": 10411.277653474966,
+          "absolute_error": 0.007446731431627995,
+          "tolerance": 1e-05,
+          "pass": false
+        },
+        {
+          "fence": 1,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "sample not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "sample not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "sample not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "sample not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "sample not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Pareto feasibility",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Pareto flow within declared bounds",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Pareto objective fresh replay kW",
+          "actual": 10411.270206743538,
+          "expected": 10411.27765347494,
+          "absolute_error": 0.0074467314007051755,
+          "tolerance": 1e-05,
+          "pass": false
+        },
+        {
+          "fence": 1,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "sample not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "sample not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "sample not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "sample not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 1,
+          "test": "sample not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "language": "java",
+      "code_sha256": "a1e6374574c79f135d3df54f203014defbb54699979ede662dac19de059b58e0",
+      "classification": "solution_checks",
+      "status": "pass",
+      "checks": [
+        {
+          "fence": 3,
+          "test": "SQP converged",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 3,
+          "test": "analytic optimizer x",
+          "actual": 2.9999999999999987,
+          "expected": 3.0,
+          "absolute_error": 1.3322676295501878e-15,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 3,
+          "test": "analytic optimizer y",
+          "actual": 2.0000000000000004,
+          "expected": 2.0,
+          "absolute_error": 4.440892098500626e-16,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 3,
+          "test": "objective minimum",
+          "actual": 1.9721522630525295e-30,
+          "expected": 0.0,
+          "absolute_error": 1.9721522630525295e-30,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "fence": 3,
+          "test": "equality residual",
+          "actual": -1.7763568394002505e-15,
+          "expected": 0.0,
+          "absolute_error": 1.7763568394002505e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 3,
+          "test": "inequality and bounds",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "language": "java",
+      "code_sha256": "3a987d3d006023478623b0f45f8f65c66d192936a8512c74b3a4332719620a6d",
+      "classification": "solution_checks",
+      "status": "fail",
+      "checks": [
+        {
+          "fence": 5,
+          "test": "maximize objective sign",
+          "actual": -99999.99999999999,
+          "expected": -100000.0,
+          "absolute_error": 1.4551915228366852e-11,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 5,
+          "test": "evaluator finite feasible solution",
+          "actual": 1.0,
+          "expected": 0.0,
+          "absolute_error": 1.0,
+          "tolerance": 0.0,
+          "pass": false
+        },
+        {
+          "fence": 5,
+          "test": "HP Sep mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 5,
+          "test": "HP Sep component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 5,
+          "test": "HP Sep component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 5,
+          "test": "HP Sep energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 5,
+          "test": "HP Sep positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 5,
+          "test": "HP Sep positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 5,
+          "test": "Compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 5,
+          "test": "Compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 5,
+          "test": "Compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 5,
+          "test": "Compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 5,
+          "test": "Compressor positive finite state Compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 5,
+          "test": "Compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "language": "java",
+      "code_sha256": "77d495d1e8673e0145d20b2e16b0d9f00b3bda15c66e89a16e36f71a0c78883d",
+      "classification": "solution_checks",
+      "status": "pass",
+      "checks": [
+        {
+          "fence": 9,
+          "test": "flow objective gradient",
+          "actual": -1.0000000000004365,
+          "expected": -1.0,
+          "absolute_error": 4.3653969328261155e-13,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 9,
+          "test": "pressure objective gradient",
+          "actual": -2.425319204727809e-10,
+          "expected": 0.0,
+          "absolute_error": 2.425319204727809e-10,
+          "tolerance": 1e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "language": "java",
+      "code_sha256": "d6be1c46d813c65e468062881ea0e339cf8fb535f850033c26f39dfb7ab325c9",
+      "classification": "configuration_contract_only",
+      "status": "pass",
+      "checks": [
+        {
+          "fence": 11,
+          "test": "configuration fragment executed",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "language": "java",
+      "code_sha256": "f7ece25938693f2bfa59eb0453f8a97f4ff4452ed689e3fc01c895dd0f084eb1",
+      "classification": "solution_checks",
+      "status": "pass",
+      "checks": [
+        {
+          "fence": 12,
+          "test": "constant signal steady",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 12,
+          "test": "constant signal mean",
+          "actual": 60.0,
+          "expected": 60.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "fence": 12,
+          "test": "constant signal deviation",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "fence": 12,
+          "test": "constant signal R convention",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "fence": 12,
+          "test": "constant signal slope",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-12,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "language": "java",
+      "code_sha256": "96a44da5c6b302a69fe41d1bd1067f93b29cf7df75a0ce8487e20b7a2ce97d77",
+      "classification": "solution_checks",
+      "status": "pass",
+      "checks": [
+        {
+          "fence": 13,
+          "test": "weighted least squares Feed",
+          "actual": 101600.0,
+          "expected": 101600.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 13,
+          "test": "weighted least squares Gas",
+          "actual": 69100.0,
+          "expected": 69100.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 13,
+          "test": "weighted least squares Oil",
+          "actual": 27600.0,
+          "expected": 27600.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 13,
+          "test": "weighted least squares Water",
+          "actual": 4900.0,
+          "expected": 4900.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 13,
+          "test": "reconciled balance kg per hr",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 13,
+          "test": "analytic chi square",
+          "actual": 1.2,
+          "expected": 1.2,
+          "absolute_error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "language": "java",
+      "code_sha256": "de7ff30ce5bb09f4374be5d9e76cda7dbb75bbc953620be0f6c08017f400f685",
+      "classification": "solution_checks",
+      "status": "pass",
+      "checks": [
+        {
+          "fence": 14,
+          "test": "global chi-square test passes",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 14,
+          "test": "degrees of freedom",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 14,
+          "test": "no gross-error flags",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 14,
+          "test": "absolute normalized residual Feed",
+          "actual": 1.0954451150103321,
+          "expected": 1.0954451150103321,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 14,
+          "test": "absolute normalized residual Gas",
+          "actual": 1.0954451150103321,
+          "expected": 1.0954451150103321,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 14,
+          "test": "absolute normalized residual Oil",
+          "actual": 1.0954451150103321,
+          "expected": 1.0954451150103321,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 14,
+          "test": "absolute normalized residual Water",
+          "actual": 1.0954451150103315,
+          "expected": 1.0954451150103321,
+          "absolute_error": 6.661338147750939e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "language": "java",
+      "code_sha256": "6adf05d49025e4d272268695278b901e0e5d3d96ea824ee13b4b5cf01b082614",
+      "classification": "solution_checks",
+      "status": "pass",
+      "checks": [
+        {
+          "fence": 15,
+          "test": "parameter estimator converged",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "known efficiency recovery",
+          "actual": 0.7799999338325431,
+          "expected": 0.78,
+          "absolute_error": 6.616745695797732e-08,
+          "tolerance": 0.001,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "synthetic fit RMSE kelvin",
+          "actual": 6.263546745892779e-06,
+          "expected": 0.0,
+          "absolute_error": 6.263546745892779e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "fresh temperature replay kelvin 130.0",
+          "actual": 387.4158155748242,
+          "expected": 387.4158104987655,
+          "absolute_error": 5.07605869870531e-06,
+          "tolerance": 0.05,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "fresh temperature replay kelvin 150.0",
+          "actual": 402.15042320485117,
+          "expected": 402.15041698278463,
+          "absolute_error": 6.222066531336168e-06,
+          "tolerance": 0.05,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "fresh temperature replay kelvin 170.0",
+          "actual": 415.2940998294012,
+          "expected": 415.29409253450115,
+          "absolute_error": 7.294900058241183e-06,
+          "tolerance": 0.05,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 15,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "language": "java",
+      "code_sha256": "7ff027daf565d66327d4be7d16d9fe88d8eac29643f0f780acb7f4520c82325e",
+      "classification": "solution_checks",
+      "status": "pass",
+      "checks": [
+        {
+          "fence": 17,
+          "test": "batch case count",
+          "actual": 12.0,
+          "expected": 12.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch successful count",
+          "actual": 12.0,
+          "expected": 12.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch failure count",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch flow objective replay",
+          "actual": 49999.999999999956,
+          "expected": 50000.0,
+          "absolute_error": 4.3655745685100555e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch power objective fresh replay kW",
+          "actual": 1884.7676779867734,
+          "expected": 1884.767677986783,
+          "absolute_error": 9.549694368615746e-12,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch flow objective replay",
+          "actual": 49999.999999999956,
+          "expected": 50000.0,
+          "absolute_error": 4.3655745685100555e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch power objective fresh replay kW",
+          "actual": 2822.8982298645324,
+          "expected": 2822.8982298645324,
+          "absolute_error": 0.0,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch flow objective replay",
+          "actual": 49999.999999999956,
+          "expected": 50000.0,
+          "absolute_error": 4.3655745685100555e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch power objective fresh replay kW",
+          "actual": 3632.202780048185,
+          "expected": 3632.2027800482047,
+          "absolute_error": 1.9554136088117957e-11,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch flow objective replay",
+          "actual": 100000.0,
+          "expected": 100000.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch power objective fresh replay kW",
+          "actual": 3769.5353559735318,
+          "expected": 3769.5353559735686,
+          "absolute_error": 3.6834535421803594e-11,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch flow objective replay",
+          "actual": 100000.0,
+          "expected": 100000.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch power objective fresh replay kW",
+          "actual": 5645.7964597290775,
+          "expected": 5645.796459729053,
+          "absolute_error": 2.4556356947869062e-11,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch flow objective replay",
+          "actual": 100000.0,
+          "expected": 100000.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch power objective fresh replay kW",
+          "actual": 7264.405560096401,
+          "expected": 7264.405560096398,
+          "absolute_error": 2.7284841053187847e-12,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch flow objective replay",
+          "actual": 150000.00000000006,
+          "expected": 150000.0,
+          "absolute_error": 5.820766091346741e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch power objective fresh replay kW",
+          "actual": 5654.3030339603465,
+          "expected": 5654.30303396035,
+          "absolute_error": 3.637978807091713e-12,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch flow objective replay",
+          "actual": 150000.00000000006,
+          "expected": 150000.0,
+          "absolute_error": 5.820766091346741e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch power objective fresh replay kW",
+          "actual": 8468.694689593605,
+          "expected": 8468.694689593576,
+          "absolute_error": 2.9103830456733704e-11,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch flow objective replay",
+          "actual": 150000.00000000006,
+          "expected": 150000.0,
+          "absolute_error": 5.820766091346741e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch power objective fresh replay kW",
+          "actual": 10896.608340144601,
+          "expected": 10896.608340144601,
+          "absolute_error": 0.0,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch flow objective replay",
+          "actual": 200000.00000000006,
+          "expected": 200000.0,
+          "absolute_error": 5.820766091346741e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch power objective fresh replay kW",
+          "actual": 7539.070711947158,
+          "expected": 7539.070711947137,
+          "absolute_error": 2.091837814077735e-11,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch flow objective replay",
+          "actual": 200000.00000000006,
+          "expected": 200000.0,
+          "absolute_error": 5.820766091346741e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch power objective fresh replay kW",
+          "actual": 11291.59291945811,
+          "expected": 11291.592919458106,
+          "absolute_error": 3.637978807091713e-12,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch flow objective replay",
+          "actual": 200000.00000000006,
+          "expected": 200000.0,
+          "absolute_error": 5.820766091346741e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "batch power objective fresh replay kW",
+          "actual": 14528.811120192755,
+          "expected": 14528.811120192797,
+          "absolute_error": 4.18367562815547e-11,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state gasOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh separator positive finite state liquidOutStream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor mass relative",
+          "actual": 1.0,
+          "expected": 1.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component ethane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor component methane",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor energy relative",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor positive finite state Fresh compressor out stream",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 17,
+          "test": "Fresh compressor compression work sign",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "language": "java",
+      "code_sha256": "70dc9e0c1709b5fcac6c67ade578898a1100e1aa393179a6ee56e5767b47bf51",
+      "classification": "solution_checks",
+      "status": "pass",
+      "checks": [
+        {
+          "fence": 18,
+          "test": "nonempty batch Pareto front",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "minimum-pressure design for each flow",
+          "actual": 120.0,
+          "expected": 120.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "minimum-pressure design for each flow",
+          "actual": 120.0,
+          "expected": 120.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "minimum-pressure design for each flow",
+          "actual": 120.0,
+          "expected": 120.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "batch front not dominated",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 18,
+          "test": "minimum-pressure design for each flow",
+          "actual": 120.0,
+          "expected": 120.0,
+          "absolute_error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "language": "java",
+      "code_sha256": "ee44560d4b61047801d17f9dd1065514eee36b47ae1c69ae937e83f23c5e2985",
+      "classification": "solution_checks",
+      "status": "pass",
+      "checks": [
+        {
+          "fence": 19,
+          "test": "finite positive grid power",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "finite positive grid power",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "finite positive grid power",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "finite positive grid power",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "finite positive grid power",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "finite positive grid power",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "finite positive grid power",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "finite positive grid power",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "finite positive grid power",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "finite positive grid power",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "finite positive grid power",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "finite positive grid power",
+          "actual": 0.0,
+          "expected": 0.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "summary minimum kW",
+          "actual": 1884.7676779867734,
+          "expected": 1884.7676779867734,
+          "absolute_error": 0.0,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "summary maximum kW",
+          "actual": 14528.811120192755,
+          "expected": 14528.811120192755,
+          "absolute_error": 0.0,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "summary mean kW",
+          "actual": 6949.8905732495905,
+          "expected": 6949.890573249589,
+          "absolute_error": 1.8189894035458565e-12,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "fence": 19,
+          "test": "summary count",
+          "actual": 12.0,
+          "expected": 12.0,
+          "absolute_error": 0.0,
+          "tolerance": 0.0,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "language": "java",
+      "code_sha256": "2c41a30097f31fb91d041a67eaff21a17d126603c95bfcd5e15190eb1e9f9b03",
+      "classification": "configuration_contract_only",
+      "status": "fail",
+      "checks": []
+    }
+  ],
+  "scope": "Analytic SQP/reconciliation/gradient/steady-signal identities; fresh compressor objective replays, mass/component/energy checks, synthetic efficiency recovery, batch and sampled Pareto non-dominance. No plant data calibration or complete continuous Pareto-front guarantee."
+}

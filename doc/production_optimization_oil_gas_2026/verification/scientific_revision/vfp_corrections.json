@@ -1,0 +1,189 @@
+[
+  {
+    "before": "Export VFP tables in Eclipse VFPEXP format for reservoir simulation coupling",
+    "after": "Distinguish diagnostic process tables from qualified Eclipse/OPM VFPPROD exports"
+  },
+  {
+    "before": "4. **Eclipse VFPEXP export** — writes tables in the format consumed by reservoir simulators",
+    "after": "4. **Separate export contracts** — retain generic process results as diagnostic text; provide a qualified BHP grid to `EclipseVFPExporter` for VFPPROD/VFPINJ serialization"
+  },
+  {
+    "before": "The original VFP table now underestimates wellhead pressure loss (because the actual fluid is lighter with more gas but carries more water) and gives wrong operating points in the reservoir simulator.",
+    "after": "The original fixed-composition table can give incorrect operating points. The error direction cannot be inferred from GOR and water cut alone because changing gas fraction affects both holdup and friction."
+  },
+  {
+    "before": "5. **Export** — write the 4D VFP table in Eclipse VFPEXP format",
+    "after": "5. **Export** — keep process screening diagnostic; export qualified BHP through the separate reservoir-deck contract"
+  },
+  {
+    "before": "n_{water} = \\frac{\\text{WC} \\cdot Q_{liquid}}{(1 - \\text{WC}) \\cdot V_w^{std} \\cdot \\rho_w}",
+    "after": "\\dot n_w=\\frac{\\mathrm{WC}}{1-\\mathrm{WC}}\\,\\frac{Q_o^{std}}{\\bar V_w^{std}}"
+  },
+  {
+    "before": "4. **Flash the recombined fluid** at the target temperature and pressure to get the feed stream composition.",
+    "after": "Here $Q_o^{std}$ is the oil volume rate and $\\bar V_w^{std}$ the water molar volume at the same reference state; no extra density factor belongs in that molar-volume expression. If total liquid volume is supplied instead, use $\\dot n_w=\\mathrm{WC}Q_L^{std}/\\bar V_w^{std}$.\n\n4. **Flash the recombined fluid** and verify the resulting reference GOR/water cut; repartitioning can require iterative correction."
+  },
+  {
+    "before": "This approach is physically meaningful because it mimics what happens in the reservoir:",
+    "after": "This is a controlled compositional scenario, not a reservoir depletion mechanism or guarantee that arbitrary requested ratios are attainable:"
+  },
+  {
+    "before": "- **Low GOR** = high drawdown, more liquid production relative to gas",
+    "after": "- **Low GOR** = less standard gas per standard oil; it does not determine drawdown"
+  },
+  {
+    "before": "### 28.2.5 Eclipse VFPEXP Format Export",
+    "after": "### 28.2.5 Diagnostic Process Export"
+  },
+  {
+    "before": "The generated table is exported in Eclipse VFPEXP format for direct use in reservoir simulators:",
+    "after": "The generator's generic inlet-pressure table is exported as diagnostic text. Legacy methods containing `VFPEXP` in their names do not emit reservoir-deck keywords at this revision:"
+  },
+  {
+    "before": "### 28.3.1 Eclipse VFPEXP Integration",
+    "after": "### 28.3.1 Qualified VFPPROD Integration"
+  },
+  {
+    "before": "The VFPEXP keyword in Eclipse defines the relationship between wellbore flowing pressure, tubing head pressure, flow rate, water cut, and GOR.",
+    "after": "The `VFPPROD` keyword defines a production BHP response over rate, THP, water ratio, gas ratio and artificial-lift axes; `VFPINJ` has its own injection-table contract. This is separate from NeqSim's legacy diagnostic methods \\cite{opmvfp,neqsim2026update}."
+  },
+  {
+    "before": "**Eclipse DATA file integration:**",
+    "after": "**Reservoir deck structure (requires a qualified BHP table):**"
+  },
+  {
+    "before": "Total points: 8 × 5 × 5 × 6 = **1,200** process simulations.",
+    "after": "Total grid points: 8 × 5 × 5 × 6 = **1,200**. Each inverse pressure solve can require multiple process evaluations, so this is not the simulation-run count."
+  },
+  {
+    "before": "This reduces hydrostatic head in the tubing (less pressure support from the fluid column) but also reduces frictional losses.",
+    "after": "This can reduce hydrostatic pressure loss, while increased gas velocity can increase friction. Evaluate both contributions rather than assuming a common direction."
+  },
+  {
+    "before": "**Surface tension:** The gas-oil surface tension decreases as GOR increases (more light components in the oil phase). Lower surface tension means smaller bubbles, more dispersed flow, and different holdup correlations.",
+    "after": "**Surface tension:** calculate interfacial tension from the actual equilibrated phases and conditions. GOR alone does not prescribe its direction or the resulting droplet/bubble distribution."
+  },
+  {
+    "before": "\\mu_{emulsion} = \\mu_c \\cdot \\left(1 + 2.5 \\phi + 6.2 \\phi^2\\right)",
+    "after": "\\frac{\\mu}{\\mu_c}=\\left(1-\\frac{\\phi}{\\phi_m}\\right)^{-[\\eta]\\phi_m}"
+  },
+  {
+    "before": "where $\\mu_c$ is the continuous phase viscosity and $\\phi$ is the dispersed phase volume fraction (Krieger-Dougherty model).",
+    "after": "This is the Krieger–Dougherty suspension form, with dispersed fraction $\\phi$, fitted maximum packing $\\phi_m$ and intrinsic viscosity $[\\eta]$. It is not an oil-water phase-inversion model. Oil-water emulsions require a calibrated rheology, continuous-phase identification and shear/temperature conditions; a dilute polynomial must not be extrapolated through inversion."
+  },
+  {
+    "before": "At the inversion point (typically WC = 50–70%), the emulsion viscosity can peak at 10–100× the oil viscosity:",
+    "after": "The inversion point and viscosity enhancement are fluid- and shear-dependent; neither a universal water-cut interval nor an amplification factor is established here. One frequently confused constitutive form is:"
+  },
+  {
+    "before": "At intermediate water cuts (20–50%), severe slugging can occur, particularly in hilly terrain or riser bases.",
+    "after": "Severe slugging depends on pipeline/riser geometry, pressure and the phase-flow regime; water cut alone does not define an onset window."
+  },
+  {
+    "before": "- **High GOR, low WC:** Flatter curve (gas-dominated flow has less friction). The minimum stable rate (liquid loading limit) appears.",
+    "after": "- **High GOR, low WC:** lower holdup may reduce static head while higher gas velocity increases friction; a low-rate liquid-loading branch needs a suitable model."
+  },
+  {
+    "before": "## 28.5 VFP Configuration and Best Practices",
+    "after": "## 28.5 VFP Configuration and Best Practices"
+  },
+  {
+    "before": "### 28.4.2 Water Cut Range",
+    "after": "### 28.5.2 Water Cut Range"
+  },
+  {
+    "before": "### 28.4.3 Pressure Search",
+    "after": "### 28.5.3 Pressure Search"
+  },
+  {
+    "before": "### 28.4.4 Performance",
+    "after": "### 28.5.4 Performance"
+  },
+  {
+    "before": "### 28.4.5 Input",
+    "after": "### 28.5.5 Input"
+  },
+  {
+    "topic": "Removed fabricated VFP performance table"
+  },
+  {
+    "before": "## 28.5 Use Cases",
+    "after": "## 28.6 Use Cases"
+  },
+  {
+    "before": "### 28.5.1 Facility",
+    "after": "### 28.6.1 Facility"
+  },
+  {
+    "before": "### 28.5.2 Well Design",
+    "after": "### 28.6.2 Well Design"
+  },
+  {
+    "before": "### 28.5.3 Production Forecasting",
+    "after": "### 28.6.3 Production Forecasting"
+  },
+  {
+    "before": "## 28.6 Complete VFP",
+    "after": "## 28.7 Complete VFP"
+  },
+  {
+    "before": "### 28.6.1 Full Java",
+    "after": "### 28.7.1 Full Java"
+  },
+  {
+    "before": "### 28.6.2 Full Python",
+    "after": "### 28.7.2 Full Python"
+  },
+  {
+    "before": "## 28.8 Python Implementation",
+    "after": "## 28.9 Python Implementation"
+  },
+  {
+    "before": "### 28.8.1 VFP Generation",
+    "after": "### 28.9.1 VFP Generation"
+  },
+  {
+    "before": "### 28.8.2 Plotting",
+    "after": "### 28.9.2 Plotting"
+  },
+  {
+    "before": "### 28.8.3 Multi-Scenario",
+    "after": "### 28.9.3 Multi-Scenario"
+  },
+  {
+    "before": "The concept with the most feasible points across the full GOR/WC range will deliver the most robust production over the field life.",
+    "after": "A raw count of feasible grid points depends on grid spacing and scenario weighting; it does not establish the most robust or valuable concept. Compare common physical cases, relevant probabilities, cumulative recovery, costs and missing evidence."
+  },
+  {
+    "before": "1. **Non-monotonic BHP:** For a given THP, WC, and GOR, BHP should increase monotonically with flow rate. If BHP decreases at higher rates, the binary search may have found a local minimum rather than the true solution. This typically indicates a flow regime transition (from slug to annular) that the correlation handles poorly.",
+    "after": "1. **Non-monotonic BHP:** a physically valid low-rate branch may require less BHP as increasing gas velocity unloads liquid. Do not reject every falling BHP branch as a numerical error. Inspect holdup, pressure components, interpolation and stability; root-finding solves a pressure residual, not a local minimum of BHP."
+  },
+  {
+    "before": "2. **Negative pressure gradients:** Some combinations produce negative hydrostatic gradients (gas column lighter than expected). This is physically possible for high-GOR wells but may indicate a fluid composition error.",
+    "after": "2. **Pressure-gradient signs:** positive-density fluid always has a hydrostatic pressure rise with downward depth. Gas lowers its magnitude, not its sign. Along a flow coordinate, gravity depends on elevation direction and can offset friction in a downhill segment."
+  },
+  {
+    "before": "too many infeasible points (>30%) suggests the table grid extends beyond the physical operating envelope.",
+    "after": "the acceptable grid must follow the intended operating envelope; no universal 30% cutoff applies."
+  },
+  {
+    "before": "Every VFP table should be validated against at least two measured operating points:",
+    "after": "Validate using independent well-test data spanning the relevant rates, phase ratios and boundaries. Two points alone cannot qualify a multidimensional surface:"
+  },
+  {
+    "before": "**Eclipse VFPEXP export** enables direct coupling with reservoir simulators, where the `WCONPROD` keyword references the VFP table number.",
+    "after": "**Qualified VFPPROD export** uses `EclipseVFPExporter` with a complete BHP grid; generic process screening remains diagnostic text."
+  },
+  {
+    "before": "A typical 1200-point table runs in minutes on 8 cores.",
+    "after": "Measure run count and wall time for the actual model and hardware."
+  },
+  {
+    "before": "validate VFP predictions within 5% of measured BHP.",
+    "after": "set pressure tolerances from test uncertainty and sensitivity of the intended decision; no universal 5% threshold is sufficient."
+  },
+  {
+    "before": "Export the VFP table from Exercise 28.2 in Eclipse VFPEXP format.",
+    "after": "Export the generic result from Exercise 28.2 as diagnostic text. Then state the additional datum, phase-volume and hydraulic evidence needed for a separate VFPPROD export."
+  }
+]

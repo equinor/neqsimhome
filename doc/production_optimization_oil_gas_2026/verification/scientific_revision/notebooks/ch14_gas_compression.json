@@ -1,0 +1,4048 @@
+{
+  "chapter": "ch14_gas_compression",
+  "notebook": "chapters\\ch14_gas_compression\\notebooks\\ch12_compression_figures.ipynb",
+  "status": "passed",
+  "checked_at": "2026-09-12T20:10:38.391883+00:00",
+  "checks": [
+    {
+      "label": "calculation_cell_4:feed nonnegative flow",
+      "category": "physical_domain",
+      "unit": "kg/s",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 13.888888888888884,
+      "maximum_actual": 13.888888888888884
+    },
+    {
+      "label": "calculation_cell_4:feed absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 303.15,
+      "maximum_actual": 303.15
+    },
+    {
+      "label": "calculation_cell_4:feed absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 5.0,
+      "maximum_actual": 5.0
+    },
+    {
+      "label": "calculation_cell_4:feed overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_4:feed overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_4:feed overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_4:feed overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_4:feed phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_4:feed phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_4:feed phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_4:feed phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_4:feed phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_4:feed phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 3.7197931484110773,
+      "maximum_actual": 3.7197931484110773
+    },
+    {
+      "label": "calculation_cell_4:feed phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_4:feed flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 80,
+      "passed": 80,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 303.15,
+      "maximum_actual": 303.15
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 5.0,
+      "maximum_actual": 5.0
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 3.7197931484110773,
+      "maximum_actual": 3.7197931484110773
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp75/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 366.9792969033791,
+      "maximum_actual": 594.2181977376677
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 10.0,
+      "maximum_actual": 80.0
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.138329146380733,
+      "maximum_actual": 29.502695897373666
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp75/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp75 total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.888888888888884
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp75 component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.48872e-05",
+      "tolerance": {
+        "absolute": 7.488718918933331e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp75 first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 26.8434",
+      "tolerance": {
+        "absolute": 26.843447065079637,
+        "relative": 0.0,
+        "reference": 1906151.8619403008
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 9.313225746154785e-10
+    },
+    {
+      "label": "calculation_cell_6:comp75 pressure direction",
+      "category": "physical_domain",
+      "unit": "bar",
+      "expected": "nonnegative rise",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 5.0,
+      "maximum_actual": 75.0
+    },
+    {
+      "label": "calculation_cell_6:comp75 gas at suction",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "gas phase present",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": null,
+      "maximum_actual": null
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 303.15,
+      "maximum_actual": 303.15
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 5.0,
+      "maximum_actual": 5.0
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 3.7197931484110773,
+      "maximum_actual": 3.7197931484110773
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp85/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 359.38713817692445,
+      "maximum_actual": 556.6818140751377
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 10.0,
+      "maximum_actual": 80.0
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 6.274424349062495,
+      "maximum_actual": 31.627682559302247
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp85/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp85 total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.888888888888884
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp85 component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.48872e-05",
+      "tolerance": {
+        "absolute": 7.488718918933331e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_6:comp85 first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 24.4027",
+      "tolerance": {
+        "absolute": 24.40272222534678,
+        "relative": 0.0,
+        "reference": 1662079.3779670147
+      },
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 9.313225746154785e-10
+    },
+    {
+      "label": "calculation_cell_6:comp85 pressure direction",
+      "category": "physical_domain",
+      "unit": "bar",
+      "expected": "nonnegative rise",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": 5.0,
+      "maximum_actual": 75.0
+    },
+    {
+      "label": "calculation_cell_6:comp85 gas at suction",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "gas phase present",
+      "tolerance": null,
+      "evaluations": 15,
+      "passed": 15,
+      "failed": 0,
+      "minimum_actual": null,
+      "maximum_actual": null
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 303.15,
+      "maximum_actual": 313.15
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 5.0,
+      "maximum_actual": 48.27446923028148
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 3.7197931484110773,
+      "maximum_actual": 37.698901302108375
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_12:comp/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 410.8790149653079,
+      "maximum_actual": 425.9868639442234
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 15.536162529769292,
+      "maximum_actual": 149.99999999999997
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 8.502648964107536,
+      "maximum_actual": 80.0874782711871
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_12:comp/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_12:comp total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.888888888888884
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_12:comp component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.48872e-05",
+      "tolerance": {
+        "absolute": 7.488718918933331e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_12:comp first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 40.9792",
+      "tolerance": {
+        "absolute": 40.97920622533911,
+        "relative": 0.0,
+        "reference": 3319727.7779662483
+      },
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 4.656612873077393e-10
+    },
+    {
+      "label": "calculation_cell_12:comp pressure direction",
+      "category": "physical_domain",
+      "unit": "bar",
+      "expected": "nonnegative rise",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": 10.536162529769292,
+      "maximum_actual": 101.72553076971849
+    },
+    {
+      "label": "calculation_cell_12:comp gas at suction",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "gas phase present",
+      "tolerance": null,
+      "evaluations": 3,
+      "passed": 3,
+      "failed": 0,
+      "minimum_actual": null,
+      "maximum_actual": null
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 410.8790149653079,
+      "maximum_actual": 423.9114908298427
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 15.536162529769292,
+      "maximum_actual": 48.27446923028148
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 8.502648964107536,
+      "maximum_actual": 25.84218896527611
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_12:cooler/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 313.15,
+      "maximum_actual": 313.15
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 15.536162529769292,
+      "maximum_actual": 48.27446923028148
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 11.406036533332099,
+      "maximum_actual": 37.698901302108375
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_12:cooler/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_12:cooler total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.888888888888884
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_12:cooler component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.48872e-05",
+      "tolerance": {
+        "absolute": 7.488718918933331e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_12:cooler first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 40.9792",
+      "tolerance": {
+        "absolute": 40.97920622533911,
+        "relative": 0.0,
+        "reference": -3175957.2284432277
+      },
+      "evaluations": 2,
+      "passed": 2,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 303.15,
+      "maximum_actual": 313.15
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 5.0,
+      "maximum_actual": 64.09305095943512
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 3.7197931484110773,
+      "maximum_actual": 51.448233959100335
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:comp/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 382.3592260837717,
+      "maximum_actual": 673.9102796895086
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 11.701736596603581,
+      "maximum_actual": 150.00000000000003
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.890461539258528,
+      "maximum_actual": 88.56127488097249
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:comp/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:comp total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.888888888888884
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:comp component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.48872e-05",
+      "tolerance": {
+        "absolute": 7.488718918933331e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:comp first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 146.336",
+      "tolerance": {
+        "absolute": 146.33607482175395,
+        "relative": 0.0,
+        "reference": 13855414.637607727
+      },
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 1.862645149230957e-09
+    },
+    {
+      "label": "calculation_cell_15:comp pressure direction",
+      "category": "physical_domain",
+      "unit": "bar",
+      "expected": "nonnegative rise",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": 6.701736596603581,
+      "maximum_actual": 145.0
+    },
+    {
+      "label": "calculation_cell_15:comp gas at suction",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "gas phase present",
+      "tolerance": null,
+      "evaluations": 10,
+      "passed": 10,
+      "failed": 0,
+      "minimum_actual": null,
+      "maximum_actual": null
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 382.3592260837717,
+      "maximum_actual": 470.76798686744553
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 11.701736596603581,
+      "maximum_actual": 64.09305095943512
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 6.890461539258528,
+      "maximum_actual": 37.44860140975774
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:cooler/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 313.15,
+      "maximum_actual": 313.15
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 11.701736596603581,
+      "maximum_actual": 64.09305095943512
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 8.52728666913804,
+      "maximum_actual": 51.448233959100335
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:cooler/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:cooler total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.888888888888884
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:cooler component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.48872e-05",
+      "tolerance": {
+        "absolute": 7.488718918933331e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_15:cooler first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 61.7455",
+      "tolerance": {
+        "absolute": 61.74551497123187,
+        "relative": 0.0,
+        "reference": -5426558.000967022
+      },
+      "evaluations": 6,
+      "passed": 6,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 303.15,
+      "maximum_actual": 303.15
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 5.0,
+      "maximum_actual": 5.0
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 3.7197931484110773,
+      "maximum_actual": 3.7197931484110773
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp75/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 339.6680982049655,
+      "maximum_actual": 559.709940175111
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 7.5,
+      "maximum_actual": 60.0
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 4.977257952337405,
+      "maximum_actual": 23.686786518971925
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp75/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp75 total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.888888888888884
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp75 component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.48872e-05",
+      "tolerance": {
+        "absolute": 7.488718918933331e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp75 first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 18.4823",
+      "tolerance": {
+        "absolute": 18.482331031542916,
+        "relative": 0.0,
+        "reference": 1070040.2585866284
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 9.313225746154785e-10
+    },
+    {
+      "label": "calculation_cell_18:comp75 pressure direction",
+      "category": "physical_domain",
+      "unit": "bar",
+      "expected": "nonnegative rise",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 2.5,
+      "maximum_actual": 55.0
+    },
+    {
+      "label": "calculation_cell_18:comp75 gas at suction",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "gas phase present",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": null,
+      "maximum_actual": null
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 303.15,
+      "maximum_actual": 303.15
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 5.0,
+      "maximum_actual": 5.0
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 3.7197931484110773,
+      "maximum_actual": 3.7197931484110773
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp65/in0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 345.314472295553,
+      "maximum_actual": 604.6159712525964
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 7.5,
+      "maximum_actual": 60.0
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=6",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.010000000000000002,
+      "maximum_actual": 0.010000000000000002
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.8800000000000001,
+      "maximum_actual": 0.8800000000000001
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 2.220446049250313e-16,
+      "maximum_actual": 2.220446049250313e-16
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 4.892351007503238,
+      "maximum_actual": 21.842354693028557
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp65/out0 flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp65 total mass",
+      "category": "mass_balance",
+      "unit": "kg/s",
+      "expected": "absolute error <= 1.39889e-06",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 1e-07,
+        "reference": 13.888888888888884
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp65 component molar flow",
+      "category": "component_balance",
+      "unit": "mol/s",
+      "expected": "absolute error <= 7.48872e-05",
+      "tolerance": {
+        "absolute": 7.488718918933331e-05,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_18:comp65 first law",
+      "category": "energy_balance",
+      "unit": "W",
+      "expected": "absolute error <= 20.241",
+      "tolerance": {
+        "absolute": 20.241023755373163,
+        "relative": 0.0,
+        "reference": 1245909.5309696533
+      },
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 9.313225746154785e-10
+    },
+    {
+      "label": "calculation_cell_18:comp65 pressure direction",
+      "category": "physical_domain",
+      "unit": "bar",
+      "expected": "nonnegative rise",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": 2.5,
+      "maximum_actual": 55.0
+    },
+    {
+      "label": "calculation_cell_18:comp65 gas at suction",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "gas phase present",
+      "tolerance": null,
+      "evaluations": 22,
+      "passed": 22,
+      "failed": 0,
+      "minimum_actual": null,
+      "maximum_actual": null
+    },
+    {
+      "label": "absolute compressor pressure ratio",
+      "category": "analytic_identity",
+      "unit": "1",
+      "expected": "absolute error <= 1.7e-08",
+      "tolerance": {
+        "absolute": 1.7e-08,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "powers_75 finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=15",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 15.0,
+      "maximum_actual": 15.0
+    },
+    {
+      "label": "powers_75 lower bound",
+      "category": "physical_domain",
+      "unit": "MW",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1906.1518619403007,
+      "maximum_actual": 1906.1518619403007
+    },
+    {
+      "label": "powers_85 finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=15",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 15.0,
+      "maximum_actual": 15.0
+    },
+    {
+      "label": "powers_85 lower bound",
+      "category": "physical_domain",
+      "unit": "MW",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1662.0793779670146,
+      "maximum_actual": 1662.0793779670146
+    },
+    {
+      "label": "higher specified efficiency reduces fixed-duty power",
+      "category": "justified_sensitivity",
+      "unit": "1",
+      "expected": "stated case ordering",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": null,
+      "maximum_actual": null
+    },
+    {
+      "label": "max_discharge_temps finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=4",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 4.0,
+      "maximum_actual": 4.0
+    },
+    {
+      "label": "max_discharge_temps lower bound",
+      "category": "physical_domain",
+      "unit": "C",
+      "expected": ">=-273.15",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 122.47578573818492,
+      "maximum_actual": 122.47578573818492
+    },
+    {
+      "label": "temperature-limit screening explicitly includes violating designs",
+      "category": "constraint_screening",
+      "unit": "C",
+      "expected": "at least one evaluated design exceeds stated 150 C limit",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 400.7602796895086,
+      "maximum_actual": 400.7602796895086
+    },
+    {
+      "label": "fig12_1_power_vs_ratio.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 15.0,
+      "maximum_actual": 15.0
+    },
+    {
+      "label": "fig12_1_power_vs_ratio.png panel 1 curve 2 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 15.0,
+      "maximum_actual": 15.0
+    },
+    {
+      "label": "fig12_2_compressor_curve.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 50.0,
+      "maximum_actual": 50.0
+    },
+    {
+      "label": "fig12_2_compressor_curve.png panel 1 curve 2 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.0,
+      "maximum_actual": 2.0
+    },
+    {
+      "label": "fig12_2_compressor_curve.png panel 1 curve 3 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.0,
+      "maximum_actual": 2.0
+    },
+    {
+      "label": "fig12_2_compressor_curve.png panel 1 curve 4 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "fig12_2_compressor_curve.png panel 2 curve 5 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 50.0,
+      "maximum_actual": 50.0
+    },
+    {
+      "label": "fig12_3_multistage_profile.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.0,
+      "maximum_actual": 2.0
+    },
+    {
+      "label": "fig12_3_multistage_profile.png panel 1 curve 2 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "fig12_3_multistage_profile.png panel 2 curve 3 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 6.0,
+      "maximum_actual": 6.0
+    },
+    {
+      "label": "fig12_3_multistage_profile.png panel 2 curve 3 y absolute pressure",
+      "category": "figure_domain",
+      "unit": "bara",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 5.0,
+      "maximum_actual": 5.0
+    },
+    {
+      "label": "fig12_4_power_comparison.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 4.0,
+      "maximum_actual": 4.0
+    },
+    {
+      "label": "fig12_4_power_comparison.png panel 2 curve 2 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.0,
+      "maximum_actual": 2.0
+    },
+    {
+      "label": "fig12_4_power_comparison.png panel 2 curve 3 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 4.0,
+      "maximum_actual": 4.0
+    },
+    {
+      "label": "fig12_5_discharge_temperature.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 22.0,
+      "maximum_actual": 22.0
+    },
+    {
+      "label": "fig12_5_discharge_temperature.png panel 1 curve 2 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 22.0,
+      "maximum_actual": 22.0
+    },
+    {
+      "label": "fig12_5_discharge_temperature.png panel 1 curve 3 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.0,
+      "maximum_actual": 2.0
+    },
+    {
+      "label": "fig12_5_discharge_temperature.png panel 1 curve 4 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.0,
+      "maximum_actual": 2.0
+    }
+  ],
+  "failures": [],
+  "rejected_candidates": [],
+  "uncovered_equipment": [],
+  "finished": true,
+  "scope": "Computed-case physical verification. Does not establish independent model accuracy or field calibration.",
+  "domain_scope": {
+    "checked": "Compressor first law and efficiency sensitivity",
+    "limitations": "Independent dilute-argon limit supports equations; assumed efficiencies and temperature limits are not vendor guarantees."
+  },
+  "case_evidence": null
+}

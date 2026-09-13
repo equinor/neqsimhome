@@ -1,0 +1,89 @@
+{
+  "chapter": "ch22_production_optimization_theory",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "execution_model": "sequential Python fences, fresh JVM per chapter",
+  "examples": [
+    {
+      "number": 1,
+      "language": "python",
+      "line": 244,
+      "sha256": "4a2820abc60d28ab9a4b9c392e3ef385161216a256471d4f7d4a285fca31c6bc",
+      "status": "passed",
+      "seconds": 6.937,
+      "output": "Required BHP for 80 bara wellhead; None means unavailable below reservoir pressure\n[(0.5, 109.04541850090027), (1.0, 138.5085352882743), (1.5, 176.59046042710543), (2.0, 218.9047960564494), (2.5, None), (3.0, None), (3.5, None)]\nCoupled solution: 2.30293 MSm3/day; BHP 245.829 bara; WHP 80.000 bara\nSpecified IPR plus a steady forward pipe model; no calibrated thermal wellbore or field deliverability claim.\n"
+    },
+    {
+      "number": 2,
+      "language": "python",
+      "line": 566,
+      "sha256": "499708ddc34753d5fd27842458fa12aa3aba2b5c1e7de83f1ddf390740fcef8d",
+      "status": "passed",
+      "seconds": 1.672,
+      "output": "HP Separator pressure: 60.0 bara\nLP Sep P (bara)    ST Oil (kg/hr)    \n------------------------------------\n2                  81906.1           \n4                  83684.5           \n6                  83782.5           \n8                  83556.7           \n10                 83244.7           \n12                 82913.2           \n15                 82424.4           \n18                 81963.7           \n20                 81673.9           \n25                 81005.8           \n30                 80406.5           \n\nOptimal LP pressure: 6 bara\nMaximum ST oil rate: 83782.5 kg/hr\n"
+    },
+    {
+      "number": 3,
+      "language": "python",
+      "line": 688,
+      "sha256": "65bdc5b5dd1920b060aa17bb058fcf168870999f9d99af16bec48953598da307",
+      "status": "passed",
+      "seconds": 3.172,
+      "output": "P1 (bara)    P2 (bara)    ST Oil (kg/hr)    \n------------------------------------------\n30           3            80489.4           \n30           5            80348.7           \n30           8            79711.7           \n30           10           79302.7           \n30           15           78438.0           \n30           20           77741.4           \n40           3            82035.4           \n40           5            82141.0           \n40           8            81618.9           \n40           10           81228.3           \n40           15           80347.0           \n40           20           79610.9           \n50           3            82845.8           \n50           5            83187.3           \n50           8            82798.9           \n50           10           82443.4           \n50           15           81581.8           \n50           20           80829.8           \n60           3            83239.1           \n60           5            83805.6           \n60           8            83556.7           \n60           10           83244.7           \n60           15           82424.4           \n60           20           81673.9           \n70           3            83367.4           \n70           5            84149.4           \n70           8            84041.8           \n70           10           83777.6           \n70           15           83011.8           \n70           20           82274.6           \n80           3            83314.9           \n80           5            84304.5           \n80           8            84338.6           \n80           10           84124.7           \n80           15           83421.7           \n80           20           82706.2           \n\nOptimal: P1=80 bara, P2=8 bara, Oil=84338.6 kg/hr\n"
+    },
+    {
+      "number": 4,
+      "language": "python",
+      "line": 781,
+      "sha256": "e3a03b9b7b4816d927c4f35aae28a9e84c50644d163d398eb7cedc77c8d5d202",
+      "status": "passed",
+      "seconds": 0.062,
+      "output": "Accepted lift allocation (Sm3/day): {'A': 52826.26795002156, 'B': 69637.78509306768, 'C': 27535.95262626253}\nOil 4283.394 Sm3/day; grid 4283.373 Sm3/day\n"
+    },
+    {
+      "number": 5,
+      "language": "python",
+      "line": 871,
+      "sha256": "a9682d5c41d9291a2780ef564371b237bad60bda469aeef6e0c14d817b872244",
+      "status": "passed",
+      "seconds": 0.25,
+      "output": "Compressor Suction Pressure Optimization\n==================================================\nP_suction (bara)     Power (MW)      CR        \n---------------------------------------------\n20                   14.22           6.0       \n25                   11.97           4.8       \n30                   10.22           4.0       \n35                   8.80            3.4       \n40                   7.63            3.0       \n45                   6.63            2.7       \n50                   5.77            2.4       \n55                   5.02            2.2       \n60                   4.36            2.0       \n\nThis fixed-rate sweep quantifies compression power only.\nA coupled well/separator model is needed to establish any production benefit.\n"
+    },
+    {
+      "number": 6,
+      "language": "python",
+      "line": 941,
+      "sha256": "466d1f09fb109a1778ac663bafcb9c958515bed52e97732b7b9f6f9f1f2330bd",
+      "status": "passed",
+      "seconds": 0.25,
+      "output": "Theoretical optimal interstage P: 61.2 bara\n\nP_inter (bara)     W_total (MW)    W1 (MW)      W2 (MW)     \n---------------------------------------------------------\n35                 16.90           2.65         14.26       \n40                 16.37           3.77         12.60       \n45                 15.99           4.80         11.19       \n50                 15.72           5.75         9.97        \n55                 15.54           6.64         8.90        \n60                 15.42           7.47         7.96        \n65                 15.37           8.25         7.11        \n70                 15.35           8.99         6.36        \n75                 15.38           9.70         5.67        \n80                 15.43           10.38        5.05        \n85                 15.51           11.02        4.49        \n90                 15.61           11.65        3.97        \n\nOptimal interstage pressure: 70 bara\nMinimum total power:        15.35 MW\n"
+    },
+    {
+      "number": 7,
+      "language": "python",
+      "line": 1083,
+      "sha256": "63a13f618aad8eaf619f8f3a6f5f9c0fa38ba1d82185960a5bc74511334c3400",
+      "status": "passed",
+      "seconds": 0.625,
+      "output": "Multi-Objective Results: Oil Rate vs Compressor Power\n============================================================\nP_sep (bara)    Oil Rate (kg/hr)     Power (MW)     \n--------------------------------------------------\n20              137116.5             5.88           \n25              139811.4             4.86           \n30              141986.1             4.08           \n35              143841.6             3.46           \n40              145486.2             2.95           \n45              146984.6             2.52           \n50              148378.6             2.15           \n55              149697.1             1.84           \n60              150960.9             1.57           \n65              152185.7             1.33           \n70              153383.8             1.12           \nNondominated sampled points: [{'P_sep': 70, 'oil_rate': 153383.84856312865, 'power': 1.1198042274623607}]\nOil is liquid mass at separator conditions; compare actual trends, not an assumed pressure/recovery direction.\n"
+    },
+    {
+      "number": 8,
+      "language": "python",
+      "line": 1354,
+      "sha256": "ca5562d72ab7e078ffd2d07e0335ed31c4b2cae49a9e538f19e741cd9df48540",
+      "status": "passed",
+      "seconds": 0.047,
+      "output": "Facility Model Output:\n  gas_export_kghr: 51676.79\n  oil_rate_kghr: 89638.10\n  water_rate_kghr: 8685.11\n  compressor_power_MW: 1.81\n  export_pressure_bara: 120.00\n  separator_pressure_bara: 60.00\n"
+    },
+    {
+      "number": 9,
+      "language": "python",
+      "line": 1548,
+      "sha256": "ae23299ecf521a555bbf5e2c5d8a8b21ca1583cc082253775c156ad36921906d",
+      "status": "passed",
+      "seconds": 0.985,
+      "output": "Platform Production vs Separator Pressure\n===========================================================================\nP_sep      Oil (kg/hr)     Gas (kg/hr)     Power (MW)     Power OK  \n----------------------------------------------------------------\n30         162988.1        191279.0        12.81          OK        \n35         168328.9        185692.7        10.94          OK        \n40         172943.0        180897.6        9.40           OK        \n45         177026.3        176675.8        8.10           OK        \n50         180709.0        172884.1        6.99           OK        \n55         184082.0        169423.3        6.03           OK        \n60         187211.9        166221.4        5.18           OK        \n65         190148.9        163224.5        4.44           OK        \n70         192932.3        160390.7        3.79           OK        \n75         195593.5        157686.5        3.20           OK        \n80         198158.7        155084.4        2.68           OK        \n\nOptimal separator pressure: 80 bara\nMaximum oil production:     198158.7 kg/hr\nCompressor power:           2.68 MW\n"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "chapter": "ch16_heat_exchangers",
+  "source_sha256": "e9058afde910038be3152dfe08329ba61c4eb1adf34138f80ecf53273d139cad",
+  "engine": "JShell, Java snippets constrained to Java 8 syntax",
+  "returncode": 0,
+  "blocks": [
+    {
+      "index": 8,
+      "line": 925,
+      "code": "import org.apache.logging.log4j.LogManager;\nimport org.apache.logging.log4j.Logger;\nLogger logger = LogManager.getLogger(\"BookChapter16\");\nimport neqsim.thermo.system.SystemSrkEos;\nimport neqsim.process.equipment.stream.Stream;\nimport neqsim.process.processmodel.ProcessSystem;\nimport neqsim.process.equipment.capacity.CapacityConstraint;\nimport neqsim.process.util.optimizer.ProductionOptimizer;\nimport java.util.*;\nSystemSrkEos fluid = new SystemSrkEos(313.15, 80.0);\nfluid.addComponent(\"methane\", 0.80);\nfluid.addComponent(\"ethane\", 0.10);\nfluid.addComponent(\"n-heptane\", 0.08);\nfluid.addComponent(\"water\", 0.02);\nfluid.setMixingRule(\"classic\");\nfluid.setMultiPhaseCheck(true);\nStream feed = new Stream(\"Feed\", fluid);\nfeed.setFlowRate(20000.0, \"kg/hr\");\nProcessSystem process = new ProcessSystem();\nprocess.add(feed);\nprocess.run();\nimport neqsim.process.equipment.heatexchanger.Heater;\nStream feedStream = feed;\n// Java: Set maximum design duty for a heater\nHeater heater = new Heater(\"Inlet Heater\", feedStream);\nheater.setOutletTemperature(273.15 + 80.0);\nprocess.add(heater);\nprocess.run();\n\n// Initialize mechanical design and set constraint\nheater.initMechanicalDesign();\nheater.getMechanicalDesign().setMaxDesignDuty(5000000.0);  // 5 MW max\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_008_BEGIN\"\n\njshell> \njshell> $32 ==> "
+    },
+    {
+      "index": 11,
+      "line": 1059,
+      "code": "import neqsim.process.equipment.heatexchanger.HeatExchanger;\nimport neqsim.process.mechanicaldesign.heatexchanger.HeatExchangerDesignFeasibilityReport;\nSystemSrkEos coldFluid = new SystemSrkEos(288.15, 5.0);\ncoldFluid.addComponent(\"water\", 1.0);\ncoldFluid.setMixingRule(\"classic\");\nStream cold = new Stream(\"Cooling water\", coldFluid);\ncold.setFlowRate(30000.0, \"kg/hr\");\ncold.run();\nfeed.setTemperature(120.0, \"C\");\nfeed.run();\nHeatExchanger heatExchanger = new HeatExchanger(\"HX-01\", feed, cold);\nheatExchanger.setUAvalue(10000.0);\nheatExchanger.run();\n// Generate a screening report; supplier matching is not a vendor guarantee.\nHeatExchangerDesignFeasibilityReport hxReport =\n    new HeatExchangerDesignFeasibilityReport(heatExchanger);\nhxReport.setExchangerType(\"shell-and-tube\");\nhxReport.setDesignStandard(\"TEMA-R\");\nhxReport.generateReport();\n\nString verdict = hxReport.getVerdict();  // FEASIBLE / NOT_FEASIBLE\nString json = hxReport.toJson();         // Full JSON report\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_011_BEGIN\"\n\njshell> \njshell> $53 ==> "
+    }
+  ]
+}

@@ -1,0 +1,587 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="lt-ie9" lang="en-US"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en-US"><!--<![endif]-->
+  <head>
+
+  <!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<script type="text/javascript">
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+
+  <!-- Mobile Specific Metas
+================================================== -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--[if lt IE 9]>
+    <script src="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/scripts/vendor/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Favicons
+================================================== -->
+  <!-- 128x128 -->
+  <link rel="shortcut icon" type="image/ico" href="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/images/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/images/favicons/favicon.png" />
+
+  <!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+  <link rel="icon" type="image/png" sizes="192x192" href="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/images/favicons/favicon-192.png" />
+
+  <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+  <link rel="apple-touch-icon-precomposed" href="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/images/favicons/favicon-57.png">
+  <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/images/favicons/favicon-72.png">
+  <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/images/favicons/favicon-114.png">
+  <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/images/favicons/favicon-144.png">
+
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v22.6 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Mass Flow Rate Equations | Glenn Research Center | NASA</title>
+	<meta name="description" content="Mass The conservation of mass is a fundamental concept of physics. Within some problem domain, the amount of mass remains constant; mass is neither" />
+	<link rel="canonical" href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate-equations/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Mass Flow Rate Equations | Glenn Research Center | NASA" />
+	<meta property="og:description" content="Mass The conservation of mass is a fundamental concept of physics. Within some problem domain, the amount of mass remains constant; mass is neither" />
+	<meta property="og:url" content="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate-equations/" />
+	<meta property="og:site_name" content="Glenn Research Center | NASA" />
+	<meta property="article:publisher" content="https://www.facebook.com/nasaglenn" />
+	<meta property="article:modified_time" content="2023-11-21T15:55:31+00:00" />
+	<meta property="og:image" content="https://www1.grc.nasa.gov/wp-content/uploads/mflchk-1-600x450.gif" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@NASAglenn" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="5 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate-equations/","url":"https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate-equations/","name":"Mass Flow Rate Equations | Glenn Research Center | NASA","isPartOf":{"@id":"https://www1.grc.nasa.gov/#website"},"primaryImageOfPage":{"@id":"https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate-equations/#primaryimage"},"image":{"@id":"https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate-equations/#primaryimage"},"thumbnailUrl":"https://www1.grc.nasa.gov/wp-content/uploads/mflchk-1-600x450.gif","datePublished":"2022-07-13T18:25:48+00:00","dateModified":"2023-11-21T15:55:31+00:00","description":"Mass The conservation of mass is a fundamental concept of physics. Within some problem domain, the amount of mass remains constant; mass is neither","breadcrumb":{"@id":"https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate-equations/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate-equations/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate-equations/#primaryimage","url":"https://www1.grc.nasa.gov/wp-content/uploads/mflchk-1-e1752675828621.gif","contentUrl":"https://www1.grc.nasa.gov/wp-content/uploads/mflchk-1-e1752675828621.gif","width":705,"height":453},{"@type":"BreadcrumbList","@id":"https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate-equations/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www1.grc.nasa.gov/"},{"@type":"ListItem","position":2,"name":"Beginners Guide to Aeronautics","item":"https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/"},{"@type":"ListItem","position":3,"name":"Mass Flow Rate Equations"}]},{"@type":"WebSite","@id":"https://www1.grc.nasa.gov/#website","url":"https://www1.grc.nasa.gov/","name":"Glenn Research Center | NASA","description":"","publisher":{"@id":"https://www1.grc.nasa.gov/#organization"},"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www1.grc.nasa.gov/#organization","name":"NASA Glenn Research Center","url":"https://www1.grc.nasa.gov/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www1.grc.nasa.gov/#/schema/logo/image/","url":"https://www1.grc.nasa.gov/wp-content/uploads/2012_05658.jpg","contentUrl":"https://www1.grc.nasa.gov/wp-content/uploads/2012_05658.jpg","width":640,"height":480,"caption":"NASA Glenn Research Center"},"image":{"@id":"https://www1.grc.nasa.gov/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/nasaglenn","https://x.com/NASAglenn","https://www.instagram.com/nasaglenn/","https://www.linkedin.com/company/nasa-glenn-research-center","https://www.youtube.com/channel/UCAzpCCw-2sIktGujS9D39Iw"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='stylesheet' id='simulation-container.css-css' href='https://www1.grc.nasa.gov/wp-content/plugins/cheerpj-integration/lib/css/simulation-container.css?ver=6.3.10' type='text/css' media='all' />
+<link rel='stylesheet' id='add_card.css-css' href='https://www1.grc.nasa.gov/wp-content/plugins/nasapress-custom-integration-plugin/includes/public/css/add_card.css?ver=6.3.10' type='text/css' media='all' />
+<link rel='stylesheet' id='rss_feed.css-css' href='https://www1.grc.nasa.gov/wp-content/plugins/nasapress-custom-integration-plugin/includes/public/css/rss_feed.css?ver=6.3.10' type='text/css' media='all' />
+<link rel='stylesheet' id='media.css-css' href='https://www1.grc.nasa.gov/wp-content/plugins/nasapress-custom-integration-plugin/includes/admin/css/media.css?ver=6.3.10' type='text/css' media='all' />
+<link rel='stylesheet' id='page-list-style-css' href='https://www1.grc.nasa.gov/wp-content/plugins/page-list/css/page-list.css?ver=6.3' type='text/css' media='all' />
+<link rel='stylesheet' id='simple-banner-style-css' href='https://www1.grc.nasa.gov/wp-content/plugins/simple-banner/simple-banner.css?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wppopups-base-css' href='https://www1.grc.nasa.gov/wp-content/plugins/wp-popups-lite/src/assets/css/wppopups-base.css?ver=2.2.0.7' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='https://www1.grc.nasa.gov/wp-content/tablepress-combined.min.css?ver=32' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-responsive-tables-css' href='https://www1.grc.nasa.gov/wp-content/plugins/tablepress-responsive-tables/css/tablepress-responsive.min.css?ver=1.8' type='text/css' media='all' />
+<link rel='stylesheet' id='sage/main.css-css' href='https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/styles/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='ari-fancybox-css' href='https://www1.grc.nasa.gov/wp-content/plugins/ari-fancy-lightbox/assets/fancybox/jquery.fancybox.min.css?ver=1.4.1' type='text/css' media='all' />
+<style id='ari-fancybox-inline-css' type='text/css'>
+BODY .fancybox-container{z-index:200000}BODY .fancybox-is-open .fancybox-bg{opacity:0.95}BODY .fancybox-bg {background-color:#0f0f11}BODY .fancybox-thumbs {background-color:#000000}
+</style>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/jquery/jquery.min.js?ver=3.7.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1' id='jquery-migrate-js'></script>
+<script id="simple-banner-script-js-before" type="text/javascript">
+const simpleBannerScriptParams = {"pro_version_enabled":"","debug_mode":"","id":44902,"version":"3.3.1","banner_params":[{"hide_simple_banner":"yes","simple_banner_prepend_element":"header","simple_banner_position":"sticky","header_margin":"","header_padding":"","wp_body_open_enabled":"","wp_body_open":true,"simple_banner_z_index":"1","simple_banner_text":"Due to the lapse in federal government funding, NASA is not updating this website. We sincerely regret this inconvenience.","disabled_on_current_page":false,"disabled_pages_array":[],"is_current_page_a_post":false,"disabled_on_posts":"","simple_banner_disabled_page_paths":"","simple_banner_font_size":"14px","simple_banner_color":"#0b3d91","simple_banner_text_color":"#ffffff","simple_banner_link_color":"#fef501","simple_banner_close_color":"#ffffff","simple_banner_custom_css":"","simple_banner_scrolling_custom_css":"","simple_banner_text_custom_css":"","simple_banner_button_css":"","site_custom_css":"","keep_site_custom_css":"","site_custom_js":"","keep_site_custom_js":"","close_button_enabled":"","close_button_expiration":"","close_button_cookie_set":false,"current_date":{"date":"2026-09-12 21:01:42.289791","timezone_type":3,"timezone":"UTC"},"start_date":{"date":"2026-09-12 21:01:42.289805","timezone_type":3,"timezone":"UTC"},"end_date":{"date":"2026-09-12 21:01:42.289808","timezone_type":3,"timezone":"UTC"},"simple_banner_start_after_date":"","simple_banner_remove_after_date":"","simple_banner_insert_inside_element":""}]}
+</script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-content/plugins/simple-banner/simple-banner.js?ver=3.3.1' id='simple-banner-script-js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www1.grc.nasa.gov/xmlrpc.php?rsd" />
+<meta name="generator" content="XXXXXXXXXXXXXXXX" X>
+<link rel='shortlink' href='https://www1.grc.nasa.gov/?p=44902' />
+<link rel="alternate" type="application/json+oembed" href="https://www1.grc.nasa.gov/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww1.grc.nasa.gov%2Fbeginners-guide-to-aeronautics%2Fmass-flow-rate-equations%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www1.grc.nasa.gov/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww1.grc.nasa.gov%2Fbeginners-guide-to-aeronautics%2Fmass-flow-rate-equations%2F&#038;format=xml" />
+	<script language="javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA"></script>
+	<script src='https://www1.grc.nasa.gov/wp-content/plugins/panorama-viewer/includes/js/marzipano-0.10.2.js'></script><script src='https://www1.grc.nasa.gov/wp-content/plugins/panorama-viewer/includes/js/panorama-viewer.js'></script><link href='https://www1.grc.nasa.gov/wp-content/plugins/panorama-viewer/includes/css/panorama-viewer.css' type='text/css' rel='stylesheet' /><style id="simple-banner-hide" type="text/css">.simple-banner{display:none;}</style><style id="simple-banner-position" type="text/css">.simple-banner{position:sticky;}</style><style id="simple-banner-font-size" type="text/css">.simple-banner .simple-banner-text{font-size:14px;}</style><style id="simple-banner-background-color" type="text/css">.simple-banner{background:#0b3d91;}</style><style id="simple-banner-text-color" type="text/css">.simple-banner .simple-banner-text{color:#ffffff;}</style><style id="simple-banner-link-color" type="text/css">.simple-banner .simple-banner-text a{color:#fef501;}</style><style id="simple-banner-z-index" type="text/css">.simple-banner{z-index:1;}</style><style id="simple-banner-close-color" type="text/css">.simple-banner .simple-banner-button{color:#ffffff;}</style><style id="simple-banner-site-custom-css-dummy" type="text/css"></style><script id="simple-banner-site-custom-js-dummy" type="text/javascript"></script><style type="text/css" id="spu-css-56532" class="spu-css">		#spu-bg-56532 {
+			background-color: rgba(0, 0, 0, 0.76);
+		}
+
+		#spu-56532 .spu-close {
+			font-size: 50px;
+			color: #666;
+			text-shadow: 0 1px 0 #000;
+		}
+
+		#spu-56532 .spu-close:hover {
+			color: #000;
+		}
+
+		#spu-56532 {
+			background-color: rgb(255, 255, 255);
+			max-width: 650px;
+			border-radius: 0px;
+			
+					height: auto;
+					box-shadow:  0px 0px 0px 0px #ccc;
+				}
+
+		#spu-56532 .spu-container {
+					padding: 20px;
+			height: calc(100% - 0px);
+		}
+								</style>
+				<style type="text/css" id="wp-custom-css">
+			/* Change height of home since video removed */
+
+@media screen and (min-width: 1095px) {
+body.home .usa-hero {
+	height: 450px !important;
+}
+}
+
+/*Search no longer works display none*/
+
+#search_form {display:none;}
+
+/* Adds clear class */
+.clear {clear:both !important;}
+
+/* Fixes external linking display issue */
+.local.usa-external_link:after {
+	background-image: none !important;
+}
+
+/* Removed subnav border */
+@media screen and (min-width: 1230px) {
+.usa-nav-submenu li a span {
+    border-bottom: 0 !important;
+    padding-bottom: 0;
+}
+}
+
+/*/Adjust height when clear class is used on h2-h4 */
+@media screen and (min-width: 1230px) {
+.usa-layout-docs-main_content h2.clear::before, .usa-layout-docs-main_content h3.clear::before, .usa-layout-docs-main_content h4.clear::before {
+    content: " ";
+    display: block;
+    height: 20px !important;
+    margin-top: -20px !important;
+    visibility: hidden;
+}
+}
+
+/*Style the site map page for better readability of long lists */
+.page-id-4044 ul ul, .page-id-4252 ul ul {
+    border-left: 1px dotted #666;}
+
+/*Adding in case it isn't updated in the new theme update*/
+.usa-nav-container {
+    padding: 0 2rem 0 2rem;
+    max-width: 1230px;
+}
+
+/*BGA Site Map Adjustments */
+/* Page ID 49337 only - compact children-list layout with 50px thumbnails */
+body.page-id-49337 .grc-list .grc-facilities-facility {
+	margin-bottom: 1.1rem;
+}
+
+/* Image column */
+body.page-id-49337 .grc-list .grc-facilities-facility .usa-width-one-third {
+	width: 70px;
+	max-width: 70px;
+	margin-right: 18px;
+}
+
+/* Text column */
+body.page-id-49337 .grc-list .grc-facilities-facility .usa-width-two-thirds {
+	width: calc(100% - 88px);
+}
+
+/* Reduce the figure/caption wrapper around the image */
+body.page-id-49337 .grc-list .grc-facilities-facility figure.wp-caption {
+	width: 50px !important;
+	max-width: 50px;
+	margin: 0;
+}
+
+/* Thumbnail image */
+body.page-id-49337 .grc-list .grc-facilities-facility img.attachment-thumbnail,
+body.page-id-49337 .grc-list .grc-facilities-facility img.wp-post-image {
+	width: 50px;
+	max-width: 50px;
+	height: auto;
+}
+
+/* Title link - 50% larger/readable */
+body.page-id-49337 .grc-list .grc-facilities-facility h3 {
+	font-size: 1.5rem;
+	line-height: 1.2;
+	margin-top: 0;
+	margin-bottom: 0.35rem;
+}
+
+body.page-id-49337 .grc-list .grc-facilities-facility h3 a {
+	font-size: inherit;
+}
+
+/* Excerpt text - readable, limited to 3 lines */
+body.page-id-49337 .grc-list .grc-facilities-facility p {
+	font-size: 1rem;
+	line-height: 1.35;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	margin-top: 0;
+}
+
+/* Caption, if used */
+body.page-id-49337 .grc-list .grc-facilities-facility .wp-caption-text {
+	font-size: 0.7rem;
+	line-height: 1.2;
+}
+
+/* Pages without thumbnails should use full width */
+body.page-id-49337 .grc-list .grc-facilities-facility .usa-width-one-whole {
+	width: 100%;
+}
+
+/* Small screens - stack normally */
+@media screen and (max-width: 600px) {
+	body.page-id-49337 .grc-list .grc-facilities-facility .usa-width-one-third,
+	body.page-id-49337 .grc-list .grc-facilities-facility .usa-width-two-thirds {
+		width: 100%;
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	body.page-id-49337 .grc-list .grc-facilities-facility figure.wp-caption {
+		width: 50px !important;
+	}
+}		</style>
+		      <!-- todo-config -->
+  <script async id="_fed_an_ua_tag" type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&amp;subagency=GRC&amp;dclink=true&amp;yt=true&amp;sp=search,s"></script>
+  </head>
+  <body class="page-template-default page page-id-44902 page-child parent-pageid-28742 slug-mass-flow-rate-equations">
+        <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<header class="usa-header usa-header-basic usa-header-dark" role="banner">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo" id="logo">
+        <em class="usa-logo-text">
+          <a href="https://www1.grc.nasa.gov/" accesskey="1" title="Home" aria-label="Home">
+            <img src="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/images/logo-nasa.svg" alt="NASA logo">
+            <!-- todo-config -->
+            <span class="usa-logo-main-text">Glenn </span><br/>Research Center</a>
+        </em>
+      </div>
+      <button class="usa-menu-btn">Menu</button>
+    </div>
+    <nav role="navigation" class="usa-nav usa-nav-dark">
+      <button class="usa-nav-close">
+        <img src="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/images/close.svg" alt="close">
+      </button>
+      <ul id="menu-2021-menu" class="usa-nav-primary usa-accordion"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-27990"><button class=" usa-accordion-button usa-nav-link "
+      aria-expanded="false" aria-controls="side-nav-1"><span>About</span></button><ul class="usa-nav-submenu" id="side-nav-1" aria-hidden="true"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27991"><a href="http://nasa.gov/glenn" class="" rel="external" target="_blank"><span>NASA's Glenn Research Center</span><i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27992"><a href="https://www.nasa.gov/careers" class="" rel="external" target="_blank"><span>Careers</span><i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27993"><a href="https://www.nasa.gov/centers-and-facilities/doing-business-with-glenn/" class="" rel="external" target="_blank"><span>Doing Business with Glenn</span><i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27994"><a href="https://www.nasa.gov/glenn-stem/" class="" rel="external" target="_blank"><span>STEM Engagement at Glenn</span><i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+</ul></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-27995"><button class=" usa-accordion-button usa-nav-link "
+      aria-expanded="false" aria-controls="side-nav-6"><span>Education</span></button><ul class="usa-nav-submenu" id="side-nav-6" aria-hidden="true"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27996"><a href="https://www.nasa.gov/centers/glenn/education/index.html" class="" rel="external" target="_blank"><span>Office of Education at Glenn</span><i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27997"><a href="https://intern.nasa.gov/" class="" rel="external" target="_blank"><span>Internships</span><i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-49390"><a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/" class=""><span>Beginners Guide to Aeronautics</span></a></li>
+</ul></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58662"><a href="https://www.nasa.gov/glenn-labs-and-test-facilities/" class="usa-nav-link" rel="external" target="_blank"><span>Facilities</span><i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30612"><a href="https://www1.grc.nasa.gov/aeronautics/" class="usa-nav-link"><span>Aeronautics</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30613"><a href="https://www1.grc.nasa.gov/space/" class="usa-nav-link"><span>Space</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30614"><a href="https://www1.grc.nasa.gov/research-and-engineering/" class="usa-nav-link"><span>Research</span></a></li>
+</ul>      <form accept-charset="UTF-8" action="https://search.usa.gov/search/docs" id="search_form" method="get" class="usa-search usa-search-small js-search-form">
+  <div role="search">
+    <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+
+    <input id="affiliate" name="affiliate" type="hidden" value="nasa-glenn" />
+        <label class="usa-sr-only" for="query">Enter Search Term(s):</label>
+    <input autocomplete="off" id="query" name="query" type="search" placeholder="Search">
+    <button type="submit" name="commit" value="Search">
+      <span class="usa-sr-only">Search</span>
+    </button>
+  </div>
+</form>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="usa-overlay"></div>
+
+        <main class="usa-grid usa-section usa-content usa-layout-docs" id="main-content">
+                <aside class="usa-width-one-fourth usa-layout-docs-sidenav sticky usa-serif-body">
+            <p class='usa-layout-docs-sidenav-title'>On this page:</p><nav class='anchorific' data-headings='h2,h3'></nav>
+          </aside>
+        <div class="usa-width-three-fourths usa-layout-docs-main_content usa-serif-body">
+           <div class="breadcrumbs" id="breadcrumbs"><span><span><a href="https://www1.grc.nasa.gov/">Home</a></span> &gt; <span><a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/">Beginners Guide to Aeronautics</a></span></span></span></span></div>      <header>
+  <h1>Mass Flow Rate Equations</h1>
+</header>
+      <p><a href="https://www1.grc.nasa.gov/wp-content/uploads/mflchk-1.gif"><img decoding="async" fetchpriority="high" class="aligncenter wp-image-45267 size-medium" src="https://www1.grc.nasa.gov/wp-content/uploads/mflchk-1-600x450.gif" alt="A graphic showing the equations which describe the mass flow through a nozzle including compressibility effects." width="600" height="450" /></a></p>
+<h2>Mass</h2>
+<p>The conservation of mass is a fundamental concept of physics. Within some problem domain, the amount of mass remains constant; mass is neither created nor destroyed. The <b>mass</b> of any object is simply the volume that the object occupies times the density of the object. For a <b>fluid</b> (a liquid or a gas) the density, volume, and shape of the object can all change within the domain with time and mass can move through the domain.</p>
+<p>The <b>conservation of mass</b> (continuity) tells us that the mass flow rate \(\dot{m}\) through a tube is a constant and equal to the product of the density <b>r</b>, velocity <b>V</b>, and flow area <b>A</b>:</p>
+<p style="text-align: center;">\(\LARGE \dot{m}=rVA\)
+</p><p>Considering the mass flow rate equation, it appears that for a given area and a fixed density, we could increase the mass flow rate indefinitely by simply increasing the velocity. In real fluids, however, the density does not remain fixed as the velocity increases because of compressibility effects. We have to account for the change in density to determine the mass flow rate at higher velocities. If we start with the mass flow rate equation given above and use the isentropic flow relations and the equation of state, we can derive a compressible form of the mass flow rate equation.</p>
+<p>We begin with the definition of the Mach number <b>M</b>, and the speed of sound <b>a</b>:</p>
+<p style="text-align: center;">\(\LARGE V=Ma=M\sqrt{\gamma RT}\)
+</p><p>where <b>gam </b>(\(\bf \gamma\)) is the specific heat ratio, <b>R</b> is the gas constant, and <b>T</b> is the temperature. Now substitute Eq #2 into Eq # 1:</p>
+<p style="text-align: center;">\(\LARGE \dot{m}=rAM\sqrt{\gamma RT}\)
+</p><p>The equation of state is:</p>
+<p style="text-align: center;">\(\LARGE r=\frac{p}{RT}\)
+</p><p>where <b>p</b> is the pressure. Substitute Eq #4 into Eq # 3:</p>
+<p style="text-align: center;">\(\LARGE \dot{m}=AM\sqrt{\gamma RT}\cdot\frac{p}{RT}\)
+</p><p>Collect terms:</p>
+<p style="text-align: center;">\(\LARGE \dot{m}=AM\sqrt{\frac{\gamma}{R}}\cdot\frac{p}{\sqrt{T}}\)
+</p><p>From the isentropic flow equations:</p>
+<p style="text-align: center;">\(\LARGE p=p_{t}(\frac{T}{T_{t}})^{\frac{\gamma}{\gamma-1}}\)
+</p><p>where <b>p<sub>t</sub></b> is the total pressure and <b>T<sub>t</sub></b> is the total temperature. Substitute Eq #7 into Eq # 6:</p>
+<h4 style="text-align: left;"><em><span style="text-decoration: underline;">Eq # 8</span></em></h4>
+<p style="text-align: center;">\(\LARGE \dot{m}=\frac{M\frac{Ap_{t}}{\sqrt{T_{t}}}\sqrt{\frac{\gamma}{R}}(\frac{T}{T_{t}})^{\gamma+1}}{2(\gamma-1)}\)
+</p><p>Another isentropic relation gives:</p>
+<p style="text-align: center;">\(\LARGE \frac{T}{T_{t}}=(1+\frac{1}{2}M^{2}(\gamma-1))^{-1}\)
+</p><p>Substitute Eq #9 into Eq # 8:</p>
+<h4 style="text-align: left;"><em><span style="text-decoration: underline;">Eq # 10</span></em></h4>
+<p style="text-align: center;">\(\LARGE \dot{m}=(A\frac{p_{t}}{\sqrt{T_{t}}})\sqrt{\frac{\gamma}{R}}M[1+\frac{1}{2}M^{2}(\gamma-1)]^{-\frac{\gamma+1}{\frac{\gamma-1}{2}}}\)
+</p><p>This equation is shown in the red box on this slide and relates the mass flow rate to the flow area <b>A</b>, total pressure <b>p<sub>t</sub></b> and temperature <b>T<sub>t</sub></b> of the flow, the Mach number <b>M</b>, the ratio of specific heats of the gas <b>gam </b>(\(\bf \gamma\)), and the gas constant <b>R</b>: This equation can be further simplified to derive a weight flow function that depends only on the Mach number.</p>
+<p>The compressibility effects on mass flow rate have some unexpected results. We can increase the mass flow through a tube by <u>increasing</u> the area, <u>increasing</u> the total pressure, or <u>decreasing</u> the total temperature. But the effect of increasing velocity (Mach number) is a little harder to figure out. If we were to fix the area, total pressure and temperature, and graph the variation of mass flow rate with Mach number, we would find that a limiting maximum value occurs at Mach number equal to one. There is a technique in calculus to find the maximum (or minimum) value of a function by taking the derivative of the function and setting the resulting equation to zero. Let us apply this technique to the mass flow rate equation. To simplify the exercise, let us define:</p>
+<p style="text-align: center;">\(\LARGE B=\sqrt{\frac{\gamma}{R}}\frac{Ap_{t}}{\sqrt{T_{t}}}\)
+</p><p style="text-align: center;">\(\LARGE C=\frac{\gamma+1}{2(\gamma-1)}\)
+</p><p style="text-align: center;">\(\LARGE D=\frac{\gamma-1}{2}\)
+</p><p>Then Eq #10 can be written:</p>
+<p style="text-align: center;">\(\LARGE \dot{m}=\frac{BM}{(1+DM^{2})^{C}}\)
+</p><p>We take the derivative of this equation with respect to <b>M</b> and set the result to zero to find the maximum:</p>
+<h4><em><span style="text-decoration: underline;">Eq # 15</span></em></h4>
+<p style="text-align: center;">\(\LARGE \frac{\text{d}\dot{m}}{\text{d}M}=M\frac{d\frac{1}{(1+DM^{2})^{C}}}{\text{d}M}+\frac{1}{(1+DM^{2})^{C}}=0\)
+</p><p style="text-align: center;">\(\LARGE \frac{-(2CDM^{2})}{\frac{(1+DM^{2})^{C+1}+1}{(1+DM^{2})^{C}}}=0\)
+</p><p>Using some algebra to simplify this equation:</p>
+<p style="text-align: center;">\(\LARGE 2CDM^{2}=1+DM^{2}\)
+</p><p>Now collect terms which multiply <b>M<sup>2</sup></b>:</p>
+<p style="text-align: center;">\(\LARGE M^{2}=\frac{1}{D(2C-1)}\)
+</p><p>We can evaluate the right side of this equation by using Eq #12 and Eq #13:</p>
+<p style="text-align: center;">\(\LARGE D(2C-1)=\frac{1}{2}(\gamma-1)(\frac{\gamma+1}{\gamma-1}-1)=1\)
+</p><p>Therefore, the condition for the maximum airflow occurs at:</p>
+<p style="text-align: center;">\(\LARGE M^{2}=1\text{ or }M=1\)
+</p><p><b>There is a maximum airflow limit that occurs when the Mach number is equal to one</b>. The limiting of the mass flow rate is called <b>choking</b> of the flow. If we substitute <b>M = 1</b> into Eq #10 we can determine the value of the choked mass flow rate:</p>
+<p style="text-align: center;">\(\LARGE \dot{M}=(A\frac{p_{t}}{\sqrt{T_{t}}})\sqrt{\frac{\gamma}{R}}(\frac{\gamma+1}{2})^{-\frac{\gamma+1}{\frac{\gamma-1}{2}}}\)
+</p><p>Mach number equal to one is called a <b>sonic</b> condition because the velocity is equal to the speed of sound and we denote the area for the sonic condition by a special symbol &#8220;A*&#8221;, pronounced &#8220;A star&#8221;. If we have a tube with changing area, like the nozzle shown on the slide, the maximum mass flow rate through the system occurs when the flow is choked at the smallest area. This location is called the <b>throat</b> of the nozzle. The conservation of mass specifies that the mass flow rate through a nozzle is a constant. If no heat is added, and there are no pressure losses in the nozzle, the total pressure and temperature are also constant.</p>
+<p>By substituting the sonic conditions into the mass flow equation in the box, and doing some algebra, we can relate the Mach number <b>M</b> at any location in the nozzle to the ratio between the area <b>A</b> at that location and the area of the throat <b>A*</b>. Since the Mach number is related to the velocity, we can determine the exit velocity of a nozzle, if we know the area ratio from the throat to the exit. Knowing the exit velocity and the mass flow rate, we can determine the thrust of the nozzle. You can explore the operation of a nozzle with our interactive <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/rnoz/">thrust simulator</a> and design your own rockets!</p>
+
+        </div>
+  </main>
+
+            <footer class="usa-footer usa-footer-medium" role="contentinfo">
+  <div class="usa-grid usa-footer-return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+
+  <!--<div class="usa-footer-primary-section">
+    <div class="usa-grid-full">
+      <nav class="usa-footer-nav">
+        <ul class="usa-unstyled-list">
+          <li class="usa-width-one-fourth usa-footer-primary-content">
+            <a class="usa-footer-primary-link" href=""></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>-->
+
+  <div class="usa-footer-secondary_section">
+    <div class="usa-grid">
+      <div class="usa-footer-logo usa-width-one-half">
+        <div class="group">
+          <img class="usa-footer-logo-img" src="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/images/logo-nasa.svg" alt="NASA logo">
+          <h3 class="usa-footer-logo-heading">National Aeronautics and Space Administration</h3>
+        </div>
+        <p>NASA Official: Nancy Hall<br />
+        Page Editor: Nancy Hall<br />
+        Page Last Updated: November 21, 2023
+        </p>
+        <p><a href="https://www.nasa.gov/privacy/">Privacy Policy</a> &nbsp;| &nbsp;<a href="https://www.nasa.gov/no-fear-act/">No Fear Act</a> &nbsp;| &nbsp;<a href="https://www.nasa.gov/general/accessibility/">Accessibility</a> &nbsp; | &nbsp;<a href="https://www.nasa.gov/foia/">FOIA</a></p>
+      </div>
+      <div class="usa-footer-contact-links usa-width-one-half">
+        <!-- todo-config -->
+        <a title="Follow us on Facebook" class="usa-link-facebook" href="https://www.facebook.com/NASAGlenn"></a>
+        <a title="Follow us on Twitter" class="usa-link-twitter" href="https://twitter.com/NASAglenn"></a>
+        <a title="Follow us on YouTube" class="usa-link-youtube" href="https://www.youtube.com/user/nasaglenn"></a>
+        <a title="Follow us on Instagram" class="usa-link-instagram" href="https://www.instagram.com/nasaglenn/"></a>
+        <a title="Follow us on Flickr" class="usa-link-flickr" href="https://www.flickr.com/photos/nasaglenn"></a>
+        <address>
+          <!-- todo-config -->
+          <p class="usa-footer-contact-heading">Glenn Research Center</p>
+          <p>21000 Brookpark Road<br />Cleveland, OH 44135<br />(216) 433-4000</p>
+          <p class="mb0"><a href="https://www.nasa.gov/glenn">nasa.gov/glenn</a></p>
+
+        </address>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- todo-config -->
+<a href="#" id="feedback-trigger" class="feedback-trigger feedback-trigger-right">Provide feedback</a>
+
+<!--[if lt IE 9]>
+  <script src="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/scripts/vendor/selectivizr-min.js"></script>
+  <script src="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/scripts/vendor/respond.js"></script>
+  <script src="https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/scripts/vendor/rem.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+//<![CDATA[
+      var usasearch_config = { siteHandle:"nasa-glenn" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "//search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]>
+</script>
+    <div class="simple-banner simple-banner-text" style="display:none !important"></div><div class="wppopups-whole" style="display: none"><div class="spu-bg " id="spu-bg-56532"></div><div class="spu-box spu-animation-fade spu-position-centered" id="spu-56532" data-id="56532" data-parent="0" data-settings="{&quot;position&quot;:{&quot;position&quot;:&quot;centered&quot;},&quot;animation&quot;:{&quot;animation&quot;:&quot;fade&quot;},&quot;colors&quot;:{&quot;show_overlay&quot;:&quot;yes-color&quot;,&quot;overlay_color&quot;:&quot;rgba(0, 0, 0, 0.76)&quot;,&quot;overlay_blur&quot;:&quot;2&quot;,&quot;bg_color&quot;:&quot;rgb(255, 255, 255)&quot;,&quot;bg_img&quot;:&quot;&quot;,&quot;bg_img_repeat&quot;:&quot;no-repeat&quot;,&quot;bg_img_size&quot;:&quot;auto&quot;},&quot;close&quot;:{&quot;close_color&quot;:&quot;#666&quot;,&quot;close_hover_color&quot;:&quot;#000&quot;,&quot;close_shadow_color&quot;:&quot;#000&quot;,&quot;close_size&quot;:&quot;50&quot;,&quot;close_position&quot;:&quot;top_right&quot;},&quot;popup_box&quot;:{&quot;width&quot;:&quot;650px&quot;,&quot;padding&quot;:&quot;20&quot;,&quot;radius&quot;:&quot;0&quot;,&quot;auto_height&quot;:&quot;yes&quot;,&quot;height&quot;:&quot;350px&quot;},&quot;border&quot;:{&quot;border_type&quot;:&quot;none&quot;,&quot;border_color&quot;:&quot;#000&quot;,&quot;border_width&quot;:&quot;3&quot;,&quot;border_radius&quot;:&quot;0&quot;,&quot;border_margin&quot;:&quot;0&quot;},&quot;shadow&quot;:{&quot;shadow_color&quot;:&quot;#ccc&quot;,&quot;shadow_type&quot;:&quot;outset&quot;,&quot;shadow_x_offset&quot;:&quot;0&quot;,&quot;shadow_y_offset&quot;:&quot;0&quot;,&quot;shadow_blur&quot;:&quot;0&quot;,&quot;shadow_spread&quot;:&quot;0&quot;},&quot;css&quot;:{&quot;custom_css&quot;:&quot;&quot;},&quot;id&quot;:&quot;56532&quot;,&quot;field_id&quot;:1,&quot;rules&quot;:{&quot;group_0&quot;:{&quot;rule_0&quot;:{&quot;rule&quot;:&quot;page_type&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;all_pages&quot;}}},&quot;global_rules&quot;:{&quot;group_0&quot;:{&quot;rule_0&quot;:{&quot;rule&quot;:&quot;page_type&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;all_pages&quot;}}},&quot;settings&quot;:{&quot;popup_title&quot;:&quot;Feedback&quot;,&quot;popup_desc&quot;:&quot;&quot;,&quot;test_mode&quot;:&quot;0&quot;,&quot;powered_link&quot;:&quot;0&quot;,&quot;popup_class&quot;:&quot;&quot;,&quot;popup_hidden_class&quot;:&quot;&quot;,&quot;close_on_conversion&quot;:&quot;0&quot;,&quot;conversion_cookie_name&quot;:&quot;spu_conversion_56533&quot;,&quot;conversion_cookie_duration&quot;:&quot;0&quot;,&quot;conversion_cookie_type&quot;:&quot;d&quot;,&quot;closing_cookie_name&quot;:&quot;spu_closing_56533&quot;,&quot;closing_cookie_duration&quot;:&quot;0&quot;,&quot;closing_cookie_type&quot;:&quot;d&quot;},&quot;triggers&quot;:{&quot;trigger_1&quot;:{&quot;trigger&quot;:&quot;class&quot;,&quot;value&quot;:&quot;.feedback-trigger&quot;}}}" data-need_ajax="0"><div class="spu-container "><div class="spu-content"><script type="text/javascript"></script>
+                <div class='gf_browser_unknown gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_17' style='display:none'><form method='post' enctype='multipart/form-data'  id='gform_17'  action='/beginners-guide-to-aeronautics/mass-flow-rate-equations/' data-formid='17' novalidate><div class='gf_invisible ginput_recaptchav3' data-sitekey='6LdDZBonAAAAABlZkLPIdv_NeW4X60JRVPRJsVm4' data-tabindex='0'><input id="input_631b0728d0f011f9935fb8fcf21f21ce" class="gfield_recaptcha_response" type="hidden" name="input_631b0728d0f011f9935fb8fcf21f21ce" value=""/></div>
+                        <div class='gform-body gform_body'><div id='gform_fields_17' class='gform_fields top_label form_sublabel_below description_above validation_below'><div id="field_17_10" class="gfield gfield--type-survey gfield--input-type-likert gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible gsurvey-survey-field "  data-field-class="gsurvey-survey-field" data-js-reload="field_17_10" ><label class='gfield_label gform-field-label' >Rate this page<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_likert'><table aria-label='Rate this page' class='gsurvey-likert' id='input_17_10'><thead><tr><th id='likert_col_1_17_10' scope='col' role='presentation' class='gsurvey-likert-choice-label'>1 (lowest)</th><th id='likert_col_2_17_10' scope='col' role='presentation' class='gsurvey-likert-choice-label'>2</th><th id='likert_col_3_17_10' scope='col' role='presentation' class='gsurvey-likert-choice-label'>3</th><th id='likert_col_4_17_10' scope='col' role='presentation' class='gsurvey-likert-choice-label'>4</th><th id='likert_col_5_17_10' scope='col' role='presentation' class='gsurvey-likert-choice-label'>5 (highest)</th></tr></thead><tbody><tr><td data-label='1 (lowest)' class='gsurvey-likert-choice'><input name='input_10' type='radio' value='glikertcol10a472e846'  id='choice_17_10_1'    aria-labelledby='likert_col_1_17_10'/></td><td data-label='2' class='gsurvey-likert-choice'><input name='input_10' type='radio' value='glikertcol10162b0a2e'  id='choice_17_10_2'    aria-labelledby='likert_col_2_17_10'/></td><td data-label='3' class='gsurvey-likert-choice'><input name='input_10' type='radio' value='glikertcol1079a02f6d'  id='choice_17_10_3'    aria-labelledby='likert_col_3_17_10'/></td><td data-label='4' class='gsurvey-likert-choice'><input name='input_10' type='radio' value='glikertcol10a969ec17'  id='choice_17_10_4'    aria-labelledby='likert_col_4_17_10'/></td><td data-label='5 (highest)' class='gsurvey-likert-choice'><input name='input_10' type='radio' value='glikertcol1077b7b11d'  id='choice_17_10_5'    aria-labelledby='likert_col_5_17_10'/></td></tr></tbody></table></div></div><fieldset id="field_17_18" class="gfield gfield--type-radio gfield--type-choice gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  data-js-reload="field_17_18" ><legend class='gfield_label gform-field-label' >Did you find what you were looking for?<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></legend><div class='ginput_container ginput_container_radio'><div class='gfield_radio' id='input_17_18'>
+			<div class='gchoice gchoice_17_18_0'>
+					<input class='gfield-choice-input' name='input_18' type='radio' value='Yes'  id='choice_17_18_0' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_17_18_0' id='label_17_18_0' class='gform-field-label gform-field-label--type-inline'>Yes</label>
+			</div>
+			<div class='gchoice gchoice_17_18_1'>
+					<input class='gfield-choice-input' name='input_18' type='radio' value='No'  id='choice_17_18_1' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_17_18_1' id='label_17_18_1' class='gform-field-label gform-field-label--type-inline'>No</label>
+			</div></div></div></fieldset><fieldset id="field_17_17" class="gfield gfield--type-radio gfield--type-choice gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  data-js-reload="field_17_17" ><legend class='gfield_label gform-field-label' >How did you find us?<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></legend><div class='ginput_container ginput_container_radio'><div class='gfield_radio' id='input_17_17'>
+			<div class='gchoice gchoice_17_17_0'>
+					<input class='gfield-choice-input' name='input_17' type='radio' value='Google'  id='choice_17_17_0' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_17_17_0' id='label_17_17_0' class='gform-field-label gform-field-label--type-inline'>Google</label>
+			</div>
+			<div class='gchoice gchoice_17_17_1'>
+					<input class='gfield-choice-input' name='input_17' type='radio' value='Link from another site'  id='choice_17_17_1' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_17_17_1' id='label_17_17_1' class='gform-field-label gform-field-label--type-inline'>Link from another site</label>
+			</div>
+			<div class='gchoice gchoice_17_17_2'>
+					<input class='gfield-choice-input' name='input_17' type='radio' value='NASA Employee'  id='choice_17_17_2' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_17_17_2' id='label_17_17_2' class='gform-field-label gform-field-label--type-inline'>NASA Employee</label>
+			</div>
+			<div class='gchoice gchoice_17_17_3'>
+					<input class='gfield-choice-input' name='input_17' type='radio' value='gf_other_choice'  id='choice_17_17_3' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_17_17_3' id='label_17_17_3' class='gform-field-label gform-field-label--type-inline'>Other</label><br /><input id='input_17_17_other' class='gchoice_other_control' name='input_17_other' type='text' value='Other' aria-label='Other Choice, please specify'  disabled='disabled' />
+			</div></div></div></fieldset><div id="field_17_34" class="gfield gfield--type-textarea gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  data-js-reload="field_17_34" ><label class='gfield_label gform-field-label' for='input_17_34'>What were you looking for?<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_textarea'><textarea name='input_34' id='input_17_34' class='textarea small'     aria-required="true" aria-invalid="false"   rows='10' cols='50'></textarea></div></div><div id="field_17_30" class="gfield gfield--type-survey gfield--input-type-likert gfield--width-seven-twelfths gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible gsurvey-survey-field "  data-field-class="gsurvey-survey-field" data-js-reload="field_17_30" ><label class='gfield_label gform-field-label' >How likely are you to recommend us to a friend or a colleague?<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_likert'><table aria-label='How likely are you to recommend us to a friend or a colleague?' class='gsurvey-likert' id='input_17_30'><thead><tr><th id='likert_col_1_17_30' scope='col' role='presentation' class='gsurvey-likert-choice-label'>1 (lowest)</th><th id='likert_col_2_17_30' scope='col' role='presentation' class='gsurvey-likert-choice-label'>2</th><th id='likert_col_3_17_30' scope='col' role='presentation' class='gsurvey-likert-choice-label'>3</th><th id='likert_col_4_17_30' scope='col' role='presentation' class='gsurvey-likert-choice-label'>4</th><th id='likert_col_5_17_30' scope='col' role='presentation' class='gsurvey-likert-choice-label'>5 (highest)</th></tr></thead><tbody><tr><td data-label='1 (lowest)' class='gsurvey-likert-choice'><input name='input_30' type='radio' value='glikertcol10a472e846'  id='choice_17_30_1'    aria-labelledby='likert_col_1_17_30'/></td><td data-label='2' class='gsurvey-likert-choice'><input name='input_30' type='radio' value='glikertcol10162b0a2e'  id='choice_17_30_2'    aria-labelledby='likert_col_2_17_30'/></td><td data-label='3' class='gsurvey-likert-choice'><input name='input_30' type='radio' value='glikertcol1079a02f6d'  id='choice_17_30_3'    aria-labelledby='likert_col_3_17_30'/></td><td data-label='4' class='gsurvey-likert-choice'><input name='input_30' type='radio' value='glikertcol10a969ec17'  id='choice_17_30_4'    aria-labelledby='likert_col_4_17_30'/></td><td data-label='5 (highest)' class='gsurvey-likert-choice'><input name='input_30' type='radio' value='glikertcol1077b7b11d'  id='choice_17_30_5'    aria-labelledby='likert_col_5_17_30'/></td></tr></tbody></table></div></div><div id="field_17_33" class="gfield gfield--type-textarea gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  data-js-reload="field_17_33" ><label class='gfield_label gform-field-label' for='input_17_33'>Why did you choose your recommendation rating?<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_textarea'><textarea name='input_33' id='input_17_33' class='textarea small'     aria-required="true" aria-invalid="false"   rows='10' cols='50'></textarea></div></div><div id="field_17_3" class="gfield gfield--type-textarea gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  data-js-reload="field_17_3" ><label class='gfield_label gform-field-label' for='input_17_3'>Any specific comments or concerns? If you have a comment about a specific page that was giving you problems, please include the url of that page in the section below.<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_textarea'><textarea name='input_3' id='input_17_3' class='textarea small'     aria-required="true" aria-invalid="false"   rows='10' cols='50'></textarea></div></div><fieldset id="field_17_37" class="gfield gfield--type-name gfield--width-half field_sublabel_above gfield--has-description field_description_above field_validation_below gfield_visibility_visible"  data-js-reload="field_17_37" ><legend class='gfield_label gform-field-label gfield_label_before_complex' >Contact Information</legend><div class='gfield_description' id='gfield_description_17_37'>Optional: Enter your name and email if you would like to be contacted about your feedback. </div><div class='ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gform-grid-row' id='input_17_37'>
+                            
+                            <span id='input_17_37_3_container' class='name_first gform-grid-col gform-grid-col--size-auto' >
+                                                    <label for='input_17_37_3' class='gform-field-label gform-field-label--type-sub '>First</label>
+                                                    <input type='text' name='input_37.3' id='input_17_37_3' value=''   aria-required='false'     />
+                                                </span>
+                            
+                            <span id='input_17_37_6_container' class='name_last gform-grid-col gform-grid-col--size-auto' >
+                                                            <label for='input_17_37_6' class='gform-field-label gform-field-label--type-sub '>Last</label>
+                                                            <input type='text' name='input_37.6' id='input_17_37_6' value=''   aria-required='false'     />
+                                                        </span>
+                            
+                        </div></fieldset><div id="field_17_38" class="gfield gfield--type-email gfield--width-full field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  data-js-reload="field_17_38" ><label class='gfield_label gform-field-label' for='input_17_38'>Email</label><div class='ginput_container ginput_container_email'>
+                            <input name='input_38' id='input_17_38' type='email' value='' class='large'     aria-invalid="false"  />
+                        </div></div><div id="field_17_35" class="gfield gfield--type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  data-js-reload="field_17_35" ><div class='ginput_container ginput_container_text'><input name='input_35' id='input_17_35' type='hidden' class='gform_hidden'  aria-invalid="false" value='Mass Flow Rate Equations' /></div></div><div id="field_17_36" class="gfield gfield--type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  data-js-reload="field_17_36" ><div class='ginput_container ginput_container_text'><input name='input_36' id='input_17_36' type='hidden' class='gform_hidden'  aria-invalid="false" value='https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate-equations/' /></div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_17' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' value='Submit'  /> 
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_17' value='postback' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_17' id='gform_theme_17' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_17' id='gform_style_settings_17' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_17' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='17' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_17' value='WyJbXSIsImExMmViMzUzYjFiZjYwOTI1NTdhMWI4ZWJmNzFmYTM3Il0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_17' id='gform_target_page_number_17' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_17' id='gform_source_page_number_17' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div><script type="text/javascript">
+gform.initializeOnLoaded( function() {gformInitSpinner( 17, 'https://www1.grc.nasa.gov/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_17').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_17');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_17').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){form_content.find('form').css('opacity', 0);jQuery('#gform_wrapper_17').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_17').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_17').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_17').val();gformInitSpinner( 17, 'https://www1.grc.nasa.gov/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [17, current_page]);window['gf_submitting_17'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_17').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [17]);window['gf_submitting_17'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_17').text());}else{jQuery('#gform_17').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "17", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);                if (event && event.defaultPrevented) {                return;         }        const gformWrapperDiv = document.getElementById( "gform_wrapper_17" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_17";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_17" );        let postRenderFired = false;                function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            jQuery( document ).trigger( 'gform_post_render', [17, current_page] );            gform.utils.trigger( { event: 'gform/postRender', native: false, data: { formId: 17, currentPage: current_page } } );            gform.utils.trigger( { event: 'gform/post_render', native: false, data: { formId: 17, currentPage: current_page } } );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+
+</div><span class="spu-close spu-close-popup spu-close-top_right">&times;</span><span class="spu-timer"></span></div></div><!--spu-box--></div><link rel='stylesheet' id='gform_basic-css' href='https://www1.grc.nasa.gov/wp-content/plugins/gravityforms/assets/css/dist/basic.min.css?ver=2.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='gform_theme_components-css' href='https://www1.grc.nasa.gov/wp-content/plugins/gravityforms/assets/css/dist/theme-components.min.css?ver=2.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='gform_theme-css' href='https://www1.grc.nasa.gov/wp-content/plugins/gravityforms/assets/css/dist/theme.min.css?ver=2.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='gravityformssurvey_gravity_theme-css' href='https://www1.grc.nasa.gov/wp-content/plugins/gravityformssurvey/assets/css/dist/theme.min.css?ver=6.3.10' type='text/css' media='all' />
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1' id='wp-hooks-js'></script>
+<script type='text/javascript' id='wppopups-js-extra'>
+/* <![CDATA[ */
+var wppopups_vars = {"is_admin":"","ajax_url":"https:\/\/www1.grc.nasa.gov\/wp-admin\/admin-ajax.php","pid":"44902","is_front_page":"","is_blog_page":"","is_category":"","site_url":"https:\/\/www1.grc.nasa.gov","is_archive":"","is_search":"","is_singular":"1","is_preview":"","facebook":"","twitter":"","val_required":"This field is required.","val_url":"Please enter a valid URL.","val_email":"Please enter a valid email address.","val_number":"Please enter a valid number.","val_checklimit":"You have exceeded the number of allowed selections: {#}.","val_limit_characters":"{count} of {limit} max characters.","val_limit_words":"{count} of {limit} max words.","disable_form_reopen":"__return_false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-content/plugins/wp-popups-lite/src/assets/js/wppopups.js?ver=2.2.0.7' id='wppopups-js'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-content/plugins/page-links-to/dist/new-tab.js?ver=3.3.7' id='page-links-to-js'></script>
+<script type='text/javascript' id='gforms_recaptcha_recaptcha-js-extra'>
+/* <![CDATA[ */
+var gforms_recaptcha_recaptcha_strings = {"nonce":"17853cc88f","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https:\/\/www1.grc.nasa.gov\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","connection_type":"classic","disable_badge":"","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6LdDZBonAAAAABlZkLPIdv_NeW4X60JRVPRJsVm4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LdDZBonAAAAABlZkLPIdv_NeW4X60JRVPRJsVm4&#038;ver=2.1.0' id='gforms_recaptcha_recaptcha-js' defer data-wp-strategy='defer'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js?ver=2.1.0' id='gforms_recaptcha_frontend-js' defer data-wp-strategy='defer'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-content/themes/nasapress/dist/scripts/main.js' id='sage/main.js-js'></script>
+<script type='text/javascript' id='ari-fancybox-js-extra'>
+/* <![CDATA[ */
+var ARI_FANCYBOX = {"lightbox":{"loop":true,"backFocus":false,"trapFocus":false,"thumbs":{"hideOnClose":false},"touch":{"vertical":true,"momentum":true},"buttons":["slideShow","fullScreen","thumbs","close"],"lang":"custom","i18n":{"custom":{"PREV":"Previous","NEXT":"Next","PLAY_START":"Start slideshow (P)","PLAY_STOP":"Stop slideshow (P)","FULL_SCREEN":"Full screen (F)","THUMBS":"Thumbnails (G)","CLOSE":"Close (Esc)","ERROR":"The requested content cannot be loaded. <br\/> Please try again later."}}},"convert":{"images":{"convert":true,"post_grouping":true},"pdf":{"convert":true,"internal":{"viewer":"iframe"},"external":{"convert":true}}},"sanitize":null,"viewers":{"pdfjs":{"url":"https:\/\/www1.grc.nasa.gov\/wp-content\/plugins\/ari-fancy-lightbox\/assets\/pdfjs\/web\/viewer.html"}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-content/plugins/ari-fancy-lightbox/assets/fancybox/jquery.fancybox.min.js?ver=1.4.1' id='ari-fancybox-js'></script>
+<script type='text/javascript' id='vrView-js-extra'>
+/* <![CDATA[ */
+var vrImage = {"pluginsURL":"https:\/\/www1.grc.nasa.gov\/wp-content\/plugins","uploadsURL":{"path":"\/var\/www\/sites\/www1.grc.nasa.gov\/wordpress\/wp-content\/uploads","url":"https:\/\/www1.grc.nasa.gov\/wp-content\/uploads","subdir":"","basedir":"\/var\/www\/sites\/www1.grc.nasa.gov\/wordpress\/wp-content\/uploads","baseurl":"https:\/\/www1.grc.nasa.gov\/wp-content\/uploads","error":false}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-content/plugins/panorama-viewer/includes/js/panorama-viewer.js?ver=6.3.10' id='vrView-js'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=Accessible&#038;ver=1.3.13' id='mathjax-js'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/dist/dom-ready.min.js?ver=392bdd43726760d1f3ca' id='wp-dom-ready-js'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef' id='wp-i18n-js'></script>
+<script id="wp-i18n-js-after" type="text/javascript">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/dist/a11y.min.js?ver=7032343a947cfccf5608' id='wp-a11y-js'></script>
+<script type='text/javascript' defer='defer' src='https://www1.grc.nasa.gov/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.3' id='gform_json-js'></script>
+<script type='text/javascript' id='gform_gravityforms-js-extra'>
+/* <![CDATA[ */
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled"},"vars":{"images_url":"https:\/\/www1.grc.nasa.gov\/wp-content\/plugins\/gravityforms\/images"}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https:\/\/www1.grc.nasa.gov\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www1.grc.nasa.gov\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"a22529e036b3146689abd906b072f747","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+/* ]]> */
+</script>
+<script type='text/javascript' defer='defer' src='https://www1.grc.nasa.gov/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.3' id='gform_gravityforms-js'></script>
+<script type='text/javascript' id='gform_conditional_logic-js-extra'>
+/* <![CDATA[ */
+var gf_legacy = {"is_legacy":""};
+/* ]]> */
+</script>
+<script type='text/javascript' defer='defer' src='https://www1.grc.nasa.gov/wp-content/plugins/gravityforms/js/conditional_logic.min.js?ver=2.9.3' id='gform_conditional_logic-js'></script>
+<script type='text/javascript' defer='defer' src='https://www1.grc.nasa.gov/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=501a987060f4426fb517400c73c7fc1e' id='gform_gravityforms_utils-js'></script>
+<script type='text/javascript' defer='defer' src='https://www1.grc.nasa.gov/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=ddd2702ee024d421149a5e61416f1ff5' id='gform_gravityforms_theme_vendors-js'></script>
+<script type='text/javascript' id='gform_gravityforms_theme-js-extra'>
+/* <![CDATA[ */
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"a22529e036b3146689abd906b072f747"},"ajax":{"ajaxurl":"https:\/\/www1.grc.nasa.gov\/wp-admin\/admin-ajax.php","ajax_submission_nonce":"0006da7974","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}}}},"hmr_dev":"","public_path":"https:\/\/www1.grc.nasa.gov\/wp-content\/plugins\/gravityforms\/assets\/js\/dist\/","config_nonce":"415405a8ce"};
+/* ]]> */
+</script>
+<script type='text/javascript' defer='defer' src='https://www1.grc.nasa.gov/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=cd31c16637eeae0b20e422009e5a8b28' id='gform_gravityforms_theme-js'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.2' id='jquery-ui-mouse-js'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.2' id='jquery-ui-sortable-js'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-includes/js/jquery/jquery.ui.touch-punch.js?ver=0.2.2' id='jquery-touch-punch-js'></script>
+<script type='text/javascript' src='https://www1.grc.nasa.gov/wp-content/plugins/gravityformssurvey/js/gsurvey.min.js?ver=4.2.3' id='gsurvey_js-js'></script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+           document.querySelectorAll("ul.nav-menu").forEach(
+               ulist => { 
+                    if (ulist.querySelectorAll("li").length == 0) {
+                        ulist.style.display = "none";
+
+                                            } 
+                }
+           );
+            /* ]]> */
+        </script>
+        <script type="text/javascript">
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 17) {gf_global["number_formats"][17] = {"10":{"price":false,"value":false},"18":{"price":false,"value":false},"17":{"price":false,"value":false},"34":{"price":false,"value":false},"30":{"price":false,"value":false},"33":{"price":false,"value":false},"3":{"price":false,"value":false},"37":{"price":false,"value":false},"38":{"price":false,"value":false},"35":{"price":false,"value":false},"36":{"price":false,"value":false}};if(window['jQuery']){if(!window['gf_form_conditional_logic'])window['gf_form_conditional_logic'] = new Array();window['gf_form_conditional_logic'][17] = { logic: { 34: {"field":{"actionType":"show","logicType":"all","rules":[{"fieldId":"18","operator":"is","value":"No"}],"enabled":true},"nextButton":null,"section":null} }, dependents: { 34: [34] }, animation: 0, defaults: {"37":{"37.2":"","37.3":"","37.4":"","37.6":"","37.8":""},"35":"Mass Flow Rate Equations","36":"https:\/\/www1.grc.nasa.gov\/beginners-guide-to-aeronautics\/mass-flow-rate-equations\/"}, fields: {"10":[],"18":[34],"17":[],"34":[],"30":[],"33":[],"3":[],"37":[],"38":[],"35":[],"36":[]} }; if(!window['gf_number_format'])window['gf_number_format'] = 'decimal_dot';jQuery(document).ready(function(){gform.utils.trigger({ event: 'gform/conditionalLogic/init/start', native: false, data: { formId: 17, fields: null, isInit: true } });window['gformInitPriceFields']();gf_apply_rules(17, [34], true);jQuery('#gform_wrapper_17').show();jQuery('#gform_wrapper_17 form').css('opacity', '');jQuery(document).trigger('gform_post_conditional_logic', [17, null, true]);gform.utils.trigger({ event: 'gform/conditionalLogic/init/end', native: false, data: { formId: 17, fields: null, isInit: true } });} );} } } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script type="text/javascript">
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "17", currentPage: "1", abort: function() { this.preventDefault(); } }]);                if (event && event.defaultPrevented) {                return;         }        const gformWrapperDiv = document.getElementById( "gform_wrapper_17" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_17";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_17" );        let postRenderFired = false;                function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            jQuery( document ).trigger( 'gform_post_render', [17, 1] );            gform.utils.trigger( { event: 'gform/postRender', native: false, data: { formId: 17, currentPage: 1 } } );            gform.utils.trigger( { event: 'gform/post_render', native: false, data: { formId: 17, currentPage: 1 } } );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+  </body>
+</html>

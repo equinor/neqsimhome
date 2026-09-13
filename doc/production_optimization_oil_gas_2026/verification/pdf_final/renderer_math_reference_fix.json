@@ -1,0 +1,225 @@
+{
+  "passed": true,
+  "source_pdf_sha256": "9c2791ae11117d355b91bc6af5dce294225d0b5cf9fc1cc05a2e5644d00e24d8",
+  "tests_passed": 8,
+  "actual_affected_prose_checks": [
+    {
+      "chapter": 1,
+      "anchor": "raises rate by",
+      "source_sha256": "3c0530076fd2009057555063be7c014ebc1451562d795a5446aea00aedc85a5c",
+      "typst": "The gain is governed by the coupled pressure response. In the limiting linear-PI example with unchanged tubing losses and an initial drawdown of 50 bar, a 5-bar reduction in bottomhole pressure raises rate by $5 \\/ 50 = 10 %$. A separator-pressure change need not propagate one-for-one to bottomhole pressure: friction, multiphase holdup, choke criticality and facility constraints determine the actual response. The network examples therefore solve and verify that response explicitly.\r\n",
+      "passed": true
+    },
+    {
+      "chapter": 1,
+      "anchor": "For example, 20 MW",
+      "source_sha256": "5dbfb19820199c374e895f7099c18bbabb46f12d9b414b81fee59f1b457a6224",
+      "typst": "#strong[Gas turbines] are the primary power source on most offshore platforms. They burn produced gas (fuel gas) to generate electricity or drive compressors directly through a mechanical coupling. Fuel share depends on duty, efficiency, heating value and available gas rate. For example, 20 MW net output at 35% LHV efficiency with 50 MJ/kg fuel requires $20 \\/ \\( 0.35 times 50 \\) = 1.143$ kg/s of fuel, or 1.14% of a 100 kg/s gas feed. The same duty consumes 11.4% of a 10 kg/s feed. Fuel gas demand therefore competes directly with gas export revenue, and no fixed percentage is transferable between fields. Optimizing compression efficiency therefore has a double benefit: it reduces the power demand #emph[and] increases the gas available for export.\r\n",
+      "passed": true
+    },
+    {
+      "chapter": 2,
+      "anchor": "The poles",
+      "source_sha256": "ca23eaaf7ad11af7ba86e2369bc8e4c8e301eed9f154b25631ce3284c4e18715",
+      "typst": "An interior two-phase root exists when $F \\( 0 \\) > 0$ and $F \\( 1 \\) < 0$, and is unique unless the nonzero-composition components all have $K_i = 1$. Otherwise the fixed-K calculation selects a single-phase endpoint; phase stability still needs the EOS test. The poles $1 \\/ \\( 1 - K_max \\)$ and $1 \\/ \\( 1 - K_min \\)$ can bound an algebraic search when the K-values straddle unity, but they are not physical vapor-fraction limits. Use safeguarded Newton iteration or bisection on $\\[ 0 \\, 1 \\]$ for a bracketed two-phase case.\r\n",
+      "passed": true
+    },
+    {
+      "chapter": 14,
+      "anchor": "compressor's utilization will",
+      "source_sha256": "22c57f82fc7dbf0222954429e3ca8cf3beb3cd25c41f65893b87bbe4859cede7",
+      "typst": "After `autoSize()`, the compressor's utilization will be approximately $1 \\/ upright(\"designMargin\")$ at the current operating point. For a design margin of 1.2 (20%), the utilization at the design point is $1 \\/ 1.2 approx 83 %$, providing operational margin for turndown and uprate.\r\n",
+      "passed": true
+    },
+    {
+      "chapter": 18,
+      "anchor": "stoichiometric emission factor",
+      "source_sha256": "33b043923f894c27fb155282325edb4cf75824189441c0335ec1cf9f12ee8c8a",
+      "typst": "The stoichiometric emission factor is $44 \\/ 16 = 2.75$ kg CO₂ per kg methane. For a mixed fuel, calculate the factor from its elemental carbon flow and the fraction oxidized to CO₂; methane, heavier hydrocarbons, inert components and unburned fuel must be accounted for explicitly.\r\n",
+      "passed": true
+    },
+    {
+      "chapter": 19,
+      "anchor": "geometric relative sensitivity",
+      "source_sha256": "bc600c2173f140498ad13b15304e24254218b9e84c2f3f05d2a0ba1abbe0a6a7",
+      "typst": "The geometric relative sensitivity coefficients are $2 \\/ \\( 1 - beta^4 \\)$ for bore and $- 2 beta^4 \\/ \\( 1 - beta^4 \\)$ for pipe diameter when $C_d$ and $epsilon$ are held fixed. Their values are therefore not constant across all diameter ratios.\r\n",
+      "passed": true
+    },
+    {
+      "chapter": 23,
+      "anchor": "sets the design value",
+      "source_sha256": "0d143137a90d935b14e125a8ad7aa60b75722c3a1ae448abffc127dc4a601bab",
+      "typst": "The safety factor (1.2 in this example) sets the design value at the specified multiple of the current operating value. This means the equipment is sized so that its current operating point is at $1 \\/ 1.2 = 83 %$ utilization, leaving 17% headroom.\r\n",
+      "passed": true
+    },
+    {
+      "chapter": 26,
+      "anchor": "marginal oil return",
+      "source_sha256": "fc5375eb87e44fa06ee1f582f7a574f3f2828cb839e64a511157516c064c08d6",
+      "typst": "The numerical output is the accepted optimum #strong[of the stated allocation approximation]. The independent dual bound certifies global optimality for this linear problem within $10^(- 5)$ Sm³/day; the fresh NeqSim solve checks the selected gas duty. Water rate is $q_o f_w \\/ \\( 1 - f_w \\)$, not $q_o f_w$, because water cut is water divided by total liquid. The marginal oil return per unit gas is $1 \\/ upright(G O R)$\\; multiplying it again by oil cut double-counts the liquid basis.\r\n",
+      "passed": true
+    }
+  ],
+  "all_chapters_no_orphan_attributes": [
+    {
+      "chapter": "ch01_introduction",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch02_thermodynamic_foundations",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch03_fluid_characterization",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch04_reservoir_engineering",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch05_well_performance",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch06_wells_artificial_lift",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch07_subsea_production_systems",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch08_flowlines_and_risers",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch09_flow_assurance",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch10_separation_technology",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch11_oil_processing",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch12_gas_processing",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch13_produced_water_treatment",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch14_gas_compression",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch15_compressor_characteristics",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch16_heat_exchangers",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch17_valves_and_flow_control",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch18_power_production",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch19_export_and_metering",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch20_capacity_checks_and_utilization",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch21_debottlenecking",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch22_production_optimization_theory",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch23_neqsim_optimization_framework",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch24_production_optimization",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch25_utilization_monitoring",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch26_well_network_optimization",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch27_multi_scenario_optimization",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch28_field_development",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch29_dynamic_simulation_and_control",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch30_digital_twins_and_automation",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch31_solver_methods",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch32_advanced_topics",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch33_onshore_processing_plants",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch34_case_studies",
+      "no_orphan_reference_attributes": true
+    },
+    {
+      "chapter": "ch35_future_directions",
+      "no_orphan_reference_attributes": true
+    }
+  ],
+  "currency_normalizer_preserves_fenced_blocks": 603,
+  "files": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\tools\\book_builder.py",
+      "sha256": "4eb23531b4580883dba743839b2ce965bb39d89f856d1c8a4071733c569b9f10"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\tools\\book_render_pdf.py",
+      "sha256": "f7803c10dbb1222c22083b28da44758f0178d17d211cdff14f4ac153107e8017"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\tests\\test_book_math_and_reference_preprocessing.py",
+      "sha256": "2a208b8a301805e5cde96771daa8b560e341436192d1bd68cb691728e604ee74"
+    }
+  ],
+  "scope": "Eight observed numeric-leading fraction leaks audited from existing generated book.typ and converted again through current canonical preprocessing/Pandoc/Typst postprocessing. No full-book build, manuscript edit or scientific OUT write.",
+  "limitations": [
+    "Unpaired prices and bare-unit denominator expressions remain conservatively classified as currency.",
+    "Next full PDF build needs visual review of corrected source paragraphs."
+  ]
+}

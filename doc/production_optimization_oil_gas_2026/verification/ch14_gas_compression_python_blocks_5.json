@@ -1,0 +1,16 @@
+{
+  "chapter": "ch14_gas_compression",
+  "source_sha256": "c320f8615396dbad6c0e45bcfcb8b372d457b594ed59d5d23d753c8f8b97c136",
+  "project_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "blocks": [
+    {
+      "index": 5,
+      "line": 756,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Compare compression of different gases\ncompositions = {\n    \"Lean gas (MW~18)\": {\"methane\": 90, \"ethane\": 5, \"propane\": 2,\n                          \"CO2\": 2, \"nitrogen\": 1},\n    \"Rich gas (MW~22)\": {\"methane\": 75, \"ethane\": 10, \"propane\": 6,\n                          \"n-butane\": 3, \"n-pentane\": 1,\n                          \"CO2\": 3, \"nitrogen\": 2},\n    \"Very rich (MW~26)\": {\"methane\": 60, \"ethane\": 12, \"propane\": 10,\n                           \"n-butane\": 6, \"n-pentane\": 3,\n                           \"n-hexane\": 2, \"CO2\": 4, \"nitrogen\": 3}\n}\n\nprint(f\"{'Gas Type':<22} {'MW':>6} {'Power':>10} {'T_out':>8} {'Head':>10}\")\nprint(\"-\" * 60)\n\nfor name, comp_dict in compositions.items():\n    fluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 30.0, 10.0)\n    for component, fraction in comp_dict.items():\n        fluid.addComponent(component, float(fraction))\n    fluid.setMixingRule(\"classic\")\n\n    feed = jneqsim.process.equipment.stream.Stream(\"Feed\", fluid)\n    feed.setFlowRate(20000.0, \"kg/hr\")\n    feed.setTemperature(30.0, \"C\")\n    feed.setPressure(10.0, \"bara\")\n\n    comp = jneqsim.process.equipment.compressor.Compressor(\"Comp\", feed)\n    comp.setOutletPressure(30.0)\n    comp.setPolytropicEfficiency(0.80)\n    comp.setUsePolytropicCalc(True)\n\n    process = jneqsim.process.processmodel.ProcessSystem()\n    process.add(feed)\n    process.add(comp)\n    process.run()\n\n    mw = feed.getFluid().getMolarMass() * 1000  # kg/kmol\n    power = comp.getPower() / 1000.0\n    t_out = comp.getOutletStream().getTemperature(\"C\")\n    head = comp.getPolytropicFluidHead()\n\n    print(f\"{name:<22} {mw:>6.1f} {power:>8.0f} kW {t_out:>6.1f} C \"\n          f\"{head:>8.1f} kJ/kg\")\n",
+      "seconds": 21.797,
+      "output": "Gas Type                   MW      Power    T_out       Head\n------------------------------------------------------------\nLean gas (MW~18)         18.0     1224 kW  131.7 C    176.3 kJ/kg\nRich gas (MW~22)         22.0      968 kW  118.8 C    139.4 kJ/kg\nVery rich (MW~26)        27.6      717 kW   97.7 C    103.2 kJ/kg\n"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "status": "passed",
+  "reviewed_at_utc": "2026-09-12T22:19:35.369130+00:00",
+  "scope": "Final liquid reporting basis and Chapter 11 literal pressure-sweep plot provenance. Prior scientific and editorial ledgers are preserved.",
+  "chapters": [
+    {
+      "chapter": "ch11_oil_processing",
+      "source_sha256": "abd8aefedc1229e01402784210b32851e7ba6922ad6020651ba95df0a495f982",
+      "before_sha256": "d9cd39481bcd7fe892b04417e505923ca66bbfe829f54a12c92a2f91614d3ffe",
+      "code_unchanged": true,
+      "figure_order_and_numbers_unchanged": true
+    },
+    {
+      "chapter": "ch10_separation_technology",
+      "source_sha256": "e2d3470e0a592f47b25aed44c85fb30980a8cd37d02e9eab4f65786537da7ac6",
+      "before_sha256": "e942dbcd08440a891b43a99144444cd1c09aa2f8692da0cda8b9cfedd92cdbe4",
+      "code_unchanged": true,
+      "figure_order_and_numbers_unchanged": true
+    }
+  ],
+  "fixes": [
+    {
+      "chapter": "ch11_oil_processing",
+      "before": "The following example demonstrates a systematic optimization of separator pressures in a 3-stage separation train. The objective is to maximize stock-tank oil flow rate by varying the MP separator pressure:",
+      "after": "The following example sweeps 12 MP separator pressures for a three-stage train supplied with 10,000 kg/h at 70 bara and 80°C. The reported objective is the hydrocarbon liquid mass rate leaving the final separator at 1.5 bara and its calculated flash temperature. No subsequent flash to stock-tank reference conditions is performed:"
+    },
+    {
+      "chapter": "ch11_oil_processing",
+      "before": "![Figure 11.2: Optimization curve showing stock-tank oil rate vs. MP separator pressure](figures/mp_pressure_optimization.png)",
+      "after": "![Figure 11.2: Final 1.5 bara separator liquid mass rate versus MP separator pressure for the 10,000 kg/h feed](figures/mp_pressure_optimization.png)"
+    },
+    {
+      "chapter": "ch11_oil_processing",
+      "before": "Stock-tank oil recovery as a function of intermediate (MP) separator pressure for a 3-stage separation train. The optimum is typically found at 8–12 bara for this fluid composition.",
+      "after": "The largest of the 12 sampled liquid rates is 7,893.3 kg/h at 7 bara MP pressure; the 10 bara case gives 7,887.3 kg/h. These points identify a broad sampled maximum, not a continuous optimum or a general 8–12 bara rule. Intermediate pressure changes gas withdrawal, residual liquid composition and throttling cooling. To optimize stock-tank oil recovery, add a flash of each final liquid product at explicitly defined reference pressure and temperature, then compare the remaining liquid at that common basis. Export-quality and recompression constraints would also be needed for an operating recommendation."
+    },
+    {
+      "chapter": "ch10_separation_technology",
+      "before": "The largest sampled stock-tank oil rate is 32.023 t/hr at a second-stage pressure of 8.0 bara, with the first and final stages fixed at 70 and 1.5 bara.",
+      "after": "The largest sampled final-separator oil rate is 32.023 t/hr at a second-stage pressure of 8.0 bara, with the first and final stages fixed at 70 and 1.5 bara. The feed is 50 t/hr at 60°C; the final oil leaves at its calculated flash temperature, without a subsequent reference-condition flash."
+    },
+    {
+      "chapter": "ch10_separation_technology",
+      "before": "Changing intermediate pressure redistributes light components between vented gas and the liquid passed to later separation stages. The best pressure for liquid recovery may differ from the best pressure for export quality, recompression duty or total value. Optimize against the complete separation train and a consistent stock-tank reference, with vapor-pressure and compression constraints included.",
+      "after": "Changing intermediate pressure redistributes light components between separated gas and the liquid passed to later stages. The best pressure for final-separator liquid recovery may differ from the best pressure for export quality, recompression duty or total value. A stock-tank objective requires an additional product flash at explicitly specified reference pressure and temperature. Apply that same basis to every case and include vapor-pressure and compression constraints before selecting an operating pressure."
+    }
+  ],
+  "images": [
+    {
+      "path": "chapters\\ch11_oil_processing\\figures\\mp_pressure_optimization.png",
+      "sha256": "ac61b4ce911bc09f5ea07a347ca68c72dec85dc5ebe48cceafc262d7ab11379e",
+      "source": ".build\\scientific_revision_cases\\ch11_oil_processing\\figures\\mp_pressure_optimization.png",
+      "source_sha256": "ac61b4ce911bc09f5ea07a347ca68c72dec85dc5ebe48cceafc262d7ab11379e",
+      "before_sha256": "7a54b405fcaacc89b94e3a14c9d4d4bb0b345c2c7612072593bb51003367834c",
+      "action": "replaced stale stock-tank axis label with the unchanged accepted literal-output artifact",
+      "literal_fence_index": 2,
+      "code_sha256": "bbc1208a67949768edf7df1fceaafedbe56e7a1879f5e5d143b1e32f89a899c8",
+      "execution_evidence": "verification\\ch11_oil_processing_python.json",
+      "physics_evidence": "verification\\scientific_revision\\ch11_manuscript_physics.json",
+      "physics_evidence_sha256": "c331ea1809b228e9e8de0782dbec356bb7ec79578217c0ffb92c1d488ee930bf",
+      "independent_literal_replay_image_sha256": "ac61b4ce911bc09f5ea07a347ca68c72dec85dc5ebe48cceafc262d7ab11379e",
+      "full_view": true,
+      "visual_observations": [
+        "All 12 points are visible; pressure axis is bara and final 1.5 bara liquid rate axis is kg/hr.",
+        "Maximum is the 7 bara point, with the adjacent 10 bara point slightly lower.",
+        "Line shape matches the accepted tabulated output; no clipped labels, overlap or unreadable legend.",
+        "The replacement changes the incorrect stock-tank label while retaining the accepted computed curve."
+      ],
+      "points_from_accepted_stdout_rounded": [
+        [
+          3.0,
+          7766.4
+        ],
+        [
+          5.0,
+          7869.1
+        ],
+        [
+          7.0,
+          7893.3
+        ],
+        [
+          10.0,
+          7887.3
+        ],
+        [
+          12.0,
+          7874.1
+        ],
+        [
+          15.0,
+          7850.1
+        ],
+        [
+          18.0,
+          7824.9
+        ],
+        [
+          20.0,
+          7808.3
+        ],
+        [
+          25.0,
+          7768.5
+        ],
+        [
+          30.0,
+          7731.7
+        ],
+        [
+          35.0,
+          7697.6
+        ],
+        [
+          40.0,
+          7666.0
+        ]
+      ],
+      "point_units": [
+        "bara",
+        "kg/hr"
+      ],
+      "physical_evaluations": 60,
+      "individual_checks": 264,
+      "physical_scope": "Five units in each of twelve cases: mass, component and energy closure; finite positive pressure/temperature and nonnegative flow; passive-valve pressure direction. Numerical solution verification, not empirical model validation."
+    }
+  ],
+  "notebook_changes_by_this_pass": false,
+  "handoff": "Root authorized the notebook specialist to correct and rerun only the Chapter 10 notebook axis label and result discussion, then root reintegrates that result section. That specialist owns its image provenance ledger.",
+  "source_frozen": true,
+  "unresolved": []
+}

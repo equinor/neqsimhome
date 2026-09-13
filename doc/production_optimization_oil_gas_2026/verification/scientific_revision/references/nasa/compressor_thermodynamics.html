@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Compressor Thermodynamics</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="engines, gas turbine, turbine engine,
+propulsion system, turbine engine parts, compressor, axial compressor, centrifugal compressor, compressor pressure ratio, compressor work, thermodynamics, compressor thermodynamics, compressor performance
+">
+
+<link href="portal.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#000000">
+<table width="730" border="0" align="center" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td>
+
+<!-- Header Begins-->
+
+	<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="365" height="68" bgcolor="#CCCCCC"><a href="http://www.nasa.gov"><img src="Images/logo_nasa.gif" alt="NASA Logo - Web Link to NASA.gov" width="288" height="51" border="0"></a></td>
+          <td width="20" height="68" bgcolor="#CCCCCC"><img src="Images/line1px.jpg" alt="Vertical Line"  width="1" height="51"></td>
+          <td width="170" height="68" align="left" valign="middle" bgcolor="#CCCCCC"><p><font color="#333333" size="-2" face="Verdana, Arial, Helvetica, sans-serif"><a class="bodygray" href="#">+ 
+              Text Only Site</a><br>
+              <a class="bodygray" href="#">+ Non-Flash Version</a><br>
+              <a class="bodygray" href="http://www.nasa.gov/centers/glenn/about/contact_us.html" target="_blank">+ 
+              Contact Glenn</a></font></p></td>
+          <td width="175" height="68" bgcolor="#006699"><table cellpadding="0" cellspacing="0" border="0"><form name="search" id="search" method="GET" action="http://search.nasa.gov/nasasearch/search/search.jsp"><tr><td rowspan="2" width="20"></td><td colspan="3"><label for="searchfield"><img src="Images/title_find_it_sm.gif" width="92" height="16" alt="FIND IT @ NASA" title="FIND IT @ NASA" border="0"></label></td></tr><tr><td valign="top"><input type="text" size="9" class="search" title="searchfield" id="searchfield" name="nasaInclude" value=""></td><td width="8"><img border="0" alt="" height="1" width="1" src="Images/spacer.gif"></td><td valign="top"><a href="javascript:document.search.submit();"><img name="Go" src="Images/button_go.gif" width="38" height="20" alt="Go" title="Go" border="0"></a></td></tr></form></table>
+			
+			</td>
+        </tr>
+        <tr> 
+          <td colspan="4"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr align="center"> 
+                
+     <td><a href="http://www.nasa.gov/about/highlights/index.html">
+           <img src="Images/nav_top_0_0.gif"
+           alt="ABOUT NASA" height="25" width="123" border=0 align=bottom></a>
+     </td>
+     <td><a href="http://www.nasa.gov/news/highlights/index.html">
+           <img src="Images/nav_top_1_0.gif"
+            alt="NEWS AND EVENTS" height="25" width="140" border=0 align=bottom></a>
+     </td>
+     <td><a href="http://www.nasa.gov/multimedia/highlights/index.html">
+           <img src="Images/nav_top_2_0.gif"
+           alt="MULTIMEDIA" height="25" width="119" border=0 align=bottom></a>
+     </td>
+     <td><a href="http://www.nasa.gov/missions/highlights/index.html">
+           <img src="Images/nav_top_3_0.gif"
+           alt="MISSIONS" height="25" width="106" border=0 align=bottom></a>
+     </td>
+     <td><a href="http://mynasa.nasa.gov/portal/site/mynasa/index.jsp?bandwidth=high">
+           <img src="Images/nav_top_4_0.gif"
+           alt="MyNASA" height="25" width="101" border=0 align=bottom></a>
+     </td>
+     <td><a href="http://www.nasa.gov/about/career/index.html">
+           <img src="Images/nav_top_5_0.gif"
+           alt="WORK FOR NASA" height="25" width="141" border=0 align=bottom></a>
+     </td>
+        </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td colspan="4"> 
+<!-- Header Ends -->			
+
+			<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr> 
+                <td>
+<font size="2" face="Arial, Helvetica, sans-serif">
+
+<CENTER><IMG SRC="Images/compth.gif"
+ALT = "Computer drawing of gas turbine schematic showing the equations
+ for pressure ratio, temperature ratio, and work for a compressor. "
+WIDTH=710 HEIGHT=533 ALIGN=bottom></CENTER>
+
+<P>Most modern passenger and military aircraft are powered by
+<A HREF="turbine.html">gas turbine</A> engines, also called jet
+engines. All  <A HREF="trbtyp.html">types</A> of jet engines have
+some <A HREF="turbparts.html">parts</A> in common.
+All jet engines have a <A HREF="compress.html">compressor</A> to
+increase the pressure of the incoming air. There are currently two
+principal compressor designs found on jet engines: the <A HREF="caxial.html">axial
+compressor,</A> in which the air flows parallel to the axis of
+rotation, and the <A HREF="centrf.html">centrifugal compressor,</A>
+in which the air is turned perpendicular to the axis of rotation. In
+either design, the job of the compressor is to increase the pressure
+of the flow. We measure the increase by the <B>compressor pressure
+ratio (CPR),</B> which is the ratio of the air total pressure <b>pt</b> exiting
+the
+compressor to the air pressure entering the compressor. This number
+is always greater than 1.0.
+Referring to our <A HREF="turbdraw.html">station
+numbering</A>, the compressor entrance is station <b>2</b> and the compressor exit
+is station <b>3</b>.
+The <b>CPR</b> is equal to <b>pt3</b> divided by <b>pt2</b>, as shown on the
+slide.
+</p>
+<CENTER>
+<p>
+ CPR = pt3 / pt2 >= 1.0
+</p>
+</CENTER>
+<p>
+To produce the increase in pressure, the compressor must perform
+<A HREF="work2.html">work</A> on the flow. In the axial
+compressor, cascades of small airfoils are mounted on a shaft that
+turns at a high rate of speed. Several rows, or <B>stages,</B> are
+usually used to produce a high <b>CPR</b>, with each stage producing a small
+pressure increase. In the centrifugal compressor, an additional
+pressure increase results from turning the flow <B>radially</B>,
+radiating from or converging to a common center.
+Since no external heat is being added to or extracted from
+the compressor during
+the pressure increase, the process is
+<A HREF="compexp.html">isentropic</A>. The total temperature
+ratio <b>Tt3 / Tt2</b>  across the compressor is related to the pressure ratio by the
+<A HREF="isentrop.html">isentropic flow equations</A>.
+</p>
+<CENTER>
+<p>
+ Tt3 / Tt2 = (pt3 / pt2) ^((gam -1) / gam)
+</p>
+</CENTER>
+<p>
+where <b>gam</b> is the ratio of
+<A HREF="specheat.html">specific heats</A>.
+</p>
+<p>
+Work must be done to turn the shaft on which the compressor is
+mounted. From the <A HREF="thermo1f.html">conservation of energy,</A> the
+compressor work per mass of airflow <b>CW</b> is equal to the change in
+the specific <A HREF="enthalpy.html"> enthalpy</A> <b>ht</b> of the flow from
+the entrance to the exit of the compressor.
+</p>
+<CENTER>
+<p>
+ CW = ht3 - ht2
+</p>
+</CENTER>
+<p>
+The term <A HREF="spec.html">
+"specific"</A> means per mass of airflow. The enthalpy at the
+entrance and exit is related to the total temperature <b>Tt</b> at those
+stations.
+</p>
+<CENTER>
+<p>
+ CW = cp * (Tt3 -  Tt2)
+</p>
+</CENTER>
+<p>
+Performing
+a little algebra, we arrive at the equation:
+</p>
+<CENTER>
+<p>
+ CW = [cp * Tt]2 * [CPR ^((gam -1) / gam) - 1] / nc
+</p>
+</CENTER>
+<p>
+that relates the work required to turn the compressor to the
+compressor pressure ratio, the incoming total temperature, some
+properties of the gas, and an
+efficiency factor <b>nc</b>. The <B>efficiency factor</B> is included to
+account for the actual performance of the compressor as opposed to
+the ideal, isentropic performance. In an ideal world, the value of
+the efficiency would be 1.0; in reality, it is always less than 1.0.
+So additional work is needed to overcome the inefficiency of the
+compressor to produce a desired CPR. The work is provided by the
+<A HREF="powtrbth.html">power turbine</A>, which is <A HREF="ctmatch.html">connected</A>
+to the compressor by the central shaft.
+</P>
+
+<P><i>Notice that the CPR is related to the total temperature ratio
+across the compressor. Since the CPR is always greater than 1.0 and
+the value of <B>gam</B>, the ratio of specific heats, is about 1.4
+for air, the total temperature ratio is also greater than 1.0.
+<b>Air heats up as it passes through the compressor.</b>
+There are
+<A HREF="turbwt.html">temperature limits</A>
+on the materials of the compressor.
+On some engines, the temperature at the exit of the compressor becomes a
+<B>design constraint</B>, a factor limiting the engine performance.
+You can now use
+<A HREF="ngnsim.html">EngineSim</A>
+to study the effects
+of different materials on engine operation.
+</i>
+</P>
+
+<hr>
+<b>Activities:</b>
+<br>
+
+
+<HR>
+<b><A HREF="guided.htm">Guided Tours</a></b>
+<UL>
+  <LI>
+        <A HREF="inleth.html"><IMG SRC="Images/butpre.gif"
+         ALT="Button to Display Previous Page"
+         WIDTH=100 HEIGHT=20 BORDER=0 ALIGN=top></A>
+    <b> EngineSim - Engine Simulator:</b>
+        <A HREF="burnth.html"><IMG SRC="Images/butnex.gif"
+         ALT="Button to Display Next Page"
+         WIDTH=100 HEIGHT=20 BORDER=0 ALIGN=top></A>
+  </LI>
+  <LI>
+        <A HREF="centrf.html"><IMG SRC="Images/butpre.gif"
+         ALT="Button to Display Previous Page"
+         WIDTH=100 HEIGHT=20 BORDER=0 ALIGN=top></A>
+    <b> Compressor:</b>
+        <A HREF="thermo1f.html"><IMG SRC="Images/butnex.gif"
+         ALT="Button to Display Next Page"
+         WIDTH=100 HEIGHT=20 BORDER=0 ALIGN=top></A>
+  </LI>
+</UL>
+
+<HR>
+
+<BR>
+
+<P><B>Navigation .. </b></p>
+<A HREF="shortp.html"><IMG SRC="Images/butpi.gif"
+ALT="Button to Display Propulsion Index"
+WIDTH=145 HEIGHT=31 BORDER=0 ALIGN=bottom></A>
+<BR>
+<DL>
+   <DT><A HREF="index.html">Beginner's Guide Home Page</A></DT>
+</DL>
+
+ 
+</font>
+					
+         	</td>
+              </tr>
+            </table>
+<!-- Footer Begins -->		  
+
+            <p>&nbsp;</p>
+		  </td>
+        </tr>
+        <tr bgcolor="#CCCCCC"> 
+          <td colspan="4"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+
+                <td width="155" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
+                  <A HREF="http://www.firstgov.gov/"><img src="Images/logo_first_gov.gif" alt="First Gov Image" width="125" height="42" border="0"><a></td>
+                <td width="251"><p><font size="-1" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                    <font size="-2">
+                <A class="bodygray" HREF="http://www.hq.nasa.gov/office/oig/hq/hotline.html" target="_blank">+ Inspector General Hotline</a><br>
+                <A class="bodygray" HREF="http://www.hq.nasa.gov/office/codee/nofear.html" target="_blank">+ Equal Employment Opportunity Data Posted Pursuant to the No Fear Act</a><br>
+                <A class="bodygray" HREF="http://www.nasa.gov/about/budget/index.html" target="_blank">+ Budgets, Strategic Plans and Accountability Reports</a><br>
+                <A class="bodygray" HREF="http://www.hq.nasa.gov/office/pao/FOIA/agency/" target="_blank">+ Freedom of Information Act</a><br>
+                <A class="bodygray" HREF="http://www.nasa.gov/about/highlights/HP_Management.html" target="_blank">+ The President's Management Agenda</a><br>
+                <A class="bodygray" HREF="http://www.nasa.gov/about/highlights/HP_Privacy.html" target="_blank">+ NASA Privacy Statement, Disclaimer,</a><br>
+                <A class="bodygray" HREF="http://www.nasa.gov/about/highlights/HP_Privacy.html" target="_blank"> and Accessibility Certification</a></font></font></p>
+                  <p>&nbsp;</p></td>
+
+                <td align="right" valign="top"><img src="Images/logo_nasa_self.gif" alt="NASA Logo" width="49" height="48">&nbsp;&nbsp;&nbsp;</td>
+                <td width="200" valign="top"><font size="-2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+                  <font color="#333333">Editor: <a class="bodygray" href="mailto:nancy.r.hall@nasa.gov">Nancy Hall</a><br> 
+                  NASA Official: <a class="bodygray" href="mailto:nancy.r.hall@nasa.gov">Nancy Hall</a><br> 
+                  Last Updated:   May 13 2021</font><br>
+                  <a class="bodygray" href="http://www.nasa.gov/centers/glenn/about/contact_us.html" target="_blank">+ 
+                  Contact Glenn</a></font></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+
+<!-- Footer Ends -->
+
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GRC" id="_fed_an_ua_tag"></script>
+
+</body>
+</html>

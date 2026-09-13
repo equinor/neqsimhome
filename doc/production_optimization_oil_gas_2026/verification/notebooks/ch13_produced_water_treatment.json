@@ -1,0 +1,418 @@
+{
+  "notebook": "chapters\\ch13_produced_water_treatment\\notebooks\\ch16_water_treatment.ipynb",
+  "status": "passed",
+  "executed_at": "2026-09-12T20:10:12.640130+00:00",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "runtime_seconds": 20.84,
+  "code_cells": 8,
+  "executed_cells": 8,
+  "cell_runs": [
+    {
+      "cell_index": 1,
+      "execution_count": 1,
+      "runtime_seconds": 5.063,
+      "sha256": "299a4c95c3b4e99df3b9f3114b52c705937b2e8b8d583d75f4b103e61012525b",
+      "status": "passed"
+    },
+    {
+      "cell_index": 3,
+      "execution_count": 2,
+      "runtime_seconds": 2.234,
+      "sha256": "70973ad020192498d476553f2b5a571da01c76615a847f5ce0377c6147bd2869",
+      "status": "passed"
+    },
+    {
+      "cell_index": 5,
+      "execution_count": 3,
+      "runtime_seconds": 3.109,
+      "sha256": "ba277e41efa903e3261f47803694391f41053ae4bda7b5aedb155ad83778faa8",
+      "status": "passed"
+    },
+    {
+      "cell_index": 6,
+      "execution_count": 4,
+      "runtime_seconds": 2.235,
+      "sha256": "3625d8681e586330b1dd825972532a2ca71f7177a5355193744fa3ad97c28f45",
+      "status": "passed"
+    },
+    {
+      "cell_index": 9,
+      "execution_count": 5,
+      "runtime_seconds": 5.719,
+      "sha256": "0eac52be7e7809e6b2bd9d64af9e932b00bbb6e636f4edc2fc902cb31fbc26e5",
+      "status": "passed"
+    },
+    {
+      "cell_index": 12,
+      "execution_count": 6,
+      "runtime_seconds": 0.14,
+      "sha256": "36650bc45b0f45de33d0880a3127ac47088065387aebcccf6b8a5cc49c326e8f",
+      "status": "passed"
+    },
+    {
+      "cell_index": 15,
+      "execution_count": 7,
+      "runtime_seconds": 2.297,
+      "sha256": "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+      "status": "passed"
+    },
+    {
+      "cell_index": 17,
+      "execution_count": 8,
+      "runtime_seconds": 0.047,
+      "sha256": "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "source_revision": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "java_version": "25.0.4.1",
+  "neqsim_class_origin": "file:/C:/Users/solbraa/OneDrive%20-%20NTNU/Documents/ChatGPT/NeqSim/target/classes/",
+  "figures": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch13_produced_water_treatment\\figures\\ch16_watercut_sensitivity.png",
+      "sha256": "249d316b67e2434dfb28883c8cde419cf2d5fcbfe267ce5e64449693e3cab2ca",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 2,
+          "title": "Oil vs Water Production Rate",
+          "series": "Oil",
+          "value_axis": "y",
+          "x_label": "Water Fraction in Feed (mol%)",
+          "y_label": "Flow Rate (kg/hr)",
+          "n_points": 15,
+          "n_nonfinite": 0,
+          "x_min": 10.0,
+          "x_max": 80.0,
+          "y_min": 27465.14468837011,
+          "y_max": 67186.35534395742,
+          "x_at_y_max": 10.0
+        },
+        {
+          "panel": 2,
+          "title": "Oil vs Water Production Rate",
+          "series": "Water",
+          "value_axis": "y",
+          "x_label": "Water Fraction in Feed (mol%)",
+          "y_label": "Flow Rate (kg/hr)",
+          "n_points": 15,
+          "n_nonfinite": 0,
+          "x_min": 10.0,
+          "x_max": 80.0,
+          "y_min": 3210.2369754291312,
+          "y_max": 48611.10091966072,
+          "x_at_y_max": 80.0
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch13_produced_water_treatment\\figures\\ch16_pressure_effect.png",
+      "sha256": "74c5fe2128beee40ae37c263c0ea042920c461a0c27c7e3e7d0aab7d1946afff",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Separator Pressure Effect on Phase Split (40 mol% water)",
+          "series": "Gas",
+          "value_axis": "y",
+          "x_label": "Separator Pressure (bara)",
+          "y_label": "Outlet Flow Rate (kg/hr)",
+          "n_points": 13,
+          "n_nonfinite": 0,
+          "x_min": 20.0,
+          "x_max": 80.0,
+          "y_min": 4748.373142379587,
+          "y_max": 12462.735625187006,
+          "x_at_y_max": 20.0
+        },
+        {
+          "panel": 1,
+          "title": "Separator Pressure Effect on Phase Split (40 mol% water)",
+          "series": "Oil",
+          "value_axis": "y",
+          "x_label": "Separator Pressure (bara)",
+          "y_label": "Outlet Flow Rate (kg/hr)",
+          "n_points": 13,
+          "n_nonfinite": 0,
+          "x_min": 20.0,
+          "x_max": 80.0,
+          "y_min": 51263.37464732739,
+          "y_max": 58874.65218573286,
+          "x_at_y_max": 80.0
+        },
+        {
+          "panel": 1,
+          "title": "Separator Pressure Effect on Phase Split (40 mol% water)",
+          "series": "Water",
+          "value_axis": "y",
+          "x_label": "Separator Pressure (bara)",
+          "y_label": "Outlet Flow Rate (kg/hr)",
+          "n_points": 13,
+          "n_nonfinite": 0,
+          "x_min": 20.0,
+          "x_max": 80.0,
+          "y_min": 16273.889727488895,
+          "y_max": 16376.974671886956,
+          "x_at_y_max": 80.0
+        }
+      ]
+    }
+  ],
+  "nonfinite_series": [],
+  "numeric_results": {
+    "water_fractions": [
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0,
+      65.0,
+      70.0,
+      75.0,
+      80.0
+    ],
+    "gas_flows": [
+      9603.407680611977,
+      9375.444133762645,
+      9131.580569380469,
+      8870.093387782954,
+      8589.000527702425,
+      8286.011132831356,
+      7958.462979288644,
+      7603.24404567265,
+      7216.693330372463,
+      6794.474214978586,
+      6331.411080079171,
+      5821.276103060632,
+      5256.507573858746,
+      4627.832632914981,
+      3923.7543919744003
+    ],
+    "oil_flows": [
+      67186.35534395742,
+      65592.07454976677,
+      63886.595563275616,
+      62057.86419837553,
+      60092.01867794694,
+      57973.03761446279,
+      55682.30239194435,
+      53198.04863956363,
+      50494.67255835408,
+      47541.845224434954,
+      44303.369854259814,
+      40735.69058193543,
+      36785.92212438422,
+      32389.21059198848,
+      27465.14468837011
+    ],
+    "water_flows": [
+      3210.2369754291312,
+      5032.481316468925,
+      6981.823867342408,
+      9072.042413840561,
+      11318.98079435121,
+      13740.951252702573,
+      16359.234628765524,
+      19198.70731476229,
+      22288.634111272055,
+      25663.680560585068,
+      29365.219065659658,
+      33443.033315005625,
+      37957.570301758504,
+      42982.95677510289,
+      48611.10091966072
+    ],
+    "total_liquid_flows": [
+      70396.59231938655,
+      70624.55586623569,
+      70868.41943061803,
+      71129.90661221609,
+      71410.99947229815,
+      71713.98886716536,
+      72041.53702070987,
+      72396.75595432593,
+      72783.30666962614,
+      73205.52578502003,
+      73668.58891991948,
+      74178.72389694105,
+      74743.49242614272,
+      75372.16736709137,
+      76076.24560803083
+    ],
+    "wf": 80.0,
+    "g_flow": 3923.7543919744003,
+    "o_flow": 27465.14468837011,
+    "w_flow": 48611.10091966072,
+    "i": 12.0,
+    "pressures": [
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0,
+      65.0,
+      70.0,
+      75.0,
+      80.0
+    ],
+    "gas_flows_p": [
+      12462.735625187006,
+      11407.758458652246,
+      10549.104913513711,
+      9809.386518034853,
+      9146.507008044673,
+      8535.059129538105,
+      7958.462979288644,
+      7405.196014111248,
+      6866.8066944043185,
+      6336.787355685665,
+      5809.894083051075,
+      5281.713588336597,
+      4748.373142379587
+    ],
+    "oil_flows_p": [
+      51263.37464732739,
+      52288.42061797018,
+      53127.81215503021,
+      53854.19028918157,
+      54507.34609907333,
+      55111.43562946124,
+      55682.30239194435,
+      56231.00795238649,
+      56765.70088517065,
+      57292.68172448517,
+      57817.0480714084,
+      58343.106974893286,
+      58874.65218573286
+    ],
+    "water_flows_p": [
+      16273.889727488895,
+      16303.820923379146,
+      16323.082931459716,
+      16336.423192782202,
+      16346.146892880295,
+      16353.50524099716,
+      16359.234628765524,
+      16363.796033498887,
+      16367.492420423321,
+      16370.530919828208,
+      16373.057845538402,
+      16375.179436768936,
+      16376.974671886956
+    ],
+    "p": 80.0
+  },
+  "figure_discussions": [
+    {
+      "chapter": "ch13_produced_water_treatment",
+      "chapter_number": 13,
+      "figure": "ch16_watercut_sensitivity.png",
+      "figure_path": "figures/ch16_watercut_sensitivity.png",
+      "caption": "Oil vs Water Production Rate.",
+      "title": "Oil vs Water Production Rate",
+      "observation": "Oil: flow rate spans 2.747e+04–6.719e+04 kg/hr across the plotted cases. Water: flow rate spans 3210–4.861e+04 kg/hr across the plotted cases.",
+      "mechanism": "Rising water cut redirects produced-fluid handling capacity from hydrocarbon liquid toward water, with phase densities affecting mass-to-volume conversions.",
+      "implication": "Total liquid throughput can remain large while oil production falls, making water treatment and disposal the active constraints.",
+      "recommendation": "Report oil and water rates separately and evaluate treatment residence time, injection capacity and oil-in-water performance at late-life water cuts.",
+      "notebook": "notebooks/ch16_water_treatment.ipynb",
+      "dpi": 220,
+      "sha256": "249d316b67e2434dfb28883c8cde419cf2d5fcbfe267ce5e64449693e3cab2ca",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Oil: flow rate",
+            27465.14468837011,
+            67186.35534395742,
+            "kg/hr"
+          ],
+          [
+            "Water: flow rate",
+            3210.2369754291312,
+            48611.10091966072,
+            "kg/hr"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    },
+    {
+      "chapter": "ch13_produced_water_treatment",
+      "chapter_number": 13,
+      "figure": "ch16_pressure_effect.png",
+      "figure_path": "figures/ch16_pressure_effect.png",
+      "caption": "Separator Pressure Effect on Phase Split (40 mol% water).",
+      "title": "Separator Pressure Effect on Phase Split (40 mol% water)",
+      "observation": "Gas: outlet flow rate spans 4748–1.246e+04 kg/hr across the plotted cases. Oil: outlet flow rate spans 5.126e+04–5.887e+04 kg/hr across the plotted cases.",
+      "mechanism": "Changing separator pressure alters gas liberation from the hydrocarbon phase and the equilibrium phase split of the mixed feed.",
+      "implication": "The flash alone does not predict dispersed oil removal efficiency, emulsion behavior or the discharge water’s measured oil concentration.",
+      "recommendation": "Use the calculated phase rates as loads for a treatment train, then apply validated separation-efficiency and water-quality models.",
+      "notebook": "notebooks/ch16_water_treatment.ipynb",
+      "dpi": 220,
+      "sha256": "74c5fe2128beee40ae37c263c0ea042920c461a0c27c7e3e7d0aab7d1946afff",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Gas: outlet flow rate",
+            4748.373142379587,
+            12462.735625187006,
+            "kg/hr"
+          ],
+          [
+            "Oil: outlet flow rate",
+            51263.37464732739,
+            58874.65218573286,
+            "kg/hr"
+          ],
+          [
+            "Water: outlet flow rate",
+            16273.889727488895,
+            16376.974671886956,
+            "kg/hr"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    }
+  ],
+  "notebook_sha256": "8927a2a205e654db0414d8847b2e5910bcd98ff203a794f97da0097875ad639f",
+  "editorial_review": {
+    "reviewed_at": "2026-09-12T20:15:02.292307+00:00",
+    "pre_review_notebook_sha256": "84e94c1268f19acd20c40d288ce91a0358978d1b535bcc85e746a4e1ea0439d2",
+    "code_and_outputs_unchanged": true,
+    "description": "Replaced generated discussion prose with plot-specific reviewed interpretation; every executed code hash rechecked."
+  },
+  "scientific_validation": {
+    "physics_report": "verification\\scientific_revision\\notebooks\\ch13_produced_water_treatment.json",
+    "validation_helper_sha256": {
+      "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+      "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+      "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+    },
+    "pre_scope_markdown_sha256": "8927a2a205e654db0414d8847b2e5910bcd98ff203a794f97da0097875ad639f",
+    "post_execution_edit": "Added scope and independent benchmark links only; every executed code-cell hash rechecked."
+  }
+}

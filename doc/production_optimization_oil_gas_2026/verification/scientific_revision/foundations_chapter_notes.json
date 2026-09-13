@@ -1,0 +1,117 @@
+{
+  "ch01": {
+    "text": "The pressure budget now separates reservoir drawdown from downstream losses, and the water-column pressure estimate is checked by an independent unit conversion. The separator flowsheet has finite-state, component, mass and enthalpy checks; these checks support its calculated phase allocation, while export limits in the chapter remain illustrative contract inputs.",
+    "citations": [
+      "foundationSLBgradient"
+    ]
+  },
+  "ch02": {
+    "text": "The worked TP flashes are checked for phase-fraction normalization, reconstruction of feed composition and equality of phase fugacities. Hydrate calculations are checked for finite temperatures only; neither a converged flash nor a physically plausible hydrate temperature establishes empirical accuracy. Independent methane reference-EOS comparisons are reported separately, with their own state range and teaching tolerance.",
+    "citations": [
+      "michelsen1982",
+      "kunz2012"
+    ]
+  },
+  "ch03": {
+    "text": "The characterized-fluid examples retain explicit heavy-end assumptions and distinguish mole normalization from mass conservation. The bubble-pressure regression has a numerical residual test, but it fits a synthetic target and is not laboratory validation. The TBP phase-envelope trace in Section 3.7.5 is explicitly rejected as a complete envelope; finite getter arrays alone do not establish physical branch identity or completeness.",
+    "citations": [
+      "foundationPeneloux1982"
+    ]
+  },
+  "ch04": {
+    "text": "The decline cumulative-volume derivative and pressure/unit relations are checked independently. The reservoir objects demonstrate a lumped inventory/API boundary; they do not validate spatial reservoir sweep or commercial reserves. The P/Z interpretation is restricted to its closed, isothermal volumetric assumptions, and the Horner extrapolation is distinguished from average pressure in a bounded depleted reservoir.",
+    "citations": [
+      "foundationPRMS2018"
+    ]
+  },
+  "ch05": {
+    "text": "The completed wellbore trials are checked for finite positive pressure and temperature, material conservation and the upward pressure-loss direction; infeasible imposed-rate trials remain identified. The rod-pump displacement is checked against swept geometry, and the jet-pump example checks pressure and efficiency domains. These reduced lift models do not constitute a coupled power-fluid, reservoir and surface design; the Turner coefficient is separately checked for its stated unit convention.",
+    "citations": [
+      "turner1969"
+    ]
+  },
+  "ch06": {
+    "text": "The compact, supported gas-network example supplies the accepted hydraulic case: four choke openings converge with pressure residual below 100 Pa, mass residual below 10\u207b\u2076 kg/s and valid pressure/flow directions. Its larger legacy multiphase API candidates remain explicitly unaccepted when hydraulics do not converge. The WellFlow example checks the declared drawdown and bottomhole-pressure constraints; neither solver convergence nor a software constraint authorizes operation beyond field limits.",
+    "citations": [
+      "neqsim2026update"
+    ]
+  },
+  "ch07": {
+    "text": "The completed subsea pipe/cooler calculations are checked for material conservation and valid pressures and temperatures. The thermal example states its chosen overall heat-transfer coefficient; the audit does not calibrate heat loss, multiphase holdup or vendor equipment performance. Published operator reports distinguish the actual \u00c5sgard, Gullfaks and Vigdis technologies and startup dates; cost and casing factors are explicitly screening inputs.",
+    "citations": [
+      "foundationAsgard2015",
+      "foundationGullfaks2015",
+      "foundationVigdis2021"
+    ]
+  },
+  "ch08": {
+    "text": "The completed route calculations are checked for mass/component conservation, positive profile states and pressure-loss direction. The fixed-property thermal characteristic length is independently checked by dimensional analysis; the NeqSim thermal closure itself is not independently calibrated here. Correlation accuracy requires matched measurements, and a gravity/friction comparison is not treated as a sufficient slack-flow or slugging criterion.",
+    "citations": [
+      "beggs1973"
+    ]
+  },
+  "ch09": {
+    "text": "The hydrate results are screened for finite temperature and the expected direction of MEG inhibition. Hammerschmidt concentration/depression conversions are checked against the corrected SI constant, while solid formation, deposition kinetics, corrosion and erosion require model-specific calibration beyond these examples. Phase equilibrium and a finite onset do not imply a safe shutdown time or an inhibitor guarantee.",
+    "citations": [
+      "foundationGPSAerrata",
+      "deboer1995"
+    ]
+  },
+  "ch10": {
+    "text": "The separation cases are checked for total/component mass and steady-state enthalpy closure, including the explicit free-water outlet. Souders\u2013Brown service factors and residence-time choices are declared screening assumptions; they are not inferred vendor guarantees. Horizontal droplet settling is assessed through residence time and settling distance rather than by comparing perpendicular velocity components.",
+    "citations": [
+      "campbell2014"
+    ]
+  },
+  "ch11": {
+    "text": "The accepted reboiled columns use an explicit heat input and satisfy the strict numerical column status, MESH residual, stage/boundary mass and energy checks, and phase-fugacity checks. They illustrate the selected stripping conditions, not an unmeasured product specification. Bubble-pressure calculations are labeled TVP; a Reid vapor-pressure claim requires the stated test-method basis.",
+    "citations": [
+      "foundationASTMD3232026"
+    ]
+  },
+  "ch12": {
+    "text": "The once-through TEG absorber and bounded NGL stabilizer satisfy column/stage material, energy and equilibrium residual checks; regeneration is outside their stated boundaries. The amine calculation instead prescribes removal, conserves transferred components and checks solvent loading, with the original undersized solvent case explicitly rejected. Its isothermal cooling is a required boundary duty, not an independent reactive-absorber energy prediction. Dry-gas JT cases place pretreatment upstream of the illustrated boundary.",
+    "citations": [
+      "neqsim2026update"
+    ]
+  },
+  "ch13": {
+    "text": "The process-unit examples are checked for material/enthalpy consistency. Salt mass-fraction conversion and the limiting-reactant barite inventory are independently checked; supersaturation and an inventory upper bound do not predict deposited scale or treatment kinetics. The OSPAR statement is tied to the flow-weighted monthly performance standard and its reference analytical method, with site-permit conditions separate.",
+    "citations": [
+      "foundationOSPAR2023",
+      "foundationOSPARmethod"
+    ]
+  },
+  "ch14": {
+    "text": "The solved compressor cases are checked for positive compression work and mass/component/enthalpy closure; the optimizer is checked for returned numerical feasibility. The equal-pressure-ratio result is independently tested only for its equal-efficiency, perfect-intercooling ideal-gas limit. Generated charts and software utilization ratios remain synthetic design aids until matched to the actual gas basis and vendor performance envelope.",
+    "citations": [
+      "schultz1962",
+      "foundationNASAcompression"
+    ]
+  },
+  "ch15": {
+    "text": "The operating compressor examples have mass, energy and state-domain checks. The plotted map curves are explicitly synthetic and are useful for illustrating speed/head/efficiency relationships; their surge and choke boundaries are not a qualified compressor map. Mechanical-speed, gas-property and driver constraints require the corresponding vendor and installation data.",
+    "citations": [
+      "schultz1962"
+    ]
+  },
+  "ch16": {
+    "text": "The exchanger examples are checked for hot/cold energy closure and feasible terminal temperatures. A separate shifted-temperature heat cascade reproduces the stated pinch utility targets for the supplied constant heat-capacity streams; this verifies the calculation, not the plant stream data or exchanger network layout. Airflow and seawater sizing retain their explicit heat-capacity and approach assumptions.",
+    "citations": [
+      "neqsim2026update"
+    ]
+  },
+  "ch17": {
+    "text": "The valve calculations are checked for mass/component conservation, isenthalpic throttling and nonnegative pressure drop. Flow-coefficient constants are tied to the specified flow, pressure, temperature and molecular-weight units; operating mode is set explicitly before using coefficient/opening to predict pressure. Relief-area arithmetic does not replace a complete relief-scenario, discharge-system or code assessment.",
+    "citations": [
+      "emerson2023valves"
+    ]
+  },
+  "ch18": {
+    "text": "The package turbine example checks heat-rate/efficiency identities and the finite ambient-derating trend, while its map and exhaust recipe remain assumed. The accepted backpressure steam example checks recovered duty and shaft-work closure; the failed condensing candidate is retained as a rejection. The electrical bus conserves supply/served/unserved demand, and methane-slip accounting conserves carbon on one fuel and uptime basis.",
+    "citations": [
+      "foundationNASAcompression",
+      "foundationNorwayTax2026"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx512m
+DistillationColumn Diagnostics:
+  Name: Stabilizer
+  Solved: true
+  Solver: DIRECT_SUBSTITUTION
+  Last solver used: DIRECT_SUBSTITUTION
+  Solve status: RIGOROUS_CONVERGED
+  Solve status reason: Tray solution satisfies active rigorous convergence gates
+  Trays: 2 total, 1 equilibrium stages
+  Terminal controls:
+    condenser: absent
+    reboiler mode: EQUILIBRIUM
+  Iterations: 2
+  Solve time: 0.0550553 s
+  Residuals:
+    temperature: 0.0 K (tolerance 1.0E-7)
+    applied temperature step: 0.0 K
+    mass: 0.0 (tolerance 1.0E-6)
+    energy: 0.0 (tolerance 1.0E-5, enforced=true)
+    mesh infinity norm: 1.4746681451410236E-10 (tolerance 1.0E-5, enforced=true)
+      material: 0.0, equilibrium: 0.0, summation: 6.661338147750939E-16, energy: 1.4746681451410236E-10, product draw: 0.0, specification: 0.0
+      per-tray material imbalance: 0.0 (tolerance 0.02)
+  Feed trays:
+    tray 1 with 1 feed(s), 0 stages above, 1 stages below
+  Recommendations:
+    - No immediate convergence issue detected.
+
+=== Flash vs. Column Stabilization ===
+Flash stabilization: oil rate = 4960.0 kg/hr
+Column stabilization: oil rate = 5000.0 kg/hr
+Additional recovery:  40.0 kg/hr (0.8%)
+PROBE ch11 5 {'chapter': 'ch11', 'block': 5, 'status': 'RIGOROUS_CONVERGED', 'mesh': 1.4746681451410236e-10, 'gas_kg_hr': 0.0, 'liquid_kg_hr': 4999.999999999995, 'seconds': 1.764999999999418}
+DistillationColumn Diagnostics:
+  Name: TEG Absorber
+  Solved: true
+  Solver: DIRECT_SUBSTITUTION
+  Last solver used: DIRECT_SUBSTITUTION
+  Solve status: RIGOROUS_CONVERGED
+  Solve status reason: Tray solution satisfies active rigorous convergence gates
+  Trays: 5 total, 5 equilibrium stages
+  Terminal controls:
+    condenser: absent
+    reboiler: absent
+  Iterations: 12
+  Solve time: 12.7126157 s
+  Residuals:
+    temperature: 6.49923094897531E-8 K (tolerance 1.0E-7)
+    applied temperature step: 6.49923094897531E-8 K
+    mass: 1.6046861550615056E-14 (tolerance 1.0E-6)
+    energy: 6.208438140239702E-10 (tolerance 1.0E-5, enforced=true)
+    mesh infinity norm: 2.3103436963302864E-7 (tolerance 1.0E-5, enforced=true)
+      material: 2.3103436963302864E-7, equilibrium: 5.005995618036084E-13, summation: 3.419486915845482E-14, energy: 3.1042190691562333E-10, product draw: 0.0, specification: 0.0
+      per-tray material imbalance: 4.322922779732115E-11 (tolerance 0.02)
+  Feed trays:
+    tray 0 with 1 feed(s), 4 stages above, 0 stages below
+    tray 4 with 1 feed(s), 0 stages above, 4 stages below
+  Recommendations:
+    - No immediate convergence issue detected.
+
+=== TEG Dehydration Results ===
+Dry gas flow:  9.60 MSm3/day
+Dry gas T:     30.8 C
+Rich TEG flow: 5300 kg/hr
+Rich TEG T:    30.5 C
+Water in dry gas: 20.0 ppm (mole)
+PROBE ch12 2 {'chapter': 'ch12', 'block': 2, 'status': 'RIGOROUS_CONVERGED', 'mesh': 2.3103436963302864e-07, 'gas_kg_hr': 317534.55556350923, 'liquid_kg_hr': 5300.0252022203085, 'seconds': 46.29699999999866}

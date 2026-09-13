@@ -1,0 +1,121 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx512m
+COLD_FEED {'flow_kg_hr': 85367.87081328558, 'temperature_C': -76.84308617590676, 'pressure_bara': 20.0, 'enthalpy_W': -13189733.515956989, 'gas_mole_fraction': 1.0, 'composition': {'nitrogen': 0.00042978108378062253, 'CO2': 0.02821687751996036, 'methane': 0.3580005159401767, 'ethane': 0.2758261524813532, 'propane': 0.19255591425418508, 'i-butane': 0.03786797835909167, 'n-butane': 0.051625265377107016, 'i-pentane': 0.020131105258259077, 'n-pentane': 0.015578981461122016, 'n-hexane': 0.01219522241668154, 'n-heptane': 0.006103205580457852, 'n-octane': 0.0014297401305112985, 'water': 3.925857650977638e-05, 'TEG': 1.5608037202894504e-09}}
+CONDITIONED_FEED {'flow_kg_hr': 85367.87081328558, 'temperature_C': 50.0, 'pressure_bara': 8.5, 'enthalpy_W': 1741721.8117429994, 'gas_mole_fraction': 1.0, 'composition': {'nitrogen': 0.00042978108378062253, 'CO2': 0.02821687751996036, 'methane': 0.3580005159401767, 'ethane': 0.2758261524813532, 'propane': 0.19255591425418508, 'i-butane': 0.03786797835909167, 'n-butane': 0.051625265377107016, 'i-pentane': 0.020131105258259077, 'n-pentane': 0.015578981461122016, 'n-hexane': 0.01219522241668154, 'n-heptane': 0.006103205580457852, 'n-octane': 0.0014297401305112985, 'water': 3.925857650977638e-05, 'TEG': 1.5608037202894504e-09}}
+{
+Traceback (most recent call last):
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "heap_limit_MB": 512,
+  "java_max_memory_MB": 512.0,
+  "chapter_sha256": "e73c996ee7539cc307eda280b7b4d0b7e7acae2a10bf573a34cb2c825472d5e6",
+  "upstream_code_sha256": "2d39122c860d6ae11d1edb66607dfb2597863cdffb3c34197f59f461914a9282",
+  "settings": {
+    "feed_c": 50.0,
+    "reboiler_c": 105.0,
+    "top_bar": 8.0,
+    "stages": 5
+  },
+  "cold_separator_liquid": {
+    "flow_kg_hr": 85367.87081328558,
+    "temperature_C": -76.84308617590676,
+    "pressure_bara": 20.0,
+    "enthalpy_W": -13189733.515956989,
+    "gas_mole_fraction": 1.0,
+    "composition": {
+      "nitrogen": 0.00042978108378062253,
+      "CO2": 0.02821687751996036,
+      "methane": 0.3580005159401767,
+      "ethane": 0.2758261524813532,
+      "propane": 0.19255591425418508,
+      "i-butane": 0.03786797835909167,
+      "n-butane": 0.051625265377107016,
+      "i-pentane": 0.020131105258259077,
+      "n-pentane": 0.015578981461122016,
+      "n-hexane": 0.01219522241668154,
+      "n-heptane": 0.006103205580457852,
+      "n-octane": 0.0014297401305112985,
+      "water": 3.925857650977638e-05,
+      "TEG": 1.5608037202894504e-09
+    }
+  File "C:\Users\solbraa\OneDrive - NTNU\Documents\GitHub\neqsim\neqsim-paperlab\books\production_optimization_oil_gas_2026\devtools\probe_ch33_stabilizer.py", line 101, in <module>
+  },
+  "column_feed": {
+    "flow_kg_hr": 85367.87081328558,
+    "temperature_C": 50.0,
+    "pressure_bara": 8.5,
+    "enthalpy_W": 1741721.8117429994,
+    "gas_mole_fraction": 1.0,
+    "composition": {
+      "nitrogen": 0.00042978108378062253,
+      "CO2": 0.02821687751996036,
+      "methane": 0.3580005159401767,
+      "ethane": 0.2758261524813532,
+      "propane": 0.19255591425418508,
+      "i-butane": 0.03786797835909167,
+      "n-butane": 0.051625265377107016,
+      "i-pentane": 0.020131105258259077,
+      "n-pentane": 0.015578981461122016,
+      "n-hexane": 0.01219522241668154,
+      "n-heptane": 0.006103205580457852,
+      "n-octane": 0.0014297401305112985,
+      "water": 3.925857650977638e-05,
+      "TEG": 1.5608037202894504e-09
+    }
+  },
+  "feed_heater_duty_kW": 14931.45538462975,
+  "seconds": 0.3600000000005821,
+  "solved": true,
+  "solve_status": "RIGOROUS_CONVERGED",
+  "diagnostics": "DistillationColumn Diagnostics:\n  Name: NGL Stabilizer\n  Solved: true\n  Solver: DIRECT_SUBSTITUTION\n  Last solver used: DIRECT_SUBSTITUTION\n  Solve status: RIGOROUS_CONVERGED\n  Solve status reason: Tray solution satisfies active rigorous convergence gates\n  Trays: 6 total, 5 equilibrium stages\n  Terminal controls:\n    condenser: absent\n    reboiler mode: EQUILIBRIUM\n  Iterations: 2\n  Solve time: 0.3552944 s\n  Residuals:\n    temperature: 0.0 K (tolerance 0.022400000000000003)\n    applied temperature step: 0.0 K\n    mass: 0.0 (tolerance 0.017920000000000002)\n    energy: 3.028313806024046E-10 (tolerance 0.017920000000000002, enforced=false)\n    mesh infinity norm: 1.514156902782756E-10 (tolerance 1.0, enforced=false)\n      material: 0.0, equilibrium: 0.0, summation: 0.0, energy: 1.514156902782756E-10, product draw: 0.0, specification: 0.0\n      per-tray material imbalance: 0.0 (tolerance 0.02)\n  Feed trays:\n    tray 5 with 1 feed(s), 0 stages above, 5 stages below\n  Recommendations:\n    - No immediate convergence issue detected.\n",
+  "overhead": {
+    "flow_kg_hr": 85367.87081328558,
+    "temperature_C": 49.54064998970358,
+    "pressure_bara": 8.0,
+    "enthalpy_W": 1741721.8122704474,
+    "gas_mole_fraction": 1.0,
+    "composition": {
+      "nitrogen": 0.00042978108378062253,
+      "CO2": 0.02821687751996036,
+      "methane": 0.3580005159401767,
+      "ethane": 0.2758261524813532,
+      "propane": 0.19255591425418508,
+      "i-butane": 0.03786797835909167,
+      "n-butane": 0.051625265377107016,
+      "i-pentane": 0.020131105258259077,
+      "n-pentane": 0.015578981461122016,
+      "n-hexane": 0.01219522241668154,
+      "n-heptane": 0.006103205580457852,
+      "n-octane": 0.0014297401305112985,
+      "water": 3.925857650977638e-05,
+      "TEG": 1.5608037202894504e-09
+    }
+  },
+  "bottoms": {
+    "flow_kg_hr": 0.0,
+    "temperature_C": 105.0,
+    "pressure_bara": 8.5,
+    "enthalpy_W": -1.1894443649007986e+21,
+    "gas_mole_fraction": 1.0,
+    "composition": {
+      "nitrogen": 0.00042978108378062253,
+      "CO2": 0.02821687751996036,
+      "methane": 0.3580005159401767,
+      "ethane": 0.2758261524813532,
+      "propane": 0.19255591425418508,
+      "i-butane": 0.03786797835909167,
+      "n-butane": 0.051625265377107016,
+      "i-pentane": 0.020131105258259077,
+      "n-pentane": 0.015578981461122016,
+      "n-hexane": 0.01219522241668154,
+      "n-heptane": 0.006103205580457852,
+      "n-octane": 0.0014297401305112985,
+      "water": 3.925857650977638e-05,
+      "TEG": 1.5608037202894506e-09
+    }
+  },
+  "reboiler_duty_kW": 4.098077625114248e-49,
+  "mass_closure_relative": 0.0,
+  "energy_closure_relative": 1.1894443649007986e+21
+}
+    assert report["energy_closure_relative"] < 0.001
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

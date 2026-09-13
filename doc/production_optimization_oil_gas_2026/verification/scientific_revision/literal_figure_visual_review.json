@@ -1,0 +1,416 @@
+{
+  "generated_at": "2026-09-12T20:57:23.755112+00:00",
+  "status": "passed_scoped_visual_and_caption_review",
+  "method": "Visual inspection by the reviewing agent of all eight source images with their adjacent chapter captions/prose, plus reconciliation of retained numerical arrays or literal-run scalar evidence. This is agent review, not human/domain peer certification.",
+  "image_count": 8,
+  "full_image_views": 8,
+  "unresolved_material_visual_defects": 0,
+  "minor_corrections_pending": 0,
+  "limitations": [
+    "This visual audit does not replace the separately retained process-physics gate or independently validate field applicability.",
+    "Timestep plots qualify only the stated numerical cases and intervals.",
+    "Economic samples use specified illustrative distributions/policies; they do not establish investment suitability.",
+    "Whole-book PDF size, pagination and accessibility remain separate publication checks."
+  ],
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "copy_manifest_sha256": "2314ef39d7ea07eb0dfd060d8fa51619ceb8b7e2ce4f8cc1726fb56bd7f388a7",
+  "review_script_sha256": "50e7b574327809f83ec4b83976f7a09cf30760a91ffac76a9a1b78300cf01cbe",
+  "images": [
+    {
+      "index": 1,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch27_multi_scenario_optimization\\figures\\fig28_tornado.png",
+      "sha256": "808b9d902c42fc3262b613e2d63eaeffbb0366735a8b22bc4e6cd9d81cd8eded",
+      "source_copy_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch27_multi_scenario_optimization\\figures\\fig28_tornado.png",
+      "source_copy_hash_matches": true,
+      "size_px": [
+        1684,
+        831
+      ],
+      "initial_inspected_sha256": "808b9d902c42fc3262b613e2d63eaeffbb0366735a8b22bc4e6cd9d81cd8eded",
+      "actual_visual_inspection": true,
+      "inspection_method": "Visual inspection by the reviewing agent of the actual displayed image, requested at original resolution.",
+      "status": "passed",
+      "observation": "Labels distinguish kg/h gas-rate response from water mole fraction, pressure, temperature and efficiency inputs. Low/high colors mean input endpoints, not unfavorable/favorable outcomes. Zero efficiency response is physically appropriate and explained in the caption. Bars agree with retained endpoint calculations.",
+      "findings": [],
+      "resolved_findings": [],
+      "caption": "CPA three-phase separator gas-rate sensitivity at a prescribed feed rate. The water input is overall water mole fraction. Low/high bars use the declared input endpoints and include the base in their range; isentropic efficiency has exactly zero upstream gas-rate response because the compressor has no feedback to the feed or separator. All eleven cases pass material and energy checks.",
+      "caption_line": 517,
+      "adjacent_text": "```\n\n![CPA three-phase separator gas-rate sensitivity at a prescribed feed rate. The water input is overall water mole fraction. Low/high bars use the declared input endpoints and include the base in their range; isentropic efficiency has exactly zero upstream gas-rate response because the compressor has no feedback to the feed or separator. All eleven cases pass material and energy checks.](figures/fig28_tornado.png)\n\n### 27.7.3 Spider Plots\n\nA **spider plot** (or sensitivity plot) shows the objective function value as each parameter is varied continuously from its low to high value, with all other parameters at their base values. Unlike the tornado diagram, which shows only the endpoints, the spider plot reveals nonlinearities — a parameter whose spider curve is concave has diminishing marginal impact, while a convex curve has increasing impact.\n\nSpider plots are constructed by evaluating the objective at 5–10 evenly spaced values of each parameter. The horizontal axis is normalized (0 = low, 1 = high) to allow all parameters to be plotted on the same axes.\n\n### 27.7.4 Interpreting Sensitivity Results\n\nThe sensitivity analysis serves three purposes:\n\n1. **Prioritization**: Parameters with large swings deserve detailed uncertainty characterization (better data, more scenarios). Parameters with small swings can be fixed at their base values, reducing the dimensionality of the Monte Carlo analysis.\n\n2. **Risk mitigation**: The parameter ranking guides risk mitigation strategies. A large price sensitivity does not prove that hedging is more valuable than appraisal; compare feasible mitigation costs, residual risk and the value of information. If water cut dominates gas production uncertainty, investing in subsea water separation may be warranted.\n",
+      "adjacent_text_sha256": "9a29abfaece1653e305176c1232247e8ebef7ad115879f67b34b5bb837e2d5ab",
+      "chapter_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch27_multi_scenario_optimization\\chapter.md",
+      "chapter_sha256": "2b407eab495bab772563fde6152cade5443a5c3ca83ef6d4b1ddee6cfe77c6ad",
+      "retained_numerical_evidence": {
+        "base_gas_kg_hr": 39353.10572530252,
+        "ranked_swings_kg_hr": [
+          [
+            "Feed rate (kg/hr)",
+            34433.96750963968
+          ],
+          [
+            "Water mole fraction (-)",
+            14186.33046184984
+          ],
+          [
+            "Feed pressure (bara)",
+            1951.1413675448275
+          ],
+          [
+            "Temperature (C)",
+            1238.1575341965436
+          ],
+          [
+            "Isentropic efficiency (-)",
+            0.0
+          ]
+        ],
+        "reconciliation": "All ten endpoint-minus-base gas rates agree with plotted deltas to 1e-9 kg/h; compressor efficiency has exactly zero upstream gas response."
+      },
+      "evidence_files": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch27_multi_scenario_optimization\\ch27_surface_tornado.json",
+          "sha256": "5129ad62c1589ff63361a8706935641204b2ada465666bde48615c3a7feb9cf2"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch27_multi_scenario_optimization\\figures\\ch27_verified_resource_npv.png",
+      "sha256": "c9b914a337e14224465b1d5b9a3a19699981fc8fe1df8d7af28b86c23cbbaeca",
+      "source_copy_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch27_multi_scenario_optimization\\figures\\ch27_verified_resource_npv.png",
+      "source_copy_hash_matches": true,
+      "size_px": [
+        1847,
+        662
+      ],
+      "initial_inspected_sha256": "c9b914a337e14224465b1d5b9a3a19699981fc8fe1df8d7af28b86c23cbbaeca",
+      "actual_visual_inspection": true,
+      "inspection_method": "Visual inspection by the reviewing agent of the actual displayed image, requested at original resolution.",
+      "status": "passed",
+      "observation": "Histogram counts and empirical CDF have distinct y axes; both use pre-tax NPV in MNOK. Both 200-scenario policies are named consistently. Aggressive has a higher median and upper tail in these samples, while no universal dominance, investment guarantee or robust optimum is claimed.",
+      "findings": [],
+      "resolved_findings": [],
+      "caption": "Pre-tax NPV from 200 common LHS scenarios per plan, using a NeqSim isothermal gas tank and the declared annual withdrawal rule",
+      "caption_line": 852,
+      "adjacent_text": "```\n\n![Pre-tax NPV from 200 common LHS scenarios per plan, using a NeqSim isothermal gas tank and the declared annual withdrawal rule](figures/ch27_verified_resource_npv.png)\n\nThe figure compares the distribution under the stated resource and economic assumptions. Every annual withdrawal closes against the simulated tank inventory to relative mass error below $10^{-9}$; temperature and positive pressure are checked. The saved result reports resource, recovery and cumulative production percentiles alongside NPV, so economic results cannot be detached from their resource basis. A plan's larger production capacity accelerates withdrawal but also increases assumed CAPEX and OPEX. The balance of those effects, not a presumed risk ranking, determines the sampled NPV.\n\n### 27.11.3 Decision and Remaining Qualification\n\nUse the printed distributions to compare these two **fixed policies**, not to claim a robust optimum or a real option. Check annual-step sensitivity, probability distributions/dependence, operating costs and abandonment rules before an investment interpretation. A conditional expansion requires a separate nonanticipative decision tree with the expansion cost and information time. Neither the old arbitrary 10–20% option value nor a presumed hedging/appraisal ranking is supported by this example.\n\n<!-- scientific-evidence test=devtools/scientific_uncertainty_probe.py baseline=verification/scientific_revision/ch27_depletion_probe.json -->\n\n---\n\n<!-- September 2026 source update -->\n## Scenario isolation and current constraint evidence\n\nA scenario is a complete model state: composition, rates, thermodynamic method, topology, equipment availability, installed limits and utility budgets. Reusing an unchanged flow vector after a limit or lineup change is not a valid cache hit. The current plant evidence contracts require stable identities and current calculation provenance, and the selected optimization point must be replayed against the active scenario \\cite{neqsim2026update}.",
+      "adjacent_text_sha256": "d8c567c0f07abcb00c430784325c01e38dea7938eb2876efcb992bf4bf44742d",
+      "chapter_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch27_multi_scenario_optimization\\chapter.md",
+      "chapter_sha256": "2b407eab495bab772563fde6152cade5443a5c3ca83ef6d4b1ddee6cfe77c6ad",
+      "retained_numerical_evidence": {
+        "Conservative": {
+          "sample_count": 200,
+          "npv_min_max_MNOK": [
+            11759.28563181631,
+            78946.23899398206
+          ],
+          "npv_CDF_P10_P50_P90_MNOK": [
+            26799.680981055702,
+            42572.618177312674,
+            63551.70832926569
+          ]
+        },
+        "Aggressive": {
+          "sample_count": 200,
+          "npv_min_max_MNOK": [
+            9692.958465837775,
+            101629.55370179912
+          ],
+          "npv_CDF_P10_P50_P90_MNOK": [
+            30946.097682060416,
+            50776.62036414444,
+            81058.62912309937
+          ]
+        }
+      },
+      "evidence_files": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch27_multi_scenario_optimization\\ch27_depletion_monte_carlo.json",
+          "sha256": "51f89d0cd76302474689943a37be735a8b5f4ece36d1bedd6e7ab0fc1e22ac8f"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch29_dynamic_simulation_and_control\\figures\\ch29_verified_level_inventory.png",
+      "sha256": "a1e18dab02b398b2f607a90e3997acdeee8cf708b06b04ed275d0e12ee3b0661",
+      "source_copy_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch29_dynamic_simulation_and_control\\figures\\ch29_verified_level_inventory.png",
+      "source_copy_hash_matches": true,
+      "size_px": [
+        1440,
+        1440
+      ],
+      "initial_inspected_sha256": "a1e18dab02b398b2f607a90e3997acdeee8cf708b06b04ed275d0e12ee3b0661",
+      "actual_visual_inspection": true,
+      "inspection_method": "Visual inspection by the reviewing agent of the actual displayed image, requested at original resolution.",
+      "status": "passed",
+      "observation": "Level/diameter is dimensionless; pressure is bara; liquid withdrawal is kg/s; time is seconds. Solid and dashed timestep curves are nearly coincident. Small staircase features in the level signal are visible rather than cosmetically smoothed. The final 30.639 bara pressure and near-setpoint level agree with prose.",
+      "findings": [],
+      "resolved_findings": [],
+      "caption": "Checked NeqSim liquid inventory, pressure and withdrawal with timestep comparison",
+      "caption_line": 450,
+      "adjacent_text": "```\n\n![Checked NeqSim liquid inventory, pressure and withdrawal with timestep comparison](figures/ch29_verified_level_inventory.png)\n\nThe initial inventory is 696.53 kg. The feed pulse adds liquid and gas; direct-acting PI control increases liquid withdrawal and returns the liquid level to within 0.2 percentage points of its initial value by 120 s. Gas withdrawal remains fixed, so the pressure rises to about 30.64 bara rather than returning to 30 bara. This distinction makes the modeled control boundary visible.\n\nThe code integrates the actual boundary mass and enthalpy rates independently of the vessel inventory update. Required relative residuals are below $10^{-10}$ for mass and $10^{-5}$ for energy, normalized by initial mass and absolute initial internal energy. Halving the timestep must change the aligned liquid-level fraction by less than 0.001 and pressure by less than 0.01 bar. These are numerical acceptance criteria for this case; they are not plant validation or proof of trip protection.\n\n<!-- @neqsim:claim\n  test: devtools/scientific_optimization_probe.py\n  baseline: verification/scientific_revision/ch29_dynamic_probe.json\n-->\n\n---\n\n## 29.6 Pressure Control Systems\n\n### 29.6.1 Design Considerations for Controller Selection",
+      "adjacent_text_sha256": "820b55bc3ec4ae0433a0c34de9b44acd637c75f9115b9c25946da734b342428f",
+      "chapter_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch29_dynamic_simulation_and_control\\chapter.md",
+      "chapter_sha256": "b2a42f0f01211eb22402082da1937f012c2d4233d317117a98562e2f22f0cc48",
+      "retained_numerical_evidence": {
+        "fine_final_series_row": [
+          120.0,
+          0.50048828125,
+          30.638975903665266,
+          40.08495539138437,
+          697.2206387822127,
+          1.8423406786263214
+        ],
+        "coarse_fine_aligned_max_differences": [
+          0.0001220703125,
+          0.000271551819896132
+        ],
+        "difference_acceptance_limits": [
+          0.001,
+          0.01
+        ],
+        "fine_max_mass_relative_residual": 2.1345911840196278e-15,
+        "fine_max_energy_relative_residual": 4.4767743136168996e-06,
+        "level_peak_fraction": 0.5045166015625,
+        "level_final_offset_percentage_points": 0.048828125
+      },
+      "evidence_files": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch29_dynamic_simulation_and_control\\ch29_inventory_checks.json",
+          "sha256": "7f1f6fe0f7b18c18c7d7cde00e6153873936aee095bce64cd2150bfa76723481"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch29_dynamic_simulation_and_control\\figures\\ch29_verified_blowdown.png",
+      "sha256": "4f80b5e48694a4c42f06138d531d427d8f513840faa8414aaab64daa3a93eef5",
+      "source_copy_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch29_dynamic_simulation_and_control\\figures\\ch29_verified_blowdown.png",
+      "source_copy_hash_matches": true,
+      "size_px": [
+        1440,
+        1080
+      ],
+      "initial_inspected_sha256": "4f80b5e48694a4c42f06138d531d427d8f513840faa8414aaab64daa3a93eef5",
+      "actual_visual_inspection": true,
+      "inspection_method": "Visual inspection by the reviewing agent of the actual displayed image, requested at original resolution.",
+      "status": "passed",
+      "observation": "Both absolute pressure and Celsius fluid temperature decline over 120 s. Fine/coarse trajectories overlap, consistent with the saved timestep comparison. The final 52.975 bara and 9.119 C agree with prose; the caption does not imply wall-temperature or relief-system qualification.",
+      "findings": [],
+      "resolved_findings": [],
+      "caption": "Checked real-gas vessel depressurization with timestep comparison",
+      "caption_line": 799,
+      "adjacent_text": "```\n\n![Checked real-gas vessel depressurization with timestep comparison](figures/ch29_verified_blowdown.png)\n\nThe fine-grid calculation reduces pressure to about 52.98 bara and fluid temperature to 9.12 °C after 120 s. The independent inventory checks require relative mass closure below $10^{-10}$ and energy closure below $10^{-3}$. Halving the step from 0.5 to 0.25 s must change pressure by less than 0.05 bar and temperature by less than 0.1 °C at aligned times. These checks qualify the numerical trajectory over the stated 120 s interval; they do not establish a 15-minute target, wall temperature, MDMT compliance or flare-system adequacy.\n\n<!-- @neqsim:claim\n  test: devtools/scientific_optimization_probe.py\n  baseline: verification/scientific_revision/ch29_blowdown_probe.json\n-->\n\n---\n\n## 29.10 Dynamic Slug Handling\n\n### 29.10.1 Slug Flow in Pipelines\n\nSlug flow is one of the most challenging dynamic phenomena in offshore production. Slugs are large liquid masses that travel intermittently through pipelines, causing:",
+      "adjacent_text_sha256": "37277248952197937010218356cdc2a4cffd0babe3cac52e238d3877e04fd774",
+      "chapter_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch29_dynamic_simulation_and_control\\chapter.md",
+      "chapter_sha256": "b2a42f0f01211eb22402082da1937f012c2d4233d317117a98562e2f22f0cc48",
+      "retained_numerical_evidence": {
+        "fine_final_series_row": [
+          120.0,
+          52.97548737244282,
+          9.119298806455049,
+          100.9274384376304,
+          0.23983120585978374
+        ],
+        "coarse_fine_aligned_max_differences": [
+          0.013611519754086032,
+          0.034594094427859545
+        ],
+        "difference_acceptance_limits": [
+          0.05,
+          0.1
+        ],
+        "fine_max_mass_relative_residual": 1.1543031308321625e-15,
+        "fine_max_energy_relative_residual": 0.0004608642043813972
+      },
+      "evidence_files": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch29_dynamic_simulation_and_control\\ch29_blowdown_checks.json",
+          "sha256": "2cda42add18fb93cbe16b7a8de52bdf3acec4edd2eed0c771f5c63cfe081ef45"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch29_dynamic_simulation_and_control\\figures\\ch29_verified_feed_pulse.png",
+      "sha256": "a67e2ebd7f7c301ff6c1d77430a9fba923804907ec5ce38b4cd0f8c4f60e0d19",
+      "source_copy_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch29_dynamic_simulation_and_control\\figures\\ch29_verified_feed_pulse.png",
+      "source_copy_hash_matches": true,
+      "size_px": [
+        1440,
+        720
+      ],
+      "initial_inspected_sha256": "a67e2ebd7f7c301ff6c1d77430a9fba923804907ec5ce38b4cd0f8c4f60e0d19",
+      "actual_visual_inspection": true,
+      "inspection_method": "Visual inspection by the reviewing agent of the actual displayed image, requested at original resolution.",
+      "status": "passed",
+      "observation": "A 20–40 s prescribed total-feed pulse raises the dimensionless level to about 0.5112, below the displayed 0.60 test limit, then returns toward 0.50. Legend and text distinguish the stress-test feed history from predicted slug generation. No trace is clipped or hidden.",
+      "findings": [],
+      "resolved_findings": [],
+      "caption": "Checked vessel response to the prescribed feed pulse",
+      "caption_line": 874,
+      "adjacent_text": "```\n\n![Checked vessel response to the prescribed feed pulse](figures/ch29_verified_feed_pulse.png)\n\n---\n\n## 29.11 Measurement Devices in NeqSim\n\nNeqSim provides a comprehensive set of measurement device classes that mirror real plant instrumentation:\n\n| Device | NeqSim Class | Measurement | Typical Tag |\n|--------|-------------|-------------|-------------|\n| Pressure transmitter | `PressureTransmitter` | Pressure (bara, barg, psi) | PT-xxx |\n| Temperature transmitter | `TemperatureTransmitter` | Temperature (°C, K, °F) | TT-xxx |\n| Level transmitter | `LevelTransmitter` | Level fraction (empty unit string); multiply by vessel height for m | LT-xxx |\n| Volume flow transmitter | `VolumeFlowTransmitter` | Volumetric flow (m³/hr) | FT-xxx |\n| Differential pressure | Difference of two pressure measurements | Explicit upstream-minus-downstream pressure | PDT-xxx |\n",
+      "adjacent_text_sha256": "d5e9fa2fd6ce4505d58226ced298394b4a2554433bcc42387860f3af532d6c75",
+      "chapter_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch29_dynamic_simulation_and_control\\chapter.md",
+      "chapter_sha256": "b2a42f0f01211eb22402082da1937f012c2d4233d317117a98562e2f22f0cc48",
+      "retained_numerical_evidence": {
+        "reported_peak_level_fraction": 0.51123046875,
+        "declared_test_limit_fraction": 0.6,
+        "margin_below_test_limit_fraction": 0.08876953124999998,
+        "literal_code_sha256": "19f7193ab78aa24396ba962b0a6429862a75a851db3a1efaf8e4df62d19c5021",
+        "scope": "Prescribed total-feed pulse, not a predicted slug-arrival model; retained scalar output and plot inspected, no complete pulse series was retained in this evidence file."
+      },
+      "evidence_files": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\ch29_dynamic_simulation_and_control_fences.json",
+          "sha256": "7533d2ab65fd9b0a27317bd243a36cb5fc07370a938bcb57307dfb31e1406e75"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch34_case_studies\\figures\\ch23_case1_hp_optimization.png",
+      "sha256": "a215f2054389f955af01745228f2f12528965e00df921966a79d6e9d8a26b968",
+      "source_copy_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch34_case_studies\\figures\\ch23_case1_hp_optimization.png",
+      "source_copy_hash_matches": true,
+      "size_px": [
+        1650,
+        600
+      ],
+      "initial_inspected_sha256": "a215f2054389f955af01745228f2f12528965e00df921966a79d6e9d8a26b968",
+      "actual_visual_inspection": true,
+      "inspection_method": "Visual inspection by the reviewing agent of the actual displayed image, requested at original resolution.",
+      "status": "passed",
+      "observation": "Both panels are readable and use bara, tonnes/h and MW consistently. Liquid mass has a shallow sampled maximum near 85 bara while compression power falls with pressure. Surrounding text correctly distinguishes process consistency from installed capacity and economic optimization.",
+      "findings": [],
+      "resolved_findings": [
+        "Changed caption from optimization results to pressure sensitivity."
+      ],
+      "caption": "HP separator pressure sensitivity in the reduced platform model",
+      "caption_line": 262,
+      "adjacent_text": "```\n\n![HP separator pressure sensitivity in the reduced platform model](figures/ch23_case1_hp_optimization.png)\n\nEffect of HP separator pressure on condensate recovery rate and total compression power. Interpret both axes from the executed sweep; direction and optimum depend on composition, cooling and the liquid reference state.\n\n### 34.2.7 Results and Acceptance\n\nThe literal model includes an imposed-rate feed, HP/LP equilibrium separation, cooled three-stage LP recompression, equilibrium knockout before each compressor, and export compression/aftercooling/knockout. Recompression discharge matches the selected HP pressure. It does not model four individual wells, a 12 km line, TEG treatment, a stabilizer or a 200 km export line. A throttling valve represents an imposed pressure boundary, not hydraulic prediction.\n\nEach fresh case checks total mass and component flows to $10^{-7}$ relative and whole-boundary energy to $10^{-5}$ relative, including every knockout liquid and all shaft/cooling duties. Positive compressor work, rising discharge pressure and single-phase compressor inlet are asserted. These checks establish internal physical consistency under the SRK equilibrium assumptions.\n\n`ch34_platform_base.json` and `ch34_platform_sweep.json` contain the executed baseline and nine pressure points. The sensitivity figure uses those actual values. Liquid withdrawn at different process pressures is aggregated by **mass**; it is not claimed to be stock-tank condensate volume. The printed 12 MSm³/day gas and 25 MW export-driver screens are assumed restrictions, with other installed-equipment evidence explicitly absent. No economic optimum, 5–8% uplift or 13 MSm³/day approved capacity is inferred from this pressure sweep.\n\n---\n\n\n## 34.3 Case Study 2 — FPSO Water-Handling Surrogate Production",
+      "adjacent_text_sha256": "0312a6fde19c81b6a58679aa196e0a22760880dc31e91c892a3998a191907ebd",
+      "chapter_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch34_case_studies\\chapter.md",
+      "chapter_sha256": "31915396c1f45dcce06318b9bbfa53afc472968f7ac884e148673dfef4c03359",
+      "retained_numerical_evidence": {
+        "pressure_range_bara": [
+          60.0,
+          100.0
+        ],
+        "sampled_max_liquid_t_hr": 130.68288740547433,
+        "pressure_at_sampled_max_bara": 85.0,
+        "power_first_last_MW": [
+          19.087941744316396,
+          9.76152871988804
+        ],
+        "scope": "All withdrawn liquid is aggregated by mass; the sampled maximum is not an economic optimum or stock-tank volume."
+      },
+      "evidence_files": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch34_case_studies\\ch34_platform_sweep.json",
+          "sha256": "ec1d2aa8d3e31faf0c3dde3f627c4d33d2c079a662b73a9bfc868a3eed904e7d"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch34_case_studies\\figures\\ch23_case2_water_cut_sensitivity.png",
+      "sha256": "c65904773289c318026dfe69c6de18c23d9a4b0be8825e0b58b7e98ad904e75e",
+      "source_copy_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch34_case_studies\\figures\\ch23_case2_water_cut_sensitivity.png",
+      "source_copy_hash_matches": true,
+      "size_px": [
+        1980,
+        1381
+      ],
+      "initial_inspected_sha256": "c65904773289c318026dfe69c6de18c23d9a4b0be8825e0b58b7e98ad904e75e",
+      "actual_visual_inspection": true,
+      "inspection_method": "Visual inspection by the reviewing agent of the actual displayed image, requested at original resolution.",
+      "status": "passed",
+      "observation": "Four panels identify the reference conditions for feed water cut and keep local-state product volumes separate. Oil/gas/power decrease as water replaces hydrocarbon at fixed reference liquid rate. The first-separator utilization remains well below the explicitly assumed 400 m3/h limit; no false water-cut bottleneck appears.",
+      "findings": [],
+      "resolved_findings": [],
+      "caption": "FPSO performance sensitivity to water cut",
+      "caption_line": 559,
+      "adjacent_text": "```\n\n![FPSO performance sensitivity to water cut](figures/ch23_case2_water_cut_sensitivity.png)\n\nEffect of rising water cut on FPSO performance: (a) liquid production rates, (b) gas production, (c) compression power, and (d) 1st stage separator liquid utilization.\n\n#### Water Cut Result Interpretation\n\nUse the executed water-cut sweep and the stated volumetric reference conditions. Water cut is not a mole fraction or mass fraction. Compare separator liquid capacity with oil and aqueous flows **at that separator**, not with oil after downstream flashing. No gas-lift demand curve or well deliverability model is supplied by this separation/compression example.\n\nThe legacy hand-entered water-cut milestone table has been removed because it did not follow from the model and contradicted its claimed separator bottleneck. The actual sweep records the assumed 400 m³/hr screening ratio without implying that 65% water cut is a universal limit.\n\n\n#### Gas Lift Allocation Optimization\n\nWhen total gas lift demand exceeds available supply, optimal allocation becomes critical. The objective is to allocate limited gas lift across $n$ wells to maximize total oil production:\n\n$$",
+      "adjacent_text_sha256": "82d608e09efbecf9c6fbd468631a70242b3579e4ab5176aeca717097f5d05fd2",
+      "chapter_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch34_case_studies\\chapter.md",
+      "chapter_sha256": "31915396c1f45dcce06318b9bbfa53afc472968f7ac884e148673dfef4c03359",
+      "retained_numerical_evidence": {
+        "water_cut_first_last_pct": [
+          10.000000000001087,
+          80.0
+        ],
+        "oil_first_last_m3_hr": [
+          191.6543429535022,
+          42.604239029710904
+        ],
+        "water_first_last_m3_hr": [
+          20.721417140826183,
+          165.17576283850894
+        ],
+        "compression_first_last_MW": [
+          0.3947992764753307,
+          0.08711083482332202
+        ],
+        "first_separator_liquid_utilization_first_last_pct": [
+          57.17470928872874,
+          52.84519212711061
+        ],
+        "scope": "Feed water cut uses 15 C/1.01325 bara reference liquid; displayed final oil and first-separator water are separate local-state volumes, not a common product-volume balance."
+      },
+      "evidence_files": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\ch34_fpso_physics.json",
+          "sha256": "f14ae42a904b56bf0c20f53761cf69f89b016735c736e3390cbede8e2f68a19a"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch34_case_studies\\figures\\ch23_case3_debottleneck_analysis.png",
+      "sha256": "2b0b22e7e8df5a5171e51e93f4b8a4a15c745a389b2ab015c41d83a55d18a988",
+      "source_copy_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch34_case_studies\\figures\\ch23_case3_debottleneck_analysis.png",
+      "source_copy_hash_matches": true,
+      "size_px": [
+        1650,
+        600
+      ],
+      "initial_inspected_sha256": "6636a5fc11aea2ba39f82d95b024994a93676ca937eb600d7aecd31835e2a24a",
+      "actual_visual_inspection": true,
+      "inspection_method": "Visual inspection by the reviewing agent of the actual displayed image, requested at original resolution.",
+      "status": "passed",
+      "observation": "Both panels show all nine feed-rate points, including the 130% point above the expander screen. The right panel reports total withdrawn liquid mass in tonnes/h. Corrected reader-facing legend names the three screening quantities and the feed-reference label has proper spaces.",
+      "findings": [],
+      "resolved_findings": [
+        "Spaced feed-rate reference and replaced internal legend keys with screening names."
+      ],
+      "caption": "Gas plant debottlenecking analysis showing equipment utilization vs feed rate",
+      "caption_line": 809,
+      "adjacent_text": "```\n\n![Gas plant debottlenecking analysis showing equipment utilization vs feed rate](figures/ch23_case3_debottleneck_analysis.png)\n\nThe actual reduced NGL sweep reports three assumed screening ratios and all withdrawn liquid mass. A specified-temperature cooler supplies external refrigeration; no second heat-exchanger stream, amine unit, dehydration unit or fractionation column is implicitly modeled. Expander and compressor work are reported separately; they are not asserted to balance on a shared shaft.\n\n### 34.4.8 Cost and Decision Basis\n\nRepacking, re-wheeling and driver replacement are candidate engineering studies, not accepted modifications. Vendor hydraulic/performance evidence, material compatibility, motor/shaft restrictions, utility limits and shutdown costs are required. Equipment capacity gains cannot be added to obtain plant capacity gain.\n\nThe economic arithmetic example explicitly assumes an incremental saleable gas volume, calorific value, price and operating days. It demonstrates dimensional consistency only; feed increment is not necessarily residue-gas sales increment. No measured CAPEX, net cash flow, payback recommendation or qualified 300/325 MMscfd plant throughput is supplied.\n\n---\n\n\n## 34.5 Synthesis — Common Themes Across Case Studies\n\nThe three case studies, despite covering very different systems (offshore gas condensate platform, FPSO water-handling surrogate, onshore gas plant), share several common themes that apply broadly to production optimization:",
+      "adjacent_text_sha256": "91a966f81ec3078733cbc0a4d5238b70445b6f4da84aae01bef9a38d1a84a358",
+      "chapter_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch34_case_studies\\chapter.md",
+      "chapter_sha256": "31915396c1f45dcce06318b9bbfa53afc472968f7ac884e148673dfef4c03359",
+      "retained_numerical_evidence": {
+        "feed_percent_first_last": [
+          90.0,
+          130.0
+        ],
+        "liquids_first_last_t_hr": [
+          112.34698908391118,
+          162.27898422547517
+        ],
+        "utilization_last_pct": {
+          "inlet_gas_MSm3day": 87.02814175498352,
+          "expander_MW": 101.61502315188145,
+          "residue_comp_MW": 29.58438390034941
+        },
+        "scope": "130% feed case exceeds the declared expander-power screen; plotted rejected point is intentionally retained. These three screens are not a complete plant rating."
+      },
+      "evidence_files": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\fence_runs\\ch34_case_studies\\ch34_ngl_sweep.json",
+          "sha256": "9399046e62ab41080e398f21669cd77d58cdd7a93e45a7210bb9e1a31125e834"
+        }
+      ]
+    }
+  ]
+}

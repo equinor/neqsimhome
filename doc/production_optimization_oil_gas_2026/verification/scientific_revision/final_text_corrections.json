@@ -1,0 +1,147 @@
+[
+  {
+    "chapter": 30,
+    "before": "### 30.18.1 The Core Pattern",
+    "after": "### 30.10.1 The Core Pattern"
+  },
+  {
+    "chapter": 30,
+    "before": "### 30.18.2 Complete Digital Twin Example",
+    "after": "### 30.10.2 Complete Digital Twin Example"
+  },
+  {
+    "chapter": 30,
+    "before": "Recreate any previous model state exactly",
+    "after": "Restore supported captured fields with pinned source/dependencies and verify rerun outputs"
+  },
+  {
+    "chapter": 30,
+    "before": "solved by mechanistic models (e.g., Beggs and Brill, OLGA) or drift-flux correlations",
+    "after": "approximated by empirical correlations such as Beggs\u2013Brill or by other qualified multiphase models"
+  },
+  {
+    "chapter": 30,
+    "before": "1. **Initialize.** Assume an initial wellhead pressure $p_{wh}^{(0)}$ for each well.\n2. **Reservoir evaluation.** For each well, compute the production rate $q_i$ from the IPR at the current wellhead pressure (or, equivalently, compute the bottomhole pressure at a given rate and determine the wellhead pressure from the tubing performance curve).\n3. **Transport evaluation.** For each well, run the multiphase flow model from bottomhole to topside arrival, computing the arrival pressure, temperature, and composition at the facility inlet.\n4. **Facility evaluation.** Run the process model with the combined feeds from all wells. Compute the separator pressures, compressor loads, export rates, and \u2014 critically \u2014 the backpressure seen by each well at the topside inlet.\n5. **Convergence check.** Compare the assumed wellhead pressure $p_{wh}^{(k)}$ with the computed backpressure $p_{back}^{(k)}$ from the facility model. If $|p_{wh}^{(k)} - p_{back}^{(k)}| < \\epsilon$ for all wells, the system is converged. Otherwise, update the wellhead pressure estimate and return to step 2.\n\nThe update in step 5 may use direct substitution ($p_{wh}^{(k+1)} = p_{back}^{(k)}$) or accelerated methods (Wegstein, Broyden) to improve convergence. For most production systems, convergence is achieved in 3\u20138 iterations.\n\n",
+    "after": "1. **Initialize.** Choose a trial rate and bottomhole flowing pressure for each well, and a common manifold/facility boundary pressure.\n2. **Reservoir evaluation.** Evaluate the IPR at **bottomhole** flowing pressure. Wellhead pressure is a different physical location and requires a tubing model.\n3. **Transport evaluation.** Propagate each well through tubing, choke, flowline and riser to compute arrival pressure and temperature. Include any installed boosting equipment explicitly.\n4. **Facility evaluation.** Solve the commingled facility at its imposed pressure/control specifications and current flows. Determine the required upstream interface pressure including inlet losses.\n5. **Convergence check.** At the **same junction**, enforce $p_{\\mathrm{arrival}}-p_{\\mathrm{required}}=0$, along with each IPR/rate residual and mass/composition consistency. Update the free rate/pressure variables using a bounded root-solving method and rerun every domain.\n\nDo not compare wellhead pressure directly with topside backpressure across a pressure-dropping line. The number of interface iterations is case-dependent; monitor scaled pressure/rate residuals and all unit convergence states."
+  },
+  {
+    "chapter": 30,
+    "before": "production-grade closed-loop search",
+    "after": "bounded simulation search"
+  },
+  {
+    "chapter": 30,
+    "before": "\u2014 `optimize()` never throws:",
+    "after": "\u2014 supported evaluation failures are recorded diagnostically. Validate the returned result and handle configuration/runtime exceptions at the application boundary:"
+  },
+  {
+    "chapter": 30,
+    "before": "Because the optimizer never throws and emits schema-versioned JSON",
+    "after": "Because the optimizer exposes a trajectory and schema-versioned JSON"
+  },
+  {
+    "chapter": 30,
+    "before": "so the same problem replays identically.",
+    "after": "with repeatability dependent on identical inputs, source, solver settings and process state. Independent final replay tests this explicitly."
+  },
+  {
+    "chapter": 30,
+    "before": "| **Edge** | On-site server or gateway | < 1 s | Real-time control, safety |",
+    "after": "| **Edge** | On-site server or gateway | Measure against required deadline | Local monitoring/control application; no safety certification implied |"
+  },
+  {
+    "chapter": 30,
+    "before": "| **Fog** | Regional data center | 1\u201310 s | Production optimization |",
+    "after": "| **Fog** | Regional data center | Measure network and solver latency | Production optimization |"
+  },
+  {
+    "chapter": 30,
+    "before": "| **Cloud** | Cloud platform (Azure, AWS) | 10\u2013100 s | Analytics, reporting, ML training |",
+    "after": "| **Cloud** | Cloud platform | Measure network and solver latency | Analytics, reporting, training |"
+  },
+  {
+    "chapter": 30,
+    "before": "The NeqSim JAR is < 50 MB including all dependencies",
+    "after": "Measure the deployed classes, dependencies, optional native libraries and JVM memory for the actual distribution"
+  },
+  {
+    "chapter": 30,
+    "before": "For Level 3 and 4 digital twins, edge deployment is essential because:",
+    "after": "Local execution can support these requirements when the intended architecture needs them:"
+  },
+  {
+    "chapter": 30,
+    "before": "The following example demonstrates a complete digital twin workflow \u2014 from building the model to running the update loop:",
+    "after": "The following example executes a local model-update loop with generated inputs. It does not access a live historian or establish field-tracking accuracy:"
+  },
+  {
+    "chapter": 35,
+    "before": "The three main electrolysis technologies are:\n\nAlkaline",
+    "after": "Alkaline"
+  },
+  {
+    "chapter": 35,
+    "before": "## 35.4 Hydrogen Production from Natural Gas",
+    "after": "## 35.4 Hydrogen Production and Integration"
+  },
+  {
+    "chapter": 35,
+    "before": "where the power balance must be maintained at all times, potentially requiring load shedding (reducing production) during low-wind periods.",
+    "after": "Use a signed battery power (positive discharge, negative charge), explicit curtailment and consistent AC/DC losses. Storage capacity requires chronological operation, not only a wind-duration percentage. The power balance must be maintained at every step."
+  },
+  {
+    "chapter": 35,
+    "before": "E_{\\text{storage}}(t) &\\geq 0 \\quad \\forall t \\\\",
+    "after": "0\\leq E_{\\text{storage}}(t)&\\leq E_{\\max}\\quad\\forall t \\\\"
+  },
+  {
+    "chapter": 35,
+    "before": "This is a time-varying optimization that couples energy systems modeling with process simulation",
+    "after": "Add the storage transition $E_{k+1}=E_k+\\eta_c P_{c,k}\\Delta t-P_{d,k}\\Delta t/\\eta_d$, charge/discharge power limits, mutually exclusive modes, and initial/terminal inventories. With kW and hours, energy is kWh. Cost terms require a common discounted time basis. This time-varying optimization couples energy systems modeling with process simulation"
+  },
+  {
+    "chapter": 35,
+    "before": "Most production facilities operate at Level 1, with some advanced installations approaching Level 2.",
+    "after": "The levels are illustrative; no survey of current facility adoption is supplied."
+  },
+  {
+    "chapter": 35,
+    "before": "The barriers to higher levels of autonomy are not primarily technical but organizational, regulatory, and cultural.",
+    "after": "Barriers include technical reliability, model validity, assurance, organizational responsibilities and applicable regulation."
+  },
+  {
+    "chapter": 35,
+    "before": "thermodynamic equilibrium, equation-of-state relationships \u2014 are encoded in the simulator. These relationships hold in reality regardless of the operating conditions.",
+    "after": "thermodynamic and constitutive approximations \u2014 are represented in the simulator. Conservation laws apply generally; equilibrium and specific EOS/transport closures have validity domains."
+  },
+  {
+    "chapter": 35,
+    "before": "with minimal human intervention",
+    "after": "within the defined governance and operating scope"
+  },
+  {
+    "chapter": 20,
+    "before": "NORSOK P-002 (2014). *Process System Design*.",
+    "after": "NORSOK P-002 (2023, corrected 2024). *Process System Design*."
+  },
+  {
+    "chapter": 24,
+    "before": "NORSOK P-002 (2014). *Process System Design*.",
+    "after": "NORSOK P-002 (2023, corrected 2024). *Process System Design*."
+  },
+  {
+    "chapter": 25,
+    "before": "NORSOK P-002 (2014). *Process System Design*.",
+    "after": "NORSOK P-002 (2023, corrected 2024). *Process System Design*."
+  },
+  {
+    "chapter": 34,
+    "before": "GPSA Engineering Data Book (2024). 14th edition",
+    "after": "GPSA Engineering Data Book (2016). 14th edition"
+  },
+  {
+    "chapter": 34,
+    "before": "NORSOK P-002 (2014). *Process System Design*.",
+    "after": "NORSOK P-002 (2023, corrected 2024). *Process System Design*."
+  }
+]

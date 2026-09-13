@@ -1,0 +1,570 @@
+{
+  "changes": [
+    {
+      "chapter": 30,
+      "before": "the theoretical optimization methods of Chapter 19, the dynamic simulation capabilities of Chapter 20",
+      "after": "the optimization methods of Chapter 22, the dynamic simulation capabilities of Chapter 29"
+    },
+    {
+      "chapter": 30,
+      "before": "unable to extrapolate beyond historical operating range",
+      "after": "dependent on justified assumptions when extrapolating beyond the historical operating range"
+    },
+    {
+      "chapter": 30,
+      "before": "A useful classification framework defines four maturity levels:",
+      "after": "The following four-level classification is a teaching framework for this chapter, not an industry certification standard. Frequencies are illustrative:"
+    },
+    {
+      "chapter": 30,
+      "before": "This is the most common level in practice.",
+      "after": "Its adequacy depends on the intended decision and update interval."
+    },
+    {
+      "chapter": 30,
+      "before": "Attempting to jump directly to Level 4 without the foundation of Levels 1\u20133 invariably fails.",
+      "after": "Deploy predictive or closed-loop functions only after verifying the model, data pipeline, operating envelope and fallback behavior required by that particular function."
+    },
+    {
+      "chapter": 30,
+      "before": "The two dominant platforms are:",
+      "after": "Two examples are:"
+    },
+    {
+      "chapter": 30,
+      "before": "The most widely used historian in the oil and gas industry.",
+      "after": "An industrial time-series historian."
+    },
+    {
+      "chapter": 30,
+      "before": "| Missing values (NaN) | `pd.isna()` check | Forward-fill, interpolation, or skip |",
+      "after": "| Missing values (NaN) | Value and quality-code checks | Reject required inputs; impute only within a declared maximum gap and retain an imputation flag |"
+    },
+    {
+      "chapter": 30,
+      "before": "| Frozen values | Zero variance over time | Flag as suspicious, use last good value |",
+      "after": "| Frozen values | Age, variance and redundant measurements | Investigate; a constant value may be valid or stale |"
+    },
+    {
+      "chapter": 30,
+      "before": "| Out-of-range values | Comparison with physical limits | Clamp or reject |",
+      "after": "| Out-of-range values | Comparison with declared model limits | Reject for model acceptance; retain raw evidence |"
+    },
+    {
+      "chapter": 30,
+      "before": "| Spikes/outliers | Median filter, z-score | Remove and interpolate |",
+      "after": "| Spikes/outliers | Robust residual and quality checks | Flag and investigate before exclusion; retain raw samples |"
+    },
+    {
+      "chapter": 30,
+      "before": "The reconciled measurements are the \"most likely true values\" given the measurements and their uncertainties:",
+      "after": "With unbiased Gaussian measurement errors, positive-definite covariance and correct linear constraints, weighted least squares gives a constrained maximum-likelihood estimate:"
+    },
+    {
+      "chapter": 30,
+      "before": "Data reconciliation improves measurement quality and detects **gross errors** (instrument failures) by examining the reconciliation residuals.",
+      "after": "The inverse requires independent constraint rows; use a rank-revealing method if they are redundant. Reconciliation reduces random error under the model assumptions. Standardized residual tests can flag gross errors, but do not uniquely identify a failed instrument without sufficient redundancy."
+    },
+    {
+      "chapter": 30,
+      "before": "Overall heat transfer coefficient $UA$",
+      "after": "Heat-transfer conductance $UA$"
+    },
+    {
+      "chapter": 30,
+      "before": "Common parameters adjusted during calibration:",
+      "after": "Example calibration parameters and assumed search ranges follow. These are not allowed degradation limits; enforce identifiability, physical bounds and uncertainty:"
+    },
+    {
+      "chapter": 30,
+      "before": "The following implementation handles these requirements:",
+      "after": "The following rolling-window implementation is a local screening example. Event exclusions, quality codes, minimum stable duration and multivariable acceptance require explicit application logic; unchanged means alone cannot exclude sustained oscillations."
+    },
+    {
+      "chapter": 30,
+      "before": "\\frac{|\\bar{x}_{t} - \\bar{x}_{t-\\Delta t}|}{\\sigma_x}",
+      "after": "\\frac{|\\bar{x}_{t} - \\bar{x}_{t-\\Delta t}|}{\\max(\\sigma_x,\\sigma_{\\min})}"
+    },
+    {
+      "chapter": 30,
+      "before": "where $\\bar{x}_t$ and",
+      "after": "Here $\\sigma_{\\min}>0$ is a declared noise floor in the same units as the tag. It prevents division by zero; variance, slope and quality checks remain necessary. The quantities $\\bar{x}_t$ and"
+    },
+    {
+      "chapter": 30,
+      "pattern": "Industry experience shows that RTO systems.*?### 30\\.4\\.5",
+      "after": "RTO value must be measured against a matched baseline with uncertainty, availability and operating constraints held consistently. No field benefit dataset is supplied here. As a transparent economic sensitivity, an **assumed** 3% increment on 50,000 bbl/day at USD 100/bbl gives USD 54.75 million/year gross revenue at 365 operating days, before costs, decline, downtime and tax. It is not a predicted improvement.\n\n### 30.4.5"
+    },
+    {
+      "chapter": 30,
+      "before": "\\sum_{k=0}^{N} \\left[ (y_k",
+      "after": "\\sum_{k=0}^{N-1} \\left[ (y_k"
+    },
+    {
+      "chapter": 30,
+      "before": "where $y_k$ are the controlled variables",
+      "after": "This stage-cost form has $N$ control moves; a terminal state cost can be added separately. Use positive-semidefinite $Q,R$, a state estimate at the current time and explicit move limits. The formulation alone does not establish closed-loop stability or recursive feasibility. Here $y_k$ are the controlled variables"
+    },
+    {
+      "chapter": 30,
+      "before": "| Number of loops | Single variable | Multi-variable |",
+      "after": "| Organization | Single loops or coordinated multiloop arrangements | Explicit multivariable prediction |"
+    },
+    {
+      "chapter": 30,
+      "before": "| Model requirements | First-order + dead time | Full dynamic model |",
+      "after": "| Model requirements | Tuning information; no mandatory explicit model | Identified linear, reduced nonlinear, or full dynamic model |"
+    },
+    {
+      "chapter": 30,
+      "before": "While NeqSim does not include a built-in MPC solver, its dynamic simulation capability provides the process model that MPC requires. The integration pattern is:",
+      "after": "The pinned NeqSim source includes `ModelPredictiveController`, with an internal first-order discrete model, single- and multiple-input configurations and linear quality constraints. It is not a general nonlinear full-flowsheet MPC solver. External MPC integration remains an option; in either case validate the prediction model and accepted dynamic inventory calculation before designing the controller \\cite{neqsim2026update}. An external integration pattern is:"
+    },
+    {
+      "chapter": 30,
+      "before": "Build the NeqSim process model (Chapter 20)",
+      "after": "Build and balance-check the NeqSim dynamic process model (Chapter 29)"
+    },
+    {
+      "chapter": 30,
+      "before": "| Extrapolation | Strong (based on laws) | Weak (training domain) |",
+      "after": "| Extrapolation | Limited by constitutive models and phase/geometry validity | Limited by data and imposed structure |"
+    },
+    {
+      "chapter": 30,
+      "before": "| Data requirements | Minimal (just compositions) | Large (months of operations) |",
+      "after": "| Data requirements | Fluid characterization, geometry, boundaries and equipment evidence | Representative input/output data and uncertainty |"
+    },
+    {
+      "chapter": 30,
+      "before": "| Uncertainty | From model structure | From data quality |",
+      "after": "| Uncertainty | Inputs, structure, parameters and numerics | Data, model structure, training and distribution shift |"
+    },
+    {
+      "chapter": 30,
+      "before": "| Adaptation | Requires re-calibration | Automatic (online learning) |",
+      "after": "| Adaptation | Controlled recalibration | Retraining if implemented and independently evaluated |"
+    },
+    {
+      "chapter": 30,
+      "before": "- Extrapolates better than pure ML (the physics model handles novel conditions)\n- Fits better than pure physics (the ML model captures unmodeled effects)\n- Requires less training data than pure ML (the physics model provides a strong prior)",
+      "after": "- Can reduce residual error when the physical model supplies useful structure\n- Requires held-out and extrapolation tests; improved fit is not guaranteed\n- Must preserve physical bounds and recompute conservation-consistent outputs"
+    },
+    {
+      "chapter": 30,
+      "before": "where $\\eta_{\\text{NeqSim}}$ is the polytropic efficiency",
+      "after": "Constrain the corrected efficiency to its justified range within $(0,1]$ and rerun compression with that efficiency; independently correcting power and temperature can violate energy conservation. Here $\\eta_{\\text{NeqSim}}$ is the polytropic efficiency"
+    },
+    {
+      "chapter": 30,
+      "before": "provide the same predictions in milliseconds",
+      "after": "approximate the predictions at lower evaluation cost, with a measured error envelope"
+    },
+    {
+      "chapter": 30,
+      "before": "| Pressure | bara | 1\u2013700 | Must be positive; wellhead < reservoir; arrival > separator |",
+      "after": "| Pressure | bara | Example envelope 1\u2013700 | Positive absolute pressure; compare boundaries at the same physical junction |"
+    },
+    {
+      "chapter": 30,
+      "before": "| Temperature | K | 250\u2013500 | Must satisfy geothermal gradient; arrival > hydrate formation |",
+      "after": "| Temperature | K | Example envelope 250\u2013500 | Positive absolute temperature; separate heat-transfer and hydrate-risk assessment |"
+    },
+    {
+      "chapter": 30,
+      "before": "The fundamental challenge of integrated production system optimization is **computational cost**.",
+      "after": "A possible challenge of integrated production system optimization is **computational cost**, which must be profiled on the actual model."
+    },
+    {
+      "chapter": 30,
+      "pattern": "A single evaluation of the coupled system requires.*?These limitations motivate",
+      "after": "A coupled evaluation includes each domain solve and its interface iterations. Cost depends on model size, numerical tolerances, state reuse and hardware. Measure median and tail latency, convergence failures and iteration counts before selecting an architecture. Independent scenarios may be parallelized with isolated models; gradients add perturbation evaluations. If evaluation latency exceeds the allowed decision interval, reduce model cost or use a qualified surrogate.\n\nThese considerations motivate"
+    },
+    {
+      "chapter": 30,
+      "pattern": "\\| Approach \\| Evaluation Time.*?### 30\\.14\\.2",
+      "after": "| Approach | Qualification needed |\n|---|---|\n| Full process/reservoir/flow model | Balance closure, constitutive validity, calibration and measured runtime |\n| Reduced model | Approximation error over the intended envelope |\n| Machine-learning surrogate | Independent prediction error, constraint classification and distribution-shift checks |\n| Hybrid model | Both physics closure and residual-model validation |\n\nA detailed model is a reference within its assumptions, not a guarantee of accuracy or extrapolation. Selectively replacing expensive components can reduce cost; benchmark the complete coupled loop rather than combining unsupported timing estimates.\n\n### 30.14.2"
+    },
+    {
+      "chapter": 30,
+      "before": "This preserves the physical consistency of the interface contracts.",
+      "after": "The same contracts can be checked, but interface bounds alone do not enforce energy balance, equilibrium or hydraulic consistency."
+    },
+    {
+      "chapter": 30,
+      "before": "Process simulators are ideal sources of training data for surrogates, because every data point they produce is **physically consistent** \u2014 it satisfies mass and energy conservation, thermodynamic equilibrium, and equipment constraints. This is a crucial advantage over empirical data, which may contain measurement errors, instrument failures, and missing values.",
+      "after": "Simulators provide reproducible training cases under declared constitutive assumptions. Each case must be checked: returned values can be unconverged, physically inconsistent or capacity-infeasible. Record solve status, independent balances and constraint margins separately. Agreement with simulator data is not validation against plant measurements."
+    },
+    {
+      "chapter": 30,
+      "before": "Remove any samples where the simulation failed to converge or produced non-physical results.",
+      "after": "Exclude failed or non-physical outputs from response regression, but preserve the input, failure reason and infeasibility label for domain and feasibility assessment."
+    },
+    {
+      "chapter": 30,
+      "before": "The result is slower but guaranteed to be physically consistent.",
+      "after": "Apply the same convergence, balance and constraint gates to the full-model result. If these fail, return an unresolved case rather than an accepted recommendation."
+    },
+    {
+      "chapter": 30,
+      "pattern": "This architecture ensures that the digital twin \\*\\*never produces physically impossible results\\*\\*.*?---",
+      "after": "This architecture makes acceptance conditional on explicit evidence. Monitor fallback frequency, failed full-model solves and accepted prediction error; there is no universal acceptable fallback percentage.\n\n---"
+    },
+    {
+      "chapter": 30,
+      "pattern": "The response might be:.*?### 30\\.15\\.4",
+      "after": "The response must report the two replayed model states, power and product changes with units, product-quality margins, the economic price/time basis and unresolved evidence. No numerical sensitivity has been executed for this hypothetical platform, so neither an uplift nor a monetary saving is asserted here. The small runnable compression fixture below demonstrates variable access; its result does not establish platform-wide sensitivity.\n\n### 30.15.4"
+    },
+    {
+      "chapter": 30,
+      "before": "the single factor most limiting current production",
+      "after": "the active constraints limiting the current objective"
+    },
+    {
+      "chapter": 30,
+      "before": "so the agent cannot propose or evaluate solutions that violate them.",
+      "after": "and the application rejects a final recommendation that violates them. Search algorithms can evaluate infeasible trial points; finite penalties alone do not enforce hard acceptance."
+    },
+    {
+      "chapter": 30,
+      "before": "Implementing a digital twin is a multi-year journey. A practical roadmap:",
+      "after": "The following durations are assumed planning examples, not measured implementation benchmarks. Tailor each stage to data access, model complexity and required assurance:"
+    },
+    {
+      "chapter": 30,
+      "before": "## 30.17 Case Study: Platform Digital Twin",
+      "after": "## 30.17 Proposed Platform Integration and Acceptance Plan"
+    },
+    {
+      "chapter": 30,
+      "before": "The tag mapping includes 45 measurement points across the platform.",
+      "after": "The proposed design assumes 45 measurement points; no authenticated historian dataset is supplied."
+    },
+    {
+      "chapter": 30,
+      "before": "The NeqSim model is structured as a `ProcessModel` with four areas:",
+      "after": "The proposed NeqSim architecture uses a `ProcessModel` with separately configured areas:"
+    },
+    {
+      "chapter": 30,
+      "pattern": "After six months of Level 2 operation, the digital twin identified:.*?---",
+      "after": "No six-month operating record is supplied. A field acceptance study would compare independently reconciled measurements against model predictions across operating regimes, normalize compressor performance for composition/speed, separate apparent exchanger fouling from measurement bias, and independently replay candidate pressure changes. Report confidence intervals and net value only after obtaining these data. The reproduced example in this chapter validates local model/automation behavior, not field degradation diagnosis or an observed production uplift.\n\n---"
+    },
+    {
+      "chapter": 30,
+      "before": "Most facilities today operate at Level 1\u20132; Level 3\u20134 is the frontier.",
+      "after": "These levels describe this chapter\u2019s teaching framework, not a surveyed distribution of facilities."
+    },
+    {
+      "chapter": 30,
+      "before": "Industry experience shows 2\u20135% production gains and 5\u201315% energy savings.",
+      "after": "Benefits require a matched field baseline and verified economics."
+    },
+    {
+      "chapter": 30,
+      "before": "(best extrapolation and fit)",
+      "after": "(subject to physical and statistical validation)"
+    },
+    {
+      "chapter": 30,
+      "before": "fallback architectures ensure physical consistency.",
+      "after": "fallback calculations require the same physical acceptance gates."
+    },
+    {
+      "chapter": 30,
+      "before": "snapshots of the entire simulation state.",
+      "after": "snapshots of the state supported by the serialization schema."
+    },
+    {
+      "chapter": 30,
+      "before": "The state classes capture the complete specification of a process or plant model: fluid composition, equipment parameters, controller tuning, connection topology, and all user-set values.",
+      "after": "The state classes capture supported fluid, equipment, connection and input fields. External resources, custom subclasses and uncaptured fields require separate provenance. Verify a restored model by rerunning it and comparing physical outputs and acceptance checks, rather than assuming complete coverage of every possible object."
+    },
+    {
+      "chapter": 30,
+      "before": "## 30.10 Lifecycle State Management for Digital Twins",
+      "after": "## 30.18 Lifecycle State Management Extensions"
+    },
+    {
+      "chapter": 30,
+      "before": "### 30.10.1",
+      "after": "### 30.18.1"
+    },
+    {
+      "chapter": 30,
+      "before": "### 30.10.2",
+      "after": "### 30.18.2"
+    },
+    {
+      "chapter": 30,
+      "before": "### 30.10.3",
+      "after": "### 30.18.3"
+    },
+    {
+      "chapter": 30,
+      "before": "### 30.10.4",
+      "after": "### 30.18.4"
+    },
+    {
+      "chapter": 30,
+      "before": "### 30.10.5",
+      "after": "### 30.18.5"
+    },
+    {
+      "chapter": 31,
+      "before": "Sections 29.2\u201329.3",
+      "after": "Sections 31.2\u201331.3"
+    },
+    {
+      "chapter": 31,
+      "before": "Sections 29.4\u201329.5",
+      "after": "Sections 31.4\u201331.5"
+    },
+    {
+      "chapter": 31,
+      "before": "K_i^{(n+1)} = K_i^{(n)} \\cdot \\frac{\\phi_i^L(T, P, x)}{\\phi_i^V(T, P, y)}",
+      "after": "K_i^{(n+1)} = \\frac{\\phi_i^L(T, P, x^{(n)})}{\\phi_i^V(T, P, y^{(n)})}"
+    },
+    {
+      "chapter": 31,
+      "before": "2. Solve the Rachford\u2013Rice equation for $\\beta$ (Newton's method on the 1-D equation)",
+      "after": "2. Check $h(0)$ and $h(1)$ for a physical two-phase bracket, then solve for $\\beta$ with a safeguarded method. A boundary phase state requires stability assessment rather than forcing an interior root."
+    },
+    {
+      "chapter": 31,
+      "before": "Newton's method converges quadratically \u2014 each iteration roughly doubles the number of correct digits.",
+      "after": "Near a nonsingular smooth root, exact Newton steps converge quadratically. Singular critical-point equations, damping, finite precision and phase changes can reduce that rate."
+    },
+    {
+      "chapter": 31,
+      "before": "NeqSim uses a hybrid strategy:\n\n1. Start with successive substitution for 3\u20135 iterations to approach the solution\n2. Switch to Newton's method for rapid convergence to tight tolerance",
+      "after": "The pinned implementation uses successive-substitution and derivative-based paths with safeguards; the switching criteria depend on the solver and state. The equations above explain the mathematical methods, not a universal fixed 3\u20135-iteration schedule."
+    },
+    {
+      "chapter": 31,
+      "before": "The outer loop uses the secant method or Brent's method for robust convergence.",
+      "after": "The current `PHflash` includes heat-capacity derivative corrections and safeguarded temperature updates, with a second-order option. The precise algorithm is specification- and path-dependent; check target enthalpy/entropy independently after the solve."
+    },
+    {
+      "chapter": 31,
+      "pattern": "NeqSim uses the following convergence criteria for flash calculations:.*?These tight tolerances ensure.*?---",
+      "after": "Declare acceptance criteria explicitly: normalized component balances, phase composition sums, fugacity equality for non-negligible components, and the specified enthalpy/entropy residual. Internal stopping tolerances differ by solver path and are not a universal promise of 8\u201310 significant digits. Numerical residual accuracy also does not establish EOS accuracy against measurements. The separate benchmark notebook supplies independent property comparisons; report both errors.\n\n---"
+    },
+    {
+      "chapter": 31,
+      "before": "Rewriting in terms of the compressibility factor $Z = PV/(nRT)$:",
+      "after": "Here $V$ in the EOS is molar volume, so the compressibility factor is $Z = PV/(RT)$:"
+    },
+    {
+      "chapter": 31,
+      "before": "The cubic equation has three roots in the two-phase region:",
+      "after": "For a fixed composition and temperature/pressure, the cubic can have one or three real roots. Where three admissible roots exist,"
+    },
+    {
+      "chapter": 31,
+      "before": "NeqSim computes all roots of the cubic and selects the appropriate root for each phase automatically. In the single-phase region (above the critical temperature or below the bubble-point pressure), only one real root exists.",
+      "after": "Root multiplicity is not equivalent to mixture phase stability. A metastable cubic root can exist even when the equilibrium system is single phase; mixture phase splitting requires composition-dependent fugacities and stability analysis. NeqSim\u2019s EOS phase solver uses numerical volume/root logic, so do not infer its implementation from Cardano\u2019s formula alone."
+    },
+    {
+      "chapter": 31,
+      "before": "Volume translation does not affect the vapor-liquid equilibrium (K-values, phase split) \u2014 it only corrects the molar volumes and densities.",
+      "after": "A thermodynamically consistent, composition-linear constant P\u00e9neloux translation can preserve phase equilibrium while changing volumes. Temperature-dependent or other translation formulations require consistent property derivatives; the statement is not universal for every density correction."
+    },
+    {
+      "chapter": 31,
+      "pattern": "NeqSim handles this by:\\n\\n1\\. Monitoring the discriminant.*?---",
+      "after": "Use phase stability, finite physical volumes and continuity checks near critical conditions. The current EOS implementation uses ordinary double precision; no arbitrary-precision root-solving guarantee is made. Density continuity can help diagnose a branch switch, but must not suppress a genuine phase transition.\n\n---"
+    },
+    {
+      "chapter": 31,
+      "before": "For an acyclic flowsheet (no recycles), the sequential modular approach converges in a single pass",
+      "after": "For a topologically ordered acyclic flowsheet with no implicit specification feedback and independently converged equipment, one process pass can suffice"
+    },
+    {
+      "chapter": 31,
+      "before": "\\frac{q}{1 - q} \\left[ g(x^{(n)}) - x^{(n)} \\right]",
+      "after": "\\frac{1}{1 - q} \\left[ g(x^{(n)}) - x^{(n)} \\right]"
+    },
+    {
+      "chapter": 31,
+      "before": "Wegstein requires two prior evaluations (direct substitution for the first two iterations) and is bounded: $q$ is clamped to $[-5, 0.9]$ to prevent oscillation.",
+      "after": "Here $q$ is the secant slope of $g$, not the alternative Wegstein mixing-factor convention. Guard near-zero denominators and bound the extrapolated step. Two evaluations initialize the slope; step limiting reduces risk but does not guarantee convergence."
+    },
+    {
+      "chapter": 31,
+      "before": "Broyden's method converges super-linearly",
+      "after": "Under appropriate local smoothness and nonsingularity conditions, Broyden's method can converge super-linearly"
+    },
+    {
+      "chapter": 31,
+      "pattern": "The `Recycle` class checks convergence based on.*?### 31\\.5\\.3",
+      "after": "Use the current API\u2019s actual residual definitions \\cite{neqsim2026update}. `getErrorFlow()` is legacy: below 1 kg/s it is an absolute kg/s change, while at or above 1 kg/s it is a percentage change. `getAbsoluteFlowChange()` is consistently kg/hr. Temperature and pressure errors are sums of phase-relative percentage changes; composition error sums absolute first-phase mole-fraction changes. Default tolerance fields are 0.01, not a universal normalized $10^{-4}$ criterion.\n\nSet explicit tolerances and independently compare component flows, total mass and energy. The optional absolute-flow criterion is an **OR** with the legacy flow test; it does not replace the temperature, pressure or composition checks. An internally small tear residual alone cannot certify whole-flowsheet closure.\n\n### 31.5.3"
+    },
+    {
+      "chapter": 31,
+      "before": "Lower values of $\\alpha$ increase stability at the cost of slower convergence.",
+      "after": "Smaller $\\alpha$ can damp oscillation but cannot stabilize every divergent mapping; a scalar positive slope greater than one remains divergent for any positive under-relaxation."
+    },
+    {
+      "chapter": 31,
+      "before": "NeqSim's `RecycleController` implements adaptive damping: it starts with $\\alpha = 1.0$ (no damping) and reduces $\\alpha$ if oscillation is detected. The damping factor is increased again when the iterations show monotonic convergence.",
+      "after": "Acceleration and adaptive settings belong to the configured recycle solver. `RecycleController` coordinates recycle priorities and convergence; do not treat it as a promise of this particular damping schedule."
+    },
+    {
+      "chapter": 31,
+      "before": "If the recycle does not converge within the maximum iterations, the simulation reports a warning and uses the last computed values.",
+      "after": "Failure behavior depends on the execution path; current implicit-loop convergence can throw an exception. In all cases reject the last iterate as an accepted process solution unless independent convergence and balance checks pass."
+    },
+    {
+      "chapter": 31,
+      "before": "The convergence is super-linear (order approximately 1.618, the golden ratio).",
+      "after": "The scalar secant method has local order approximately 1.618 for a smooth simple root; discontinuities, clipping and inaccurate inner solves invalidate that result."
+    },
+    {
+      "chapter": 31,
+      "before": "Set the recycle tolerance to be at least 10\u00d7 tighter than the adjuster tolerance",
+      "after": "Scale residuals into comparable target-error units and show that inner-loop error is small relative to the target tolerance; a factor of ten can be a starting heuristic"
+    },
+    {
+      "chapter": 31,
+      "before": "A distillation column with $N$ theoretical stages presents a coupled system of $N \\times (2C + 3)$ equations: $C$ component material balances, $C$ equilibrium relations (K-values), one energy balance, one summation equation ($\\sum y_i = 1$), and one hydraulic equation per stage.",
+      "after": "A fixed-pressure equilibrium stage commonly has $2C+3$ MESH equations: $C$ component balances, $C$ equilibrium relations, two composition sums and one energy balance. The count changes with chosen variables, reactions, phases, hydraulics and boundary specifications. Pressure-drop equations are additional when pressure is not prescribed."
+    },
+    {
+      "chapter": 31,
+      "before": "Typical convergence requires 3\u20138 outer iterations, each containing 10\u201330 inner iterations.",
+      "after": "Iteration counts depend on initialization, properties and the particular algorithm; no timing or iteration benchmark is implied by this description."
+    },
+    {
+      "chapter": 31,
+      "before": "NeqSim's `DistillationColumn` class supports three solver types, selectable via `setSolverType()`:",
+      "after": "The pinned `DistillationColumn.SolverType` includes `DIRECT_SUBSTITUTION`, `DAMPED_SUBSTITUTION`, `INSIDE_OUT`, `MATRIX_INSIDE_OUT`, `WEGSTEIN`, `SUM_RATES`, `NEWTON`, `NAPHTALI_SANDHOLM`, `MESH_RESIDUAL` and `AUTO`. `NEWTON` is a tray-temperature accelerator, whereas `NAPHTALI_SANDHOLM` addresses full MESH blocks. Algorithm names do not guarantee convergence order on a particular case \\cite{neqsim2026update}."
+    },
+    {
+      "chapter": 31,
+      "before": "`SEQUENTIAL`",
+      "after": "`DIRECT_SUBSTITUTION`"
+    },
+    {
+      "chapter": 31,
+      "before": "`DAMPED`",
+      "after": "`DAMPED_SUBSTITUTION`"
+    },
+    {
+      "chapter": 31,
+      "before": "| `DAMPED_SUBSTITUTION` | Between linear and quadratic | Moderate-high | Non-ideal mixtures, tight specs |",
+      "after": "| `DAMPED_SUBSTITUTION` | Typically linear; no quadratic guarantee | Case-dependent | Damping oscillating substitutions |"
+    },
+    {
+      "chapter": 31,
+      "before": "| `INSIDE_OUT` | Super-linear (outer) | Moderate | Industrial columns, wide-boiling, high stage count |",
+      "after": "| `INSIDE_OUT` | Case-dependent | Case-dependent | Test with matched physical acceptance gates |"
+    },
+    {
+      "chapter": 31,
+      "pattern": "NeqSim tracks three convergence metrics for distillation columns:.*?If the column fails",
+      "after": "Check `solved()` and `getSolveStatus()`, plus temperature, component, energy and raw MESH residual diagnostics. `RIGOROUS_CONVERGED` means the **enabled** gates passed; product reconciliation or fallback states are distinct. Explicitly enable required energy and MESH gates, specify their tolerances, and independently reconcile feed, side draws, products and applied duties. A temperature-converged profile is insufficient. Chapter 33 supplies a duty-specified, balance-checked example.\n\nIf the column fails"
+    },
+    {
+      "chapter": 31,
+      "before": "NeqSim uses **explicit Euler** integration for dynamic simulation:",
+      "after": "Explicit Euler is one supported integration strategy and illustrates the time-discretization issue:"
+    },
+    {
+      "chapter": 31,
+      "before": "\\Delta t \\leq \\frac{2}{|\\lambda_{\\max}|}",
+      "after": "|1+\\Delta t\\,\\lambda_j|<1\\quad\\text{for every decaying linear mode }j"
+    },
+    {
+      "chapter": 31,
+      "before": "where $\\lambda_{\\max}$ is the largest eigenvalue of the Jacobian of $\\mathbf{f}$.",
+      "after": "Here $\\lambda_j$ are Jacobian eigenvalues. For real negative eigenvalues this reduces to $\\Delta t<2/\\max_j|\\lambda_j|$; complex modes require the full stability-region condition."
+    },
+    {
+      "chapter": 31,
+      "before": "**Implicit methods** (backward Euler, trapezoidal rule) are unconditionally stable but require solving a nonlinear system at each time step. NeqSim does not currently implement implicit dynamic integration; for stiff systems, the user must select a sufficiently small time step.",
+      "after": "**Backward Euler and the trapezoidal rule** are A-stable on the linear test equation, not unconditionally accurate or convergent for every nonlinear problem. The pinned source provides `ExplicitEulerIntegrator`, `RK4Integrator`, `AdaptiveRK45Integrator` and `BDFIntegrator`, plus a process semi-implicit mode. Strategy support is equipment-dependent: selecting one does not retrofit every unit with a new differential model. Check dynamic capability/activation reports and perform time-step refinement and independent inventory/energy budgets \\cite{neqsim2026update}."
+    },
+    {
+      "chapter": 31,
+      "pattern": "During dynamic simulation, the `ProcessSystem` explicitly runs.*?### 31\\.8\\.5",
+      "after": "Execution order depends on equipment, attached controllers and the selected process stepping mode. A measurement at the start of a step can control that step\u2019s boundary flow; it does not necessarily impose a full one-step sensor delay. Distinguish sampled-data zero-order hold, actual transport delay and algebraic recycle ordering. Use a fresh identifier for each physical step and do not integrate the same inventory twice. Chapter 29 demonstrates the order used in its checked vessel calculation.\n\n### 31.8.5"
+    },
+    {
+      "chapter": 31,
+      "pattern": "NeqSim uses a density-based phase identification algorithm:.*?### 31\\.9\\.6",
+      "after": "Phase labels must be checked against composition, density and stability. No fixed pseudo-critical density threshold establishes all mixture phase identities, especially near a critical point where density differences vanish. For water/hydrocarbon systems distinguish the aqueous phase by composition and the enabled phase model; do not infer it from a generic \u201cliquid\u201d label alone.\n\n### 31.9.6"
+    },
+    {
+      "chapter": 31,
+      "pattern": "This can reduce the per-evaluation cost by 50\u201380%, because:.*?Warm-starting is implicit",
+      "after": "Measure speed and accepted residuals on the actual model. Warm starts can select a metastable branch or retain stale equipment state, so independent final replay remains necessary.\n\nWarm-starting is implicit"
+    },
+    {
+      "chapter": 31,
+      "before": "The optimizer should therefore reuse the same `ProcessSystem` object rather than constructing a new one for each evaluation.",
+      "after": "A serial optimizer may reuse a process with carefully reset inputs; independent scenarios and acceptance replay should use isolated fresh models or verified restored states. Never share mutable equipment between concurrent evaluations."
+    },
+    {
+      "chapter": 31,
+      "before": "recycle tolerance should be at least 10\u00d7 tighter than adjuster tolerance.",
+      "after": "inner-loop uncertainty must be small relative to the target tolerance after consistent scaling."
+    },
+    {
+      "chapter": 31,
+      "before": "can reduce Monte Carlo computation time by one to two orders of magnitude",
+      "after": "can reduce computation time, with speedup established by matched accepted-case benchmarks"
+    },
+    {
+      "chapter": 31,
+      "before": "Controller-equipment interaction introduces a one-step delay that must be considered in tuning.",
+      "after": "Controller scan order and transport delays must be represented explicitly and checked during tuning."
+    },
+    {
+      "chapter": 31,
+      "before": "a separator at a temperature below the hydrate formation temperature, or a compressor with outlet pressure below inlet pressure",
+      "after": "an adjuster target outside a rigorously scanned achievable range with bounded inputs"
+    },
+    {
+      "chapter": 31,
+      "before": "Monte Carlo analysis from Chapter 28, Section 28.6.3",
+      "after": "Monte Carlo analysis from Chapter 27, Section 27.11"
+    },
+    {
+      "chapter": 31,
+      "pattern": "For a 10-component system, a single TP flash takes.*?### 31\\.11\\.2",
+      "after": "Count actual flash calls and measure warmed, repeated timings for the specified model, component list and machine. Equipment and flash iterations do not imply a universal 5,000-call count or fixed millisecond latency. Report failed cases separately from accepted evaluations.\n\n### 31.11.2"
+    },
+    {
+      "chapter": 31,
+      "before": "This can reduce the number of flash evaluations by 30\u201360% in recycle-intensive flowsheets.",
+      "after": "The benefit and cache thresholds are equipment-specific. This revision found that a separator\u2019s $10^{-6}$ state cache could obscure a tighter $10^{-7}$ recycle check; the notebook now allocates a fresh separator per tear iteration and independently checks closure."
+    },
+    {
+      "chapter": 31,
+      "before": "On a modern workstation with 8\u201316 cores, parallel execution reduces Monte Carlo computation time by a factor of 6\u201312\u00d7.",
+      "after": "Measure scaling on isolated model copies under bounded thread/JVM counts; no universal speedup follows from the number of cores."
+    },
+    {
+      "chapter": 31,
+      "before": "A tolerance of $10^{-6}$ on a recycle is unnecessarily tight for production optimization where the decision variables change by 1% per iteration; $10^{-3}$ may suffice",
+      "after": "Choose recycle tolerances from allowed objective/constraint error, particularly near active limits; decision-step size alone does not establish an adequate tolerance"
+    },
+    {
+      "chapter": 31,
+      "before": "if only density is needed, `init(2)` is faster",
+      "after": "initialize the required thermodynamic state and explicitly check the requested property; benchmark before suppressing transport initialization"
+    },
+    {
+      "chapter": 31,
+      "before": "lumping C7+ into 3\u20135 pseudo-components rather than 20 reduces cost by 10\u201320\u00d7",
+      "after": "lumping can reduce cost but requires renewed property and phase-behavior validation"
+    }
+  ],
+  "unmatched": [
+    [
+      30,
+      "mechanistic multiphase flow correlations"
+    ]
+  ]
+}

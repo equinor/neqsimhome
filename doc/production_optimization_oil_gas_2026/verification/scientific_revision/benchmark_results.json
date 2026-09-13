@@ -1,0 +1,1564 @@
+{
+  "generated_at": "2026-09-12T19:56:03.833665+00:00",
+  "source_revision": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "status": "passed",
+  "comparisons": [
+    {
+      "name": "SRK methane density",
+      "actual": 0.6442638531766361,
+      "expected": 0.64425426,
+      "absolute_error": 9.59317663618009e-06,
+      "relative_error": 1.4890358095855028e-05,
+      "acceptance_bound_absolute": 0.019327627799999997,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_1bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 300.0,
+        "P_bara": 1.0,
+        "density_kg_m3": 0.64425426,
+        "phase": "vapor",
+        "source_file": "references\\nist\\methane_1bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "SRK methane density",
+      "actual": 0.5517697997967969,
+      "expected": 0.55178767,
+      "absolute_error": 1.7870203203096402e-05,
+      "relative_error": 3.238601399537689e-05,
+      "acceptance_bound_absolute": 0.016553630099999998,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_1bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 350.0,
+        "P_bara": 1.0,
+        "density_kg_m3": 0.55178767,
+        "phase": "vapor",
+        "source_file": "references\\nist\\methane_1bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "SRK methane density",
+      "actual": 0.4825720517177787,
+      "expected": 0.48259833,
+      "absolute_error": 2.627828222129258e-05,
+      "relative_error": 5.445166422621599e-05,
+      "acceptance_bound_absolute": 0.0144779499,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_1bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 400.0,
+        "P_bara": 1.0,
+        "density_kg_m3": 0.48259833,
+        "phase": "vapor",
+        "source_file": "references\\nist\\methane_1bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "SRK methane density",
+      "actual": 34.858307969273575,
+      "expected": 34.971714,
+      "absolute_error": 0.11340603072642352,
+      "relative_error": 0.003242793039152257,
+      "acceptance_bound_absolute": 1.0491514199999998,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_50bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 300.0,
+        "P_bara": 50.0,
+        "density_kg_m3": 34.971714,
+        "phase": "supercritical",
+        "source_file": "references\\nist\\methane_50bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "SRK methane density",
+      "actual": 28.620764233360337,
+      "expected": 28.74284,
+      "absolute_error": 0.12207576663966435,
+      "relative_error": 0.00424717135257561,
+      "acceptance_bound_absolute": 0.8622852,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_50bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 350.0,
+        "P_bara": 50.0,
+        "density_kg_m3": 28.74284,
+        "phase": "supercritical",
+        "source_file": "references\\nist\\methane_50bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "SRK methane density",
+      "actual": 24.487187787475957,
+      "expected": 24.597747,
+      "absolute_error": 0.11055921252404133,
+      "relative_error": 0.004494688579569557,
+      "acceptance_bound_absolute": 0.7379324099999999,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_50bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 400.0,
+        "P_bara": 50.0,
+        "density_kg_m3": 24.597747,
+        "phase": "supercritical",
+        "source_file": "references\\nist\\methane_50bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "SRK methane density",
+      "actual": 74.10742321808702,
+      "expected": 75.175486,
+      "absolute_error": 1.0680627819129853,
+      "relative_error": 0.01420759397435735,
+      "acceptance_bound_absolute": 2.25526458,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_100bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 300.0,
+        "P_bara": 100.0,
+        "density_kg_m3": 75.175486,
+        "phase": "supercritical",
+        "source_file": "references\\nist\\methane_100bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "SRK methane density",
+      "actual": 58.57403289082552,
+      "expected": 59.261246,
+      "absolute_error": 0.6872131091744791,
+      "relative_error": 0.01159633243577901,
+      "acceptance_bound_absolute": 1.77783738,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_100bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 350.0,
+        "P_bara": 100.0,
+        "density_kg_m3": 59.261246,
+        "phase": "supercritical",
+        "source_file": "references\\nist\\methane_100bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "SRK methane density",
+      "actual": 49.2293742110871,
+      "expected": 49.735904,
+      "absolute_error": 0.5065297889128999,
+      "relative_error": 0.01018438890570683,
+      "acceptance_bound_absolute": 1.4920771199999998,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_100bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 400.0,
+        "P_bara": 100.0,
+        "density_kg_m3": 49.735904,
+        "phase": "supercritical",
+        "source_file": "references\\nist\\methane_100bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "PR methane density",
+      "actual": 0.6444430950090969,
+      "expected": 0.64425426,
+      "absolute_error": 0.00018883500909694373,
+      "relative_error": 0.0002931063414263551,
+      "acceptance_bound_absolute": 0.019327627799999997,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_1bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 300.0,
+        "P_bara": 1.0,
+        "density_kg_m3": 0.64425426,
+        "phase": "vapor",
+        "source_file": "references\\nist\\methane_1bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "PR methane density",
+      "actual": 0.551891114590024,
+      "expected": 0.55178767,
+      "absolute_error": 0.00010344459002409323,
+      "relative_error": 0.00018747173169725455,
+      "acceptance_bound_absolute": 0.016553630099999998,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_1bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 350.0,
+        "P_bara": 1.0,
+        "density_kg_m3": 0.55178767,
+        "phase": "vapor",
+        "source_file": "references\\nist\\methane_1bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "PR methane density",
+      "actual": 0.4826567415065886,
+      "expected": 0.48259833,
+      "absolute_error": 5.841150658858485e-05,
+      "relative_error": 0.00012103545113507717,
+      "acceptance_bound_absolute": 0.0144779499,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_1bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 400.0,
+        "P_bara": 1.0,
+        "density_kg_m3": 0.48259833,
+        "phase": "vapor",
+        "source_file": "references\\nist\\methane_1bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "PR methane density",
+      "actual": 35.25541405613884,
+      "expected": 34.971714,
+      "absolute_error": 0.28370005613884075,
+      "relative_error": 0.008112271996129237,
+      "acceptance_bound_absolute": 1.0491514199999998,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_50bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 300.0,
+        "P_bara": 50.0,
+        "density_kg_m3": 34.971714,
+        "phase": "supercritical",
+        "source_file": "references\\nist\\methane_50bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "PR methane density",
+      "actual": 28.87438688904508,
+      "expected": 28.74284,
+      "absolute_error": 0.1315468890450795,
+      "relative_error": 0.004576683760027871,
+      "acceptance_bound_absolute": 0.8622852,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_50bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 350.0,
+        "P_bara": 50.0,
+        "density_kg_m3": 28.74284,
+        "phase": "supercritical",
+        "source_file": "references\\nist\\methane_50bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "PR methane density",
+      "actual": 24.65978844561189,
+      "expected": 24.597747,
+      "absolute_error": 0.062041445611892954,
+      "relative_error": 0.0025222409845866356,
+      "acceptance_bound_absolute": 0.7379324099999999,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_50bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 400.0,
+        "P_bara": 50.0,
+        "density_kg_m3": 24.597747,
+        "phase": "supercritical",
+        "source_file": "references\\nist\\methane_50bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "PR methane density",
+      "actual": 75.26331213466115,
+      "expected": 75.175486,
+      "absolute_error": 0.08782613466114242,
+      "relative_error": 0.0011682815680252791,
+      "acceptance_bound_absolute": 2.25526458,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_100bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 300.0,
+        "P_bara": 100.0,
+        "density_kg_m3": 75.175486,
+        "phase": "supercritical",
+        "source_file": "references\\nist\\methane_100bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "PR methane density",
+      "actual": 59.33206785621396,
+      "expected": 59.261246,
+      "absolute_error": 0.07082185621396064,
+      "relative_error": 0.0011950787571014057,
+      "acceptance_bound_absolute": 1.77783738,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_100bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 350.0,
+        "P_bara": 100.0,
+        "density_kg_m3": 59.261246,
+        "phase": "supercritical",
+        "source_file": "references\\nist\\methane_100bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "PR methane density",
+      "actual": 49.75284163102639,
+      "expected": 49.735904,
+      "absolute_error": 0.01693763102639423,
+      "relative_error": 0.0003405513857030573,
+      "acceptance_bound_absolute": 1.4920771199999998,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent reference EOS",
+      "reference": "references\\nist\\methane_100bar_300_400K.tsv",
+      "case": {
+        "fluid": "methane",
+        "T_K": 400.0,
+        "P_bara": 100.0,
+        "density_kg_m3": 49.735904,
+        "phase": "supercritical",
+        "source_file": "references\\nist\\methane_100bar_300_400K.tsv"
+      }
+    },
+    {
+      "name": "dilute methane ideal-gas density",
+      "actual": 0.0006431775909324484,
+      "expected": 0.000643154814959577,
+      "absolute_error": 2.277597287137466e-08,
+      "relative_error": 3.541289335259996e-05,
+      "acceptance_bound_absolute": 6.43154814959577e-08,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent analytical limit",
+      "reference": "pV=nRT; R=8.31446261815324 J/(mol K), methane M=0.01604246 kg/mol",
+      "case": {
+        "T_K": 300,
+        "P_bara": 0.001
+      }
+    },
+    {
+      "name": "dilute methane ideal-gas density",
+      "actual": 0.0005512946228334653,
+      "expected": 0.0005512755556796374,
+      "absolute_error": 1.9067153827828295e-08,
+      "relative_error": 3.4587337732255234e-05,
+      "acceptance_bound_absolute": 5.5127555567963745e-08,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent analytical limit",
+      "reference": "pV=nRT; R=8.31446261815324 J/(mol K), methane M=0.01604246 kg/mol",
+      "case": {
+        "T_K": 350,
+        "P_bara": 0.001
+      }
+    },
+    {
+      "name": "dilute methane ideal-gas density",
+      "actual": 0.000482382568520195,
+      "expected": 0.00048236611121968274,
+      "absolute_error": 1.645730051227142e-08,
+      "relative_error": 3.411786219943697e-05,
+      "acceptance_bound_absolute": 4.823661112196827e-08,
+      "passed": true,
+      "unit": "kg/m3",
+      "evidence_type": "independent analytical limit",
+      "reference": "pV=nRT; R=8.31446261815324 J/(mol K), methane M=0.01604246 kg/mol",
+      "case": {
+        "T_K": 400,
+        "P_bara": 0.001
+      }
+    },
+    {
+      "name": "binary Rachford-Rice vapour fraction",
+      "actual": 0.5,
+      "expected": 0.5,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-10,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "independent analytical solution",
+      "reference": "Cleared-denominator binary Rachford-Rice equation",
+      "case": {
+        "K": [
+          2,
+          0.5
+        ],
+        "z": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "binary Rachford-Rice vapour fraction",
+      "actual": 0.5,
+      "expected": 0.5,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-10,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "independent analytical solution",
+      "reference": "Cleared-denominator binary Rachford-Rice equation",
+      "case": {
+        "K": [
+          4,
+          0.25
+        ],
+        "z": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "name": "binary Rachford-Rice vapour fraction",
+      "actual": 0.5499999999722389,
+      "expected": 0.5499999999999999,
+      "absolute_error": 2.7761015708449577e-11,
+      "relative_error": 5.0474574015362875e-11,
+      "acceptance_bound_absolute": 1e-10,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "independent analytical solution",
+      "reference": "Cleared-denominator binary Rachford-Rice equation",
+      "case": {
+        "K": [
+          3,
+          0.2
+        ],
+        "z": [
+          0.6,
+          0.4
+        ]
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 270,
+        "P_bara": 10,
+        "phase": 0
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 270,
+        "P_bara": 10,
+        "phase": 1
+      }
+    },
+    {
+      "name": "flash component material reconstruction",
+      "actual": 5.551115123125783e-17,
+      "expected": 0.0,
+      "absolute_error": 5.551115123125783e-17,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "z_i=sum(beta_alpha*x_i_alpha)",
+      "case": {
+        "T_K": 270,
+        "P_bara": 10,
+        "phases": 2
+      }
+    },
+    {
+      "name": "flash phase fugacity equality",
+      "actual": 1.4979129048231394e-12,
+      "expected": 0.0,
+      "absolute_error": 1.4979129048231394e-12,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-06,
+      "passed": true,
+      "unit": "ln(f1/f2)",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "At TP equilibrium, component fugacities are equal across phases",
+      "case": {
+        "T_K": 270,
+        "P_bara": 10
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 0.9999999999999999,
+      "expected": 1.0,
+      "absolute_error": 1.1102230246251565e-16,
+      "relative_error": 1.1102230246251565e-16,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 270,
+        "P_bara": 30,
+        "phase": 0
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 270,
+        "P_bara": 30,
+        "phase": 1
+      }
+    },
+    {
+      "name": "flash component material reconstruction",
+      "actual": 1.1102230246251565e-16,
+      "expected": 0.0,
+      "absolute_error": 1.1102230246251565e-16,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "z_i=sum(beta_alpha*x_i_alpha)",
+      "case": {
+        "T_K": 270,
+        "P_bara": 30,
+        "phases": 2
+      }
+    },
+    {
+      "name": "flash phase fugacity equality",
+      "actual": 1.4876988529976987e-14,
+      "expected": 0.0,
+      "absolute_error": 1.4876988529976987e-14,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-06,
+      "passed": true,
+      "unit": "ln(f1/f2)",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "At TP equilibrium, component fugacities are equal across phases",
+      "case": {
+        "T_K": 270,
+        "P_bara": 30
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 270,
+        "P_bara": 60,
+        "phase": 0
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0000000000000002,
+      "expected": 1.0,
+      "absolute_error": 2.220446049250313e-16,
+      "relative_error": 2.220446049250313e-16,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 270,
+        "P_bara": 60,
+        "phase": 1
+      }
+    },
+    {
+      "name": "flash component material reconstruction",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "z_i=sum(beta_alpha*x_i_alpha)",
+      "case": {
+        "T_K": 270,
+        "P_bara": 60,
+        "phases": 2
+      }
+    },
+    {
+      "name": "flash phase fugacity equality",
+      "actual": 3.5656022515366146e-09,
+      "expected": 0.0,
+      "absolute_error": 3.5656022515366146e-09,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-06,
+      "passed": true,
+      "unit": "ln(f1/f2)",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "At TP equilibrium, component fugacities are equal across phases",
+      "case": {
+        "T_K": 270,
+        "P_bara": 60
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 300,
+        "P_bara": 10,
+        "phase": 0
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 300,
+        "P_bara": 10,
+        "phase": 1
+      }
+    },
+    {
+      "name": "flash component material reconstruction",
+      "actual": 9.064970996064403e-14,
+      "expected": 0.0,
+      "absolute_error": 9.064970996064403e-14,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "z_i=sum(beta_alpha*x_i_alpha)",
+      "case": {
+        "T_K": 300,
+        "P_bara": 10,
+        "phases": 2
+      }
+    },
+    {
+      "name": "flash phase fugacity equality",
+      "actual": 5.074052289457226e-12,
+      "expected": 0.0,
+      "absolute_error": 5.074052289457226e-12,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-06,
+      "passed": true,
+      "unit": "ln(f1/f2)",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "At TP equilibrium, component fugacities are equal across phases",
+      "case": {
+        "T_K": 300,
+        "P_bara": 10
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 300,
+        "P_bara": 30,
+        "phase": 0
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 300,
+        "P_bara": 30,
+        "phase": 1
+      }
+    },
+    {
+      "name": "flash component material reconstruction",
+      "actual": 1.4695467065450885e-12,
+      "expected": 0.0,
+      "absolute_error": 1.4695467065450885e-12,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "z_i=sum(beta_alpha*x_i_alpha)",
+      "case": {
+        "T_K": 300,
+        "P_bara": 30,
+        "phases": 2
+      }
+    },
+    {
+      "name": "flash phase fugacity equality",
+      "actual": 1.1272871525199991e-11,
+      "expected": 0.0,
+      "absolute_error": 1.1272871525199991e-11,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-06,
+      "passed": true,
+      "unit": "ln(f1/f2)",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "At TP equilibrium, component fugacities are equal across phases",
+      "case": {
+        "T_K": 300,
+        "P_bara": 30
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 0.9999999999999998,
+      "expected": 1.0,
+      "absolute_error": 2.220446049250313e-16,
+      "relative_error": 2.220446049250313e-16,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 300,
+        "P_bara": 60,
+        "phase": 0
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 300,
+        "P_bara": 60,
+        "phase": 1
+      }
+    },
+    {
+      "name": "flash component material reconstruction",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "z_i=sum(beta_alpha*x_i_alpha)",
+      "case": {
+        "T_K": 300,
+        "P_bara": 60,
+        "phases": 2
+      }
+    },
+    {
+      "name": "flash phase fugacity equality",
+      "actual": 6.94796040507845e-09,
+      "expected": 0.0,
+      "absolute_error": 6.94796040507845e-09,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-06,
+      "passed": true,
+      "unit": "ln(f1/f2)",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "At TP equilibrium, component fugacities are equal across phases",
+      "case": {
+        "T_K": 300,
+        "P_bara": 60
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 330,
+        "P_bara": 10,
+        "phase": 0
+      }
+    },
+    {
+      "name": "flash component material reconstruction",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "z_i=sum(beta_alpha*x_i_alpha)",
+      "case": {
+        "T_K": 330,
+        "P_bara": 10,
+        "phases": 1
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 330,
+        "P_bara": 30,
+        "phase": 0
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 330,
+        "P_bara": 30,
+        "phase": 1
+      }
+    },
+    {
+      "name": "flash component material reconstruction",
+      "actual": 1.6653345369377348e-16,
+      "expected": 0.0,
+      "absolute_error": 1.6653345369377348e-16,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "z_i=sum(beta_alpha*x_i_alpha)",
+      "case": {
+        "T_K": 330,
+        "P_bara": 30,
+        "phases": 2
+      }
+    },
+    {
+      "name": "flash phase fugacity equality",
+      "actual": 1.982303210470182e-12,
+      "expected": 0.0,
+      "absolute_error": 1.982303210470182e-12,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-06,
+      "passed": true,
+      "unit": "ln(f1/f2)",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "At TP equilibrium, component fugacities are equal across phases",
+      "case": {
+        "T_K": 330,
+        "P_bara": 30
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 0.9999999999999999,
+      "expected": 1.0,
+      "absolute_error": 1.1102230246251565e-16,
+      "relative_error": 1.1102230246251565e-16,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 330,
+        "P_bara": 60,
+        "phase": 0
+      }
+    },
+    {
+      "name": "flash phase composition sums to unity",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "Phase composition normalization",
+      "case": {
+        "T_K": 330,
+        "P_bara": 60,
+        "phase": 1
+      }
+    },
+    {
+      "name": "flash component material reconstruction",
+      "actual": 5.551115123125783e-17,
+      "expected": 0.0,
+      "absolute_error": 5.551115123125783e-17,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "mol/mol",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "z_i=sum(beta_alpha*x_i_alpha)",
+      "case": {
+        "T_K": 330,
+        "P_bara": 60,
+        "phases": 2
+      }
+    },
+    {
+      "name": "flash phase fugacity equality",
+      "actual": 1.776356839400252e-15,
+      "expected": 0.0,
+      "absolute_error": 1.776356839400252e-15,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-06,
+      "passed": true,
+      "unit": "ln(f1/f2)",
+      "evidence_type": "conservation and equilibrium verification",
+      "reference": "At TP equilibrium, component fugacities are equal across phases",
+      "case": {
+        "T_K": 330,
+        "P_bara": 60
+      }
+    },
+    {
+      "name": "adiabatic throttle specific enthalpy",
+      "actual": 16118.446262189751,
+      "expected": 16118.446260975907,
+      "absolute_error": 1.2138443707954139e-06,
+      "relative_error": 7.53077778801938e-11,
+      "acceptance_bound_absolute": 0.1,
+      "passed": true,
+      "unit": "J/kg",
+      "evidence_type": "conservation-law verification",
+      "reference": "Steady adiabatic first law, no shaft work, negligible kinetic/potential change",
+      "case": {
+        "Pin_bara": 100,
+        "Pout_bara": 50
+      }
+    },
+    {
+      "name": "throttle mass flow",
+      "actual": 0.2777777777777778,
+      "expected": 0.2777777777777778,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-08,
+      "passed": true,
+      "unit": "kg/s",
+      "evidence_type": "conservation-law verification",
+      "reference": "Steady material balance",
+      "case": {}
+    },
+    {
+      "name": "adiabatic throttle specific enthalpy",
+      "actual": 32748.829619216696,
+      "expected": 32748.8296035505,
+      "absolute_error": 1.566619539516978e-05,
+      "relative_error": 4.783742071036124e-10,
+      "acceptance_bound_absolute": 0.1,
+      "passed": true,
+      "unit": "J/kg",
+      "evidence_type": "conservation-law verification",
+      "reference": "Steady adiabatic first law, no shaft work, negligible kinetic/potential change",
+      "case": {
+        "Pin_bara": 80,
+        "Pout_bara": 20
+      }
+    },
+    {
+      "name": "throttle mass flow",
+      "actual": 0.2777777777777778,
+      "expected": 0.2777777777777778,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-08,
+      "passed": true,
+      "unit": "kg/s",
+      "evidence_type": "conservation-law verification",
+      "reference": "Steady material balance",
+      "case": {}
+    },
+    {
+      "name": "adiabatic throttle specific enthalpy",
+      "actual": 50131.29889297028,
+      "expected": 50131.29887882638,
+      "absolute_error": 1.4143894077278674e-05,
+      "relative_error": 2.821369961202528e-10,
+      "acceptance_bound_absolute": 0.1,
+      "passed": true,
+      "unit": "J/kg",
+      "evidence_type": "conservation-law verification",
+      "reference": "Steady adiabatic first law, no shaft work, negligible kinetic/potential change",
+      "case": {
+        "Pin_bara": 60,
+        "Pout_bara": 5
+      }
+    },
+    {
+      "name": "throttle mass flow",
+      "actual": 0.2777777777777778,
+      "expected": 0.2777777777777778,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-08,
+      "passed": true,
+      "unit": "kg/s",
+      "evidence_type": "conservation-law verification",
+      "reference": "Steady material balance",
+      "case": {}
+    },
+    {
+      "name": "ideal monatomic argon compressor outlet temperature",
+      "actual": 366.02088085949913,
+      "expected": 366.02963344675254,
+      "absolute_error": 0.008752587253411548,
+      "relative_error": 2.3912236752505486e-05,
+      "acceptance_bound_absolute": 0.7320592668935051,
+      "passed": true,
+      "unit": "K",
+      "evidence_type": "independent analytical limit",
+      "reference": "NASA Glenn compressor equation; ideal monatomic cp=5R/(2M), gamma=5/3",
+      "case": {
+        "T_in_K": 300.0,
+        "Pin_bara": 0.001,
+        "pressure_ratio": 1.5,
+        "isentropic_efficiency": 0.8
+      }
+    },
+    {
+      "name": "ideal monatomic argon compressor shaft power",
+      "actual": 9.543590233625508,
+      "expected": 9.543672729120512,
+      "absolute_error": 8.249549500405351e-05,
+      "relative_error": 8.643998735658217e-06,
+      "acceptance_bound_absolute": 0.019087345458241024,
+      "passed": true,
+      "unit": "kW",
+      "evidence_type": "independent analytical limit",
+      "reference": "Wdot=mdot cp Tin [(pout/pin)^((gamma-1)/gamma)-1]/eta",
+      "case": {
+        "T_in_K": 300.0,
+        "Pin_bara": 0.001,
+        "pressure_ratio": 1.5,
+        "isentropic_efficiency": 0.8
+      }
+    },
+    {
+      "name": "compressor first law",
+      "actual": 9543.590233625508,
+      "expected": 9543.590233625508,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 0.1,
+      "passed": true,
+      "unit": "W",
+      "evidence_type": "conservation-law verification",
+      "reference": "Hout-Hin=Wshaft",
+      "case": {
+        "T_in_K": 300.0,
+        "Pin_bara": 0.001,
+        "pressure_ratio": 1.5,
+        "isentropic_efficiency": 0.8
+      }
+    },
+    {
+      "name": "ideal monatomic argon compressor outlet temperature",
+      "actual": 419.7923602603061,
+      "expected": 419.8154665398353,
+      "absolute_error": 0.023106279529201856,
+      "relative_error": 5.503913354990545e-05,
+      "acceptance_bound_absolute": 0.8396309330796706,
+      "passed": true,
+      "unit": "K",
+      "evidence_type": "independent analytical limit",
+      "reference": "NASA Glenn compressor equation; ideal monatomic cp=5R/(2M), gamma=5/3",
+      "case": {
+        "T_in_K": 300.0,
+        "Pin_bara": 0.001,
+        "pressure_ratio": 2,
+        "isentropic_efficiency": 0.8
+      }
+    },
+    {
+      "name": "ideal monatomic argon compressor shaft power",
+      "actual": 17.317365542987737,
+      "expected": 17.317673003064595,
+      "absolute_error": 0.00030746007685777954,
+      "relative_error": 1.7754121861717237e-05,
+      "acceptance_bound_absolute": 0.03463534600612919,
+      "passed": true,
+      "unit": "kW",
+      "evidence_type": "independent analytical limit",
+      "reference": "Wdot=mdot cp Tin [(pout/pin)^((gamma-1)/gamma)-1]/eta",
+      "case": {
+        "T_in_K": 300.0,
+        "Pin_bara": 0.001,
+        "pressure_ratio": 2,
+        "isentropic_efficiency": 0.8
+      }
+    },
+    {
+      "name": "compressor first law",
+      "actual": 17317.365542987736,
+      "expected": 17317.365542987736,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 0.1,
+      "passed": true,
+      "unit": "W",
+      "evidence_type": "conservation-law verification",
+      "reference": "Hout-Hin=Wshaft",
+      "case": {
+        "T_in_K": 300.0,
+        "Pin_bara": 0.001,
+        "pressure_ratio": 2,
+        "isentropic_efficiency": 0.8
+      }
+    },
+    {
+      "name": "ideal monatomic argon compressor outlet temperature",
+      "actual": 506.8760237492068,
+      "expected": 506.9420902182599,
+      "absolute_error": 0.06606646905311209,
+      "relative_error": 0.00013032350307441958,
+      "acceptance_bound_absolute": 1.01388418043652,
+      "passed": true,
+      "unit": "K",
+      "evidence_type": "independent analytical limit",
+      "reference": "NASA Glenn compressor equation; ideal monatomic cp=5R/(2M), gamma=5/3",
+      "case": {
+        "T_in_K": 300.0,
+        "Pin_bara": 0.001,
+        "pressure_ratio": 3,
+        "isentropic_efficiency": 0.8
+      }
+    },
+    {
+      "name": "ideal monatomic argon compressor shaft power",
+      "actual": 29.909494501192817,
+      "expected": 29.91062466696667,
+      "absolute_error": 0.0011301657738513882,
+      "relative_error": 3.7784759978602005e-05,
+      "acceptance_bound_absolute": 0.05982124933393334,
+      "passed": true,
+      "unit": "kW",
+      "evidence_type": "independent analytical limit",
+      "reference": "Wdot=mdot cp Tin [(pout/pin)^((gamma-1)/gamma)-1]/eta",
+      "case": {
+        "T_in_K": 300.0,
+        "Pin_bara": 0.001,
+        "pressure_ratio": 3,
+        "isentropic_efficiency": 0.8
+      }
+    },
+    {
+      "name": "compressor first law",
+      "actual": 29909.494501192818,
+      "expected": 29909.494501192818,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 0.1,
+      "passed": true,
+      "unit": "W",
+      "evidence_type": "conservation-law verification",
+      "reference": "Hout-Hin=Wshaft",
+      "case": {
+        "T_in_K": 300.0,
+        "Pin_bara": 0.001,
+        "pressure_ratio": 3,
+        "isentropic_efficiency": 0.8
+      }
+    },
+    {
+      "name": "liquid low-flow hydrostatic limit",
+      "actual": -6.870155637577369,
+      "expected": -6.864072276306039,
+      "absolute_error": 0.0060833612713304674,
+      "relative_error": 0.0008862612493649735,
+      "acceptance_bound_absolute": 0.0343213613815302,
+      "passed": true,
+      "unit": "bar",
+      "evidence_type": "analytical momentum limit",
+      "reference": "NASA hydrostatics: dp=-rho*g*dz; density is a specified model input, not independently validated",
+      "case": {
+        "rise_m": -100.0,
+        "rho_input_kg_m3": 699.9405787201581,
+        "flow_kg_hr": 1.0,
+        "length_m": 100.0,
+        "diameter_m": 0.2
+      }
+    },
+    {
+      "name": "liquid low-flow hydrostatic limit",
+      "actual": 4.914255669064005e-09,
+      "expected": 0.0,
+      "absolute_error": 4.914255669064005e-09,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-06,
+      "passed": true,
+      "unit": "bar",
+      "evidence_type": "analytical momentum limit",
+      "reference": "NASA hydrostatics: dp=-rho*g*dz; density is a specified model input, not independently validated",
+      "case": {
+        "rise_m": 0.0,
+        "rho_input_kg_m3": 699.9405787201581,
+        "flow_kg_hr": 1.0,
+        "length_m": 100.0,
+        "diameter_m": 0.2
+      }
+    },
+    {
+      "name": "liquid low-flow hydrostatic limit",
+      "actual": 6.860757969435923,
+      "expected": 6.864072276306039,
+      "absolute_error": 0.00331430687011558,
+      "relative_error": 0.0004828484807125608,
+      "acceptance_bound_absolute": 0.0343213613815302,
+      "passed": true,
+      "unit": "bar",
+      "evidence_type": "analytical momentum limit",
+      "reference": "NASA hydrostatics: dp=-rho*g*dz; density is a specified model input, not independently validated",
+      "case": {
+        "rise_m": 100.0,
+        "rho_input_kg_m3": 699.9405787201581,
+        "flow_kg_hr": 1.0,
+        "length_m": 100.0,
+        "diameter_m": 0.2
+      }
+    },
+    {
+      "name": "horizontal zero-flow pressure limit",
+      "actual": 60.0,
+      "expected": 60.0,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "acceptance_bound_absolute": 1e-08,
+      "passed": true,
+      "unit": "bara",
+      "evidence_type": "independent analytical limit",
+      "reference": "Zero flow, zero elevation: no friction or hydrostatic pressure change; low-flow bypass explicitly enabled",
+      "case": {}
+    },
+    {
+      "name": "separator mass balance",
+      "actual": 13.888888888888893,
+      "expected": 13.88888888888889,
+      "absolute_error": 3.552713678800501e-15,
+      "relative_error": 2.5579538487363605e-16,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "kg/s",
+      "evidence_type": "conservation-law verification",
+      "reference": "Steady material balance",
+      "case": {
+        "T_K": 280
+      }
+    },
+    {
+      "name": "separator component balance",
+      "actual": 8.526512829121202e-14,
+      "expected": 0.0,
+      "absolute_error": 8.526512829121202e-14,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-05,
+      "passed": true,
+      "unit": "mol/s",
+      "evidence_type": "conservation-law verification",
+      "reference": "Component molar-flow conservation",
+      "case": {
+        "T_K": 280
+      }
+    },
+    {
+      "name": "separator first law",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "relative_error": null,
+      "acceptance_bound_absolute": 0.1,
+      "passed": true,
+      "unit": "W",
+      "evidence_type": "conservation-law verification",
+      "reference": "Adiabatic flash separator, no shaft work",
+      "case": {
+        "T_K": 280
+      }
+    },
+    {
+      "name": "separator mass balance",
+      "actual": 13.888888888915396,
+      "expected": 13.88888888888889,
+      "absolute_error": 2.6506796757530537e-11,
+      "relative_error": 1.9084893665421987e-12,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "kg/s",
+      "evidence_type": "conservation-law verification",
+      "reference": "Steady material balance",
+      "case": {
+        "T_K": 300
+      }
+    },
+    {
+      "name": "separator component balance",
+      "actual": 6.484981440735282e-10,
+      "expected": 0.0,
+      "absolute_error": 6.484981440735282e-10,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-05,
+      "passed": true,
+      "unit": "mol/s",
+      "evidence_type": "conservation-law verification",
+      "reference": "Component molar-flow conservation",
+      "case": {
+        "T_K": 300
+      }
+    },
+    {
+      "name": "separator first law",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "relative_error": null,
+      "acceptance_bound_absolute": 0.1,
+      "passed": true,
+      "unit": "W",
+      "evidence_type": "conservation-law verification",
+      "reference": "Adiabatic flash separator, no shaft work",
+      "case": {
+        "T_K": 300
+      }
+    },
+    {
+      "name": "separator mass balance",
+      "actual": 13.888888888888888,
+      "expected": 13.88888888888889,
+      "absolute_error": 1.7763568394002505e-15,
+      "relative_error": 1.2789769243681802e-16,
+      "acceptance_bound_absolute": 1e-07,
+      "passed": true,
+      "unit": "kg/s",
+      "evidence_type": "conservation-law verification",
+      "reference": "Steady material balance",
+      "case": {
+        "T_K": 320
+      }
+    },
+    {
+      "name": "separator component balance",
+      "actual": 2.842170943040401e-14,
+      "expected": 0.0,
+      "absolute_error": 2.842170943040401e-14,
+      "relative_error": null,
+      "acceptance_bound_absolute": 1e-05,
+      "passed": true,
+      "unit": "mol/s",
+      "evidence_type": "conservation-law verification",
+      "reference": "Component molar-flow conservation",
+      "case": {
+        "T_K": 320
+      }
+    },
+    {
+      "name": "separator first law",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "relative_error": null,
+      "acceptance_bound_absolute": 0.1,
+      "passed": true,
+      "unit": "W",
+      "evidence_type": "conservation-law verification",
+      "reference": "Adiabatic flash separator, no shaft work",
+      "case": {
+        "T_K": 320
+      }
+    },
+    {
+      "name": "optimizer versus independent brute-force bracket",
+      "actual": 184707.03125,
+      "expected": 184500.0,
+      "absolute_error": 207.03125,
+      "relative_error": 0.001122120596205962,
+      "acceptance_bound_absolute": 501.0,
+      "passed": true,
+      "unit": "kg/hr",
+      "evidence_type": "independent search algorithm verification",
+      "reference": "Fresh-process direct enumeration at 1000 kg/hr intervals, independently evaluated 4750 kW limit",
+      "case": {
+        "largest_grid_feasible_kg_hr": 184000.0,
+        "next_grid_infeasible_kg_hr": 185000.0
+      }
+    },
+    {
+      "name": "optimizer replay hits power boundary",
+      "actual": 4749.607535764237,
+      "expected": 4750.0,
+      "absolute_error": 0.39246423576332745,
+      "relative_error": 8.262404963438472e-05,
+      "acceptance_bound_absolute": 1.4249999999999998,
+      "passed": true,
+      "unit": "kW",
+      "evidence_type": "constraint verification",
+      "reference": "Independent fresh-process replay, same EOS",
+      "case": {}
+    },
+    {
+      "name": "fixed-state throughput proportionality limit",
+      "actual": 184707.03125,
+      "expected": 184722.29375396905,
+      "absolute_error": 15.26250396904652,
+      "relative_error": 8.262404964164527e-05,
+      "acceptance_bound_absolute": 100.0,
+      "passed": true,
+      "unit": "kg/hr",
+      "evidence_type": "analytical scaling verification",
+      "reference": "At fixed composition, suction state and pressure ratio, shaft power scales with mass rate",
+      "case": {}
+    }
+  ],
+  "failures": [],
+  "coverage": {
+    "independent_property_data": "18 SRK/PR comparisons at nine archived NIST methane states",
+    "analytic_limits": "Ideal gas, binary Rachford-Rice, monatomic compressor, low-flow hydrostatics, zero-flow horizontal pipe",
+    "same_model_verification": "Flash fugacity and material closure, unit balances, optimizer independently enumerated search"
+  },
+  "limitations": [
+    "NIST values are independent reference-EOS calculations, not raw experimental measurements.",
+    "No external validation of multicomponent transport, TBP characterization, hydrate/MEG/TEG prediction, vendor maps, field hydraulics, dynamics or economics.",
+    "Passing a conservation identity does not establish independent predictive model accuracy."
+  ],
+  "hashes": {
+    "run_independent_benchmarks.py": "e5ca7fe3cb05070dd35f371085dcb17e0d04ff4007150616a0d9146d0963a32a",
+    "benchmark_design.json": "2a8990bd8073093898b00039e042e0a81ba08c7500aeb381fb91454f6a880e0d",
+    "reference_expected.json": "b3cc5fddf4f9d6ea2917a6b0950ee1c699f88922d935468b2075df6cef3dcad2"
+  }
+}

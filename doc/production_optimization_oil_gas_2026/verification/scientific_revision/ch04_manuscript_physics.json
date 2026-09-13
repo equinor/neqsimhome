@@ -1,0 +1,647 @@
+{
+  "chapter": "ch04_reservoir_engineering",
+  "source_sha256": "92873e4573a9aca340189653569191b0f390a142d6888e0d00d1377d4b1426ed",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "literal_blocks": [
+    {
+      "index": 1,
+      "code_sha256": "f8af2dd524bfef4e94499a6b09bb565ba44825130842d04bc961b7b2fada871f",
+      "line": 644,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 95.0
+        },
+        {
+          "name": "well_inflow",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 95.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "wellbore",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 266.93277605802666,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Well Inflow"
+          ],
+          "outlets": [
+            "Wellbore out stream"
+          ]
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 265.75225314272586,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Wellbore out stream"
+          ],
+          "outlets": [
+            "Flowline out stream"
+          ]
+        },
+        {
+          "name": "hp_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 265.75225314272586,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Flowline out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 2.0,
+      "output": "=== Integrated Well-to-Separator Results ===\nBottomhole pressure: 200.0 bara\nWellhead pressure: 266.9 bara\nWellhead temperature: 95.0 C\nSeparator inlet pressure: 265.8 bara\nSeparator inlet temperature: 95.0 C\nOil rate: 0.1 m3/hr\nGas rate: 0.7779 MSm3/day\n"
+    },
+    {
+      "index": 2,
+      "code_sha256": "d9777e61c8b228e5468f659ad454d8976e5f0e3feec7389004af76d9ad078240",
+      "line": 758,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 6906513250.562482,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 100.0
+        },
+        {
+          "name": "well_inflow",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 95.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "wellbore",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 266.93277605802666,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Well Inflow"
+          ],
+          "outlets": [
+            "Wellbore out stream"
+          ]
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 265.75225314272586,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Wellbore out stream"
+          ],
+          "outlets": [
+            "Flowline out stream"
+          ]
+        },
+        {
+          "name": "hp_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 265.75225314272586,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Flowline out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "reservoir",
+          "class": "neqsim.process.equipment.reservoir.SimpleReservoir",
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "producer",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 2.777798266123985,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 100.0,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 0.1559999999954016,
+      "output": ""
+    },
+    {
+      "index": 3,
+      "code_sha256": "3a86555c5bc99f9e38f7b17afe8ab711762ba37dd3511f341ecb0b1fd709c5b4",
+      "line": 797,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 6906513250.562482,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 100.0
+        },
+        {
+          "name": "well_inflow",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 95.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "wellbore",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 266.93277605802666,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Well Inflow"
+          ],
+          "outlets": [
+            "Wellbore out stream"
+          ]
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 265.75225314272586,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Wellbore out stream"
+          ],
+          "outlets": [
+            "Flowline out stream"
+          ]
+        },
+        {
+          "name": "hp_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 265.75225314272586,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Flowline out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "reservoir",
+          "class": "neqsim.process.equipment.reservoir.SimpleReservoir",
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "producer",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 2.777798266123985,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 100.0,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 0.0,
+      "output": " P_wf (bara)  q_o (Sm3/d)\n--------------------------\n        10.0       2529.6\n        34.0       2450.5\n        58.0       2328.7\n        82.0       2164.3\n       106.0       1957.2\n       130.0       1707.4\n       154.0       1415.0\n       178.0       1079.9\n       202.0        720.0\n       226.0        360.0\n"
+    },
+    {
+      "index": 4,
+      "code_sha256": "9865800b16b235efcfe18612008e4dbb67ea8dc2df85a6add8d696d156563841",
+      "line": 836,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 6906513250.562482,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 100.0
+        },
+        {
+          "name": "well_inflow",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 95.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "wellbore",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 266.93277605802666,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Well Inflow"
+          ],
+          "outlets": [
+            "Wellbore out stream"
+          ]
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 265.75225314272586,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Wellbore out stream"
+          ],
+          "outlets": [
+            "Flowline out stream"
+          ]
+        },
+        {
+          "name": "hp_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 265.75225314272586,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Flowline out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "reservoir",
+          "class": "neqsim.process.equipment.reservoir.SimpleReservoir",
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "producer",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 2.777798266123985,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 100.0,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 0.01600000000325963,
+      "output": "Time to economic limit: 49.3 years\n  Year   Rate (Sm3/d)   Cum (MSm3)   Annual Decline\n--------------------------------------------------\n     0           5000        0.000             0.0%\n     1           3591        1.504            28.2%\n     2           2703        2.613            24.7%\n     3           2108        3.463            22.0%\n     4           1690        4.137            19.8%\n     5           1385        4.683            18.0%\n     6           1156        5.135            16.6%\n     7            979        5.515            15.3%\n     8            840        5.840            14.2%\n     9            728        6.119            13.3%\n    10            638        6.363            12.4%\n"
+    },
+    {
+      "index": 5,
+      "code_sha256": "4656be100a659bc230d67ecd3693e27b7da5169c0083b79adfe7ed87bd0d925f",
+      "line": 889,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 6906513250.562482,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 100.0
+        },
+        {
+          "name": "well_inflow",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 95.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "wellbore",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 266.93277605802666,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Well Inflow"
+          ],
+          "outlets": [
+            "Wellbore out stream"
+          ]
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 265.75225314272586,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Wellbore out stream"
+          ],
+          "outlets": [
+            "Flowline out stream"
+          ]
+        },
+        {
+          "name": "hp_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 265.75225314272586,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Flowline out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "reservoir",
+          "class": "neqsim.process.equipment.reservoir.SimpleReservoir",
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "producer",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 2.777798266123985,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 100.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "drive",
+          "class": "neqsim.process.fielddevelopment.integrated.MaterialBalanceGasDrive"
+        }
+      ],
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "index": 6,
+      "code_sha256": "79fed6f71c23eb93d4b5f30ac86bb18b691f43473738c9e3408f59c2f61d0d95",
+      "line": 904,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888888,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 75.0
+        },
+        {
+          "name": "well_inflow",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 95.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "wellbore",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 266.93277605802666,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Well Inflow"
+          ],
+          "outlets": [
+            "Wellbore out stream"
+          ]
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 265.75225314272586,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Wellbore out stream"
+          ],
+          "outlets": [
+            "Flowline out stream"
+          ]
+        },
+        {
+          "name": "hp_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 265.75225314272586,
+          "getTemperature_C": 95.0,
+          "inlets": [
+            "Flowline out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "reservoir",
+          "class": "neqsim.process.equipment.reservoir.SimpleReservoir",
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "producer",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 2.777798266123985,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 100.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "drive",
+          "class": "neqsim.process.fielddevelopment.integrated.MaterialBalanceGasDrive"
+        },
+        {
+          "name": "well_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.888888888888888,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 75.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "well_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888888,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 75.0
+        }
+      ],
+      "seconds": 0.10899999999674037,
+      "output": "Number of phases: 3\nGas rate: 0.867 MSm3/day (total)\nTemperature: 75.0 C\nPressure: 70.0 bara\n"
+    }
+  ],
+  "physical_checks": [
+    {
+      "block": 1,
+      "equipment": "Wellbore",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888889,
+        "mass_out_kg_s": 13.88888888888889,
+        "enthalpy_in_W": -794218.2429074271,
+        "enthalpy_out_W": -890502.3719207565,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 1,
+      "equipment": "Flowline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888889,
+        "mass_out_kg_s": 13.88888888888889,
+        "enthalpy_in_W": -890502.3719207565,
+        "enthalpy_out_W": -889460.0900425855,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 1,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 7.443827314546068e-17,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888889,
+        "mass_out_kg_s": 13.88888888888889,
+        "enthalpy_in_W": -889460.0900425855,
+        "enthalpy_out_W": -889460.0900425855,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "chapter": "ch31_solver_methods",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "execution_model": "Sequential literal Python in a fresh JVM; ordinary executions supplemented by exact-source hook runs. Per-example evidence links identify reused executions.",
+  "examples": [
+    {
+      "number": 1,
+      "language": "python",
+      "line": 147,
+      "sha256": "2306252a9e1be1ca78dc3965d10fcc64061c49edc53d8d4dca9c7e00664abba1",
+      "status": "passed",
+      "seconds": 3.266,
+      "output": "TP Flash at 25°C, 100 bara:\n  Vapor fraction: 0.8597\n  Number of phases: 2\n  Gas density: 97.50 kg/m³\n  Liquid density: 597.79 kg/m³\n\nPH Flash at 50 bara (isenthalpic):\n  Temperature: 9.02 °C\n  Vapor fraction: 0.8832\nAccepted PH relative enthalpy residual 2.3625339035131635e-11\n",
+      "execution_evidence": "verification\\scientific_revision\\ch31_solution_checks.json",
+      "execution_evidence_sha256": "02512e2b5ef5fc3e728667cfba73a887d3476757186b4c5e4fe4f8ccf7d3a6cb",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\864085b76b08f3d7676a29c80590a60a88147165553761cbee291db169f14ec5.json"
+    },
+    {
+      "number": 2,
+      "language": "python",
+      "line": 288,
+      "sha256": "d0726af470e2f2df7603dfd708a22467d3456f49b89985dfab6a55ea134a8f8c",
+      "status": "passed",
+      "seconds": 0.7189999999973224,
+      "output": "Compressor power: 1523.4 kW\nCooler duty: -4112.4 kW\nOutlet temperature: 35.0 °C\n",
+      "execution_evidence": "verification\\scientific_revision\\ch31_solution_checks.json",
+      "execution_evidence_sha256": "02512e2b5ef5fc3e728667cfba73a887d3476757186b4c5e4fe4f8ccf7d3a6cb",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\864085b76b08f3d7676a29c80590a60a88147165553761cbee291db169f14ec5.json"
+    },
+    {
+      "number": 3,
+      "language": "python",
+      "line": 374,
+      "sha256": "86dfc4342d8284d95568f12400b4261e29b2fd5642e0c9732eb3530ee51b6f41",
+      "status": "passed",
+      "seconds": 0.609,
+      "output": "Measured recycle convergence: 16 iterations; flow=21563.05916 kg/hr\nFinal normalized residuals: flow=3.91e-08, T=0, composition=1.92e-14\nAccepted recycle boundary 3.9105412579374385e-08 1.2051859012415737e-08\n"
+    },
+    {
+      "number": 4,
+      "language": "python",
+      "line": 483,
+      "sha256": "a2344592a56862824b4cc056f2942f0ce26e122cac3e217b9515dcb6a4f5486d",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "flow iterations: 16 final normalized residual: 3.910541250661481e-08\ntemperature iterations: 16 final normalized residual: 0.0\ncomposition iterations: 16 final normalized residual: 1.9206858326015208e-14\n"
+    },
+    {
+      "number": 5,
+      "language": "python",
+      "line": 517,
+      "sha256": "48c7b64bbe52a0bbe111621f7814561eb8d6c556ca49d6ee0c8bee58afc00589",
+      "status": "passed",
+      "seconds": 0.219,
+      "output": "Target temperature:   40.0 °C\nAchieved temperature: 40.00 °C\nRequired outlet pressure: 48.49 bara\n\nThe adjuster found the valve pressure that produces the target JT cooling.\n"
+    },
+    {
+      "number": 6,
+      "language": "python",
+      "line": 651,
+      "sha256": "a3a8b5b049815990b86337b5038429b3a4092f4071264a3becd4118e9ee12080",
+      "status": "integration_pattern",
+      "reason": "pattern: requires a fully specified column feed pressures and operating specifications"
+    },
+    {
+      "number": 7,
+      "language": "python",
+      "line": 734,
+      "sha256": "6a74726efdbabbc24c8e77d2b910f02cdaceb55c252c88087db8bb7534cdc06b",
+      "status": "integration_pattern",
+      "reason": "pattern: requires initialized dynamic equipment inventories and controller setup"
+    }
+  ]
+}

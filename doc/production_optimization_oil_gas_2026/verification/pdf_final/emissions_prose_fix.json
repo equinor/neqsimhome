@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "code_unchanged": true,
+  "changes": [
+    {
+      "before": "For a typical North Sea fuel gas with ethane and propane, the composite emission factor is approximately 2.7\u20132.8 kg CO$_2$ per kg fuel.",
+      "after": "For a mixed fuel, calculate the factor from its elemental carbon flow and the fraction oxidized to CO\u2082; methane, heavier hydrocarbons, inert components and unburned fuel must be accounted for explicitly."
+    },
+    {
+      "before": "For a typical offshore platform, Scope 1 emissions are 50,000\u2013300,000 tonnes CO$_2$ per year, dominated by gas turbine exhaust (70\u201390% of total).",
+      "after": "Quantify each source from the dated fuel, flare and emissions inventory; no generic annual total or turbine share is assumed here."
+    },
+    {
+      "before": "Typical values range from 5\u201315 kg CO$_2$/boe for efficient modern platforms with electrification to 50\u2013100+ kg CO$_2$/boe for aging platforms with declining production. The global upstream industry average is approximately 15\u201320 kg CO$_2$/boe.",
+      "after": "Comparisons require the same reporting period, emissions boundary, gas-to-boe conversion and treatment of purchased electricity. Include the relevant combustion, flare, vent and fugitive sources, and identify whether the numerator is CO\u2082 or CO\u2082-equivalent. A lower ratio may reflect a changed production denominator as well as lower emissions. The example below is a declared accounting scenario, not a measured platform or global benchmark."
+    }
+  ],
+  "chapter_sha256": "83d196c9583d68900e847f281dac1320064c4cbb197e8a6cff59157aa64d3cc5",
+  "purpose": "Resolve rendered math overflow and replace unsupported generic emissions claims with an explicit accounting basis."
+}

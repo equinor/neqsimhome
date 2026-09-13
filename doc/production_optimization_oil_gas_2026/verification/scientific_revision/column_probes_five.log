@@ -1,0 +1,96 @@
+DistillationColumn Diagnostics:
+  Name: Crude Stabilizer
+  Solved: true
+  Solver: DIRECT_SUBSTITUTION
+  Last solver used: DIRECT_SUBSTITUTION
+  Solve status: RIGOROUS_CONVERGED
+  Solve status reason: Tray solution satisfies active rigorous convergence gates
+  Trays: 6 total, 5 equilibrium stages
+  Terminal controls:
+    condenser: absent
+    reboiler mode: EQUILIBRIUM
+  Iterations: 8
+  Solve time: 0.8002422 s
+  Residuals:
+    temperature: 1.1116649526835923E-8 K (tolerance 1.0E-7)
+    applied temperature step: 1.1116649526835923E-8 K
+    mass: 3.635322141790577E-16 (tolerance 1.0E-6)
+    energy: 3.407549698953566E-10 (tolerance 1.0E-5, enforced=true)
+    mesh infinity norm: 2.9061757065649934E-10 (tolerance 1.0E-5, enforced=true)
+      material: 2.9061757065649934E-10, equilibrium: 1.061817300750936E-12, summation: 2.220446049250313E-16, energy: 1.7037748497670677E-10, product draw: 0.0, specification: 0.0
+      per-tray material imbalance: 7.857370453787534E-12 (tolerance 0.02)
+  Feed trays:
+    tray 5 with 1 feed(s), 0 stages above, 5 stages below
+  Recommendations:
+    - No immediate convergence issue detected.
+
+=== Stabilizer Results ===
+Overhead gas rate:  9.3 kg/hr
+Overhead temp:      90.0 C
+Bottoms oil rate:   4990.7 kg/hr
+Bottoms temp:       107.1 C
+Reboiler duty:      60.0 kW
+PROBE ch11 4 {'chapter': 'ch11', 'block': 4, 'stages': 5, 'Q_W': 60000, 'status': 'RIGOROUS_CONVERGED', 'mesh': 2.9061757065649934e-10, 'seconds': 5.312999999994645}
+DistillationColumn Diagnostics:
+  Name: Stabilizer
+  Solved: false
+  Solver: DIRECT_SUBSTITUTION
+  Last solver used: DIRECT_SUBSTITUTION
+  Solve status: FAILED
+  Solve status reason: Residual convergence gates were not satisfied
+  Trays: 6 total, 5 equilibrium stages
+  Terminal controls:
+    condenser: absent
+    reboiler mode: EQUILIBRIUM
+  Iterations: 100
+  Solve time: 19.5768631 s
+  Residuals:
+    temperature: 1.1495434234139641E-15 K (tolerance 1.0E-7)
+    applied temperature step: 1.1495434234139641E-15 K
+    mass: 7.275957614183432E-16 (tolerance 1.0E-6)
+    energy: 4.220650782775862 (tolerance 1.0E-5, enforced=true)
+    mesh infinity norm: 0.6784902303891213 (tolerance 1.0E-5, enforced=true)
+      material: 8.005001745914341E-17, equilibrium: 0.0, summation: 6.661338147750939E-16, energy: 0.6784902303891213, product draw: 0.0, specification: 0.0
+      per-tray material imbalance: 2.1773604748887016E-17 (tolerance 0.02)
+  Feed trays:
+    tray 5 with 1 feed(s), 0 stages above, 5 stages below
+  Recommendations:
+    - Inspect the residual above the tolerance: temperature usually points to tray/specification oscillation, while mass residual points to stream wiring or divergent internal L/V traffic.
+
+=== Flash vs. Column Stabilization ===
+Flash stabilization: oil rate = 4960.0 kg/hr
+Column stabilization: oil rate = 5000.0 kg/hr
+Additional recovery:  40.0 kg/hr (0.8%)
+PROBE ch11 5 {'chapter': 'ch11', 'block': 5, 'stages': 5, 'Q_W': 150000, 'status': 'FAILED', 'mesh': 0.6784902303891213, 'seconds': 20.125}
+DistillationColumn Diagnostics:
+  Name: Deethanizer
+  Solved: false
+  Solver: DIRECT_SUBSTITUTION
+  Last solver used: DIRECT_SUBSTITUTION
+  Solve status: FAILED
+  Solve status reason: Residual convergence gates were not satisfied
+  Trays: 6 total, 5 equilibrium stages
+  Terminal controls:
+    condenser: absent
+    reboiler mode: EQUILIBRIUM
+  Iterations: 100
+  Solve time: 7.4918303 s
+  Residuals:
+    temperature: 0.0010653008752872968 K (tolerance 1.0E-7)
+    applied temperature step: 5.326504376436484E-4 K
+    mass: 6.821210263296953E-16 (tolerance 1.0E-6)
+    energy: 4.149499359708478E-9 (tolerance 1.0E-5, enforced=true)
+    mesh infinity norm: 8.791642319755333E-5 (tolerance 1.0E-5, enforced=true)
+      material: 8.791642319755333E-5, equilibrium: 1.4503953593692528E-12, summation: 2.220446049250313E-16, energy: 2.0747496841588254E-9, product draw: 0.0, specification: 0.0
+      per-tray material imbalance: 4.749174520422152E-5 (tolerance 0.02)
+  Feed trays:
+    tray 5 with 1 feed(s), 0 stages above, 5 stages below
+  Recommendations:
+    - Inspect the residual above the tolerance: temperature usually points to tray/specification oscillation, while mass residual points to stream wiring or divergent internal L/V traffic.
+
+=== Deethanizer Results ===
+Overhead T: -19.8 C
+Overhead P: 25.0 bara
+Bottoms T:  39.3 C
+Reboiler duty: 100.0 kW
+PROBE ch12 4 {'chapter': 'ch12', 'block': 4, 'stages': 5, 'Q_W': 100000, 'status': 'FAILED', 'mesh': 8.791642319755333e-05, 'seconds': 7.718000000000757}

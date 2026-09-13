@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "review_method": "Visual inspection by the reviewing agent, with exact literal-code/source-array/image hash reconciliation; no human peer certification implied.",
+  "timestamp_utc": "2026-09-12T22:01:37.333047+00:00",
+  "images_inspected": 3,
+  "repaired_material_defects": [
+    "Removed ambiguous 3D facet-mean colorbar; retained explicit six solution markers and pressure-height axis."
+  ],
+  "chapter_sha256": "192c05f73e68ae91434ddcbd25aec4e407904e13a347845ed0147d9aa40808e2",
+  "manifest_sha256": "90e8359788e3be9cfe0710bcb1e2b6a9c676a9fa5224b239f0a20b8bd53d220f",
+  "figures": [
+    {
+      "filename": "ch28_verified_recombination_density.png",
+      "fence": 21,
+      "caption": "Equilibrium bulk density of five actual reference-phase recombinations at 80 °C and 50 bara, with 10% standard-volume water cut. GOR is standard gas volume divided by standard oil volume; standard reference is 15 °C and 1.01325 bara.",
+      "discussion": "Density decreases from 187.27 to 47.77 kg/m³ as the GOR mixing input rises from 200 to 5000 Sm³/Sm³. Increasing the proportion of reference gas lowers the equilibrium bulk density for this recipe. A pipe calculation still needs slip-dependent liquid holdup; substituting this bulk density for the flowing hydrostatic density would omit that effect. The independently reconstructed component inventory and a fresh standard flash confirm the requested liquid-rate, GOR and water-cut basis for all five samples.",
+      "data": {
+        "GOR_input": [
+          200,
+          500,
+          1000,
+          2000,
+          5000
+        ],
+        "density_kg_m3": [
+          187.26644085048912,
+          102.13209559269515,
+          72.20328225756087,
+          56.982064577681506,
+          47.76791526174039
+        ]
+      },
+      "insert_before": "### 28.9.2 Plotting VFP Surfaces",
+      "path": "chapters\\ch28_field_development\\figures\\ch28_verified_recombination_density.png",
+      "sha256": "a5d6cbf244873e2ac7377e193080f73bdabb6d49dbd95608e4a773a246bc2c72",
+      "literal_code_sha256": "6671ec6827fec2300d8d811f635ecf825478e2ff2bcd457799f2be06936e0fb9",
+      "source_array_evidence": "verification\\scientific_revision\\ch28_solution_checks.json",
+      "source_array_evidence_sha256": "0a6f6d280037206748a12de42b6ca2cde3b7ccec5b88ea408167cabd29f41591",
+      "visual_review_status": "passed",
+      "dimensions_px": [
+        1738,
+        1077
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "inspection": "Actual image viewed by reviewing agent at full available resolution",
+      "findings": [
+        "All five computed markers are visible on the logarithmic GOR axis. Density units are kg/m3; equilibrium bulk density is explicitly distinguished from pipe holdup density.",
+        "Monotone decrease 187.2664 to 47.7679 kg/m3 reconciles to all five saved values. No fabricated intermediate points or hidden domain gaps.",
+        "Title states 80 C, 50 bara and WC 10%; caption gives the standard reference and recipe basis. Labels and tick marks are readable with no overlap or cropping."
+      ],
+      "unresolved_material_defects": []
+    },
+    {
+      "filename": "ch28_verified_screening_surface.png",
+      "fence": 22,
+      "caption": "Six actual required-inlet-pressure samples at 5% water cut and GOR 1000 Sm³/Sm³ for the Python model: 2800 m upward tubing and 12 km horizontal flowline. Black markers identify the solved grid values; the connecting facets are a visual interpolation.",
+      "discussion": "The six required inlet pressures range from 75.43 to 119.90 bara over 5000–20,000 kg/hr and 30–50 bara outlet pressure. Every marker meets its outlet target in a fresh process replay, while reducing its inlet pressure by the declared 1 bar search width drops below the target. Height represents pressure; the uniform surface shade only connects the samples. A surface drawn through six points does not establish interpolation accuracy between them; refine the grid and compare measured pressure losses before reservoir coupling.",
+      "data": {
+        "flow_kg_hr": [
+          5000.0,
+          10000.0,
+          20000.0
+        ],
+        "outlet_bara": [
+          30.0,
+          50.0
+        ],
+        "required_inlet_bara": [
+          [
+            79.94140625,
+            119.90234375
+          ],
+          [
+            75.4296875,
+            105.078125
+          ],
+          [
+            94.12109375,
+            117.32421875
+          ]
+        ],
+        "watercut": 0.05,
+        "GOR_Sm3_Sm3": 1000.0
+      },
+      "insert_before": "### 28.9.3 Multi-Scenario Comparison",
+      "path": "chapters\\ch28_field_development\\figures\\ch28_verified_screening_surface.png",
+      "sha256": "a196e7b47b4215d947f4a449b4f0cbebb218c1fe57ca3aeda045e0beb9f1486f",
+      "literal_code_sha256": "3e4f2eab457ae6b5a7b8721ae569693b44719d3ffac919712376d0e7f7402e69",
+      "source_array_evidence": "verification\\scientific_revision\\ch28_solution_checks.json",
+      "source_array_evidence_sha256": "0a6f6d280037206748a12de42b6ca2cde3b7ccec5b88ea408167cabd29f41591",
+      "visual_review_status": "passed",
+      "dimensions_px": [
+        1496,
+        1516
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "inspection": "Actual image viewed by reviewing agent at full available resolution",
+      "findings": [
+        "All six black solution markers are visible. Mass rate uses 1000 kg/hr, outlet and inlet pressure use bara. Uniform translucent shading connects samples; no misleading pressure colorbar remains.",
+        "Height spans the actual 75.4297 to 119.9023 bara source values. The lower-middle sampled pressure and nonmonotonic rate direction are retained.",
+        "Axes and title have room; pressure label is readable. Caption explains sparse visual interpolation and 1 bar bracketing tolerance without claiming interpolation calibration."
+      ],
+      "unresolved_material_defects": []
+    },
+    {
+      "filename": "ch28_verified_gor_pressure.png",
+      "fence": 23,
+      "caption": "Two actual GOR scenarios for the same 2800 m upward tubing and 12 km flowline, at 5% water cut and 50 bara outlet pressure. Points are accepted pressure-table solutions; lines connect the sampled cases.",
+      "discussion": "At GOR 1000, required inlet pressure changes from 119.90 to 105.08 and then 117.32 bara as mass rate rises from 5000 to 10,000 and 20,000 kg/hr. The nonmonotonic response is retained: multiphase lift balances changing liquid holdup against friction, so increasing rate need not always increase the required pressure. GOR 300 requires 138.59–143.11 bara in these samples. This is a comparison at equal mixture mass rate, not equal stock-tank oil or gas production; use a common economic production basis before selecting an operating strategy.",
+      "data": {
+        "flow_kg_hr": [
+          5000.0,
+          10000.0,
+          20000.0
+        ],
+        "GOR_300_inlet_bara": [
+          141.171875,
+          138.59375,
+          143.10546875
+        ],
+        "GOR_1000_inlet_bara": [
+          119.90234375,
+          105.078125,
+          117.32421875
+        ],
+        "outlet_bara": 50.0,
+        "watercut": 0.05
+      },
+      "insert_before": "## 28.10 Quality Assurance and Validation of VFP Tables",
+      "path": "chapters\\ch28_field_development\\figures\\ch28_verified_gor_pressure.png",
+      "sha256": "64f34efb15d9aabfa378c3d9dbb95238307dacba8da91f643b1542d3f26e5771",
+      "literal_code_sha256": "7425ee70e8ea744883092565c3e49b35dc4245e0f49b1a6b64653104cc30472c",
+      "source_array_evidence": "verification\\scientific_revision\\ch28_solution_checks.json",
+      "source_array_evidence_sha256": "0a6f6d280037206748a12de42b6ca2cde3b7ccec5b88ea408167cabd29f41591",
+      "visual_review_status": "passed",
+      "dimensions_px": [
+        2178,
+        1296
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "inspection": "Actual image viewed by reviewing agent at full available resolution",
+      "findings": [
+        "Both GOR 300 and GOR 1000 curves have three visible markers and a readable legend. X is mixture mass rate; both y and stated outlet pressure use bara.",
+        "GOR 1000 values 119.9023,105.0781,117.3242 bara match source arrays. GOR 300 values and 5% water cut also reconcile. No forced monotonic trend.",
+        "Caption explains equal mixture mass-rate basis, holdup/friction competition, and limits of economic interpretation. No cropped title, axes or legend."
+      ],
+      "unresolved_material_defects": []
+    }
+  ]
+}

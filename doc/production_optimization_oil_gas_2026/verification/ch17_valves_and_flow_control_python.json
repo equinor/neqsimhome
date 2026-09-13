@@ -1,0 +1,96 @@
+{
+  "chapter": "ch17_valves_and_flow_control",
+  "source_sha256": "cdf2d8961f636f4f2a32b8fce3d6dfad2440b6d9ebbc83334f14626eeb0ac9b2",
+  "project_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "blocks": [
+    {
+      "index": 1,
+      "line": 203,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Create the gas fluid\ngas = jneqsim.thermo.system.SystemSrkEos(273.15 + 50.0, 80.0)\ngas.addComponent(\"methane\", 0.88)\ngas.addComponent(\"ethane\", 0.06)\ngas.addComponent(\"propane\", 0.03)\ngas.addComponent(\"CO2\", 0.02)\ngas.addComponent(\"nitrogen\", 0.01)\ngas.setMixingRule(\"classic\")\n\n# Create the upstream stream\nfeed = jneqsim.process.equipment.stream.Stream(\"Feed Gas\", gas)\nfeed.setFlowRate(100000.0, \"kg/hr\")\nfeed.setTemperature(50.0, \"C\")\nfeed.setPressure(80.0, \"bara\")\n\n# Create a throttling valve with specified outlet pressure\nvalve = jneqsim.process.equipment.valve.ThrottlingValve(\"PV-100\", feed)\nvalve.setOutletPressure(60.0, \"bara\")\n\n# Build and run the process\nprocess = jneqsim.process.processmodel.ProcessSystem()\nprocess.add(feed)\nprocess.add(valve)\nprocess.run()\n\n# Read results\nT_out = valve.getOutletStream().getTemperature(\"C\")\nP_out = valve.getOutletStream().getPressure(\"bara\")\nCv = valve.getCv(\"US\")\nKv = valve.getKv()\ndeltaP = valve.getDeltaPressure(\"bara\")\n\nprint(f\"Outlet temperature: {T_out:.1f} \u00b0C\")\nprint(f\"Outlet pressure: {P_out:.1f} bara\")\nprint(f\"Pressure drop: {deltaP:.1f} bar\")\nprint(f\"Calculated Cv (US): {Cv:.1f}\")\nprint(f\"Calculated Kv (SI): {Kv:.1f}\")\n",
+      "seconds": 3.469,
+      "output": "Outlet temperature: 42.5 \u00b0C\nOutlet pressure: 60.0 bara\nPressure drop: 20.0 bar\nCalculated Cv (US): 155.8\nCalculated Kv (SI): 134.8\n"
+    },
+    {
+      "index": 2,
+      "line": 250,
+      "status": "pass",
+      "code": "# Set a specific Cv value and calculate the resulting flow\nvalve2 = jneqsim.process.equipment.valve.ThrottlingValve(\"PV-101\", feed)\nvalve2.setCv(150.0, \"US\")                  # Cv = 150 US gallons\nvalve2.setPercentValveOpening(70.0)        # 70% open\nvalve2.setOutletPressure(55.0, \"bara\")\n\nprocess2 = jneqsim.process.processmodel.ProcessSystem()\nprocess2.add(feed)\nprocess2.add(valve2)\nprocess2.run()\n\nprint(f\"Flow at 70% opening: {valve2.getOutletStream().getFlowRate('kg/hr'):.0f} kg/hr\")\nprint(f\"Outlet temperature: {valve2.getOutletStream().getTemperature('C'):.1f} \u00b0C\")\n",
+      "seconds": 0.016,
+      "output": "Flow at 70% opening: 100000 kg/hr\nOutlet temperature: 40.4 \u00b0C\n"
+    },
+    {
+      "index": 3,
+      "line": 380,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Wellstream fluid: gas-condensate\nwellstream = jneqsim.thermo.system.SystemSrkEos(273.15 + 80.0, 250.0)\nwellstream.addComponent(\"methane\", 0.75)\nwellstream.addComponent(\"ethane\", 0.08)\nwellstream.addComponent(\"propane\", 0.05)\nwellstream.addComponent(\"n-butane\", 0.03)\nwellstream.addComponent(\"n-pentane\", 0.02)\nwellstream.addComponent(\"n-hexane\", 0.02)\nwellstream.addComponent(\"n-heptane\", 0.02)\nwellstream.addComponent(\"CO2\", 0.02)\nwellstream.addComponent(\"water\", 0.01)\nwellstream.setMixingRule(\"classic\")\n\n# Well stream at wellhead conditions\nwell_stream = jneqsim.process.equipment.stream.Stream(\"Wellhead\", wellstream)\nwell_stream.setFlowRate(50000.0, \"kg/hr\")\nwell_stream.setTemperature(80.0, \"C\")\nwell_stream.setPressure(250.0, \"bara\")\n\n# Choke valve reducing pressure to first-stage separator\nchoke = jneqsim.process.equipment.valve.ThrottlingValve(\"Production Choke\", well_stream)\nchoke.setOutletPressure(70.0, \"bara\")\n\nprocess = jneqsim.process.processmodel.ProcessSystem()\nprocess.add(well_stream)\nprocess.add(choke)\nprocess.run()\n\n# The Joule-Thomson effect causes cooling through the choke\nT_in = well_stream.getTemperature(\"C\")\nT_out = choke.getOutletStream().getTemperature(\"C\")\nJT_cooling = T_in - T_out\n\nprint(f\"Inlet: {T_in:.1f} \u00b0C, {well_stream.getPressure('bara'):.1f} bara\")\nprint(f\"Outlet: {T_out:.1f} \u00b0C, {choke.getOutletStream().getPressure('bara'):.1f} bara\")\nprint(f\"JT cooling: {JT_cooling:.1f} \u00b0C\")\nprint(f\"Pressure drop: {choke.getDeltaPressure('bara'):.1f} bar\")\n",
+      "seconds": 0.188,
+      "output": "Inlet: 80.0 \u00b0C, 250.0 bara\nOutlet: 44.8 \u00b0C, 70.0 bara\nJT cooling: 35.2 \u00b0C\nPressure drop: 180.0 bar\n"
+    },
+    {
+      "index": 4,
+      "line": 474,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Rich gas for JT cooling study\ngas = jneqsim.thermo.system.SystemSrkEos(273.15 + 60.0, 120.0)\ngas.addComponent(\"methane\", 0.80)\ngas.addComponent(\"ethane\", 0.08)\ngas.addComponent(\"propane\", 0.05)\ngas.addComponent(\"n-butane\", 0.03)\ngas.addComponent(\"n-pentane\", 0.02)\ngas.addComponent(\"CO2\", 0.02)\ngas.setMixingRule(\"classic\")\n\nfeed = jneqsim.process.equipment.stream.Stream(\"Rich Gas\", gas)\nfeed.setFlowRate(30000.0, \"kg/hr\")\nfeed.setTemperature(60.0, \"C\")\nfeed.setPressure(120.0, \"bara\")\n\n# Study JT cooling at different outlet pressures\nprocess = jneqsim.process.processmodel.ProcessSystem()\nprocess.add(feed)\n\npressures = [100.0, 80.0, 60.0, 40.0, 20.0]\nprint(\"P_out (bara) | T_out (\u00b0C) | \u0394T (\u00b0C)\")\nprint(\"-\" * 42)\n\nfor p_out in pressures:\n    valve = jneqsim.process.equipment.valve.ThrottlingValve(\"JT Valve\", feed)\n    valve.setOutletPressure(p_out, \"bara\")\n\n    proc = jneqsim.process.processmodel.ProcessSystem()\n    proc.add(feed)\n    proc.add(valve)\n    proc.run()\n\n    T_out = valve.getOutletStream().getTemperature(\"C\")\n    dT = feed.getTemperature(\"C\") - T_out\n    print(f\"  {p_out:6.0f}      | {T_out:7.1f}    | {dT:5.1f}\")\n",
+      "seconds": 1.172,
+      "output": "P_out (bara) | T_out (\u00b0C) | \u0394T (\u00b0C)\n------------------------------------------\n     100      |    53.2    |   6.8\n      80      |    45.0    |  15.0\n      60      |    35.2    |  24.8\n      40      |    25.0    |  35.0\n      20      |    12.4    |  47.6\n"
+    },
+    {
+      "index": 5,
+      "line": 738,
+      "status": "pass",
+      "code": "valve = jneqsim.process.equipment.valve.ThrottlingValve(\"V-1\", feed)\nvalve.setOutletPressure(40.0, \"bara\")\n",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "index": 6,
+      "line": 745,
+      "status": "pass",
+      "code": "valve = jneqsim.process.equipment.valve.ThrottlingValve(\"V-2\", feed)\nvalve.setCv(200.0, \"US\")\nvalve.setPercentValveOpening(75.0)\nvalve.setIsCalcOutPressure(True)\n",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "index": 7,
+      "line": 754,
+      "status": "pass",
+      "code": "valve = jneqsim.process.equipment.valve.ThrottlingValve(\"V-3\", feed)\nvalve.setDeltaPressure(20.0, \"bara\")\n",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "index": 8,
+      "line": 763,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Gas-condensate wellstream\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 90.0, 300.0)\nfluid.addComponent(\"nitrogen\", 0.005)\nfluid.addComponent(\"CO2\", 0.015)\nfluid.addComponent(\"methane\", 0.78)\nfluid.addComponent(\"ethane\", 0.07)\nfluid.addComponent(\"propane\", 0.04)\nfluid.addComponent(\"n-butane\", 0.025)\nfluid.addComponent(\"n-pentane\", 0.015)\nfluid.addComponent(\"n-hexane\", 0.015)\nfluid.addComponent(\"n-heptane\", 0.02)\nfluid.addComponent(\"n-octane\", 0.015)\nfluid.setMixingRule(\"classic\")\n\n# Wellhead stream\nwellhead = jneqsim.process.equipment.stream.Stream(\"Wellhead\", fluid)\nwellhead.setFlowRate(80000.0, \"kg/hr\")\nwellhead.setTemperature(90.0, \"C\")\nwellhead.setPressure(300.0, \"bara\")\n\n# Production choke: 300 -> 70 bara\nchoke = jneqsim.process.equipment.valve.ThrottlingValve(\"Production Choke\", wellhead)\nchoke.setOutletPressure(70.0, \"bara\")\n\n# First-stage separator\nseparator = jneqsim.process.equipment.separator.Separator(\"HP Separator\")\nseparator.setInletStream(choke.getOutletStream())\n\n# Gas export valve\nexport_valve = jneqsim.process.equipment.valve.ThrottlingValve(\"Export Valve\")\nexport_valve.setInletStream(separator.getGasOutStream())\nexport_valve.setOutletPressure(65.0, \"bara\")\n\n# Build the process\nprocess = jneqsim.process.processmodel.ProcessSystem()\nprocess.add(wellhead)\nprocess.add(choke)\nprocess.add(separator)\nprocess.add(export_valve)\nprocess.run()\n\n# Report results\nprint(\"=== Production System Results ===\")\nprint(f\"\\nWellhead:  {wellhead.getTemperature('C'):.1f} \u00b0C, \"\n      f\"{wellhead.getPressure('bara'):.0f} bara\")\nprint(f\"\\nAfter choke: {choke.getOutletStream().getTemperature('C'):.1f} \u00b0C, \"\n      f\"{choke.getOutletStream().getPressure('bara'):.0f} bara\")\nprint(f\"JT cooling: {wellhead.getTemperature('C') - choke.getOutletStream().getTemperature('C'):.1f} \u00b0C\")\nprint(f\"\\nSeparator gas:    {separator.getGasOutStream().getFlowRate('kg/hr'):.0f} kg/hr\")\nprint(f\"Separator liquid: {separator.getLiquidOutStream().getFlowRate('kg/hr'):.0f} kg/hr\")\nprint(f\"\\nExport gas: {export_valve.getOutletStream().getTemperature('C'):.1f} \u00b0C, \"\n      f\"{export_valve.getOutletStream().getPressure('bara'):.0f} bara\")\n",
+      "seconds": 0.234,
+      "output": "=== Production System Results ===\n\nWellhead:  90.0 \u00b0C, 300 bara\n\nAfter choke: 58.2 \u00b0C, 70 bara\nJT cooling: 31.8 \u00b0C\n\nSeparator gas:    60867 kg/hr\nSeparator liquid: 19133 kg/hr\n\nExport gas: 56.5 \u00b0C, 65 bara\n"
+    },
+    {
+      "index": 11,
+      "line": 1005,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Model a production system where the choke becomes a bottleneck\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 80.0, 200.0)\nfluid.addComponent(\"methane\", 0.80)\nfluid.addComponent(\"ethane\", 0.08)\nfluid.addComponent(\"propane\", 0.05)\nfluid.addComponent(\"n-butane\", 0.03)\nfluid.addComponent(\"n-pentane\", 0.02)\nfluid.addComponent(\"CO2\", 0.02)\nfluid.setMixingRule(\"classic\")\n\nStream = jneqsim.process.equipment.stream.Stream\nThrottlingValve = jneqsim.process.equipment.valve.ThrottlingValve\nProcessSystem = jneqsim.process.processmodel.ProcessSystem\n\nfeed = Stream(\"Wellhead\", fluid)\nfeed.setFlowRate(80000.0, \"kg/hr\")\nfeed.setTemperature(80.0, \"C\")\nfeed.setPressure(200.0, \"bara\")\n\n# Production choke with known design Cv\nchoke = ThrottlingValve(\"Production Choke\", feed)\nchoke.setOutletPressure(70.0, \"bara\")\nchoke.setCv(200.0, \"US\")  # Design Cv from valve datasheet\n\nprocess = ProcessSystem()\nprocess.add(feed)\nprocess.add(choke)\nprocess.run()\n\n# Check valve utilization\nopening = choke.getPercentValveOpening()\nprint(f\"Valve opening: {opening:.1f}%\")\nprint(f\"Flow rate: {choke.getOutletStream().getFlowRate('kg/hr'):.0f} kg/hr\")\n\n# Sweep flow rates to find the bottleneck\nprint(f\"\\n{'Flow (kg/hr)':>14} {'Opening (%)':>14} {'Status':>20}\")\nprint(\"-\" * 50)\nfor flow in [40000, 60000, 80000, 100000, 120000, 140000]:\n    feed.setFlowRate(float(flow), \"kg/hr\")\n    process.run()\n    pct = choke.getPercentValveOpening()\n    status = \"Normal\" if pct < 70 else (\"Approaching\" if pct < 85 else\n             (\"Near limit\" if pct < 95 else \"BOTTLENECK\"))\n    print(f\"{flow:>14,} {pct:>14.1f} {status:>20}\")\n",
+      "seconds": 0.75,
+      "output": "Valve opening: 100.0%\nFlow rate: 80000 kg/hr\n\n  Flow (kg/hr)    Opening (%)               Status\n--------------------------------------------------\n        40,000          100.0           BOTTLENECK\n        60,000          100.0           BOTTLENECK\n        80,000          100.0           BOTTLENECK\n       100,000          100.0           BOTTLENECK\n       120,000          100.0           BOTTLENECK\n       140,000          100.0           BOTTLENECK\n"
+    },
+    {
+      "index": 12,
+      "line": 1087,
+      "status": "pass",
+      "code": "# Demonstrate critical flow detection\nprint(f\"{'P_out (bara)':>14} {'Flow (kg/hr)':>14} {'Critical?':>12}\")\nprint(\"-\" * 42)\nfor p_out in [150, 120, 100, 80, 60, 40, 20]:\n    feed.setFlowRate(80000.0, \"kg/hr\")\n    feed.setPressure(200.0, \"bara\")\n    choke.setOutletPressure(float(p_out), \"bara\")\n    process.run()\n    flow = choke.getOutletStream().getFlowRate(\"kg/hr\")\n    # Critical flow: further reducing P_out doesn't increase flow\n    print(f\"{p_out:>14} {flow:>14,.0f} {'Yes' if p_out < 110 else 'No':>12}\")\n",
+      "seconds": 0.094,
+      "output": "  P_out (bara)   Flow (kg/hr)    Critical?\n------------------------------------------\n           150         80,000           No\n           120         80,000           No\n           100         80,000          Yes\n            80         80,000          Yes\n            60         80,000          Yes\n            40         80,000          Yes\n            20         80,000          Yes\n"
+    },
+    {
+      "index": 13,
+      "line": 1105,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\nimport json\n\n# --- Build a production system with multiple valves ---\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 70.0, 150.0)\nfluid.addComponent(\"methane\", 0.78)\nfluid.addComponent(\"ethane\", 0.08)\nfluid.addComponent(\"propane\", 0.05)\nfluid.addComponent(\"n-butane\", 0.03)\nfluid.addComponent(\"n-pentane\", 0.02)\nfluid.addComponent(\"n-heptane\", 0.02)\nfluid.addComponent(\"CO2\", 0.02)\nfluid.setMixingRule(\"classic\")\n\nStream = jneqsim.process.equipment.stream.Stream\nThrottlingValve = jneqsim.process.equipment.valve.ThrottlingValve\nSeparator = jneqsim.process.equipment.separator.Separator\nProcessSystem = jneqsim.process.processmodel.ProcessSystem\n\n# Well stream\nwell = Stream(\"Well-1\", fluid)\nwell.setFlowRate(60000.0, \"kg/hr\")\nwell.setTemperature(70.0, \"C\")\nwell.setPressure(150.0, \"bara\")\n\n# Production choke (manually sized)\nchoke = ThrottlingValve(\"Production Choke\", well)\nchoke.setOutletPressure(70.0, \"bara\")\nchoke.setCv(250.0, \"US\")\n\n# HP separator\nsep = Separator(\"HP Separator\", choke.getOutletStream())\n\n# Gas export valve (auto-sized)\ngas_valve = ThrottlingValve(\"Gas Export Valve\", sep.getGasOutStream())\ngas_valve.setOutletPressure(65.0, \"bara\")\n\n# Liquid control valve\nliq_valve = ThrottlingValve(\"Liquid Valve\", sep.getLiquidOutStream())\nliq_valve.setOutletPressure(15.0, \"bara\")\n\nprocess = ProcessSystem()\nprocess.add(well)\nprocess.add(choke)\nprocess.add(sep)\nprocess.add(gas_valve)\nprocess.add(liq_valve)\nprocess.run()\n\n# Auto-size the gas valve with 25% margin\ngas_valve.autoSize(1.25)\n\n# Report valve status across the system\nvalves = [(\"Production Choke\", choke),\n          (\"Gas Export Valve\", gas_valve),\n          (\"Liquid Valve\", liq_valve)]\n\nprint(\"=== Valve Capacity Report ===\")\nprint(f\"{'Valve':>22} {'Cv (US)':>10} {'Opening%':>10} {'Status':>14}\")\nprint(\"-\" * 58)\nfor name, v in valves:\n    try:\n        opening = v.getPercentValveOpening()\n        cv = v.getCv(\"US\")\n        status = (\"OK\" if opening < 70 else\n                  \"WATCH\" if opening < 90 else \"BOTTLENECK\")\n        print(f\"{name:>22} {cv:>10.1f} {opening:>10.1f} {status:>14}\")\n    except Exception:\n        print(f\"{name:>22} {'N/A':>10} {'N/A':>10} {'N/A':>14}\")\n\n# Optimization: find max flow before any valve hits 90%\nprint(\"\\n=== Bottleneck Analysis: Increasing Production ===\")\nfor flow in range(40000, 160001, 20000):\n    well.setFlowRate(float(flow), \"kg/hr\")\n    process.run()\n    bottleneck = \"None\"\n    for name, v in valves:\n        try:\n            if v.getPercentValveOpening() > 90.0:\n                bottleneck = name\n                break\n        except Exception:\n            pass\n    print(f\"Flow: {flow:>8,} kg/hr -> Bottleneck: {bottleneck}\")\n",
+      "seconds": 0.36,
+      "output": "=== Valve Capacity Report ===\n                 Valve    Cv (US)   Opening%         Status\n----------------------------------------------------------\n      Production Choke      250.0      100.0     BOTTLENECK\n      Gas Export Valve      330.9       50.0             OK\n          Liquid Valve        1.6      100.0     BOTTLENECK\n\n=== Bottleneck Analysis: Increasing Production ===\nFlow:   40,000 kg/hr -> Bottleneck: Production Choke\nFlow:   60,000 kg/hr -> Bottleneck: Production Choke\nFlow:   80,000 kg/hr -> Bottleneck: Production Choke\nFlow:  100,000 kg/hr -> Bottleneck: Production Choke\nFlow:  120,000 kg/hr -> Bottleneck: Production Choke\nFlow:  140,000 kg/hr -> Bottleneck: Production Choke\nFlow:  160,000 kg/hr -> Bottleneck: Production Choke\n"
+    }
+  ]
+}

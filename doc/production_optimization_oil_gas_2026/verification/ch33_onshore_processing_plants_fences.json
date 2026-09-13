@@ -1,0 +1,71 @@
+{
+  "chapter": "ch33_onshore_processing_plants",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "execution_model": "sequential Python fences, fresh JVM per chapter",
+  "examples": [
+    {
+      "number": 1,
+      "language": "python",
+      "line": 122,
+      "sha256": "95759e2d2be19bde89377db0032bed1e5592c70d6b98b83cc829d5110cbb89d9",
+      "status": "passed",
+      "seconds": 1.672,
+      "output": "Inlet gas rate:    11.3 MSm3/day\nCondensate rate:   182.42 m3/hr\nWater rate:        1.77 m3/hr\nGas pressure:      70.0 bara\nGas temperature:   25.0 C\n"
+    },
+    {
+      "number": 2,
+      "language": "python",
+      "line": 333,
+      "sha256": "f241d21e325635e497d1fad21fb721dc4487c9c2b71ba080999ff1aee3454080",
+      "status": "passed",
+      "seconds": 0.656,
+      "output": "--- TEG Dehydration Results ---\nDry gas flow rate:  11.67 MSm3/day\nDry gas pressure:   70.0 bara\nDry gas temperature:30.5 C\nWater in dry gas:   55.1 ppm (molar)\n"
+    },
+    {
+      "number": 3,
+      "language": "python",
+      "line": 506,
+      "sha256": "047e4ff2d60784cb34b151f6c0d36c3eb03b20d823c1768868905b1dfc05248e",
+      "status": "passed",
+      "seconds": 0.188,
+      "output": "--- Turboexpander NGL Recovery Results ---\nResidue gas rate:  0.00 MSm3/day\nResidue gas T:     -268.2 C\nNGL liquid rate:   439.7 m3/hr\nExpander power:    -818 kW (recovered)\nRecompressor power:-0 kW\nExpander outlet T: -268.2 C\n"
+    },
+    {
+      "number": 4,
+      "language": "python",
+      "line": 627,
+      "sha256": "65cffcc15743a4c02fc6579d02723c6a11599f2ea98ec81f8462bfaab7aa9136",
+      "status": "passed",
+      "seconds": 16.156,
+      "output": "--- Deethanizer Results ---\nColumn converged: False\nOverhead product rate: 26915 kg/hr\nC3+ bottoms rate:   23085 kg/hr\nOverhead temperature: 87.1 C\nBottoms temperature:  87.1 C\n"
+    },
+    {
+      "number": 5,
+      "language": "python",
+      "line": 854,
+      "sha256": "acb5c90162819c92b60d183bce402f479e9977966920287991e9f76477f2c6ab",
+      "status": "passed",
+      "seconds": 104.547,
+      "output": "============================================================\nONSHORE GAS PLANT — SIMULATION RESULTS\n============================================================\n\n--- Area 1: Inlet Receiving ---\nGas to processing:  7.89 MSm3/day\nCondensate rate:    127.7 m3/hr\n\n--- Area 2: TEG Dehydration ---\nDry gas rate:       7.88 MSm3/day\n\n--- Area 3: NGL Recovery ---\nResidue gas rate:   6.43 MSm3/day\nNGL liquid rate:    155.5 m3/hr\nExpander outlet T:  -76.8 C\n\n--- Area 4: Fractionation ---\nColumn converged: False\nOverhead product:   81503 kg/hr\nC3+ product:        3865 kg/hr\n\n============================================================\nOVERALL PLANT SUMMARY\n============================================================\nTotal compression:  6.4 MW\nSales gas rate:     6.43 MSm3/day\n"
+    },
+    {
+      "number": 6,
+      "language": "python",
+      "line": 1082,
+      "sha256": "0f07ce701c7e49f72550ce43118a4cff63561ae7657ccbf4ad0699b82d440654",
+      "status": "passed",
+      "seconds": 0.14,
+      "output": "Process areas: ['Inlet Receiving', 'Dehydration', 'NGL Recovery', 'Fractionation']\nInlet separator pressure: 70.0 bara\nDry gas temperature:      27.2 C\nExpander outlet T:        -76.8 C\nFull state archive unavailable for these unit internals; diagnostic saved\n"
+    },
+    {
+      "number": 7,
+      "language": "python",
+      "line": 1140,
+      "sha256": "3af6b232c8eca90ca083992b7af5d37cf51a02861e33187cbe961dfd5cc50b2b",
+      "status": "passed",
+      "seconds": 1.594,
+      "output": "ch33_onshore_processing_plants:fence7:51: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\nPrecooling C | cold-separator liquid m3/hr | compression MW\n       -40.0 |                     195.418 |         5.4937\n       -35.0 |                     173.172 |         5.9537\n       -30.0 |                     155.472 |         6.3656\n       -25.0 |                     140.618 |         6.7439\n       -20.0 |                     127.695 |         7.0973\n       -15.0 |                     116.184 |         7.4312\n       -10.0 |                     105.763 |         7.7485\n"
+    }
+  ]
+}

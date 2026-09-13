@@ -1,0 +1,29 @@
+{
+  "chapter": "ch09_flow_assurance",
+  "source_sha256": "f820c0cdcf167d0d835630e796f0ffc6b052581bf6244275e460565b83705abc",
+  "engine": "JShell, Java snippets constrained to Java 8 syntax",
+  "returncode": 0,
+  "blocks": [
+    {
+      "index": 7,
+      "line": 1002,
+      "code": "import org.apache.logging.log4j.LogManager;\nimport org.apache.logging.log4j.Logger;\nLogger logger = LogManager.getLogger(\"BookChapter9\");\nimport neqsim.thermo.system.SystemSrkEos;\nimport neqsim.process.equipment.stream.Stream;\nimport neqsim.process.processmodel.ProcessSystem;\nimport neqsim.process.equipment.capacity.CapacityConstraint;\nimport neqsim.process.util.optimizer.ProductionOptimizer;\nimport java.util.*;\nSystemSrkEos fluid = new SystemSrkEos(313.15, 80.0);\nfluid.addComponent(\"methane\", 0.80);\nfluid.addComponent(\"ethane\", 0.10);\nfluid.addComponent(\"n-heptane\", 0.08);\nfluid.addComponent(\"water\", 0.02);\nfluid.setMixingRule(\"classic\");\nfluid.setMultiPhaseCheck(true);\nStream feed = new Stream(\"Feed\", fluid);\nfeed.setFlowRate(20000.0, \"kg/hr\");\nProcessSystem process = new ProcessSystem();\nprocess.add(feed);\nprocess.run();\nimport neqsim.process.equipment.pipeline.PipeBeggsAndBrills;\nimport neqsim.process.equipment.network.LoopedPipeNetwork;\n// Java: Auto-size pipeline with 20% design margin\nPipeBeggsAndBrills pipeline = new PipeBeggsAndBrills(\"Export Pipeline\", feed);\npipeline.setLength(25000.0);  // 25 km\npipeline.setElevation(-200.0);  // outlet below inlet\npipeline.setDiameter(0.254);  // 10-inch initial guess\nprocess.add(pipeline);\nprocess.run();\n\n// Auto-size: finds minimum diameter satisfying constraints + margin\npipeline.autoSize(1.20);  // 20% design margin on velocity\n\npipeline.initMechanicalDesign();\n// The pipeline now carries constraint metadata\ndouble designVelocity = pipeline.getMechanicalDesign().getMaxDesignVelocity();\ndouble designDP = pipeline.getMechanicalDesign().getMaxDesignPressureDrop();\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_007_BEGIN\"\n\njshell> \njshell> $36 ==> "
+    },
+    {
+      "index": 8,
+      "line": 1052,
+      "code": "pipeline.setMaxDesignVelocity(25.0);       // 25 m/s max\npipeline.getMechanicalDesign().setMaxDesignPressureDrop(15.0);   // 15 bar max\npipeline.setMaxDesignLOF(0.5);                  // LOF < 0.5\npipeline.setMaxDesignFRMS(500.0);               // FRMS < 500 N\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_008_BEGIN\"\n\njshell> \njshell> $42 ==> "
+    },
+    {
+      "index": 11,
+      "line": 1195,
+      "code": "LoopedPipeNetwork network = new LoopedPipeNetwork(\"Gathering System\");\nnetwork.setFluidTemplate(fluid);\nnetwork.addSourceNode(\"Well-1\", 90.0, 0.0);\nnetwork.addSourceNode(\"Well-2\", 85.0, 0.0);\nnetwork.addSourceNode(\"Well-3\", 88.0, 0.0);\nnetwork.addJunctionNode(\"Junction-A\");\nnetwork.addJunctionNode(\"Junction-B\");\nnetwork.addSinkNode(\"Plant Inlet\", 0.0);\nnetwork.getNode(\"Plant Inlet\").setPressure(70.0e5);\nnetwork.getNode(\"Plant Inlet\").setPressureFixed(true);\nnetwork.addPipe(\"Well-1\", \"Junction-A\", \"Line 1\", 5000.0, 0.2032);\nnetwork.addPipe(\"Well-2\", \"Junction-A\", \"Line 2\", 3000.0, 0.1524);\nnetwork.addPipe(\"Well-3\", \"Junction-B\", \"Line 3\", 8000.0, 0.2032);\nnetwork.addPipe(\"Junction-A\", \"Junction-B\", \"Crossover\", 2000.0, 0.254);\nnetwork.addPipe(\"Junction-B\", \"Plant Inlet\", \"Export\", 10000.0, 0.3048);\nnetwork.setSolverType(LoopedPipeNetwork.SolverType.NEWTON_RAPHSON);\nnetwork.run();\nlogger.info(\"Network results: {}\", network.getSolutionSummary());\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_011_BEGIN\"\n\njshell> \njshell> $62 ==> "
+    }
+  ]
+}

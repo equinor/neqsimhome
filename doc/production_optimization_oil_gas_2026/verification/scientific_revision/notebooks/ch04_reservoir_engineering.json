@@ -1,0 +1,976 @@
+{
+  "chapter": "ch04_reservoir_engineering",
+  "notebook": "chapters\\ch04_reservoir_engineering\\notebooks\\ch04_reservoir_figures.ipynb",
+  "status": "passed",
+  "checked_at": "2026-09-12T20:08:44.829268+00:00",
+  "checks": [
+    {
+      "label": "calculation_cell_4:fluid absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 393.15,
+      "maximum_actual": 393.15
+    },
+    {
+      "label": "calculation_cell_4:fluid absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 300.0,
+      "maximum_actual": 300.0
+    },
+    {
+      "label": "calculation_cell_4:fluid overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=14",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 14.0,
+      "maximum_actual": 14.0
+    },
+    {
+      "label": "calculation_cell_4:fluid overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.005,
+      "maximum_actual": 0.005
+    },
+    {
+      "label": "calculation_cell_4:fluid overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.7,
+      "maximum_actual": 0.7
+    },
+    {
+      "label": "calculation_cell_4:fluid overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_4:fluid phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_4:fluid phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=14",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 14.0,
+      "maximum_actual": 14.0
+    },
+    {
+      "label": "calculation_cell_4:fluid phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.005,
+      "maximum_actual": 0.005
+    },
+    {
+      "label": "calculation_cell_4:fluid phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.7,
+      "maximum_actual": 0.7
+    },
+    {
+      "label": "calculation_cell_4:fluid phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_4:fluid phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 297.5009889694044,
+      "maximum_actual": 297.5009889694044
+    },
+    {
+      "label": "calculation_cell_4:fluid phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_4:fluid flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 50,
+      "passed": 50,
+      "failed": 0,
+      "minimum_actual": 393.15,
+      "maximum_actual": 393.15
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 50,
+      "passed": 50,
+      "failed": 0,
+      "minimum_actual": 50.0,
+      "maximum_actual": 300.0
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=14",
+      "tolerance": null,
+      "evaluations": 50,
+      "passed": 50,
+      "failed": 0,
+      "minimum_actual": 14.0,
+      "maximum_actual": 14.0
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 50,
+      "passed": 50,
+      "failed": 0,
+      "minimum_actual": 0.005,
+      "maximum_actual": 0.005
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 50,
+      "passed": 50,
+      "failed": 0,
+      "minimum_actual": 0.7,
+      "maximum_actual": 0.7
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 50,
+      "passed": 50,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 79,
+      "passed": 79,
+      "failed": 0,
+      "minimum_actual": 0.015745647123637685,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=14",
+      "tolerance": null,
+      "evaluations": 79,
+      "passed": 79,
+      "failed": 0,
+      "minimum_actual": 14.0,
+      "maximum_actual": 14.0
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 79,
+      "passed": 79,
+      "failed": 0,
+      "minimum_actual": 0.0005577736039674258,
+      "maximum_actual": 0.005
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 79,
+      "passed": 79,
+      "failed": 0,
+      "minimum_actual": 0.1794496142549411,
+      "maximum_actual": 0.7581455024389879
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 79,
+      "passed": 79,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 2.220446049250313e-15
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 79,
+      "passed": 79,
+      "failed": 0,
+      "minimum_actual": 42.06810053571421,
+      "maximum_actual": 555.8472431545736
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 50,
+      "passed": 50,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 1.1102230246251565e-16
+    },
+    {
+      "label": "calculation_cell_8:fluid_dep flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 50,
+      "passed": 50,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 1.4099832412739488e-14
+    },
+    {
+      "label": "calculation_cell_10:fluid_d absolute temperature",
+      "category": "physical_domain",
+      "unit": "K",
+      "expected": ">0 K",
+      "tolerance": null,
+      "evaluations": 30,
+      "passed": 30,
+      "failed": 0,
+      "minimum_actual": 323.15,
+      "maximum_actual": 413.15
+    },
+    {
+      "label": "calculation_cell_10:fluid_d absolute pressure",
+      "category": "physical_domain",
+      "unit": "bara",
+      "expected": ">0 bara",
+      "tolerance": null,
+      "evaluations": 30,
+      "passed": 30,
+      "failed": 0,
+      "minimum_actual": 100.0,
+      "maximum_actual": 400.0
+    },
+    {
+      "label": "calculation_cell_10:fluid_d overall mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=14",
+      "tolerance": null,
+      "evaluations": 30,
+      "passed": 30,
+      "failed": 0,
+      "minimum_actual": 14.0,
+      "maximum_actual": 14.0
+    },
+    {
+      "label": "calculation_cell_10:fluid_d overall mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0.0",
+      "tolerance": null,
+      "evaluations": 30,
+      "passed": 30,
+      "failed": 0,
+      "minimum_actual": 0.005,
+      "maximum_actual": 0.005
+    },
+    {
+      "label": "calculation_cell_10:fluid_d overall mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0000000001",
+      "tolerance": null,
+      "evaluations": 30,
+      "passed": 30,
+      "failed": 0,
+      "minimum_actual": 0.7,
+      "maximum_actual": 0.7
+    },
+    {
+      "label": "calculation_cell_10:fluid_d overall composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-08",
+      "tolerance": {
+        "absolute": 1e-08,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 30,
+      "passed": 30,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_10:fluid_d phase amount bound",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "[0,1]",
+      "tolerance": {
+        "absolute": 1e-10
+      },
+      "evaluations": 41,
+      "passed": 41,
+      "failed": 0,
+      "minimum_actual": 0.005904644114257507,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "calculation_cell_10:fluid_d phase mole fractions finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=14",
+      "tolerance": null,
+      "evaluations": 41,
+      "passed": 41,
+      "failed": 0,
+      "minimum_actual": 14.0,
+      "maximum_actual": 14.0
+    },
+    {
+      "label": "calculation_cell_10:fluid_d phase mole fractions lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=-1e-12",
+      "tolerance": null,
+      "evaluations": 41,
+      "passed": 41,
+      "failed": 0,
+      "minimum_actual": 9.395491405486002e-05,
+      "maximum_actual": 0.005
+    },
+    {
+      "label": "calculation_cell_10:fluid_d phase mole fractions upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.00000001",
+      "tolerance": null,
+      "evaluations": 41,
+      "passed": 41,
+      "failed": 0,
+      "minimum_actual": 0.34017695942199505,
+      "maximum_actual": 0.8284271975890457
+    },
+    {
+      "label": "calculation_cell_10:fluid_d phase composition sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 41,
+      "passed": 41,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 1.176836406102666e-14
+    },
+    {
+      "label": "calculation_cell_10:fluid_d phase density",
+      "category": "physical_domain",
+      "unit": "kg/m3",
+      "expected": ">0",
+      "tolerance": null,
+      "evaluations": 41,
+      "passed": 41,
+      "failed": 0,
+      "minimum_actual": 93.7784252964407,
+      "maximum_actual": 536.993598640675
+    },
+    {
+      "label": "calculation_cell_10:fluid_d phase fractions sum",
+      "category": "composition_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 1.0
+      },
+      "evaluations": 30,
+      "passed": 30,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "calculation_cell_10:fluid_d flash component reconstruction",
+      "category": "component_balance",
+      "unit": "1",
+      "expected": "absolute error <= 1e-07",
+      "tolerance": {
+        "absolute": 1e-07,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 30,
+      "passed": 30,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 8.881784197001252e-16
+    },
+    {
+      "label": "PI inflow law",
+      "category": "analytic_identity",
+      "unit": "1",
+      "expected": "absolute error <= 1.501e-06",
+      "tolerance": {
+        "absolute": 1.5010000000000001e-06,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "Vogel closed-reservoir endpoint",
+      "category": "analytic_identity",
+      "unit": "1",
+      "expected": "absolute error <= 1e-09",
+      "tolerance": {
+        "absolute": 1e-09,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "Vogel tangent agrees with PI at reservoir pressure",
+      "category": "analytic_identity",
+      "unit": "1",
+      "expected": "absolute error <= 6e-09",
+      "tolerance": {
+        "absolute": 6e-09,
+        "relative": 0.0,
+        "reference": 0.0
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "Se finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=200",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 200.0,
+      "maximum_actual": 200.0
+    },
+    {
+      "label": "Se lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "Se upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "kr_w finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=200",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 200.0,
+      "maximum_actual": 200.0
+    },
+    {
+      "label": "kr_w lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "kr_w upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=0.4",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.4,
+      "maximum_actual": 0.4
+    },
+    {
+      "label": "kr_o finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=200",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 200.0,
+      "maximum_actual": 200.0
+    },
+    {
+      "label": "kr_o lower bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "kr_o upper bound",
+      "category": "physical_domain",
+      "unit": "1",
+      "expected": "<=1.0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    },
+    {
+      "label": "Corey water mobility increases with saturation finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=200",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 200.0,
+      "maximum_actual": 200.0
+    },
+    {
+      "label": "Corey water mobility increases with saturation",
+      "category": "justified_sensitivity",
+      "unit": "1",
+      "expected": "signed consecutive change >= -1e-08",
+      "tolerance": {
+        "absolute": 1e-08
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 5.075756297205343e-08,
+      "maximum_actual": 5.075756297205343e-08
+    },
+    {
+      "label": "Corey oil mobility decreases with saturation finite coverage",
+      "category": "physical_domain",
+      "unit": "points",
+      "expected": ">=1 finite values; missing allowed=False; total=200",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 200.0,
+      "maximum_actual": 200.0
+    },
+    {
+      "label": "Corey oil mobility decreases with saturation",
+      "category": "justified_sensitivity",
+      "unit": "1",
+      "expected": "signed consecutive change >= -1e-08",
+      "tolerance": {
+        "absolute": 1e-08
+      },
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.7900588495449722e-06,
+      "maximum_actual": 1.7900588495449722e-06
+    },
+    {
+      "label": "ch04_fig01_ipr_curves.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 200.0,
+      "maximum_actual": 200.0
+    },
+    {
+      "label": "ch04_fig01_ipr_curves.png panel 1 curve 1 y absolute pressure",
+      "category": "figure_domain",
+      "unit": "bara",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "ch04_fig01_ipr_curves.png panel 1 curve 2 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 200.0,
+      "maximum_actual": 200.0
+    },
+    {
+      "label": "ch04_fig01_ipr_curves.png panel 1 curve 2 y absolute pressure",
+      "category": "figure_domain",
+      "unit": "bara",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "ch04_fig01_ipr_curves.png panel 1 curve 3 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.0,
+      "maximum_actual": 2.0
+    },
+    {
+      "label": "ch04_fig01_ipr_curves.png panel 1 curve 3 y absolute pressure",
+      "category": "figure_domain",
+      "unit": "bara",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 0.0,
+      "maximum_actual": 0.0
+    },
+    {
+      "label": "ch04_fig02_gor_vs_pressure.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 29.0,
+      "maximum_actual": 29.0
+    },
+    {
+      "label": "ch04_fig02_gor_vs_pressure.png panel 1 curve 1 x absolute pressure",
+      "category": "figure_domain",
+      "unit": "bara",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 50.0,
+      "maximum_actual": 50.0
+    },
+    {
+      "label": "ch04_fig03_density_vs_depth.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 30.0,
+      "maximum_actual": 30.0
+    },
+    {
+      "label": "ch04_fig03_density_vs_depth.png panel 1 curve 1 x density",
+      "category": "figure_domain",
+      "unit": "fluid density (kg/m³)",
+      "expected": ">=0",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 159.37852021796692,
+      "maximum_actual": 159.37852021796692
+    },
+    {
+      "label": "ch04_fig03_density_vs_depth.png panel 2 curve 2 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 30.0,
+      "maximum_actual": 30.0
+    },
+    {
+      "label": "ch04_fig04_rel_perm_curves.png panel 1 curve 1 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 200.0,
+      "maximum_actual": 200.0
+    },
+    {
+      "label": "ch04_fig04_rel_perm_curves.png panel 1 curve 2 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 200.0,
+      "maximum_actual": 200.0
+    },
+    {
+      "label": "ch04_fig04_rel_perm_curves.png panel 1 curve 3 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.0,
+      "maximum_actual": 2.0
+    },
+    {
+      "label": "ch04_fig04_rel_perm_curves.png panel 1 curve 4 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 2.0,
+      "maximum_actual": 2.0
+    },
+    {
+      "label": "ch04_fig04_rel_perm_curves.png panel 1 curve 5 plotted finite coverage",
+      "category": "figure_domain",
+      "unit": "points",
+      "expected": ">0 finite plotted values",
+      "tolerance": null,
+      "evaluations": 1,
+      "passed": 1,
+      "failed": 0,
+      "minimum_actual": 1.0,
+      "maximum_actual": 1.0
+    }
+  ],
+  "failures": [],
+  "rejected_candidates": [],
+  "uncovered_equipment": [],
+  "finished": true,
+  "scope": "Computed-case physical verification. Does not establish independent model accuracy or field calibration.",
+  "domain_scope": {
+    "checked": "PI/Vogel endpoints and Corey saturation bounds",
+    "limitations": "Inflow and relative-permeability curves are specified correlations; imposed depth gradients are not a coupled hydrostatic solution."
+  },
+  "case_evidence": null
+}

@@ -1,0 +1,254 @@
+{
+  "chapter": "ch30_digital_twins_and_automation",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "execution_model": "sequential Python fences, fresh JVM per chapter",
+  "examples": [
+    {
+      "number": 1,
+      "language": "python",
+      "line": 108,
+      "sha256": "8dee61c38f00a06a1502e0e8c2eb64c5b8be84f8d146be664668fdee9eef4814",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 2,
+      "language": "python",
+      "line": 125,
+      "sha256": "d160ce5dc696d6ecfd47798853fbf387f233f60fc61209a8ee1d633d2fd0b1ad",
+      "status": "integration_pattern",
+      "reason": "pattern: requires authenticated historian and site tag configuration"
+    },
+    {
+      "number": 3,
+      "language": "python",
+      "line": 148,
+      "sha256": "f2d72e1e52a3b04008e9c330a53ec4c862ed49d71b040998b016f51c319e9b62",
+      "status": "integration_pattern",
+      "reason": "pattern: requires authenticated historian and site tag configuration"
+    },
+    {
+      "number": 4,
+      "language": "python",
+      "line": 157,
+      "sha256": "d043a5564815173f37b81c05149962063f0b359cf597eedfebd474c66dd8d7a2",
+      "status": "integration_pattern",
+      "reason": "pattern: requires authenticated historian and site tag configuration"
+    },
+    {
+      "number": 5,
+      "language": "python",
+      "line": 194,
+      "sha256": "4423c0803f523eb1238d2e869352120ff52477c1a090b9c6bc7e8d013662b528",
+      "status": "passed",
+      "seconds": 0.656,
+      "output": ""
+    },
+    {
+      "number": 6,
+      "language": "python",
+      "line": 337,
+      "sha256": "c07929cf930238fc1faeb1948dc29eb6093b3eb6c44f1874ea95c4d12b858b3a",
+      "status": "passed",
+      "seconds": 0.016,
+      "output": "Local data-quality contracts: valid constant accepted; trend/oscillation/missing rejected\n"
+    },
+    {
+      "number": 7,
+      "language": "python",
+      "line": 415,
+      "sha256": "260bca41c3aa5ef180fc9edae497176e49227e24e08124a914c534a2cf5bda4d",
+      "status": "integration_pattern",
+      "reason": "pattern: requires reader calibrator optimizer and writer callbacks"
+    },
+    {
+      "number": 8,
+      "language": "python",
+      "line": 542,
+      "sha256": "d0817e24739f9b58e83f537e6b122f8f687c3e05263731e578a7a979bef986c2",
+      "status": "integration_pattern",
+      "reason": "pattern: requires caller calibration dataset and scikit-learn"
+    },
+    {
+      "number": 9,
+      "language": "python",
+      "line": 593,
+      "sha256": "80534d2eacba41e9ec45b111c47f5254f57199017f5f8e88471f77c9ec4b22f7",
+      "status": "passed",
+      "seconds": 3.046,
+      "output": "Equipment units: ['Feed Gas', 'HP Separator', 'Export Compressor', 'Aftercooler', 'Liq Valve']\n  HP Separator.temperature [OUTPUT] unit=K : Equipment temperature\n  HP Separator.pressure [OUTPUT] unit=bara : Equipment pressure\n  HP Separator.gasOutStream.temperature [OUTPUT] unit=K : Stream temperature\n  HP Separator.gasOutStream.pressure [OUTPUT] unit=bara : Stream pressure\n  HP Separator.gasOutStream.flowRate [OUTPUT] unit=kg/hr : Stream mass flow rate\n  HP Separator.gasOutStream.density [OUTPUT] unit=kg/m3 : Stream density\n  HP Separator.gasOutStream.molarMass [OUTPUT] unit=kg/mol : Stream molar mass\n  HP Separator.liquidOutStream.temperature [OUTPUT] unit=K : Stream temperature\n  HP Separator.liquidOutStream.pressure [OUTPUT] unit=bara : Stream pressure\n  HP Separator.liquidOutStream.flowRate [OUTPUT] unit=kg/hr : Stream mass flow rate\n  HP Separator.liquidOutStream.density [OUTPUT] unit=kg/m3 : Stream density\n  HP Separator.liquidOutStream.molarMass [OUTPUT] unit=kg/mol : Stream molar mass\n\nSeparator gas T = 60.0 °C\nSeparator P = 50.0 bara\nCompressor power = 3.00 MW\nCompressor power at 170 bara = 3.41 MW\n"
+    },
+    {
+      "number": 10,
+      "language": "python",
+      "line": 680,
+      "sha256": "5b07016c5f26df147909b754e112256916dda33ca6e585fbf9c41d327cd02af7",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 11,
+      "language": "python",
+      "line": 692,
+      "sha256": "86b52963653f7024d2940acb1afc17149e95478b5a0d90ed099739e54327b827",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "Set result: success\n"
+    },
+    {
+      "number": 12,
+      "language": "python",
+      "line": 725,
+      "sha256": "b9c96501a52351fbcfeb3579196bc7b23029efd66a433aa84a72a537f4ca685d",
+      "status": "passed",
+      "seconds": 0.015,
+      "output": "{\n  \"totalOperations\": 2,\n  \"successRate\": 1.0,\n  \"errorCategories\": {},\n  \"learnedCorrections\": {},\n  \"recentFailures\": [],\n  \"recommendations\": [\n    \"Operations running well (success rate: 100%).\"\n  ]\n}\n"
+    },
+    {
+      "number": 13,
+      "language": "python",
+      "line": 746,
+      "sha256": "250de80f6cd6911d5b53d318319f6e098b59859abad636e8b49dbf9056b7fb17",
+      "status": "passed",
+      "seconds": 0.062,
+      "output": "=== ProcessModel Convergence Summary ===\nConverged: YES\nIterations: 2 / 50\nBoundary streams tracked: 2\nBoundary values converged: YES\nAll process areas solved: YES\n\nFinal Errors (relative):\n  Flow rate:    0.00e+00 (tolerance: 1.00e-03) OK [worst: Separation::HP Separator -> gasOutStream]\n  Temperature:  0.00e+00 (tolerance: 1.00e-03) OK [worst: Separation::HP Separator -> gasOutStream]\n  Pressure:     0.00e+00 (tolerance: 1.00e-03) OK [worst: Separation::HP Separator -> gasOutStream]\n  Flow filters: absolute tolerance 0.100 kg/hr, boundary floor 0.100 kg/hr\n  Auto-tuning:  auto-tuned to a plant feed rate of 1.000e+05 kg/hr: boundary floor 0.100 kg/hr, absolute flow tolerance 0.100 kg/hr, low-flow bypass 0.100 kg/hr on 4 unit(s), recycle flow tolerance on 0 loop(s), adaptive acceleration on 0 loop(s)\n  Auto-accuracy: no tolerance given - using the engineering default 1.0e-03 relative on flow, temperature and pressure\n  Mass closure:  recycle tear mass closure 0.00 of feed (tolerance 0.00100) - every active recycle tear closes Unit-level closure 0.00 of feed is within the same tolerance.\n\nProcess Status:\n  Separation                    : SOLVED\n  Compression                   : SOLVED\n  Gas Treatment                 : SOLVED\n\n"
+    },
+    {
+      "number": 14,
+      "language": "python",
+      "line": 780,
+      "sha256": "912459a2c6e12972a35082b81aadd37662cfdf02458377c3f16ffe606b222744",
+      "status": "passed",
+      "seconds": 0.032,
+      "output": "Areas: ['Separation', 'Compression', 'Gas Treatment']\n"
+    },
+    {
+      "number": 15,
+      "language": "python",
+      "line": 814,
+      "sha256": "bd19812b0e039987c6bb4fb3e1116eff88d3d93e07364fde637f7bbba365908d",
+      "status": "passed",
+      "seconds": 0.125,
+      "output": "Saved model state v1.0.0\nValid: True\n"
+    },
+    {
+      "number": 16,
+      "language": "python",
+      "line": 848,
+      "sha256": "d6babf805b223844db883232c44d905be76a81fb59c4aca2ac12149d010df3b9",
+      "status": "passed",
+      "seconds": 0.031,
+      "output": "Modified parameters:\n  version\nAdded equipment:\n"
+    },
+    {
+      "number": 17,
+      "language": "python",
+      "line": 874,
+      "sha256": "b0e589919f45cffadd113e896232836b94549a6eae6960c115bc9ba87a267cf6",
+      "status": "passed",
+      "seconds": 0.015,
+      "output": "Compressed size: 1397 bytes\nRestored: Platform Model v1.0.0\n"
+    },
+    {
+      "number": 18,
+      "language": "python",
+      "line": 892,
+      "sha256": "a1a401f326de64dec3349862b17191c1e4ad3ca163c254e4c977b18a02f7d59d",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "{\n  \"hp_sep_pressure\": {\n    \"model\": 50.0,\n    \"measured\": 50.2,\n    \"deviation_pct\": 0.3984063745019977,\n    \"unit\": \"bara\"\n  },\n  \"hp_sep_temperature\": {\n    \"model\": 60.0,\n    \"measured\": 59.8,\n    \"deviation_pct\": 0.33444816053512183,\n    \"unit\": \"C\"\n  },\n  \"compressor_power\": {\n    \"model\": 3.4058127965311717,\n    \"measured\": 6.0,\n    \"deviation_pct\": 43.23645339114714,\n    \"unit\": \"MW\"\n  }\n}\n"
+    },
+    {
+      "number": 19,
+      "language": "python",
+      "line": 971,
+      "sha256": "b3216d96f2e67d9ec6efcd76443c0d7310390fc53a39bde27239c7a7d1e73d15",
+      "status": "passed",
+      "seconds": 2.203,
+      "output": "ch30_digital_twins_and_automation:fence19:95: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    },
+    {
+      "number": 20,
+      "language": "python",
+      "line": 1107,
+      "sha256": "cf042d92ac3b491568464ee4e06b3463a4a4d07be648bd011648e30b714024d3",
+      "status": "passed",
+      "seconds": 0.188,
+      "output": "Optimal separator pressure: 70.0 bara\nMax liquid flow: 30211 kg/hr\n"
+    },
+    {
+      "number": 21,
+      "language": "python",
+      "line": 1172,
+      "sha256": "953ee229f3ab89a494904780f3577a3435066f2bb2572f9cf1d495adc85d2323",
+      "status": "passed",
+      "seconds": 0.265,
+      "output": "Feasible: True objective: 30210.819017909816\nBest setpoints: {'Feed Gas.pressure': 70.0, 'Export Compressor.outletPressure': 143.98681661118144}\n"
+    },
+    {
+      "number": 22,
+      "language": "python",
+      "line": 1384,
+      "sha256": "4c08f4cb86362d3ae46c4f358109ca9f078f8a15e5c54ede2282793b516b2a10",
+      "status": "integration_pattern",
+      "reason": "pattern: requires caller run_neqsim_model and output schema"
+    },
+    {
+      "number": 23,
+      "language": "python",
+      "line": 1647,
+      "sha256": "c5a0d30846d42ef2a597e45fc47d69c71d6b5be756ffe0245d9b2b8419aa0664",
+      "status": "integration_pattern",
+      "reason": "pattern: requires the five fully configured plant-area models"
+    },
+    {
+      "number": 24,
+      "language": "java",
+      "line": 1740,
+      "sha256": "6800a3a1a8077370748d30e3e28d3960b863304b2d69182c0da245afa5e996ce",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 25,
+      "language": "java",
+      "line": 1790,
+      "sha256": "e75ab8a74845fffb14c6b85085528d70b79ce3cd051ea22c76d95f8aee77f673",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 26,
+      "language": "java",
+      "line": 1804,
+      "sha256": "4027ad707f19d8fd69e2563454391a2f89ab0eafed9df1973a896c08b06a2c4f",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 27,
+      "language": "java",
+      "line": 1846,
+      "sha256": "42aa89357587076a411c4d50a6164f38cd06e643c154fb0809862f0764cc40f1",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 28,
+      "language": "python",
+      "line": 1866,
+      "sha256": "e7c8479f5c474d40bc91dcad36b30bb26a8d7a539f2787f8ed128bf0c0119714",
+      "status": "passed",
+      "seconds": 0.062,
+      "output": "Gas outlet temperature: 30.0 °C\n\nSelf-healing result: {\"status\":\"success\",\"address\":\"1st stage separator.temperature\",\"value\":30.0,\"unit\":\"C\"}\nFuzzy match result: {\"status\":\"success\",\"address\":\"gas export comp.power\",\"value\":2275.5586337196105,\"unit\":\"kW\"}\n\nLearning report:\n{\n  \"totalOperations\": 2,\n  \"successRate\": 1.0,\n  \"errorCategories\": {},\n  \"learnedCorrections\": {},\n  \"recentFailures\": [],\n  \"recommendations\": [\n    \"Operations running well (success rate: 100%).\"\n  ]\n}\n"
+    },
+    {
+      "number": 29,
+      "language": "python",
+      "line": 1938,
+      "sha256": "fc54e2237d87d8b50d4499fda31c1c5482e6dd277b5222c7e39995737c26db32",
+      "status": "passed",
+      "seconds": 0.016,
+      "output": "Created state v1.0.0: Gas Processing Plant\nValid: True\n\n=== Model Comparison: v1.0 -> v1.1 ===\nState v1: Gas Processing Plant (v1.0.0)\nState v2: Gas Processing Plant — Post-Calibration (v1.1.0)\n\nCompressed state size: 827 bytes\nRestored state: Gas Processing Plant — Post-Calibration (v1.1.0)\n"
+    }
+  ]
+}

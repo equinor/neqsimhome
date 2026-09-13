@@ -1,0 +1,103 @@
+{
+  "expected": {
+    "chapters": 35,
+    "figure_placements": 201,
+    "tables": 408,
+    "integration_prerequisites": 32
+  },
+  "docx": {
+    "image_placements": 201,
+    "media_files": 201,
+    "tables": 1008,
+    "native_math_elements": 4570,
+    "equation_rendering": {
+      "total": 4570,
+      "fallback": 0
+    },
+    "page_sizes_twips": [
+      {
+        "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}w": "9638",
+        "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}h": "13833"
+      }
+    ],
+    "chapter_titles_found": 35,
+    "title_style_found": true,
+    "placeholder_figures": 0,
+    "numbered_figure_captions": 202,
+    "unresolved_citation_commands": 0,
+    "integration_prerequisite_paragraphs": 32,
+    "copyright_present": true
+  },
+  "odf": {
+    "image_placements": 201,
+    "media_files": 201,
+    "tables": 408,
+    "page_layouts": [
+      {
+        "{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}page-width": "17.0cm",
+        "{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}page-height": "24.4cm",
+        "{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top": "1.9cm",
+        "{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom": "1.9cm",
+        "{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left": "2.1cm",
+        "{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right": "1.7cm"
+      }
+    ],
+    "chapter_titles_found": 35,
+    "code_line_breaks": 17289,
+    "placeholder_figures": 0,
+    "unresolved_citation_commands": 0,
+    "integration_prerequisite_paragraphs": 32,
+    "copyright_present": true,
+    "math_representation": "Unicode text from LaTeX; editable equations are not native MathML."
+  },
+  "image_bounds_and_aspect_ratio_errors": [],
+  "errors": [],
+  "structural_status": "pass",
+  "created_utc": "2026-09-12T19:02:30.007075+00:00",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_stage": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\editable_candidate\\source",
+  "paths": {
+    "docx": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\editable_candidate\\source\\submission\\book.docx",
+    "odf": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\editable_candidate\\source\\submission\\book.odt"
+  },
+  "artifact_hashes": {
+    "book.docx": "3ca43db4c7d041d8b71bbd8d233d336f34b590e9ab0b134bc854c80aef415777",
+    "book.odt": "bd6c1434c05f6a8f29e3a21d32831a7363a5bb8157d3bef59452343fa9e84bbe"
+  },
+  "source_files": 562,
+  "source_changed_during_build": [],
+  "release_status": "not_released_pending_visual_review",
+  "visual_qa": {
+    "command": [
+      "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "C:\\Users\\solbraa\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.904.11930\\skills\\documents\\render_docx.py",
+      "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\editable_candidate\\source\\submission\\book.docx",
+      "--output_dir",
+      "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\editable_candidate\\source\\visual_qa"
+    ],
+    "returncode": 1,
+    "status": "renderer_failed",
+    "message": "\nTraceback (most recent call last):\n  File \"C:\\Users\\solbraa\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.904.11930\\skills\\documents\\render_docx.py\", line 546, in <module>\n    main()\n  File \"C:\\Users\\solbraa\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.904.11930\\skills\\documents\\render_docx.py\", line 538, in main\n    rasterize(render_input_path, out_dir, dpi, verbose=args.verbose, emit_pdf=args.emit_pdf)\n  File \"C:\\Users\\solbraa\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.904.11930\\skills\\documents\\render_docx.py\", line 418, in rasterize\n    pdf_path, debug = convert_to_pdf(\n                      ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\solbraa\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.904.11930\\skills\\documents\\render_docx.py\", line 270, in convert_to_pdf\n    soffice = _resolve_soffice()\n              ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\solbraa\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.904.11930\\skills\\documents\\render_docx.py\", line 79, in _resolve_soffice\n    raise FileNotFoundError(f\"LibreOffice {executable_name} was not found on PATH\")\nFileNotFoundError: LibreOffice soffice.exe was not found on PATH\n"
+  },
+  "structural_scope": "Chapter and supplied Markdown front/backmatter coverage, figures, tables, integration prerequisites, citations, image geometry, and source integrity. This is not visual layout approval.",
+  "source_manifest_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\editable_candidate\\source_manifest.json",
+  "configuration_coverage": {
+    "separate_nomenclature_yaml": "Not assembled by the canonical editable exporters; present in the primary PDF workflow."
+  },
+  "limitations": [
+    "No page images could be reviewed because the packaged render_docx command cannot find LibreOffice soffice.exe. Neither editable candidate is released.",
+    "The separate nomenclature.yaml file is not assembled in these secondary candidates.",
+    "ODF equations use Unicode text, not native MathML."
+  ],
+  "renderer_hashes": {
+    "book_render_word.py": "b5bc6f5d4d8f24090d14d4d931aca4f9a2ebc136ee5627e00327dcaada723a23",
+    "book_render_odf.py": "93f6683b7afdef1d9be0207142ea6b5445c0857b64d44eadddabe7cd746cbe3f"
+  },
+  "table_count_note": "Word stores 600 code blocks as single-cell tables; 408 tables come from Markdown data tables.",
+  "artifact_operation_marker": {
+    "operation": "create",
+    "format": "docx",
+    "expected_output_count": 1,
+    "successful_runs_this_session": 1
+  }
+}

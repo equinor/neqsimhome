@@ -1,0 +1,107 @@
+{
+  "chapter": "ch20_capacity_checks_and_utilization",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "execution_model": "sequential Python fences, fresh JVM per chapter",
+  "examples": [
+    {
+      "number": 1,
+      "language": "python",
+      "line": 182,
+      "sha256": "306f2c527582be372316a54625981a5270b8477cbd15d33937db7d88aac3913a",
+      "status": "passed",
+      "seconds": 2.328,
+      "output": "Gas density:   64.53 kg/m³\nOil density:   517.17 kg/m³\nWater density: 958.87 kg/m³\n\n--- Gas Capacity ---\nMax gas velocity:  0.40 m/s\nActual gas vel.:   0.00 m/s\nGas utilization:   1.0%\n\n--- Liquid Capacity ---\nLiquid volume:     18.10 m³\nActual ret. time:  122497.7 s\nMin ret. time:     180.0 s\nLiquid utilization: 0.1%\n\n--- Overall ---\nSeparator utilization: 1.0%\nLimiting criterion:    Gas capacity\n"
+    },
+    {
+      "number": 2,
+      "language": "python",
+      "line": 375,
+      "sha256": "a2f4a6c2698d79d3a951a1d7a5c84bd973da7a7d577e7e3bd58f964ecc20578a",
+      "status": "passed",
+      "seconds": 0.156,
+      "output": "Compression ratio:    4.00\nShaft power:          12.83 MW\nDischarge temperature: 164.3 °C\n\nDriver rated power (ISO):     15.0 MW\nDriver derated power (25.0°C): 14.10 MW\nPower utilization:            91.0%\n\nSurge flow:      3.85 MSm³/day\nSurge margin:    23.0%\nMin surge margin: 10.0%\nSurge OK:         Yes\n"
+    },
+    {
+      "number": 3,
+      "language": "python",
+      "line": 542,
+      "sha256": "0340df1a97b96502908802e214b045268a1455500a6b52b62c413d97d10f1860",
+      "status": "passed",
+      "seconds": 0.313,
+      "output": "Duty:              -1694.8 kW\nHot inlet:         90.0 °C\nHot outlet:        41.5 °C\nCold inlet:        20.0 °C\nCold outlet:       40.7 °C\nMin temp approach: 21.5 °C\n[{'UA_W_K': 50000.0, 'duty_kW': 1694.7911378844663, 'minimum_approach_K': 21.477272034109262, 'energy_relative': 1.1505523803007522e-08}, {'UA_W_K': 40000.0, 'duty_kW': 1519.2437618335784, 'minimum_approach_K': 26.498685678166396, 'energy_relative': 2.8777038526009177e-09}]\nFouled approach screen: True\n"
+    },
+    {
+      "number": 4,
+      "language": "python",
+      "line": 722,
+      "sha256": "05f8a919af0809b65781dc270dd74f40d95a172012a7ed03a98c6dabd0396960",
+      "status": "passed",
+      "seconds": 0.062,
+      "output": "Inlet pressure:    65.0 bara\nOutlet pressure:   25.0 bara\nPressure ratio:    0.385\nOutlet temperature: 42.1 °C\nWARNING: Close to or at choked flow conditions!\n"
+    },
+    {
+      "number": 5,
+      "language": "python",
+      "line": 817,
+      "sha256": "2cdbf4cfa4321778de10387a667b50cd30813c76d807441eae6a19093db82741",
+      "status": "passed",
+      "seconds": 0.25,
+      "output": "Outlet pressure:       49.3 bara\nPressure drop:         30.7 bar\nMixture velocity:      5.34 m/s\nErosional velocity:    17.7 m/s\n\nVelocity utilization:  30.2%\nPressure drop util.:   76.7%\nMAOP utilization:      80.0%\n"
+    },
+    {
+      "number": 6,
+      "language": "python",
+      "line": 1003,
+      "sha256": "993c2c707bfc1a5d8651c0bddd83dcfbdc9342f415b69eaa8de194745fa81389",
+      "status": "passed",
+      "seconds": 0.766,
+      "output": "=== Process Simulation Results ===\nFeed rate:          350000 kg/hr\nHP sep gas rate:    237926 kg/hr\nCompressor power:   7.85 MW\nCooler outlet T:    40.0 °C\nPipeline outlet P:  143.4 bara\n"
+    },
+    {
+      "number": 7,
+      "language": "python",
+      "line": 1082,
+      "sha256": "1b411eb91dac1bebda9f402006c99daa53a787682bf0205ddd8cecdaf88fa2a5",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "\n================================================================================\nFACILITY UTILIZATION REPORT\n================================================================================\nTag          Type                   Util.      Limit                  Spare      Status\n--------------------------------------------------------------------------------\nV-100        HP Separator           82.0%      Gas capacity           18.0%      YELLOW\nK-100        Export Compressor      32.4%      Power                  67.6%      GREEN\nE-100        Gas Cooler             20.0%      Temperature approach   80.0%      GREEN\nPipeline     Export Pipeline        6.6%       Pressure drop          93.4%      GREEN\n\n>>> BOTTLENECK: V-100 (HP Separator) at 82.0% utilization\n    Limiting criterion: Gas capacity\n    Linear screening extrapolation: 427026 kg/hr (122.0% of current)\nThis extrapolation is not a capacity solution: rerun the full process and all constraints at any candidate rate.\n"
+    },
+    {
+      "number": 8,
+      "language": "python",
+      "line": 1213,
+      "sha256": "062db760578e508e14f90a70002045dff6503400980092a01c71cde4b9a56929",
+      "status": "passed",
+      "seconds": 1.063,
+      "output": "Flow Factor    Flow (kg/hr)   Sep. Util.     Comp. Util.   \n--------------------------------------------------------\n0.5            175000         41.0%          16.2%         \n0.6            210000         49.2%          19.4%         \n0.7            245000         57.4%          22.7%         \n0.8            280000         65.6%          25.9%         \n0.9            315000         73.8%          29.1%         \n1.0            350000         82.0%          32.4%         \n1.1            385000         90.2%          35.6%         \n1.2            420000         98.4%          38.9%         \n1.3            455000         106.6%         42.1%         \n"
+    },
+    {
+      "number": 9,
+      "language": "python",
+      "line": 1308,
+      "sha256": "fe1df22c418f33e24a8f958bb306c5a5eb7ef39c3583efd1195f1fffdf6881a1",
+      "status": "passed",
+      "seconds": 2.437,
+      "output": "[\n  {\n    \"reference_water_cut_pct\": 10.0,\n    \"first_separator_liquid_m3_hr\": 233.38933622249928,\n    \"liquid_screen_utilization_pct\": 58.34733405562483,\n    \"gas_kg_hr\": 7244.612809233841,\n    \"compression_MW\": 0.2677159832936422\n  },\n  {\n    \"reference_water_cut_pct\": 20.0,\n    \"first_separator_liquid_m3_hr\": 230.06430427250856,\n    \"liquid_screen_utilization_pct\": 57.51607606812714,\n    \"gas_kg_hr\": 6419.856972078022,\n    \"compression_MW\": 0.23723811984731472\n  },\n  {\n    \"reference_water_cut_pct\": 30.0,\n    \"first_separator_liquid_m3_hr\": 226.73927232253823,\n    \"liquid_screen_utilization_pct\": 56.68481808063456,\n    \"gas_kg_hr\": 5595.101134916646,\n    \"compression_MW\": 0.20676025640079512\n  },\n  {\n    \"reference_water_cut_pct\": 40.0,\n    \"first_separator_liquid_m3_hr\": 223.41424037240887,\n    \"liquid_screen_utilization_pct\": 55.85356009310222,\n    \"gas_kg_hr\": 4770.345297757908,\n    \"compression_MW\": 0.1762823929543722\n  },\n  {\n    \"reference_water_cut_pct\": 50.0,\n    \"first_separator_liquid_m3_hr\": 220.08920842231475,\n    \"liquid_screen_utilization_pct\": 55.02230210557869,\n    \"gas_kg_hr\": 3945.5894606134257,\n    \"compression_MW\": 0.14580452950844813\n  },\n  {\n    \"reference_water_cut_pct\": 60.0,\n    \"first_separator_liquid_m3_hr\": 216.76417647213844,\n    \"liquid_screen_utilization_pct\": 54.19104411803462,\n    \"gas_kg_hr\": 3120.8336234638036,\n    \"compression_MW\": 0.11532666606233638\n  },\n  {\n    \"reference_water_cut_pct\": 70.0,\n    \"first_separator_liquid_m3_hr\": 213.43914452218638,\n    \"liquid_screen_utilization_pct\": 53.3597861305466,\n    \"gas_kg_hr\": 2296.077786319946,\n    \"compression_MW\": 0.08484880261643785\n  },\n  {\n    \"reference_water_cut_pct\": 80.0,\n    \"first_separator_liquid_m3_hr\": 210.11411257187007,\n    \"liquid_screen_utilization_pct\": 52.52852814296752,\n    \"gas_kg_hr\": 1471.3219491714774,\n    \"compression_MW\": 0.054370939170370204\n  }\n]\nBasis: oil and water volumes at 15 C, 1.01325 bara; fixed 200 m3/h liquid and specified GOR 100 Sm3/m3 oil.\nThis methane/heptane/water scenario is not a well-deliverability prediction.\n"
+    },
+    {
+      "number": 10,
+      "language": "python",
+      "line": 1458,
+      "sha256": "b6ce1463bd4b00cd62fa5ca6f09d6b4ccdfe5825d57fdabf2a527e97f29bbefd",
+      "status": "passed",
+      "seconds": 0.047,
+      "output": "Relief pressure:    82.4 bara\nGas density:        70.25 kg/m³\nGas MW:             21.7 g/mol\nZ at relief:        0.8731\nk (Cp/Cv):          1.457\nIdeal sonic mass flux: 14956.81 kg/(m2 s)\nIdeal throat area: 0.004643 m2; critical backpressure ratio 0.5457\nNot a rated relief device: real-gas/two-phase discharge, coefficients, backpressure and code requirements remain to be evaluated.\n"
+    },
+    {
+      "number": 11,
+      "language": "python",
+      "line": 1680,
+      "sha256": "634a2c2b48b9dc9b7af3cd57d6825c979070158199635762b2cd5c4de40b9a71",
+      "status": "passed",
+      "seconds": 0.109,
+      "output": "{\n  \"schemaVersion\": \"1.0\",\n  \"coverageScope\": \"DECLARED_EQUIPMENT_AND_CONSTRAINTS\",\n  \"modelName\": \"Book capacity example\",\n  \"registryIdentityDigest\": \"\",\n  \"expectedEquipmentIds\": [\n    \"equipment:Book capacity example/Compression/Missing compressor\"\n  ],\n  \"expectedConstraintIds\": [\n    \"equipment:Book capacity example/Compression/Missing compressor#power\"\n  ],\n  \"requiredConstraintIds\": [\n    \"equipment:Book capacity example/Compression/Missing compressor#power\"\n  ],\n  \"rows\": [\n    {\n      \"equipmentId\": \"equipment:Book capacity example/Compression/Missing compressor\",\n      \"constraintName\": \"\",\n      \"qualifiedConstraintId\": \"\",\n      \"origin\": \"UNKNOWN\",\n      \"enabled\": true,\n      \"unit\": \"\",\n      \"basis\": \"\",\n      \"provenance\": \"\",\n      \"minimumConstraint\": false,\n      \"currentValue\": null,\n      \"applicableLimit\": null,\n      \"normalizedUtilization\": null,\n      \"statuses\": [\n        \"MISSING_EQUIPMENT\"\n      ]\n    },\n    {\n      \"equipmentId\": \"equipment:Book capacity example/Compression/Missing compressor\",\n      \"constraintName\": \"power\",\n      \"qualifiedConstraintId\": \"equipment:Book capacity example/Compression/Missing compressor#power\",\n      \"origin\": \"UNKNOWN\",\n      \"enabled\": true,\n      \"unit\": \"\",\n      \"basis\": \"\",\n      \"provenance\": \"\",\n      \"minimumConstraint\": false,\n      \"currentValue\": null,\n      \"applicableLimit\": null,\n      \"normalizedUtilization\": null,\n      \"statuses\": [\n        \"MISSING_CONSTRAINT\"\n      ]\n    }\n  ],\n  \"diagnostics\": [\n    \"equipment:Book capacity example/Compression/Missing compressor=MISSING_EQUIPMENT\",\n    \"equipment:Book capacity example/Compression/Missing compressor#power=MISSING_CONSTRAINT\"\n  ],\n  \"complete\": false\n}\n"
+    }
+  ]
+}

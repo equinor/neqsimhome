@@ -1,0 +1,2929 @@
+{
+  "chapter": "ch21_debottlenecking",
+  "source_commit": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "python_executable": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "hook_module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\ch21_solution_hooks.py",
+  "hook_sha256": "e741b0199904ba1ef6fbab06acbb21d3e6ef2af30fba7c7ac34c0dc0d6e4c154",
+  "hook_snapshot": "verification\\scientific_revision\\hook_sources\\e741b0199904ba1ef6fbab06acbb21d3e6ef2af30fba7c7ac34c0dc0d6e4c154.py",
+  "helper_sources": [
+    {
+      "module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\verify_optimization_solution_hooks.py",
+      "sha256": "57ad44d5e87dd4aaa28e1fe34698976f0645f7b397658b3621b4bf854dab275b",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\57ad44d5e87dd4aaa28e1fe34698976f0645f7b397658b3621b4bf854dab275b.py"
+    }
+  ],
+  "interpretation": "Exact literal execution with supplementary numerical/physical/software solution checks; not field calibration.",
+  "prerequisite_fences": [
+    {
+      "number": 25,
+      "sha256": "b683bf8d09bc897ac10eea5dc4c69e9718c715c56ef49821c1f78e498dfd2687",
+      "status": "failed"
+    }
+  ],
+  "entries": [
+    {
+      "number": 25,
+      "sha256": "b683bf8d09bc897ac10eea5dc4c69e9718c715c56ef49821c1f78e498dfd2687",
+      "code_sha256": "b683bf8d09bc897ac10eea5dc4c69e9718c715c56ef49821c1f78e498dfd2687",
+      "language": "python",
+      "checks": [
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.0695446184836336e-14,
+            "component_relative": 9.828021302382693e-15,
+            "energy_relative": 1.759953314792507e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            55.555555555555536
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            17.67594454473066
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.070618620237791
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            417.9696879185093,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 5334035.156340294
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.0695446184836336e-14,
+            "component_relative": 9.828021302382693e-15,
+            "energy_relative": 1.759953314792507e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            55.555555555555536
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            17.67594454473066
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.070618620237791
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            417.9696879185093,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 5334035.156340294
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.046733786100717e-14,
+            "component_relative": 9.966780001005081e-15,
+            "energy_relative": 1.7598270387728374e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            60.86900499131945
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            39.233839258023664
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            19.366508820950923
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.2686569123467155
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            39.233839258023664
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            419.9410439557961,
+            39.233839258023664
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 6073004.686924806
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.058407095626006e-14,
+            "component_relative": 9.867112200995029e-15,
+            "energy_relative": 1.75998611199337e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            60.86900499131947
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            39.23383925802365
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            19.366508820950965
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.2686569123467164
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            39.23383925802365
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            419.94104395579626,
+            39.23383925802365
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 6073004.686924815
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "fresh selected-point feasibility",
+          "passed": true,
+          "observed": {
+            "selected_kg_hr": 219128.41796875003,
+            "fresh_maximum": 0.9487821303705611,
+            "step": 0,
+            "constraints": {
+              "HP Sep": {
+                "gasLoadFactor": {
+                  "enabled": true,
+                  "design": 0.107,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.9130332284875845
+                },
+                "kValue": {
+                  "enabled": false,
+                  "design": 0.15,
+                  "maximum": 0.15,
+                  "utilization": 1.2906386916360377
+                },
+                "dropletCutSize": {
+                  "enabled": false,
+                  "design": 150.0,
+                  "maximum": 150.0,
+                  "utilization": 0.37485661775315826
+                },
+                "inletMomentum": {
+                  "enabled": false,
+                  "design": 16000.0,
+                  "maximum": 16000.0,
+                  "utilization": 0.5871940622608463
+                },
+                "oilRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.39935899973990396
+                },
+                "waterRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.06142585766889953
+                }
+              },
+              "Export Comp": {
+                "speed": {
+                  "enabled": false,
+                  "design": 3000.0,
+                  "maximum": 3000.0,
+                  "utilization": 1.0674066108024574
+                },
+                "minSpeed": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.624566739534692
+                },
+                "power": {
+                  "enabled": true,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 0.9487821303705611
+                },
+                "ratedPower": {
+                  "enabled": true,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 0.9487821303705611
+                },
+                "surgeMargin": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.15605141205365522
+                },
+                "stonewallMargin": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.4087266355971445
+                }
+              }
+            }
+          },
+          "expected": "maximum active utilization <=0.95",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.0695446184836336e-14,
+            "component_relative": 9.828021302382693e-15,
+            "energy_relative": 1.759953314792507e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            55.555555555555536
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            17.67594454473066
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.070618620237791
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            417.9696879185093,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 5334035.156340294
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.046733786100717e-14,
+            "component_relative": 9.966780001005081e-15,
+            "energy_relative": 1.7598270387728374e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            60.86900499131945
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            39.233839258023664
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            19.366508820950923
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.2686569123467155
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            39.233839258023664
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            419.9410439557961,
+            39.233839258023664
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 6073004.686924806
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.058407095626006e-14,
+            "component_relative": 9.867112200995029e-15,
+            "energy_relative": 1.75998611199337e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            60.86900499131947
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            39.23383925802365
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            19.366508820950965
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.2686569123467164
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            39.23383925802365
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            419.94104395579626,
+            39.23383925802365
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 6073004.686924815
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "fresh selected-point feasibility",
+          "passed": true,
+          "observed": {
+            "selected_kg_hr": 219128.41796875003,
+            "fresh_maximum": 0.9487821303705611,
+            "step": 1,
+            "constraints": {
+              "HP Sep": {
+                "gasLoadFactor": {
+                  "enabled": true,
+                  "design": 0.107,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.9130332284875845
+                },
+                "kValue": {
+                  "enabled": false,
+                  "design": 0.15,
+                  "maximum": 0.15,
+                  "utilization": 1.2906386916360377
+                },
+                "dropletCutSize": {
+                  "enabled": false,
+                  "design": 150.0,
+                  "maximum": 150.0,
+                  "utilization": 0.37485661775315826
+                },
+                "inletMomentum": {
+                  "enabled": false,
+                  "design": 16000.0,
+                  "maximum": 16000.0,
+                  "utilization": 0.5871940622608463
+                },
+                "oilRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.39935899973990396
+                },
+                "waterRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.06142585766889953
+                }
+              },
+              "Export Comp": {
+                "speed": {
+                  "enabled": false,
+                  "design": 3000.0,
+                  "maximum": 3000.0,
+                  "utilization": 1.0674066108024574
+                },
+                "minSpeed": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.624566739534692
+                },
+                "power": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 0.9487821303705611
+                },
+                "ratedPower": {
+                  "enabled": true,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 0.9487821303705611
+                },
+                "surgeMargin": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.15605141205365522
+                },
+                "stonewallMargin": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.4087266355971445
+                }
+              }
+            }
+          },
+          "expected": "maximum active utilization <=0.95",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.0695446184836336e-14,
+            "component_relative": 9.828021302382693e-15,
+            "energy_relative": 1.759953314792507e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            55.555555555555536
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            17.67594454473066
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.070618620237791
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            417.9696879185093,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 5334035.156340294
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.0658752233093027e-14,
+            "component_relative": 9.876201093381177e-15,
+            "energy_relative": 1.7599192493906789e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            63.27007876502146
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            40.78147984287496
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            20.130451264642666
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.3581476575057723
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 9.51666501859045e-17
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            40.78147984287496
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            422.1894197674254,
+            40.78147984287496
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 6583824.83315703
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.032184286789418e-14,
+            "component_relative": 9.876201093381173e-15,
+            "energy_relative": 1.760378358760085e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            63.270078765021516
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            40.781479842874965
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            20.130451264642694
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.358147657505772
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            40.781479842874965
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            422.18941976742553,
+            40.781479842874965
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 6583824.833157033
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "fresh selected-point feasibility",
+          "passed": true,
+          "observed": {
+            "selected_kg_hr": 227772.28355407726,
+            "fresh_maximum": 0.949049262259661,
+            "step": 2,
+            "constraints": {
+              "HP Sep": {
+                "gasLoadFactor": {
+                  "enabled": true,
+                  "design": 0.107,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.949049262259661
+                },
+                "kValue": {
+                  "enabled": false,
+                  "design": 0.15,
+                  "maximum": 0.15,
+                  "utilization": 1.3415499676500673
+                },
+                "dropletCutSize": {
+                  "enabled": false,
+                  "design": 150.0,
+                  "maximum": 150.0,
+                  "utilization": 0.38217851502537276
+                },
+                "inletMomentum": {
+                  "enabled": false,
+                  "design": 16000.0,
+                  "maximum": 16000.0,
+                  "utilization": 0.6344333444718543
+                },
+                "oilRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.41511234449564716
+                },
+                "waterRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.06384889737354034
+                }
+              },
+              "Export Comp": {
+                "speed": {
+                  "enabled": false,
+                  "design": 3000.0,
+                  "maximum": 3000.0,
+                  "utilization": 1.1508772643058458
+                },
+                "minSpeed": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.5792682567838962
+                },
+                "power": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 1.028587276515413
+                },
+                "ratedPower": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 1.028587276515413
+                },
+                "surgeMargin": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.1428620269095615
+                },
+                "stonewallMargin": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.6075150824519173
+                }
+              }
+            }
+          },
+          "expected": "maximum active utilization <=0.95",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.0695446184836336e-14,
+            "component_relative": 9.828021302382693e-15,
+            "energy_relative": 1.759953314792507e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            55.555555555555536
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            17.67594454473066
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.070618620237791
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            417.9696879185093,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 5334035.156340294
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.052293620843041e-14,
+            "component_relative": 9.865861485307944e-15,
+            "energy_relative": 1.7595694586220257e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            65.18113613128664
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            42.01327453923318
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            20.738486657144907
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.429374934910534
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 9.025073948563924e-17
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            42.01327453923318
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            424.0997785058261,
+            42.01327453923318
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 7020147.766903192
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.052293620843041e-14,
+            "component_relative": 9.958935650263678e-15,
+            "energy_relative": 1.7600151072818707e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            65.18113613128664
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            42.013274539233194
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            20.7384866571449
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.429374934910535
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 9.025073948563921e-17
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            42.013274539233194
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            424.0997785058261,
+            42.013274539233194
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 7020147.766903191
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "fresh selected-point feasibility",
+          "passed": true,
+          "observed": {
+            "selected_kg_hr": 234652.0900726319,
+            "fresh_maximum": 0.9490203895331198,
+            "step": 3,
+            "constraints": {
+              "HP Sep": {
+                "gasLoadFactor": {
+                  "enabled": false,
+                  "design": 0.107,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.9777150647841952
+                },
+                "kValue": {
+                  "enabled": false,
+                  "design": 0.15,
+                  "maximum": 0.15,
+                  "utilization": 1.3820711586764298
+                },
+                "dropletCutSize": {
+                  "enabled": false,
+                  "design": 150.0,
+                  "maximum": 150.0,
+                  "utilization": 0.38790738171310557
+                },
+                "inletMomentum": {
+                  "enabled": false,
+                  "design": 16000.0,
+                  "maximum": 16000.0,
+                  "utilization": 0.6733379656095357
+                },
+                "oilRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.4276507120662363
+                },
+                "waterRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.06577743781533084
+                }
+              },
+              "Export Comp": {
+                "speed": {
+                  "enabled": false,
+                  "design": 3000.0,
+                  "maximum": 3000.0,
+                  "utilization": 1.2264437123388416
+                },
+                "minSpeed": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.5435770593950259
+                },
+                "power": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 1.0967537647614212
+                },
+                "ratedPower": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 1.0967537647614212
+                },
+                "surgeMargin": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.13396496717216785
+                },
+                "stonewallMargin": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.9490203895331198
+                }
+              }
+            }
+          },
+          "expected": "maximum active utilization <=0.95",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.0695446184836336e-14,
+            "component_relative": 9.828021302382693e-15,
+            "energy_relative": 1.759953314792507e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            55.555555555555536
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            17.67594454473066
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.070618620237791
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            417.9696879185093,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 5334035.156340294
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.05249160230157e-14,
+            "component_relative": 9.755221174871454e-15,
+            "energy_relative": 1.7604180864329873e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            83.33333307463265
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            53.713488419134606
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            26.513916734785962
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            3.105927920714618
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            53.713488419134606
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            452.09266052571917,
+            53.713488419134606
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 13436342.15423798
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.069544628012752e-14,
+            "component_relative": 9.900821490914308e-15,
+            "energy_relative": 1.7600695118003376e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            83.33333307463266
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            53.71348841913464
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            26.513916734785962
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            3.1059279207146195
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            53.71348841913464
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            452.0926605257191,
+            53.71348841913464
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 13436342.154237986
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "fresh selected-point feasibility",
+          "passed": true,
+          "observed": {
+            "selected_kg_hr": 299999.99906867754,
+            "fresh_maximum": 0.21191033262157186,
+            "step": 4,
+            "constraints": {
+              "HP Sep": {
+                "gasLoadFactor": {
+                  "enabled": false,
+                  "design": 0.107,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 1.2499974683110684
+                },
+                "kValue": {
+                  "enabled": false,
+                  "design": 0.15,
+                  "maximum": 0.15,
+                  "utilization": 1.766962084963476
+                },
+                "dropletCutSize": {
+                  "enabled": false,
+                  "design": 150.0,
+                  "maximum": 150.0,
+                  "utilization": 0.4386079077217926
+                },
+                "inletMomentum": {
+                  "enabled": false,
+                  "design": 16000.0,
+                  "maximum": 16000.0,
+                  "utilization": 1.1005930233338594
+                },
+                "oilRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.5467465181404482
+                },
+                "waterRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.0840956979212553
+                }
+              },
+              "Export Comp": {
+                "speed": {
+                  "enabled": false,
+                  "design": 3000.0,
+                  "maximum": 3000.0,
+                  "utilization": 3.1459847116430883
+                },
+                "minSpeed": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.21191033262157186
+                },
+                "power": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 2.099152230350241
+                },
+                "ratedPower": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 2.099152230350241
+                },
+                "surgeMargin": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.08734487207946377
+                },
+                "stonewallMargin": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 9.99
+                }
+              }
+            }
+          },
+          "expected": "maximum active utilization <=0.95",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.0695446184836336e-14,
+            "component_relative": 9.828021302382693e-15,
+            "energy_relative": 1.759953314792507e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            55.555555555555536
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            17.67594454473066
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.070618620237791
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            417.9696879185093,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 5334035.156340294
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.05249160230157e-14,
+            "component_relative": 9.755221174871454e-15,
+            "energy_relative": 1.7604180864329873e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            83.33333307463265
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            53.713488419134606
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            26.513916734785962
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            3.105927920714618
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            53.713488419134606
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            452.09266052571917,
+            53.713488419134606
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 13436342.15423798
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.069544628012752e-14,
+            "component_relative": 9.900821490914308e-15,
+            "energy_relative": 1.7600695118003376e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            83.33333307463266
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            53.71348841913464
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            26.513916734785962
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            3.1059279207146195
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            53.71348841913464
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            452.0926605257191,
+            53.71348841913464
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 13436342.154237986
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "fresh selected-point feasibility",
+          "passed": true,
+          "observed": {
+            "selected_kg_hr": 299999.99906867754,
+            "fresh_maximum": 0.20115964943356052,
+            "step": 5,
+            "constraints": {
+              "HP Sep": {
+                "gasLoadFactor": {
+                  "enabled": false,
+                  "design": 0.107,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 1.2499974683110684
+                },
+                "kValue": {
+                  "enabled": false,
+                  "design": 0.15,
+                  "maximum": 0.15,
+                  "utilization": 1.766962084963476
+                },
+                "dropletCutSize": {
+                  "enabled": false,
+                  "design": 150.0,
+                  "maximum": 150.0,
+                  "utilization": 0.4386079077217926
+                },
+                "inletMomentum": {
+                  "enabled": false,
+                  "design": 16000.0,
+                  "maximum": 16000.0,
+                  "utilization": 1.1005930233338594
+                },
+                "oilRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.5467465181404482
+                },
+                "waterRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.0840956979212553
+                }
+              },
+              "Export Comp": {
+                "speed": {
+                  "enabled": false,
+                  "design": 3000.0,
+                  "maximum": 3000.0,
+                  "utilization": 3.1459847116430883
+                },
+                "minSpeed": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.21191033262157186
+                },
+                "power": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 2.099152230350241
+                },
+                "ratedPower": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 2.099152230350241
+                },
+                "surgeMargin": {
+                  "enabled": true,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.08734487207946377
+                },
+                "stonewallMargin": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 9.99
+                }
+              }
+            }
+          },
+          "expected": "maximum active utilization <=0.95",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.0695446184836336e-14,
+            "component_relative": 9.828021302382693e-15,
+            "energy_relative": 1.759953314792507e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            55.555555555555536
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            17.67594454473066
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            2.070618620237791
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            417.9696879185093,
+            35.80899239058879
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 5334035.156340294
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.05249160230157e-14,
+            "component_relative": 9.755221174871454e-15,
+            "energy_relative": 1.7604180864329873e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            83.33333307463265
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            53.713488419134606
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            26.513916734785962
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            3.105927920714618
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            53.713488419134606
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            452.09266052571917,
+            53.713488419134606
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 13436342.15423798
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "HP Sep mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.069544628012752e-14,
+            "component_relative": 9.900821490914308e-15,
+            "energy_relative": 1.7600695118003376e-12
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "feed physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            83.33333307463266
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            53.71348841913464
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "liquidOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            26.513916734785962
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "waterOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            3.1059279207146195
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp mass/component/energy",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "energy_relative": 0.0
+          },
+          "expected": "mass/component<=1e-7;energy<=1e-5",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "gasOutStream physical domain",
+          "passed": true,
+          "observed": [
+            65.0,
+            343.15,
+            53.71348841913464
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp out stream physical domain",
+          "passed": true,
+          "observed": [
+            150.0,
+            452.0926605257191,
+            53.71348841913464
+          ],
+          "expected": "finite P>0 bara,T>0 K,mass>=0kg/s",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "Export Comp gas-only compression",
+          "passed": true,
+          "observed": {
+            "phases": 1,
+            "phase": "GAS",
+            "power_W": 13436342.154237986
+          },
+          "expected": "one gas phase,positive pressure rise/work",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "fresh selected-point feasibility",
+          "passed": false,
+          "observed": {
+            "selected_kg_hr": 299999.99906867754,
+            "fresh_maximum": 2.099152230350241,
+            "step": 6,
+            "constraints": {
+              "HP Sep": {
+                "gasLoadFactor": {
+                  "enabled": false,
+                  "design": 0.107,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 1.2499974683110684
+                },
+                "kValue": {
+                  "enabled": false,
+                  "design": 0.15,
+                  "maximum": 0.15,
+                  "utilization": 1.766962084963476
+                },
+                "dropletCutSize": {
+                  "enabled": false,
+                  "design": 150.0,
+                  "maximum": 150.0,
+                  "utilization": 0.4386079077217926
+                },
+                "inletMomentum": {
+                  "enabled": false,
+                  "design": 16000.0,
+                  "maximum": 16000.0,
+                  "utilization": 1.1005930233338594
+                },
+                "oilRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.5467465181404482
+                },
+                "waterRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.0840956979212553
+                }
+              },
+              "Export Comp": {
+                "speed": {
+                  "enabled": false,
+                  "design": 3000.0,
+                  "maximum": 3000.0,
+                  "utilization": 3.1459847116430883
+                },
+                "minSpeed": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.21191033262157186
+                },
+                "power": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 2.099152230350241
+                },
+                "ratedPower": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 2.099152230350241
+                },
+                "surgeMargin": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.08734487207946377
+                },
+                "stonewallMargin": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 9.99
+                }
+              }
+            }
+          },
+          "expected": "maximum active utilization <=0.95",
+          "scope": "solution verification under declared synthetic assumptions"
+        },
+        {
+          "name": "fresh selected-point feasibility",
+          "passed": false,
+          "observed": {
+            "selected_kg_hr": 299999.99906867754,
+            "fresh_maximum": 2.099152230350241,
+            "step": 6,
+            "constraints": {
+              "HP Sep": {
+                "gasLoadFactor": {
+                  "enabled": false,
+                  "design": 0.107,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 1.2499974683110684
+                },
+                "kValue": {
+                  "enabled": false,
+                  "design": 0.15,
+                  "maximum": 0.15,
+                  "utilization": 1.766962084963476
+                },
+                "dropletCutSize": {
+                  "enabled": false,
+                  "design": 150.0,
+                  "maximum": 150.0,
+                  "utilization": 0.4386079077217926
+                },
+                "inletMomentum": {
+                  "enabled": false,
+                  "design": 16000.0,
+                  "maximum": 16000.0,
+                  "utilization": 1.1005930233338594
+                },
+                "oilRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.5467465181404482
+                },
+                "waterRetentionTime": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.0840956979212553
+                }
+              },
+              "Export Comp": {
+                "speed": {
+                  "enabled": false,
+                  "design": 3000.0,
+                  "maximum": 3000.0,
+                  "utilization": 3.1459847116430883
+                },
+                "minSpeed": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.21191033262157186
+                },
+                "power": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 2.099152230350241
+                },
+                "ratedPower": {
+                  "enabled": false,
+                  "design": 100.0,
+                  "maximum": 110.0,
+                  "utilization": 2.099152230350241
+                },
+                "surgeMargin": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 0.08734487207946377
+                },
+                "stonewallMargin": {
+                  "enabled": false,
+                  "design": 1.7976931348623157e+308,
+                  "maximum": 1.7976931348623157e+308,
+                  "utilization": 9.99
+                }
+              }
+            }
+          },
+          "expected": "maximum active utilization <=0.95",
+          "scope": "solution verification under declared synthetic assumptions"
+        }
+      ],
+      "status": "failed",
+      "error": "{'name': 'fresh selected-point feasibility', 'passed': False, 'observed': {'selected_kg_hr': 299999.99906867754, 'fresh_maximum': 2.099152230350241, 'step': 6, 'constraints': {'HP Sep': {'gasLoadFactor': {'enabled': False, 'design': 0.107, 'maximum': 1.7976931348623157e+308, 'utilization': 1.2499974683110684}, 'kValue': {'enabled': False, 'design': 0.15, 'maximum': 0.15, 'utilization': 1.766962084963476}, 'dropletCutSize': {'enabled': False, 'design': 150.0, 'maximum': 150.0, 'utilization': 0.4386079077217926}, 'inletMomentum': {'enabled': False, 'design': 16000.0, 'maximum': 16000.0, 'utilization': 1.1005930233338594}, 'oilRetentionTime': {'enabled': False, 'design': 1.7976931348623157e+308, 'maximum': 1.7976931348623157e+308, 'utilization': 0.5467465181404482}, 'waterRetentionTime': {'enabled': False, 'design': 1.7976931348623157e+308, 'maximum': 1.7976931348623157e+308, 'utilization': 0.0840956979212553}}, 'Export Comp': {'speed': {'enabled': False, 'design': 3000.0, 'maximum': 3000.0, 'utilization': 3.1459847116430883}, 'minSpeed': {'enabled': False, 'design': 1.7976931348623157e+308, 'maximum': 1.7976931348623157e+308, 'utilization': 0.21191033262157186}, 'power': {'enabled': False, 'design': 100.0, 'maximum': 110.0, 'utilization': 2.099152230350241}, 'ratedPower': {'enabled': False, 'design': 100.0, 'maximum': 110.0, 'utilization': 2.099152230350241}, 'surgeMargin': {'enabled': False, 'design': 1.7976931348623157e+308, 'maximum': 1.7976931348623157e+308, 'utilization': 0.08734487207946377}, 'stonewallMargin': {'enabled': False, 'design': 1.7976931348623157e+308, 'maximum': 1.7976931348623157e+308, 'utilization': 9.99}}}}, 'expected': 'maximum active utilization <=0.95', 'scope': 'solution verification under declared synthetic assumptions'}",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\verify_optimization_solution_hooks.py\", line 66, in main\n    try:exec(compile(code,filename,'exec'),ns)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"ch21_debottlenecking:fence25\", line 83, in <module>\n  File \"C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\verify_optimization_solution_hooks.py\", line 62, in trace\n    hooks.on_trace(n,i,frame,event,arg)\n  File \"C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\ch21_solution_hooks.py\", line 93, in on_trace\n    if i==25 and 'optimum' in ns:verify_selected(i,ns)\n                                 ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\ch21_solution_hooks.py\", line 75, in verify_selected\n    check(i,'fresh selected-point feasibility',ratio<=limit+1e-6,details,f'maximum active utilization <={limit}')\n  File \"C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\ch21_solution_hooks.py\", line 15, in check\n    assert condition,row\n           ^^^^^^^^^\nAssertionError: {'name': 'fresh selected-point feasibility', 'passed': False, 'observed': {'selected_kg_hr': 299999.99906867754, 'fresh_maximum': 2.099152230350241, 'step': 6, 'constraints': {'HP Sep': {'gasLoadFactor': {'enabled': False, 'design': 0.107, 'maximum': 1.7976931348623157e+308, 'utilization': 1.2499974683110684}, 'kValue': {'enabled': False, 'design': 0.15, 'maximum': 0.15, 'utilization': 1.766962084963476}, 'dropletCutSize': {'enabled': False, 'design': 150.0, 'maximum': 150.0, 'utilization': 0.4386079077217926}, 'inletMomentum': {'enabled': False, 'design': 16000.0, 'maximum': 16000.0, 'utilization': 1.1005930233338594}, 'oilRetentionTime': {'enabled': False, 'design': 1.7976931348623157e+308, 'maximum': 1.7976931348623157e+308, 'utilization': 0.5467465181404482}, 'waterRetentionTime': {'enabled': False, 'design': 1.7976931348623157e+308, 'maximum': 1.7976931348623157e+308, 'utilization': 0.0840956979212553}}, 'Export Comp': {'speed': {'enabled': False, 'design': 3000.0, 'maximum': 3000.0, 'utilization': 3.1459847116430883}, 'minSpeed': {'enabled': False, 'design': 1.7976931348623157e+308, 'maximum': 1.7976931348623157e+308, 'utilization': 0.21191033262157186}, 'power': {'enabled': False, 'design': 100.0, 'maximum': 110.0, 'utilization': 2.099152230350241}, 'ratedPower': {'enabled': False, 'design': 100.0, 'maximum': 110.0, 'utilization': 2.099152230350241}, 'surgeMargin': {'enabled': False, 'design': 1.7976931348623157e+308, 'maximum': 1.7976931348623157e+308, 'utilization': 0.08734487207946377}, 'stonewallMargin': {'enabled': False, 'design': 1.7976931348623157e+308, 'maximum': 1.7976931348623157e+308, 'utilization': 9.99}}}}, 'expected': 'maximum active utilization <=0.95', 'scope': 'solution verification under declared synthetic assumptions'}\n",
+      "seconds": 22.14100000000326,
+      "output": "Separator utilization: 83.3%\nCompressor utilization: 100.0%\n"
+    }
+  ],
+  "all_targeted_checks_passed": false
+}

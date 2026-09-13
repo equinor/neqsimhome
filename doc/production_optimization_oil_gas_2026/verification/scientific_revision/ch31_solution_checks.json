@@ -1,0 +1,262 @@
+{
+  "chapter": "ch31_solver_methods",
+  "source_commit": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "python_executable": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "hook_module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\optimization_solution_hooks.py",
+  "hook_sha256": "e7ffda7115451b88d4c1ff24e1900640e06501dd5c7aeb96f708e218f5e560e9",
+  "hook_snapshot": "verification\\scientific_revision\\hook_sources\\e7ffda7115451b88d4c1ff24e1900640e06501dd5c7aeb96f708e218f5e560e9.py",
+  "helper_sources": [
+    {
+      "module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\verify_optimization_solution_hooks.py",
+      "sha256": "57ad44d5e87dd4aaa28e1fe34698976f0645f7b397658b3621b4bf854dab275b",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\57ad44d5e87dd4aaa28e1fe34698976f0645f7b397658b3621b4bf854dab275b.py"
+    },
+    {
+      "module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\optimization_solution_helpers.py",
+      "sha256": "066c566b280e6e5177b2fb30700f6d2d05cdd004e546c667a7b52c227e84514c",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\066c566b280e6e5177b2fb30700f6d2d05cdd004e546c667a7b52c227e84514c.py"
+    },
+    {
+      "module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\optimization_additional_solution_checks.py",
+      "sha256": "01a818429cec010878bb8da214f7e80c745f11858faee8f88856540f5370f907",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\01a818429cec010878bb8da214f7e80c745f11858faee8f88856540f5370f907.py"
+    }
+  ],
+  "interpretation": "Exact literal execution with supplementary numerical/physical/software solution checks; not field calibration.",
+  "prerequisite_fences": [
+    {
+      "number": 1,
+      "sha256": "2306252a9e1be1ca78dc3965d10fcc64061c49edc53d8d4dca9c7e00664abba1",
+      "status": "passed"
+    },
+    {
+      "number": 2,
+      "sha256": "d0726af470e2f2df7603dfd708a22467d3456f49b89985dfab6a55ea134a8f8c",
+      "status": "passed"
+    }
+  ],
+  "entries": [
+    {
+      "number": 2,
+      "sha256": "d0726af470e2f2df7603dfd708a22467d3456f49b89985dfab6a55ea134a8f8c",
+      "code_sha256": "d0726af470e2f2df7603dfd708a22467d3456f49b89985dfab6a55ea134a8f8c",
+      "language": "python",
+      "checks": [
+        {
+          "name": "HP separator mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP separator finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "HP separator energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "compressor mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "compressor component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "compressor finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "compressor energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "compressor single-phase compressor inlet",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "compressor compression pressure ratio",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "compressor positive shaft work",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "aftercooler mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "aftercooler component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "aftercooler finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "aftercooler energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Every observed literal process.run state passes unit boundaries",
+          "passed": true,
+          "observed": 1,
+          "states": [
+            {
+              "line": 34,
+              "checks": [
+                {
+                  "name": "HP separator mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "aftercooler mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "aftercooler component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "aftercooler finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "aftercooler energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.7189999999973224,
+      "output": "Compressor power: 1523.4 kW\nCooler duty: -4112.4 kW\nOutlet temperature: 35.0 °C\n"
+    }
+  ],
+  "all_targeted_checks_passed": true
+}

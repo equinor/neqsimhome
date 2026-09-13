@@ -1,0 +1,56 @@
+{
+  "chapter": "ch04_reservoir_engineering",
+  "source_sha256": "fdcf9085c218aa59e829adf48ded73d8429c7f725bd0360f8c39fe10678d9aa2",
+  "project_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "blocks": [
+    {
+      "index": 1,
+      "line": 644,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Create reservoir fluid\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 95.0, 250.0)\nfluid.addComponent(\"nitrogen\", 0.5)\nfluid.addComponent(\"CO2\", 1.8)\nfluid.addComponent(\"methane\", 65.0)\nfluid.addComponent(\"ethane\", 8.0)\nfluid.addComponent(\"propane\", 4.0)\nfluid.addComponent(\"n-butane\", 2.5)\nfluid.addComponent(\"n-pentane\", 1.5)\nfluid.addComponent(\"n-hexane\", 1.0)\nfluid.addComponent(\"n-heptane\", 5.0)\nfluid.addComponent(\"n-octane\", 4.0)\nfluid.addComponent(\"n-nonane\", 3.0)\nfluid.addComponent(\"n-decane\", 2.7)\nfluid.addComponent(\"water\", 1.0)\nfluid.setMixingRule(\"classic\")\nfluid.setMultiPhaseCheck(True)\n\n# Create well stream at bottomhole conditions\nStream = jneqsim.process.equipment.stream.Stream\nwell_inflow = Stream(\"Well Inflow\", fluid)\nwell_inflow.setFlowRate(50000.0, \"kg/hr\")\nwell_inflow.setTemperature(95.0, \"C\")\nwell_inflow.setPressure(200.0, \"bara\")\n\n# Model wellbore as a vertical pipe\nPipeBeggsAndBrills = jneqsim.process.equipment.pipeline.PipeBeggsAndBrills\nwellbore = PipeBeggsAndBrills(\"Wellbore\", well_inflow)\nwellbore.setPipeWallRoughness(2.5e-5)\nwellbore.setLength(3000.0)           # 3000 m well depth\nwellbore.setElevation(-3000.0)       # Vertical well (negative = upward flow)\nwellbore.setDiameter(0.1016)         # 4-inch tubing\n\n# Model flowline to separator\nflowline = PipeBeggsAndBrills(\"Flowline\", wellbore.getOutletStream())\nflowline.setPipeWallRoughness(5.0e-5)\nflowline.setLength(5000.0)           # 5 km flowline\nflowline.setElevation(0.0)           # Horizontal\nflowline.setDiameter(0.2032)         # 8-inch pipeline\n\n# HP Separator\nSeparator = jneqsim.process.equipment.separator.Separator\nhp_sep = Separator(\"HP Separator\", flowline.getOutletStream())\n\n# Build and run process\nProcessSystem = jneqsim.process.processmodel.ProcessSystem\nprocess = ProcessSystem()\nprocess.add(well_inflow)\nprocess.add(wellbore)\nprocess.add(flowline)\nprocess.add(hp_sep)\nprocess.run()\n\n# Report results\nprint(\"=== Integrated Well-to-Separator Results ===\")\nprint(f\"Bottomhole pressure: {well_inflow.getPressure('bara'):.1f} bara\")\nprint(f\"Wellhead pressure: {wellbore.getOutletStream().getPressure('bara'):.1f} bara\")\nprint(f\"Wellhead temperature: {wellbore.getOutletStream().getTemperature('C'):.1f} C\")\nprint(f\"Separator inlet pressure: {flowline.getOutletStream().getPressure('bara'):.1f} bara\")\nprint(f\"Separator inlet temperature: {flowline.getOutletStream().getTemperature('C'):.1f} C\")\nprint(f\"Oil rate: {hp_sep.getLiquidOutStream().getFlowRate('m3/hr'):.1f} m3/hr\")\nprint(f\"Gas rate: {hp_sep.getGasOutStream().getFlowRate('MSm3/day'):.4f} MSm3/day\")\n",
+      "seconds": 2.859,
+      "output": "=== Integrated Well-to-Separator Results ===\nBottomhole pressure: 200.0 bara\nWellhead pressure: 266.9 bara\nWellhead temperature: 95.0 C\nSeparator inlet pressure: 265.8 bara\nSeparator inlet temperature: 95.0 C\nOil rate: 0.1 m3/hr\nGas rate: 0.7779 MSm3/day\n"
+    },
+    {
+      "index": 2,
+      "line": 758,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Create reservoir fluid\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 100.0, 250.0)\nfluid.addComponent(\"nitrogen\", 0.5)\nfluid.addComponent(\"CO2\", 2.0)\nfluid.addComponent(\"methane\", 65.0)\nfluid.addComponent(\"ethane\", 8.0)\nfluid.addComponent(\"propane\", 4.0)\nfluid.addComponent(\"i-butane\", 1.0)\nfluid.addComponent(\"n-butane\", 2.0)\nfluid.addComponent(\"i-pentane\", 0.8)\nfluid.addComponent(\"n-pentane\", 0.6)\nfluid.addComponent(\"n-hexane\", 1.0)\nfluid.addComponent(\"n-heptane\", 5.0)\nfluid.addComponent(\"n-octane\", 4.0)\nfluid.addComponent(\"n-nonane\", 3.0)\nfluid.addComponent(\"n-decane\", 2.1)\nfluid.addComponent(\"water\", 1.0)\nfluid.setMixingRule(\"classic\")\nfluid.setMultiPhaseCheck(True)\n\n# Create reservoir\nSimpleReservoir = jneqsim.process.equipment.reservoir.SimpleReservoir\nreservoir = SimpleReservoir(\"Main Reservoir\")\n# Initial in-situ gas, oil and water pore volumes in m3 (illustrative).\nreservoir.setReservoirFluid(fluid, 1.0e7, 2.0e7, 5.0e6)\n\n# Add a production well\nproducer = reservoir.addOilProducer(\"Producer-1\")\nproducer.setFlowRate(10000.0, \"kg/hr\")\n",
+      "seconds": 0.219,
+      "output": ""
+    },
+    {
+      "index": 3,
+      "line": 797,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Reservoir parameters\nP_reservoir = 250.0  # bara\nT_reservoir = 95.0   # C\nPI = 15.0            # Sm3/d/bar (productivity index)\nP_bubble = 180.0     # bara (bubble point)\n\n# Calculate IPR using composite Vogel method\npressures_bhp = []\nrates = []\n\nfor i in range(50):\n    P_wf = 10.0 + i * 4.8  # 10 to 250 bara\n    pressures_bhp.append(P_wf)\n\n    if P_wf >= P_bubble:\n        # Linear region (above bubble point)\n        q = PI * (P_reservoir - P_wf)\n    else:\n        # Vogel region (below bubble point)\n        q_at_pb = PI * (P_reservoir - P_bubble)\n        q_vogel_max = q_at_pb + PI * P_bubble / 1.8\n        q = q_at_pb + (q_vogel_max - q_at_pb) * (\n            1.0 - 0.2 * (P_wf / P_bubble) - 0.8 * (P_wf / P_bubble) ** 2\n        )\n    rates.append(max(0.0, q))\n\n# Print table\nprint(f\"{'P_wf (bara)':>12} {'q_o (Sm3/d)':>12}\")\nprint(\"-\" * 26)\nfor p, q in zip(pressures_bhp[::5], rates[::5]):\n    print(f\"{p:12.1f} {q:12.1f}\")\n",
+      "seconds": 0.0,
+      "output": " P_wf (bara)  q_o (Sm3/d)\n--------------------------\n        10.0       2529.6\n        34.0       2450.5\n        58.0       2328.7\n        82.0       2164.3\n       106.0       1957.2\n       130.0       1707.4\n       154.0       1415.0\n       178.0       1079.9\n       202.0        720.0\n       226.0        360.0\n"
+    },
+    {
+      "index": 4,
+      "line": 836,
+      "status": "pass",
+      "code": "import math\n\n# Arps decline curve parameters\nq_i = 5000.0     # Initial rate, Sm3/d\nD_i = 0.001      # Initial decline rate, 1/day (about 30% per year)\nb = 0.5           # Hyperbolic exponent\n\n# Forecast for 10 years\ntime_days = [i * 30 for i in range(121)]  # Monthly steps for 10 years\nrates = []\ncum_production = []\ncum = 0.0\n\nfor t in time_days:\n    # Hyperbolic decline\n    q = q_i / (1.0 + b * D_i * t) ** (1.0 / b)\n    rates.append(q)\n\n    if t > 0:\n        dt = time_days[1]  # Step size\n        cum += q * dt\n    cum_production.append(cum)\n\n# EUR calculation\nq_el = 50.0  # Economic limit, Sm3/d\nt_el = (1.0 / (b * D_i)) * ((q_i / q_el) ** b - 1.0)\nprint(f\"Time to economic limit: {t_el / 365.25:.1f} years\")\n\n# Print annual summary\nprint(f\"{'Year':>6} {'Rate (Sm3/d)':>14} {'Cum (MSm3)':>12} {'Annual Decline':>16}\")\nprint(\"-\" * 50)\nfor yr in range(11):\n    idx = yr * 12\n    if idx < len(rates):\n        annual_decline = (1.0 - rates[idx] / rates[max(0, idx - 12)]) * 100 if yr > 0 else 0.0\n        print(f\"{yr:6d} {rates[idx]:14.0f} {cum_production[idx] / 1e6:12.3f} {annual_decline:15.1f}%\")\n",
+      "seconds": 0.0,
+      "output": "Time to economic limit: 49.3 years\n  Year   Rate (Sm3/d)   Cum (MSm3)   Annual Decline\n--------------------------------------------------\n     0           5000        0.000             0.0%\n     1           3591        1.504            28.2%\n     2           2703        2.613            24.7%\n     3           2108        3.463            22.0%\n     4           1690        4.137            19.8%\n     5           1385        4.683            18.0%\n     6           1156        5.135            16.6%\n     7            979        5.515            15.3%\n     8            840        5.840            14.2%\n     9            728        6.119            13.3%\n    10            638        6.363            12.4%\n"
+    },
+    {
+      "index": 5,
+      "line": 889,
+      "status": "pass",
+      "code": "integ = jneqsim.process.fielddevelopment.integrated\nMaterialBalanceGasDrive = integ.MaterialBalanceGasDrive\n\ninitialPressureBara, gasInPlaceSm3, averageZ = 250.0, 1.0e9, 0.90\ndrive = MaterialBalanceGasDrive(initialPressureBara, gasInPlaceSm3, averageZ)\n# pressure falls as cumulative production rises, following p/Z material balance\n",
+      "seconds": 0.016,
+      "output": ""
+    },
+    {
+      "index": 6,
+      "line": 904,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Create reservoir fluid at typical conditions\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 95.0, 300.0)\nfluid.addComponent(\"nitrogen\", 0.4)\nfluid.addComponent(\"CO2\", 1.8)\nfluid.addComponent(\"methane\", 68.0)\nfluid.addComponent(\"ethane\", 7.5)\nfluid.addComponent(\"propane\", 4.2)\nfluid.addComponent(\"n-butane\", 2.5)\nfluid.addComponent(\"n-pentane\", 1.5)\nfluid.addComponent(\"n-hexane\", 1.2)\nfluid.addComponent(\"n-heptane\", 3.5)\nfluid.addComponent(\"n-octane\", 3.0)\nfluid.addComponent(\"n-nonane\", 2.4)\nfluid.addComponent(\"n-decane\", 2.0)\nfluid.addComponent(\"water\", 2.0)\nfluid.setMixingRule(\"classic\")\nfluid.setMultiPhaseCheck(True)\n\n# Create well stream at wellhead conditions\nStream = jneqsim.process.equipment.stream.Stream\nwell_stream = Stream(\"Well-1 Stream\", fluid)\nwell_stream.setFlowRate(50000.0, \"kg/hr\")     # 50 t/hr\nwell_stream.setTemperature(75.0, \"C\")          # Wellhead temperature\nwell_stream.setPressure(70.0, \"bara\")           # Wellhead pressure\nwell_stream.run()\n\n# Check the well stream properties\nwell_fluid = well_stream.getFluid()\nprint(f\"Number of phases: {well_fluid.getNumberOfPhases()}\")\nprint(f\"Gas rate: {well_stream.getFlowRate('MSm3/day'):.3f} MSm3/day (total)\")\nprint(f\"Temperature: {well_stream.getTemperature('C'):.1f} C\")\nprint(f\"Pressure: {well_stream.getPressure('bara'):.1f} bara\")\n",
+      "seconds": 0.171,
+      "output": "Number of phases: 3\nGas rate: 0.867 MSm3/day (total)\nTemperature: 75.0 C\nPressure: 70.0 bara\n"
+    }
+  ]
+}

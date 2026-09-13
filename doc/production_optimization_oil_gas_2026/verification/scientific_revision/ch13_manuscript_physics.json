@@ -1,0 +1,875 @@
+{
+  "chapter": "ch13_produced_water_treatment",
+  "source_sha256": "f662211d1a1db96c8698bb1acf2d323a9a9642db658329c98e90a4a0d9331367",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "literal_blocks": [
+    {
+      "index": 1,
+      "code_sha256": "4634c537fd7a6c7994b2cd82819e1b0467c5fd3955c5321ec198d6f9fd602936",
+      "line": 577,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 0.025455545000000007,
+          "getPressure_bara": 30.0,
+          "getTemperature_C": 80.0
+        }
+      ],
+      "seconds": 6.046999999998661,
+      "output": "=== Phase Distribution ===\nNumber of phases: 3\nPhase 0 (gas): mole fraction = 0.8369, density = 21.0 kg/m\u00b3\nPhase 1 (oil): mole fraction = 0.0612, density = 656.6 kg/m\u00b3\nPhase 2 (aqueous): mole fraction = 0.1019, density = 977.0 kg/m\u00b3\n\n=== Water Phase Properties ===\nDensity: 977.0 kg/m\u00b3\nViscosity: 0.352 cP\npH (estimated): 4.1\n\n=== Dissolved Components in Water ===\n  methane: x = 3.622882e-04 (mole fraction)\n  ethane: x = 4.971623e-05 (mole fraction)\n  propane: x = 9.505272e-06 (mole fraction)\n  n-butane: x = 4.365396e-06 (mole fraction)\n  CO2: x = 1.261126e-04 (mole fraction)\n  H2S: x = 1.205311e-04 (mole fraction)\n"
+    },
+    {
+      "index": 2,
+      "code_sha256": "bf33d7f9e087ab16ab8ebc56c4c72a02b830e3974b6bd5f914a2c1dbdc248f7c",
+      "line": 638,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 0.017799199999999998,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0
+        }
+      ],
+      "seconds": 1.514999999999418,
+      "output": "  P (bara)   x_CO2 (water)   x_H2S (water)\n------------------------------------------\n        10    9.951701e-05    8.003506e-05\n        20    1.976076e-04    1.572668e-04\n        50    4.561357e-04    3.517763e-04\n       100    7.862584e-04    5.758712e-04\n       150    1.021911e-03    7.129505e-04\n       200    1.194009e-03    7.974181e-04\n"
+    },
+    {
+      "index": 3,
+      "code_sha256": "4d3ff6f6729bbf40828a9b3fdc1c09cffd261cf386d561f13a28320b3b331eb7",
+      "line": 689,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 0.017275689999999993,
+          "getPressure_bara": 50.0,
+          "getTemperature_C": 60.0
+        }
+      ],
+      "seconds": 0.40600000000267755,
+      "output": "Water content in gas phase: 4.477548e-03 mole fraction\nWater density: 990.1 kg/m\u00b3\n"
+    },
+    {
+      "index": 4,
+      "code_sha256": "947c51c67d7f9a55e16126a9cbeb7a8874b235bdf27da1c2045bbcc4fd0d40e7",
+      "line": 730,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 0.08815442300000001,
+          "getPressure_bara": 20.0,
+          "getTemperature_C": 70.0
+        }
+      ],
+      "seconds": 0.18800000000192085,
+      "output": "=== BTEX in Water Phase ===\n  benzene: x = 5.912327e-06, ~25.6 mg/L (approx)\n  toluene: x = 9.954305e-07, ~5.1 mg/L (approx)\n"
+    },
+    {
+      "index": 5,
+      "code_sha256": "2efc2d23c6a5143e27ac1a882d2aaef8d0b27694d24e1eebe464047fc8f3e4e9",
+      "line": 769,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 0.018015,
+          "getPressure_bara": 10.0,
+          "getTemperature_C": 120.0
+        }
+      ],
+      "seconds": 0.1559999999954016,
+      "output": "  T (\u00b0C)    \u03c1 (kg/m\u00b3)     \u03bc (cP)     \u03c3 (mN/m)\n--------------------------------------------\n      20        996.7      1.005\n      40        990.9      0.651\n      60        984.2      0.461\n      80        976.7      0.351\n     100        968.1      0.282\n     120        958.3      0.236\n"
+    }
+  ],
+  "physical_checks": [
+    {
+      "block": 1,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 4.020395127923848e-14,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 1.0074163725443595e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 353.15,
+      "pressure_bara": 30.0,
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 4.627409566636582e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 2,
+      "temperature_K": 353.15,
+      "pressure_bara": 10.0,
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 1.734723475976807e-18,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 1.527444837278124e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 2,
+      "temperature_K": 353.15,
+      "pressure_bara": 20.0,
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 1.3877787807814457e-17,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 7.165379400928194e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 2,
+      "temperature_K": 353.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 5.215827769687625e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 2,
+      "temperature_K": 353.15,
+      "pressure_bara": 100.0,
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 7.506717469851765e-12,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 9.60191925923313e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 2,
+      "temperature_K": 353.15,
+      "pressure_bara": 150.0,
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 7.184780548286085e-12,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 9.118727994500997e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 2,
+      "temperature_K": 353.15,
+      "pressure_bara": 200.0,
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 4.440892098500626e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 3.469446951953614e-18,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 5.0435211562544424e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 2,
+      "temperature_K": 333.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 1.8646195698579504e-13,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 1.0755840662562733e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 2,
+      "temperature_K": 343.15,
+      "pressure_bara": 20.0,
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 1,
+      "temperature_K": 293.15,
+      "pressure_bara": 10.0,
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 1,
+      "temperature_K": 313.15,
+      "pressure_bara": 10.0,
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 1,
+      "temperature_K": 333.15,
+      "pressure_bara": 10.0,
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 1,
+      "temperature_K": 353.15,
+      "pressure_bara": 10.0,
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 1,
+      "temperature_K": 373.15,
+      "pressure_bara": 10.0,
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 1,
+      "temperature_K": 393.15,
+      "pressure_bara": 10.0,
+      "pass": true
+    }
+  ]
+}

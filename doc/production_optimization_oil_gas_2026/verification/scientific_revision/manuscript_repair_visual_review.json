@@ -1,0 +1,752 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-12T20:49:31.003093+00:00",
+  "status": "passed_scoped_visual_and_scientific_review",
+  "scope": "Twenty repaired manuscript illustrations: actual contact-sheet visual inspection by the reviewing agent, representative full-resolution review, all changed images re-inspected at full resolution, caption/topology checks, and independent equation/data consistency checks. Synthetic illustrations are not external process-model validation; only the NIST plot inherits independent reference-fluid comparison evidence.",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "illustration_manifest_sha256": "fccf913c23503833922f0c6d6a22690997336cf875a2087b8901bf6778a5164e",
+  "repair_script_sha256": "cf65dcbb3943386cc3966af6a6520e09bd7f64b2f67d113371d6210d8052b12f",
+  "review_script_sha256": "1d2a1f4f69b3767227ee6d6d3f66ee98b4d3f5119a5cccc8d4ddf2493d336d00",
+  "counts": {
+    "images": 20,
+    "initial_contact_sheets": 4,
+    "full_resolution_distinct_images": 10,
+    "repaired_images_reinspected": 5,
+    "checks": 20,
+    "unresolved_material_findings": 0
+  },
+  "input_mutations_by_reviewer": "None. Root editor applied five requested figure corrections. Review scripts write evidence only.",
+  "inspection_method": "Visual inspection by the reviewing agent used actual tool-displayed images, not inferred from successful file generation. The initial contact sheets preserve the first inspected image hashes; final repairs were viewed individually at original resolution.",
+  "limitations": [
+    "No field calibration or vendor-map validation is inferred from analytical teaching plots.",
+    "The NIST panel validates only methane density at its nine stated temperature/pressure states within a declared teaching tolerance.",
+    "The two executed-plant topology drawings were checked against literal Chapter 33; this image audit does not rerun or replace the separately retained material and energy balance gate.",
+    "This audit covers the source images and caption records. Final PDF sizing and pagination are a separate publication review."
+  ],
+  "images": [
+    {
+      "index": 1,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch04_reservoir_engineering\\figures\\horner_plot.png",
+      "sha256": "048ae0ab4e8aed157c477ed0ca1fd34976087ff9005435d15a312ec2a963809a",
+      "size_px": [
+        1394,
+        878
+      ],
+      "caption": "Analytical Horner buildup illustration with increasing shut-in time toward the right",
+      "discussion": "As shut-in time increases, the Horner ratio approaches one and the modeled pressure rises toward 330 bara. The 10 bar-per-decade slope and 100 h preceding production time are specified teaching inputs; no measured well test is represented.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Reversed log-x axis correctly moves toward Horner ratio one at the right. Buildup approaches 330 bara; relocated formula is clear of the curve.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_01.jpg",
+        "contact_sheet_sha256": "225c9b3a742783c04e8452c37a67993f57e24065f18d38c621311521aa6c1aef",
+        "image_sha256_at_contact_inspection": "370512a3612721c566682e51472ec2a71e467a5c0468dd882d22db47002d8699",
+        "full_resolution_inspected": true,
+        "full_resolution_final_repair_inspected": true
+      },
+      "resolved_finding": "Moved Horner formula away from the pressure curve.",
+      "checks": [
+        {
+          "label": "Shut-in pressure approaches the stated asymptote from below",
+          "passed": true,
+          "measured": {
+            "first_bara": 299.9956592252068,
+            "last_bara": 329.9567862621736,
+            "asymptote_bara": 330
+          },
+          "criterion": "Strict increase with shut-in time; final deficit below 0.05 bar"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch04_reservoir_engineering\\figures\\nodal_analysis.png",
+      "sha256": "7d8ef9e93e5535daf4da59d6dfd3b6f48ddb5096e10424cf6a0c26d980ba0ecd",
+      "size_px": [
+        1394,
+        872
+      ],
+      "caption": "Checked analytical nodal intersections with fixed hydrostatic head and diameter-dependent friction",
+      "discussion": "This illustrative incompressible limit holds wellhead plus hydrostatic pressure at 60 bara and friction proportional to rate squared divided by diameter to the fifth power. Larger diameter lowers the required BHP at a fixed rate and raises the intersection rate. Multiphase wells require the coupled model developed in Chapters 5–8.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Axes identify BHP and liquid rate. Diameter ordering and the three marked intersections match the analytical roots. Upper-axis clipping affects only high-pressure extensions outside the intersections.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_01.jpg",
+        "contact_sheet_sha256": "225c9b3a742783c04e8452c37a67993f57e24065f18d38c621311521aa6c1aef",
+        "image_sha256_at_contact_inspection": "7d8ef9e93e5535daf4da59d6dfd3b6f48ddb5096e10424cf6a0c26d980ba0ecd",
+        "full_resolution_inspected": false,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Saved intersections satisfy both pressure curves and diameter ordering",
+          "passed": true,
+          "measured": {
+            "rates_m3_day": [
+              2497.8986772920794,
+              3268.139372653459,
+              3662.921148034056
+            ],
+            "max_pressure_residual_bar": 7.105427357601002e-14
+          },
+          "criterion": "Residual < 1e-9 bar; strictly increasing rate with diameter"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch05_well_performance\\figures\\log_diagnostic.png",
+      "sha256": "2beaa5d163328ed5bfbbcb5fab599cc751ee1521520a5c53c85e4417e7478ff5",
+      "size_px": [
+        1409,
+        878
+      ],
+      "caption": "Analytical log–log pressure and logarithmic-derivative curves with a radial-flow plateau",
+      "discussion": "The early-time pressure and derivative approach a unit-slope trend; the derivative then approaches 10 bar before a deliberately imposed late boundary response. The derivative is evaluated from the same pressure function and checked by numerical differentiation. This is a diagnostic-shape illustration, not a reservoir test interpretation.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Logarithmic axes, derivative definition and approximately 10 bar plateau agree with the declared formula. Late boundary response is explicitly imposed.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_01.jpg",
+        "contact_sheet_sha256": "225c9b3a742783c04e8452c37a67993f57e24065f18d38c621311521aa6c1aef",
+        "image_sha256_at_contact_inspection": "2beaa5d163328ed5bfbbcb5fab599cc751ee1521520a5c53c85e4417e7478ff5",
+        "full_resolution_inspected": false,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Analytical derivative agrees with independent central differentiation in log time",
+          "passed": true,
+          "measured": {
+            "relative_error": 6.611583996512382e-11,
+            "times_h": [
+              0.001,
+              0.01,
+              0.1,
+              1.0,
+              10.0,
+              30.0,
+              200.0,
+              1000.0
+            ]
+          },
+          "criterion": "Relative error < 1e-7 at eight states away from the imposed transition"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch13_produced_water_treatment\\figures\\water_lifecycle_profile.png",
+      "sha256": "368dd53475843e0f7ad21da97feed984d0558fccb4adb1a46d6c383625c57752",
+      "size_px": [
+        1568,
+        881
+      ],
+      "caption": "Specified oil/water production scenario with water cut calculated from the same liquid volumes",
+      "discussion": "Water cut is water volume divided by total liquid volume on the common stated reference basis. The scenario uses an assumed exponential oil-rate decline and linear water-rate increase; it illustrates treatment load and is not a NeqSim reservoir forecast or field history.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Oil/water bars and percentage water-cut axis have distinct units. The relocated lower-right legend leaves late-year bar tops visible; both liquid volumes share a reference basis.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_01.jpg",
+        "contact_sheet_sha256": "225c9b3a742783c04e8452c37a67993f57e24065f18d38c621311521aa6c1aef",
+        "image_sha256_at_contact_inspection": "cd4b652ea798f910fa7bbedeb06d6563b708f8421d6686e1598d0357e835b872",
+        "full_resolution_inspected": true,
+        "full_resolution_final_repair_inspected": true
+      },
+      "resolved_finding": "Moved the water-cut legend away from the final water-bar tops.",
+      "checks": [
+        {
+          "label": "Water cut uses the same plotted liquid volume basis",
+          "passed": true,
+          "measured": {
+            "max_error_percentage_points": 0.0,
+            "first_water_cut_pct": 14.285714285714286,
+            "last_water_cut_pct": 82.42081464469665,
+            "final_oil_thousand_m3_day": 4.905572274612227,
+            "final_water_thousand_m3_day": 23.0
+          },
+          "criterion": "Absolute error < 1e-12 percentage points and 0–100% bounds"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch16_heat_exchangers\\figures\\composite_curves.png",
+      "sha256": "9f30d2c98bc5c2912324cb62c937ffcdeb7929835a4614128f6ff618ff2cb88b",
+      "size_px": [
+        1394,
+        872
+      ],
+      "caption": "Specified noncrossing hot and cold composite curves with a 25 K minimum vertical temperature gap",
+      "discussion": "Both composites increase with their cumulative enthalpy coordinate. Their closest vertical separation is 25 K at 5 MW in this constructed example. Utility targets require the underlying stream heat-capacity flows, temperature intervals and enthalpy alignment; this diagram alone is not a solved plant heat-integration study.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Hot/cold curves do not cross. The 25 K arrow lies at the minimum vertical separation, 5 MW; caption avoids claiming a plant pinch target.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_01.jpg",
+        "contact_sheet_sha256": "225c9b3a742783c04e8452c37a67993f57e24065f18d38c621311521aa6c1aef",
+        "image_sha256_at_contact_inspection": "9f30d2c98bc5c2912324cb62c937ffcdeb7929835a4614128f6ff618ff2cb88b",
+        "full_resolution_inspected": false,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Both composites increase; the declared minimum gap occurs at 5 MW",
+          "passed": true,
+          "measured": {
+            "minimum_gap_K": 25.0,
+            "enthalpy_at_minimum_MW": 5.0
+          },
+          "criterion": "Exact 25 K gap at 5 MW; no crossing"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch18_power_production\\figures\\brayton_cycle_ts.png",
+      "sha256": "59f89427c54bc05c48e8a6519f176c17bba39f81a1dade9482332d4bbb138e4c",
+      "size_px": [
+        1412,
+        872
+      ],
+      "caption": "Checked ideal Brayton cycle with isentropic compression/expansion and constant-pressure heat transfer",
+      "discussion": "The two vertical legs are isentropic and both use pressure ratio 10. Constant-pressure heating and cooling satisfy ds = cp dT/T. With the specified constant heat capacities, thermal efficiency is 48.21 percent. Real turbine performance requires irreversible component models, pressure losses and temperature-dependent properties.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Both isentropes are vertical on the T–s plane; constant-pressure branches and states 1–4 are clear. Entropy is explicitly relative and temperature is in kelvin.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_01.jpg",
+        "contact_sheet_sha256": "225c9b3a742783c04e8452c37a67993f57e24065f18d38c621311521aa6c1aef",
+        "image_sha256_at_contact_inspection": "59f89427c54bc05c48e8a6519f176c17bba39f81a1dade9482332d4bbb138e4c",
+        "full_resolution_inspected": true,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Ideal Brayton pressure ratio, entropy closure and efficiency identities",
+          "passed": true,
+          "measured": {
+            "temperatures_K": [
+              300.0,
+              579.209318664975,
+              1400.0,
+              725.1264550923697
+            ],
+            "efficiency_pct": 48.20525320768788,
+            "specific_heat_added_kJ_kg": 824.8946347417001,
+            "specific_heat_rejected_kJ_kg": 427.2520873678315,
+            "max_identity_error": 2.220446049250313e-16
+          },
+          "criterion": "Absolute identity error < 1e-12; constant cp and gamma only"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch20_capacity_checks_and_utilization\\figures\\utilization_vs_production.png",
+      "sha256": "9c5682e1e7a4971f4ae75e2ddf11b92ee666d866845b1c24f7f3cb6c65bf2b47",
+      "size_px": [
+        1394,
+        872
+      ],
+      "caption": "Unclipped utilization for three explicitly assumed independent equipment ratings",
+      "discussion": "Utilization is demand divided by a fixed rating. At a demand above 92 percent of reference, the assumed compressor limit is exceeded; curves remain above 100 percent so the overload is visible. These ratings illustrate constraint arithmetic and do not establish installed-equipment capacity.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "All utilization curves visibly continue above 100%. The first threshold is the declared compressor rating; fixed assumed ratings are not presented as installed capacity.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_02.jpg",
+        "contact_sheet_sha256": "4fec382fbb06f7cdc9b968f66eca54be3b8aba69cd51ece61b430c30fc9e2fed",
+        "image_sha256_at_contact_inspection": "9c5682e1e7a4971f4ae75e2ddf11b92ee666d866845b1c24f7f3cb6c65bf2b47",
+        "full_resolution_inspected": false,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Overload is retained and the compressor is the first limit",
+          "passed": true,
+          "measured": {
+            "utilization_at_120_percent_demand_pct": [
+              114.28571428571429,
+              130.43478260869566,
+              120.0
+            ],
+            "first_limit_percent_reference": 92.0
+          },
+          "criterion": "No clipping above 100%; smallest declared rating 92%"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch22_production_optimization_theory\\figures\\pareto_front_oil_vs_power.png",
+      "sha256": "c25a1c5296216485a12bff81025517f8f7abc0dc58bf6f210721b333a086afa7",
+      "size_px": [
+        1376,
+        872
+      ],
+      "caption": "Explicitly enumerated synthetic Pareto set; the selected point passes a nondominance check",
+      "discussion": "The alternatives use the declared teaching relation P = 14 + 8×10⁻⁷(q − 3000)² MW, with additional dominated alternatives placed above it. Oil rate is maximized and power minimized. The selected point minimizes squared normalized distance to the ideal objective values within the enumerated front; it is a preference choice, not a NeqSim field optimum.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Axis directions match oil maximization and power minimization. The selected star is on the nondominated set; the caption declares synthetic alternatives and preference function.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_02.jpg",
+        "contact_sheet_sha256": "4fec382fbb06f7cdc9b968f66eca54be3b8aba69cd51ece61b430c30fc9e2fed",
+        "image_sha256_at_contact_inspection": "c25a1c5296216485a12bff81025517f8f7abc0dc58bf6f210721b333a086afa7",
+        "full_resolution_inspected": false,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Independent exhaustive dominance and declared preference checks",
+          "passed": true,
+          "measured": {
+            "nondominated_count": 90,
+            "selected_oil_m3_day": 4168.539325842697,
+            "selected_power_MW": 15.092387324832723,
+            "preference_score_error": 0.0
+          },
+          "criterion": "90 of 250 alternatives nondominated; selected is in front and minimizes declared score to 1e-12"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch29_dynamic_simulation_and_control\\figures\\ch20_compressor_map_antisurge.png",
+      "sha256": "6e6648df71f93579150940215d60489cbe8e50cdeafc88101f9bf600cde34f25",
+      "size_px": [
+        1394,
+        872
+      ],
+      "caption": "Conceptual anti-surge action: opening recycle raises compressor inlet throughflow toward the right",
+      "discussion": "The arrow indicates increased compressor throughflow when recycle opens, even though net export can decrease. The speed curve, surge boundary and margin shown here are specified illustrations. Actual control design must use the installed map and evaluate the connected pressure system and valve dynamics.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "The arrow points toward greater actual compressor inlet flow, away from the stated low-flow boundary. The caption distinguishes compressor throughflow from net export and labels the map conceptual.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_02.jpg",
+        "contact_sheet_sha256": "4fec382fbb06f7cdc9b968f66eca54be3b8aba69cd51ece61b430c30fc9e2fed",
+        "image_sha256_at_contact_inspection": "6e6648df71f93579150940215d60489cbe8e50cdeafc88101f9bf600cde34f25",
+        "full_resolution_inspected": false,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Recycle arrow increases compressor throughflow",
+          "passed": true,
+          "measured": {
+            "start_m3_hr": 5600.0,
+            "end_m3_hr": 8500.0
+          },
+          "criterion": "Rightward arrow from 5600 to 8500 m3/h; no net-export inference"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch30_digital_twins_and_automation\\figures\\ch21_digital_twin_tracking.png",
+      "sha256": "329ea09edf9dc632dfbcebd24a7fd2f52f316ed2b0b2416736f3bea3be9b9064",
+      "size_px": [
+        1674,
+        1132
+      ],
+      "caption": "Synthetic sensor/model residuals with a known 3 K injected offset and a declared rolling-mean correction",
+      "discussion": "The shaded 24–36 h interval contains an imposed 3 K sensor offset. The correction uses the latest 20 residuals against a specified reference; it lags the offset changes. No field measurements, automated fault diagnosis or calibrated digital twin are claimed. Distinguishing sensor bias from model error needs additional independent evidence.",
+      "basis": "checked synthetic statistical teaching exercise",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Temperature and residual panels use Celsius and kelvin correctly. Shaded offset interval, correction lag, and noisy synthetic observations are visible; the caption does not claim measured plant evidence.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_02.jpg",
+        "contact_sheet_sha256": "4fec382fbb06f7cdc9b968f66eca54be3b8aba69cd51ece61b430c30fc9e2fed",
+        "image_sha256_at_contact_inspection": "329ea09edf9dc632dfbcebd24a7fd2f52f316ed2b0b2416736f3bea3be9b9064",
+        "full_resolution_inspected": true,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Seeded fixture and rolling residual correction reproduce saved summary",
+          "passed": true,
+          "measured": {
+            "mean_corrected_residual_K": 0.002769894859328405,
+            "injected_offset_K": 3,
+            "window_samples": 20
+          },
+          "criterion": "Saved-mean agreement < 1e-12 K; corrected plateau mean < 0.2 K, excluding transition lag"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch12_gas_processing\\figures\\gas_processing_overview.png",
+      "sha256": "0abef1e514081c4d80dfc65d98b71ea093c75b03f8206d99be0a912e610f7a34",
+      "size_px": [
+        1669,
+        653
+      ],
+      "caption": "Conceptual treatment sequence placing required contaminant removal before cryogenic processing",
+      "discussion": "The sequence locates acid-gas treatment and deep drying upstream of cold equipment. Mercury control is included when required by feed and materials. Product requirements determine the actual treatment train; TEG dehydration alone does not establish a cryogenic water specification.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Treatment sequence and arrows are readable. Conditional contaminant control and cryogenic pretreatment scope match the caption.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_02.jpg",
+        "contact_sheet_sha256": "4fec382fbb06f7cdc9b968f66eca54be3b8aba69cd51ece61b430c30fc9e2fed",
+        "image_sha256_at_contact_inspection": "0abef1e514081c4d80dfc65d98b71ea093c75b03f8206d99be0a912e610f7a34",
+        "full_resolution_inspected": true,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Agent visual topology and caption cross-check",
+          "passed": true,
+          "measured": "Visible order is inlet liquid removal, acid-gas treatment, deep drying/mercury control, cryogenic recovery, residue compression. Caption makes configuration conditional and does not equate TEG with cryogenic dehydration.",
+          "criterion": "Actual visible connections and stated omissions agree with scoped caption; indices 14–15 also checked against literal worked flowsheet"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch30_digital_twins_and_automation\\figures\\ch21_rto_cycle.png",
+      "sha256": "008beaccbd2b044837cd1128760e8296531f6b874948282e5528b16291386552",
+      "size_px": [
+        1669,
+        880
+      ],
+      "caption": "Operational optimization cycle with verification and authorization before implementation",
+      "discussion": "Each recommendation is checked against the accepted model and operating limits before authorized implementation. Monitoring returns new observations to the reconciliation step. The diagram specifies a workflow; it does not demonstrate a live plant connection.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Six boxes form a readable closed operational workflow, including verification and authorization before implementation.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_02.jpg",
+        "contact_sheet_sha256": "4fec382fbb06f7cdc9b968f66eca54be3b8aba69cd51ece61b430c30fc9e2fed",
+        "image_sha256_at_contact_inspection": "008beaccbd2b044837cd1128760e8296531f6b874948282e5528b16291386552",
+        "full_resolution_inspected": false,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Agent visual topology and caption cross-check",
+          "passed": true,
+          "measured": "Six directed steps close the monitoring/reconciliation loop. Verification and authorization precede implementation; caption does not claim a live plant connection.",
+          "criterion": "Actual visible connections and stated omissions agree with scoped caption; indices 14–15 also checked against literal worked flowsheet"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch33_onshore_processing_plants\\figures\\ch22_amine_unit_pfd.png",
+      "sha256": "3075f5e4d54beadf4d1da92a44d51984512bccdf055fc574dbf61cc57304ed84",
+      "size_px": [
+        1669,
+        977
+      ],
+      "caption": "Simplified amine circuit with separate rich/lean sides of solvent heat recovery",
+      "discussion": "Rich solvent is depressurized, preheated by regenerated lean solvent, and sent to the regenerator. The hot lean solvent returns through the exchanger, cooler and pump to the absorber. The dashed connection denotes heat transfer, not solvent mixing; condenser/reflux and reboiler circulation are omitted from this conceptual circuit.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Separate rich/lean exchanger passages, heat-transfer arrow and final flash-gas outlet resolve the previous topology omission. The visible diagram and stated omissions agree.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_03.jpg",
+        "contact_sheet_sha256": "839d9b6edff0cadab5d7cc1ee2b7e4406a084b2c1a5f737dcb2ba4d907a72cf1",
+        "image_sha256_at_contact_inspection": "757cf07d6a402611959a69701bd55d3ab61cfd71ae89833673c0376d1561e761",
+        "full_resolution_inspected": true,
+        "full_resolution_final_repair_inspected": true
+      },
+      "resolved_finding": "Added the physically required flash-gas outlet to the rich-solvent flash drum.",
+      "checks": [
+        {
+          "label": "Agent visual topology and caption cross-check",
+          "passed": true,
+          "measured": "Rich solvent passes flash drum and rich exchanger side to regeneration; hot lean solvent passes lean exchanger side, cooler and pump back to absorber. The final flash-gas outlet is visible. Heat is a separate dashed connection, not solvent mixing.",
+          "criterion": "Actual visible connections and stated omissions agree with scoped caption; indices 14–15 also checked against literal worked flowsheet"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch33_onshore_processing_plants\\figures\\ch22_onshore_plant_block_diagram.png",
+      "sha256": "95e79a4b36998db25d7eb22fb5872efffa93aa84ebd1db900f0b4ad639f6277e",
+      "size_px": [
+        1832,
+        1009
+      ],
+      "caption": "Block diagram of the executed dry-hydrocarbon plant with four external product streams",
+      "discussion": "The four product boundaries are inlet condensate, recompressed residue gas, stabilizer overhead and stabilizer bottoms. Feed and products are reconciled component by component. The separate standalone TEG example and a complete raw-gas pretreatment train are outside this numerical flowsheet.",
+      "basis": "diagram of the executed Chapter33 flowsheet",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Readable dry-feed basis and external product arrows agree with the worked process topology. Utilities are explicit and the standalone TEG example is not silently included.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_03.jpg",
+        "contact_sheet_sha256": "839d9b6edff0cadab5d7cc1ee2b7e4406a084b2c1a5f737dcb2ba4d907a72cf1",
+        "image_sha256_at_contact_inspection": "95e79a4b36998db25d7eb22fb5872efffa93aa84ebd1db900f0b4ad639f6277e",
+        "full_resolution_inspected": true,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Agent visual topology and caption cross-check",
+          "passed": true,
+          "measured": "350 t/h, 70 bara dry feed, inlet separator, precooling/knockout with separate gas expansion and liquid letdown, cold separation, 70 bara residue compression and 4.5 MW stabilizer agree with literal Chapter 33. Four external product boundaries are represented.",
+          "criterion": "Actual visible connections and stated omissions agree with scoped caption; indices 14–15 also checked against literal worked flowsheet"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch33_onshore_processing_plants\\figures\\ch22_turboexpander_pfd.png",
+      "sha256": "75d2f8b0d94c2718d0dfccb0a05b05272e555b2d1e384f69506b21e48f4e01b0",
+      "size_px": [
+        1669,
+        847
+      ],
+      "caption": "Verified process topology with gas-only expansion, liquid bypass letdown, remixing and cold separation",
+      "discussion": "Upstream knockout prevents routing the entire two-phase cooled feed through the gas expander. The liquid takes a throttling bypass and rejoins the expanded gas before separation. The worked model reports expander recovery and compressor demand separately; this diagram does not impose an unmodeled common shaft.",
+      "basis": "diagram of the executed Chapter33 flowsheet",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Two inlet paths and two product paths are visually unambiguous. Gas-only expansion and liquid bypass are consistent with the literal worked flowsheet.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_03.jpg",
+        "contact_sheet_sha256": "839d9b6edff0cadab5d7cc1ee2b7e4406a084b2c1a5f737dcb2ba4d907a72cf1",
+        "image_sha256_at_contact_inspection": "75d2f8b0d94c2718d0dfccb0a05b05272e555b2d1e384f69506b21e48f4e01b0",
+        "full_resolution_inspected": true,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Agent visual topology and caption cross-check",
+          "passed": true,
+          "measured": "The gas outlet of upstream knockout enters the expander; liquid uses a letdown valve. Both rejoin before cold separation. Compression and stabilization follow separate product streams; there is no invented common-shaft connection.",
+          "criterion": "Actual visible connections and stated omissions agree with scoped caption; indices 14–15 also checked against literal worked flowsheet"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch02_thermodynamic_foundations\\figures\\eos_comparison.png",
+      "sha256": "26cb6604e75ea9e6deac74de028192df89fbbe35ea9fedac7ec6ad298546e7d2",
+      "size_px": [
+        2178,
+        901
+      ],
+      "caption": "SRK and Peng–Robinson methane density compared with independent NIST reference-fluid data at nine states",
+      "discussion": "The parity and deviation panels compare 300, 350 and 400 K at 1, 50 and 100 bara. Maximum absolute relative deviations are 1.421 percent for SRK and 0.811 percent for Peng–Robinson, within the declared 3 percent teaching budget. These are NIST reference-EOS values, not invented experimental points or a general mixture-accuracy claim. The separate benchmark notebook retains inputs, raw reference tables, computed values and tolerances.",
+      "basis": "18 executed comparisons with 9 NIST methane reference-EOS states",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Parity and deviation panels show all 18 comparisons with correct density/relative-error units. Legend distinguishes SRK and PR; bounds and narrow methane-state scope are explicit.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_03.jpg",
+        "contact_sheet_sha256": "839d9b6edff0cadab5d7cc1ee2b7e4406a084b2c1a5f737dcb2ba4d907a72cf1",
+        "image_sha256_at_contact_inspection": "26cb6604e75ea9e6deac74de028192df89fbbe35ea9fedac7ec6ad298546e7d2",
+        "full_resolution_inspected": false,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Image exactly matches retained independent NIST benchmark; numerical deviations reproduce caption",
+          "passed": true,
+          "measured": {
+            "comparison_count": 18,
+            "state_count": 9,
+            "max_abs_relative_deviation_pct": {
+              "SRK methane density": 1.4207593974357349,
+              "PR methane density": 0.8112271996129237
+            },
+            "benchmark_image_identical": true,
+            "benchmark_results_sha256": "74e7a1670b4171276bc3dbbd3dad775d281637ac514c014da6c42a8d2c89ea86"
+          },
+          "criterion": "18 comparisons at 9 NIST reference-EOS states; each deviation within declared 3% scope; identical plot hash"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch20_capacity_checks_and_utilization\\figures\\compressor_capacity_map.png",
+      "sha256": "0702beed5f3322addd94d80ac45e8d5ece67f178bde057668565006d3d27da21",
+      "size_px": [
+        1394,
+        872
+      ],
+      "caption": "Analytical compressor-map illustration with explicit surge and high-flow endpoints",
+      "discussion": "The curves obey the stated similarity form H = 180N²[1 − 0.25(q/(6000N))²] kJ/kg, where N is relative speed. Endpoints are specified for this geometry illustration; there is no shaded region implying that points beyond those bounds are accepted. These curves are not measured vendor data or an installed-machine rating.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Curves, speed labels, endpoint markers and the selected marker are consistent with the formula. No accepted-region shading implies validity outside specified endpoints.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_03.jpg",
+        "contact_sheet_sha256": "839d9b6edff0cadab5d7cc1ee2b7e4406a084b2c1a5f737dcb2ba4d907a72cf1",
+        "image_sha256_at_contact_inspection": "0702beed5f3322addd94d80ac45e8d5ece67f178bde057668565006d3d27da21",
+        "full_resolution_inspected": false,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Compressor-map endpoints and operating marker obey declared similarity relation",
+          "passed": true,
+          "measured": {
+            "max_endpoint_head_error_kJ_kg": 0.0,
+            "marker_flow_m3_hr": 6000,
+            "marker_head_kJ_kg": 135
+          },
+          "criterion": "Endpoint head errors < 1e-12 kJ/kg; decreasing head over positive-flow ranges; no installed-rating claim"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch22_production_optimization_theory\\figures\\separator_pressure_contour.png",
+      "sha256": "b3ba84e68add2d01395285a5836e7c7ab15b83e2792a6776473bd9553cb27435",
+      "size_px": [
+        1355,
+        872
+      ],
+      "caption": "Explicit algebraic objective surface for illustrating a constrained pressure-search problem",
+      "discussion": "The contour is the declared dimensionless function 1 − [(pHP − 60)/30]² − [(pMP − 15)/15]², whose gradient vanishes at 60 and 15 bara and whose Hessian is negative definite. It explains a search landscape; it does not represent computed oil recovery. Actual separation optima require the verified process calculations elsewhere in the book.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "Pressure axes use bara; colorbar correctly labels a dimensionless algebraic objective. Dark stationary-point text remains legible over the light contour maximum.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_03.jpg",
+        "contact_sheet_sha256": "839d9b6edff0cadab5d7cc1ee2b7e4406a084b2c1a5f737dcb2ba4d907a72cf1",
+        "image_sha256_at_contact_inspection": "4f63b16e7c2e0fabc55b049a2b150a89f42b5d55770643e012fac17d0a49f16c",
+        "full_resolution_inspected": true,
+        "full_resolution_final_repair_inspected": true
+      },
+      "resolved_finding": "Changed stationary-point annotation to dark text on the light contour fill.",
+      "checks": [
+        {
+          "label": "Declared contour has a feasible unique concave maximum",
+          "passed": true,
+          "measured": {
+            "stationary_pressures_bara": [
+              60,
+              15
+            ],
+            "hessian_eigenvalues": [
+              -0.0022222222222222222,
+              -0.008888888888888889
+            ],
+            "gradient": [
+              0.0,
+              0.0
+            ]
+          },
+          "criterion": "Gradient zero; negative definite Hessian; point within displayed domain"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch04_reservoir_engineering\\figures\\ipr_curves.png",
+      "sha256": "ff618f544d489042af0a0f672d89d6a4c8c86bb6c7b42e15bc6995b85dd7eed3",
+      "size_px": [
+        1394,
+        872
+      ],
+      "caption": "Analytical PI, Vogel and Fetkovich inflow curves with all assumed parameters stated",
+      "discussion": "Each equation gives zero rate at 300 bara flowing BHP. At zero BHP the respective absolute-open-flow extrapolations are 6000, 4500 and 5500 m³/d. Different parameters are deliberately used to illustrate the forms; this is not a fit of three models to one well or permission to produce at zero BHP.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "The three inflow curves have readable legends with distinct assumed parameters. All terminate at zero flow at 300 bara and their AOF intercepts match the caption.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_04.jpg",
+        "contact_sheet_sha256": "5ea77215922c4239bccce500f0b4396cd3bf2af169d3276c94011f6b93c00c69",
+        "image_sha256_at_contact_inspection": "ff618f544d489042af0a0f672d89d6a4c8c86bb6c7b42e15bc6995b85dd7eed3",
+        "full_resolution_inspected": false,
+        "full_resolution_final_repair_inspected": false
+      },
+      "resolved_finding": null,
+      "checks": [
+        {
+          "label": "Inflow curves obey no-drawdown and AOF limits with monotonic decline",
+          "passed": true,
+          "measured": {
+            "AOF_m3_day": [
+              6000.0,
+              4500.0,
+              5500.0
+            ],
+            "no_drawdown_rates_m3_day": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "criterion": "Zero rate at reservoir BHP to 1e-12 m3/day; monotonically decreasing with BHP; extrapolated AOF only"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch05_well_performance\\figures\\gas_lift_performance.png",
+      "sha256": "d4f54d6b1bd631b1463729d7411a5302ac0cf26dc45b14ad1ed712094db50ef0",
+      "size_px": [
+        1412,
+        872
+      ],
+      "caption": "Analytical gas-lift illustration with an explicit marginal cost-equivalent assumption",
+      "discussion": "The declared response has diminishing incremental oil yield. With the stated cost-equivalent slope of 5 m³ oil per thousand standard m³ lift gas, the stationary net-benefit injection is 77.71 thousand standard m³/d. This synthetic trade-off is checked by differentiation; it is not a calibrated lift curve, a current market-price forecast or a native gas-lift allocation result.",
+      "basis": "analytical teaching illustration",
+      "visual_status": "passed",
+      "caption_science_status": "passed_with_stated_scope",
+      "observation": "The saturating curve, stationary marker and declared cost assumption agree. The formula occupies lower whitespace; an opaque annotation background prevents the vertical guide obscuring text.",
+      "inspection": {
+        "contact_sheet": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\manuscript_repair_visual_review\\contact_04.jpg",
+        "contact_sheet_sha256": "5ea77215922c4239bccce500f0b4396cd3bf2af169d3276c94011f6b93c00c69",
+        "image_sha256_at_contact_inspection": "41a3688f805ec43eebe6681b4ad19121961cd2e2c321980a38c38f43927b8840",
+        "full_resolution_inspected": true,
+        "full_resolution_final_repair_inspected": true
+      },
+      "resolved_finding": "Moved the gas-lift equation into whitespace and shielded it from the vertical guide with an opaque background.",
+      "checks": [
+        {
+          "label": "Lift net-benefit point satisfies the marginal condition and strict concavity",
+          "passed": true,
+          "measured": {
+            "stationary_g_thousand_Sm3_day": 77.70801496337481,
+            "oil_at_stationary_point_m3_day": 2350.0,
+            "marginal_oil_per_thousand_Sm3": 4.999999999999997,
+            "second_derivative": -0.16666666666666657
+          },
+          "criterion": "Marginal yield equals declared cost-equivalent slope to 1e-12; negative second derivative; interior to displayed range"
+        }
+      ]
+    }
+  ]
+}

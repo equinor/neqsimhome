@@ -1,0 +1,237 @@
+{
+  "chapter": "ch03_fluid_characterization",
+  "file": "gas_condensate_phase_envelope.png",
+  "title": "Defined-compound gas-condensate surrogate: PR",
+  "eos": "SystemPrEos",
+  "basis_section": "3.7.5",
+  "substitute_basis": "Illustration-only defined-compound surrogate: same light-component amounts, with n-heptane, nC10 and nC20 replacing the original C7/C10/C20 TBP fractions at amounts 2, 1.5 and 2. This does not validate the original characterized-fluid envelope; original trace/TP-flash failures are retained in ch03_probe.json.",
+  "components": [
+    [
+      "nitrogen",
+      0.5
+    ],
+    [
+      "CO2",
+      3
+    ],
+    [
+      "methane",
+      75
+    ],
+    [
+      "ethane",
+      8
+    ],
+    [
+      "propane",
+      4
+    ],
+    [
+      "i-butane",
+      1
+    ],
+    [
+      "n-butane",
+      1.5
+    ],
+    [
+      "i-pentane",
+      0.5
+    ],
+    [
+      "n-pentane",
+      0.4
+    ],
+    [
+      "n-hexane",
+      0.6
+    ],
+    [
+      "n-heptane",
+      2
+    ],
+    [
+      "nC10",
+      1.5
+    ],
+    [
+      "nC20",
+      2
+    ]
+  ],
+  "raw_amount_sum": 100.0,
+  "normalization": "All component amounts are normalized by NeqSim to the recorded mole fractions; TBP density inputs are g/cm3 and molar masses kg/mol.",
+  "normalized_composition": [
+    {
+      "component": "nitrogen",
+      "mole_fraction": 0.005,
+      "molar_mass_kg_mol": 0.0280135
+    },
+    {
+      "component": "CO2",
+      "mole_fraction": 0.03,
+      "molar_mass_kg_mol": 0.04401
+    },
+    {
+      "component": "methane",
+      "mole_fraction": 0.75,
+      "molar_mass_kg_mol": 0.016042999999999998
+    },
+    {
+      "component": "ethane",
+      "mole_fraction": 0.08,
+      "molar_mass_kg_mol": 0.03007
+    },
+    {
+      "component": "propane",
+      "mole_fraction": 0.04,
+      "molar_mass_kg_mol": 0.044097000000000004
+    },
+    {
+      "component": "i-butane",
+      "mole_fraction": 0.01,
+      "molar_mass_kg_mol": 0.058122999999999994
+    },
+    {
+      "component": "n-butane",
+      "mole_fraction": 0.015,
+      "molar_mass_kg_mol": 0.058122999999999994
+    },
+    {
+      "component": "i-pentane",
+      "mole_fraction": 0.005,
+      "molar_mass_kg_mol": 0.07215099999999999
+    },
+    {
+      "component": "n-pentane",
+      "mole_fraction": 0.004,
+      "molar_mass_kg_mol": 0.07215
+    },
+    {
+      "component": "n-hexane",
+      "mole_fraction": 0.006,
+      "molar_mass_kg_mol": 0.086177
+    },
+    {
+      "component": "n-heptane",
+      "mole_fraction": 0.02,
+      "molar_mass_kg_mol": 0.100205
+    },
+    {
+      "component": "nC10",
+      "mole_fraction": 0.015,
+      "molar_mass_kg_mol": 0.142285
+    },
+    {
+      "component": "nC20",
+      "mole_fraction": 0.02,
+      "molar_mass_kg_mol": 0.2826
+    }
+  ],
+  "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch03_fluid_characterization\\figures\\gas_condensate_phase_envelope.png",
+  "sha256": "e1eb1ccdf13ae146fa807e4b0d145c07785d6cde663aedd6034c214f62f34875",
+  "data_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\legacy_phase_envelopes\\ch03_envelope.csv",
+  "data_sha256": "fb2db4abf51dd58eb5f0348ee54d2ca1c77b2849608becefaa36d4529ebc28c5",
+  "backup_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\backups\\scientific_revision_legacy_envelopes\\ch03_fluid_characterization\\gas_condensate_phase_envelope.png",
+  "caption": "NeqSim PR saturation envelope for an illustration-only defined-compound surrogate, not the Section 3.7.5 TBP fluid. The traced maxima are 307.0 \u00b0C (cricondentherm) and 314.0 bara (cricondenbar). Markers are sampled continuation extrema; no critical point or production/export trajectory is inferred. Dew/bubble assignment was checked by low-pressure TP flashes around each branch.",
+  "extrema": {
+    "sampled_cricondentherm": {
+      "T_C": 306.9893105079019,
+      "P_bara": 67.32782389710147
+    },
+    "sampled_cricondenbar": {
+      "T_C": 113.16973923641518,
+      "P_bara": 313.9717875802872
+    }
+  },
+  "branch_classification": "Dew branch has the larger maximum temperature, verified with fresh TP flashes at T +/- 0.5 K near 5 bara. Getter names alone were not trusted.",
+  "branch_probes": [
+    {
+      "branch": "Dew boundary",
+      "point_T_K": 518.9593072413342,
+      "point_P_bara": 4.909926174351252,
+      "minus_0_5K": {
+        "T_K": 518.4593072413342,
+        "P_bara": 4.909926174351252,
+        "gas_labelled_fraction": 0.999663030816526,
+        "phases": [
+          {
+            "type": "GAS",
+            "beta": 0.999663030816526,
+            "density_kg_m3": 3.4313663974579183
+          },
+          {
+            "type": "OIL",
+            "beta": 0.00033696918347403404,
+            "density_kg_m3": 708.5145824333409
+          }
+        ],
+        "component_closure_max_abs": 6.938893903907228e-18
+      },
+      "plus_0_5K": {
+        "T_K": 519.4593072413342,
+        "P_bara": 4.909926174351252,
+        "gas_labelled_fraction": 1.0,
+        "phases": [
+          {
+            "type": "GAS",
+            "beta": 1.0,
+            "density_kg_m3": 3.4340640653650945
+          }
+        ],
+        "component_closure_max_abs": 0.0
+      }
+    },
+    {
+      "branch": "Bubble boundary",
+      "point_T_K": 137.41836556443874,
+      "point_P_bara": 4.983209028749368,
+      "minus_0_5K": {
+        "T_K": 136.91836556443874,
+        "P_bara": 4.983209028749368,
+        "gas_labelled_fraction": 0.0,
+        "phases": [
+          {
+            "type": "OIL",
+            "beta": 1.0,
+            "density_kg_m3": 558.1756638196871
+          }
+        ],
+        "component_closure_max_abs": 0.0
+      },
+      "plus_0_5K": {
+        "T_K": 137.91836556443874,
+        "P_bara": 4.983209028749368,
+        "gas_labelled_fraction": 0.020391773913206457,
+        "phases": [
+          {
+            "type": "GAS",
+            "beta": 0.020391773913206457,
+            "density_kg_m3": 8.095023363775129
+          },
+          {
+            "type": "OIL",
+            "beta": 0.9796082260867935,
+            "density_kg_m3": 559.4258760794401
+          }
+        ],
+        "component_closure_max_abs": 8.673617379884035e-19
+      }
+    }
+  ],
+  "raw_getter_mapping": [
+    {
+      "getter": "dewT",
+      "physical_label": "Dew boundary",
+      "valid_points": 57,
+      "gap_points": 2
+    },
+    {
+      "getter": "bubT",
+      "physical_label": "Bubble boundary",
+      "valid_points": 75,
+      "gap_points": 2
+    }
+  ],
+  "physics_scope": "Fixed-composition fluid saturation envelope; no solid, hydrate or aqueous stability envelope, lab tuning, critical-point certification, or operating trajectory. Extrema are sampled maxima, not independently optimized extrema."
+}

@@ -1,0 +1,56 @@
+{
+  "chapter": "ch01_introduction",
+  "source_sha256": "fc4ec78cfc3496b92c6915fddad4b13c9fef9763777cc260742a1825dfea05e9",
+  "project_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "blocks": [
+    {
+      "index": 1,
+      "line": 520,
+      "status": "pass",
+      "code": "import os\nimport sys\nfrom pathlib import Path\n\n# Set NEQSIM_PROJECT_ROOT to the NeqSim source clone before starting Python.\nPROJECT_ROOT = Path(os.environ[\"NEQSIM_PROJECT_ROOT\"]).resolve()\nif not (PROJECT_ROOT / \"target\" / \"classes\").is_dir():\n    raise RuntimeError(\"Compile the selected NeqSim source checkout first.\")\nsys.path.insert(0, str(PROJECT_ROOT / \"devtools\"))\nfrom neqsim_dev_setup import neqsim_init\nneqsim_init(project_root=PROJECT_ROOT, recompile=False, verbose=False)\nimport jpype\njneqsim = jpype.JPackage(\"neqsim\")\nprint(\"NeqSim loaded from\", PROJECT_ROOT / \"target\" / \"classes\")\n",
+      "seconds": 0.0,
+      "output": "NeqSim loaded from C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim\\target\\classes\n"
+    },
+    {
+      "index": 2,
+      "line": 549,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Create an SRK EOS system at 80\u00b0C (353.15 K) and 150 bara\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 80.0, 150.0)\n\n# Add components with mole fractions (will be normalized automatically)\nfluid.addComponent(\"nitrogen\", 0.5)\nfluid.addComponent(\"CO2\", 2.0)\nfluid.addComponent(\"methane\", 70.0)\nfluid.addComponent(\"ethane\", 8.0)\nfluid.addComponent(\"propane\", 5.0)\nfluid.addComponent(\"n-butane\", 3.0)\nfluid.addComponent(\"n-pentane\", 2.0)\nfluid.addComponent(\"n-hexane\", 1.5)\nfluid.addComponent(\"n-heptane\", 3.0)\nfluid.addComponent(\"n-octane\", 2.5)\nfluid.addComponent(\"n-nonane\", 1.5)\nfluid.addComponent(\"water\", 1.0)\n\n# Set the mixing rule \u2014 this must ALWAYS be called\nfluid.setMixingRule(\"classic\")\n\n# Enable multiphase check (important for three-phase systems)\nfluid.setMultiPhaseCheck(True)\n",
+      "seconds": 1.718,
+      "output": ""
+    },
+    {
+      "index": 3,
+      "line": 600,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Create a gas-condensate fluid at HP separator conditions\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 80.0, 60.0)\nfluid.addComponent(\"methane\", 0.80)\nfluid.addComponent(\"ethane\", 0.06)\nfluid.addComponent(\"propane\", 0.04)\nfluid.addComponent(\"n-butane\", 0.03)\nfluid.addComponent(\"n-pentane\", 0.02)\nfluid.addComponent(\"n-hexane\", 0.01)\nfluid.addComponent(\"n-heptane\", 0.02)\nfluid.addComponent(\"n-octane\", 0.015)\nfluid.addComponent(\"water\", 0.005)\nfluid.setMixingRule(\"classic\")\nfluid.setMultiPhaseCheck(True)\n\n# Run TP flash\nops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)\nops.TPflash()\n\n# CRITICAL: Initialize physical properties AFTER the flash\nfluid.initProperties()\n\n# Read results\nnum_phases = fluid.getNumberOfPhases()\nprint(f\"Number of phases: {num_phases}\")\n\nif fluid.hasPhaseType(\"gas\"):\n    gas = fluid.getPhase(\"gas\")\n    print(f\"Gas density: {gas.getDensity('kg/m3'):.2f} kg/m3\")\n    print(f\"Gas viscosity: {gas.getViscosity('kg/msec'):.6f} kg/(m\u00b7s)\")\n    print(f\"Gas Cp: {gas.getCp('J/molK'):.2f} J/(mol\u00b7K)\")\n    print(f\"Gas Z-factor: {gas.getZ():.4f}\")\n\nif fluid.hasPhaseType(\"oil\"):\n    oil = fluid.getPhase(\"oil\")\n    print(f\"Oil density: {oil.getDensity('kg/m3'):.2f} kg/m3\")\n    print(f\"Oil viscosity: {oil.getViscosity('kg/msec'):.6f} kg/(m\u00b7s)\")\n",
+      "seconds": 0.25,
+      "output": "Number of phases: 2\nGas density: 48.57 kg/m3\nGas viscosity: 0.000014 kg/(m\u00b7s)\nGas Cp: 55.35 J/(mol\u00b7K)\nGas Z-factor: 0.9058\nOil density: 558.65 kg/m3\nOil viscosity: 0.000154 kg/(m\u00b7s)\n"
+    },
+    {
+      "index": 4,
+      "line": 648,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Create fluid\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 80.0, 150.0)\nfluid.addComponent(\"nitrogen\", 0.5)\nfluid.addComponent(\"CO2\", 2.0)\nfluid.addComponent(\"methane\", 70.0)\nfluid.addComponent(\"ethane\", 8.0)\nfluid.addComponent(\"propane\", 5.0)\nfluid.addComponent(\"n-butane\", 3.0)\nfluid.addComponent(\"n-pentane\", 2.0)\nfluid.addComponent(\"n-hexane\", 1.5)\nfluid.addComponent(\"n-heptane\", 3.0)\nfluid.addComponent(\"n-octane\", 2.5)\nfluid.addComponent(\"n-nonane\", 1.5)\nfluid.addComponent(\"water\", 1.0)\nfluid.setMixingRule(\"classic\")\nfluid.setMultiPhaseCheck(True)\n\n# Create equipment\nStream = jneqsim.process.equipment.stream.Stream\nSeparator = jneqsim.process.equipment.separator.Separator\nThrottlingValve = jneqsim.process.equipment.valve.ThrottlingValve\nProcessSystem = jneqsim.process.processmodel.ProcessSystem\n\n# Well stream\nfeed = Stream(\"Well Stream\", fluid)\nfeed.setFlowRate(50000.0, \"kg/hr\")\nfeed.setTemperature(80.0, \"C\")\nfeed.setPressure(80.0, \"bara\")\n\n# HP Separator\nhp_sep = Separator(\"HP Separator\", feed)\n\n# Valve to reduce liquid pressure before MP separator\nvalve = ThrottlingValve(\"HP-MP Valve\", hp_sep.getLiquidOutStream())\nvalve.setOutletPressure(25.0, \"bara\")\n\n# MP Separator\nmp_sep = Separator(\"MP Separator\", valve.getOutletStream())\n\n# Build and run\nprocess = ProcessSystem()\nprocess.add(feed)\nprocess.add(hp_sep)\nprocess.add(valve)\nprocess.add(mp_sep)\nprocess.run()\n\n# Read results\nhp_gas = hp_sep.getGasOutStream().getFlowRate(\"MSm3/day\")\nmp_gas = mp_sep.getGasOutStream().getFlowRate(\"MSm3/day\")\noil_out = mp_sep.getLiquidOutStream().getFlowRate(\"m3/hr\")\n\nprint(f\"HP separator gas: {hp_gas:.3f} MSm3/day\")\nprint(f\"MP separator gas: {mp_gas:.3f} MSm3/day\")\nprint(f\"Total gas: {hp_gas + mp_gas:.3f} MSm3/day\")\nprint(f\"Oil export: {oil_out:.2f} m3/hr\")\n",
+      "seconds": 0.782,
+      "output": "HP separator gas: 0.811 MSm3/day\nMP separator gas: 0.044 MSm3/day\nTotal gas: 0.855 MSm3/day\nOil export: 27.08 m3/hr\n"
+    },
+    {
+      "index": 5,
+      "line": 733,
+      "status": "pass",
+      "code": "ProcessModel = jneqsim.process.processmodel.ProcessModel\n\n# Continue from the separator flowsheet created above.\nseparation_system = process\nCompressor = jneqsim.process.equipment.compressor.Compressor\nCooler = jneqsim.process.equipment.heatexchanger.Cooler\ncompressor = Compressor(\"Export compressor\", hp_sep.getGasOutStream())\ncompressor.setOutletPressure(120.0)\ncompressor.setIsentropicEfficiency(0.75)\ncompression_system = ProcessSystem()\ncompression_system.add(compressor)\ncooler = Cooler(\"Export cooler\", compressor.getOutletStream())\ncooler.setOutTemperature(313.15)\ngas_processing_system = ProcessSystem()\ngas_processing_system.add(cooler)\nplant = ProcessModel()\nplant.add(\"Separation\", separation_system)\nplant.add(\"Compression\", compression_system)\nplant.add(\"Gas Processing\", gas_processing_system)\nplant.run()  # Iterates all areas until convergence\n",
+      "seconds": 0.265,
+      "output": ""
+    },
+    {
+      "index": 6,
+      "line": 762,
+      "status": "pass",
+      "code": "# Get the automation facade\nauto = process.getAutomation()\n\n# Discover equipment\nunits = auto.getUnitList()    # [\"Well Stream\", \"HP Separator\", ...]\n\n# List variables for a specific unit\nvariables = auto.getVariableList(\"HP Separator\")\nfor v in variables:\n    print(f\"  {v.getAddress()} ({v.getType()}) [{v.getDefaultUnit()}]\")\n\n# Read a variable by address\ntemp = auto.getVariableValue(\"HP Separator.gasOutStream.temperature\", \"C\")\npres = auto.getVariableValue(\"HP Separator.pressure\", \"bara\")\n\n# Write an input variable and re-run\nauto.setVariableValue(\"HP-MP Valve.outletPressure\", 20.0, \"bara\")\nprocess.run()  # Propagate changes through the process\n",
+      "seconds": 0.094,
+      "output": "  HP Separator.temperature (OUTPUT) [K]\n  HP Separator.pressure (OUTPUT) [bara]\n  HP Separator.gasOutStream.temperature (OUTPUT) [K]\n  HP Separator.gasOutStream.pressure (OUTPUT) [bara]\n  HP Separator.gasOutStream.flowRate (OUTPUT) [kg/hr]\n  HP Separator.gasOutStream.density (OUTPUT) [kg/m3]\n  HP Separator.gasOutStream.molarMass (OUTPUT) [kg/mol]\n  HP Separator.liquidOutStream.temperature (OUTPUT) [K]\n  HP Separator.liquidOutStream.pressure (OUTPUT) [bara]\n  HP Separator.liquidOutStream.flowRate (OUTPUT) [kg/hr]\n  HP Separator.liquidOutStream.density (OUTPUT) [kg/m3]\n  HP Separator.liquidOutStream.molarMass (OUTPUT) [kg/mol]\n"
+    }
+  ]
+}

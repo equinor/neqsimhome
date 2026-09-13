@@ -1,0 +1,2417 @@
+{
+  "status": "passed",
+  "entries": [
+    {
+      "chapter": "ch30_digital_twins_and_automation",
+      "fence": 19,
+      "code_sha256": "632411427db9fa32ce251592e693b3b3e9e10eac2c74fe4f0b0ca6af105b4c95",
+      "source_image": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch30_digital_twins_and_automation\\figures\\ch21_digital_twin_tracking.png",
+      "source_sha256": "9bf31e74cb64c7753d73d11b37483c994e20ec0b1018434d91efb914a572527b",
+      "arrays": {
+        "hours": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0,
+          11.0,
+          12.0,
+          13.0,
+          14.0,
+          15.0,
+          16.0,
+          17.0,
+          18.0,
+          19.0,
+          20.0,
+          21.0,
+          22.0,
+          23.0
+        ],
+        "flow_profile": [
+          100000.0,
+          101294.0952255126,
+          102500.0,
+          103535.53390593274,
+          104330.1270189222,
+          104829.62913144534,
+          105000.0,
+          104829.62913144534,
+          104330.1270189222,
+          103535.53390593274,
+          102500.0,
+          101294.0952255126,
+          100000.0,
+          98705.9047744874,
+          97500.0,
+          96464.46609406726,
+          95669.8729810778,
+          95170.37086855466,
+          95000.0,
+          95170.37086855466,
+          95669.8729810778,
+          96464.46609406726,
+          97500.0,
+          98705.9047744874
+        ],
+        "temp_profile": [
+          61.4901424590337,
+          59.58520709648645,
+          61.94306561430208,
+          64.56908956922408,
+          59.29753987582999,
+          59.297589129152456,
+          64.73763844652217,
+          62.302304187458724,
+          58.591576842195146,
+          61.627680130757895,
+          58.60974692156261,
+          58.60281073928923,
+          60.7258868146981,
+          54.260159266026605,
+          54.8252465024609,
+          58.31313741227708,
+          56.96150663899673,
+          60.942741997785824,
+          57.275927773436365,
+          55.76308889599412,
+          64.39694630676466,
+          59.32267109854039,
+          60.202584614063774,
+          55.72575544135963
+        ],
+        "pressure_profile": [
+          49.72780863773741,
+          50.055461294854936,
+          49.42450321128885,
+          50.18784900917284,
+          49.699680655040595,
+          49.85415312510336,
+          49.699146693885304,
+          50.926139092254466,
+          49.993251387631034,
+          49.47114453552205,
+          50.41127245605159,
+          49.38957817501449,
+          50.10443179750238,
+          49.02016493806011,
+          49.335906975550785,
+          50.09843061793456,
+          50.3692332899977,
+          50.085684140594985,
+          49.94217585880588,
+          49.849448152205355,
+          49.26073900481629,
+          49.64007789580265,
+          49.769680614520105,
+          50.52856111310946
+        ],
+        "model_power": [
+          4.0518804552098375,
+          4.0371658095186795,
+          4.191397288114157,
+          4.209692292986858,
+          4.187273149995284,
+          4.192146431150215,
+          4.321209822785624,
+          4.146406948561006,
+          4.144896813089904,
+          4.223002265105113,
+          4.032917437731689,
+          4.08180441143441,
+          4.00225654141064,
+          3.9310222037534084,
+          3.864509728961798,
+          3.8179870176952235,
+          3.7386623881601273,
+          3.8144692125562742,
+          3.7554245764779908,
+          3.7434542067879883,
+          3.971363976296962,
+          3.877443820691734,
+          3.923247260642789,
+          3.8203816034702323
+        ],
+        "model_sep_T": [
+          61.49014245903368,
+          59.58520709648644,
+          61.9430656143021,
+          64.56908956922405,
+          59.29753987583001,
+          59.29758912915247,
+          64.73763844652217,
+          62.30230418745873,
+          58.59157684219514,
+          61.62768013075788,
+          58.60974692156259,
+          58.602810739289225,
+          60.72588681469813,
+          54.26015926602662,
+          54.825246502460914,
+          58.31313741227706,
+          56.96150663899675,
+          60.942741997785845,
+          57.275927773436365,
+          55.763088895994144,
+          64.39694630676468,
+          59.32267109854041,
+          60.20258461406377,
+          55.72575544135964
+        ]
+      },
+      "checks": [
+        {
+          "name": "HP Separator mass relative",
+          "passed": true,
+          "observed": 1.0544773622498112e-12,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP Separator component relative",
+          "passed": true,
+          "observed": 3.743509940715179e-13,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "HP Separator finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "HP Separator energy relative",
+          "passed": true,
+          "observed": 5.861117818340798e-16,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Export Compressor mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export Compressor component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export Compressor finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export Compressor energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Export Compressor single-phase compressor inlet",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export Compressor compression pressure ratio",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Export Compressor positive shaft work",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Every observed literal process.run state passes unit boundaries or is explicitly rejected by the declared candidate gate",
+          "passed": true,
+          "observed": 25,
+          "states": [
+            {
+              "line": 42,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.7670345187070779e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 6.186667720839977e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 2.119008968293201e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 7.38166307701249e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 9.13081436863755e-16,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.6828428557487857e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 5.898642726962888e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 2.0916774413291716e-15,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 2.32848667176923e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 8.093822378258464e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 2.4992637945274815e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 8.637501949302732e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.7540093505820178e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 6.143960374316021e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.7034378511095978e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 5.970299324997729e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 2.764904495831746e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 9.540205028315546e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.8173907914431002e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 6.33075879718176e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.5532078887247812e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 5.457127287557114e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 8.446809084656979e-16,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 2.2487444699277532e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 7.822720430354427e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.4364470588611207e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 5.050636036241664e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.745090869545615e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 6.118078505999598e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 9.031079893157598e-16,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.8479937580195837e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 6.452339850511641e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 3.458526617091876e-15,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.2196848624794147e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 4.329003045163903e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.2153560209508916e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 4.3108960135913777e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 1.1233417716105825e-15,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.4825687164783428e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 5.218512843635123e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.2337925897872314e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 4.3645963571838406e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 7.073842267660433e-16,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.8903035949087544e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 6.600718886034552e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.3823721115171027e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 4.877804922216453e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.2093588831639331e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 4.28852098138993e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 6.264347214244163e-16,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 2.9163707168933182e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 1.00645711182006e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.7788968403675486e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 6.235662003864254e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 2.6761828825136918e-15,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.8789810732974163e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 6.570018301247798e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 1.2756547201588254e-15,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            },
+            {
+              "line": 65,
+              "checks": [
+                {
+                  "name": "HP Separator mass relative",
+                  "passed": true,
+                  "observed": 1.0544773622498112e-12,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator component relative",
+                  "passed": true,
+                  "observed": 3.743509940715179e-13,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "HP Separator finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "HP Separator energy relative",
+                  "passed": true,
+                  "observed": 5.861117818340798e-16,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Export Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Export Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Export Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "name": "24 finite positive simulated power points",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "adiabatic separator matches prescribed feed temperature",
+          "passed": true,
+          "observed": 2.842170943040401e-14,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        }
+      ],
+      "status": "passed",
+      "scope": "Exact self-contained literal rerun with numerical solution checks, not measured plant data."
+    },
+    {
+      "chapter": "ch32_advanced_topics",
+      "fence": 2,
+      "code_sha256": "3914a8e6cc500a37eedcdf31d2609348a810549f4bdd2b140b930c6627cd2077",
+      "source_image": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch32_advanced_topics\\figures\\pareto_front.png",
+      "source_sha256": "f5023eb47259eb22159ea0ebe8e1c4deabc0d0ddac8ea83fa8138820fd260999",
+      "arrays": {
+        "grid_production": [
+          50000.0,
+          56250.0,
+          62500.0,
+          68750.0,
+          75000.0,
+          81250.0,
+          87500.0,
+          93750.0,
+          100000.0,
+          106250.0,
+          112500.0,
+          118750.0,
+          125000.0,
+          131250.0,
+          137500.0,
+          143750.0,
+          150000.0,
+          156250.0,
+          162500.0,
+          168750.0,
+          175000.0,
+          181250.0,
+          187500.0,
+          193750.0,
+          200000.0
+        ],
+        "grid_power": [
+          3250.8424222046133,
+          3657.1977249801903,
+          4063.5530277557755,
+          4469.908330531339,
+          4876.26363330692,
+          5282.618936082497,
+          5688.974238858069,
+          6095.329541633666,
+          6501.68484440924,
+          6908.040147184796,
+          7314.3954499603715,
+          7720.7507527359485,
+          8127.106055511538,
+          8533.461358287128,
+          8939.816661062678,
+          9346.171963838284,
+          9752.527266613864,
+          10158.882569389407,
+          10565.237872164995,
+          10971.59317494059,
+          11377.948477716169,
+          11784.30378049178,
+          12190.659083267332,
+          12597.01438604294,
+          13003.36968881848
+        ],
+        "production": [
+          199999.8569488526
+        ],
+        "power": [
+          13003.360388083649
+        ]
+      },
+      "checks": [
+        {
+          "name": "Compressor mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Compressor component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Compressor finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Compressor energy relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "Compressor single-phase compressor inlet",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Compressor compression pressure ratio",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Compressor positive shaft work",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Every observed literal process.run state passes unit boundaries or is explicitly rejected by the declared candidate gate",
+          "passed": true,
+          "observed": 1,
+          "states": [
+            {
+              "line": 21,
+              "checks": [
+                {
+                  "name": "Compressor mass relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Compressor component relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-06
+                },
+                {
+                  "name": "Compressor finite positive p/T and nonnegative flows",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Compressor energy relative",
+                  "passed": true,
+                  "observed": 0.0,
+                  "expected": 0.0,
+                  "tolerance": 1e-05
+                },
+                {
+                  "name": "Compressor single-phase compressor inlet",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Compressor compression pressure ratio",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                },
+                {
+                  "name": "Compressor positive shaft work",
+                  "passed": true,
+                  "observed": true,
+                  "expected": true
+                }
+              ],
+              "accepted": true
+            }
+          ]
+        },
+        {
+          "name": "nonempty finite bounded Pareto sample",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Pareto point 0 non-dominated",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Pareto point 0 independent grid power scaling",
+          "passed": true,
+          "observed": 0.0650168484440921,
+          "expected": 0.06501684844409227,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "independent25-point trade-off grid is strictly increasing in both objectives",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        }
+      ],
+      "status": "passed",
+      "scope": "Exact self-contained literal rerun with numerical solution checks, not measured plant data."
+    }
+  ]
+}

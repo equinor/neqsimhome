@@ -1,0 +1,2292 @@
+{
+  "chapter": "ch16_heat_exchangers",
+  "source_sha256": "71c27502426d0eefd4c601e4ba90674c0ad776311b99101ac5413b229969dcba",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "literal_blocks": [
+    {
+      "index": 1,
+      "code_sha256": "035fa9650d01fb942d35656473c233b94ad14ffcd3f5096a3a14c7c217d0e22a",
+      "line": 272,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "hot_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0
+        },
+        {
+          "name": "hot_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "cold_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0
+        },
+        {
+          "name": "cold_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hx",
+          "class": "neqsim.process.equipment.heatexchanger.HeatExchanger",
+          "inlets": [
+            "Hot Gas",
+            "Cooling Water"
+          ],
+          "outlets": [
+            "Gas Cooler_Sout1",
+            "Gas Cooler_Sout2"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 3.6719999999986612,
+      "output": "Hot stream outlet temperature:  90.6 \u00b0C\nCold stream outlet temperature: 38.9 \u00b0C\nHeat duty: -1103 kW\nUA value:  15000 W/K\n"
+    },
+    {
+      "index": 2,
+      "code_sha256": "36230fe79dfcbf02a764c4f99d959ac5ba726730ebbd2bbeef7fa3a922e369ba",
+      "line": 384,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "hot_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0
+        },
+        {
+          "name": "hot_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "cold_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0
+        },
+        {
+          "name": "cold_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hx",
+          "class": "neqsim.process.equipment.heatexchanger.HeatExchanger",
+          "inlets": [
+            "Hot Gas",
+            "Cooling Water"
+          ],
+          "outlets": [
+            "Gas Cooler_Sout1",
+            "Gas Cooler_Sout2"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 0.014999999999417923,
+      "output": "Thermal effectiveness: 0.303\nNTU: 0.23\n"
+    },
+    {
+      "index": 3,
+      "code_sha256": "44af326fdd6ebcd0dd4edcc1813b13109db1ed6e99f238eb3be98f40c22406a1",
+      "line": 529,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "hot_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0
+        },
+        {
+          "name": "hot_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "cold_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0
+        },
+        {
+          "name": "cold_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hx",
+          "class": "neqsim.process.equipment.heatexchanger.HeatExchanger",
+          "inlets": [
+            "Hot Gas",
+            "Cooling Water"
+          ],
+          "outlets": [
+            "Gas Cooler_Sout1",
+            "Gas Cooler_Sout2"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0
+        },
+        {
+          "name": "gas_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "aircooler",
+          "class": "neqsim.process.equipment.heatexchanger.Cooler",
+          "inlets": [
+            "Compressor Discharge"
+          ],
+          "outlets": [
+            "Air Cooler out stream"
+          ]
+        }
+      ],
+      "seconds": 0.11000000000058208,
+      "output": "Outlet temperature: 40.0 \u00b0C\nCooling duty: -1535 kW\nEstimated air flow: 84.9 m\u00b3/s\n"
+    },
+    {
+      "index": 4,
+      "code_sha256": "dffc1986fd0f0e9c6177481112096329d9c8c183206be807c0d8eeb37c807123",
+      "line": 607,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "hot_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0
+        },
+        {
+          "name": "hot_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "cold_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0
+        },
+        {
+          "name": "cold_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hx",
+          "class": "neqsim.process.equipment.heatexchanger.HeatExchanger",
+          "inlets": [
+            "Hot Gas",
+            "Cooling Water"
+          ],
+          "outlets": [
+            "Gas Cooler_Sout1",
+            "Gas Cooler_Sout2"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0
+        },
+        {
+          "name": "gas_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "aircooler",
+          "class": "neqsim.process.equipment.heatexchanger.Cooler",
+          "inlets": [
+            "Compressor Discharge"
+          ],
+          "outlets": [
+            "Air Cooler out stream"
+          ]
+        },
+        {
+          "name": "oil",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "heater",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Crude Oil Feed"
+          ],
+          "outlets": [
+            "Oil Heater out stream"
+          ]
+        }
+      ],
+      "seconds": 0.2180000000007567,
+      "output": "Heater outlet temperature: 75.0 \u00b0C\nHeating duty: 3.15 MW\n"
+    },
+    {
+      "index": 5,
+      "code_sha256": "6dd4f1e72ba76f72806c91aa86d522e747a2ac393d62173fd3e93c76a6992224",
+      "line": 710,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "hot_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0
+        },
+        {
+          "name": "hot_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "cold_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0
+        },
+        {
+          "name": "cold_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hx",
+          "class": "neqsim.process.equipment.heatexchanger.HeatExchanger",
+          "inlets": [
+            "Hot Gas",
+            "Cooling Water"
+          ],
+          "outlets": [
+            "Gas Cooler_Sout1",
+            "Gas Cooler_Sout2"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0
+        },
+        {
+          "name": "gas_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "aircooler",
+          "class": "neqsim.process.equipment.heatexchanger.Cooler",
+          "inlets": [
+            "Compressor Discharge"
+          ],
+          "outlets": [
+            "Air Cooler out stream"
+          ]
+        },
+        {
+          "name": "oil",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "heater",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Crude Oil Feed"
+          ],
+          "outlets": [
+            "Oil Heater out stream"
+          ]
+        },
+        {
+          "name": "pinch",
+          "class": "neqsim.process.equipment.heatexchanger.heatintegration.PinchAnalysis"
+        }
+      ],
+      "seconds": 0.0319999999992433,
+      "output": "Minimum heating utility: -0 kW\nMinimum cooling utility: 2765 kW\nPinch temperature: 250.0 \u00b0C\n"
+    },
+    {
+      "index": 6,
+      "code_sha256": "490f4b714734c6a0ab41d840041394611620674ebb9b3f612ef668cba5818b45",
+      "line": 751,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "hot_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0
+        },
+        {
+          "name": "hot_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "cold_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0
+        },
+        {
+          "name": "cold_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hx",
+          "class": "neqsim.process.equipment.heatexchanger.HeatExchanger",
+          "inlets": [
+            "Hot Gas",
+            "Cooling Water"
+          ],
+          "outlets": [
+            "Gas Cooler_Sout1",
+            "Gas Cooler_Sout2"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0
+        },
+        {
+          "name": "gas_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "aircooler",
+          "class": "neqsim.process.equipment.heatexchanger.Cooler",
+          "inlets": [
+            "Compressor Discharge"
+          ],
+          "outlets": [
+            "Air Cooler out stream"
+          ]
+        },
+        {
+          "name": "oil",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "heater",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Crude Oil Feed"
+          ],
+          "outlets": [
+            "Oil Heater out stream"
+          ]
+        },
+        {
+          "name": "pinch",
+          "class": "neqsim.process.equipment.heatexchanger.heatintegration.PinchAnalysis"
+        }
+      ],
+      "seconds": 0.0,
+      "output": "Minimum heating utility (kW): -0.0\nMinimum cooling utility (kW): 660.0\nHot-side pinch (C): 150.0\n"
+    },
+    {
+      "index": 7,
+      "code_sha256": "c419b8a3cee2c11469c6e16b23efa38a8696749e102f4ad277c977cf64ceecc5",
+      "line": 796,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "hot_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0
+        },
+        {
+          "name": "hot_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "cold_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0
+        },
+        {
+          "name": "cold_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hx",
+          "class": "neqsim.process.equipment.heatexchanger.HeatExchanger",
+          "inlets": [
+            "Hot Oil Supply",
+            "Crude Oil"
+          ],
+          "outlets": [
+            "Hot Oil HX_Sout1",
+            "Hot Oil HX_Sout2"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0
+        },
+        {
+          "name": "gas_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "aircooler",
+          "class": "neqsim.process.equipment.heatexchanger.Cooler",
+          "inlets": [
+            "Compressor Discharge"
+          ],
+          "outlets": [
+            "Air Cooler out stream"
+          ]
+        },
+        {
+          "name": "oil",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "heater",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Crude Oil Feed"
+          ],
+          "outlets": [
+            "Oil Heater out stream"
+          ]
+        },
+        {
+          "name": "pinch",
+          "class": "neqsim.process.equipment.heatexchanger.heatintegration.PinchAnalysis"
+        },
+        {
+          "name": "hot_oil_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 16.666666666666668,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 250.0
+        },
+        {
+          "name": "hot_oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.666666666666668,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 250.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "crude",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 8.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "crude_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.22222222222222,
+          "getPressure_bara": 8.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 0.13999999999941792,
+      "output": "Crude outlet temperature: 108.5 \u00b0C\nHot oil return temperature: 172.4 \u00b0C\nHeat duty: -3615 kW\n"
+    },
+    {
+      "index": 9,
+      "code_sha256": "7620f034c7b22a0dae397f54d3c5fdf80d490fb2a03749ebb39326bbd7c28a19",
+      "line": 975,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "hot_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0
+        },
+        {
+          "name": "hot_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "cold_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0
+        },
+        {
+          "name": "cold_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hx",
+          "class": "neqsim.process.equipment.heatexchanger.HeatExchanger",
+          "inlets": [
+            "Hot Oil Supply",
+            "Crude Oil"
+          ],
+          "outlets": [
+            "Hot Oil HX_Sout1",
+            "Hot Oil HX_Sout2"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0
+        },
+        {
+          "name": "gas_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "aircooler",
+          "class": "neqsim.process.equipment.heatexchanger.Cooler",
+          "inlets": [
+            "Compressor Discharge"
+          ],
+          "outlets": [
+            "Air Cooler out stream"
+          ]
+        },
+        {
+          "name": "oil",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "heater",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Cold Gas"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "pinch",
+          "class": "neqsim.process.equipment.heatexchanger.heatintegration.PinchAnalysis"
+        },
+        {
+          "name": "hot_oil_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 16.666666666666668,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 250.0
+        },
+        {
+          "name": "hot_oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.666666666666668,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 250.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "crude",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 8.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "crude_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.22222222222222,
+          "getPressure_bara": 8.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 20.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 20.0,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 0.07799999999406282,
+      "output": "Required duty: 1.60 MW\nOutlet temperature: 60.0 \u00b0C\n\n  Flow (kg/hr)  Duty (MW)             Status\n--------------------------------------------\n        20,000       0.64                 OK\n        40,000       1.28                 OK\n        60,000       1.91                 OK\n        80,000       2.55                 OK\n       100,000       3.19   EXCEEDS CAPACITY\n"
+    },
+    {
+      "index": 10,
+      "code_sha256": "c981bf4e4ca4bcb245cf4f4462cd5a3b6de508610bf8804aaadd1e390babbc86",
+      "line": 1034,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "hot_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0
+        },
+        {
+          "name": "hot_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "cold_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0
+        },
+        {
+          "name": "cold_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hx",
+          "class": "neqsim.process.equipment.heatexchanger.HeatExchanger",
+          "inlets": [
+            "Hot Oil Supply",
+            "Crude Oil"
+          ],
+          "outlets": [
+            "Hot Oil HX_Sout1",
+            "Hot Oil HX_Sout2"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0
+        },
+        {
+          "name": "gas_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "aircooler",
+          "class": "neqsim.process.equipment.heatexchanger.Cooler",
+          "inlets": [
+            "Compressor Discharge"
+          ],
+          "outlets": [
+            "Air Cooler out stream"
+          ]
+        },
+        {
+          "name": "oil",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "heater",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Cold Gas"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "pinch",
+          "class": "neqsim.process.equipment.heatexchanger.heatintegration.PinchAnalysis"
+        },
+        {
+          "name": "hot_oil_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 16.666666666666668,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 250.0
+        },
+        {
+          "name": "hot_oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.666666666666668,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 250.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "crude",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 8.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "crude_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.22222222222222,
+          "getPressure_bara": 8.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 20.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.66666666666668,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": -15.0,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 0.04700000000593718,
+      "output": "=== Seasonal Impact on Heater Capacity ===\n    Season  T_in (\u00b0C)  Duty (MW)   % Capacity\n--------------------------------------------\n    Summer         15       1.24           36%\n    Autumn          5       1.79           51%\n    Winter         -5       2.40           69%\n    Arctic        -15       3.17           91%\n"
+    },
+    {
+      "index": 12,
+      "code_sha256": "b8da5c30ff788d658be7eabaf2152b4afb4c7ce5556ce234c1818d4c276232ec",
+      "line": 1094,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "hot_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0
+        },
+        {
+          "name": "hot_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "cold_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0
+        },
+        {
+          "name": "cold_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hx",
+          "class": "neqsim.process.equipment.heatexchanger.HeatExchanger",
+          "inlets": [
+            "Hot Oil Supply",
+            "Crude Oil"
+          ],
+          "outlets": [
+            "Hot Oil HX_Sout1",
+            "Hot Oil HX_Sout2"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0
+        },
+        {
+          "name": "gas_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "aircooler",
+          "class": "neqsim.process.equipment.heatexchanger.Cooler",
+          "inlets": [
+            "Compressor Discharge"
+          ],
+          "outlets": [
+            "Air Cooler out stream"
+          ]
+        },
+        {
+          "name": "oil",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "heater",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Cold Gas"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "pinch",
+          "class": "neqsim.process.equipment.heatexchanger.heatintegration.PinchAnalysis"
+        },
+        {
+          "name": "hot_oil_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 16.666666666666668,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 250.0
+        },
+        {
+          "name": "hot_oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.666666666666668,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 250.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "crude",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 8.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "crude_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.22222222222222,
+          "getPressure_bara": 8.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 20.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.66666666666668,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": -15.0,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 0.014999999999417923,
+      "output": "Pinch temperature: 200.0 \u00b0C\nMinimum hot utility: -0 kW\nMinimum cold utility: 256000 kW\nMaximum heat recovery: 196000 kW\n"
+    },
+    {
+      "index": 13,
+      "code_sha256": "2b5c23f109d683d53bb45fc57bc58b00f966104625c4e8239dd5a25772ff85bf",
+      "line": 1137,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "hot_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0
+        },
+        {
+          "name": "hot_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 120.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "cold_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0
+        },
+        {
+          "name": "cold_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 25.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hx",
+          "class": "neqsim.process.equipment.heatexchanger.HeatExchanger",
+          "inlets": [
+            "Hot Oil Supply",
+            "Crude Oil"
+          ],
+          "outlets": [
+            "Hot Oil HX_Sout1",
+            "Hot Oil HX_Sout2"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222218,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 100.0
+        },
+        {
+          "name": "gas_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 8.333333333333332,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 110.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "aircooler",
+          "class": "neqsim.process.equipment.heatexchanger.Cooler",
+          "inlets": [
+            "Compressor Discharge"
+          ],
+          "outlets": [
+            "Aftercooler out stream"
+          ]
+        },
+        {
+          "name": "oil",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 27.777777777777775,
+          "getPressure_bara": 3.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "heater",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Cold Gas"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "pinch",
+          "class": "neqsim.process.equipment.heatexchanger.heatintegration.PinchAnalysis"
+        },
+        {
+          "name": "hot_oil_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 16.666666666666668,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 250.0
+        },
+        {
+          "name": "hot_oil_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.666666666666668,
+          "getPressure_bara": 5.0,
+          "getTemperature_C": 250.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "crude",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 8.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "crude_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.22222222222222,
+          "getPressure_bara": 8.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 20.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.66666666666668,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": -15.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hot_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222218,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 100.0,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 0.09399999999732245,
+      "output": "Base case duty: 3.72 MW\n\n=== Air Cooler: Ambient Temperature Sensitivity ===\n  T_amb (\u00b0C)   T_out (\u00b0C)  Duty (MW)   Approach\n----------------------------------------------\n         -10           25       4.31         35\n           0           25       4.31         25\n          10           25       4.31         15\n          20           30       4.01         10\n          30           40       3.43         10\n          35           45       3.14         10\n"
+    }
+  ],
+  "physical_checks": [
+    {
+      "block": 1,
+      "equipment": "Gas Cooler",
+      "class": "HeatExchanger",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.5295970799759796e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "counterflow_terminal_approaches_K",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 36.111111111111114,
+        "mass_out_kg_s": 36.111111111111114,
+        "enthalpy_in_W": -32611246.000356212,
+        "enthalpy_out_W": -32611245.99210688,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "Air Cooler",
+      "class": "Cooler",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333332,
+        "mass_out_kg_s": 8.333333333333332,
+        "enthalpy_in_W": 1620072.6450395798,
+        "enthalpy_out_W": 84614.4168093137,
+        "external_energy_W": -1535458.2282302661
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "Oil Heater",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.777777777777775,
+        "mass_out_kg_s": 27.777777777777775,
+        "enthalpy_in_W": -8655406.783350134,
+        "enthalpy_out_W": -5500611.262868637,
+        "external_energy_W": 3154795.520481497
+      },
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "Pinch heat cascade",
+      "class": "CaseAcceptance",
+      "scope": "Independent constant-heat-capacity shifted-temperature interval cascade; validates specified stream targets, not plant stream data",
+      "checks": [
+        {
+          "name": "minimum_hot_utility_kW",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "minimum_cold_utility_kW",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        }
+      ],
+      "independent_result": {
+        "hot_utility_kW": 0,
+        "cold_utility_kW": 2765.0,
+        "minimum_shifted_cascade_kW": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 6,
+      "equipment": "Pinch heat cascade",
+      "class": "CaseAcceptance",
+      "scope": "Independent constant-heat-capacity shifted-temperature interval cascade; validates specified stream targets, not plant stream data",
+      "checks": [
+        {
+          "name": "minimum_hot_utility_kW",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "minimum_cold_utility_kW",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        }
+      ],
+      "independent_result": {
+        "hot_utility_kW": 0,
+        "cold_utility_kW": 660.0,
+        "minimum_shifted_cascade_kW": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "Hot Oil HX",
+      "class": "HeatExchanger",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.1755619112466196e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "counterflow_terminal_approaches_K",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 38.888888888888886,
+        "mass_out_kg_s": 38.888888888888886,
+        "enthalpy_in_W": -2302065.0012185914,
+        "enthalpy_out_W": -2302065.000717763,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 9,
+      "equipment": "Inlet Heater",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888889,
+        "mass_out_kg_s": 13.88888888888889,
+        "enthalpy_in_W": -993948.9886856985,
+        "enthalpy_out_W": 601373.3310518318,
+        "external_energy_W": 1595322.3197375303
+      },
+      "pass": true
+    },
+    {
+      "block": 9,
+      "equipment": "Inlet Heater",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.555555555555555,
+        "mass_out_kg_s": 5.555555555555555,
+        "enthalpy_in_W": -397579.5954742797,
+        "enthalpy_out_W": 240549.33242073318,
+        "external_energy_W": 638128.9278950129
+      },
+      "pass": true
+    },
+    {
+      "block": 9,
+      "equipment": "Inlet Heater",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.11111111111111,
+        "mass_out_kg_s": 11.11111111111111,
+        "enthalpy_in_W": -795159.1909485594,
+        "enthalpy_out_W": 481098.66484146635,
+        "external_energy_W": 1276257.8557900258
+      },
+      "pass": true
+    },
+    {
+      "block": 9,
+      "equipment": "Inlet Heater",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2162152687122586e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.666666666666664,
+        "mass_out_kg_s": 16.666666666666664,
+        "enthalpy_in_W": -1192738.7864228406,
+        "enthalpy_out_W": 721647.9972621982,
+        "external_energy_W": 1914386.783685039
+      },
+      "pass": true
+    },
+    {
+      "block": 9,
+      "equipment": "Inlet Heater",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.22222222222222,
+        "mass_out_kg_s": 22.22222222222222,
+        "enthalpy_in_W": -1590318.3818971184,
+        "enthalpy_out_W": 962197.3296829327,
+        "external_energy_W": 2552515.711580051
+      },
+      "pass": true
+    },
+    {
+      "block": 9,
+      "equipment": "Inlet Heater",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.4594583224547126e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.777777777777775,
+        "mass_out_kg_s": 27.777777777777775,
+        "enthalpy_in_W": -1987897.9773713977,
+        "enthalpy_out_W": 1202746.6621036627,
+        "external_energy_W": 3190644.63947506
+      },
+      "pass": true
+    },
+    {
+      "block": 10,
+      "equipment": "Inlet Heater",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.66666666666668,
+        "mass_out_kg_s": 16.66666666666668,
+        "enthalpy_in_W": -1452419.8389505288,
+        "enthalpy_out_W": -209873.5227697082,
+        "external_energy_W": 1242546.3161808206
+      },
+      "pass": true
+    },
+    {
+      "block": 10,
+      "equipment": "Inlet Heater",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.66666666666668,
+        "mass_out_kg_s": 16.66666666666668,
+        "enthalpy_in_W": -1998673.4641414275,
+        "enthalpy_out_W": -209873.5227697082,
+        "external_energy_W": 1788799.9413717194
+      },
+      "pass": true
+    },
+    {
+      "block": 10,
+      "equipment": "Inlet Heater",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.66666666666668,
+        "mass_out_kg_s": 16.66666666666668,
+        "enthalpy_in_W": -2612179.66441156,
+        "enthalpy_out_W": -209873.5227697082,
+        "external_energy_W": 2402306.141641852
+      },
+      "pass": true
+    },
+    {
+      "block": 10,
+      "equipment": "Inlet Heater",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.66666666666668,
+        "mass_out_kg_s": 16.66666666666668,
+        "enthalpy_in_W": -3383254.870908315,
+        "enthalpy_out_W": -209873.5227697082,
+        "external_energy_W": 3173381.3481386066
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "Pinch heat cascade",
+      "class": "CaseAcceptance",
+      "scope": "Independent constant-heat-capacity shifted-temperature interval cascade; validates specified stream targets, not plant stream data",
+      "checks": [
+        {
+          "name": "minimum_hot_utility_kW",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "minimum_cold_utility_kW",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        }
+      ],
+      "independent_result": {
+        "hot_utility_kW": 0,
+        "cold_utility_kW": 256000.0,
+        "minimum_shifted_cascade_kW": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Aftercooler",
+      "class": "Cooler",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222218,
+        "mass_out_kg_s": 22.222222222222218,
+        "enthalpy_in_W": 3646298.762195268,
+        "enthalpy_out_W": -72642.55864759302,
+        "external_energy_W": -3718941.320842861
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Aftercooler",
+      "class": "Cooler",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222218,
+        "mass_out_kg_s": 22.222222222222218,
+        "enthalpy_in_W": 3646298.762195268,
+        "enthalpy_out_W": -662454.3454794083,
+        "external_energy_W": -4308753.107674677
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Aftercooler",
+      "class": "Cooler",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222218,
+        "mass_out_kg_s": 22.222222222222218,
+        "enthalpy_in_W": 3646298.762195268,
+        "enthalpy_out_W": -662454.3454794083,
+        "external_energy_W": -4308753.107674677
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Aftercooler",
+      "class": "Cooler",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222218,
+        "mass_out_kg_s": 22.222222222222218,
+        "enthalpy_in_W": 3646298.762195268,
+        "enthalpy_out_W": -662454.3454794083,
+        "external_energy_W": -4308753.107674677
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Aftercooler",
+      "class": "Cooler",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222218,
+        "mass_out_kg_s": 22.222222222222218,
+        "enthalpy_in_W": 3646298.762195268,
+        "enthalpy_out_W": -366182.33343784977,
+        "external_energy_W": -4012481.095633118
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Aftercooler",
+      "class": "Cooler",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222218,
+        "mass_out_kg_s": 22.222222222222218,
+        "enthalpy_in_W": 3646298.762195268,
+        "enthalpy_out_W": 218644.31743456214,
+        "external_energy_W": -3427654.4447607063
+      },
+      "pass": true
+    },
+    {
+      "block": 13,
+      "equipment": "Aftercooler",
+      "class": "Cooler",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222218,
+        "mass_out_kg_s": 22.222222222222218,
+        "enthalpy_in_W": 3646298.762195268,
+        "enthalpy_out_W": 508087.7633532961,
+        "external_energy_W": -3138210.998841972
+      },
+      "pass": true
+    }
+  ]
+}

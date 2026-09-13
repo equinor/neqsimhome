@@ -1,0 +1,3085 @@
+{
+  "status": "passed",
+  "fence": 69,
+  "code_sha256": "f188273ec2a0d67e5bf876f54ff7d11a497924f87f0dffcd2bf63c1e24ba5225",
+  "image": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch24_production_optimization\\figures\\facility_optimization_results.png",
+  "image_sha256": "5c26c4531771376088cc0b5fdde5e03077af278c8025b627caee3135e897f6f2",
+  "sweep_data": {
+    "factors": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0,
+      1.1,
+      1.2,
+      1.3,
+      1.4
+    ],
+    "rates": [
+      125000.0,
+      150000.0,
+      175000.0,
+      200000.0,
+      225000.0,
+      250000.0,
+      275000.0,
+      300000.0,
+      325000.0,
+      350000.0
+    ],
+    "powers": [
+      3.243648476985935,
+      3.8923781723831286,
+      4.541107867780311,
+      5.18983756317749,
+      5.838567258574694,
+      6.487296953971886,
+      7.136026649369059,
+      7.784756344766237,
+      8.433486040163448,
+      9.082215735560636
+    ],
+    "utils": [
+      0.41666666666666496,
+      0.4999999999999988,
+      0.583333333333331,
+      0.6666666666666632,
+      0.7499999999999983,
+      0.8333333333333318,
+      0.9166666666666632,
+      0.9999999999999949,
+      1.083333333333331,
+      1.1666666666666643
+    ]
+  },
+  "native_returned_rate_kg_hr": 252786.40450004203,
+  "native_reported_feasible": true,
+  "checks": [
+    {
+      "name": "HP Separator V-100 mass relative",
+      "passed": true,
+      "observed": 1.812493012818907e-14,
+      "expected": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "HP Separator V-100 component relative",
+      "passed": true,
+      "observed": 5.7420431985519795e-15,
+      "expected": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "HP Separator V-100 energy relative",
+      "passed": true,
+      "observed": 4.988811447831345e-12,
+      "expected": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "name": "Export Compressor K-100 mass relative",
+      "passed": true,
+      "observed": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "Export Compressor K-100 component relative",
+      "passed": true,
+      "observed": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Export Compressor K-100 energy relative",
+      "passed": true,
+      "observed": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "name": "Export Compressor K-100 single-phase compressor inlet",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Export Compressor K-100 compression pressure ratio",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Export Compressor K-100 positive shaft work",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Gas Cooler E-100 mass relative",
+      "passed": true,
+      "observed": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "Gas Cooler E-100 component relative",
+      "passed": true,
+      "observed": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Gas Cooler E-100 energy relative",
+      "passed": true,
+      "observed": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "name": "Export cooler knockout mass relative",
+      "passed": true,
+      "observed": 2.5482256671994832e-14,
+      "expected": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "Export cooler knockout component relative",
+      "passed": true,
+      "observed": 1.0702474707448176e-13,
+      "expected": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Export cooler knockout energy relative",
+      "passed": true,
+      "observed": 8.998944095694261e-13,
+      "expected": 0.0,
+      "tolerance": 1e-05
+    },
+    {
+      "name": "Export Pipeline mass relative",
+      "passed": true,
+      "observed": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "Export Pipeline component relative",
+      "passed": true,
+      "observed": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "Export Pipeline finite positive p/T and nonnegative flows",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Export Pipeline horizontal passive pressure decline",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "HP Separator V-100 native percent-to-fraction identity",
+      "passed": true,
+      "observed": 0.8333307106502452,
+      "expected": 0.8333307106502452,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "Export Compressor K-100 native percent-to-fraction identity",
+      "passed": true,
+      "observed": 0.8333333333333335,
+      "expected": 0.8333333333333299,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "Export Pipeline native percent-to-fraction identity",
+      "passed": true,
+      "observed": 0.06224995113941803,
+      "expected": 0.06224995113941808,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "Every observed literal process.run state passes unit boundaries or is explicitly rejected by the declared candidate gate",
+      "passed": true,
+      "observed": 18,
+      "states": [
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.759872247930616e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 6.112883488458465e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.9887947678639485e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.523364928982904e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702657895809691e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 9.000007549262654e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.7598722479306154e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 6.196621618437348e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.9887947678639485e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.5088628316898983e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702572407907653e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 9.000007549262667e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.7598722479306154e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 6.196621618437348e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.9887947678639485e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.5088628316898983e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702572407907653e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 9.000007549262667e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.800799509510398e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 6.364097878395116e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.988678008092193e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.5668712208619215e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702230456299498e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 9.000007549262678e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.800799509510398e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 6.364097878395116e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.988678008092193e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.5668712208619215e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702230456299498e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 9.000007549262678e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.797876133683271e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 6.2205467984313164e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.989311846853162e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.548225667199484e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702596833022522e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 8.992563374283946e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.797876133683271e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 6.2205467984313164e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.989311846853162e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.548225667199484e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702596833022522e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 8.992563374283946e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.7803358787205072e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 5.945407228500699e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.98879476786395e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.5523691235689136e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702828871613773e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 8.99851871426691e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.759872247930616e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 5.945407228500699e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.988678008092188e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.5378670262759102e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702230456299502e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 9.001496384258417e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.7905676941154525e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 5.931450873504219e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.989145047179221e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.501611783043396e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702657895809694e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 9.000007549262665e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.783259254547634e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 6.100920898461482e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.9888114478313425e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.5275083853523337e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0703329586468573e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 9.001071002831056e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.816147232602816e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 5.756996436048212e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.989290996893919e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.5197394046596535e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702764755687246e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 9.000007549262673e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.7507773009128878e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 5.861669098521816e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.989145047179221e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.5136968641209006e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702135469741677e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 9.00083467981585e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.759872247930616e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 6.02914535847958e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.9887947678639485e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.508862831689899e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702572407907653e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 9.000007549262669e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.7859168689359318e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 5.937794671229889e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.989251192426275e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.504907714246352e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702696753946985e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 8.996623833363284e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.7735146684572104e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 5.861669098521815e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.9895342464184134e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.537867026275908e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.070251541597296e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 8.990081982624382e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.747279244367607e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 5.797255152384211e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.989234862388263e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.5099783776355153e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702822295621308e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 8.994853889662033e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        },
+        {
+          "line": 68,
+          "checks": [
+            {
+              "name": "HP Separator V-100 mass relative",
+              "passed": true,
+              "observed": 1.812493012818907e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 component relative",
+              "passed": true,
+              "observed": 5.7420431985519795e-15,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "HP Separator V-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "HP Separator V-100 energy relative",
+              "passed": true,
+              "observed": 4.988811447831345e-12,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Compressor K-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Compressor K-100 single-phase compressor inlet",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 compression pressure ratio",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Compressor K-100 positive shaft work",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Gas Cooler E-100 finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Gas Cooler E-100 energy relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export cooler knockout mass relative",
+              "passed": true,
+              "observed": 2.5482256671994832e-14,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout component relative",
+              "passed": true,
+              "observed": 1.0702474707448176e-13,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export cooler knockout finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export cooler knockout energy relative",
+              "passed": true,
+              "observed": 8.998944095694261e-13,
+              "expected": 0.0,
+              "tolerance": 1e-05
+            },
+            {
+              "name": "Export Pipeline mass relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline component relative",
+              "passed": true,
+              "observed": 0.0,
+              "expected": 0.0,
+              "tolerance": 1e-06
+            },
+            {
+              "name": "Export Pipeline finite positive p/T and nonnegative flows",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            },
+            {
+              "name": "Export Pipeline horizontal passive pressure decline",
+              "passed": true,
+              "observed": true,
+              "expected": true
+            }
+          ],
+          "accepted": true
+        }
+      ]
+    }
+  ]
+}

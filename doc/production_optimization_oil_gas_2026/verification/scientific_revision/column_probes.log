@@ -1,0 +1,130 @@
+DistillationColumn Diagnostics:
+  Name: Crude Stabilizer
+  Solved: true
+  Solver: DIRECT_SUBSTITUTION
+  Last solver used: DIRECT_SUBSTITUTION
+  Solve status: RIGOROUS_CONVERGED
+  Solve status reason: Tray solution satisfies active rigorous convergence gates
+  Trays: 2 total, 1 equilibrium stages
+  Terminal controls:
+    condenser: absent
+    reboiler mode: EQUILIBRIUM
+  Iterations: 5
+  Solve time: 0.0970977 s
+  Residuals:
+    temperature: 4.1698001496115467E-8 K (tolerance 1.0E-7)
+    applied temperature step: 4.1698001496115467E-8 K
+    mass: 1.6370904631912712E-15 (tolerance 1.0E-6)
+    energy: 1.2142435656420334E-10 (tolerance 1.0E-5, enforced=true)
+    mesh infinity norm: 8.82241244681804E-11 (tolerance 1.0E-5, enforced=true)
+      material: 5.813886155938531E-11, equilibrium: 7.746026042812717E-13, summation: 3.3306690738754696E-16, energy: 8.82241244681804E-11, product draw: 0.0, specification: 0.0
+      per-tray material imbalance: 1.9515135256173082E-12 (tolerance 0.02)
+  Feed trays:
+    tray 1 with 1 feed(s), 0 stages above, 1 stages below
+  Recommendations:
+    - No immediate convergence issue detected.
+
+=== Stabilizer Results ===
+Overhead gas rate:  9.3 kg/hr
+Overhead temp:      90.1 C
+Bottoms oil rate:   4990.7 kg/hr
+Bottoms temp:       107.1 C
+Reboiler duty:      60.0 kW
+PROBE ch11 4 {'chapter': 'ch11', 'block': 4, 'stages': 1, 'Q_W': 60000, 'status': 'RIGOROUS_CONVERGED', 'mesh': 8.82241244681804e-11, 'seconds': 1.6880000000019209}
+DistillationColumn Diagnostics:
+  Name: Stabilizer
+  Solved: true
+  Solver: DIRECT_SUBSTITUTION
+  Last solver used: DIRECT_SUBSTITUTION
+  Solve status: RIGOROUS_CONVERGED
+  Solve status reason: Tray solution satisfies active rigorous convergence gates
+  Trays: 2 total, 1 equilibrium stages
+  Terminal controls:
+    condenser: absent
+    reboiler mode: EQUILIBRIUM
+  Iterations: 2
+  Solve time: 0.0191005 s
+  Residuals:
+    temperature: 0.0 K (tolerance 1.0E-7)
+    applied temperature step: 0.0 K
+    mass: 0.0 (tolerance 1.0E-6)
+    energy: 0.0 (tolerance 1.0E-5, enforced=true)
+    mesh infinity norm: 3.1177620733129527E-10 (tolerance 1.0E-5, enforced=true)
+      material: 0.0, equilibrium: 0.0, summation: 6.661338147750939E-16, energy: 3.1177620733129527E-10, product draw: 0.0, specification: 0.0
+      per-tray material imbalance: 0.0 (tolerance 0.02)
+  Feed trays:
+    tray 1 with 1 feed(s), 0 stages above, 1 stages below
+  Recommendations:
+    - No immediate convergence issue detected.
+
+=== Flash vs. Column Stabilization ===
+Flash stabilization: oil rate = 4960.0 kg/hr
+Column stabilization: oil rate = 5000.0 kg/hr
+Additional recovery:  40.0 kg/hr (0.8%)
+PROBE ch11 5 {'chapter': 'ch11', 'block': 5, 'stages': 1, 'Q_W': 60000, 'status': 'RIGOROUS_CONVERGED', 'mesh': 3.1177620733129527e-10, 'seconds': 0.15600000000267755}
+DistillationColumn Diagnostics:
+  Name: Deethanizer
+  Solved: true
+  Solver: DIRECT_SUBSTITUTION
+  Last solver used: DIRECT_SUBSTITUTION
+  Solve status: RIGOROUS_CONVERGED
+  Solve status reason: Tray solution satisfies active rigorous convergence gates
+  Trays: 2 total, 1 equilibrium stages
+  Terminal controls:
+    condenser: absent
+    reboiler mode: EQUILIBRIUM
+  Iterations: 35
+  Solve time: 0.2748856 s
+  Residuals:
+    temperature: 5.647936518471397E-8 K (tolerance 1.0E-7)
+    applied temperature step: 5.647936518471397E-8 K
+    mass: 9.09494701772927E-16 (tolerance 1.0E-6)
+    energy: 1.6058996077128222E-9 (tolerance 1.0E-5, enforced=true)
+    mesh infinity norm: 8.029498032116827E-10 (tolerance 1.0E-5, enforced=true)
+      material: 3.1273376728073747E-10, equilibrium: 4.0987213623027535E-12, summation: 2.220446049250313E-16, energy: 8.029498032116827E-10, product draw: 0.0, specification: 0.0
+      per-tray material imbalance: 3.6595412761467384E-11 (tolerance 0.02)
+  Feed trays:
+    tray 1 with 1 feed(s), 0 stages above, 1 stages below
+  Recommendations:
+    - No immediate convergence issue detected.
+
+=== Deethanizer Results ===
+Overhead T: 6.8 C
+Overhead P: 25.0 bara
+Bottoms T:  38.2 C
+Reboiler duty: 100.0 kW
+PROBE ch12 4 {'chapter': 'ch12', 'block': 4, 'stages': 1, 'Q_W': 100000, 'status': 'RIGOROUS_CONVERGED', 'mesh': 8.029498032116827e-10, 'seconds': 0.31300000000192085}
+DistillationColumn Diagnostics:
+  Name: TEG Absorber
+  Solved: true
+  Solver: DIRECT_SUBSTITUTION
+  Last solver used: DIRECT_SUBSTITUTION
+  Solve status: RIGOROUS_CONVERGED
+  Solve status reason: Tray solution satisfies active rigorous convergence gates
+  Trays: 5 total, 5 equilibrium stages
+  Terminal controls:
+    condenser: absent
+    reboiler: absent
+  Iterations: 13
+  Solve time: 8.4186919 s
+  Residuals:
+    temperature: 2.1848734377272194E-8 K (tolerance 1.0E-7)
+    applied temperature step: 2.1848734377272194E-8 K
+    mass: 1.4927806235807255E-14 (tolerance 1.0E-6)
+    energy: 8.359307312339793E-10 (tolerance 1.0E-5, enforced=true)
+    mesh infinity norm: 9.052396653643066E-8 (tolerance 1.0E-5, enforced=true)
+      material: 9.052396653643066E-8, equilibrium: 4.3592474084428686E-10, summation: 1.2656542480726785E-13, energy: 4.1796564304991384E-10, product draw: 0.0, specification: 0.0
+      per-tray material imbalance: 6.6315753322555594E-12 (tolerance 0.02)
+  Feed trays:
+    tray 0 with 1 feed(s), 4 stages above, 0 stages below
+    tray 4 with 1 feed(s), 0 stages above, 4 stages below
+  Recommendations:
+    - No immediate convergence issue detected.
+
+=== TEG Dehydration Results ===
+Dry gas flow:  9.60 MSm3/day
+Dry gas T:     31.6 C
+Rich TEG flow: 17758 kg/hr
+Rich TEG T:    30.8 C
+Water in dry gas: 6.9 ppm (mole)
+PROBE ch12 2 {'chapter': 'ch12', 'block': 2, 'stages': 5, 'Q_W': None, 'status': 'RIGOROUS_CONVERGED', 'mesh': 9.052396653643066e-08, 'seconds': 9.828000000001339}

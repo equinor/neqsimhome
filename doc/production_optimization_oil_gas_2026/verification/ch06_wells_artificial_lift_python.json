@@ -1,0 +1,64 @@
+{
+  "chapter": "ch06_wells_artificial_lift",
+  "source_sha256": "93da516016be5dc1a4d739fb0d443d379bc1be72ec32960f73010f7bc1f9a33d",
+  "project_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "blocks": [
+    {
+      "index": 12,
+      "line": 366,
+      "status": "pass",
+      "code": "WellFlow = jneqsim.process.equipment.reservoir.WellFlow\n\n# Standalone oil IPR example, separate from the Java network.\noil_fluid = jneqsim.thermo.system.SystemSrkEos(353.15, 250.0)\noil_fluid.addComponent(\"methane\", 0.20)\noil_fluid.addComponent(\"n-decane\", 0.80)\noil_fluid.setMixingRule(\"classic\")\nreservoirStream = jneqsim.process.equipment.stream.Stream(\"Reservoir\", oil_fluid)\nreservoirStream.setFlowRate(200.0, \"Sm3/day\")\nreservoirStream.run()\nqTest, pwfTest, reservoirP = 200.0, 180.0, 250.0\nwell = WellFlow(\"Well-A\")\nwell.setInletStream(reservoirStream)\n# Explicit liquid-volume basis (Sm3/day), unlike the legacy MSm3/day setter.\nInflowPerformance = jneqsim.process.equipment.reservoir.InflowPerformance\nratio = pwfTest / reservoirP\npi_liquid = qTest * 1.8 / (reservoirP * (1.0 - 0.2*ratio - 0.8*ratio**2))\nwell.setInflowPerformance(InflowPerformance.vogel(pi_liquid, reservoirP))\nwell.setLiquidRate(qTest)\n# well.setFetkovichParameters(c, n, reservoirP)           # Fetkovich\n# well.setBackpressureParameters(a, b, reservoirP)        # Rawlins-Schellhardt\n# well.setTableInflow(bhp_array, rate_array)              # tabulated IPR\nwell.setOutletPressure(120.0, \"bara\")\nwell.solveFlowFromOutletPressure(True)\nwell.run()\nassert 200.0 < well.getLiquidRate() < 400.0\nprint(\"Liquid rate (Sm3/day):\", well.getLiquidRate(),\n      \"BHP:\", well.getBottomHolePressure(),\n      \"drawdown:\", well.getDrawdown())\n",
+      "seconds": 4.594,
+      "output": "Liquid rate (Sm3/day): 326.178390137781 BHP: 120.0 drawdown: 130.0\n"
+    },
+    {
+      "index": 13,
+      "line": 400,
+      "status": "pass",
+      "code": "well.useWellConstraints()\nwell.setMaxDrawdown(40.0, \"bara\")           # sand / coning management\nwell.setMinBottomHolePressure(90.0, \"bara\")  # lift / stability limit\n# Registering a constraint does not make the old 130-bar drawdown feasible.\nassert well.getDrawdown() > 40.0  # rejected previous operating point\nwell.setOutletPressure(210.0, \"bara\")  # reservoir 250 bara minus allowed 40 bar\nwell.run()\nassert well.getDrawdown() <= 40.0 + 1e-8\nassert well.getBottomHolePressure() >= 90.0\nassert 0.0 < well.getLiquidRate() < qTest\nprint(\"Accepted constrained IPR rate:\", well.getLiquidRate(), \"Sm3/day\")\n",
+      "seconds": 0.015,
+      "output": "Accepted constrained IPR rate: 121.24728063814355 Sm3/day\n"
+    },
+    {
+      "index": 33,
+      "line": 1044,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Import network classes\nLoopedPipeNetwork = jneqsim.process.equipment.network.LoopedPipeNetwork\nSolverType = LoopedPipeNetwork.SolverType\nNetworkElementType = LoopedPipeNetwork.NetworkElementType\n\n# Create fluid template\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 80.0, 200.0)\nfluid.addComponent(\"methane\", 75.0)\nfluid.addComponent(\"ethane\", 8.0)\nfluid.addComponent(\"propane\", 4.0)\nfluid.addComponent(\"n-butane\", 2.0)\nfluid.addComponent(\"n-pentane\", 1.0)\nfluid.addComponent(\"n-heptane\", 5.0)\nfluid.addComponent(\"n-octane\", 3.0)\nfluid.addComponent(\"water\", 2.0)\nfluid.setMixingRule(\"classic\")\nfluid.setMultiPhaseCheck(True)\n\n# Build network\nnetwork = LoopedPipeNetwork(\"Field Alpha\")\nnetwork.setFluidTemplate(fluid)\n\n# Define 4-well subsea network\nwells = {\n    \"A\": {\"Pr\": 260.0, \"PI\": 18.0, \"depth\": 2800.0, \"FL_len\": 6000.0, \"choke_Kv\": 30.0},\n    \"B\": {\"Pr\": 240.0, \"PI\": 12.0, \"depth\": 3200.0, \"FL_len\": 4000.0, \"choke_Kv\": 25.0},\n    \"C\": {\"Pr\": 210.0, \"PI\": 20.0, \"depth\": 2200.0, \"FL_len\": 8000.0, \"choke_Kv\": 35.0},\n    \"D\": {\"Pr\": 230.0, \"PI\": 10.0, \"depth\": 3500.0, \"FL_len\": 5000.0, \"choke_Kv\": 20.0},\n}\n\n# Source and sink nodes\nfor name, w in wells.items():\n    network.addSourceNode(f\"Res-{name}\", w[\"Pr\"], 0.0)\n\nnetwork.addJunctionNode(\"Manifold\")\nnetwork.addSinkNode(\"Platform\", 0.0)\nplatform = network.getNode(\"Platform\")\nplatform.setPressure(35.0e5)\nplatform.setPressureFixed(True)\n\n# Build each well: IPR -> Tubing -> Choke -> Flowline\nfor name, w in wells.items():\n    network.addJunctionNode(f\"BH-{name}\")\n    network.addJunctionNode(f\"WH-{name}\")\n    network.addJunctionNode(f\"DS-{name}\")\n\n    # IPR\n    network.addWellIPR(f\"Res-{name}\", f\"BH-{name}\", f\"IPR-{name}\",\n                       w[\"PI\"] * 800.0 / 86400.0 / 1e5, False)\n    # Tubing\n    network.addTubing(f\"BH-{name}\", f\"WH-{name}\", f\"Tubing-{name}\",\n                      w[\"depth\"], 0.1016, 90.0)\n    network.getPipe(f\"Tubing-{name}\").setTubingSegments(3)\n    # Choke\n    network.addChoke(f\"WH-{name}\", f\"DS-{name}\", f\"Choke-{name}\",\n                     w[\"choke_Kv\"], 80.0)  # 80% open initially\n    # Flowline\n    fl = network.addPipe(f\"DS-{name}\", \"Manifold\",\n                         f\"FL-{name}\", w[\"FL_len\"], 0.2032)\n    fl.setElementType(NetworkElementType.MULTIPHASE_PIPE)\n    fl.setMultiphaseSegments(3)\n\n# Riser\nriser = network.addPipe(\"Manifold\", \"Platform\", \"Riser\", 1200.0, 0.254)\nriser.setElementType(NetworkElementType.MULTIPHASE_PIPE)\nriser.setMultiphaseSegments(3)\n\n# Solve\nnetwork.setSolverType(SolverType.NEWTON_RAPHSON)\nnetwork.setTolerance(1e-4)\nnetwork.setMaxIterations(100)\nnetwork.run()\n\n# Print results\nsummary = network.getSolutionSummary()\nprint(f\"Converged: {summary.get('converged')}\")\nprint(f\"Iterations: {summary.get('iterations')}\")\nprint(f\"Total production: {float(network.getTotalSinkFlow()):.2f} kg/s\")\nprint()\n\nprint(f\"{'Well':>6} {'BHP (bara)':>12} {'WHP (bara)':>12} {'Flow (kg/s)':>12}\")\nprint(\"-\" * 48)\nfor name in wells:\n    bhp = network.getNodePressure(f\"BH-{name}\")\n    whp = network.getNodePressure(f\"WH-{name}\")\n    flow = network.getPipeFlowRate(f\"Tubing-{name}\") / 3600.0\n    print(f\"{name:>6} {bhp:12.1f} {whp:12.1f} {flow:12.2f}\")\n",
+      "seconds": 10.656,
+      "output": "Converged: True\nIterations: 67\nTotal production: 38.31 kg/s\n\n  Well   BHP (bara)   WHP (bara)  Flow (kg/s)\n------------------------------------------------\n     A        183.3         94.3        12.78\n     B        166.3         80.5         8.19\n     C        149.5         83.9        11.20\n     D        163.7         75.1         6.14\n"
+    },
+    {
+      "index": 34,
+      "line": 1139,
+      "status": "pass",
+      "code": "import matplotlib.pyplot as plt\nimport numpy as np\nimport jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# (Assume network is already built as above)\n\n# Choke sensitivity for each well\nopenings = np.array([40.0, 60.0, 80.0, 100.0])  # four teaching points; refine around active constraints\nresults = {name: [] for name in wells}\n\nfor name in wells:\n    for opening in openings:\n        # Set choke opening\n        choke = network.getPipe(f\"Choke-{name}\")\n        choke.setChokeOpening(float(opening))\n\n        # Solve\n        network.run()\n\n        # Exclude unconverged candidates from the sensitivity curve.\n        converged = bool(network.getSolutionSummary().get(\"converged\"))\n        flow = (network.getPipeFlowRate(f\"Tubing-{name}\") / 3600.0\n                if converged else float(\"nan\"))\n        results[name].append(flow)\n\n    # Reset to 80%\n    network.getPipe(f\"Choke-{name}\").setChokeOpening(80.0)\n\n# Plot\nfig, ax = plt.subplots(figsize=(10, 6))\nfor name in wells:\n    ax.plot(openings, results[name], 'o-', label=f\"Well {name}\")\n\nax.set_xlabel(\"Choke Opening (%)\")\nax.set_ylabel(\"Production Rate (kg/s)\")\nax.set_title(\"Choke Sensitivity Study \u2014 4-Well Subsea Network\")\nax.legend()\nax.grid(True, alpha=0.3)\nplt.tight_layout()\nplt.savefig(\"figures/choke_sensitivity.png\", dpi=150, bbox_inches=\"tight\")\nplt.show()\n",
+      "seconds": 63.687,
+      "output": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch06_wells_artificial_lift\\chapter.md:1139:42: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    },
+    {
+      "index": 35,
+      "line": 1186,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\nNetworkOptimizer = jneqsim.process.equipment.network.NetworkOptimizer\n\n# Quick optimization: maximize total production by adjusting all choke openings\noptimizer = network.createOptimizer()\noptimizer.setMaxEvaluations(30)\nresult = optimizer.optimize()\n\nprint(f\"Optimizer converged: {result.converged}; {result.message}\")\nprint(f\"Candidate total production: {float(result.totalProductionKgHr) / 3600.0:.2f} kg/s\")\n\n# Get individual optimal choke settings\noptimal_values = result.chokeOpenings\nfor i, name in enumerate(result.chokeNames):\n    print(f\"  {name}: {float(optimal_values[i]):.1f}%\")\n\n# Re-solve with optimal settings and report\nnetwork.run()\nprint(f\"\\nPost-optimization well rates:\")\nfor name in wells:\n    flow = network.getPipeFlowRate(f\"Tubing-{name}\") / 3600.0\n    print(f\"  Well {name}: {flow:.2f} kg/s\")\n",
+      "seconds": 37.907,
+      "output": "Optimizer converged: True; Optimization completed\nCandidate total production: 40.80 kg/s\n  Choke-A: 100.0%\n  Choke-B: 100.0%\n  Choke-C: 100.0%\n  Choke-D: 100.0%\n\nPost-optimization well rates:\n  Well A: 13.08 kg/s\n  Well B: 8.90 kg/s\n  Well C: 12.13 kg/s\n  Well D: 6.69 kg/s\n"
+    },
+    {
+      "index": 43,
+      "line": 1438,
+      "status": "pass",
+      "code": "# Daily allocation workflow\ntarget_total_mass_rate = 40.0  # kg/s total mixture; phase allocation is a separate calculation\n\n# Step 1: Solve network at current choke settings\nnetwork.run()\ncurrent_total = float(network.getTotalSinkFlow())\n\n# Step 2: If under-producing, open chokes; if over-producing, close\nif current_total < target_total_mass_rate * 0.95:\n    # Open most responsive wells first (highest dQ/d_opening)\n    optimizer = network.createOptimizer()\n    optimizer.setMaxEvaluations(30)\n    result = optimizer.optimize()\n    print(f\"Optimized production: {float(result.totalProductionKgHr) / 3600.0:.1f} kg/s\")\nelif current_total > target_total_mass_rate * 1.05:\n    print(\"Total-mixture target exceeded; a phase-aware allocation constraint is required.\")\n",
+      "seconds": 0.938,
+      "output": ""
+    },
+    {
+      "index": 44,
+      "line": 1466,
+      "status": "pass",
+      "code": "# What-if: shut in Well B\noriginal_flow = network.getPipeFlowRate(\"Tubing-B\") / 3600.0\noriginal_opening = network.getPipe(\"Choke-B\").getChokeOpening()\nnetwork.getPipe(\"Choke-B\").setChokeOpening(0.0)  # Close choke\nnetwork.run()\n\n# Other wells pick up some rate due to reduced back-pressure\nfor name in [\"A\", \"C\", \"D\"]:\n    new_flow = network.getPipeFlowRate(f\"Tubing-{name}\") / 3600.0\n    print(f\"Well {name}: {new_flow:.2f} kg/s\")\n\n# Restore\nnetwork.getPipe(\"Choke-B\").setChokeOpening(original_opening)\nnetwork.run()\n",
+      "seconds": 3.359,
+      "output": "Well A: 13.17 kg/s\nWell C: 12.24 kg/s\nWell D: 6.78 kg/s\n"
+    }
+  ]
+}

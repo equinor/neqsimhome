@@ -1,0 +1,424 @@
+{
+  "notebook": "chapters\\ch22_production_optimization_theory\\notebooks\\ch19_optimization_theory.ipynb",
+  "status": "passed",
+  "executed_at": "2026-09-12T20:11:53.410023+00:00",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "runtime_seconds": 17.2,
+  "code_cells": 10,
+  "executed_cells": 10,
+  "cell_runs": [
+    {
+      "cell_index": 1,
+      "execution_count": 1,
+      "runtime_seconds": 5.5,
+      "sha256": "76731116f6e92415a7bedb4a3cb52efc6fe2bd0160c8a46e6d7e5e52bb4852a3",
+      "status": "passed"
+    },
+    {
+      "cell_index": 3,
+      "execution_count": 2,
+      "runtime_seconds": 2.563,
+      "sha256": "6b0b4ff6de12eafd236eb4837881bd5841ea80456cf69334de5d4e0a67352685",
+      "status": "passed"
+    },
+    {
+      "cell_index": 5,
+      "execution_count": 3,
+      "runtime_seconds": 0.984,
+      "sha256": "9190b7e94892eb0e71cb38eaee05bc7cccff6a6bd35a9ead03f70a2a54c03cbd",
+      "status": "passed"
+    },
+    {
+      "cell_index": 6,
+      "execution_count": 4,
+      "runtime_seconds": 1.688,
+      "sha256": "88929846e5ae05cc19ab3ae57d4a7ccc5c7f35d506ca37267fae28fc8c5dc6a3",
+      "status": "passed"
+    },
+    {
+      "cell_index": 9,
+      "execution_count": 5,
+      "runtime_seconds": 0.469,
+      "sha256": "2b5b7117d9fadbd1f021fd855a2b22c57a8bee4a1cfb0d998e2d7fd8c88749b7",
+      "status": "passed"
+    },
+    {
+      "cell_index": 11,
+      "execution_count": 6,
+      "runtime_seconds": 1.359,
+      "sha256": "8e7860764a893368bd4df3dc820c442532b6c108b1db2832f35deb92331ebc01",
+      "status": "passed"
+    },
+    {
+      "cell_index": 13,
+      "execution_count": 7,
+      "runtime_seconds": 1.406,
+      "sha256": "5f89328e7ed237e01c487e76d736fb98b18e10ada61a5a8289bd13b951326a05",
+      "status": "passed"
+    },
+    {
+      "cell_index": 14,
+      "execution_count": 8,
+      "runtime_seconds": 0.938,
+      "sha256": "fa88957264466d7bcaab554f0d796091a04e2f9eb632d10017897f1744f9eebd",
+      "status": "passed"
+    },
+    {
+      "cell_index": 18,
+      "execution_count": 9,
+      "runtime_seconds": 2.234,
+      "sha256": "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+      "status": "passed"
+    },
+    {
+      "cell_index": 20,
+      "execution_count": 10,
+      "runtime_seconds": 0.063,
+      "sha256": "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "source_revision": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "java_version": "25.0.4.1",
+  "neqsim_class_origin": "file:/C:/Users/solbraa/OneDrive%20-%20NTNU/Documents/ChatGPT/NeqSim/target/classes/",
+  "figures": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch22_production_optimization_theory\\figures\\ch19_objective_function_landscape.png",
+      "sha256": "d9762e11af2136241b4aad50daa0e11eb595a72eb90409cb0fb19ce522cca2ea",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Objective Function: Production Rate vs Feed Rate",
+          "series": "Export Rate",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Export Gas Rate (t/hr)",
+          "n_points": 25,
+          "n_nonfinite": 0,
+          "x_min": 15.0,
+          "x_max": 75.0,
+          "y_min": 15.00000000000001,
+          "y_max": 74.99999999999994,
+          "x_at_y_max": 75.0
+        },
+        {
+          "panel": 2,
+          "title": "",
+          "series": "Max Utilization",
+          "value_axis": "y",
+          "x_label": "Feed Rate (t/hr)",
+          "y_label": "Max Equipment Utilization (%)",
+          "n_points": 25,
+          "n_nonfinite": 0,
+          "x_min": 15.0,
+          "x_max": 75.0,
+          "y_min": 27.777777777777768,
+          "y_max": 138.88888888888883,
+          "x_at_y_max": 75.0
+        },
+        {
+          "panel": 2,
+          "title": "",
+          "series": "Capacity Limit (100%)",
+          "value_axis": "y",
+          "x_label": "Feed Rate (t/hr)",
+          "y_label": "Max Equipment Utilization (%)",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_min": 100.0,
+          "y_max": 100.0,
+          "x_at_y_max": 0.0
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch22_production_optimization_theory\\figures\\ch19_sensitivity_tornado.png",
+      "sha256": "dc7f50c45b0db2bbf2c665161f6688be6217f2a396b7f4f12de065d1c4e887ed",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Sensitivity Tornado: Equipment Capacity Impact on Max Production",
+          "series": "Curve 1",
+          "value_axis": "y",
+          "x_label": "Change in Max Throughput (kg/hr) from baseline 53848",
+          "y_label": "",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 0.0,
+          "y_min": 0.0,
+          "y_max": 1.0,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 1,
+          "title": "Sensitivity Tornado: Equipment Capacity Impact on Max Production",
+          "series": "Capacity +20%",
+          "value_axis": "x",
+          "x_label": "Change in Max Throughput (kg/hr) from baseline 53848",
+          "y_label": "",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 253.90625,
+          "y_min": 0.0,
+          "y_max": 1.0,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 1,
+          "title": "Sensitivity Tornado: Equipment Capacity Impact on Max Production",
+          "series": "Capacity -20%",
+          "value_axis": "x",
+          "x_label": "Change in Max Throughput (kg/hr) from baseline 53848",
+          "y_label": "",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": -10664.0625,
+          "x_max": -10664.0625,
+          "y_min": 0.0,
+          "y_max": 1.0,
+          "x_at_y_max": -10664.0625
+        }
+      ]
+    }
+  ],
+  "nonfinite_series": [],
+  "numeric_results": {
+    "design_rate_kg_hr": 45000.0,
+    "flow_rates": [
+      15000.0,
+      17500.0,
+      20000.0,
+      22500.0,
+      25000.0,
+      27500.0,
+      30000.0,
+      32500.0,
+      35000.0,
+      37500.0,
+      40000.0,
+      42500.0,
+      45000.0,
+      47500.0,
+      50000.0,
+      52500.0,
+      55000.0,
+      57500.0,
+      60000.0,
+      62500.0,
+      65000.0,
+      67500.0,
+      70000.0,
+      72500.0,
+      75000.0
+    ],
+    "export_rates": [
+      15000.000000000011,
+      17499.999999999996,
+      20000.000000000004,
+      22500.0,
+      25000.0,
+      27500.0,
+      30000.000000000004,
+      32500.000000000004,
+      35000.00000000001,
+      37500.000000000015,
+      39999.99999999999,
+      42499.99999999999,
+      45000.00000000001,
+      47499.99999999999,
+      50000.0,
+      52500.00000000001,
+      54999.99999999999,
+      57500.0,
+      60000.00000000001,
+      62500.0,
+      64999.99999999999,
+      67500.00000000001,
+      69999.99999999999,
+      72499.99999999997,
+      74999.99999999994
+    ],
+    "max_utils": [
+      27.777777777777768,
+      32.407407407407426,
+      37.03703703703698,
+      41.666666666666615,
+      46.29629629629625,
+      50.925925925925874,
+      55.55555555555549,
+      60.185185185185055,
+      64.81481481481491,
+      69.44444444444436,
+      74.07407407407403,
+      78.70370370370382,
+      83.33333333333346,
+      87.96296296296309,
+      92.59259259259261,
+      97.22222222222221,
+      101.85185185185203,
+      106.48148148148144,
+      111.11111111111114,
+      115.7407407407407,
+      120.37037037037047,
+      125.00000000000074,
+      129.62962962962962,
+      134.25925925925884,
+      138.88888888888883
+    ],
+    "comp_powers": [
+      499.70682806319616,
+      582.9912994070628,
+      666.2757707509274,
+      749.5602420947936,
+      832.8447134386597,
+      916.1291847825258,
+      999.4136561263915,
+      1082.6981274702564,
+      1165.9825988141265,
+      1249.2670701579896,
+      1332.5515415018563,
+      1415.8360128457252,
+      1499.1204841895915,
+      1582.4049555334575,
+      1665.6894268773217,
+      1748.9738982211873,
+      1832.2583695650567,
+      1915.5428409089186,
+      1998.827312252786,
+      2082.1117835966506,
+      2165.396254940519,
+      2248.6807262843968,
+      2331.96519762825,
+      2415.2496689721083,
+      2498.5341403159805
+    ],
+    "rate": 75000.0,
+    "export_rate": 74999.99999999994,
+    "phi": 0.6180339887498949,
+    "a": 53913.36352950712,
+    "b": 54038.1231466646,
+    "tol_gs": 200.0,
+    "i": 13.0,
+    "x1": 53990.46921333386,
+    "x2": 54038.1231466646,
+    "gs_max_rate": 53913.36352950712,
+    "base_max": 53847.65625,
+    "factor": 1.44,
+    "max_rate": 54101.5625,
+    "delta": 253.90625,
+    "low_vals": [
+      -10664.0625,
+      -10664.0625
+    ],
+    "high_vals": [
+      253.90625,
+      0.0
+    ],
+    "rates": [
+      43183.59375,
+      53847.65625
+    ],
+    "swings": [
+      10917.96875,
+      10664.0625
+    ],
+    "order": [
+      0.0,
+      1.0
+    ],
+    "y_pos": [
+      0.0,
+      1.0
+    ]
+  },
+  "figure_discussions": [
+    {
+      "chapter": "ch22_production_optimization_theory",
+      "chapter_number": 22,
+      "figure": "ch19_objective_function_landscape.png",
+      "figure_path": "figures/ch19_objective_function_landscape.png",
+      "caption": "Objective Function: Production Rate vs Feed Rate.",
+      "title": "Objective Function: Production Rate vs Feed Rate",
+      "observation": "Export Rate: export gas rate spans 15–75 t/hr across the plotted cases. Max Utilization: max equipment utilization spans 27.78–138.9 % across the plotted cases.",
+      "mechanism": "The simulated export rate grows with feed, but the fixed capacity denominators cause utilization to cross the allowable boundary.",
+      "implication": "The useful optimum is the last feasible rate, not the largest export value plotted.",
+      "recommendation": "Check a feasible point and a neighboring infeasible point to bracket the production limit.",
+      "notebook": "notebooks/ch19_optimization_theory.ipynb",
+      "dpi": 220,
+      "sha256": "d9762e11af2136241b4aad50daa0e11eb595a72eb90409cb0fb19ce522cca2ea",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Export Rate: export gas rate",
+            15.00000000000001,
+            74.99999999999994,
+            "t/hr"
+          ],
+          [
+            "Max Utilization: max equipment utilization",
+            27.777777777777768,
+            138.88888888888883,
+            "%"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    },
+    {
+      "chapter": "ch22_production_optimization_theory",
+      "chapter_number": 22,
+      "figure": "ch19_sensitivity_tornado.png",
+      "figure_path": "figures/ch19_sensitivity_tornado.png",
+      "caption": "Sensitivity Tornado: Equipment Capacity Impact on Max Production.",
+      "title": "Sensitivity Tornado: Equipment Capacity Impact on Max Production",
+      "observation": "The baseline bisection result is 53.848 t/hr. The largest negative throughput change in the single-rating sensitivity is -10.664 t/hr; the largest positive change is 0.254 t/hr.",
+      "mechanism": "Each sensitivity changes one assumed equipment rating and repeats the process-based feasibility search.",
+      "implication": "A rating increase yields no throughput benefit if another unit already controls production.",
+      "recommendation": "Prioritize the constraint with a demonstrated throughput response and verify the economics of the resulting upgrade.",
+      "notebook": "notebooks/ch19_optimization_theory.ipynb",
+      "dpi": 220,
+      "sha256": "dc7f50c45b0db2bbf2c665161f6688be6217f2a396b7f4f12de065d1c4e887ed",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": []
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    }
+  ],
+  "notebook_sha256": "1deba501b1bcfdd18766fd02e7eea076917477c14937e06c41a533be2ddb1cef",
+  "editorial_review": {
+    "reviewed_at": "2026-09-12T20:15:02.439192+00:00",
+    "pre_review_notebook_sha256": "a1b57897a78d6c282e47b29f87972f3f703406c21e8f5b09fdb7a2cb979e4709",
+    "code_and_outputs_unchanged": true,
+    "description": "Replaced generated discussion prose with plot-specific reviewed interpretation; every executed code hash rechecked."
+  },
+  "scientific_validation": {
+    "physics_report": "verification\\scientific_revision\\notebooks\\ch22_production_optimization_theory.json",
+    "validation_helper_sha256": {
+      "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+      "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+      "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+    },
+    "pre_scope_markdown_sha256": "1deba501b1bcfdd18766fd02e7eea076917477c14937e06c41a533be2ddb1cef",
+    "post_execution_edit": "Added scope and independent benchmark links only; every executed code-cell hash rechecked."
+  }
+}

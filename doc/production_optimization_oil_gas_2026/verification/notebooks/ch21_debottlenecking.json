@@ -1,0 +1,382 @@
+{
+  "notebook": "chapters\\ch21_debottlenecking\\notebooks\\ch21_debottlenecking.ipynb",
+  "status": "passed",
+  "executed_at": "2026-09-12T20:11:38.829203+00:00",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "runtime_seconds": 16.59,
+  "code_cells": 7,
+  "executed_cells": 7,
+  "cell_runs": [
+    {
+      "cell_index": 1,
+      "execution_count": 1,
+      "runtime_seconds": 10.218,
+      "sha256": "9ca84ea5cc021a9ee6d8c733fb339352cbd82c8fe101c174bbb6f5a1acaef2cc",
+      "status": "passed"
+    },
+    {
+      "cell_index": 3,
+      "execution_count": 2,
+      "runtime_seconds": 0.0,
+      "sha256": "4aa8348ede613222dcd5e9ae4b3381ca63791d7d66ff4ccac9e81b1868e9548f",
+      "status": "passed"
+    },
+    {
+      "cell_index": 5,
+      "execution_count": 3,
+      "runtime_seconds": 2.875,
+      "sha256": "d7f80c96b1a5b0921b3eed5a12b46c0434dd62fa1e54610182d13ac24c4942cd",
+      "status": "passed"
+    },
+    {
+      "cell_index": 7,
+      "execution_count": 4,
+      "runtime_seconds": 0.0,
+      "sha256": "e414a7514e91119ffb5cefadca0649787b8631c6b3082b47ac0f7260f851aa5c",
+      "status": "passed"
+    },
+    {
+      "cell_index": 8,
+      "execution_count": 5,
+      "runtime_seconds": 2.532,
+      "sha256": "02753d0991c51bd5cb4d71db5ed7f296ed71f73b84e49ffc6a90bb70462a5f60",
+      "status": "passed"
+    },
+    {
+      "cell_index": 12,
+      "execution_count": 6,
+      "runtime_seconds": 0.953,
+      "sha256": "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+      "status": "passed"
+    },
+    {
+      "cell_index": 14,
+      "execution_count": 7,
+      "runtime_seconds": 0.015,
+      "sha256": "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "source_revision": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "java_version": "25.0.4.1",
+  "neqsim_class_origin": "file:/C:/Users/solbraa/OneDrive%20-%20NTNU/Documents/ChatGPT/NeqSim/target/classes/",
+  "figures": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch21_debottlenecking\\figures\\ch21_debottleneck_cascade.png",
+      "sha256": "630a13d16434deb2dab6c61beaf09f809684a5a4dbce40e243bf6a0447bc2c85",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Initial\nBottleneck: Compressor Stage 2",
+          "series": "Design limit",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Utilization [%]",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_min": 100.0,
+          "y_max": 100.0,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 1,
+          "title": "Initial\nBottleneck: Compressor Stage 2",
+          "series": "Bars 1",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Utilization [%]",
+          "n_points": 5,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 4.0,
+          "y_min": 84.0,
+          "y_max": 97.77777777777777,
+          "x_at_y_max": 3.0
+        },
+        {
+          "panel": 2,
+          "title": "After Step 1\nBottleneck: Inlet Separator",
+          "series": "Design limit",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Utilization [%]",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_min": 100.0,
+          "y_max": 100.0,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 2,
+          "title": "After Step 1\nBottleneck: Inlet Separator",
+          "series": "Bars 1",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Utilization [%]",
+          "n_points": 5,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 4.0,
+          "y_min": 78.97435897435898,
+          "y_max": 96.25,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 3,
+          "title": "After Step 2\nBottleneck: Export Cooler",
+          "series": "Design limit",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Utilization [%]",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_min": 100.0,
+          "y_max": 100.0,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 3,
+          "title": "After Step 2\nBottleneck: Export Cooler",
+          "series": "Bars 1",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Utilization [%]",
+          "n_points": 5,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 4.0,
+          "y_min": 77.74038461538461,
+          "y_max": 95.55,
+          "x_at_y_max": 4.0
+        },
+        {
+          "panel": 4,
+          "title": "After Step 3\nBottleneck: After Cooler",
+          "series": "Design limit",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Utilization [%]",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_min": 100.0,
+          "y_max": 100.0,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 4,
+          "title": "After Step 3\nBottleneck: After Cooler",
+          "series": "Bars 1",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Utilization [%]",
+          "n_points": 5,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 4.0,
+          "y_min": 77.17500000000001,
+          "y_max": 98.39812500000001,
+          "x_at_y_max": 2.0
+        }
+      ]
+    }
+  ],
+  "nonfinite_series": [],
+  "numeric_results": {
+    "design_capacities": [
+      60000.0,
+      5000.0,
+      8000.0,
+      4500.0,
+      6000.0
+    ],
+    "actual_loads": [
+      55000.0,
+      4200.0,
+      6800.0,
+      4400.0,
+      5200.0
+    ],
+    "utilizations": [
+      91.66666666666666,
+      84.0,
+      85.0,
+      97.77777777777777,
+      86.66666666666667
+    ],
+    "cap": 6000.0,
+    "load": 5200.0,
+    "util": 86.66666666666667,
+    "capacities_history": [
+      [
+        60000.0,
+        5000.0,
+        8000.0,
+        4500.0,
+        6000.0
+      ],
+      [
+        60000.0,
+        5000.0,
+        8000.0,
+        5850.0,
+        6000.0
+      ],
+      [
+        78000.0,
+        5000.0,
+        8000.0,
+        5850.0,
+        6000.0
+      ],
+      [
+        78000.0,
+        5000.0,
+        8000.0,
+        5850.0,
+        7800.0
+      ]
+    ],
+    "util_history": [
+      [
+        91.66666666666666,
+        84.0,
+        85.0,
+        97.77777777777777,
+        86.66666666666667
+      ],
+      [
+        96.25,
+        88.2,
+        89.25,
+        78.97435897435898,
+        91.0
+      ],
+      [
+        77.74038461538461,
+        92.61,
+        93.7125,
+        82.92307692307692,
+        95.55
+      ],
+      [
+        81.62740384615384,
+        97.24050000000001,
+        98.39812500000001,
+        87.06923076923077,
+        77.17500000000001
+      ]
+    ],
+    "current_capacities": [
+      78000.0,
+      5000.0,
+      8000.0,
+      5850.0,
+      7800.0
+    ],
+    "current_loads": [
+      63669.375,
+      4862.025000000001,
+      7871.85,
+      5093.55,
+      6019.650000000001
+    ],
+    "step": 2.0,
+    "utils": [
+      81.62740384615384,
+      97.24050000000001,
+      98.39812500000001,
+      87.06923076923077,
+      77.17500000000001
+    ],
+    "bottleneck_idx": 4.0,
+    "new_utils": [
+      81.62740384615384,
+      97.24050000000001,
+      98.39812500000001,
+      87.06923076923077,
+      77.17500000000001
+    ],
+    "idx": 3.0,
+    "bn_idx": 2.0
+  },
+  "figure_discussions": [
+    {
+      "chapter": "ch21_debottlenecking",
+      "chapter_number": 21,
+      "figure": "ch21_debottleneck_cascade.png",
+      "figure_path": "figures/ch21_debottleneck_cascade.png",
+      "caption": "Initial Bottleneck: Compressor Stage 2. Illustrative arithmetic capacity cascade.",
+      "title": "Initial Bottleneck: Compressor Stage 2",
+      "observation": "Utilization spans 84–97.78 % across the plotted cases. Utilization spans 78.97–96.25 % across the plotted cases.",
+      "mechanism": "This arithmetic cascade increases a selected equipment rating, then scales assumed loads until the next unit becomes limiting.",
+      "implication": "The diagram explains bottleneck migration; it is not a flowsheet simulation of an equipment retrofit.",
+      "recommendation": "Use the cascade to prioritize full-process reruns, with pressure, phase split and power recalculated after each change.",
+      "notebook": "notebooks/ch21_debottlenecking.ipynb",
+      "dpi": 220,
+      "sha256": "630a13d16434deb2dab6c61beaf09f809684a5a4dbce40e243bf6a0447bc2c85",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Utilization",
+            84.0,
+            97.77777777777777,
+            "%"
+          ],
+          [
+            "Utilization",
+            78.97435897435898,
+            96.25,
+            "%"
+          ],
+          [
+            "Utilization",
+            77.74038461538461,
+            95.55,
+            "%"
+          ],
+          [
+            "Utilization",
+            77.17500000000001,
+            98.39812500000001,
+            "%"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    }
+  ],
+  "notebook_sha256": "601a1306e30f3fc766dba080ff66246f6a491b59bed1dbc77daf330503cc5e94",
+  "editorial_review": {
+    "reviewed_at": "2026-09-12T20:15:02.429063+00:00",
+    "pre_review_notebook_sha256": "52362dc821e451b1cab09eb8108aa0ce5f2af421ef151161803758690f91e497",
+    "code_and_outputs_unchanged": true,
+    "description": "Replaced generated discussion prose with plot-specific reviewed interpretation; every executed code hash rechecked."
+  },
+  "scientific_validation": {
+    "physics_report": "verification\\scientific_revision\\notebooks\\ch21_debottlenecking.json",
+    "validation_helper_sha256": {
+      "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+      "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+      "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+    },
+    "pre_scope_markdown_sha256": "601a1306e30f3fc766dba080ff66246f6a491b59bed1dbc77daf330503cc5e94",
+    "post_execution_edit": "Added scope and independent benchmark links only; every executed code-cell hash rechecked."
+  }
+}

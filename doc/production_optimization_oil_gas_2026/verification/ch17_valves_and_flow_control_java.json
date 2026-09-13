@@ -1,0 +1,22 @@
+{
+  "chapter": "ch17_valves_and_flow_control",
+  "source_sha256": "a1abd7fd737b4581acc4916927d1b6d25b2061c2d9e267af8d1f7d3c459f8f3f",
+  "engine": "JShell, Java snippets constrained to Java 8 syntax",
+  "returncode": 0,
+  "blocks": [
+    {
+      "index": 9,
+      "line": 949,
+      "code": "import org.apache.logging.log4j.LogManager;\nimport org.apache.logging.log4j.Logger;\nLogger logger = LogManager.getLogger(\"BookChapter17\");\nimport neqsim.thermo.system.SystemSrkEos;\nimport neqsim.process.equipment.stream.Stream;\nimport neqsim.process.processmodel.ProcessSystem;\nimport neqsim.process.equipment.capacity.CapacityConstraint;\nimport neqsim.process.util.optimizer.ProductionOptimizer;\nimport java.util.*;\nSystemSrkEos fluid = new SystemSrkEos(313.15, 80.0);\nfluid.addComponent(\"methane\", 0.80);\nfluid.addComponent(\"ethane\", 0.10);\nfluid.addComponent(\"n-heptane\", 0.08);\nfluid.addComponent(\"water\", 0.02);\nfluid.setMixingRule(\"classic\");\nfluid.setMultiPhaseCheck(true);\nStream feed = new Stream(\"Feed\", fluid);\nfeed.setFlowRate(20000.0, \"kg/hr\");\nProcessSystem process = new ProcessSystem();\nprocess.add(feed);\nprocess.run();\nimport neqsim.process.equipment.valve.ThrottlingValve;\n// Java: Auto-size valve with 20% design margin\nThrottlingValve valve = new ThrottlingValve(\"PV-100\", feed);\nvalve.setOutletPressure(60.0, \"bara\");\nprocess.add(valve);\nprocess.run();\n\n// autoSize calculates: designCv = operatingCv \u00d7 (1 + margin)\nvalve.autoSize(1.20);  // 20% design margin\n\n// The valve now has constraints attached\ndouble designCv = valve.getMechanicalDesign().getMaxDesignCv();\ndouble designFlow = valve.getMechanicalDesign().getMaxDesignVolumeFlow();\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_009_BEGIN\"\n\njshell> \njshell> $32 ==> "
+    },
+    {
+      "index": 10,
+      "line": 995,
+      "code": "// Set known design capacity from valve datasheet\nvalve.getMechanicalDesign().setMaxDesignCv(350.0);\nvalve.getMechanicalDesign().setMaxDesignVolumeFlow(2500.0);\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_010_BEGIN\"\n\njshell> \njshell> $36 ==> "
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "status": "passed",
+  "generated_utc": "2026-09-12T21:37:05.337851+00:00",
+  "method": "Exact-run assets, source-array and unit checks, full-resolution visual inspection by reviewing agent; not human peer review.",
+  "check_report_sha256": "a65255a639df011dda21e05a017f7dfeda93ddce9839deb29d1c2ebb7d78b426",
+  "plot_data_sha256": "368e47baa655d42bcd6a6cdd850e4249c0ca1523280c61b853b3be45e37e2f26",
+  "unresolved_findings": [],
+  "images": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch21_debottlenecking\\figures\\ch21_verified_bottleneck_sensitivity.png",
+      "sha256": "6674011a22ff5079a25684346f0c7ba8257c4486c8945bb034a225c018ae28bc",
+      "source_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch21_debottlenecking\\figures\\bottleneck_sensitivity.png",
+      "source_sha256": "6674011a22ff5079a25684346f0c7ba8257c4486c8945bb034a225c018ae28bc",
+      "literal_fence": 32,
+      "literal_code_sha256": "6596a6b3279088deb8547d209dc18805b759322e8c65b7d65c8f066ad5bdd1de",
+      "caption": "Rate sweep with numerical overloads and rejected compressor-map states shown separately",
+      "data": {
+        "feed_rate_kg_hr": [
+          50000.0,
+          60526.31578947369,
+          71052.63157894737,
+          81578.94736842105,
+          92105.26315789475,
+          102631.57894736843,
+          113157.8947368421,
+          123684.2105263158,
+          134210.5263157895,
+          144736.84210526315,
+          155263.15789473685,
+          165789.47368421053,
+          176315.7894736842,
+          186842.1052631579,
+          197368.4210526316,
+          207894.73684210528,
+          218421.05263157896,
+          228947.36842105264,
+          239473.68421052632,
+          250000.0
+        ],
+        "equipment": [
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor",
+          "HP Compressor"
+        ],
+        "utilization_percent": [
+          999.0,
+          999.0,
+          999.0,
+          999.0,
+          999.0,
+          999.0,
+          116.53516112423164,
+          96.06159665493567,
+          97.21296568428889,
+          98.5571002220404,
+          100.41728118135825,
+          110.1465465723197,
+          124.86498734357066,
+          319.54207593944045,
+          999.0,
+          999.0,
+          999.0,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "outside_map_flags": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "visual_inspection": "Full resolution inspected by root reviewing agent; readable labels/units, no clipping/overlap, numerical arrays and diagnostic semantics checked."
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch21_debottlenecking\\figures\\ch21_verified_utilization_dashboard.png",
+      "sha256": "f3d0dc40f48eabce02000db1f37ea2ccf8f5dd81278eef0efee6d1b9ba026e9b",
+      "source_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch21_debottlenecking\\figures\\utilization_dashboard.png",
+      "source_sha256": "f3d0dc40f48eabce02000db1f37ea2ccf8f5dd81278eef0efee6d1b9ba026e9b",
+      "literal_fence": 31,
+      "literal_code_sha256": "5d6e0f9d59642353490a931f0ad2164f581c10f7024fc36ab31c6fe58b539297",
+      "caption": "Capacity percentages after solving the generated screening compressor map",
+      "data": {
+        "equipment": [
+          "HP Separator",
+          "HP Compressor"
+        ],
+        "utilization_percent": [
+          83.33327180256973,
+          99.3072102317571
+        ]
+      },
+      "visual_inspection": "Full resolution inspected by root reviewing agent; readable labels/units, no clipping/overlap, numerical arrays and diagnostic semantics checked."
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch21_debottlenecking\\figures\\ch21_verified_waterfall_debottleneck.png",
+      "sha256": "fb0b68f2e31a5a2950461c1b257f37631f537563c1d971aac0f5f732635a7062",
+      "source_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch21_debottlenecking\\figures\\waterfall_debottleneck.png",
+      "source_sha256": "fb0b68f2e31a5a2950461c1b257f37631f537563c1d971aac0f5f732635a7062",
+      "literal_fence": 25,
+      "literal_code_sha256": "7f4b8121236f70754aa5d433d85e955c18690762a9754cfc7f78a358f569e882",
+      "caption": "Conditional rate changes from three declared constraint relaxations",
+      "data": {
+        "base_rate_kg_hr": 199999.99999999994,
+        "screened_rate_kg_hr": 227772.28355407715,
+        "steps": [
+          {
+            "equipment": "Export Comp",
+            "constraint": "speed",
+            "gain": 19128.41796875006,
+            "cumulative": 219128.41796875
+          },
+          {
+            "equipment": "Export Comp",
+            "constraint": "power",
+            "gain": 0.0,
+            "cumulative": 219128.41796875
+          },
+          {
+            "equipment": "Export Comp",
+            "constraint": "ratedPower",
+            "gain": 8643.865585327148,
+            "cumulative": 227772.28355407715
+          }
+        ]
+      },
+      "visual_inspection": "Full resolution inspected by root reviewing agent; readable labels/units, no clipping/overlap, numerical arrays and diagnostic semantics checked."
+    }
+  ]
+}

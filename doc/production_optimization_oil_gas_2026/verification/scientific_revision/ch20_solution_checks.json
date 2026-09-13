@@ -1,0 +1,1207 @@
+{
+  "chapter": "ch20_capacity_checks_and_utilization",
+  "source_commit": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "python_executable": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "hook_module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\export_capacity_solution_hooks.py",
+  "hook_sha256": "f25c5cb9e1e3b0944442930c63d3525798d616b3208a8863217b51687e917269",
+  "hook_snapshot": "verification\\scientific_revision\\hook_sources\\f25c5cb9e1e3b0944442930c63d3525798d616b3208a8863217b51687e917269.py",
+  "helper_sources": [
+    {
+      "module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\verify_optimization_solution_hooks.py",
+      "sha256": "57ad44d5e87dd4aaa28e1fe34698976f0645f7b397658b3621b4bf854dab275b",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\57ad44d5e87dd4aaa28e1fe34698976f0645f7b397658b3621b4bf854dab275b.py"
+    }
+  ],
+  "interpretation": "Exact literal execution with supplementary numerical/physical/software solution checks; not field calibration.",
+  "prerequisite_fences": [
+    {
+      "number": 1,
+      "sha256": "306f2c527582be372316a54625981a5270b8477cbd15d33937db7d88aac3913a",
+      "status": "passed"
+    },
+    {
+      "number": 2,
+      "sha256": "a2f4a6c2698d79d3a951a1d7a5c84bd973da7a7d577e7e3bd58f964ecc20578a",
+      "status": "passed"
+    },
+    {
+      "number": 3,
+      "sha256": "0340df1a97b96502908802e214b045268a1455500a6b52b62c413d97d10f1860",
+      "status": "passed"
+    },
+    {
+      "number": 4,
+      "sha256": "05f8a919af0809b65781dc270dd74f40d95a172012a7ed03a98c6dabd0396960",
+      "status": "passed"
+    },
+    {
+      "number": 5,
+      "sha256": "2cdbf4cfa4321778de10387a667b50cd30813c76d807441eae6a19093db82741",
+      "status": "passed"
+    },
+    {
+      "number": 6,
+      "sha256": "993c2c707bfc1a5d8651c0bddd83dcfbdc9342f415b69eaa8de194745fa81389",
+      "status": "passed"
+    },
+    {
+      "number": 7,
+      "sha256": "1b411eb91dac1bebda9f402006c99daa53a787682bf0205ddd8cecdaf88fa2a5",
+      "status": "passed"
+    },
+    {
+      "number": 8,
+      "sha256": "062db760578e508e14f90a70002045dff6503400980092a01c71cde4b9a56929",
+      "status": "passed"
+    },
+    {
+      "number": 9,
+      "sha256": "fe1df22c418f33e24a8f958bb306c5a5eb7ef39c3583efd1195f1fffdf6881a1",
+      "status": "passed"
+    },
+    {
+      "number": 10,
+      "sha256": "b6ce1463bd4b00cd62fa5ca6f09d6b4ccdfe5825d57fdabf2a527e97f29bbefd",
+      "status": "passed"
+    },
+    {
+      "number": 11,
+      "sha256": "634a2c2b48b9dc9b7af3cd57d6825c979070158199635762b2cd5c4de40b9a71",
+      "status": "passed"
+    }
+  ],
+  "entries": [
+    {
+      "number": 1,
+      "sha256": "306f2c527582be372316a54625981a5270b8477cbd15d33937db7d88aac3913a",
+      "code_sha256": "306f2c527582be372316a54625981a5270b8477cbd15d33937db7d88aac3913a",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Three-phase separation",
+          "passed": true,
+          "observed": {
+            "mass_relative": 1.3908874052503961e-14,
+            "component_relative": 4.6093220606735485e-15,
+            "inlet_kg_s": 0.6944444444444444,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Half-full circular geometry, retention and gas-load identities",
+          "passed": true,
+          "observed": {
+            "gas_utilization": 0.00997656682750284,
+            "liquid_utilization": 0.0014694156756266598,
+            "retention_s": 122497.67236438091,
+            "liquid_volume_m3": 18.09557368467721
+          },
+          "tolerance": 1e-10,
+          "scope": "Exactly half-diameter level makes half-area exact; fixed K-factor and retention target are declared assumptions."
+        }
+      ],
+      "status": "passed",
+      "seconds": 3.375,
+      "output": "Gas density:   64.53 kg/m³\nOil density:   517.17 kg/m³\nWater density: 958.87 kg/m³\n\n--- Gas Capacity ---\nMax gas velocity:  0.40 m/s\nActual gas vel.:   0.00 m/s\nGas utilization:   1.0%\n\n--- Liquid Capacity ---\nLiquid volume:     18.10 m³\nActual ret. time:  122497.7 s\nMin ret. time:     180.0 s\nLiquid utilization: 0.1%\n\n--- Overall ---\nSeparator utilization: 1.0%\nLimiting criterion:    Gas capacity\n"
+    },
+    {
+      "number": 2,
+      "sha256": "a2f4a6c2698d79d3a951a1d7a5c84bd973da7a7d577e7e3bd58f964ecc20578a",
+      "code_sha256": "a2f4a6c2698d79d3a951a1d7a5c84bd973da7a7d577e7e3bd58f964ecc20578a",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Compressor duty",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 45.38994880105301,
+            "energy_relative": 1.3200698837250454e-16,
+            "heat_plus_work_W": 12832658.366836166,
+            "power_W": 12832658.366836166,
+            "pressure_ratio": 4.0,
+            "temperature_rise_K": 134.34480033777004,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Declared driver derating and flow-margin arithmetic",
+          "passed": true,
+          "observed": {
+            "derated_driver_MW": 14.1,
+            "power_utilization": 0.9101176146692316,
+            "assumed_surge_margin_pct": 23.000000000000007
+          },
+          "tolerance": 1e-10,
+          "scope": "The assumed surge fraction is not an installed compressor map; discharge-temperature acceptability remains a separate constraint."
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.28100000000267755,
+      "output": "Compression ratio:    4.00\nShaft power:          12.83 MW\nDischarge temperature: 164.3 °C\n\nDriver rated power (ISO):     15.0 MW\nDriver derated power (25.0°C): 14.10 MW\nPower utilization:            91.0%\n\nSurge flow:      3.85 MSm³/day\nSurge margin:    23.0%\nMin surge margin: 10.0%\nSurge OK:         Yes\n"
+    },
+    {
+      "number": 3,
+      "sha256": "0340df1a97b96502908802e214b045268a1455500a6b52b62c413d97d10f1860",
+      "code_sha256": "0340df1a97b96502908802e214b045268a1455500a6b52b62c413d97d10f1860",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Two-stream exchanger boundary",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 36.11111111111111,
+            "energy_relative": 8.594282512356858e-11,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Clean/fouled duty, thermal approach and energy checks",
+          "passed": true,
+          "observed": [
+            {
+              "UA_W_K": 50000.0,
+              "duty_kW": 1694.7911378844663,
+              "minimum_approach_K": 21.477272034109262,
+              "energy_relative": 1.1505523803007522e-08
+            },
+            {
+              "UA_W_K": 40000.0,
+              "duty_kW": 1519.2437618335784,
+              "minimum_approach_K": 26.498685678166396,
+              "energy_relative": 2.8777038526009177e-09
+            }
+          ],
+          "tolerance": 1e-05,
+          "scope": "Two-stream UA model, positive terminal approaches; no arbitrary driving-temperature assumption."
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.7339999999967404,
+      "output": "Duty:              -1694.8 kW\nHot inlet:         90.0 °C\nHot outlet:        41.5 °C\nCold inlet:        20.0 °C\nCold outlet:       40.7 °C\nMin temp approach: 21.5 °C\n[{'UA_W_K': 50000.0, 'duty_kW': 1694.7911378844663, 'minimum_approach_K': 21.477272034109262, 'energy_relative': 1.1505523803007522e-08}, {'UA_W_K': 40000.0, 'duty_kW': 1519.2437618335784, 'minimum_approach_K': 26.498685678166396, 'energy_relative': 2.8777038526009177e-09}]\nFouled approach screen: True\n"
+    },
+    {
+      "number": 4,
+      "sha256": "05f8a919af0809b65781dc270dd74f40d95a172012a7ed03a98c6dabd0396960",
+      "code_sha256": "05f8a919af0809b65781dc270dd74f40d95a172012a7ed03a98c6dabd0396960",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Throttling valve isenthalpic balance",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 28.708591412382507,
+            "energy_relative": 1.2623859838615844e-10,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Valve pressure boundary and ratio",
+          "passed": true,
+          "observed": {
+            "ratio": 0.38461538461538464,
+            "pressure_out_bara": 25.0
+          },
+          "tolerance": 1e-12,
+          "scope": "A 0.55 heuristic flag is not a Cv/xT valve-capacity or choking calculation."
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.125,
+      "output": "Inlet pressure:    65.0 bara\nOutlet pressure:   25.0 bara\nPressure ratio:    0.385\nOutlet temperature: 42.1 °C\nWARNING: Close to or at choked flow conditions!\n"
+    },
+    {
+      "number": 5,
+      "sha256": "2cdbf4cfa4321778de10387a667b50cd30813c76d807441eae6a19093db82741",
+      "code_sha256": "2cdbf4cfa4321778de10387a667b50cd30813c76d807441eae6a19093db82741",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Multiphase pipeline",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 41.666666666666664,
+            "inlet_bara": 80.0,
+            "outlet_bara": 49.33447815637001,
+            "pressure_loss_bar": 30.66552184362999
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Unit-converted screening velocities and pressure budget",
+          "passed": true,
+          "observed": {
+            "mixture_velocity_m_s": 5.343986156818775,
+            "screening_velocity_m_s": 17.701694217365542,
+            "velocity_utilization": 0.3018912252803616,
+            "pressure_utilization": 0.7666380460907497,
+            "MAOP_utilization": 0.8
+          },
+          "tolerance": 1e-10,
+          "scope": "Specified erosional constant and pressure limits; a screening calculation, not erosion prediction."
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.2969999999986612,
+      "output": "Outlet pressure:       49.3 bara\nPressure drop:         30.7 bar\nMixture velocity:      5.34 m/s\nErosional velocity:    17.7 m/s\n\nVelocity utilization:  30.2%\nPressure drop util.:   76.7%\nMAOP utilization:      80.0%\n"
+    },
+    {
+      "number": 6,
+      "sha256": "993c2c707bfc1a5d8651c0bddd83dcfbdc9342f415b69eaa8de194745fa81389",
+      "code_sha256": "993c2c707bfc1a5d8651c0bddd83dcfbdc9342f415b69eaa8de194745fa81389",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Facility HP separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 2.0755968372603623e-14,
+            "component_relative": 7.203025582254798e-15,
+            "inlet_kg_s": 97.22222222222217,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Facility compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 66.09059938736576,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 7851204.594312832,
+            "power_W": 7851204.594312832,
+            "pressure_ratio": 2.142857142857143,
+            "temperature_rise_K": 65.71145420418736,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Facility cooler",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 66.09059938736576,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": -22203473.421465956
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "80 km facility pipeline",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 66.09059938736576,
+            "inlet_bara": 150.0,
+            "outlet_bara": 143.4081491794111,
+            "pressure_loss_bar": 6.591850820588888
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        }
+      ],
+      "status": "passed",
+      "seconds": 1.1560000000026776,
+      "output": "=== Process Simulation Results ===\nFeed rate:          350000 kg/hr\nHP sep gas rate:    237926 kg/hr\nCompressor power:   7.85 MW\nCooler outlet T:    40.0 °C\nPipeline outlet P:  143.4 bara\n"
+    },
+    {
+      "number": 7,
+      "sha256": "1b411eb91dac1bebda9f402006c99daa53a787682bf0205ddd8cecdaf88fa2a5",
+      "code_sha256": "1b411eb91dac1bebda9f402006c99daa53a787682bf0205ddd8cecdaf88fa2a5",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Utilization arithmetic and explicit extrapolation scope",
+          "passed": true,
+          "observed": [
+            {
+              "tag": "V-100",
+              "type": "HP Separator",
+              "utilization": 0.8196229370655173,
+              "limiting_criterion": "Gas capacity",
+              "spare_capacity": 0.18037706293448275
+            },
+            {
+              "tag": "K-100",
+              "type": "Export Compressor",
+              "utilization": 0.3237610141984673,
+              "limiting_criterion": "Power",
+              "spare_capacity": 0.6762389858015327
+            },
+            {
+              "tag": "E-100",
+              "type": "Gas Cooler",
+              "utilization": 0.2,
+              "limiting_criterion": "Temperature approach",
+              "spare_capacity": 0.8
+            },
+            {
+              "tag": "Pipeline",
+              "type": "Export Pipeline",
+              "utilization": 0.06591850820588889,
+              "limiting_criterion": "Pressure drop",
+              "spare_capacity": 0.9340814917941112
+            }
+          ],
+          "tolerance": 1e-06,
+          "scope": "The cooler approach ratio is a feasibility indicator. Current-rate division is a linear screening extrapolation, not a solved throughput limit."
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "\n================================================================================\nFACILITY UTILIZATION REPORT\n================================================================================\nTag          Type                   Util.      Limit                  Spare      Status\n--------------------------------------------------------------------------------\nV-100        HP Separator           82.0%      Gas capacity           18.0%      YELLOW\nK-100        Export Compressor      32.4%      Power                  67.6%      GREEN\nE-100        Gas Cooler             20.0%      Temperature approach   80.0%      GREEN\nPipeline     Export Pipeline        6.6%       Pressure drop          93.4%      GREEN\n\n>>> BOTTLENECK: V-100 (HP Separator) at 82.0% utilization\n    Limiting criterion: Gas capacity\n    Linear screening extrapolation: 427026 kg/hr (122.0% of current)\nThis extrapolation is not a capacity solution: rerun the full process and all constraints at any candidate rate.\n"
+    },
+    {
+      "number": 8,
+      "sha256": "062db760578e508e14f90a70002045dff6503400980092a01c71cde4b9a56929",
+      "code_sha256": "062db760578e508e14f90a70002045dff6503400980092a01c71cde4b9a56929",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Input 0.5 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 2.060979958124725e-14,
+            "component_relative": 7.325110761615048e-15,
+            "inlet_kg_s": 48.61111111111111,
+            "energy_relative": 1.386812090824678e-16,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.5 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 33.04529969368291,
+            "energy_relative": 7.018980416896316e-17,
+            "heat_plus_work_W": 3925602.297156406,
+            "power_W": 3925602.297156406,
+            "pressure_ratio": 2.142857142857143,
+            "temperature_rise_K": 65.7114542041873,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.6 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 2.0829052768281794e-14,
+            "component_relative": 7.01989781321442e-15,
+            "inlet_kg_s": 58.33333333333333,
+            "energy_relative": 1.1556767423538986e-16,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.6 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 39.65435963241947,
+            "energy_relative": 1.1698300694827167e-16,
+            "heat_plus_work_W": 4710722.756587704,
+            "power_W": 4710722.756587704,
+            "pressure_ratio": 2.142857142857143,
+            "temperature_rise_K": 65.71145420418748,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.7 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 2.067244334897141e-14,
+            "component_relative": 7.32511076161505e-15,
+            "inlet_kg_s": 68.05555555555554,
+            "energy_relative": 1.98116012974954e-16,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.7 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 46.26341957115609,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 5495843.2160190055,
+            "power_W": 5495843.2160190055,
+            "pressure_ratio": 2.142857142857143,
+            "temperature_rise_K": 65.71145420418753,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.8 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 2.08290527682818e-14,
+            "component_relative": 7.019897813214421e-15,
+            "inlet_kg_s": 77.77777777777776,
+            "energy_relative": 3.4670302270616943e-16,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.8 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 52.87247950989262,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 6280963.675450283,
+            "power_W": 6280963.675450283,
+            "pressure_ratio": 2.142857142857143,
+            "temperature_rise_K": 65.71145420418753,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.9 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 2.1113269862585838e-14,
+            "component_relative": 7.392935861259633e-15,
+            "inlet_kg_s": 87.49999999999999,
+            "energy_relative": 1.540902323138533e-16,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.9 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 59.48153944862922,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 7066084.134881578,
+            "power_W": 7066084.134881578,
+            "pressure_ratio": 2.142857142857143,
+            "temperature_rise_K": 65.71145420418753,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 1.0 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 2.0755968372603623e-14,
+            "component_relative": 7.203025582254798e-15,
+            "inlet_kg_s": 97.22222222222217,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 1.0 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 66.09059938736576,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 7851204.594312832,
+            "power_W": 7851204.594312832,
+            "pressure_ratio": 2.142857142857143,
+            "temperature_rise_K": 65.71145420418736,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 1.1 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 2.0995153667550393e-14,
+            "component_relative": 7.325110761615048e-15,
+            "inlet_kg_s": 106.94444444444443,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 1.1 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 72.69965932610243,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 8636325.053744148,
+            "power_W": 8636325.053744148,
+            "pressure_ratio": 2.142857142857143,
+            "temperature_rise_K": 65.71145420418753,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 1.2 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 2.08290527682818e-14,
+            "component_relative": 7.01989781321442e-15,
+            "inlet_kg_s": 116.66666666666663,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 1.2 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 79.30871926483894,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 9421445.513175385,
+            "power_W": 9421445.513175385,
+            "pressure_ratio": 2.142857142857143,
+            "temperature_rise_K": 65.71145420418736,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 1.3 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 2.102581844895382e-14,
+            "component_relative": 7.043375732322161e-15,
+            "inlet_kg_s": 126.3888888888889,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 1.3 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 85.91777920357553,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 10206565.97260673,
+            "power_W": 10206565.97260673,
+            "pressure_ratio": 2.142857142857143,
+            "temperature_rise_K": 65.71145420418759,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Fixed-composition rate sweep scaling",
+          "passed": true,
+          "observed": {
+            "cases": 9,
+            "maximum_normalized_utilization_error": 1.5543122344752192e-15
+          },
+          "tolerance": 1e-07,
+          "scope": "Linear proportionality is justified only for this fixed T/P/composition separation/compression boundary."
+        }
+      ],
+      "status": "passed",
+      "seconds": 1.625,
+      "output": "Flow Factor    Flow (kg/hr)   Sep. Util.     Comp. Util.   \n--------------------------------------------------------\n0.5            175000         41.0%          16.2%         \n0.6            210000         49.2%          19.4%         \n0.7            245000         57.4%          22.7%         \n0.8            280000         65.6%          25.9%         \n0.9            315000         73.8%          29.1%         \n1.0            350000         82.0%          32.4%         \n1.1            385000         90.2%          35.6%         \n1.2            420000         98.4%          38.9%         \n1.3            455000         106.6%         42.1%         \n"
+    },
+    {
+      "number": 9,
+      "sha256": "fe1df22c418f33e24a8f958bb306c5a5eb7ef39c3583efd1195f1fffdf6881a1",
+      "code_sha256": "fe1df22c418f33e24a8f958bb306c5a5eb7ef39c3583efd1195f1fffdf6881a1",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Input 0.1 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 1.2342239265111003e-14,
+            "component_relative": 1.145803087660625e-13,
+            "inlet_kg_s": 43.17750129237041,
+            "energy_relative": 1.4475767357502375e-12,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.1 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.0123924470094003,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 267715.98329364223,
+            "power_W": 267715.98329364223,
+            "pressure_ratio": 1.8461538461538463,
+            "temperature_rise_K": 60.40130781543172,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.2 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 1.3400697554976429e-14,
+            "component_relative": 1.1703040892993512e-13,
+            "inlet_kg_s": 44.539166382188675,
+            "energy_relative": 1.8284555795009954e-12,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.2 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.7832936033550062,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 237238.11984731472,
+            "power_W": 237238.11984731472,
+            "pressure_ratio": 1.8461538461538463,
+            "temperature_rise_K": 60.401307815431664,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.3 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 2.6625519981107906e-14,
+            "component_relative": 1.1044254606938886e-13,
+            "inlet_kg_s": 45.900831472006374,
+            "energy_relative": 2.004175730288197e-12,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.3 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.5541947596990682,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 206760.25640079513,
+            "power_W": 206760.25640079513,
+            "pressure_ratio": 1.8461538461538463,
+            "temperature_rise_K": 60.40130781543371,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.4 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 1.144084763289081e-13,
+            "component_relative": 6.94985867993795e-14,
+            "inlet_kg_s": 47.262496561787465,
+            "energy_relative": 2.1040438491640583e-12,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.4 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3250959160438633,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 176282.39295437222,
+            "power_W": 176282.39295437222,
+            "pressure_ratio": 1.8461538461538463,
+            "temperature_rise_K": 60.40130781543638,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.5 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 7.189574362203502e-14,
+            "component_relative": 2.6512189571133373e-14,
+            "inlet_kg_s": 48.62416165159823,
+            "energy_relative": 2.1675642203676905e-12,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.5 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.0959970723926182,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 145804.52950844815,
+            "power_W": 145804.52950844815,
+            "pressure_ratio": 1.8461538461538463,
+            "temperature_rise_K": 60.4013078154336,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.6 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 3.113059626612406e-14,
+            "component_relative": 2.674505916094002e-13,
+            "inlet_kg_s": 49.985826741389346,
+            "energy_relative": 2.2138710658158528e-12,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.6 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 0.8668982287399455,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 115326.66606233639,
+            "power_W": 115326.66606233639,
+            "pressure_ratio": 1.8461538461538463,
+            "temperature_rise_K": 60.40130781543019,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.7 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 8.02599644195693e-15,
+            "component_relative": 5.130053944825233e-13,
+            "inlet_kg_s": 51.3474918312292,
+            "energy_relative": 2.2476285452299347e-12,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.7 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 0.6377993850888739,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 84848.80261643785,
+            "power_W": 84848.80261643785,
+            "pressure_ratio": 1.8461538461538463,
+            "temperature_rise_K": 60.40130781542439,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.8 separator",
+          "passed": true,
+          "observed": {
+            "mass_relative": 4.4755067630087383e-14,
+            "component_relative": 1.1436328132276767e-13,
+            "inlet_kg_s": 52.709156920984114,
+            "energy_relative": 2.27331812432613e-12,
+            "heat_plus_work_W": 0.0
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Input 0.8 compressor",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 0.4087005414365215,
+            "energy_relative": 0.0,
+            "heat_plus_work_W": 54370.939170370206,
+            "power_W": 54370.939170370206,
+            "pressure_ratio": 1.8461538461538463,
+            "temperature_rise_K": 60.40130781541268,
+            "single_phase_inlet": true
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": 1e-06
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Executed volume-reference water-cut sweep",
+          "passed": true,
+          "observed": [
+            {
+              "reference_water_cut_pct": 10.0,
+              "first_separator_liquid_m3_hr": 233.38933622249928,
+              "liquid_screen_utilization_pct": 58.34733405562483,
+              "gas_kg_hr": 7244.612809233841,
+              "compression_MW": 0.2677159832936422
+            },
+            {
+              "reference_water_cut_pct": 20.0,
+              "first_separator_liquid_m3_hr": 230.06430427250856,
+              "liquid_screen_utilization_pct": 57.51607606812714,
+              "gas_kg_hr": 6419.856972078022,
+              "compression_MW": 0.23723811984731472
+            },
+            {
+              "reference_water_cut_pct": 30.0,
+              "first_separator_liquid_m3_hr": 226.73927232253823,
+              "liquid_screen_utilization_pct": 56.68481808063456,
+              "gas_kg_hr": 5595.101134916646,
+              "compression_MW": 0.20676025640079512
+            },
+            {
+              "reference_water_cut_pct": 40.0,
+              "first_separator_liquid_m3_hr": 223.41424037240887,
+              "liquid_screen_utilization_pct": 55.85356009310222,
+              "gas_kg_hr": 4770.345297757908,
+              "compression_MW": 0.1762823929543722
+            },
+            {
+              "reference_water_cut_pct": 50.0,
+              "first_separator_liquid_m3_hr": 220.08920842231475,
+              "liquid_screen_utilization_pct": 55.02230210557869,
+              "gas_kg_hr": 3945.5894606134257,
+              "compression_MW": 0.14580452950844813
+            },
+            {
+              "reference_water_cut_pct": 60.0,
+              "first_separator_liquid_m3_hr": 216.76417647213844,
+              "liquid_screen_utilization_pct": 54.19104411803462,
+              "gas_kg_hr": 3120.8336234638036,
+              "compression_MW": 0.11532666606233638
+            },
+            {
+              "reference_water_cut_pct": 70.0,
+              "first_separator_liquid_m3_hr": 213.43914452218638,
+              "liquid_screen_utilization_pct": 53.3597861305466,
+              "gas_kg_hr": 2296.077786319946,
+              "compression_MW": 0.08484880261643785
+            },
+            {
+              "reference_water_cut_pct": 80.0,
+              "first_separator_liquid_m3_hr": 210.11411257187007,
+              "liquid_screen_utilization_pct": 52.52852814296752,
+              "gas_kg_hr": 1471.3219491714774,
+              "compression_MW": 0.054370939170370204
+            }
+          ],
+          "tolerance": 1e-10,
+          "scope": "Fixed reference liquid, specified associated-gas/oil ratio, three named compounds; no prescribed field trend."
+        }
+      ],
+      "status": "passed",
+      "seconds": 3.125,
+      "output": "[\n  {\n    \"reference_water_cut_pct\": 10.0,\n    \"first_separator_liquid_m3_hr\": 233.38933622249928,\n    \"liquid_screen_utilization_pct\": 58.34733405562483,\n    \"gas_kg_hr\": 7244.612809233841,\n    \"compression_MW\": 0.2677159832936422\n  },\n  {\n    \"reference_water_cut_pct\": 20.0,\n    \"first_separator_liquid_m3_hr\": 230.06430427250856,\n    \"liquid_screen_utilization_pct\": 57.51607606812714,\n    \"gas_kg_hr\": 6419.856972078022,\n    \"compression_MW\": 0.23723811984731472\n  },\n  {\n    \"reference_water_cut_pct\": 30.0,\n    \"first_separator_liquid_m3_hr\": 226.73927232253823,\n    \"liquid_screen_utilization_pct\": 56.68481808063456,\n    \"gas_kg_hr\": 5595.101134916646,\n    \"compression_MW\": 0.20676025640079512\n  },\n  {\n    \"reference_water_cut_pct\": 40.0,\n    \"first_separator_liquid_m3_hr\": 223.41424037240887,\n    \"liquid_screen_utilization_pct\": 55.85356009310222,\n    \"gas_kg_hr\": 4770.345297757908,\n    \"compression_MW\": 0.1762823929543722\n  },\n  {\n    \"reference_water_cut_pct\": 50.0,\n    \"first_separator_liquid_m3_hr\": 220.08920842231475,\n    \"liquid_screen_utilization_pct\": 55.02230210557869,\n    \"gas_kg_hr\": 3945.5894606134257,\n    \"compression_MW\": 0.14580452950844813\n  },\n  {\n    \"reference_water_cut_pct\": 60.0,\n    \"first_separator_liquid_m3_hr\": 216.76417647213844,\n    \"liquid_screen_utilization_pct\": 54.19104411803462,\n    \"gas_kg_hr\": 3120.8336234638036,\n    \"compression_MW\": 0.11532666606233638\n  },\n  {\n    \"reference_water_cut_pct\": 70.0,\n    \"first_separator_liquid_m3_hr\": 213.43914452218638,\n    \"liquid_screen_utilization_pct\": 53.3597861305466,\n    \"gas_kg_hr\": 2296.077786319946,\n    \"compression_MW\": 0.08484880261643785\n  },\n  {\n    \"reference_water_cut_pct\": 80.0,\n    \"first_separator_liquid_m3_hr\": 210.11411257187007,\n    \"liquid_screen_utilization_pct\": 52.52852814296752,\n    \"gas_kg_hr\": 1471.3219491714774,\n    \"compression_MW\": 0.054370939170370204\n  }\n]\nBasis: oil and water volumes at 15 C, 1.01325 bara; fixed 200 m3/h liquid and specified GOR 100 Sm3/m3 oil.\nThis methane/heptane/water scenario is not a well-deliverability prediction.\n"
+    },
+    {
+      "number": 10,
+      "sha256": "b6ce1463bd4b00cd62fa5ca6f09d6b4ccdfe5825d57fdabf2a527e97f29bbefd",
+      "code_sha256": "b6ce1463bd4b00cd62fa5ca6f09d6b4ccdfe5825d57fdabf2a527e97f29bbefd",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Independent sonic-state continuity reproduces SI ideal nozzle area",
+          "passed": true,
+          "observed": {
+            "ideal_area_m2": 0.004642999061566771,
+            "mass_rate_kg_s": 69.44444444444444,
+            "sonic_pressure_Pa": 4496724.217703166,
+            "sonic_temperature_K": 307.0869565217391,
+            "relative_mass_error": 0.0,
+            "real_fluid_Z": 0.8730913605152781,
+            "relieving_pressure_bara": 82.39867500000001
+          },
+          "tolerance": 1e-12,
+          "scope": "Independent rho_star*a_star*A calculation using calorically perfect ideal gas; deliberately not an API PSV or real-gas rating."
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.11000000000058208,
+      "output": "Relief pressure:    82.4 bara\nGas density:        70.25 kg/m³\nGas MW:             21.7 g/mol\nZ at relief:        0.8731\nk (Cp/Cv):          1.457\nIdeal sonic mass flux: 14956.81 kg/(m2 s)\nIdeal throat area: 0.004643 m2; critical backpressure ratio 0.5457\nNot a rated relief device: real-gas/two-phase discharge, coefficients, backpressure and code requirements remain to be evaluated.\n"
+    },
+    {
+      "number": 11,
+      "sha256": "634a2c2b48b9dc9b7af3cd57d6825c979070158199635762b2cd5c4de40b9a71",
+      "code_sha256": "634a2c2b48b9dc9b7af3cd57d6825c979070158199635762b2cd5c4de40b9a71",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Missing equipment prevents a complete capacity coverage claim",
+          "passed": true,
+          "observed": [
+            "equipment:Book capacity example/Compression/Missing compressor=MISSING_EQUIPMENT",
+            "equipment:Book capacity example/Compression/Missing compressor#power=MISSING_CONSTRAINT"
+          ],
+          "tolerance": null,
+          "scope": "Software coverage behavior only."
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.35899999999674037,
+      "output": "{\n  \"schemaVersion\": \"1.0\",\n  \"coverageScope\": \"DECLARED_EQUIPMENT_AND_CONSTRAINTS\",\n  \"modelName\": \"Book capacity example\",\n  \"registryIdentityDigest\": \"\",\n  \"expectedEquipmentIds\": [\n    \"equipment:Book capacity example/Compression/Missing compressor\"\n  ],\n  \"expectedConstraintIds\": [\n    \"equipment:Book capacity example/Compression/Missing compressor#power\"\n  ],\n  \"requiredConstraintIds\": [\n    \"equipment:Book capacity example/Compression/Missing compressor#power\"\n  ],\n  \"rows\": [\n    {\n      \"equipmentId\": \"equipment:Book capacity example/Compression/Missing compressor\",\n      \"constraintName\": \"\",\n      \"qualifiedConstraintId\": \"\",\n      \"origin\": \"UNKNOWN\",\n      \"enabled\": true,\n      \"unit\": \"\",\n      \"basis\": \"\",\n      \"provenance\": \"\",\n      \"minimumConstraint\": false,\n      \"currentValue\": null,\n      \"applicableLimit\": null,\n      \"normalizedUtilization\": null,\n      \"statuses\": [\n        \"MISSING_EQUIPMENT\"\n      ]\n    },\n    {\n      \"equipmentId\": \"equipment:Book capacity example/Compression/Missing compressor\",\n      \"constraintName\": \"power\",\n      \"qualifiedConstraintId\": \"equipment:Book capacity example/Compression/Missing compressor#power\",\n      \"origin\": \"UNKNOWN\",\n      \"enabled\": true,\n      \"unit\": \"\",\n      \"basis\": \"\",\n      \"provenance\": \"\",\n      \"minimumConstraint\": false,\n      \"currentValue\": null,\n      \"applicableLimit\": null,\n      \"normalizedUtilization\": null,\n      \"statuses\": [\n        \"MISSING_CONSTRAINT\"\n      ]\n    }\n  ],\n  \"diagnostics\": [\n    \"equipment:Book capacity example/Compression/Missing compressor=MISSING_EQUIPMENT\",\n    \"equipment:Book capacity example/Compression/Missing compressor#power=MISSING_CONSTRAINT\"\n  ],\n  \"complete\": false\n}\n"
+    }
+  ],
+  "all_targeted_checks_passed": true
+}

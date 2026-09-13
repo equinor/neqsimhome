@@ -1,0 +1,436 @@
+{
+  "chapter": "ch06_wells_artificial_lift",
+  "source_sha256": "93da516016be5dc1a4d739fb0d443d379bc1be72ec32960f73010f7bc1f9a33d",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "literal_blocks": [
+    {
+      "index": 12,
+      "code_sha256": "adf3a5d86e3dda8f042b19d68401e7ca3c4f2fef5762f04a24ded0349a0cb0c7",
+      "line": 366,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "oil_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.011457814330825695,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "reservoirStream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.011457814330825693,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "well",
+          "class": "neqsim.process.equipment.reservoir.WellFlow",
+          "inlets": [
+            "Reservoir"
+          ],
+          "outlets": [
+            "Well-A out stream"
+          ]
+        }
+      ],
+      "seconds": 1.9219999999986612,
+      "output": "Liquid rate (Sm3/day): 326.178390137781 BHP: 120.0 drawdown: 130.0\n"
+    },
+    {
+      "index": 13,
+      "code_sha256": "8775f24310f54b96a8953723523cdaab98b477b992dda8f0085aae5c7f73c173",
+      "line": 400,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "oil_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.011457814330825695,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "reservoirStream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.011457814330825693,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "well",
+          "class": "neqsim.process.equipment.reservoir.WellFlow",
+          "inlets": [
+            "Reservoir"
+          ],
+          "outlets": [
+            "Well-A out stream"
+          ]
+        }
+      ],
+      "seconds": 0.0,
+      "output": "Accepted constrained IPR rate: 121.24728063814355 Sm3/day\n"
+    },
+    {
+      "index": 33,
+      "code_sha256": "184dc6a0afd3d84dffacc4d2ffdca4ab06d37d40f17d44aef6b7c048aae57ea3",
+      "line": 1044,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "oil_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.011457814330825695,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "reservoirStream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.011457814330825693,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "well",
+          "class": "neqsim.process.equipment.reservoir.WellFlow",
+          "inlets": [
+            "Reservoir"
+          ],
+          "outlets": [
+            "Well-A out stream"
+          ]
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.0,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "network",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork",
+          "inlets": [],
+          "outlets": [
+            "Platform_outlet"
+          ]
+        },
+        {
+          "name": "platform",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkNode"
+        },
+        {
+          "name": "fl",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        },
+        {
+          "name": "riser",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        }
+      ],
+      "seconds": 3.375,
+      "output": "Converged: True\nIterations: 67\nTotal production: 38.31 kg/s\n\n  Well   BHP (bara)   WHP (bara)  Flow (kg/s)\n------------------------------------------------\n     A        183.3         94.3        12.78\n     B        166.3         80.5         8.19\n     C        149.5         83.9        11.20\n     D        163.7         75.1         6.14\n"
+    },
+    {
+      "index": 34,
+      "code_sha256": "6f38d178872d59aff3298f9b1fc196dc6ab750adbf67fdd4a84a8be6e7da29a0",
+      "line": 1139,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "oil_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.011457814330825695,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "reservoirStream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.011457814330825693,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "well",
+          "class": "neqsim.process.equipment.reservoir.WellFlow",
+          "inlets": [
+            "Reservoir"
+          ],
+          "outlets": [
+            "Well-A out stream"
+          ]
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.0,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "network",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork",
+          "inlets": [],
+          "outlets": [
+            "Platform_outlet"
+          ]
+        },
+        {
+          "name": "platform",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkNode"
+        },
+        {
+          "name": "fl",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        },
+        {
+          "name": "riser",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        }
+      ],
+      "seconds": 18.51600000000326,
+      "output": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch06_wells_artificial_lift\\chapter.md:1139:42: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    },
+    {
+      "index": 35,
+      "code_sha256": "70dfeb7f209dfd575c1e2fd80107c8715178617ce1ca5b1acb551331a4a610c1",
+      "line": 1186,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "oil_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.011457814330825695,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "reservoirStream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.011457814330825693,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "well",
+          "class": "neqsim.process.equipment.reservoir.WellFlow",
+          "inlets": [
+            "Reservoir"
+          ],
+          "outlets": [
+            "Well-A out stream"
+          ]
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.0,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "network",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork",
+          "inlets": [],
+          "outlets": [
+            "Platform_outlet"
+          ]
+        },
+        {
+          "name": "platform",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkNode"
+        },
+        {
+          "name": "fl",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        },
+        {
+          "name": "riser",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        },
+        {
+          "name": "optimizer",
+          "class": "neqsim.process.equipment.network.NetworkOptimizer"
+        },
+        {
+          "name": "result",
+          "class": "neqsim.process.equipment.network.NetworkOptimizer$OptimizationResult"
+        }
+      ],
+      "seconds": 16.171000000002095,
+      "output": "Optimizer converged: True; Optimization completed\nCandidate total production: 40.80 kg/s\n  Choke-A: 100.0%\n  Choke-B: 100.0%\n  Choke-C: 100.0%\n  Choke-D: 100.0%\n\nPost-optimization well rates:\n  Well A: 13.08 kg/s\n  Well B: 8.90 kg/s\n  Well C: 12.13 kg/s\n  Well D: 6.69 kg/s\n"
+    },
+    {
+      "index": 43,
+      "code_sha256": "0c82f71a49852a28f81605573edb10331626717f2b6154a08b9e6d69646cbb79",
+      "line": 1438,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "oil_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.011457814330825695,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "reservoirStream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.011457814330825693,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "well",
+          "class": "neqsim.process.equipment.reservoir.WellFlow",
+          "inlets": [
+            "Reservoir"
+          ],
+          "outlets": [
+            "Well-A out stream"
+          ]
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.0,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "network",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork",
+          "inlets": [],
+          "outlets": [
+            "Platform_outlet"
+          ]
+        },
+        {
+          "name": "platform",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkNode"
+        },
+        {
+          "name": "fl",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        },
+        {
+          "name": "riser",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        },
+        {
+          "name": "optimizer",
+          "class": "neqsim.process.equipment.network.NetworkOptimizer"
+        },
+        {
+          "name": "result",
+          "class": "neqsim.process.equipment.network.NetworkOptimizer$OptimizationResult"
+        }
+      ],
+      "seconds": 0.625,
+      "output": ""
+    },
+    {
+      "index": 44,
+      "code_sha256": "f39cd0e7e084e7d8877a8e4cc8798c4a4799972bce2177f4ad0da32a10d29bf6",
+      "line": 1466,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "oil_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.011457814330825695,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "reservoirStream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.011457814330825693,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "well",
+          "class": "neqsim.process.equipment.reservoir.WellFlow",
+          "inlets": [
+            "Reservoir"
+          ],
+          "outlets": [
+            "Well-A out stream"
+          ]
+        },
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.0,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "network",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork",
+          "inlets": [],
+          "outlets": [
+            "Platform_outlet"
+          ]
+        },
+        {
+          "name": "platform",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkNode"
+        },
+        {
+          "name": "fl",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        },
+        {
+          "name": "riser",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.network.LoopedPipeNetwork$NetworkPipe"
+        },
+        {
+          "name": "optimizer",
+          "class": "neqsim.process.equipment.network.NetworkOptimizer"
+        },
+        {
+          "name": "result",
+          "class": "neqsim.process.equipment.network.NetworkOptimizer$OptimizationResult"
+        }
+      ],
+      "seconds": 2.2039999999979045,
+      "output": "Well A: 13.17 kg/s\nWell C: 12.24 kg/s\nWell D: 6.78 kg/s\n"
+    }
+  ],
+  "physical_checks": []
+}

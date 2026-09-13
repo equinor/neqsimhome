@@ -1,0 +1,5904 @@
+{
+  "chapter": "ch10_separation_technology",
+  "source_sha256": "e942dbcd08440a891b43a99144444cd1c09aa2f8692da0cda8b9cfedd92cdbe4",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "literal_blocks": [
+    {
+      "index": 1,
+      "code_sha256": "7c84926895069b4683ede732503fa32220900415a37ea45b209bd91fbc1bc48f",
+      "line": 236,
+      "execution": "pass",
+      "seconds": 1.812999999994645,
+      "output": "=== HP Separator Results ===\nGas rate: 471.9 am3/hr\nGas density: 70.55 kg/m3\nLiquid rate: 119.29 m3/hr\nLiquid density: 559.2 kg/m3\n\nSouders-Brown K-factor: 0.107 m/s\nMaximum gas velocity: 0.28 m/s\nMinimum diameter (gas capacity): 1.09 m (1089 mm)\nRequired liquid volume: 3.98 m3 (for 120 s retention)\n"
+    },
+    {
+      "index": 2,
+      "code_sha256": "7f75e1984081d4682ac3158e7be477ec5ce24a5b65c407a8d8b2bd531aafb254",
+      "line": 335,
+      "execution": "pass",
+      "seconds": 0.14100000000325963,
+      "output": "=== Three-Phase Separator Results ===\nGas rate:   0.6406 MSm3/day\nOil rate:   144.30 m3/hr\nWater rate: 7.72 m3/hr\nOil density:   611.0 kg/m3\nWater density: 963.4 kg/m3\nGas density:   33.31 kg/m3\n"
+    },
+    {
+      "index": 3,
+      "code_sha256": "640ddb09b614170756c2158e15ec5f49f1c53cc4e0e2ea0dbdcbb4e9b78b3f59",
+      "line": 412,
+      "execution": "pass",
+      "seconds": 0.23399999999674037,
+      "output": "=== Suction Scrubber + Compressor ===\nScrubber gas out rate: 1.2596 MSm3/day\nScrubber liq out rate: 1.394 m3/hr\nCompressor power: 1513 kW\nCompressor outlet T: 96.0 \u00b0C\n"
+    },
+    {
+      "index": 4,
+      "code_sha256": "4340e445a0f8431807a756be68a0af55a9997ddcad14d34d45265b9e1cfa35e1",
+      "line": 533,
+      "execution": "pass",
+      "seconds": 0.17200000000593718,
+      "output": "{\n  \"orientation\": null,\n  \"separatorType\": null,\n  \"gasLoadFactor\": 0.11,\n  \"volumeSafetyFactor\": 1.0,\n  \"liquidLevelFraction\": 0.8,\n  \"retentionTime\": 60.0,\n  \"demisterType\": null,\n  \"demisterEfficiency\": 0.0,\n  \"numberOfInletNozzles\": 0,\n  \"inletNozzleDiameter\": 254.0,\n  \"gasOutletNozzleDiameter\": 0.0,\n  \"liquidOutletNozzleDiameter\": 0.0,\n  \"waterOutletNozzleDiameter\": 0.0,\n  \"headType\": null,\n  \"headThickness\": 0.0,\n  \"shellThickness\": 0.0,\n  \"designCode\": null,\n  \"gasDesignVelocity\": 0.0,\n  \"actualGasVelocity\": 0.0,\n  \"allowableGasVelocity\": 0.0,\n  \"designGasFlow\": 0.0,\n  \"designLiquidFlow\": 0.0,\n  \"designWaterFlow\": 0.0,\n  \"normalLiquidLevel\": 0.40484842546897293,\n  \"highLiquidLevel\": 0.566787795656562,\n  \"lowLiquidLevel\": 0.24290905528138373,\n  \"interfaceLevel\": 0.0,\n  \"surgeVolume\": 0.0,\n  \"holdupVolume\": 0.0,\n  \"emptyVesselWeight\": 0.0,\n  \"operatingLiquidVolume\": 0.0,\n  \"liquidDensity\": 0.0,\n  \"gasDensity\": 0.0,\n  \"effectiveLengthLiquid\": 3.3197570888455776,\n  \"effectiveLengthGas\": 2.5910299230014266,\n  \"foamAllowanceFactor\": 1.0,\n  \"dropletDiameterGasLiquid\": 100.0,\n  \"dropletDiameterLiquidLiquid\": 500.0,\n  \"designPressureMarginFactor\": 1.1,\n  \"designTemperatureMarginC\": 25.0,\n  \"maxGasVelocity\": 3.0,\n  \"maxLiquidVelocity\": 1.0,\n  \"demisterPressureDrop\": 1.5,\n  \"demisterVoidFraction\": 0.98,\n  \"minOilRetentionTime\": 2.0,\n  \"minWaterRetentionTime\": 3.0,\n  \"hhllFraction\": 0.8,\n  \"hllFraction\": 0.7,\n  \"nllFraction\": 0.5,\n  \"lllFraction\": 0.3,\n  \"weirFraction\": 0.25,\n  \"hilFraction\": 0.25,\n  \"nilFraction\": 0.2,\n  \"lilFraction\": 0.15,\n  \"detailedEntrainmentUsed\": false,\n  \"oilInGasFraction\": 0.0,\n  \"waterInGasFraction\": 0.0,\n  \"gasInOilFraction\": 0.0,\n  \"gasInWaterFraction\": 0.0,\n  \"oilInWaterFraction\": 0.0,\n  \"waterInOilFraction\": 0.0,\n  \"overallGasLiquidEfficiency\": 0.0,\n  \"mistEliminatorEfficiency\": 0.0,\n  \"kFactorUtilization\": 0.0,\n  \"mistEliminatorFlooded\": false,\n  \"liquidInGasCalibrationFactor\": 1.0,\n  \"gasCarryUnderCalibrationFactor\": 1.0,\n  \"liquidLiquidCalibrationFactor\": 1.0,\n  \"hhll\": 0.6477574807503568,\n  \"hll\": 0.566787795656562,\n  \"nll\": 0.40484842546897293,\n  \"lll\": 0.24290905528138373,\n  \"weirHeight\": 0.20242421273448646,\n  \"hil\": 0.20242421273448646,\n  \"nil\": 0.1619393701875892,\n  \"lil\": 0.12145452764069187,\n  \"name\": \"HP Separator\",\n  \"equipmentType\": \"Separator\",\n  \"equipmentClass\": \"Separator\",\n  \"designStandard\": \"ASME VIII / API 12J\",\n  \"totalWeight\": 1679.0896435008017,\n  \"vesselWeight\": 1061.7149642410138,\n  \"internalsWeight\": 1.0,\n  \"pipingWeight\": 425.08598569640554,\n  \"nozzlesWeight\": 0.0,\n  \"eiWeight\": 85.01719713928111,\n  \"structuralWeight\": 106.27149642410139,\n  \"operatingWeight\": 0.0,\n  \"maxDesignPressure\": 93.50000000000001,\n  \"minDesignPressure\": 0.0,\n  \"maxDesignTemperature\": NaN,\n  \"minDesignTemperature\": NaN,\n  \"maxOperatingPressure\": 85.0,\n  \"maxOperatingTemperature\": 100.0,\n  \"innerDiameter\": 0.8096968509379459,\n  \"outerDiameter\": 0.8299397659177029,\n  \"tangentLength\": 4.048484254689729,\n  \"wallThickness\": 0.010121457489878543,\n  \"moduleLength\": 6.072726382034594,\n  \"moduleWidth\": 1.6193937018758917,\n  \"moduleHeight\": 2.6193937018758917,\n  \"totalVolume\": 2.0846216117665755,\n  \"shellMaterial\": null,\n  \"headMaterial\": null,\n  \"corrosionAllowance\": 0.0,\n  \"power\": 0.0,\n  \"duty\": 0.0,\n  \"specificParameters\": {},\n  \"isSystemLevel\": false,\n  \"processName\": null,\n  \"equipmentCount\": 0,\n  \"totalPowerRequired\": 0.0,\n  \"totalPowerRecovered\": 0.0,\n  \"netPower\": 0.0,\n  \"totalHeatingDuty\": 0.0,\n  \"totalCoolingDuty\": 0.0,\n  \"totalPlotSpace\": 0.0,\n  \"footprintLength\": 0.0,\n  \"footprintWidth\": 0.0,\n  \"maxHeight\": 0.0,\n  \"weightByType\": {},\n  \"countByType\": {},\n  \"weightByDiscipline\": {},\n  \"equipmentList\": []\n}\n"
+    },
+    {
+      "index": 5,
+      "code_sha256": "8ac3dc1868e6f15024ff92c4ead6f3b37868a8fda885cac8deec548cdcdb5b88",
+      "line": 645,
+      "execution": "pass",
+      "seconds": 0.09399999999732245,
+      "output": "=== Phase Properties at 70 bara, 70\u00b0C ===\nGas rate: 536.3 am3/hr (0.8456 MSm3/day)\nGas density: 59.99 kg/m3\nLiquid rate: 150.93 m3/hr\nLiquid density: 581.9 kg/m3\n\n=== Separator Sizing ===\nK-factor (effective): 0.0877 m/s\nMax gas velocity: 0.259 m/s\nMinimum diameter (gas): 1.21 m (1211 mm)\nRequired liquid volume: 7.55 m3\n\nSelected diameter: 2.00 m\nRequired length: 6.30 m\nL/D ratio: 3.2\nL/D ratio is acceptable (2.5\u20136.0)\n"
+    },
+    {
+      "index": 6,
+      "code_sha256": "637680994023ed9cbbc2039eb9867acad2cbc2bfbb33c16377e62d709d40b832",
+      "line": 867,
+      "execution": "pass",
+      "seconds": 0.17199999999866122,
+      "output": "=== Three-Stage Separation Results ===\n       Stage   P (bara)   Gas (MSm3/d)   Liquid (m3/hr)\n--------------------------------------------------------\n HP (80 bar)       80.0         0.9140           116.37\n MP (20 bar)       20.0         0.1841            86.75\n  LP (5 bar)        5.0         0.0563            76.38\n\nTotal gas: 1.1544 MSm3/day\nLP separator liquid: 76.38 m3/hr\n"
+    },
+    {
+      "index": 7,
+      "code_sha256": "f29ad326a29b8933a641646a4d97ffb0d334a516d740179305a4cef6517f0948",
+      "line": 956,
+      "execution": "pass",
+      "seconds": 0.9219999999986612,
+      "output": " MP Pressure        LP liquid (m3/hr)\n          10                   97.142\n          15                   96.639\n          20                   95.971\n          25                   95.309\n          30                   94.685\n          35                   94.104\n          40                   93.562\n          45                   93.055\n          50                   92.579\nC:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch10_separation_technology\\chapter.md:956:67: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    },
+    {
+      "index": 8,
+      "code_sha256": "7459b1ad1ec094e24531e40b44f00f49d7c7964545926b8cda17655bef2a1f50",
+      "line": 1046,
+      "execution": "pass",
+      "seconds": 0.046999999998661224,
+      "output": "=== Separator Capacity Assessment ===\nVessel: 2.8m ID x 12.0m T-T\nActual gas velocity: 0.062 m/s\nActual K-factor: 0.0173 m/s\nDesign K-factor: 0.1070 m/s\nGas utilization: 16.2%\nLiquid retention time: 938 s (15.6 min)\nOK: Gas capacity within limits\n"
+    },
+    {
+      "index": 24,
+      "code_sha256": "b0c274a5c5c3658a9c03291520af37f5cc57c908eee7fdea3a8aa3147665ac48",
+      "line": 1620,
+      "execution": "pass",
+      "seconds": 0.125,
+      "output": "=================================================================\nTWO-STAGE SEPARATION WITH CAPACITY CONSTRAINTS\n=================================================================\n\nHP Separator (70 bara):\n  Gas rate:     0.8382 MSm3/day\n  Gas density:  59.99 kg/m3\n  Utilization:  83.0%\n  K-factor:     0.0888 m/s\n  rho_gas:      59.99 kg/m3\n  rho_liq:      584.6 kg/m3\n\nLP 3-Phase (5 bara):\n  Gas rate:     0.2688 MSm3/day\n  Gas density:  5.84 kg/m3\n  Utilization:  83.3%\n  K-factor:     0.0891 m/s\n  rho_gas:      5.84 kg/m3\n  rho_liq:      660.5 kg/m3\n"
+    },
+    {
+      "index": 25,
+      "code_sha256": "051e2fa5e55a08edf00a044bb918429fa3d9cec4a2eab5cc7f9abb2ed866c045",
+      "line": 1721,
+      "execution": "pass",
+      "seconds": 1.0469999999986612,
+      "output": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch10_separation_technology\\chapter.md:1721:96: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    },
+    {
+      "index": 26,
+      "code_sha256": "adc93fc6c102c195aa99a74b022efe353168871e7153e390b1a4bdd496095df4",
+      "line": 1826,
+      "execution": "pass",
+      "seconds": 0.06300000000192085,
+      "output": "=== Three-Phase Separator Results ===\nPressure:    35.0 bara\nTemperature: 60.0 \u00b0C\n\nGas rate:    0.7559 MSm3/day\nOil rate:    167.71 m3/hr\nWater rate:  17.05 m3/hr\n\nGas density:   29.10 kg/m3\nOil density:   625.8 kg/m3\nWater density: 968.4 kg/m3\n\nUtilization after autoSize(1.2): 83.2%\n\n=== Manual K-Factor Sizing ===\nK-factor: 0.107 m/s\nMax gas velocity: 0.485 m/s\nMin vessel diameter: 1.20 m (1196 mm)\n\nSelected diameter: 2.50 m\nOil volume: 13.98 m3 (300s retention)\nWater volume: 1.42 m3 (300s retention)\nTotal liquid volume: 15.40 m3\nVessel length: 8.27 m\nL/D ratio: 3.3\n"
+    },
+    {
+      "index": 27,
+      "code_sha256": "e0114a974630b0b527b42cd16fe881133689b28a55ee4767846d8d5b7eadb87e",
+      "line": 1935,
+      "execution": "pass",
+      "seconds": 1.1559999999954016,
+      "output": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch10_separation_technology\\chapter.md:1935:86: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    },
+    {
+      "index": 28,
+      "code_sha256": "5b27deffc5256ccf37dd38a6d8ad32242a239e7ad3881ffdcaeedde1908671d2",
+      "line": 2032,
+      "execution": "pass",
+      "seconds": 0.046000000002095476,
+      "output": "=== Mechanical Design JSON ===\n{\n  \"orientation\": null,\n  \"separatorType\": null,\n  \"gasLoadFactor\": 0.11,\n  \"volumeSafetyFactor\": 1.0,\n  \"liquidLevelFraction\": 0.8,\n  \"retentionTime\": 60.0,\n  \"demisterType\": null,\n  \"demisterEfficiency\": 0.0,\n  \"numberOfInletNozzles\": 0,\n  \"inletNozzleDiameter\": 254.0,\n  \"gasOutletNozzleDiameter\": 0.0,\n  \"liquidOutletNozzleDiameter\": 0.0,\n  \"waterOutletNozzleDiameter\": 0.0,\n  \"headType\": null,\n  \"headThickness\": 0.0,\n  \"shellThickness\": 0.0,\n  \"designCode\": null,\n  \"gasDesignVelocity\": 0.0,\n \n"
+    }
+  ],
+  "physical_checks": [
+    {
+      "block": 1,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0999201549566351e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.017121602188914e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.0040174742055562e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777473,
+        "enthalpy_in_W": -4730739.50659793,
+        "enthalpy_out_W": -4730739.506597977,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "LP 3-Phase Separator",
+      "class": "ThreePhaseSeparator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.513456027169013e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 8.222953927372598e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 33.33333333333334,
+        "mass_out_kg_s": 33.33333333333284,
+        "enthalpy_in_W": -9776627.087949112,
+        "enthalpy_out_W": -9776627.087949112,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "Suction Scrubber",
+      "class": "GasScrubber",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 2.8137492336099965e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.4634274868399188e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.8489684555866674e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888889,
+        "mass_out_kg_s": 13.888888888888928,
+        "enthalpy_in_W": -629623.0824013536,
+        "enthalpy_out_W": -629623.0824013537,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "LP Compressor",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2494139495047628e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.50273426466791,
+        "mass_out_kg_s": 13.50273426466791,
+        "enthalpy_in_W": 350237.93457679986,
+        "enthalpy_out_W": 1863518.8421432143,
+        "external_energy_W": 1513280.9075664147
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 5.355715870791754e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.3408171247751842e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.121105282221673e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222225,
+        "mass_out_kg_s": 22.222222222221035,
+        "enthalpy_in_W": -5268890.22862646,
+        "enthalpy_out_W": -5268890.228626449,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.879563337250146e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.883333778698271e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.908102932432415e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 33.33333333333334,
+        "mass_out_kg_s": 33.33333333333205,
+        "enthalpy_in_W": -6833235.158857722,
+        "enthalpy_out_W": -6833235.158857709,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 6,
+      "equipment": "HP Separator",
+      "class": "ThreePhaseSeparator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.1254996934439984e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.48789894935453e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.552275260982167e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.777777777777786,
+        "mass_out_kg_s": 27.777777777777473,
+        "enthalpy_in_W": -2999862.8401325075,
+        "enthalpy_out_W": -2999862.840132507,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 6,
+      "equipment": "HP-MP Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.922770824382221e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 17.002734898705086,
+        "mass_out_kg_s": 17.002734898705086,
+        "enthalpy_in_W": -2904248.8888325137,
+        "enthalpy_out_W": -2904248.890262209,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 6,
+      "equipment": "MP Separator",
+      "class": "ThreePhaseSeparator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 2.0894954252748318e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.3347661873991893e-17,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.4430414692837205e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 17.002734898705086,
+        "mass_out_kg_s": 17.002734898705082,
+        "enthalpy_in_W": -2904248.890262209,
+        "enthalpy_out_W": -2904248.890262251,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 6,
+      "equipment": "MP-LP Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 8.193120953871942e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 14.559365551615969,
+        "mass_out_kg_s": 14.559365551615969,
+        "enthalpy_in_W": -3164489.74327779,
+        "enthalpy_out_W": -3164489.7458704947,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 6,
+      "equipment": "LP Separator",
+      "class": "ThreePhaseSeparator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.220078466402054e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.0394177858616467e-17,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.631079411120682e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 14.559365551615969,
+        "mass_out_kg_s": 14.55936555161597,
+        "enthalpy_in_W": -3164489.7458704947,
+        "enthalpy_out_W": -3164489.7458621687,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.489046361296979e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.566182456,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0704060794008203e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 6.494380523112045e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.064393443301331e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009084498,
+        "enthalpy_in_W": -6078348.566182456,
+        "enthalpy_out_W": -6078348.566182458,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.3752986792462791e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.198001908812547,
+        "mass_out_kg_s": 19.198001908812547,
+        "enthalpy_in_W": -6347784.416732286,
+        "enthalpy_out_W": -6347784.425462386,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.684013504668114e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.5524766013764832e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.934323260505618e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.198001908812547,
+        "mass_out_kg_s": 19.198001908812223,
+        "enthalpy_in_W": -6347784.425462386,
+        "enthalpy_out_W": -6347784.425462384,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.476074597791536e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.563668054,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.3338906527917915e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 8.927058177254348e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.3789770500560325e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908444,
+        "enthalpy_in_W": -6078348.563668054,
+        "enthalpy_out_W": -6078348.563668062,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.0813581488104521e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.614880227020226,
+        "mass_out_kg_s": 19.614880227020226,
+        "enthalpy_in_W": -6305424.455199983,
+        "enthalpy_out_W": -6305424.448381561,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.839815951912769e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.9362711734591617e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.9540361072902075e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.614880227020226,
+        "mass_out_kg_s": 19.614880227019473,
+        "enthalpy_in_W": -6305424.448381561,
+        "enthalpy_out_W": -6305424.448381559,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 5.566011032682381e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.56402786,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.7785208703890552e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.2185108606909221e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.5321967221937825e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009084345,
+        "enthalpy_in_W": -6078348.56402786,
+        "enthalpy_out_W": -6078348.564027869,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.0595230449327074e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.910181307730983,
+        "mass_out_kg_s": 19.910181307730983,
+        "enthalpy_in_W": -6271494.466865579,
+        "enthalpy_out_W": -6271494.479781866,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 4.7107376708776926e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.7133551725831638e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.455027000109255e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.910181307730983,
+        "mass_out_kg_s": 19.910181307730046,
+        "enthalpy_in_W": -6271494.479781866,
+        "enthalpy_out_W": -6271494.479781863,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 5.252830022640122e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.5640936205,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 2.3878289463556763e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.7180785932380023e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.128786888708829e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009084214,
+        "enthalpy_in_W": -6078348.5640936205,
+        "enthalpy_out_W": -6078348.564093624,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.284338735421759e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.144410457115907,
+        "mass_out_kg_s": 20.144410457115907,
+        "enthalpy_in_W": -6242805.436974066,
+        "enthalpy_out_W": -6242805.422713384,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 5.3261401383863685e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.5491087329101642e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.4918334171156767e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.144410457115907,
+        "mass_out_kg_s": 20.144410457114834,
+        "enthalpy_in_W": -6242805.422713384,
+        "enthalpy_out_W": -6242805.422713383,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.050326981844882e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.563423267,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.441767239919561e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.4761183265377026e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.532196722346187e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009083986,
+        "enthalpy_in_W": -6078348.563423267,
+        "enthalpy_out_W": -6078348.563423268,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.4652220504590877e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.343604132851322,
+        "mass_out_kg_s": 20.343604132851322,
+        "enthalpy_in_W": -6217671.462177794,
+        "enthalpy_out_W": -6217671.440632182,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 5.832822743553134e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.5985799929137264e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.343604132851322,
+        "mass_out_kg_s": 20.343604132850135,
+        "enthalpy_in_W": -6217671.440632182,
+        "enthalpy_out_W": -6217671.440632182,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.144262075635097e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.564024345,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 8.72792649357592e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 6.212016152541955e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.7579540999504e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908454,
+        "enthalpy_in_W": -6078348.564024345,
+        "enthalpy_out_W": -6078348.564024362,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.604330263301812e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.521232480709035,
+        "mass_out_kg_s": 20.521232480709035,
+        "enthalpy_in_W": -6195120.948505387,
+        "enthalpy_out_W": -6195120.964639528,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 6.197831919726074e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.8460318708289818e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.50994861891128e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.521232480709035,
+        "mass_out_kg_s": 20.521232480707763,
+        "enthalpy_in_W": -6195120.964639528,
+        "enthalpy_out_W": -6195120.964639525,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.066105991997931e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.563936107,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.3997617961395344e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.969634314743908e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.911173772212127e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009084427,
+        "enthalpy_in_W": -6078348.563936107,
+        "enthalpy_out_W": -6078348.563936125,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.0554808750501922e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.68512517248646,
+        "mass_out_kg_s": 20.68512517248646,
+        "enthalpy_in_W": -6174557.031153276,
+        "enthalpy_out_W": -6174557.050019517,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 6.457878944845735e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.0565713791505962e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.524968675830122e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.68512517248646,
+        "mass_out_kg_s": 20.685125172485126,
+        "enthalpy_in_W": -6174557.050019517,
+        "enthalpy_out_W": -6174557.050019514,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.982654261943359e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.563819612,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 2.173747730475512e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.5421438700366393e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.064393444492557e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908426,
+        "enthalpy_in_W": -6078348.563819612,
+        "enthalpy_out_W": -6078348.5638196105,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.2773318360547317e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.84022833542386,
+        "mass_out_kg_s": 20.84022833542386,
+        "enthalpy_in_W": -6155596.209788756,
+        "enthalpy_out_W": -6155596.229962688,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 6.733716543502816e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.2287879062970423e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.0259378290025487e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.84022833542386,
+        "mass_out_kg_s": 20.840228335422456,
+        "enthalpy_in_W": -6155596.229962688,
+        "enthalpy_out_W": -6155596.229962686,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 5.689046429473857e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.563715892,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 6.587114334774279e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 4.6481519463076175e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.4433704945900094e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009084587,
+        "enthalpy_in_W": -6078348.563715892,
+        "enthalpy_out_W": -6078348.563715919,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.41715371598566e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.989877214690022,
+        "mass_out_kg_s": 20.989877214690022,
+        "enthalpy_in_W": -6137984.567896421,
+        "enthalpy_out_W": -6137984.546921984,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 7,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 6.956521503446868e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.3921641731942078e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.989877214690022,
+        "mass_out_kg_s": 20.989877214688562,
+        "enthalpy_in_W": -6137984.546921984,
+        "enthalpy_out_W": -6137984.546921984,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 8,
+      "equipment": "Existing HP Sep",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 2.8393287720973603e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.224883246095487e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 7.229700681891185e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.77777777777699,
+        "enthalpy_in_W": -7729138.0287559945,
+        "enthalpy_out_W": -7729138.02875605,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 24,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.1084466677857562e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.09191771518959e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.1874130590983973e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 33.333333333333336,
+        "mass_out_kg_s": 33.333333333332966,
+        "enthalpy_in_W": -7451126.1191323735,
+        "enthalpy_out_W": -7451126.119132462,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 24,
+      "equipment": "HP-LP Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.1699948710019108e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 24.47505317973328,
+        "mass_out_kg_s": 24.47505317973328,
+        "enthalpy_in_W": -8072706.8484905455,
+        "enthalpy_out_W": -8072706.830972813,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 24,
+      "equipment": "LP 3-Phase Separator",
+      "class": "ThreePhaseSeparator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 7.864580546725855e-13,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.1293277793347043e-13,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 7.666125672464293e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 24.47505317973328,
+        "mass_out_kg_s": 24.47505317971403,
+        "enthalpy_in_W": -8072706.830972813,
+        "enthalpy_out_W": -8072706.830966624,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 24,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.1084466677857562e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.09191771518959e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.1874130590983973e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 33.333333333333336,
+        "mass_out_kg_s": 33.333333333332966,
+        "enthalpy_in_W": -7451126.1191323735,
+        "enthalpy_out_W": -7451126.119132462,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 24,
+      "equipment": "HP-LP Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.1699948710019108e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 24.47505317973328,
+        "mass_out_kg_s": 24.47505317973328,
+        "enthalpy_in_W": -8072706.8484905455,
+        "enthalpy_out_W": -8072706.830972813,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 24,
+      "equipment": "LP 3-Phase Separator",
+      "class": "ThreePhaseSeparator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 7.864580546725855e-13,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.1293277793347043e-13,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 7.666125672464293e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 24.47505317973328,
+        "mass_out_kg_s": 24.47505317971403,
+        "enthalpy_in_W": -8072706.830972813,
+        "enthalpy_out_W": -8072706.830966624,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0999201549566348e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.18957093164528e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.1849132421318748e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.777777777777786,
+        "mass_out_kg_s": 27.77777777777748,
+        "enthalpy_in_W": -6209271.765943643,
+        "enthalpy_out_W": -6209271.765943716,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0999201549566348e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.18957093164528e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.1849132421318748e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.777777777777786,
+        "mass_out_kg_s": 27.77777777777748,
+        "enthalpy_in_W": -6209271.765943643,
+        "enthalpy_out_W": -6209271.765943716,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0999201549566357e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.0221654177212405e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.109918733136187e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888888,
+        "mass_out_kg_s": 13.888888888888728,
+        "enthalpy_in_W": -3104635.8829718223,
+        "enthalpy_out_W": -3104635.8829718567,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.1068963927259162e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.1134775162252604e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2217287283661215e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.369047619047617,
+        "mass_out_kg_s": 16.369047619047436,
+        "enthalpy_in_W": -3659035.1477882173,
+        "enthalpy_out_W": -3659035.147788262,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0931886974599605e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.119084399466735e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2157004616143147e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 18.849206349206348,
+        "mass_out_kg_s": 18.849206349206142,
+        "enthalpy_in_W": -4213434.412604615,
+        "enthalpy_out_W": -4213434.412604666,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0493559509699861e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.123387356372983e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2110741173629281e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.32936507936508,
+        "mass_out_kg_s": 21.329365079364855,
+        "enthalpy_in_W": -4767833.677421013,
+        "enthalpy_out_W": -4767833.677421071,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0892620139202337e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.175620472151609e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.1724141572992596e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 23.809523809523807,
+        "mass_out_kg_s": 23.809523809523547,
+        "enthalpy_in_W": -5322232.942237411,
+        "enthalpy_out_W": -5322232.942237473,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0810974756923488e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.1295576342008114e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2044401142854688e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 26.289682539682538,
+        "mass_out_kg_s": 26.289682539682254,
+        "enthalpy_in_W": -5876632.207053805,
+        "enthalpy_out_W": -5876632.207053876,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.086689359187309e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.09143666486222e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2743894494163839e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 28.769841269841272,
+        "mass_out_kg_s": 28.76984126984096,
+        "enthalpy_in_W": -6431031.471870204,
+        "enthalpy_out_W": -6431031.471870286,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0686562745831907e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.208171544303506e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.1465827153118567e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 31.25,
+        "mass_out_kg_s": 31.249999999999666,
+        "enthalpy_in_W": -6985430.7366865985,
+        "enthalpy_out_W": -6985430.736686679,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0743406164692712e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.100944483097256e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.22285164080028e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 33.73015873015874,
+        "mass_out_kg_s": 33.73015873015838,
+        "enthalpy_in_W": -7539830.001503002,
+        "enthalpy_out_W": -7539830.001503094,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.079246281384656e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.201037062735967e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2081307202593059e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 36.21031746031747,
+        "mass_out_kg_s": 36.21031746031708,
+        "enthalpy_in_W": -8094229.266319397,
+        "enthalpy_out_W": -8094229.266319495,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.1386174054888003e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.408485834469027e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2060655395409156e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 38.6904761904762,
+        "mass_out_kg_s": 38.690476190475756,
+        "enthalpy_in_W": -8648628.531135783,
+        "enthalpy_out_W": -8648628.531135887,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0872844793182985e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.252095882628958e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.1941294348036337e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 41.17063492063493,
+        "mass_out_kg_s": 41.170634920634484,
+        "enthalpy_in_W": -9203027.795952186,
+        "enthalpy_out_W": -9203027.795952296,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0743406164692716e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.006946734637236e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.240818239746841e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 43.650793650793645,
+        "mass_out_kg_s": 43.650793650793176,
+        "enthalpy_in_W": -9757427.060768588,
+        "enthalpy_out_W": -9757427.060768709,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.1398022310928472e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.342575971253275e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.246360355954148e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 46.13095238095238,
+        "mass_out_kg_s": 46.130952380951854,
+        "enthalpy_in_W": -10311826.325584974,
+        "enthalpy_out_W": -10311826.325585103,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 25,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.1108828143083625e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.069995564556679e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.1484873377625412e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 48.61111111111111,
+        "mass_out_kg_s": 48.61111111111057,
+        "enthalpy_in_W": -10866225.590401372,
+        "enthalpy_out_W": -10866225.590401497,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 26,
+      "equipment": "LP 3-Phase Separator",
+      "class": "ThreePhaseSeparator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.240074875066057e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.1327219530121506e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 41.666666666666664,
+        "mass_out_kg_s": 41.666666666665314,
+        "enthalpy_in_W": -17232315.834088292,
+        "enthalpy_out_W": -17232315.834088292,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 26,
+      "equipment": "LP 3-Phase Separator",
+      "class": "ThreePhaseSeparator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.240074875066057e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.1327219530121506e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 41.666666666666664,
+        "mass_out_kg_s": 41.666666666665314,
+        "enthalpy_in_W": -17232315.834088292,
+        "enthalpy_out_W": -17232315.834088292,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.050326981844882e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.563423267,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.441767239919561e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.4761183265377026e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.532196722346187e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009083986,
+        "enthalpy_in_W": -6078348.563423267,
+        "enthalpy_out_W": -6078348.563423268,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.520753374830235e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.343604132851322,
+        "mass_out_kg_s": 20.343604132851322,
+        "enthalpy_in_W": -6217671.462177794,
+        "enthalpy_out_W": -6217671.471633339,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 5.3962342148440675e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.761833668660635e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 7.489319585832238e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.343604132851322,
+        "mass_out_kg_s": 20.343604132850224,
+        "enthalpy_in_W": -6217671.471633339,
+        "enthalpy_out_W": -6217671.471633335,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.050326981844882e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.563423267,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.441767239919561e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.4761183265377026e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.532196722346187e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009083986,
+        "enthalpy_in_W": -6078348.563423267,
+        "enthalpy_out_W": -6078348.563423268,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.520753374830235e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.343604132851322,
+        "mass_out_kg_s": 20.343604132851322,
+        "enthalpy_in_W": -6217671.462177794,
+        "enthalpy_out_W": -6217671.471633339,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 5.3962342148440675e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.761833668660635e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 7.489319585832238e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.343604132851322,
+        "mass_out_kg_s": 20.343604132850224,
+        "enthalpy_in_W": -6217671.471633339,
+        "enthalpy_out_W": -6217671.471633335,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.489046361296979e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.566182456,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.0704060794008203e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 6.494380523112045e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.064393443301331e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009084498,
+        "enthalpy_in_W": -6078348.566182456,
+        "enthalpy_out_W": -6078348.566182458,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.114586077520051e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.198001908812547,
+        "mass_out_kg_s": 19.198001908812547,
+        "enthalpy_in_W": -6347784.416732286,
+        "enthalpy_out_W": -6347784.418709358,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.961598148294726e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.1092012289805158e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.9806682029484065e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.198001908812547,
+        "mass_out_kg_s": 19.198001908812923,
+        "enthalpy_in_W": -6347784.418709358,
+        "enthalpy_out_W": -6347784.4187092325,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.476074597791536e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.563668054,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.3338906527917915e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 8.927058177254348e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.3789770500560325e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908444,
+        "enthalpy_in_W": -6078348.563668054,
+        "enthalpy_out_W": -6078348.563668062,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 5.842765851606583e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.614880227020226,
+        "mass_out_kg_s": 19.614880227020226,
+        "enthalpy_in_W": -6305424.455199983,
+        "enthalpy_out_W": -6305424.458884095,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 2.481390497226648e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.6465476349119388e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 5.908072204739725e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.614880227020226,
+        "mass_out_kg_s": 19.61488022701974,
+        "enthalpy_in_W": -6305424.458884095,
+        "enthalpy_out_W": -6305424.458884091,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 5.566011032682381e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.56402786,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.7785208703890552e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.2185108606909221e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.5321967221937825e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009084345,
+        "enthalpy_in_W": -6078348.56402786,
+        "enthalpy_out_W": -6078348.564027869,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 5.30067726616886e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.910181307730983,
+        "mass_out_kg_s": 19.910181307730983,
+        "enthalpy_in_W": -6271494.466865579,
+        "enthalpy_out_W": -6271494.463541262,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.854239912536294e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.3535229069356495e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.9453617950853988e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 19.910181307730983,
+        "mass_out_kg_s": 19.910181307730216,
+        "enthalpy_in_W": -6271494.463541262,
+        "enthalpy_out_W": -6271494.46354114,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 5.252830022640122e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.5640936205,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 2.3878289463556763e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.7180785932380023e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.128786888708829e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009084214,
+        "enthalpy_in_W": -6078348.5640936205,
+        "enthalpy_out_W": -6078348.564093624,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 8.432461558032669e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.144410457115907,
+        "mass_out_kg_s": 20.144410457115907,
+        "enthalpy_in_W": -6242805.436974066,
+        "enthalpy_out_W": -6242805.442238288,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 4.744144692801103e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.4001043400565869e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.9393834361847936e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.144410457115907,
+        "mass_out_kg_s": 20.14441045711495,
+        "enthalpy_in_W": -6242805.442238288,
+        "enthalpy_out_W": -6242805.442238167,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.050326981844882e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.563423267,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.441767239919561e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.4761183265377026e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.532196722346187e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009083986,
+        "enthalpy_in_W": -6078348.563423267,
+        "enthalpy_out_W": -6078348.563423268,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.520753374830235e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.343604132851322,
+        "mass_out_kg_s": 20.343604132851322,
+        "enthalpy_in_W": -6217671.462177794,
+        "enthalpy_out_W": -6217671.471633339,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 5.3962342148440675e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.761833668660635e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 7.489319585832238e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.343604132851322,
+        "mass_out_kg_s": 20.343604132850224,
+        "enthalpy_in_W": -6217671.471633339,
+        "enthalpy_out_W": -6217671.471633335,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.144262075635097e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.564024345,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 8.72792649357592e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 6.212016152541955e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.7579540999504e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908454,
+        "enthalpy_in_W": -6078348.564024345,
+        "enthalpy_out_W": -6078348.564024362,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.6979039542705372e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.521232480709035,
+        "mass_out_kg_s": 20.521232480709035,
+        "enthalpy_in_W": -6195120.948505387,
+        "enthalpy_out_W": -6195120.959024107,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 5.834271946781248e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.0497319393342488e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.509948622999216e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.521232480709035,
+        "mass_out_kg_s": 20.521232480707837,
+        "enthalpy_in_W": -6195120.959024107,
+        "enthalpy_out_W": -6195120.959024104,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.066105991997931e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.563936107,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.3997617961395344e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.969634314743908e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.911173772212127e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009084427,
+        "enthalpy_in_W": -6078348.563936107,
+        "enthalpy_out_W": -6078348.563936125,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.457229343964298e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.68512517248646,
+        "mass_out_kg_s": 20.68512517248646,
+        "enthalpy_in_W": -6174557.031153276,
+        "enthalpy_out_W": -6174557.015980973,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 6.234601215369686e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.2988864359085216e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 7.541614501291605e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.68512517248646,
+        "mass_out_kg_s": 20.685125172485172,
+        "enthalpy_in_W": -6174557.015980973,
+        "enthalpy_out_W": -6174557.015980968,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.982654261943359e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.563819612,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 2.173747730475512e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.5421438700366393e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.064393444492557e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908426,
+        "enthalpy_in_W": -6078348.563819612,
+        "enthalpy_out_W": -6078348.5638196105,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.0947567336125793e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.84022833542386,
+        "mass_out_kg_s": 20.84022833542386,
+        "enthalpy_in_W": -6155596.209788756,
+        "enthalpy_out_W": -6155596.228838829,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 8.523691827218753e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 3.3990229507798032e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.5129689147775046e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.84022833542386,
+        "mass_out_kg_s": 20.84022833542368,
+        "enthalpy_in_W": -6155596.228838829,
+        "enthalpy_out_W": -6155596.22883883,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "HP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.880096078821225e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.57117492589532e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.733695387772859e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.777777777777256,
+        "enthalpy_in_W": -5532311.8791894335,
+        "enthalpy_out_W": -5532311.879189471,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V1",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 5.689046429473857e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.57371800908473,
+        "enthalpy_in_W": -6078348.564061692,
+        "enthalpy_out_W": -6078348.563715892,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "MP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 6.587114334774279e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 4.6481519463076175e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.4433704945900094e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 21.57371800908473,
+        "mass_out_kg_s": 21.573718009084587,
+        "enthalpy_in_W": -6078348.563715892,
+        "enthalpy_out_W": -6078348.563715919,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "V2",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.7396726073799516e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.989877214690022,
+        "mass_out_kg_s": 20.989877214690022,
+        "enthalpy_in_W": -6137984.567896421,
+        "enthalpy_out_W": -6137984.578574505,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 27,
+      "equipment": "LP",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 8.970696829262384e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 3.3699138154124753e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.5173100595045324e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 20.989877214690022,
+        "mass_out_kg_s": 20.989877214689834,
+        "enthalpy_in_W": -6137984.578574505,
+        "enthalpy_out_W": -6137984.578574506,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 28,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 5.355715870791754e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.3408171247751842e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.121105282221673e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222225,
+        "mass_out_kg_s": 22.222222222221035,
+        "enthalpy_in_W": -5268890.22862646,
+        "enthalpy_out_W": -5268890.228626449,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    }
+  ]
+}

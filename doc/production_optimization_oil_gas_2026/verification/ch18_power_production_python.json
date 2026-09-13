@@ -1,0 +1,104 @@
+{
+  "chapter": "ch18_power_production",
+  "source_sha256": "f648f5563b47755f2884a64cef2c3035181a935294b11dcebe0cb9506f640a05",
+  "project_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "blocks": [
+    {
+      "index": 1,
+      "line": 137,
+      "status": "pass",
+      "code": "# Illustrative 30 MW package, not an OEM performance guarantee.\ngtpkg = jneqsim.process.equipment.powergeneration.gasturbine\nspec = gtpkg.GasTurbineSpec(\"Teaching turbine\", gtpkg.GasTurbineSpec.TurbineType.AERODERIVATIVE,\n                          30.0e6, 9500.0, 90.0, 773.15, 25.0, 100.0, \"Synthetic teaching basis\")\nfuel_gas = jneqsim.thermo.system.SystemSrkEos(298.15, 25.0)\nfor name, fraction in [(\"methane\", 0.90), (\"ethane\", 0.06), (\"propane\", 0.03), (\"CO2\", 0.01)]:\n    fuel_gas.addComponent(name, fraction)\nfuel_gas.setMixingRule(\"classic\")\nfuel_stream = jneqsim.process.equipment.stream.Stream(\"Fuel gas\", fuel_gas)\nfuel_stream.setFlowRate(500.0, \"kg/hr\")\nfuel_stream.run()\ngas_turbine = gtpkg.GasTurbineUnit(\"GT-001\", fuel_stream, spec)\ngas_turbine.setAmbient(288.15, 1.01325)\ngas_turbine.setDemandedPower(20.0e6)\ngas_turbine.run()\nprint(\"Available shaft power (MW):\", gas_turbine.getAvailablePowerW() / 1e6)\nprint(\"Demanded shaft power (MW):\", gas_turbine.getDemandedPowerW() / 1e6)\nprint(\"Thermal efficiency:\", gas_turbine.getThermalEfficiency())\nprint(\"Fuel demand (kg/hr):\", gas_turbine.getFuelMassFlowKgPerHr())\nprint(\"Power shortfall (MW):\", gas_turbine.getPowerShortfallW() / 1e6)\n",
+      "seconds": 3.984,
+      "output": "Available shaft power (MW): 30.0\nDemanded shaft power (MW): 20.0\nThermal efficiency: 0.3645282509394479\nFuel demand (kg/hr): 4090.4502839127767\nPower shortfall (MW): 0.0\n"
+    },
+    {
+      "index": 2,
+      "line": 162,
+      "status": "pass",
+      "code": "import matplotlib.pyplot as plt\nambient_temps = list(range(-20, 42, 2))\navailable_mw, fuel_kg_hr = [], []\nfor temperature_c in ambient_temps:\n    gas_turbine.setAmbient(temperature_c + 273.15, 1.01325)\n    gas_turbine.run()\n    available_mw.append(gas_turbine.getAvailablePowerW() / 1e6)\n    fuel_kg_hr.append(gas_turbine.getFuelMassFlowKgPerHr())\nfig, axes = plt.subplots(1, 2, figsize=(10, 4))\naxes[0].plot(ambient_temps, available_mw)\naxes[0].axhline(20.0, linestyle=\"--\", color=\"black\", label=\"Shaft demand\")\naxes[0].set_ylabel(\"Available shaft power (MW)\")\naxes[0].legend()\naxes[1].plot(ambient_temps, fuel_kg_hr)\naxes[1].set_ylabel(\"Fuel demand (kg/hr)\")\nfor ax in axes:\n    ax.set_xlabel(\"Ambient temperature (C)\")\n    ax.grid(alpha=0.3)\nfig.suptitle(\"Illustrative turbine ambient derating at 20 MW demand\")\nfig.tight_layout()\nfig.savefig(\"figures/gt_ambient_performance.png\", dpi=150, bbox_inches=\"tight\")\n",
+      "seconds": 0.782,
+      "output": ""
+    },
+    {
+      "index": 3,
+      "line": 305,
+      "status": "pass",
+      "code": "# Heat-recovery screening from an explicitly specified exhaust composition.\n# GasTurbineUnit supplies package exhaust flow/T; this is not a combustor chemistry model.\n# The steam side uses the same SRK water basis throughout; validate against steam tables before design.\ngas_turbine.setAmbient(288.15, 1.01325)\ngas_turbine.run()\nexhaust_fluid = jneqsim.thermo.system.SystemSrkEos(gas_turbine.getExhaustTemperatureK(), 1.05)\nfor name, fraction in [(\"nitrogen\", 0.76), (\"oxygen\", 0.12), (\"CO2\", 0.06), (\"water\", 0.06)]:\n    exhaust_fluid.addComponent(name, fraction)\nexhaust_fluid.setMixingRule(\"classic\")\nexhaust = jneqsim.process.equipment.stream.Stream(\"Illustrative exhaust\", exhaust_fluid)\nexhaust.setFlowRate(gas_turbine.getExhaustMassFlowKgPerS(), \"kg/sec\")\nexhaust.run()\nhrsg = jneqsim.process.equipment.powergeneration.HRSG(\"HRSG\", exhaust)\nhrsg.setSteamPressure(40.0)\nhrsg.setSteamTemperature(673.15)\nhrsg.setFeedWaterTemperature(363.15)\nhrsg.setEffectiveness(0.80)\nhrsg.run()\nsteam_fluid = jneqsim.thermo.system.SystemSrkEos(673.15, 40.0)\nsteam_fluid.addComponent(\"water\", 1.0)\nsteam_fluid.setMixingRule(\"classic\")\nsteam = jneqsim.process.equipment.stream.Stream(\"Recovered steam\", steam_fluid)\n# Replace HRSG's internal approximate steam-enthalpy correlation with the same\n# water EOS used for the turbine, so recovered heat and steam inventory agree.\nsteam_properties = steam_fluid.clone()\njneqsim.thermodynamicoperations.ThermodynamicOperations(steam_properties).TPflash()\nsteam_properties.initProperties()\nfeedwater_properties = steam_fluid.clone()\nfeedwater_properties.setTemperature(363.15)\njneqsim.thermodynamicoperations.ThermodynamicOperations(feedwater_properties).TPflash()\nfeedwater_properties.initProperties()\nsteam_enthalpy_rise = steam_properties.getEnthalpy(\"J/kg\") - feedwater_properties.getEnthalpy(\"J/kg\")\nassert steam_enthalpy_rise > 0.0\nsteam.setFlowRate(hrsg.getHeatTransferred(\"W\") / steam_enthalpy_rise, \"kg/sec\")\nsteam.run()\nsteam.getFluid().initProperties()\nsteam_turbine = jneqsim.process.equipment.powergeneration.SteamTurbine(\"ST\", steam)\nsteam_turbine.setOutletPressure(10.0, \"bara\")  # verified backpressure case, not a condensing turbine\nsteam_turbine.setIsentropicEfficiency(0.85)\nsteam_turbine.run()\nprint(\"Recovered duty (MW):\", hrsg.getHeatTransferred(\"MW\"))\nprint(\"Steam production (kg/sec):\", steam.getFlowRate(\"kg/sec\"))\nprint(\"Steam turbine power (MW):\", steam_turbine.getPower(\"MW\"))\nsteam.getFluid().initProperties()\nsteam_turbine.getOutletStream().getFluid().initProperties()\nrecovered_heat = steam.getFlowRate(\"kg/sec\") * steam_enthalpy_rise\nassert abs(recovered_heat / hrsg.getHeatTransferred(\"W\") - 1.0) < 1e-6\nsteam_work = steam.getFlowRate(\"kg/sec\") * (\n    steam.getFluid().getEnthalpy(\"J/kg\") -\n    steam_turbine.getOutletStream().getFluid().getEnthalpy(\"J/kg\"))\nassert steam_work > 0.0\nassert abs(steam_work / steam_turbine.getPower(\"W\") - 1.0) < 1e-5\n",
+      "seconds": 0.953,
+      "output": "Recovered duty (MW): 27.75754860949504\nSteam production (kg/sec): 9.361712679182569\nSteam turbine power (MW): 2.77318034090255\n"
+    },
+    {
+      "index": 4,
+      "line": 503,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Model fuel gas conditioning and quality checking\nfuel_gas = jneqsim.thermo.system.SystemSrkEos(288.15, 25.0)\nfuel_gas.addComponent(\"methane\", 0.88)\nfuel_gas.addComponent(\"ethane\", 0.06)\nfuel_gas.addComponent(\"propane\", 0.03)\nfuel_gas.addComponent(\"CO2\", 0.02)\nfuel_gas.addComponent(\"nitrogen\", 0.01)\nfuel_gas.setMixingRule(\"classic\")\n\n# Flash to check phase behavior\nops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fuel_gas)\nops.TPflash()\nfuel_gas.initProperties()\n\n# Calculate heating value using NeqSim\nmolar_mass = fuel_gas.getMolarMass() * 1000  # g/mol\nsg = molar_mass / 28.97  # Specific gravity relative to air\n\n# Fuel gas consumption for 30 MW gas turbine at 38% efficiency\ngt_power_kw = 30000.0\ngt_efficiency = 0.38\nlhv_fuel = 48000.0  # kJ/kg for methane-rich fuel gas\nfuel_rate = gt_power_kw / (gt_efficiency * lhv_fuel)  # kg/s\nfuel_rate_kg_hr = fuel_rate * 3600.0\nprint(f\"Fuel gas consumption: {fuel_rate_kg_hr:.0f} kg/hr\")\nprint(f\"Fuel gas specific gravity: {sg:.3f}\")\nprint(f\"Fuel gas molar mass: {molar_mass:.1f} g/mol\")\n",
+      "seconds": 0.047,
+      "output": "Fuel gas consumption: 5921 kg/hr\nFuel gas specific gravity: 0.635\nFuel gas molar mass: 18.4 g/mol\n"
+    },
+    {
+      "index": 5,
+      "line": 597,
+      "status": "pass",
+      "code": "# Pure-methane accounting scenario, separate from the mixed-fuel turbine above\nfuel_rate_kg_hr = 500.0\nco2_emission_factor = 44.01 / 16.043  # pure-methane combustion kg CO2/kg CH4\nch4_slip = 0.02             # 2% methane slip\nch4_gwp = 28                # 100-year GWP for methane\n\n# Calculate emissions\nco2_direct = fuel_rate_kg_hr * (1.0 - ch4_slip) * co2_emission_factor\nch4_emissions_co2eq = fuel_rate_kg_hr * ch4_slip * ch4_gwp\ntotal_co2eq_kg_hr = co2_direct + ch4_emissions_co2eq\n\n# Annual totals\nhours_per_year = 8760 * 0.95  # 95% uptime\nannual_co2_tonnes = total_co2eq_kg_hr * hours_per_year / 1000.0\n\n# Illustrative carbon-price scenario, not current Norwegian tax or ETS quotations\nno_co2_tax_nok_per_tonne = 600.0\neu_ets_eur_per_tonne = 70.0\neur_to_nok = 11.5\nannual_direct_co2_tonnes = co2_direct * hours_per_year / 1000.0\ntotal_carbon_cost_nok = annual_direct_co2_tonnes * (\n    no_co2_tax_nok_per_tonne + eu_ets_eur_per_tonne * eur_to_nok)\n\n# Emissions intensity\nproduction_boe_per_day = 50000\nannual_boe = production_boe_per_day * hours_per_year / 24.0  # same operating hours as emissions\nemissions_intensity = annual_co2_tonnes * 1000 / annual_boe\n\nprint(f\"Annual CO2-eq emissions: {annual_co2_tonnes:.0f} tonnes\")\nprint(f\"Annual carbon cost: {total_carbon_cost_nok/1e6:.1f} MNOK\")\nprint(f\"Emissions intensity: {emissions_intensity:.1f} kg CO2-eq/boe\")\n# Carbon atoms in burned CO2 plus unburned CH4 equal the fuel carbon inventory.\ncarbon_in = fuel_rate_kg_hr * 12.011 / 16.043\ncarbon_out = co2_direct * 12.011 / 44.01 + fuel_rate_kg_hr * ch4_slip * 12.011 / 16.043\nassert abs(carbon_in - carbon_out) / carbon_in < 1e-12\nprint(\"Carbon cost applies only to direct CO2 in this illustrative price scenario.\")\n",
+      "seconds": 0.0,
+      "output": "Annual CO2-eq emissions: 13517 tonnes\nAnnual carbon cost: 15.7 MNOK\nEmissions intensity: 0.8 kg CO2-eq/boe\nCarbon cost applies only to direct CO2 in this illustrative price scenario.\n"
+    },
+    {
+      "index": 6,
+      "line": 693,
+      "status": "pass",
+      "code": "ProcessSystem = jneqsim.process.processmodel.ProcessSystem\nCompressor = jneqsim.process.equipment.compressor.Compressor\nProductionOptimizer = jneqsim.process.util.optimizer.ProductionOptimizer\nfeed = jneqsim.process.equipment.stream.Stream(\"Compression feed\", fuel_gas.clone())\nfeed.setFlowRate(20000.0, \"kg/hr\")\nfeed.setPressure(25.0, \"bara\")\ncomp = Compressor(\"Export compressor\", feed)\ncomp.setOutletPressure(150.0, \"bara\")\ncomp.setIsentropicEfficiency(0.78)\ncomp.updatePowerConstraint((15.0e6) / 1000.0)  # Rating in kW after conversion from W\nprocess = ProcessSystem()\nprocess.add(feed)\nprocess.add(comp)\nprocess.run()\nresult = ProductionOptimizer().optimizeThroughput(process, feed, 5000.0, 50000.0, \"kg/hr\", None)\nprint(\"Feasible:\", result.isFeasible(), \"Rate (kg/hr):\", result.getOptimalRate())\nprint(\"Compression power (MW):\", comp.getPower(\"MW\"))\n",
+      "seconds": 1.406,
+      "output": "Feasible: True Rate (kg/hr): 49999.999329447746\nCompression power (MW): 4.879315569426532\n"
+    },
+    {
+      "index": 7,
+      "line": 727,
+      "status": "pass",
+      "code": "gt = gtpkg.GasTurbineUnit(\"GT-A\", fuel_stream, spec)\ngt.setAmbient(288.15, 1.01325)\ngt.addPowerConsumer(comp)\ngt.run()\nprint(\"Demanded shaft power (MW):\", gt.getDemandedPowerW() / 1e6)\nprint(\"Available power (MW):\", gt.getAvailablePowerW() / 1e6)\nprint(\"Fuel demand (kg/hr):\", gt.getFuelMassFlowKgPerHr())\nprint(\"CO2 (kg/hr):\", gt.getCO2EmissionKgPerHr())\nprint(\"Overloaded:\", gt.isOverloaded())\n",
+      "seconds": 0.016,
+      "output": "Demanded shaft power (MW): 4.879315569426532\nAvailable power (MW): 30.0\nFuel demand (kg/hr): 1655.3685219137092\nCO2 (kg/hr): 4531.57329384369\nOverloaded: False\n"
+    },
+    {
+      "index": 8,
+      "line": 877,
+      "status": "pass",
+      "code": "# Compare matched pressure-ratio operating points before introducing an OEM map.\ndesign_rate = feed.getFlowRate(\"kg/hr\")\ndesign_power_kw = comp.getPower(\"kW\")\nfeed.setFlowRate(0.70 * design_rate, \"kg/hr\")\nprocess.run()\nprint(\"70% flow power (kW):\", comp.getPower(\"kW\"))\nprint(\"Design flow power (kW):\", design_power_kw)\nprint(\"Constant-efficiency screening; vendor map and recycle losses are not included.\")\nfeed.setFlowRate(design_rate, \"kg/hr\")\nprocess.run()\n",
+      "seconds": 0.032,
+      "output": "70% flow power (kW): 3415.5209444042803\nDesign flow power (kW): 4879.315569426532\nConstant-efficiency screening; vendor map and recycle losses are not included.\n"
+    },
+    {
+      "index": 9,
+      "line": 952,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\nPinchAnalysis = jneqsim.process.equipment.heatexchanger.heatintegration.PinchAnalysis\n\n# Define hot and cold streams\npinch = PinchAnalysis(10.0)\n\n# Hot streams (need cooling)\npinch.addHotStream(\"Comp Discharge\", 150.0, 40.0, 2000.0)\npinch.addHotStream(\"GT Exhaust\", 500.0, 150.0, 8000.0)\npinch.addHotStream(\"Produced Water\", 80.0, 40.0, 1500.0)\n\n# Cold streams (need heating)\npinch.addColdStream(\"Crude Heating\", 20.0, 60.0, 1500.0)\npinch.addColdStream(\"Glycol Regen\", 100.0, 200.0, 3000.0)\npinch.addColdStream(\"Fuel Gas Heating\", 10.0, 50.0, 500.0)\n\n# Set minimum approach temperature\n# Minimum approach was set in the constructor.\n\n# Run analysis\npinch.run()\n\n# Results\nprint(f\"Pinch temperature: {pinch.getPinchTemperatureC():.1f} C\")\nprint(f\"Min heating utility: {pinch.getMinimumHeatingUtility():.0f} kW\")\nprint(f\"Min cooling utility: {pinch.getMinimumCoolingUtility():.0f} kW\")\n",
+      "seconds": 0.031,
+      "output": "Pinch temperature: 500.0 C\nMin heating utility: -0 kW\nMin cooling utility: 2700000 kW\n"
+    },
+    {
+      "index": 10,
+      "line": 1001,
+      "status": "pass",
+      "code": "energy = jneqsim.process.equipment.stream\nbus = energy.EnergyBus(\"Platform electrical bus\", energy.EnergyType.ELECTRICAL)\nproducer = energy.EnergyPort(\"Generation\", energy.EnergyType.ELECTRICAL,\n                            energy.EnergyPortDirection.OUTPUT, energy.EnergyPortMode.CALCULATED)\nloads = [energy.EnergyPort(name, energy.EnergyType.ELECTRICAL,\n                          energy.EnergyPortDirection.INPUT, energy.EnergyPortMode.SPECIFICATION)\n         for name in (\"Compression\", \"Water injection\")]\nproducer.connect(bus)\nproducer.setDuty(10.0e6)\nfor load in loads:\n    load.connect(bus)\n    load.setRequestedPower(8.0e6)\nsolver = jneqsim.process.equipment.energy.EnergyNetworkSolver(\"Energy allocation\", bus)\nsolver.run()\nreport = solver.getReports().get(0)\nfor load in loads:\n    print(load.getName(), \"served (MW):\", load.getPowerMagnitude() / 1e6)\nprint(\"Unmet demand (MW):\", report.getUnmetDemand() / 1e6)\nassert abs(report.getUnmetDemand() - 6.0e6) < 1.0\n",
+      "seconds": 0.062,
+      "output": "Compression served (MW): 5.0\nWater injection served (MW): 5.0\nUnmet demand (MW): 6.0\n"
+    },
+    {
+      "index": 11,
+      "line": 1112,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\nProcessSystem = jneqsim.process.processmodel.ProcessSystem\nStream = jneqsim.process.equipment.stream.Stream\nSeparator = jneqsim.process.equipment.separator.ThreePhaseSeparator\nCompressor = jneqsim.process.equipment.compressor.Compressor\nPump = jneqsim.process.equipment.pump.Pump\n\n# Create fluid (oil + gas + water)\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 80.0, 100.0)\nfluid.addComponent(\"methane\", 0.45)\nfluid.addComponent(\"ethane\", 0.05)\nfluid.addComponent(\"propane\", 0.03)\nfluid.addComponent(\"n-butane\", 0.02)\nfluid.addComponent(\"n-hexane\", 0.05)\nfluid.addTBPfraction(\"C7\", 0.20, 0.200, 0.85)\nfluid.addComponent(\"water\", 0.20)\nfluid.setMixingRule(\"classic\")\nfluid.setMultiPhaseCheck(True)\n\n# Build process\nprocess = ProcessSystem()\n\nfeed = Stream(\"Well Feed\", fluid)\nfeed.setFlowRate(200000.0, \"kg/hr\")\nprocess.add(feed)\n\nhp_sep = Separator(\"HP Separator\", feed)\nprocess.add(hp_sep)\n\n# Gas compression \u2014 main power consumer\ncomp = Compressor(\"Gas Export Compressor\", hp_sep.getGasOutStream())\ncomp.setOutletPressure(150.0, \"bara\")\ncomp.updatePowerConstraint((40.0e6) / 1000.0)  # 40 MW available for compression\nprocess.add(comp)\n\n# Water injection pump\nwi_pump = Pump(\"Water Injection Pump\", hp_sep.getWaterOutStream())\nwi_pump.setOutletPressure(250.0, \"bara\")\nprocess.add(wi_pump)\n\nprocess.run()\n\n# Report power balance\ncomp_power = comp.getPower(\"kW\")\npump_power = wi_pump.getPower(\"kW\")\ntotal_power = comp_power + pump_power + 8000  # 8 MW fixed loads\navailable = 50000  # 50 MW available\n\nprint(f\"Compression power: {comp_power/1000:.1f} MW\")\nprint(f\"WI pump power: {pump_power/1000:.1f} MW\")\nprint(f\"Total demand: {total_power/1000:.1f} MW\")\nprint(f\"Available: {available/1000:.1f} MW\")\nprint(f\"Power margin: {(available-total_power)/1000:.1f} MW\")\n",
+      "seconds": 1.0,
+      "output": "Compression power: 0.4 MW\nWI pump power: 0.1 MW\nTotal demand: 8.5 MW\nAvailable: 50.0 MW\nPower margin: 41.5 MW\n"
+    },
+    {
+      "index": 12,
+      "line": 1183,
+      "status": "pass",
+      "code": "import matplotlib.pyplot as plt\n\n# Illustrative assumed demand curves; these arrays are not NeqSim predictions.\nproduction_rates = [100, 120, 140, 160, 180, 200, 220]  # MSm3/d gas\ncomp_power_mw = [12, 15.5, 19.5, 24, 29, 34.5, 41]     # MW\npump_power_mw = [6, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0]      # MW\ntotal_power = [c + p + 5 for c, p in zip(comp_power_mw, pump_power_mw)]\n\nfig, ax = plt.subplots(figsize=(10, 6))\nax.fill_between(production_rates, 0, comp_power_mw,\n                alpha=0.3, label='Gas compression')\nax.fill_between(production_rates, comp_power_mw,\n                [c + p for c, p in zip(comp_power_mw, pump_power_mw)],\n                alpha=0.3, label='Water injection')\nax.fill_between(production_rates,\n                [c + p for c, p in zip(comp_power_mw, pump_power_mw)],\n                total_power, alpha=0.3, label='Utilities')\nax.axhline(y=50, color='r', linestyle='--', linewidth=2,\n           label='Available power (50 MW)')\nax.set_xlabel('Gas Production Rate (MSm3/d)')\nax.set_ylabel('Power Demand (MW)')\nax.set_title('Power Demand vs. Production Rate')\nax.legend()\nax.grid(True)\nplt.savefig('figures/power_demand_profile.png', dpi=150, bbox_inches='tight')\nplt.show()\n",
+      "seconds": 0.907,
+      "output": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch18_power_production\\chapter.md:1183:26: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    }
+  ]
+}

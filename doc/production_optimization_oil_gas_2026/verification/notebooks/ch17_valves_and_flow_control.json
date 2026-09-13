@@ -1,0 +1,676 @@
+{
+  "notebook": "chapters\\ch17_valves_and_flow_control\\notebooks\\ch15_valves_flow_control.ipynb",
+  "status": "passed",
+  "executed_at": "2026-09-12T20:11:01.111444+00:00",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "runtime_seconds": 18.24,
+  "code_cells": 8,
+  "executed_cells": 8,
+  "cell_runs": [
+    {
+      "cell_index": 1,
+      "execution_count": 1,
+      "runtime_seconds": 7.219,
+      "sha256": "4b72b7fb123b3f491e78a17a8ce163383b8a788f0491cd48c23b33b6166b0ff6",
+      "status": "passed"
+    },
+    {
+      "cell_index": 3,
+      "execution_count": 2,
+      "runtime_seconds": 2.625,
+      "sha256": "d8a711067b9d0975b6dbaa0ce20e52a6755962b529d33b57f734c4a43ae694f8",
+      "status": "passed"
+    },
+    {
+      "cell_index": 5,
+      "execution_count": 3,
+      "runtime_seconds": 1.89,
+      "sha256": "e279c958d1c3e3b45024666219617d55eb16e523d0e3ef125868d3426cb6df7e",
+      "status": "passed"
+    },
+    {
+      "cell_index": 8,
+      "execution_count": 4,
+      "runtime_seconds": 0.922,
+      "sha256": "390d7fd8126283f28faddbd3a65b70d27c76b3bb2c95536424a699500e93cf01",
+      "status": "passed"
+    },
+    {
+      "cell_index": 11,
+      "execution_count": 5,
+      "runtime_seconds": 1.594,
+      "sha256": "13107a58b46bd8f036ea0a7005c5ba6b23ff97e0dd9c7a3d6d5300b5d0854a1d",
+      "status": "passed"
+    },
+    {
+      "cell_index": 14,
+      "execution_count": 6,
+      "runtime_seconds": 2.703,
+      "sha256": "1361a15890f99c44e013a5b21f33623907d49402034189085f7b524a655385ab",
+      "status": "passed"
+    },
+    {
+      "cell_index": 18,
+      "execution_count": 7,
+      "runtime_seconds": 1.25,
+      "sha256": "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+      "status": "passed"
+    },
+    {
+      "cell_index": 20,
+      "execution_count": 8,
+      "runtime_seconds": 0.016,
+      "sha256": "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "source_revision": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "java_version": "25.0.4.1",
+  "neqsim_class_origin": "file:/C:/Users/solbraa/OneDrive%20-%20NTNU/Documents/ChatGPT/NeqSim/target/classes/",
+  "figures": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch17_valves_and_flow_control\\figures\\ch15_cv_and_jt_vs_flow.png",
+      "sha256": "8920a8aec0373bcf7a3e1248c9a6f68c0783c07ad479f3235d491a93801b0bfe",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Required Valve Cv vs. Flow Rate",
+          "series": "Curve 1",
+          "value_axis": "y",
+          "x_label": "Mass Flow Rate [t/hr]",
+          "y_label": "Cv (US units)",
+          "n_points": 15,
+          "n_nonfinite": 0,
+          "x_min": 10.0,
+          "x_max": 80.0,
+          "y_min": 5.657170791732662,
+          "y_max": 45.25736633386134,
+          "x_at_y_max": 80.0
+        },
+        {
+          "panel": 2,
+          "title": "Joule–Thomson Cooling vs. Flow Rate",
+          "series": "Curve 1",
+          "value_axis": "y",
+          "x_label": "Mass Flow Rate [t/hr]",
+          "y_label": "JT Cooling [°C]",
+          "n_points": 15,
+          "n_nonfinite": 0,
+          "x_min": 10.0,
+          "x_max": 80.0,
+          "y_min": 23.03801404619054,
+          "y_max": 23.038014046190654,
+          "x_at_y_max": 10.0
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch17_valves_and_flow_control\\figures\\ch15_jt_cooling_vs_dp.png",
+      "sha256": "fb0bfc36f2281ae1d3f41b560c177294b3b312aa738feedd2ac985ed0ebf19b8",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Joule–Thomson Cooling vs. Pressure Drop (Natural Gas at 150 bara)",
+          "series": "Curve 1",
+          "value_axis": "y",
+          "x_label": "Pressure Drop ΔP [bar]",
+          "y_label": "Temperature Drop ΔT [°C]",
+          "n_points": 20,
+          "n_nonfinite": 0,
+          "x_min": 10.0,
+          "x_max": 120.0,
+          "y_min": 2.455010217278982,
+          "y_max": 51.0654153792741,
+          "x_at_y_max": 120.0
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch17_valves_and_flow_control\\figures\\ch15_pt_path.png",
+      "sha256": "c077813e4bfed4311d61c3467b16bfb388f5b33089cf8d792435d13ab9a3f6e3",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "P-T Path Through Throttling Valve (Isenthalpic)",
+          "series": "Isenthalpic expansion",
+          "value_axis": "y",
+          "x_label": "Temperature [°C]",
+          "y_label": "Pressure [bara]",
+          "n_points": 25,
+          "n_nonfinite": 0,
+          "x_min": 5.493149730053688,
+          "x_max": 48.8001899648163,
+          "y_min": 40.0,
+          "y_max": 145.0,
+          "x_at_y_max": 48.8001899648163
+        },
+        {
+          "panel": 1,
+          "title": "P-T Path Through Throttling Valve (Isenthalpic)",
+          "series": "Inlet (50 °C, 150 bara)",
+          "value_axis": "y",
+          "x_label": "Temperature [°C]",
+          "y_label": "Pressure [bara]",
+          "n_points": 1,
+          "n_nonfinite": 0,
+          "x_min": 50.0,
+          "x_max": 50.0,
+          "y_min": 150.0,
+          "y_max": 150.0,
+          "x_at_y_max": 50.0
+        },
+        {
+          "panel": 1,
+          "title": "P-T Path Through Throttling Valve (Isenthalpic)",
+          "series": "Design outlet (80 bara)",
+          "value_axis": "y",
+          "x_label": "Temperature [°C]",
+          "y_label": "Pressure [bara]",
+          "n_points": 1,
+          "n_nonfinite": 0,
+          "x_min": 26.96198595380946,
+          "x_max": 26.96198595380946,
+          "y_min": 80.0,
+          "y_max": 80.0,
+          "x_at_y_max": 26.96198595380946
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch17_valves_and_flow_control\\figures\\ch15_valve_opening.png",
+      "sha256": "6b2890ceed5d6235fd0b37de126fb80ce5cc0828dcff525f2b7d1b5c86d11739",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Effective Cv vs. Valve Opening",
+          "series": "Curve 1",
+          "value_axis": "y",
+          "x_label": "Valve Opening [%]",
+          "y_label": "Effective Cv (US)",
+          "n_points": 9,
+          "n_nonfinite": 0,
+          "x_min": 20.0,
+          "x_max": 100.0,
+          "y_min": 40.0,
+          "y_max": 200.0,
+          "x_at_y_max": 100.0
+        },
+        {
+          "panel": 2,
+          "title": "Outlet Conditions vs. Valve Opening",
+          "series": "Outlet Pressure",
+          "value_axis": "y",
+          "x_label": "Valve Opening [%]",
+          "y_label": "Outlet Pressure [bara]",
+          "n_points": 9,
+          "n_nonfinite": 0,
+          "x_min": 20.0,
+          "x_max": 100.0,
+          "y_min": 114.99608190250397,
+          "y_max": 149.36176099216937,
+          "x_at_y_max": 100.0
+        },
+        {
+          "panel": 3,
+          "title": "",
+          "series": "Outlet Temp",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Outlet Temperature [°C]",
+          "n_points": 9,
+          "n_nonfinite": 0,
+          "x_min": 20.0,
+          "x_max": 100.0,
+          "y_min": 40.330125093025686,
+          "y_max": 49.84983391843974,
+          "x_at_y_max": 100.0
+        }
+      ]
+    }
+  ],
+  "nonfinite_series": [],
+  "numeric_results": {
+    "T_in": 50.0,
+    "T_out": 26.96198595380946,
+    "P_in": 150.0,
+    "P_out": 80.0,
+    "dP": 70.0,
+    "Cv": 28.285853958663324,
+    "flow_rates": [
+      10000.0,
+      15000.0,
+      20000.0,
+      25000.0,
+      30000.0,
+      35000.0,
+      40000.0,
+      45000.0,
+      50000.0,
+      55000.0,
+      60000.0,
+      65000.0,
+      70000.0,
+      75000.0,
+      80000.0
+    ],
+    "cv_values": [
+      5.657170791732662,
+      8.485756187598998,
+      11.314341583465335,
+      14.142926979331667,
+      16.971512375197996,
+      19.800097771064337,
+      22.628683166930674,
+      25.457268562797,
+      28.285853958663335,
+      31.114439354529672,
+      33.94302475039599,
+      36.77161014626235,
+      39.600195542128674,
+      42.428780937995015,
+      45.25736633386134
+    ],
+    "jt_cooling": [
+      23.038014046190654,
+      23.038014046190597,
+      23.038014046190597,
+      23.03801404619054,
+      23.038014046190597,
+      23.038014046190597,
+      23.038014046190597,
+      23.038014046190597,
+      23.03801404619054,
+      23.038014046190597,
+      23.038014046190597,
+      23.038014046190654,
+      23.038014046190597,
+      23.03801404619054,
+      23.038014046190597
+    ],
+    "outlet_temps": [
+      26.961985953809346,
+      26.961985953809403,
+      26.961985953809403,
+      26.96198595380946,
+      26.961985953809403,
+      26.961985953809403,
+      26.961985953809403,
+      26.961985953809403,
+      26.96198595380946,
+      26.961985953809403,
+      26.961985953809403,
+      26.961985953809346,
+      26.961985953809403,
+      26.96198595380946,
+      26.961985953809403
+    ],
+    "flow": 80000.0,
+    "T_out_i": 26.961985953809403,
+    "outlet_pressures": [
+      30.0,
+      35.78947368421053,
+      41.578947368421055,
+      47.368421052631575,
+      53.15789473684211,
+      58.94736842105263,
+      64.73684210526315,
+      70.52631578947368,
+      76.31578947368422,
+      82.10526315789474,
+      87.89473684210526,
+      93.6842105263158,
+      99.47368421052632,
+      105.26315789473685,
+      111.05263157894737,
+      116.8421052631579,
+      122.63157894736842,
+      128.42105263157896,
+      134.21052631578948,
+      140.0
+    ],
+    "delta_T": [
+      51.0654153792741,
+      47.2089694101536,
+      43.515893753850605,
+      39.9864864190796,
+      36.61962299183773,
+      33.41290582325058,
+      30.362841863854328,
+      27.465034638917643,
+      24.71437748366793,
+      22.105237727783333,
+      19.631624804852265,
+      17.287337814866646,
+      15.066090716716872,
+      12.961615076197859,
+      10.967741677297795,
+      9.078463064602488,
+      7.287979499775247,
+      5.590730916828704,
+      3.9814173583764045,
+      2.455010217278982
+    ],
+    "delta_P": [
+      120.0,
+      114.21052631578948,
+      108.42105263157895,
+      102.63157894736842,
+      96.84210526315789,
+      91.05263157894737,
+      85.26315789473685,
+      79.47368421052632,
+      73.68421052631578,
+      67.89473684210526,
+      62.10526315789474,
+      56.315789473684205,
+      50.526315789473685,
+      44.73684210526315,
+      38.94736842105263,
+      33.157894736842096,
+      27.368421052631575,
+      21.57894736842104,
+      15.78947368421052,
+      10.0
+    ],
+    "p_out": 145.0,
+    "T_outlet": 47.54498978272102,
+    "p_out_range": [
+      40.0,
+      44.375,
+      48.75,
+      53.125,
+      57.5,
+      61.875,
+      66.25,
+      70.625,
+      75.0,
+      79.375,
+      83.75,
+      88.125,
+      92.5,
+      96.875,
+      101.25,
+      105.625,
+      110.0,
+      114.375,
+      118.75,
+      123.125,
+      127.5,
+      131.875,
+      136.25,
+      140.625,
+      145.0
+    ],
+    "T_path": [
+      5.493149730053688,
+      8.209046667655514,
+      10.831665708156038,
+      13.361702301467801,
+      15.800254509413321,
+      18.148778283226534,
+      20.409040120236682,
+      22.58306894798602,
+      24.67310895910964,
+      26.681574488913725,
+      28.61100802596468,
+      30.464041939268668,
+      32.243364310094876,
+      33.95168898417222,
+      35.59172983786226,
+      37.16617905411647,
+      38.67768914928354,
+      40.12885841943461,
+      41.52221944687335,
+      42.86023029951616,
+      44.14526806401636,
+      45.37962438175413,
+      46.565502618336666,
+      47.70501652879955,
+      48.8001899648163
+    ],
+    "P_path": [
+      40.0,
+      44.375,
+      48.75,
+      53.125,
+      57.5,
+      61.875,
+      66.25,
+      70.625,
+      75.0,
+      79.375,
+      83.75,
+      88.125,
+      92.5,
+      96.875,
+      101.25,
+      105.625,
+      110.0,
+      114.375,
+      118.75,
+      123.125,
+      127.5,
+      131.875,
+      136.25,
+      140.625,
+      145.0
+    ],
+    "openings": [
+      20.0,
+      30.0,
+      40.0,
+      50.0,
+      60.0,
+      70.0,
+      80.0,
+      90.0,
+      100.0
+    ],
+    "effective_cv": [
+      40.0,
+      60.0,
+      80.0,
+      100.0,
+      120.0,
+      140.0,
+      160.0,
+      180.0,
+      200.0
+    ],
+    "outlet_T": [
+      40.330125093025686,
+      47.120263096639405,
+      48.866474347701626,
+      49.33795602095489,
+      49.5592976995012,
+      49.68377992599335,
+      49.76142269565048,
+      49.81333099478371,
+      49.84983391843974
+    ],
+    "outlet_P": [
+      114.99608190250397,
+      138.3581884899139,
+      145.2704296005964,
+      147.21326610285047,
+      148.1372099496126,
+      148.66022805118558,
+      148.9876973523199,
+      149.20716651581225,
+      149.36176099216937
+    ],
+    "opening": 100.0,
+    "pressure": 149.36176099216937
+  },
+  "figure_discussions": [
+    {
+      "chapter": "ch17_valves_and_flow_control",
+      "chapter_number": 17,
+      "figure": "ch15_cv_and_jt_vs_flow.png",
+      "figure_path": "figures/ch15_cv_and_jt_vs_flow.png",
+      "caption": "Required Valve Cv vs. Flow Rate.",
+      "title": "Required Valve Cv vs. Flow Rate",
+      "observation": "Cv spans 5.657–45.26 US units across the plotted cases. JT Cooling remains 23.04 °C across the plotted cases.",
+      "mechanism": "At fixed upstream and downstream states, increasing flow requires a larger valve capacity; the isenthalpic temperature change can remain almost independent of flow.",
+      "implication": "Reusing an already sized valve can conceal the required-Cv trend, while constant JT cooling is physically plausible for identical inlet states and pressure drop.",
+      "recommendation": "Size a fresh valve or clear its sizing state for each trial, then select hardware with rangeability and controllability across the full flow envelope.",
+      "notebook": "notebooks/ch15_valves_flow_control.ipynb",
+      "dpi": 220,
+      "sha256": "8920a8aec0373bcf7a3e1248c9a6f68c0783c07ad479f3235d491a93801b0bfe",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Cv",
+            5.657170791732662,
+            45.25736633386134,
+            "US units"
+          ],
+          [
+            "JT Cooling",
+            23.03801404619054,
+            23.038014046190654,
+            "°C"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    },
+    {
+      "chapter": "ch17_valves_and_flow_control",
+      "chapter_number": 17,
+      "figure": "ch15_jt_cooling_vs_dp.png",
+      "figure_path": "figures/ch15_jt_cooling_vs_dp.png",
+      "caption": "Joule–Thomson Cooling vs. Pressure Drop (Natural Gas at 150 bara).",
+      "title": "Joule–Thomson Cooling vs. Pressure Drop (Natural Gas at 150 bara)",
+      "observation": "Temperature Drop ΔT spans 2.455–51.07 °C across the plotted cases.",
+      "mechanism": "A larger isenthalpic pressure reduction usually produces more cooling for the illustrated natural-gas state, with nonlinearity from changing fluid properties.",
+      "implication": "The coldest valve outlet can determine hydrate, low-temperature material and downstream separation requirements.",
+      "recommendation": "Calculate the full PH-flash path and check cold-start and low-flow inlet conditions rather than relying on a constant JT coefficient.",
+      "notebook": "notebooks/ch15_valves_flow_control.ipynb",
+      "dpi": 220,
+      "sha256": "fb0bfc36f2281ae1d3f41b560c177294b3b312aa738feedd2ac985ed0ebf19b8",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Temperature Drop ΔT",
+            2.455010217278982,
+            51.0654153792741,
+            "°C"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    },
+    {
+      "chapter": "ch17_valves_and_flow_control",
+      "chapter_number": 17,
+      "figure": "ch15_pt_path.png",
+      "figure_path": "figures/ch15_pt_path.png",
+      "caption": "P-T Path Through Throttling Valve (Isenthalpic).",
+      "title": "P-T Path Through Throttling Valve (Isenthalpic)",
+      "observation": "Isenthalpic expansion: pressure spans 40–145 bara across the plotted cases.",
+      "mechanism": "The pressure–temperature path follows constant stream enthalpy through an adiabatic valve rather than an isothermal or isentropic expansion.",
+      "implication": "Crossing saturation or hydrate boundaries can change the downstream phase load and operating risk even when pressure control is achieved.",
+      "recommendation": "Overlay the relevant phase and hydrate boundaries for the actual composition and evaluate the required temperature and pressure margins.",
+      "notebook": "notebooks/ch15_valves_flow_control.ipynb",
+      "dpi": 220,
+      "sha256": "c077813e4bfed4311d61c3467b16bfb388f5b33089cf8d792435d13ab9a3f6e3",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Isenthalpic expansion: pressure",
+            40.0,
+            145.0,
+            "bara"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    },
+    {
+      "chapter": "ch17_valves_and_flow_control",
+      "chapter_number": 17,
+      "figure": "ch15_valve_opening.png",
+      "figure_path": "figures/ch15_valve_opening.png",
+      "caption": "Effective Cv vs. Valve Opening.",
+      "title": "Effective Cv vs. Valve Opening",
+      "observation": "Effective Cv spans 40–200 US across the plotted cases. Outlet Pressure spans 115–149.4 bara across the plotted cases.",
+      "mechanism": "The trim characteristic maps valve travel to effective Cv; at imposed flow this changes the pressure drop required to pass the stream.",
+      "implication": "Valve opening is not a direct percentage of process flow, and very small openings can lie outside the feasible or controllable operating range.",
+      "recommendation": "Check the chosen characteristic and fixed hardware Cv against both minimum controllable flow and maximum required capacity.",
+      "notebook": "notebooks/ch15_valves_flow_control.ipynb",
+      "dpi": 220,
+      "sha256": "6b2890ceed5d6235fd0b37de126fb80ce5cc0828dcff525f2b7d1b5c86d11739",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Effective Cv",
+            40.0,
+            200.0,
+            "US"
+          ],
+          [
+            "Outlet Pressure",
+            114.99608190250397,
+            149.36176099216937,
+            "bara"
+          ],
+          [
+            "Outlet Temp: outlet temperature",
+            40.330125093025686,
+            49.84983391843974,
+            "°C"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    }
+  ],
+  "notebook_sha256": "ecedc6bb6329f41ab7f54b83d09f3dd47bb08aacefb0cd4038da70f209d9e8c0",
+  "editorial_review": {
+    "reviewed_at": "2026-09-12T20:15:02.385386+00:00",
+    "pre_review_notebook_sha256": "cefeb97eaba40da2a517b3f50ea453c8a8f64345bac90cdc4b2cdb3fb8e17177",
+    "code_and_outputs_unchanged": true,
+    "description": "Replaced generated discussion prose with plot-specific reviewed interpretation; every executed code hash rechecked."
+  },
+  "scientific_validation": {
+    "physics_report": "verification\\scientific_revision\\notebooks\\ch17_valves_and_flow_control.json",
+    "validation_helper_sha256": {
+      "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+      "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+      "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+    },
+    "pre_scope_markdown_sha256": "ecedc6bb6329f41ab7f54b83d09f3dd47bb08aacefb0cd4038da70f209d9e8c0",
+    "post_execution_edit": "Added scope and independent benchmark links only; every executed code-cell hash rechecked."
+  }
+}

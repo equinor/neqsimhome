@@ -1,0 +1,22 @@
+{
+  "changes": [
+    "**Hard** | Cannot be exceeded \u2014 equipment trips or fails | Equipment damage, safety hazard",
+    "**Soft** | Can be temporarily exceeded with penalty | Reduced efficiency, accelerated wear",
+    "**Design** | Information only \u2014 original design basis | No immediate consequence",
+    "getCapacityUtilization()",
+    "isOverloaded()",
+    "The constraints are lazily initialized \u2014 they are created the first time this method is called.",
+    "HARD,    // Cannot exceed \u2014 causes trip or equipment damage\n    SOFT,    // Can exceed temporarily \u2014 reduced efficiency ",
+    "This means every one of the 144+ equipment types \u2014 from simple valves to complex distillation columns \u2014 can hold and rep",
+    "The shadow price is zero until populated by an economic tool. The `DebottleneckingAdvisor` (Section 21.9.5) writes shado",
+    "The separator's `autoSize` creates constraints for:\n\n| Constraint | Unit | Type | Basis |\n|-----------|------|------|---",
+    "A compressor operating with less than 10% surge margin is dangerously close to surge and requires immediate attention.",
+    "| `cvUtilization` | - | HARD | Ratio of required Cv to installed Cv |",
+    "The valve opening constraint warns when the valve is nearly fully open (limited control authority) or nearly closed (poo",
+    "\\text{Valve OK if:}",
+    "### 21.4.5 Pipeline autoSize",
+    "`evaluate()` returns the recommendations sorted by descending NPV. Each `Recommendation` exposes `getNpvNok()`, `getPvBe"
+  ],
+  "python_fences_unchanged": true,
+  "java_fences": 31
+}

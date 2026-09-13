@@ -1,0 +1,721 @@
+{
+  "chapter": "ch24_production_optimization",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "execution_model": "Sequential literal Python in a fresh JVM; ordinary executions supplemented by exact-source hook runs. Per-example evidence links identify reused executions.",
+  "examples": [
+    {
+      "number": 1,
+      "language": "java",
+      "line": 395,
+      "sha256": "a04cef0ed18cb44c8e59d53705d4d0f6e428e79884a69ac9affba4896916d3ca",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 2,
+      "language": "java",
+      "line": 424,
+      "sha256": "90d939966159e99e40e0d7dedfa98f7f94cfacfb06705094e26e31979a46a13b",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 3,
+      "language": "java",
+      "line": 491,
+      "sha256": "a8df7dc9058422fa50ad63738e934168b13862a7ae9bddf8baa87d9ac2ced179",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 4,
+      "language": "java",
+      "line": 498,
+      "sha256": "1b78f09bbc681f38b05f9a6b8cd95c64b2a1061ec7e165d465342283551efacb",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 5,
+      "language": "python",
+      "line": 505,
+      "sha256": "c0d656d0ca7cb62e1bdb0f286d61bde19d833508cf6ba006ee368ed644f4c8e5",
+      "status": "passed",
+      "seconds": 2.0940000000045984,
+      "output": "Separator utilization: 83.3%\nCompressor utilization: 83.3%\nEnabled constraints for the explicitly built process\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 6,
+      "language": "java",
+      "line": 555,
+      "sha256": "41f2347543ef732be7dd19d6798214ca983eb971cd796555df266c7df7566947",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 7,
+      "language": "java",
+      "line": 586,
+      "sha256": "0cc1c1eb4eaf3cb776047db93cb3572a9c37cd9ff83e2d14d5fc101fc7646b17",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 8,
+      "language": "java",
+      "line": 593,
+      "sha256": "63342f1e3b6535fa51f7a601b8a83e3fbcaf6989a4d2612fb059e84fb4427d81",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 9,
+      "language": "java",
+      "line": 605,
+      "sha256": "43acf1fd862c964fe7706863b2e2924eb53a7c68b419485e6b6838d32b4f7181",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 10,
+      "language": "java",
+      "line": 614,
+      "sha256": "961f1563856792443da3fe71c5bf1a57e2c9026bcbdbeb39292627185f8c2279",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 11,
+      "language": "java",
+      "line": 625,
+      "sha256": "9785a913223c41c8855d6fbd7b657c6cdd271187aaaa5635ebfa56a0a137dc10",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 12,
+      "language": "java",
+      "line": 640,
+      "sha256": "7e08c05e6c12792262eb72cb98a6fbdc70603372652fbc5f3ba795146d3da634",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 13,
+      "language": "python",
+      "line": 685,
+      "sha256": "1e9cc5ef5c0c69fdf24ba6ce87be46a846984805b3c40a8b05d273530d93d96c",
+      "status": "passed",
+      "seconds": 0.2809999999954016,
+      "output": "Separator utilization: 83.3%\nCompressor utilization: 83.3%\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 14,
+      "language": "java",
+      "line": 729,
+      "sha256": "186db9af9ff411afa85da020d316731cfc5003cc51043fb873c2d44f6d315a76",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 15,
+      "language": "java",
+      "line": 746,
+      "sha256": "9e6a633dd1f010fa6052773b39cafe589fe6e6c2ad8cf6e036856e63a6b734dc",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 16,
+      "language": "python",
+      "line": 764,
+      "sha256": "0bcc97379b7a3e6f04740f60ad6013ede7ca5c02f9836faf5044906871660c70",
+      "status": "passed",
+      "seconds": 0.01600000000325963,
+      "output": "Bottleneck: Export Comp\nUtilization: 83.3%\nLimiting constraint: power\n  HP Sep: 83.3%  [YELLOW]\n  Export Comp: 83.3%  [YELLOW]\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 17,
+      "language": "python",
+      "line": 804,
+      "sha256": "46dfef0f8244f0c91e19be6d5bb4f6a7252b411eebffe3b7739e93f702a01311",
+      "status": "passed",
+      "seconds": 0.014999999999417923,
+      "output": "With compressor unconstrained, new bottleneck: Export Comp\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 18,
+      "language": "python",
+      "line": 823,
+      "sha256": "aeccd04feccabfcf2f83f15b77a20e2db23040a0c48bdad8c41c8a276a2aa710",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "================================================================================\nFACILITY UTILIZATION REPORT\n================================================================================\nEquipment                 Util (%)     Constraint           Status\n--------------------------------------------------------------------------------\nExport Comp               83.3         —                    YELLOW\nHP Sep                    83.3         —                    YELLOW\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 19,
+      "language": "java",
+      "line": 861,
+      "sha256": "78ff94f1bd28db999a42a1915b7335a0279bb44f60242d95e0e2e514d122117d",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 20,
+      "language": "python",
+      "line": 888,
+      "sha256": "2ea4aa8bdbceea6f00d9175a9a56ac5b11acfabc3ea7ddaf23f34067ac847f6d",
+      "status": "passed",
+      "seconds": 0.047,
+      "output": "",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 21,
+      "language": "java",
+      "line": 925,
+      "sha256": "c74180dc49847bd232e5a5c51cab810a7bd6054487e497a1557e53b7d78d85a1",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 22,
+      "language": "java",
+      "line": 940,
+      "sha256": "6c4a6f9444d28818b1c395700d9195b4791764b37417f02cdec161daa819a7b3",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 23,
+      "language": "python",
+      "line": 965,
+      "sha256": "6250e9b5c38cdd4e6eb103d8920eada3ac355ee653997b108d3d7352fee34fea",
+      "status": "passed",
+      "seconds": 2.3289999999979045,
+      "output": "Optimal rate:     183688 kg/hr\nFeasible:         True\nBottleneck:       Export Comp\nBottleneck util:  76.5%\nIterations:       14\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 24,
+      "language": "java",
+      "line": 1094,
+      "sha256": "62963e43d6199d06d9ee3efbb4fd50dc7a18303850346d97a0c73028d4a539d7",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 25,
+      "language": "java",
+      "line": 1142,
+      "sha256": "2ebe5659ede894ae7716b6ae7ddb689b5443f298d4eff88f22748df23ced6aa0",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 26,
+      "language": "java",
+      "line": 1186,
+      "sha256": "d2e2e66db0ce7d5862e15be2e8da134a0cd7e93eb71abd5f4feeda44d34b2d68",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 27,
+      "language": "python",
+      "line": 1221,
+      "sha256": "3ad507f043f98b7cb74877ce92f2ce67983acc775f8b55d05030871b9ff2fb4a",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 28,
+      "language": "python",
+      "line": 1240,
+      "sha256": "bfa86010cd4ed94e47a92cca9823b43f31001d152c62e07a9b80d89c83e6dfdd",
+      "status": "passed",
+      "seconds": 1.078,
+      "output": "",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 29,
+      "language": "java",
+      "line": 1258,
+      "sha256": "766ed115aaf7732e10b754e2bc1a715e8cff08d27d15c748daae6f3838639e2d",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 30,
+      "language": "java",
+      "line": 1271,
+      "sha256": "57534e3cca46f592721e2a5e4895be158caa506ce1ee777c34ad51a36418c10e",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 31,
+      "language": "java",
+      "line": 1287,
+      "sha256": "b32b981fed49172c13bc630e9f0fde33d04d6df294e45bfec3ac69eb0f49ba14",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 32,
+      "language": "python",
+      "line": 1310,
+      "sha256": "0a3183bde47b420e4b258bf3e25de2cd914c85755410474e989a69a2d656b019",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "HP Sep 0.7621768519439585 True\ngasLoadFactor 0.08155292315800355 0.7621768519439585\nkValue 0.16160883924526312 1.0773922616350875\ndropletCutSize 51.51422400174233 0.3434281600116155\ninletMomentum 6552.382048956441 0.4095238780597776\noilRetentionTime 8.934547497709797 0.3357752589897802\nwaterRetentionTime 57.47314271944021 0.052198293986545026\nExport Comp 0.7653670997397356 True\nspeed 3000.0 1.0\nminSpeed 3000.0 0.6666666666666666\npower 76.53670997397356 0.7653670997397356\nratedPower 76.53670997397356 0.7653670997397356\nsurgeMargin 32.193979701731124 0.31061708097748114\nstonewallMargin 37.74486412668947 0.13246835339551508\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 33,
+      "language": "python",
+      "line": 1326,
+      "sha256": "36129bf1324284be490b26d489c98682cad0fc038fc3c3b3108e87dd662383a1",
+      "status": "passed",
+      "seconds": 3.9059999999954016,
+      "output": "Flow sensitivity: 1.0000000000000395\nTightest constraint: Export Comp\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 34,
+      "language": "python",
+      "line": 1339,
+      "sha256": "23ab996d4b21eba937735becb25ed7d0d850491a4ea32adf1372e74967230ebc",
+      "status": "passed",
+      "seconds": 33.9690000000046,
+      "output": "40.0 343.15 147746.92972015982\n60.0 343.15 235566.1536251445\n80.0 343.15 nan\n{'pressure_bara': 40.0, 'native_candidate_kg_hr': 147746.92972015982, 'grid_maximum_kg_hr': 137500.0, 'grid_spacing_kg_hr': 12500.0}\n{'pressure_bara': 60.0, 'native_candidate_kg_hr': 235566.1536251445, 'grid_maximum_kg_hr': 225000.0, 'grid_spacing_kg_hr': 12500.0}\n{'pressure_bara': 80.0, 'native_candidate_kg_hr': nan, 'grid_maximum_kg_hr': 250000.0, 'grid_spacing_kg_hr': 12500.0}\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 35,
+      "language": "python",
+      "line": 1375,
+      "sha256": "98876f0823f76d16bb307dab21b23706e993178009b4a49318eab312d2853f4e",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 36,
+      "language": "java",
+      "line": 1364,
+      "sha256": "55e4b75156a871e44a19150b0ebe4635cfd74771cec9fd37d0c242de3181601c",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 37,
+      "language": "python",
+      "line": 1405,
+      "sha256": "e8d097604502b3743f7c44de2b7b0e74de33dbbc8f61e78c6ac9efe5af861b71",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 38,
+      "language": "java",
+      "line": 1394,
+      "sha256": "505ecc2a60ca15dedb84ceffc16fef278bec144eaa27f6f8e1fb85a55249ff9f",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 39,
+      "language": "python",
+      "line": 1438,
+      "sha256": "f722ce24162af4decb45505d511f6cf4ad14a4b4f9e8cdabfb80da7708c7319a",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 40,
+      "language": "java",
+      "line": 1437,
+      "sha256": "834f6fe78a0029bba0836682ea2eccef63b9fbc8faeb190929d3595343ab6f6b",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 41,
+      "language": "python",
+      "line": 1500,
+      "sha256": "b77c0fe779e888a10c5171bb385a85136459fe0dc45315f19b3ff0ecb4100d96",
+      "status": "passed",
+      "seconds": 12.030999999995402,
+      "output": "",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 42,
+      "language": "java",
+      "line": 1525,
+      "sha256": "a4c840e9066d65c552f5b1820e195a8bf279e409eb1f9b80fc6070889701c748",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 43,
+      "language": "java",
+      "line": 1545,
+      "sha256": "723f4460f8ab79ef7e7f52a0d620b19e60eb804227c55c66dcbad10321e3ade2",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 44,
+      "language": "python",
+      "line": 1594,
+      "sha256": "4824f92ad4f295082f4a348d9f27fd9de62dc61c970834687033e25360a079fd",
+      "status": "passed",
+      "seconds": 0.40600000000267755,
+      "output": "Scenario  Sep P (bara) Gas Rate (MSm3/d) Power (MW) Bottleneck Util (%)\nBaseline          65.0              0.87        1.3                20.8\n  High P          80.0              0.86        0.9                18.8\n   Low P          50.0              0.89        1.9                29.4\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 45,
+      "language": "java",
+      "line": 1619,
+      "sha256": "497242b92c0483cfce174c1e853086265f312af0d5673c04eb5d4c1e0b2dbf8b",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 46,
+      "language": "java",
+      "line": 1644,
+      "sha256": "34ab90df8709ade8738bf32ebd808253b55d7a38f91a791dc0fac15937bb0094",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 47,
+      "language": "java",
+      "line": 1663,
+      "sha256": "1946997bc582e0b17dfbbb4b207ca7d3b2e4f54e60385bea52def78a1fecfa2e",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 48,
+      "language": "python",
+      "line": 1710,
+      "sha256": "4a10e9dd9fa94cb2cadaf0faec74cef6ff40984206913baed0a6d0c890cd2620",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "speed 3000.0 RPM 1.0\nminSpeed 3000.0 RPM 0.6666666666666666\npower 29.147502894731648 % 0.2914750289473165\nratedPower 29.147502894731648 % 0.2914750289473165\nsurgeMargin -64.02792543172008 % 9.99\nstonewallMargin 364.36823199234476 % 0.013722381813201125\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 49,
+      "language": "java",
+      "line": 1710,
+      "sha256": "53625d7847d9219cf82463f37843ddda4e1cbf681a5ddb0d781f3be03aa9caed",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 50,
+      "language": "java",
+      "line": 1763,
+      "sha256": "691bfd15bc5f522d3e6239842c7d7df295368a6e6efa0c4f56ded1289740c42e",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 51,
+      "language": "java",
+      "line": 1773,
+      "sha256": "1e51b345f6f794d0036666931d9ae96521b3c2fe67924d6232839c4781907efc",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 52,
+      "language": "java",
+      "line": 1781,
+      "sha256": "b8415e1f0f99d73fb2ef64383a405fcb743d2187d0e79253767ca9af85c07664",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 53,
+      "language": "java",
+      "line": 1792,
+      "sha256": "a4a35fc6ba67fb0e728c61fabd7c872c55509b67c6ab28b177a49aa386e93490",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 54,
+      "language": "java",
+      "line": 1803,
+      "sha256": "424879afeb2073415a4982d32ab61a2ae7e8a0b5f1594f102d40e5b4df444180",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 55,
+      "language": "java",
+      "line": 1810,
+      "sha256": "5cd3ad8f671bce176bddf042681a13ae45a6f89acf40bf3a6fc5524f97b32c31",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 56,
+      "language": "java",
+      "line": 1818,
+      "sha256": "460aea5701cbf4e8719a6ab75d4d127ccdbf6f310e77b75fde5f22902ee78a76",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 57,
+      "language": "java",
+      "line": 1830,
+      "sha256": "43f4ee55be589c56171cae798a795f67c6bcb2f142325b77e562cc6e4c0f02ed",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 58,
+      "language": "java",
+      "line": 1851,
+      "sha256": "2f9f8b0bc63fa01d17f8fb986f216c7246d86bd2b39ec6f61bc33d45bcc9a1f9",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 59,
+      "language": "python",
+      "line": 1895,
+      "sha256": "c5366d6835f70ef1ad0e22765f801da626d4ed45bf1f29771e681bbe9519fc76",
+      "status": "passed",
+      "seconds": 23.437999999994645,
+      "output": "L-BFGS-B candidate objective: -10000000000 kg/hr\nIterations: 0, Function evaluations: 2\nDE candidate objective: 187326 kg/hr\nSLSQP candidate: flow=200000 kg/hr, sep_P=65.0 bara\nL-BFGS-B accepted candidate (local/grid-independent global optimality is not established)\nDE accepted candidate (local/grid-independent global optimality is not established)\nSLSQP accepted candidate (local/grid-independent global optimality is not established)\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 60,
+      "language": "python",
+      "line": 1943,
+      "sha256": "053e5c5430451872a7eaab65ad40f3503f1ffab0255b91f514d0d1308266e281",
+      "status": "integration_pattern",
+      "reason": "pattern: optional NLopt package is required"
+    },
+    {
+      "number": 61,
+      "language": "java",
+      "line": 1972,
+      "sha256": "17492ebb16193d9af3c47aadfb943317c0b3fc93b26bdea82067329a55d26d99",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 62,
+      "language": "python",
+      "line": 2066,
+      "sha256": "0df2891422d4481e03a8d34ef784617f9f86af1d74ac5270248c75375f483a29",
+      "status": "passed",
+      "seconds": 10.827999999994063,
+      "output": "Optimal separator pressure: 97.5 bara\nAt optimum: Oil=634852 Sm3/d, Gas=3.38 MSm3/d, Power=2.4 MW\nNet revenue: 280496 kUSD/day\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 63,
+      "language": "java",
+      "line": 2135,
+      "sha256": "9c0096e387224ba5ae02df96397676680d965dddfab0b7c73478d55a4344a6c5",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 64,
+      "language": "java",
+      "line": 2158,
+      "sha256": "cc76457c563e28aa64098c1612fb6650938b36d46790cc1f83713e350ced6397",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 65,
+      "language": "java",
+      "line": 2181,
+      "sha256": "0cd31e7c17c4c4cb46cd63a187f88bed1c53864db93795b1fd041137f91140da",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 66,
+      "language": "python",
+      "line": 2193,
+      "sha256": "c8bf0a5a6cc1ff622ba7431282959c492059be5f455111098ffbe46ffdbd0463",
+      "status": "integration_pattern",
+      "reason": "pattern: requires historian reconciliation and scheduled-run infrastructure"
+    },
+    {
+      "number": 67,
+      "language": "python",
+      "line": 2228,
+      "sha256": "67e2b1ba8662ff7fee76342e851229cbd59c1e7804d248142ffd34db9fc7c73c",
+      "status": "integration_pattern",
+      "reason": "pattern: requires historian reconciliation and scheduled-run infrastructure"
+    },
+    {
+      "number": 68,
+      "language": "python",
+      "line": 2300,
+      "sha256": "0c2c54992704f2ed5564f3dd45ee03f43e503ef6e92b271398da05bad6ba93a6",
+      "status": "integration_pattern",
+      "reason": "pattern: requires installed historian tagreader client and authenticated site data"
+    },
+    {
+      "number": 69,
+      "language": "python",
+      "line": 2375,
+      "sha256": "65d37b9289792211da487000b6d06da25b69a5e7fd1993149fe0d620e98e6a06",
+      "status": "passed",
+      "seconds": 31.93800000000192,
+      "output": "Step 1: Process model built and mesh checked [{'rate_kg_hr': 125000.0, 'pressure_difference_bar': 7.821037971211808e-05, 'temperature_difference_K': 0.0}, {'rate_kg_hr': 250000.0, 'pressure_difference_bar': 0.0012582002898113842, 'temperature_difference_K': 0.0}, {'rate_kg_hr': 350000.0, 'pressure_difference_bar': 0.005004456314935624, 'temperature_difference_K': 0.0}]\n  Feed rate: 250000 kg/hr\n  Compressor power: 6.49 MW\n\nStep 2: Equipment auto-sized with 20% margin\n  HP Separator V-100: 83.3%\n  Export Compressor K-100: 83.3%\n  Export Pipeline: 6.2%\n\n============================================================\nOPTIMIZATION RESULTS\n============================================================\nReturned feed rate:  252786 kg/hr\nRate unit:          kg/hr\nFeasible:           True\nScore:              0.0000\nIterations:         13\nBottleneck:         Export Compressor K-100\nBottleneck util:    84.3%\n\nEquipment Utilization at Optimum:\n  HP Separator V-100: 84.3% (limit: 95%)\n  Export Compressor K-100: 84.3% (limit: 95%)\n  Gas Cooler E-100: 0.0% (limit: 95%)\n  Export cooler knockout: 50.0% (limit: 95%)\n  Export Pipeline: 6.3% (limit: 95%)\n\nOptimization history exported to optimization_history.json\n\n============================================================\nPRODUCTION RATE SWEEP\n============================================================\nFactor   Rate (kg/hr)   Comp Power (MW)    Bottleneck           Util (%)\n---------------------------------------------------------------------------\n0.5      125000         3.24               Export Compressor K-100 41.7 [OK]\n0.6      150000         3.89               Export Compressor K-100 50.0 [OK]\n0.7      175000         4.54               Export Compressor K-100 58.3 [OK]\n0.8      200000         5.19               Export Compressor K-100 66.7 [OK]\n0.9      225000         5.84               Export Compressor K-100 75.0 [OK]\n1.0      250000         6.49               Export Compressor K-100 83.3 [OK]\n1.1      275000         7.14               Export Compressor K-100 91.7 [OK]\n1.2      300000         7.78               Export Compressor K-100 100.0 [LIMIT]\n1.3      325000         8.43               Export Compressor K-100 108.3 [EXCEEDED]\n1.4      350000         9.08               Export Compressor K-100 116.7 [EXCEEDED]\n\nFigure saved to figures/facility_optimization_results.png\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 70,
+      "language": "python",
+      "line": 2587,
+      "sha256": "a04be98ae816dfe617dfe4721f44a4a021a931d39c90d04a3cdab388b45c4fc3",
+      "status": "integration_pattern",
+      "reason": "pattern: requires calibrated gas-lift well models and allocation callbacks"
+    },
+    {
+      "number": 71,
+      "language": "python",
+      "line": 2642,
+      "sha256": "774544c5acc39b0f8051563b216830931fe6a22bc07c505ed4f5ab0ba145ee0e",
+      "status": "integration_pattern",
+      "reason": "pattern: requires calibrated gas-lift well models and allocation callbacks"
+    },
+    {
+      "number": 72,
+      "language": "python",
+      "line": 2761,
+      "sha256": "fd2cdc8776976cac5fc4d65fe8f1df024d1338ff747eee8d438948b838f5ee07",
+      "status": "passed",
+      "seconds": 8.110000000000582,
+      "output": "Factor   Flow (kg/hr)   Bottleneck                Util (%)  \n------------------------------------------------------------\n0.5      125000         Export Compressor K-100   41.7      \n0.6      150000         Export Compressor K-100   50.0      \n0.7      175000         Export Compressor K-100   58.3      \n0.8      200000         Export Compressor K-100   66.7      \n0.9      225000         Export Compressor K-100   75.0      \n1.0      250000         Export Compressor K-100   83.3      \n1.1      275000         Export Compressor K-100   91.7      \n1.2      300000         Export Compressor K-100   100.0     \n1.3      325000         Export Compressor K-100   108.3     \n1.4      350000         Export Compressor K-100   116.7     \n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 73,
+      "language": "python",
+      "line": 2798,
+      "sha256": "94477f12a1f54f872f50624264153d1108aa956da400d6eb2cf40bb5e0831364",
+      "status": "passed",
+      "seconds": 37.93800000000192,
+      "output": "{'rate_kg_hr': 250000.0, 'sep_P': 50.0, 'comp_P': 120.0, 'power_MW': 7.029195877314692, 'accepted': True, 'knockout_mass_deficit_kg_hr': 3.2014213502407074e-10, 'residuals': {'mass_relative': 1.4784745872020727e-14, 'component_relative': 4.270644628923037e-15, 'energy_relative': 5.480672317854657e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 50.0, 'comp_P': 140.0, 'power_MW': 8.47065649102872, 'accepted': True, 'knockout_mass_deficit_kg_hr': 0.0, 'residuals': {'mass_relative': 1.4784745872020727e-14, 'component_relative': 4.270644628923037e-15, 'energy_relative': 5.480672317854657e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 50.0, 'comp_P': 160.0, 'power_MW': 9.784711787892343, 'accepted': True, 'knockout_mass_deficit_kg_hr': -1.9243452697992325e-07, 'residuals': {'mass_relative': 1.063565468302238e-12, 'component_relative': 8.449554971551749e-12, 'energy_relative': 5.480672317854657e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 50.0, 'comp_P': 180.0, 'power_MW': 11.00036299159692, 'accepted': True, 'knockout_mass_deficit_kg_hr': 1.8111313693225384e-07, 'residuals': {'mass_relative': 1.0009933317067193e-12, 'component_relative': 7.377231564703551e-13, 'energy_relative': 5.480672317854657e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 60.0, 'comp_P': 120.0, 'power_MW': 5.298763979625604, 'accepted': True, 'knockout_mass_deficit_kg_hr': 2.9103830456733704e-10, 'residuals': {'mass_relative': 2.060551196336747e-14, 'component_relative': 6.447836008373997e-15, 'energy_relative': 5.081995982387977e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 60.0, 'comp_P': 140.0, 'power_MW': 6.64324056826179, 'accepted': True, 'knockout_mass_deficit_kg_hr': 0.0, 'residuals': {'mass_relative': 2.060551196336747e-14, 'component_relative': 6.447836008373997e-15, 'energy_relative': 5.081995982387977e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 60.0, 'comp_P': 160.0, 'power_MW': 7.8705923354416605, 'accepted': True, 'knockout_mass_deficit_kg_hr': 1.4927354641258717e-07, 'residuals': {'mass_relative': 8.40163337753668e-13, 'component_relative': 6.767555570660265e-13, 'energy_relative': 5.081995982387977e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 60.0, 'comp_P': 180.0, 'power_MW': 9.007497548773042, 'accepted': True, 'knockout_mass_deficit_kg_hr': 1.8940772861242294e-07, 'residuals': {'mass_relative': 1.0660524472803415e-12, 'component_relative': 7.914804575289382e-13, 'energy_relative': 5.081995982387977e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 70.0, 'comp_P': 120.0, 'power_MW': 3.9369852203165263, 'accepted': True, 'knockout_mass_deficit_kg_hr': 2.3283064365386963e-10, 'residuals': {'mass_relative': 1.7113052308559427e-14, 'component_relative': 5.610454708585166e-15, 'energy_relative': 4.77985420462557e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 70.0, 'comp_P': 140.0, 'power_MW': 5.197547334237047, 'accepted': True, 'knockout_mass_deficit_kg_hr': -2.9103830456733704e-11, 'residuals': {'mass_relative': 1.7113052308559427e-14, 'component_relative': 5.610454708585166e-15, 'energy_relative': 4.77985420462557e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 70.0, 'comp_P': 160.0, 'power_MW': 6.349824113206778, 'accepted': True, 'knockout_mass_deficit_kg_hr': 1.6283593140542507e-07, 'residuals': {'mass_relative': 9.289400165113878e-13, 'component_relative': 5.18143836568687e-13, 'energy_relative': 4.77985420462557e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 70.0, 'comp_P': 180.0, 'power_MW': 7.418518534882874, 'accepted': True, 'knockout_mass_deficit_kg_hr': 1.7558340914547443e-07, 'residuals': {'mass_relative': 1.0016613261149603e-12, 'component_relative': 7.452166342160424e-13, 'energy_relative': 4.77985420462557e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 80.0, 'comp_P': 120.0, 'power_MW': 2.8374563257657277, 'accepted': True, 'knockout_mass_deficit_kg_hr': 4.94765117764473e-10, 'residuals': {'mass_relative': 2.2351741790771494e-14, 'component_relative': 7.368955438141712e-15, 'energy_relative': 4.616208433342727e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 80.0, 'comp_P': 140.0, 'power_MW': 4.0239683458760105, 'accepted': False, 'knockout_mass_deficit_kg_hr': 0.40718031651340425, 'residuals': {'mass_relative': 2.3451539856035655e-06, 'component_relative': 9.942650205534691e-06, 'energy_relative': 0.0005174549717788363, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 80.0, 'comp_P': 160.0, 'power_MW': 5.109968427520794, 'accepted': True, 'knockout_mass_deficit_kg_hr': 1.493026502430439e-07, 'residuals': {'mass_relative': 8.599082300362698e-13, 'component_relative': 6.031810296826276e-13, 'energy_relative': 4.616208433342727e-12, 'domain_valid': True}}\n{'rate_kg_hr': 250000.0, 'sep_P': 80.0, 'comp_P': 180.0, 'power_MW': 6.118439686168646, 'accepted': True, 'knockout_mass_deficit_kg_hr': 1.738371793180704e-07, 'residuals': {'mass_relative': 1.0012147871357973e-12, 'component_relative': 7.463591085962343e-13, 'energy_relative': 4.616208433342727e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 50.0, 'comp_P': 120.0, 'power_MW': 9.840874228240574, 'accepted': True, 'knockout_mass_deficit_kg_hr': 4.656612873077393e-10, 'residuals': {'mass_relative': 1.496768423489162e-14, 'component_relative': 4.306532398913985e-15, 'energy_relative': 5.479898702029491e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 50.0, 'comp_P': 140.0, 'power_MW': 11.858919087440256, 'accepted': True, 'knockout_mass_deficit_kg_hr': 5.820766091346741e-11, 'residuals': {'mass_relative': 1.496768423489162e-14, 'component_relative': 4.306532398913985e-15, 'energy_relative': 5.479898702029491e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 50.0, 'comp_P': 160.0, 'power_MW': 13.698596503049288, 'accepted': True, 'knockout_mass_deficit_kg_hr': -2.694141585379839e-07, 'residuals': {'mass_relative': 1.0635884474196065e-12, 'component_relative': 8.449692837332701e-12, 'energy_relative': 5.479898702029491e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 50.0, 'comp_P': 180.0, 'power_MW': 15.40050818823567, 'accepted': True, 'knockout_mass_deficit_kg_hr': 2.5349436327815056e-07, 'residuals': {'mass_relative': 1.0007405614156609e-12, 'component_relative': 7.386147205451023e-13, 'energy_relative': 5.479898702029491e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 60.0, 'comp_P': 120.0, 'power_MW': 7.418269571475824, 'accepted': True, 'knockout_mass_deficit_kg_hr': 4.656612873077393e-10, 'residuals': {'mass_relative': 2.0954757928848268e-14, 'component_relative': 6.818676298280477e-15, 'energy_relative': 5.082968554417522e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 60.0, 'comp_P': 140.0, 'power_MW': 9.300536795566488, 'accepted': True, 'knockout_mass_deficit_kg_hr': -2.9103830456733704e-11, 'residuals': {'mass_relative': 2.0954757928848268e-14, 'component_relative': 6.818676298280477e-15, 'energy_relative': 5.082968554417522e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 60.0, 'comp_P': 160.0, 'power_MW': 11.018829269618376, 'accepted': True, 'knockout_mass_deficit_kg_hr': 2.0890729501843452e-07, 'residuals': {'mass_relative': 8.398591257549265e-13, 'component_relative': 6.778313448475105e-13, 'energy_relative': 5.082968554417522e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 60.0, 'comp_P': 180.0, 'power_MW': 12.610496568282283, 'accepted': True, 'knockout_mass_deficit_kg_hr': 2.489541657269001e-07, 'residuals': {'mass_relative': 1.000857475857849e-12, 'component_relative': 7.416095844461371e-13, 'energy_relative': 5.082968554417522e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 70.0, 'comp_P': 120.0, 'power_MW': 5.511779308443232, 'accepted': True, 'knockout_mass_deficit_kg_hr': 4.656612873077393e-10, 'residuals': {'mass_relative': 1.746229827404022e-14, 'component_relative': 5.622417298582147e-15, 'energy_relative': 4.779168035489108e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 70.0, 'comp_P': 140.0, 'power_MW': 7.276566267931916, 'accepted': True, 'knockout_mass_deficit_kg_hr': 5.820766091346741e-11, 'residuals': {'mass_relative': 1.746229827404022e-14, 'component_relative': 5.622417298582147e-15, 'energy_relative': 4.779168035489108e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 70.0, 'comp_P': 160.0, 'power_MW': 8.889753758489466, 'accepted': True, 'knockout_mass_deficit_kg_hr': 2.281449269503355e-07, 'residuals': {'mass_relative': 9.296515753137701e-13, 'component_relative': 5.201231636183973e-13, 'energy_relative': 4.779168035489108e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 70.0, 'comp_P': 180.0, 'power_MW': 10.385925948836014, 'accepted': True, 'knockout_mass_deficit_kg_hr': 2.4563632905483246e-07, 'residuals': {'mass_relative': 1.0009260486858297e-12, 'component_relative': 7.435043592285939e-13, 'energy_relative': 4.779168035489108e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 80.0, 'comp_P': 120.0, 'power_MW': 3.9724388560720327, 'accepted': True, 'knockout_mass_deficit_kg_hr': 5.529727786779404e-10, 'residuals': {'mass_relative': 2.2784141557557243e-14, 'component_relative': 7.416805798129641e-15, 'energy_relative': 4.616617819643238e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 80.0, 'comp_P': 140.0, 'power_MW': 5.6335556842264545, 'accepted': False, 'knockout_mass_deficit_kg_hr': 0.5700524429266807, 'residuals': {'mass_relative': 2.345153984813339e-06, 'component_relative': 9.942650205539758e-06, 'energy_relative': 0.0005174549717786333, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 80.0, 'comp_P': 160.0, 'power_MW': 7.153955798529132, 'accepted': True, 'knockout_mass_deficit_kg_hr': 2.0890729501843452e-07, 'residuals': {'mass_relative': 8.594293059315428e-13, 'component_relative': 6.005119199605795e-13, 'energy_relative': 4.616617819643238e-12, 'domain_valid': True}}\n{'rate_kg_hr': 350000.0, 'sep_P': 80.0, 'comp_P': 180.0, 'power_MW': 8.565815560636118, 'accepted': True, 'knockout_mass_deficit_kg_hr': 2.4322071112692356e-07, 'residuals': {'mass_relative': 1.0005921857996522e-12, 'component_relative': 7.45899459545515e-13, 'energy_relative': 4.616617819643238e-12, 'domain_valid': True}}\nLowest-power accepted sampled pressure settings at each fixed rate: {250000.0: {'rate_kg_hr': 250000.0, 'sep_P': 80.0, 'comp_P': 120.0, 'power_MW': 2.8374563257657277, 'accepted': True, 'knockout_mass_deficit_kg_hr': 4.94765117764473e-10, 'residuals': {'mass_relative': 2.2351741790771494e-14, 'component_relative': 7.368955438141712e-15, 'energy_relative': 4.616208433342727e-12, 'domain_valid': True}}, 350000.0: {'rate_kg_hr': 350000.0, 'sep_P': 80.0, 'comp_P': 120.0, 'power_MW': 3.9724388560720327, 'accepted': True, 'knockout_mass_deficit_kg_hr': 5.529727786779404e-10, 'residuals': {'mass_relative': 2.2784141557557243e-14, 'component_relative': 7.416805798129641e-15, 'energy_relative': 4.616617819643238e-12, 'domain_valid': True}}}\nRejected states remain in the record; no complete-grid or global optimum is claimed.\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 74,
+      "language": "python",
+      "line": 2911,
+      "sha256": "761270e2a543fad77d5c6094263cd9f2868fbd6874ed69d335cc75a904e826b3",
+      "status": "passed",
+      "seconds": 131.86000000000058,
+      "output": "Current max: 300000 kg/hr\nBottleneck: HP Separator V-100\n\nConstraint-mask sensitivity (no physical upgrade credit):\nStep   Bottleneck                Max Rate (kg/hr)   Gain (%)\n----------------------------------------------------------------------\n0      HP Separator V-100        300000             0.0\n1      HP Separator V-100        300000             0.0\n2      HP Separator V-100        300000             0.0\n3      HP Separator V-100        300000             0.0\n4      HP Separator V-100        300000             0.0\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 75,
+      "language": "python",
+      "line": 2972,
+      "sha256": "c8d6a77a1d9886d88961062046629cac2f84044eee524de51fd79e5b85212395",
+      "status": "passed",
+      "seconds": 0.014999999999417923,
+      "output": "Separator internals assumed oil gain bbl/day: 1000.0 gross revenue MUSD/year: 24.5 capital/gross-revenue ratio years: 0.061224489795918366\nCompressor driver assumed oil gain bbl/day: 1500.0 gross revenue MUSD/year: 36.75 capital/gross-revenue ratio years: 0.12244897959183673\nCooler area assumed oil gain bbl/day: 500.0 gross revenue MUSD/year: 12.25 capital/gross-revenue ratio years: 0.0653061224489796\nParallel pipeline assumed oil gain bbl/day: 3000.0 gross revenue MUSD/year: 73.5 capital/gross-revenue ratio years: 0.3401360544217687\n",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 76,
+      "language": "python",
+      "line": 2885,
+      "sha256": "98b767e10f3c200afd3bd8bd53bfabf5d395ea241c2e706f7fdb41ceaac6964d",
+      "status": "integration_pattern",
+      "reason": "pattern: requires a fully defined flare driver and emissions model"
+    },
+    {
+      "number": 77,
+      "language": "python",
+      "line": 2903,
+      "sha256": "7abfec7a51d9054394e894a1ef7d1cd9c56410a284dc31d4769cf56064cf2980",
+      "status": "integration_pattern",
+      "reason": "pattern: requires a fully defined flare driver and emissions model"
+    },
+    {
+      "number": 78,
+      "language": "python",
+      "line": 2919,
+      "sha256": "7f93fbc079790b6c0f318783af2d56de14e2dc92982ea5c2151644b2b36f9d7c",
+      "status": "integration_pattern",
+      "reason": "pattern: requires a fully defined flare driver and emissions model"
+    },
+    {
+      "number": 79,
+      "language": "java",
+      "line": 2975,
+      "sha256": "fea909e547d8e78c21b05fff9848cacf3dbd16ad346efca6ea2a85f127c98f37",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 80,
+      "language": "python",
+      "line": 3132,
+      "sha256": "698d5b71ee872e0d1a3a1c3ffae50bb9b15b4151f27e6a8a87a27e9e55029a0f",
+      "status": "passed",
+      "seconds": 1.375,
+      "output": "",
+      "execution_evidence": "verification\\scientific_revision\\ch24_solution_checks.json",
+      "execution_evidence_sha256": "0a59e9714298dda6982440777f60bd6ee3a5b770acc9b03e95902144db13861f",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\6f78fc63b78b4a451607acd2e3f08d852fccd170b5f0a4f704b182c4196913fa.json"
+    },
+    {
+      "number": 81,
+      "language": "java",
+      "line": 3056,
+      "sha256": "0c4b6be09ab81d1877a9fc0d4450a5d1984de12f08c0a05e70e6d66c2fa0428a",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 82,
+      "language": "java",
+      "line": 3067,
+      "sha256": "b97558124435e41adf213e623c31b6b2862f705fc65995fbb5ef13954c48dcc4",
+      "status": "pending_java_harness"
+    }
+  ]
+}

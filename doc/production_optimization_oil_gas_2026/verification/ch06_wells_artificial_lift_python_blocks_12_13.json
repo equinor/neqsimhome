@@ -1,0 +1,24 @@
+{
+  "chapter": "ch06_wells_artificial_lift",
+  "source_sha256": "b7c2268165ea643b020e0d774e048c77ab581c05c2bc98e5fcd3219ec484f977",
+  "project_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "blocks": [
+    {
+      "index": 12,
+      "line": 366,
+      "status": "pass",
+      "code": "WellFlow = jneqsim.process.equipment.reservoir.WellFlow\n\n# Standalone oil IPR example, separate from the Java network.\noil_fluid = jneqsim.thermo.system.SystemSrkEos(353.15, 250.0)\noil_fluid.addComponent(\"methane\", 0.20)\noil_fluid.addComponent(\"n-decane\", 0.80)\noil_fluid.setMixingRule(\"classic\")\nreservoirStream = jneqsim.process.equipment.stream.Stream(\"Reservoir\", oil_fluid)\nreservoirStream.setFlowRate(200.0, \"Sm3/day\")\nreservoirStream.run()\nqTest, pwfTest, reservoirP = 200.0, 180.0, 250.0\nwell = WellFlow(\"Well-A\")\nwell.setInletStream(reservoirStream)\n# Explicit liquid-volume basis (Sm3/day), unlike the legacy MSm3/day setter.\nInflowPerformance = jneqsim.process.equipment.reservoir.InflowPerformance\nratio = pwfTest / reservoirP\npi_liquid = qTest * 1.8 / (reservoirP * (1.0 - 0.2*ratio - 0.8*ratio**2))\nwell.setInflowPerformance(InflowPerformance.vogel(pi_liquid, reservoirP))\nwell.setLiquidRate(qTest)\n# well.setFetkovichParameters(c, n, reservoirP)           # Fetkovich\n# well.setBackpressureParameters(a, b, reservoirP)        # Rawlins-Schellhardt\n# well.setTableInflow(bhp_array, rate_array)              # tabulated IPR\nwell.setOutletPressure(120.0, \"bara\")\nwell.solveFlowFromOutletPressure(True)\nwell.run()\nassert 200.0 < well.getLiquidRate() < 400.0\nprint(\"Liquid rate (Sm3/day):\", well.getLiquidRate(),\n      \"BHP:\", well.getBottomHolePressure(),\n      \"drawdown:\", well.getDrawdown())\n",
+      "seconds": 9.641,
+      "output": "Liquid rate (Sm3/day): 326.178390137781 BHP: 120.0 drawdown: 130.0\n"
+    },
+    {
+      "index": 13,
+      "line": 400,
+      "status": "pass",
+      "code": "well.useWellConstraints()\nwell.setMaxDrawdown(40.0, \"bara\")           # sand / coning management\nwell.setMinBottomHolePressure(90.0, \"bara\")  # lift / stability limit\n",
+      "seconds": 0.062,
+      "output": ""
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "chapter": "ch13_produced_water_treatment",
+  "source_sha256": "a90a474d6372c0ab435a7ec74f3a203b04671ca76603578b6fb03d314266c67f",
+  "project_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "blocks": [
+    {
+      "index": 1,
+      "line": 577,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Create a CPA fluid system for produced water analysis\n# Temperature in Kelvin, pressure in bara\nfluid = jneqsim.thermo.system.SystemSrkCPAstatoil(273.15 + 80.0, 30.0)\n\n# Add components \u2014 representing a simplified produced fluid\nfluid.addComponent(\"methane\", 0.70)      # mole fraction\nfluid.addComponent(\"ethane\", 0.05)\nfluid.addComponent(\"propane\", 0.03)\nfluid.addComponent(\"nC4\", 0.02)\nfluid.addComponent(\"nC10\", 0.05)         # representing heavier oil\nfluid.addComponent(\"CO2\", 0.02)\nfluid.addComponent(\"H2S\", 0.005)\nfluid.addComponent(\"water\", 0.115)\n\n# Set CPA mixing rule (rule 10 for water-hydrocarbon systems)\nfluid.setMixingRule(10)\nfluid.setMultiPhaseCheck(True)\n\n# Run three-phase flash to get oil, gas, and water phases\nops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)\nops.TPflash()\nfluid.initProperties()\n\n# Report phase fractions\nprint(\"=== Phase Distribution ===\")\nprint(f\"Number of phases: {fluid.getNumberOfPhases()}\")\nfor phase_idx in range(fluid.getNumberOfPhases()):\n    phase = fluid.getPhase(phase_idx)\n    phase_type = phase.getPhaseTypeName()\n    mole_frac = fluid.getMoleFraction(phase_idx)\n    density = phase.getDensity(\"kg/m3\")\n    print(f\"Phase {phase_idx} ({phase_type}): \"\n          f\"mole fraction = {mole_frac:.4f}, \"\n          f\"density = {density:.1f} kg/m\u00b3\")\n\n# Water phase properties\nwater_phase = fluid.getPhase(\"aqueous\")\nif water_phase is not None:\n    print(\"\\n=== Water Phase Properties ===\")\n    print(f\"Density: {water_phase.getDensity('kg/m3'):.1f} kg/m\u00b3\")\n    print(f\"Viscosity: {water_phase.getViscosity('cP'):.3f} cP\")\n    print(f\"pH (estimated): {water_phase.getpH():.1f}\")\n\n    # Dissolved gas in water phase\n    print(\"\\n=== Dissolved Components in Water ===\")\n    for i in range(water_phase.getNumberOfComponents()):\n        comp = water_phase.getComponent(i)\n        name = comp.getComponentName()\n        x_aq = comp.getx()  # mole fraction in aqueous phase\n        if name != \"water\" and x_aq > 1e-8:\n            print(f\"  {name}: x = {x_aq:.6e} (mole fraction)\")\n",
+      "seconds": 2.609,
+      "output": "=== Phase Distribution ===\nNumber of phases: 3\nPhase 0 (gas): mole fraction = 0.8369, density = 21.0 kg/m\u00b3\nPhase 1 (oil): mole fraction = 0.0612, density = 656.6 kg/m\u00b3\nPhase 2 (aqueous): mole fraction = 0.1019, density = 977.0 kg/m\u00b3\n\n=== Water Phase Properties ===\nDensity: 977.0 kg/m\u00b3\nViscosity: 0.352 cP\npH (estimated): 4.1\n\n=== Dissolved Components in Water ===\n  methane: x = 3.622882e-04 (mole fraction)\n  ethane: x = 4.971623e-05 (mole fraction)\n  propane: x = 9.505272e-06 (mole fraction)\n  n-butane: x = 4.365396e-06 (mole fraction)\n  CO2: x = 1.261126e-04 (mole fraction)\n  H2S: x = 1.205311e-04 (mole fraction)\n"
+    },
+    {
+      "index": 2,
+      "line": 638,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\nimport json\n\n# Study CO2 partitioning between gas and water phases\n# at varying pressures\npressures = [10.0, 20.0, 50.0, 100.0, 150.0, 200.0]  # bara\ntemperature_C = 80.0\n\nresults = []\n\nfor P in pressures:\n    fluid = jneqsim.thermo.system.SystemSrkCPAstatoil(\n        273.15 + temperature_C, P\n    )\n    fluid.addComponent(\"methane\", 0.85)\n    fluid.addComponent(\"CO2\", 0.05)\n    fluid.addComponent(\"H2S\", 0.01)\n    fluid.addComponent(\"water\", 0.09)\n    fluid.setMixingRule(10)\n    fluid.setMultiPhaseCheck(True)\n\n    ops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)\n    ops.TPflash()\n    fluid.initProperties()\n\n    # Get CO2 mole fraction in aqueous phase\n    aq_phase = fluid.getPhase(\"aqueous\")\n    if aq_phase is not None:\n        x_CO2_water = aq_phase.getComponent(\"CO2\").getx()\n        x_H2S_water = aq_phase.getComponent(\"H2S\").getx()\n        results.append({\n            \"pressure_bara\": P,\n            \"x_CO2_in_water\": float(x_CO2_water),\n            \"x_H2S_in_water\": float(x_H2S_water)\n        })\n\n# Display results\nprint(f\"{'P (bara)':>10} {'x_CO2 (water)':>15} {'x_H2S (water)':>15}\")\nprint(\"-\" * 42)\nfor r in results:\n    print(f\"{r['pressure_bara']:>10.0f} \"\n          f\"{r['x_CO2_in_water']:>15.6e} \"\n          f\"{r['x_H2S_in_water']:>15.6e}\")\n",
+      "seconds": 0.813,
+      "output": "  P (bara)   x_CO2 (water)   x_H2S (water)\n------------------------------------------\n        10    9.951701e-05    8.003506e-05\n        20    1.976076e-04    1.572668e-04\n        50    4.561357e-04    3.517763e-04\n       100    7.862584e-04    5.758712e-04\n       150    1.021911e-03    7.129505e-04\n       200    1.194009e-03    7.974181e-04\n"
+    },
+    {
+      "index": 3,
+      "line": 689,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Create an Electrolyte CPA system for brine-gas equilibrium\nfluid = jneqsim.thermo.system.SystemElectrolyteCPAstatoil(\n    273.15 + 60.0, 50.0\n)\n\n# Add gas components\nfluid.addComponent(\"methane\", 0.80)\nfluid.addComponent(\"CO2\", 0.03)\n\n# Add water and ions (representing formation brine)\nfluid.addComponent(\"water\", 0.17)\nfluid.addComponent(\"Na+\", 0.001)\nfluid.addComponent(\"Cl-\", 0.001)\n\n# Set mixing rule for electrolyte CPA\nfluid.setMixingRule(10)\nfluid.setMultiPhaseCheck(True)\n\n# Run flash calculation\nops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)\nops.TPflash()\nfluid.initProperties()\n\n# Compare water content in gas with and without salinity\ngas_phase = fluid.getPhase(\"gas\")\nif gas_phase is not None:\n    x_water_in_gas = gas_phase.getComponent(\"water\").getx()\n    print(f\"Water content in gas phase: {x_water_in_gas:.6e} mole fraction\")\n    print(f\"Water density: {fluid.getPhase('aqueous').getDensity('kg/m3'):.1f} kg/m\u00b3\")\n",
+      "seconds": 0.359,
+      "output": "Water content in gas phase: 4.477548e-03 mole fraction\nWater density: 990.1 kg/m\u00b3\n"
+    },
+    {
+      "index": 4,
+      "line": 730,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Model BTEX partitioning between oil and water\nfluid = jneqsim.thermo.system.SystemSrkCPAstatoil(273.15 + 70.0, 20.0)\n\n# Simplified oil with aromatics\nfluid.addComponent(\"nC7\", 0.40)         # paraffinic oil\nfluid.addComponent(\"nC10\", 0.30)\nfluid.addComponent(\"benzene\", 0.005)    # BTEX components\nfluid.addComponent(\"toluene\", 0.003)\nfluid.addComponent(\"water\", 0.262)\n\nfluid.setMixingRule(10)\nfluid.setMultiPhaseCheck(True)\n\nops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)\nops.TPflash()\nfluid.initProperties()\n\n# Check BTEX concentrations in water phase\naq_phase = fluid.getPhase(\"aqueous\")\nif aq_phase is not None:\n    print(\"=== BTEX in Water Phase ===\")\n    for comp_name in [\"benzene\", \"toluene\"]:\n        x_aq = aq_phase.getComponent(comp_name).getx()\n        # Convert mole fraction to approximate mg/L\n        # Using MW of water ~ 18 g/mol and water density ~ 1000 kg/m3\n        mw_comp = aq_phase.getComponent(comp_name).getMolarMass() * 1000  # g/mol\n        mw_water = 18.015\n        c_mg_L = x_aq * mw_comp / mw_water * 1e6  # approximate\n        print(f\"  {comp_name}: x = {x_aq:.6e}, ~{c_mg_L:.1f} mg/L (approx)\")\n",
+      "seconds": 0.297,
+      "output": "=== BTEX in Water Phase ===\n  benzene: x = 5.912327e-06, ~25.6 mg/L (approx)\n  toluene: x = 9.954305e-07, ~5.1 mg/L (approx)\n"
+    },
+    {
+      "index": 5,
+      "line": 769,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Generate water property table for process design\ntemperatures_C = [20, 40, 60, 80, 100, 120]\n\nprint(f\"{'T (\u00b0C)':>8} {'\u03c1 (kg/m\u00b3)':>12} {'\u03bc (cP)':>10} {'\u03c3 (mN/m)':>12}\")\nprint(\"-\" * 44)\n\nfor T in temperatures_C:\n    fluid = jneqsim.thermo.system.SystemSrkCPAstatoil(273.15 + T, 10.0)\n    fluid.addComponent(\"water\", 1.0)\n    fluid.setMixingRule(10)\n\n    ops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)\n    ops.TPflash()\n    fluid.initProperties()\n\n    water = fluid.getPhase(\"aqueous\")\n    if water is not None:\n        rho = water.getDensity(\"kg/m3\")\n        mu = water.getViscosity(\"cP\")\n        print(f\"{T:>8d} {rho:>12.1f} {mu:>10.3f}\")\n",
+      "seconds": 0.094,
+      "output": "  T (\u00b0C)    \u03c1 (kg/m\u00b3)     \u03bc (cP)     \u03c3 (mN/m)\n--------------------------------------------\n      20        996.7      1.005\n      40        990.9      0.651\n      60        984.2      0.461\n      80        976.7      0.351\n     100        968.1      0.282\n     120        958.3      0.236\n"
+    }
+  ]
+}

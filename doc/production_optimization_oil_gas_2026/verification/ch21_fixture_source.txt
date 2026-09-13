@@ -1,0 +1,70 @@
+import java.util.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import neqsim.thermo.system.*;
+import neqsim.process.processmodel.*;
+import neqsim.process.equipment.*;
+import neqsim.process.equipment.stream.*;
+import neqsim.process.equipment.separator.*;
+import neqsim.process.equipment.compressor.*;
+import neqsim.process.equipment.pipeline.*;
+import neqsim.process.equipment.pump.*;
+import neqsim.process.equipment.valve.*;
+import neqsim.process.equipment.capacity.*;
+import neqsim.process.equipment.capacity.CapacityConstraint.ConstraintType;
+import neqsim.process.optimization.valuechain.*;
+
+public class CapacityExample {
+    private static final Logger logger = LogManager.getLogger(CapacityExample.class);
+    private static SystemInterface fluid, reservoirFluid;
+    private static Stream feed;
+    private static StreamInterface gasStream, oilStream, wellStream;
+    private static Separator separator, hpSep;
+    private static Compressor compressor, comp;
+    private static ProcessSystem process;
+    private static ProcessEquipmentBaseClass equipment;
+    private static BottleneckResult bottleneck;
+    private static CapacityConstraint speedConstraint;
+
+    private static void setup() {
+        fluid = new SystemSrkEos(303.15, 70.0);
+        fluid.addComponent("methane", 0.70);
+        fluid.addComponent("ethane", 0.10);
+        fluid.addComponent("n-decane", 0.20);
+        fluid.setMixingRule("classic");
+        reservoirFluid = fluid.clone();
+        feed = new Stream("Feed", fluid);
+        feed.setFlowRate(10000.0, "kg/hr");
+        separator = new Separator("Fixture Separator", feed);
+        compressor = new Compressor("Fixture Compressor", separator.getGasOutStream());
+        compressor.setOutletPressure(150.0, "bara");
+        compressor.setIsentropicEfficiency(0.75);
+        process = new ProcessSystem();
+        process.add(feed);
+        process.add(separator);
+        process.add(compressor);
+        process.run();
+        separator.autoSize(0.20);
+        compressor.autoSize(0.15);
+        separator.enableConstraints();
+        compressor.enableConstraints();
+        gasStream = separator.getGasOutStream();
+        oilStream = separator.getLiquidOutStream();
+        wellStream = feed;
+        hpSep = separator;
+        comp = compressor;
+        equipment = separator;
+        bottleneck = process.findBottleneck();
+        speedConstraint = new CapacityConstraint("speed", "RPM", ConstraintType.HARD);
+    }
+
+    public static void main(String[] args) {
+        setup();
+        runExample();
+    }
+
+    private static void runExample() {
+        // Insert one Java operation fragment from this chapter here.
+        logger.info("Fixture bottleneck: {}", process.findBottleneck());
+    }
+}

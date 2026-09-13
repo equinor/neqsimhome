@@ -1,0 +1,197 @@
+{
+  "status": "pass",
+  "scope": "Independent algebra, dimensional conversions and limiting cases of selected printed equations; not empirical calibration",
+  "script_sha256": "a2667215f773cc4ca3d5efbf0050a38a80cbf4ca252ffad48731a6f6c3116e72",
+  "checks": [
+    {
+      "chapter": "ch01",
+      "name": "Freshwater gradient psi/ft",
+      "actual": 0.4335275040115905,
+      "expected": 0.4335275,
+      "absolute_error": 4.011590504227058e-09,
+      "tolerance": 1e-06,
+      "definition": "rho*g; SI to psi per foot",
+      "pass": true
+    },
+    {
+      "chapter": "ch01",
+      "name": "3000m freshwater pressure bara",
+      "actual": 295.21275,
+      "expected": 295.21275,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "definition": "absolute datum pressure plus hydrostatic head",
+      "pass": true
+    },
+    {
+      "chapter": "ch05",
+      "name": "Turner field coefficient converted to SI",
+      "actual": 6.549430538960172,
+      "expected": 6.55503,
+      "absolute_error": 0.005599461039828668,
+      "tolerance": 0.01,
+      "definition": "1.91 ft/s, surface tension dyn/cm and density lb/ft3 converted to m/s, N/m, kg/m3",
+      "pass": true
+    },
+    {
+      "chapter": "ch07",
+      "name": "API14E C100 SI coefficient",
+      "actual": 121.99032374854656,
+      "expected": 121.990324,
+      "absolute_error": 2.514534429565174e-07,
+      "tolerance": 1e-06,
+      "definition": "field velocity ft/s, density lb/ft3 to SI",
+      "pass": true
+    },
+    {
+      "chapter": "ch08",
+      "name": "Thermal characteristic length km",
+      "actual": 12.242687930145795,
+      "expected": 12.242688,
+      "absolute_error": 6.985420419880484e-08,
+      "tolerance": 0.01,
+      "definition": "m*cp/(U*pi*D), stated fixed-property cooling limit",
+      "pass": true
+    },
+    {
+      "chapter": "ch09",
+      "name": "Hammerschmidt inverse at 10 wt%",
+      "actual": 10.0,
+      "expected": 10.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-12,
+      "definition": "same SI constant1297 for MEG, valid only within correlation concentration/domain",
+      "pass": true
+    },
+    {
+      "chapter": "ch09",
+      "name": "Hammerschmidt inverse at 20 wt%",
+      "actual": 19.999999999999996,
+      "expected": 20.0,
+      "absolute_error": 3.552713678800501e-15,
+      "tolerance": 1e-12,
+      "definition": "same SI constant1297 for MEG, valid only within correlation concentration/domain",
+      "pass": true
+    },
+    {
+      "chapter": "ch09",
+      "name": "Hammerschmidt inverse at 30 wt%",
+      "actual": 30.000000000000007,
+      "expected": 30.0,
+      "absolute_error": 7.105427357601002e-15,
+      "tolerance": 1e-12,
+      "definition": "same SI constant1297 for MEG, valid only within correlation concentration/domain",
+      "pass": true
+    },
+    {
+      "chapter": "ch09",
+      "name": "10K depression MEG wt%",
+      "actual": 32.36689784637847,
+      "expected": 32.36638,
+      "absolute_error": 0.0005178463784716314,
+      "tolerance": 0.001,
+      "definition": "KH1297 and MEG molecular mass62.07 g/mol",
+      "pass": true
+    },
+    {
+      "chapter": "ch09",
+      "name": "10K depression methanol wt%",
+      "actual": 19.809570916285395,
+      "expected": 19.80957,
+      "absolute_error": 9.162853942257243e-07,
+      "tolerance": 0.001,
+      "definition": "KH1297 and methanol molecular mass32.04 g/mol",
+      "pass": true
+    },
+    {
+      "chapter": "ch10",
+      "name": "100micron Stokes settling mm/s",
+      "actual": 1.0896277777777776,
+      "expected": 1.089628,
+      "absolute_error": 2.2222222240131373e-07,
+      "tolerance": 1e-06,
+      "definition": "rigid sphere, low-Reynolds-number limit",
+      "pass": true
+    },
+    {
+      "chapter": "ch10",
+      "name": "10micron Stokes settling mm/s",
+      "actual": 0.010896277777777779,
+      "expected": 0.01089628,
+      "absolute_error": 2.2222222204743014e-09,
+      "tolerance": 1e-08,
+      "definition": "diameter-squared scaling",
+      "pass": true
+    },
+    {
+      "chapter": "ch13",
+      "name": "100000mg/L brine salt mass fraction",
+      "actual": 0.09345794392523364,
+      "expected": 0.0934579439,
+      "absolute_error": 2.523363462625383e-11,
+      "tolerance": 1e-10,
+      "definition": "C_s/rho, 1mg/L=.001kg/m3",
+      "pass": true
+    },
+    {
+      "chapter": "ch06",
+      "name": "Inverse gas-IPR derivative",
+      "actual": -0.3454254341391166,
+      "expected": -0.34542543414062266,
+      "absolute_error": 1.5060730440552561e-12,
+      "tolerance": 1e-07,
+      "definition": "dp/dq=-1/(2*n*C*p)*(q/C)^(1/n-1)",
+      "pass": true
+    },
+    {
+      "chapter": "ch04",
+      "name": "Arps cumulative derivative Sm3/day",
+      "actual": 2644.6280998643488,
+      "expected": 2644.628099173554,
+      "absolute_error": 6.907948773005046e-07,
+      "tolerance": 1e-05,
+      "definition": "analytic material accumulation derivative for b=.5",
+      "pass": true
+    },
+    {
+      "chapter": "ch14",
+      "name": "Equal-ratio stationary point",
+      "actual": -8.881784197001252e-12,
+      "expected": 0.0,
+      "absolute_error": 8.881784197001252e-12,
+      "tolerance": 1e-08,
+      "definition": "fixed inlet T/composition, equal stage efficiency, no pressure losses",
+      "pass": true
+    },
+    {
+      "chapter": "ch14",
+      "name": "Equal-ratio minimum versus unequal split",
+      "actual": 0,
+      "expected": 0,
+      "absolute_error": 0,
+      "tolerance": 0,
+      "definition": "convex ideal-gas work in logarithmic pressure ratio",
+      "pass": true
+    },
+    {
+      "chapter": "ch16",
+      "name": "Counterflow NTU equal-capacity limit",
+      "actual": 0.6666666666666666,
+      "expected": 0.6666666666666666,
+      "absolute_error": 0.0,
+      "tolerance": 1e-12,
+      "definition": "epsilon=NTU/(1+NTU) when Cr=1; avoids0/0 formula",
+      "pass": true
+    },
+    {
+      "chapter": "ch18",
+      "name": "80C source and25C sink Carnot bound",
+      "actual": 0.15574118646467505,
+      "expected": 0.15574118646,
+      "absolute_error": 4.675065889969687e-12,
+      "tolerance": 1e-09,
+      "definition": "upper bound even before finite-temperature heat transfer and parasitic losses",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,742 @@
+{
+  "chapter": "ch29_dynamic_simulation_and_control",
+  "source_commit": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "entries": [
+    {
+      "number": 7,
+      "sha256": "e6e0e22f0c93188963772024948a34516fb3cd057b034a983837d5e6269b03ea",
+      "targeted": true,
+      "checks": [
+        {
+          "fence": 7,
+          "name": "Feed finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Feed positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Feed positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "gasOutStream finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "gasOutStream positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "gasOutStream positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "liquidOutStream finite nonnegative mass",
+          "passed": true,
+          "observed": 5.555555555555556e-29,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "liquidOutStream positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "liquidOutStream positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "HP Sep material balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 7,
+          "name": "HP Sep component balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 7,
+          "name": "HP Sep energy balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "fence": 7,
+          "name": "gasOutStream finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "gasOutStream positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "gasOutStream positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Compressor out stream finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Compressor out stream positive finite pressure",
+          "passed": true,
+          "observed": 150.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Compressor out stream positive finite temperature",
+          "passed": true,
+          "observed": 402.15041698278463,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Compressor material balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 7,
+          "name": "Compressor component balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 7,
+          "name": "Compressor single-phase compressor inlet",
+          "passed": true,
+          "observed": 1.0,
+          "tolerance": 1.0
+        },
+        {
+          "fence": 7,
+          "name": "Compressor positive compressor shaft work",
+          "passed": true,
+          "observed": 5205642.550103165,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Compressor energy balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "fence": 7,
+          "name": "Feed finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Feed positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Feed positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "gasOutStream finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "gasOutStream positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "gasOutStream positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "liquidOutStream finite nonnegative mass",
+          "passed": true,
+          "observed": 5.555555555555556e-29,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "liquidOutStream positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "liquidOutStream positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "HP Sep material balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 7,
+          "name": "HP Sep component balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 7,
+          "name": "HP Sep energy balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "fence": 7,
+          "name": "gasOutStream finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "gasOutStream positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "gasOutStream positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Compressor out stream finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Compressor out stream positive finite pressure",
+          "passed": true,
+          "observed": 150.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Compressor out stream positive finite temperature",
+          "passed": true,
+          "observed": 402.15041698278463,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Compressor material balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 7,
+          "name": "Compressor component balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 7,
+          "name": "Compressor single-phase compressor inlet",
+          "passed": true,
+          "observed": 1.0,
+          "tolerance": 1.0
+        },
+        {
+          "fence": 7,
+          "name": "Compressor positive compressor shaft work",
+          "passed": true,
+          "observed": 5205642.550103165,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 7,
+          "name": "Compressor energy balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-05
+        }
+      ],
+      "classification": "numerical_solution_check",
+      "status": "passed"
+    },
+    {
+      "number": 8,
+      "sha256": "f82155302cf33ddaedf2c4366fecbdedbbdc905856204191638c81d258479c33",
+      "targeted": false,
+      "checks": [],
+      "classification": "executed_api_configuration",
+      "status": "passed"
+    },
+    {
+      "number": 9,
+      "sha256": "dbab4b16a94b47b92d4a25a356f387a5356d3dea32c6252d652a3a9d2174018a",
+      "targeted": true,
+      "checks": [
+        {
+          "fence": 9,
+          "name": "Feed finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Feed positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Feed positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "gasOutStream finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "gasOutStream positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "gasOutStream positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "liquidOutStream finite nonnegative mass",
+          "passed": true,
+          "observed": 5.555555555555556e-29,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "liquidOutStream positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "liquidOutStream positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "HP Sep material balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 9,
+          "name": "HP Sep component balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 9,
+          "name": "HP Sep energy balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "fence": 9,
+          "name": "gasOutStream finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "gasOutStream positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "gasOutStream positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Compressor out stream finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Compressor out stream positive finite pressure",
+          "passed": true,
+          "observed": 150.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Compressor out stream positive finite temperature",
+          "passed": true,
+          "observed": 402.15041698278463,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Compressor material balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 9,
+          "name": "Compressor component balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 9,
+          "name": "Compressor single-phase compressor inlet",
+          "passed": true,
+          "observed": 1.0,
+          "tolerance": 1.0
+        },
+        {
+          "fence": 9,
+          "name": "Compressor positive compressor shaft work",
+          "passed": true,
+          "observed": 5205642.550103165,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Compressor energy balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "fence": 9,
+          "name": "Feed finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Feed positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Feed positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "gasOutStream finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "gasOutStream positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "gasOutStream positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "liquidOutStream finite nonnegative mass",
+          "passed": true,
+          "observed": 5.555555555555556e-29,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "liquidOutStream positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "liquidOutStream positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "HP Sep material balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 9,
+          "name": "HP Sep component balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 9,
+          "name": "HP Sep energy balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "fence": 9,
+          "name": "gasOutStream finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "gasOutStream positive finite pressure",
+          "passed": true,
+          "observed": 60.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "gasOutStream positive finite temperature",
+          "passed": true,
+          "observed": 313.15,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Compressor out stream finite nonnegative mass",
+          "passed": true,
+          "observed": 27.777777777777782,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Compressor out stream positive finite pressure",
+          "passed": true,
+          "observed": 150.0,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Compressor out stream positive finite temperature",
+          "passed": true,
+          "observed": 402.15041698278463,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Compressor material balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 9,
+          "name": "Compressor component balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "fence": 9,
+          "name": "Compressor single-phase compressor inlet",
+          "passed": true,
+          "observed": 1.0,
+          "tolerance": 1.0
+        },
+        {
+          "fence": 9,
+          "name": "Compressor positive compressor shaft work",
+          "passed": true,
+          "observed": 5205642.550103165,
+          "tolerance": 0.0
+        },
+        {
+          "fence": 9,
+          "name": "Compressor energy balance relative",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "fence": 9,
+          "name": "Celsius automation readback",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-08
+        },
+        {
+          "fence": 9,
+          "name": "pressure automation readback",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-08
+        },
+        {
+          "fence": 9,
+          "name": "flow automation readback kg/hr",
+          "passed": true,
+          "observed": 0.0,
+          "tolerance": 1e-06
+        }
+      ],
+      "classification": "numerical_solution_check",
+      "status": "passed"
+    },
+    {
+      "number": 10,
+      "sha256": "72b0ff8a141cab8d52f29306732e59f678adfc496fa43753cd579bbd33fb42ba",
+      "targeted": false,
+      "checks": [],
+      "classification": "executed_api_configuration",
+      "status": "passed"
+    },
+    {
+      "number": 11,
+      "sha256": "e2170b98cb31583920ac6ae235e42d1744b797cd471e29dc6120c00674206777",
+      "targeted": false,
+      "checks": [],
+      "classification": "executed_api_configuration",
+      "status": "passed"
+    },
+    {
+      "number": 12,
+      "sha256": "45ee61c07c5bb2fc4c059f6eff5f8ba838599ee5127575b39d7834d7d2675b18",
+      "targeted": false,
+      "checks": [],
+      "classification": "executed_api_configuration",
+      "status": "passed"
+    }
+  ],
+  "helper_sha256": "91d9cd8bddc066619cb63d060e3eed43cbcf15e8ed983bddc1efc781fbe74db6",
+  "scope": "Exact Java code executed with conservation, domain, optimizer or data-contract hooks; fixtures are not field validation.",
+  "diagnostic_errors": 0,
+  "all_targeted_checks_passed": true,
+  "verification_source_snapshots": [
+    {
+      "source": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\optimization_java_solution_helpers.jsh",
+      "sha256": "91d9cd8bddc066619cb63d060e3eed43cbcf15e8ed983bddc1efc781fbe74db6",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\91d9cd8bddc066619cb63d060e3eed43cbcf15e8ed983bddc1efc781fbe74db6.jsh"
+    },
+    {
+      "source": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\verify_optimization_java_solutions.py",
+      "sha256": "3d3f5ea97d3eff2e88fdc4c4b556dd9dbdcc4864526b92823e57a922f3d73ff8",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\3d3f5ea97d3eff2e88fdc4c4b556dd9dbdcc4864526b92823e57a922f3d73ff8.py"
+    },
+    {
+      "source": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\java_solution_runs\\ch29_dynamic_simulation_and_control\\solutions.jsh",
+      "sha256": "86e39a586f3347c8ec6332545f6ef83e57442be213b23ad59fa6aef71d6d9b8e",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\86e39a586f3347c8ec6332545f6ef83e57442be213b23ad59fa6aef71d6d9b8e.jsh"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "issue": "Java Pareto fixture set polytropic efficiency without activating polytropic mode, unlike corresponding Python case.",
+    "correction": "Set usePolytropicCalc true explicitly before process run.",
+    "source": "Compressor.java usePolytropicCalc defaults false; fixed source6cc8026",
+    "before": "compressor.setPolytropicEfficiency(0.78);\nProcessSystem process = new ProcessSystem();",
+    "after": "compressor.setPolytropicEfficiency(0.78);\ncompressor.setUsePolytropicCalc(true);\nProcessSystem process = new ProcessSystem();"
+  },
+  {
+    "id": "evaluator_accepted_case",
+    "issue": "Initial evaluator point is correctly infeasible at the 5MW ceiling; pair its rejection with a checked successful case.",
+    "correction": "Retain100000kg/hr rejection; accept80000kg/hr with returned convergence/feasibility and direct power-limit assertions.",
+    "before": "logger.info(\"Objective {}, feasible {}, converged {}\", result.getObjective(),result.isFeasible(),result.isSimulationConverged());",
+    "after": "logger.info(\"Objective {}, feasible {}, converged {}\", result.getObjective(),result.isFeasible(),result.isSimulationConverged());\ndouble rejectedPowerKW = compressor.getPower(\"kW\");\n// The 100000 kg/hr candidate exceeds the declared 5 MW ceiling.\nif (result.isFeasible() || rejectedPowerKW <= 5000.0) {\n    throw new IllegalStateException(\"Expected the high-rate candidate to be rejected\");\n}\nProcessSimulationEvaluator.EvaluationResult acceptedEvaluation = evaluator.evaluate(new double[]{80000.0,60.0});\nif (!acceptedEvaluation.isFeasible() || !acceptedEvaluation.isSimulationConverged()\n        || compressor.getPower(\"kW\") > 5000.0) {\n    throw new IllegalStateException(\"Lower-rate evaluator candidate failed acceptance\");\n}\nlogger.info(\"Accepted 80000 kg/hr candidate, power {} kW\", compressor.getPower(\"kW\"));"
+  }
+]

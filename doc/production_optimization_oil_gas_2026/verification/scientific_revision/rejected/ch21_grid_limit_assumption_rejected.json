@@ -1,0 +1,30 @@
+{
+  "chapter": "ch21_debottlenecking",
+  "source_commit": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "python_executable": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "hook_module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\ch21_solution_hooks.py",
+  "hook_sha256": "35248bb9b54f07d9ecf3cee14ea400cf5300815fea12243c466d9fdf5779c6c7",
+  "interpretation": "Exact literal execution with supplementary numerical/physical/software solution checks; not field calibration.",
+  "prerequisite_fences": [
+    {
+      "number": 25,
+      "sha256": "e6890f694a40c0386589a1cb371331aa394b3b336149ea95da6c1c9860eb8860",
+      "status": "failed"
+    }
+  ],
+  "entries": [
+    {
+      "number": 25,
+      "sha256": "e6890f694a40c0386589a1cb371331aa394b3b336149ea95da6c1c9860eb8860",
+      "code_sha256": "e6890f694a40c0386589a1cb371331aa394b3b336149ea95da6c1c9860eb8860",
+      "language": "python",
+      "checks": [],
+      "status": "failed",
+      "error": "{'name': 'fresh selected-point feasibility', 'passed': False, 'observed': 0.9777737030632175, 'expected': 'maximum active utilization <=0.95', 'scope': 'solution verification under declared synthetic assumptions'}",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\verify_optimization_solution_hooks.py\", line 55, in main\n    try:exec(compile(code,filename,'exec'),ns)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"ch21_debottlenecking:fence25\", line 66, in <module>\n  File \"C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\verify_optimization_solution_hooks.py\", line 51, in trace\n    hooks.on_trace(n,i,frame,event,arg)\n  File \"C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\ch21_solution_hooks.py\", line 88, in on_trace\n    if i==25 and 'optimum' in ns:verify_selected(i,ns)\n                                 ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\ch21_solution_hooks.py\", line 71, in verify_selected\n    check(i,'fresh selected-point feasibility',ratio<=limit+1e-6,ratio,f'maximum active utilization <={limit}')\n  File \"C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\ch21_solution_hooks.py\", line 14, in check\n    assert condition,row\n           ^^^^^^^^^\nAssertionError: {'name': 'fresh selected-point feasibility', 'passed': False, 'observed': 0.9777737030632175, 'expected': 'maximum active utilization <=0.95', 'scope': 'solution verification under declared synthetic assumptions'}\n",
+      "seconds": 82.71899999999732,
+      "output": "Separator utilization: 83.3%\nCompressor utilization: 100.0%\n"
+    }
+  ],
+  "all_targeted_checks_passed": false
+}

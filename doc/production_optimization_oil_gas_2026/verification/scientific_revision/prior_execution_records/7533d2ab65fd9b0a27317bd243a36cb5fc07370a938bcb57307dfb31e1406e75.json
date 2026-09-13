@@ -1,0 +1,113 @@
+{
+  "chapter": "ch29_dynamic_simulation_and_control",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "execution_model": "sequential Python fences, fresh JVM per chapter",
+  "examples": [
+    {
+      "number": 1,
+      "language": "python",
+      "line": 335,
+      "sha256": "4729d9a851a0a33b689e4d9bf1191a5f036aeb5cd707993a9b7b2eb4cc37584e",
+      "status": "passed",
+      "seconds": 7.547,
+      "output": "Initial inventory kg: 696.5318163538046\nFinal time, level fraction, pressure bara, temperature C, mass kg, liquid kg/s:\n[120.0, 0.50048828125, 30.638975903665266, 40.08495539138437, 697.2206387822127, 1.8423406786263214]\nMaximum relative mass/energy residuals: 2.1345911840196278e-15 4.4767743136168996e-06\n"
+    },
+    {
+      "number": 2,
+      "language": "python",
+      "line": 588,
+      "sha256": "d2d46640053b60d7ac0a9ff678b4bd51bf20644d9139a8d13ba7cfe41c58cffa",
+      "status": "passed",
+      "seconds": 0.594,
+      "output": "Product mass closure: 99998.47 kg/hr\nCompressor power: 5.80 MW\nPolytrophic head: 156.5 kJ/kg\nDischarge temperature: 107.1 °C\n"
+    },
+    {
+      "number": 3,
+      "language": "python",
+      "line": 722,
+      "sha256": "a81a36a83b39b44091cb25249986c243dda093ecca500855a7f8a99f3509042b",
+      "status": "passed",
+      "seconds": 2.828,
+      "output": "Final blowdown time s, pressure bara, fluid C, inventory kg, outlet kg/s:\n[120.0, 52.97548737244282, 9.119298806455049, 100.9274384376304, 0.23983120585978374]\n"
+    },
+    {
+      "number": 4,
+      "language": "python",
+      "line": 854,
+      "sha256": "19f7193ab78aa24396ba962b0a6429862a75a851db3a1efaf8e4df62d19c5021",
+      "status": "passed",
+      "seconds": 0.843,
+      "output": "Peak level fraction: 0.51123046875\n"
+    },
+    {
+      "number": 5,
+      "language": "python",
+      "line": 894,
+      "sha256": "352ec53776735acde02e551eb12b9315d7288bcfa4ff7b3c6c96df89cd2a47c0",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 6,
+      "language": "python",
+      "line": 907,
+      "sha256": "498fbfbe95bd7c1ccdbcf92e7c74478d082eca527a138182b3d32d3ff77f8ba8",
+      "status": "passed",
+      "seconds": 0.016,
+      "output": ""
+    },
+    {
+      "number": 7,
+      "language": "java",
+      "line": 1151,
+      "sha256": "f79cacec30610de6539f7d992f9cce4a581d9a984f7ee86ed54a5d372a2a8227",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 8,
+      "language": "java",
+      "line": 1216,
+      "sha256": "f82155302cf33ddaedf2c4366fecbdedbbdc905856204191638c81d258479c33",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 9,
+      "language": "java",
+      "line": 1227,
+      "sha256": "dbab4b16a94b47b92d4a25a356f387a5356d3dea32c6252d652a3a9d2174018a",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 10,
+      "language": "java",
+      "line": 1255,
+      "sha256": "72b0ff8a141cab8d52f29306732e59f678adfc496fa43753cd579bbd33fb42ba",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 11,
+      "language": "java",
+      "line": 1278,
+      "sha256": "e2170b98cb31583920ac6ae235e42d1744b797cd471e29dc6120c00674206777",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 12,
+      "language": "java",
+      "line": 1305,
+      "sha256": "45ee61c07c5bb2fc4c059f6eff5f8ba838599ee5127575b39d7834d7d2675b18",
+      "status": "pending_java_harness"
+    },
+    {
+      "number": 13,
+      "language": "python",
+      "line": 1321,
+      "sha256": "826b0a76d66ff2bb4da9d5d6b38efd3f6890fb322ab55e7355d672712facf279",
+      "status": "passed",
+      "seconds": 0.328,
+      "output": "Equipment units: ['Feed Gas', 'HP Sep', 'Export Compressor', 'Aftercooler']\n\nCompressor variables:\n  Export Compressor.temperature [OUTPUT] = K\n  Export Compressor.pressure [OUTPUT] = bara\n  Export Compressor.outletPressure [INPUT] = bara\n  Export Compressor.polytropicEfficiency [INPUT] = \n  Export Compressor.isentropicEfficiency [INPUT] = \n  Export Compressor.power [OUTPUT] = kW\n  Export Compressor.speed [INPUT] = rpm\n  Export Compressor.polytropicHead [OUTPUT] = kJ/kg\n  Export Compressor.compressionRatio [OUTPUT] = \n  Export Compressor.outletStream.temperature [OUTPUT] = K\n  Export Compressor.outletStream.pressure [OUTPUT] = bara\n  Export Compressor.outletStream.flowRate [OUTPUT] = kg/hr\n  Export Compressor.outletStream.density [OUTPUT] = kg/m3\n  Export Compressor.outletStream.molarMass [OUTPUT] = kg/mol\n\nCompressor outlet T: 101.3 °C\nCompressor power:    2778 kW\nCooler outlet T:     35.0 °C\n\n=== Compressor Discharge Pressure Optimization ===\n  P_out (bara)   Power (kW)   T_out (°C)  T_cooled (°C)\n------------------------------------------------------\n           120         2029         83.3           35.0\n           130         2292         89.7           35.0\n           140         2541         95.7           35.0\n           150         2778        101.3           35.0\n           160         3006        106.5           35.0\n           170         3224        111.4           35.0\n           180         3434        116.1           35.0\n\n=== Self-Healing Automation ===\nSafe get result: {\"status\":\"success\",\"address\":\"export compressor.power\",\"value\":3433.7231291951202,\"unit\":\"kW\"}\n"
+    }
+  ]
+}

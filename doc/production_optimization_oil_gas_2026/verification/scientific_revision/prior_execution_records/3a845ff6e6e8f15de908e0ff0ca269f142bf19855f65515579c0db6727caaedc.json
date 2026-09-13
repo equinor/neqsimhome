@@ -1,0 +1,359 @@
+{
+  "chapter": "ch23_neqsim_optimization_framework",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "execution_model": "sequential Python fences, fresh JVM per chapter",
+  "examples": [
+    {
+      "number": 1,
+      "language": "python",
+      "line": 62,
+      "sha256": "d7134ec08ef030d0be74abd2fb1f10648cae739f3cc47967d290caa19a9f7d04",
+      "status": "passed",
+      "seconds": 1.563,
+      "output": ""
+    },
+    {
+      "number": 2,
+      "language": "python",
+      "line": 103,
+      "sha256": "6260cfd051ed76211b476186d71d5413d1f1b1c369b0c1c854e224a23c29c0a4",
+      "status": "passed",
+      "seconds": 0.015,
+      "output": ""
+    },
+    {
+      "number": 3,
+      "language": "python",
+      "line": 114,
+      "sha256": "68ef0d556f2bf50952f473d308ce3bbbca45db823f6601ac1df8cfc939566e86",
+      "status": "passed",
+      "seconds": 0.047,
+      "output": ""
+    },
+    {
+      "number": 4,
+      "language": "python",
+      "line": 153,
+      "sha256": "49638670bd38ae96dfa24bd7a80227f1e1a66cacf6bcd2875f0908bfc41ba523",
+      "status": "passed",
+      "seconds": 0.047,
+      "output": ""
+    },
+    {
+      "number": 5,
+      "language": "python",
+      "line": 188,
+      "sha256": "a3a6c50cfc70df4f5e3b2411984f2352cd5f22056e9eeab7ae78f1337d18bde5",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 6,
+      "language": "python",
+      "line": 203,
+      "sha256": "6a3551b160c9eaeeb095649bad1cc39d9ed91c3f3a2e4be0d95a2ecfa1759088",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 7,
+      "language": "python",
+      "line": 220,
+      "sha256": "4194484db1e146552721a7dee688f3f99865391049ff95a7f43e3b04260eef78",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 8,
+      "language": "python",
+      "line": 234,
+      "sha256": "0d673867b0ace05121e608de65d3d9c12cdf8534b9a03182d150afb38714ea78",
+      "status": "passed",
+      "seconds": 0.015,
+      "output": ""
+    },
+    {
+      "number": 9,
+      "language": "python",
+      "line": 250,
+      "sha256": "3c83bbe6d63102733685462b04eacaeccda46d8c215b59f85463227b9b159545",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "Separation::feed (Stream)\nSeparation::HP separator (Separator)\nCompression::export compressor (Compressor)\nExport::export (Stream)\n  export compressor.temperature  [OUTPUT]  (K)\n  export compressor.pressure  [OUTPUT]  (bara)\n  export compressor.outletPressure  [INPUT]  (bara)\n  export compressor.polytropicEfficiency  [INPUT]  ()\n  export compressor.isentropicEfficiency  [INPUT]  ()\n  export compressor.power  [OUTPUT]  (kW)\n  export compressor.speed  [INPUT]  (rpm)\n  export compressor.polytropicHead  [OUTPUT]  (kJ/kg)\n  export compressor.compressionRatio  [OUTPUT]  ()\n  export compressor.outletStream.temperature  [OUTPUT]  (K)\n  export compressor.outletStream.pressure  [OUTPUT]  (bara)\n  export compressor.outletStream.flowRate  [OUTPUT]  (kg/hr)\n  export compressor.outletStream.density  [OUTPUT]  (kg/m3)\n  export compressor.outletStream.molarMass  [OUTPUT]  (kg/mol)\nOutlet pressure: 150.0 bara, Power: 4349 kW\n"
+    },
+    {
+      "number": 10,
+      "language": "python",
+      "line": 272,
+      "sha256": "5df611018a76dc5a9d7cf86f967292031f3b698a8ff63cb68af1481b8b57ed12",
+      "status": "passed",
+      "seconds": 0.031,
+      "output": "{\n  \"schemaVersion\": \"1.0\",\n  \"setpointsApplied\": {\n    \"Compression::export compressor.outletPressure\": 150.0\n  },\n  \"setpointsRejected\": {},\n  \"iterations\": 2,\n  \"maxError\": 0.0,\n  \"runSucceeded\": true,\n  \"converged\": true,\n  \"failedUnitName\": null,\n  \"failedUnitError\": null,\n  \"feasible\": true,\n  \"readbacks\": {\n    \"Compression::export compressor.power\": 4349.207630916829\n  },\n  \"readbackErrors\": {}\n}\n"
+    },
+    {
+      "number": 11,
+      "language": "python",
+      "line": 349,
+      "sha256": "66d0aaf2c1d400c2a4eecc3dd392621cd2acd70a63fb98524a781a2b50b452d4",
+      "status": "passed",
+      "seconds": 0.047,
+      "output": "Separator constraints: ['gasLoadFactor', 'kValue', 'dropletCutSize', 'inletMomentum', 'oilRetentionTime', 'waterRetentionTime']\nCompressor constraints: ['speed', 'minSpeed', 'power', 'ratedPower', 'surgeMargin', 'stonewallMargin']\n"
+    },
+    {
+      "number": 12,
+      "language": "python",
+      "line": 374,
+      "sha256": "673d056a65a5036750d61fc529b0f2152636250c150dfd4cde4d282091e87766",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "['gasLoadFactor', 'kValue', 'dropletCutSize', 'inletMomentum', 'oilRetentionTime', 'waterRetentionTime']\n"
+    },
+    {
+      "number": 13,
+      "language": "python",
+      "line": 415,
+      "sha256": "eda34b4eaec37a6f517a83be7a70a4acecff4c31daf702814968afae9f31fd72",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 14,
+      "language": "python",
+      "line": 438,
+      "sha256": "212e65b5441d6c92903a71150de5f0462714e9763c1259f3fc2e5a3f8f5aee9f",
+      "status": "passed",
+      "seconds": 0.047,
+      "output": ""
+    },
+    {
+      "number": 15,
+      "language": "python",
+      "line": 505,
+      "sha256": "1fc9d5ee8572e1d5a25e76c8101977a29be3b288c204914d3ad3aa60ba5dfb67",
+      "status": "passed",
+      "seconds": 0.078,
+      "output": "Optimal rate:  113940 kg/hr\nFeasible:      True\nBottleneck:    export compressor\nUtilization:   95.0%\nIterations:    10\n"
+    },
+    {
+      "number": 16,
+      "language": "python",
+      "line": 546,
+      "sha256": "8fca4f83007377aa78d2d4817d4555b9f6c50f90eb39b64ff2b9dd884879f309",
+      "status": "passed",
+      "seconds": 0.766,
+      "output": "  flowRate = 114356.2\n  pressure = 132.7\n"
+    },
+    {
+      "number": 17,
+      "language": "python",
+      "line": 619,
+      "sha256": "199bc48d1871b6fbc8e168a7e28f51e6e506414e986a17c1a3ce9fd15485db6d",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 18,
+      "language": "python",
+      "line": 636,
+      "sha256": "6dceec2dcadeb0f1aa5446c4e77569da8e90b225725ddf56b4ec8a300f8d942e",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 19,
+      "language": "python",
+      "line": 657,
+      "sha256": "95fd169f99f239997d4c5a33d67a6c742cdd2bd305451618fbbf6f46184e9ec6",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "  throughput: 114356.17\n"
+    },
+    {
+      "number": 20,
+      "language": "python",
+      "line": 675,
+      "sha256": "70bab3bdcdccf262f11b1c46f0e4012c8546c19868b3ed02531cea619bdd2bcd",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 21,
+      "language": "python",
+      "line": 714,
+      "sha256": "71ccb13b16e31508c443182d9117d7dc80af9a207c3b87c3d7774156c5ed3be9",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 22,
+      "language": "python",
+      "line": 745,
+      "sha256": "20b9ba02624163951aaca929e55ed86df706c12eb143e7e6ef1e73e95a898f85",
+      "status": "passed",
+      "seconds": 0.125,
+      "output": "True 114356.16877337512 3678.7219577254486\n"
+    },
+    {
+      "number": 23,
+      "language": "python",
+      "line": 772,
+      "sha256": "0446eb49bc384821c4c2ceaaa2441047920abdfe227323c746507d282da6a2f8",
+      "status": "passed",
+      "seconds": 0.313,
+      "output": "Gas (kg/hr): 114356.16877337513 Power (kW): 4199.454289640925\nGas (kg/hr): 50000.04982810961 Power (kW): 1836.1311504675143\n"
+    },
+    {
+      "number": 24,
+      "language": "python",
+      "line": 800,
+      "sha256": "1284bc4fd72daf942d7b85667c2dcd7c86eac60827c95b011b0f5a4bc42bb4ce",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 25,
+      "language": "python",
+      "line": 812,
+      "sha256": "509bb3e3b802505ed6e6a0bd155054fcfe02113c8b39e33ed1673be59ffffbd4",
+      "status": "passed",
+      "seconds": 0.157,
+      "output": "Maximum throughput: 50000 kg/hr\n"
+    },
+    {
+      "number": 26,
+      "language": "python",
+      "line": 827,
+      "sha256": "3854726d6e87acdb5e3d616b8b1c0b9351fb51ec83e9a676efe22db96670dcd4",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "HP separator gasLoadFactor 0.4153685092966406 True\nexport compressor power 0.35181299609918104 False\n"
+    },
+    {
+      "number": 27,
+      "language": "python",
+      "line": 836,
+      "sha256": "cc1f466dee3a96e829e0cb97fa8a2df3e354cf8872941abbed93234a616d3846",
+      "status": "passed",
+      "seconds": 0.015,
+      "output": "neqsim.process.util.optimizer.ProcessOptimizationEngine$SensitivityResult@35c09b94\n"
+    },
+    {
+      "number": 28,
+      "language": "python",
+      "line": 844,
+      "sha256": "c5dddcd2a974b2839889df0e5d99e03190b1b1fc96410c8ea0009ff9d2d09a47",
+      "status": "passed",
+      "seconds": 0.391,
+      "output": "50.0 298.15 nan\n60.0 298.15 nan\n70.0 298.15 nan\n"
+    },
+    {
+      "number": 29,
+      "language": "python",
+      "line": 872,
+      "sha256": "ad437fa84a0c027c7065c45ec406f5d7e1fa42d55ea6e47d3aa80ff09c8e9634",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 30,
+      "language": "python",
+      "line": 893,
+      "sha256": "ffa031d7b0f71bef521f450e8146bdb231c099404f22a9338b9766fb055f16b9",
+      "status": "passed",
+      "seconds": 0.015,
+      "output": "Surge margin: 43.9%\n"
+    },
+    {
+      "number": 31,
+      "language": "python",
+      "line": 921,
+      "sha256": "d7857825c13e8250fabba582e99eca05a9cd5d801d6f2fe00003965925bf8385",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "Operating point: Q=781 Am3/hr, H=79.3 kJ/kg\nSpeed: 3000 RPM, Efficiency: 78.0%\n"
+    },
+    {
+      "number": 32,
+      "language": "python",
+      "line": 938,
+      "sha256": "5a1577760673cc4ff6b8518185e3e00940fc9b7bdcd9b272628fe016bf043b16",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 33,
+      "language": "python",
+      "line": 947,
+      "sha256": "d9245b953eec1dce8ec04eb055f8bf085aa4d80a047d0589a2e2cfe110875375",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 34,
+      "language": "python",
+      "line": 967,
+      "sha256": "7b88b0218354dbe863da148b8a235c2a19fc22c0fc91a4784c7ca9e37d7abb0d",
+      "status": "passed",
+      "seconds": 0.016,
+      "output": ""
+    },
+    {
+      "number": 35,
+      "language": "python",
+      "line": 1016,
+      "sha256": "09557f7e31c923f1aa2c8b5f4e0aee16594dfcdbb5ab0bd1ea3b3d2ad81c82b2",
+      "status": "passed",
+      "seconds": 0.297,
+      "output": "success: True\nbest objective: 267.2459597408889\nbest setpoints: {'Compression::export compressor.outletPressure': 80.0}\n"
+    },
+    {
+      "number": 36,
+      "language": "python",
+      "line": 1034,
+      "sha256": "b50912515e39c4654f3abc7ccfa99cad0cb04f3b909a9b585093aead19588a31",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": ""
+    },
+    {
+      "number": 37,
+      "language": "python",
+      "line": 1050,
+      "sha256": "219e4baec798077a6dc944afdc795e30935c473e7796c1274ae590755c3eb792",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "Bottleneck: HP separator 38.2%\nAny overloaded: False\nAny hard limit exceeded: False\nHP separator 0.38184705376570005\nexport compressor 0.1591275100463332\n"
+    },
+    {
+      "number": 38,
+      "language": "python",
+      "line": 1072,
+      "sha256": "229a7217773c79aad5fb9b81da71d82365dd10a9c7edbf8c64a72d2b969223b1",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "bottleneck: {'name': 'HP separator', 'area': 'Separation', 'qualifiedName': 'Separation::HP separator', 'utilization': 0.38184705376570005, 'utilizationPercent': 38.18470537657001, 'limitingConstraint': 'gasLoadFactor'}\nany overloaded: False\nSeparation feed 0.0 None\nSeparation HP separator 38.18470537657001 gasLoadFactor\nCompression export compressor 15.912751004633318 power\nExport export 0.0 None\n"
+    },
+    {
+      "number": 39,
+      "language": "python",
+      "line": 1119,
+      "sha256": "ddf0680882dde1504788d0d9eaa719ecb791793e92a81407b3adef981ec3bff9",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "{'schemaVersion': '1.0', 'setpointsApplied': {'feed.flowRate': 100000.0, 'export compressor.outletPressure': 150.0}, 'setpointsRejected': {}, 'runSucceeded': True, 'converged': True, 'failedUnitName': None, 'failedUnitError': None, 'feasible': True, 'readbacks': {'export compressor.power': 3456.422863225268}, 'readbackErrors': {}}\n"
+    }
+  ]
+}

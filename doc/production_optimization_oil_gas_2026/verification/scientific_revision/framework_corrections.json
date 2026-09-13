@@ -1,0 +1,427 @@
+[
+  {
+    "chapter": 23,
+    "before": "Every process simulator can solve a fixed problem:",
+    "after": "A process simulator is commonly used to solve a fixed problem:"
+  },
+  {
+    "chapter": 23,
+    "before": "Conversely, a process simulator knows its equipment intimately but has no built-in optimizer.",
+    "after": "A simulator may also include optimization tools, but the search still needs explicit decisions, objectives and acceptance criteria."
+  },
+  {
+    "chapter": 23,
+    "before": "the `CapacityConstrainedEquipment` interface that endows every equipment unit with knowledge of its own operating limits",
+    "after": "the `CapacityConstrainedEquipment` interface that exposes configured limits for participating equipment"
+  },
+  {
+    "chapter": 23,
+    "before": "and respect all constraints",
+    "after": "and evaluate the constraints explicitly included in the model"
+  },
+  {
+    "chapter": 23,
+    "before": "Earlier chapters have introduced optimization theory (Chapter 22) and production optimization workflows (Chapter 24).",
+    "after": "Chapter 22 introduces optimization theory; Chapter 24 develops the production workflow."
+  },
+  {
+    "chapter": 23,
+    "before": "changing the feed rate affects all downstream equipment monotonically.",
+    "after": "changing the feed rate affects downstream equipment, but monotonic feasibility must be checked across the chosen bounds."
+  },
+  {
+    "chapter": 23,
+    "before": "Linear topologies favor `BINARY_FEASIBILITY` or `GOLDEN_SECTION_SCORE` for speed.",
+    "after": "Use binary feasibility only after establishing a monotonic feasible interval, and golden-section only for a unimodal score; linear topology alone establishes neither property."
+  },
+  {
+    "chapter": 23,
+    "before": "Gate every optimizer trial on the single `feasible` flag",
+    "after": "Use the `feasible` flag as the API acceptance gate, then independently check the required physical balances, product constraints and declared capacity coverage"
+  },
+  {
+    "chapter": 23,
+    "before": "Equipment trip or failure; optimizer treats as infeasible",
+    "after": "Configured acceptance limit; violation is infeasible, but this flag does not simulate a trip"
+  },
+  {
+    "chapter": 23,
+    "before": "Optimizer penalizes but may accept; efficiency reduced",
+    "after": "May be penalized; no automatic physical efficiency reduction follows from the label"
+  },
+  {
+    "chapter": 23,
+    "before": "Calling `autoSize()` without arguments uses a default safety factor of 1.0 (design = current), which is useful for modeling existing equipment with known nameplate capacity.",
+    "after": "Defaults and sizing calculations are equipment-specific. Discover the resulting dimensions, chart state, design values and enabled constraints after sizing. Existing equipment requires its actual ratings; an inferred design point is not nameplate evidence."
+  },
+  {
+    "chapter": 23,
+    "before": "These presets load constraint parameters from reference data (design codes, company technical requirements) rather than computing them from current conditions. This is appropriate when modeling existing facilities where the design-basis constraints are known from the original equipment datasheets.\n\nThe preset mechanism reads from CSV design data files (`TechnicalRequirements_Process.csv`) stored in the NeqSim resources directory. Engineers can extend these files with additional company standards or equipment-specific overrides. This data-driven approach means that constraint values can be updated without modifying Java code — a significant advantage for multi-asset operations where different facilities may follow different design standards.",
+    "after": "These convenience presets enable selected constraints. They do not establish compliance with a company standard or import an installed-equipment rating merely because the method name mentions that standard. Inspect every enabled constraint and explicitly configure ratings from the applicable design basis. Mechanical-design database lookups are a separate workflow."
+  },
+  {
+    "chapter": 23,
+    "before": "**Table 23.1.** Capacity constraints by equipment type.",
+    "after": "**Table 23.1.** Engineering checks to consider by equipment type. This is a checklist, not a promise that every listed check is created automatically; discover the actual registered constraint names and coverage."
+  },
+  {
+    "chapter": 23,
+    "before": "The optimizer also identifies the **knee point** — the Pareto-optimal solution with the best balance between objectives.",
+    "after": "The engineer must select a preferred point using declared economic or operational preferences. The current `ParetoResult` exposes the front, utopia and nadir points; it does not provide an automatic knee-point method. A finite weighted-sum sweep can miss unsupported portions of a non-convex front."
+  },
+  {
+    "chapter": 23,
+    "before": "**generateLiftCurve()** — Sweeps over arrays of pressures, temperatures, water cuts, and GORs to generate a multi-dimensional lift curve:",
+    "after": "**generateCapacityScreening()** — Sweeps supported pressure and temperature axes for a fixed composition to calculate a mass-throughput screening table:"
+  },
+  {
+    "chapter": 23,
+    "before": "The lift curve is a tabulated response surface that maps operating conditions to maximum throughput — the same data used for production optimization in reservoir simulation models.",
+    "after": "This table maps declared process boundaries to a screened maximum mass throughput. It is not a well VFP table: a reservoir export requires independently solved BHP values, a datum and phase-volume bases. The legacy composition arguments accept only singleton zero placeholders at this source revision."
+  },
+  {
+    "chapter": 23,
+    "before": "with 18 built-in strategies",
+    "after": "with registered built-in strategies"
+  },
+  {
+    "chapter": 23,
+    "before": "This integration means the optimization respects not just the compressor's rated limits but its actual performance characteristics at any operating point — a level of fidelity that is essential for accurate production optimization in gas-dominated systems.",
+    "after": "The integration evaluates the supplied map. A generated map remains an assumed screening model; installed performance requires vendor or measured curves, gas-property corrections and a verified operating envelope."
+  },
+  {
+    "chapter": 23,
+    "before": "The templates are based on published correlations for centrifugal compressor performance and can serve as reasonable approximations for concept-level studies.",
+    "after": "These templates provide assumed curve shapes for concept-level sensitivity studies; this chapter does not validate them against a particular compressor."
+  },
+  {
+    "chapter": 23,
+    "before": "These corrections improve the fidelity of the performance map at operating points far from the design condition, which is precisely where the optimizer explores during throughput maximization.",
+    "after": "Corrections are model options whose applicability must be checked against measured or vendor data. Extrapolation away from the reference map is not validated by enabling them."
+  },
+  {
+    "chapter": 23,
+    "before": "A flowsheet behind `evaluate()` is a noisy, feasibility-gated black box with no usable analytic gradient, so a derivative-free method is the appropriate choice.",
+    "after": "A flowsheet behind `evaluate()` can be treated as a feasibility-gated black box. Derivative-free search is one option; finite-difference or analytic sensitivities can be preferable when the model is smooth and reproducible."
+  },
+  {
+    "chapter": 23,
+    "before": "Hard constraints are folded into the objective as weighted quadratic penalties:",
+    "after": "Address-based constraints enter the score as weighted quadratic penalties; finite penalties alone are not hard feasibility guarantees:"
+  },
+  {
+    "chapter": 23,
+    "before": "the global-optimum guarantee is `partial`;",
+    "after": "the readiness JSON describes global-search capability as `partial`, but this is not a mathematical guarantee of a global optimum;"
+  },
+  {
+    "chapter": 23,
+    "before": "`maxUtilization` (0\\u20131)",
+    "after": "`maxUtilization` (dimensionless and possibly greater than one)"
+  },
+  {
+    "chapter": 23,
+    "before": "Pareto front generation with knee-point detection supports decision-making under competing objectives.",
+    "after": "Sampled Pareto fronts support an explicit preference-based decision; no unique knee need exist."
+  },
+  {
+    "chapter": 23,
+    "before": "integration ensures that compressor-limited systems are optimized with full performance-map fidelity",
+    "after": "integration evaluates the supplied compressor-map model"
+  },
+  {
+    "chapter": 23,
+    "before": "Plot the Pareto front and identify the knee point.",
+    "after": "Plot the sampled front, state the objective scaling and test whether a defensible knee exists."
+  },
+  {
+    "chapter": 24,
+    "before": "# Chapter 18: Production Optimization",
+    "after": "# Production Optimization"
+  },
+  {
+    "chapter": 24,
+    "before": "Sections 18.",
+    "after": "Sections 24."
+  },
+  {
+    "chapter": 24,
+    "before": "–18.",
+    "after": "–24."
+  },
+  {
+    "chapter": 24,
+    "before": "**Example**: A platform producing 100,000 bbl/day of oil at $70/bbl generates $7M/day. A 2% production increase through optimization yields an additional $51M/year — far exceeding the cost of implementing an optimization system.\n\nIndustry studies report typical optimization gains of:\n- 1–3% throughput increase through separator pressure optimization\n- 2–5% through gas lift allocation optimization\n- 3–8% through debottlenecking guided by constraint analysis\n- 5–15% through comprehensive facility-wide optimization",
+    "after": "**Illustrative gross-revenue calculation:** at an assumed 100,000 bbl/day, 70 USD/bbl, 365 operating days and a hypothetical 2% uplift, incremental revenue is 51.1 million USD/year. This is not a measured optimization benefit or net project value. Subtract incremental operating cost, capital, downtime and applicable fiscal charges before judging an investment. No generic percentage uplift is established by this example."
+  },
+  {
+    "chapter": 24,
+    "before": "The equipment with the highest utilization factor is the **bottleneck** — it limits the overall system throughput:",
+    "after": "The highest reported utilization identifies a candidate limiting check. Only when each relevant load scales linearly with feed and its limit remains fixed does the following approximate throughput extrapolation apply:"
+  },
+  {
+    "chapter": 24,
+    "before": "where $A_{\\text{gas}}$ is the cross-sectional area available for gas flow. For a horizontal separator with liquid occupying fraction $f = h/D$ of the diameter, the gas area is:\n\n$$\nA_{\\text{gas}} = \\frac{\\pi D^2}{4} \\cdot (1 - f)\n$$",
+    "after": "where $A_{\\text{gas}}$ is the free gas cross-section. For a horizontal cylinder, liquid height fraction is not area fraction. With radius $r=D/2$ and height $0\\le h\\le D$,\n\n$$\n\\begin{aligned}\nA_L(h)&=r^2\\cos^{-1}\\!\\left(\\frac{r-h}{r}\\right)\n -(r-h)\\sqrt{2rh-h^2},\\\\\nA_{\\text{gas}}&=\\pi r^2-A_L(h).\n\\end{aligned}\n$$\n\nThe simple half-area result holds at $h=D/2$; apply the segment geometry elsewhere."
+  },
+  {
+    "chapter": 24,
+    "before": "The coefficient depends on separator type and internal devices:",
+    "after": "The coefficient depends on device loading, droplet size, pressure and fluid properties. The following broad classroom ranges are not vendor guarantees or design-code limits:"
+  },
+  {
+    "chapter": 24,
+    "before": "Typical minimum retention times:",
+    "after": "Illustrative retention-time ranges, requiring fluid-specific settling/coalescence evidence:"
+  },
+  {
+    "chapter": 24,
+    "before": "where $\\sigma_{\\text{GL,max}} \\approx 0.005$–$0.015$ m³/m²·s depending on oil API gravity and GOR.",
+    "after": "The admissible interface loading requires a stated disengagement model or test basis. No universal value follows from API gravity and GOR alone."
+  },
+  {
+    "chapter": 24,
+    "before": "Below surge, flow reversal causes severe mechanical damage at 1–10 Hz cycles.",
+    "after": "Surge can cause oscillatory flow reversal and damage; its frequency depends on the compressor and connected volumes."
+  },
+  {
+    "chapter": 24,
+    "before": "\\frac{Q_{\\text{actual}} - Q_{\\text{surge}}}{Q_{\\text{actual}}}",
+    "after": "\\frac{Q_{\\text{actual}} - Q_{\\text{surge}}}{Q_{\\text{surge}}}"
+  },
+  {
+    "chapter": 24,
+    "before": "A typical minimum surge margin is 10%.",
+    "after": "A 10% margin is an assumed teaching value on this surge-flow denominator basis; use the vendor/controller definition and requirement."
+  },
+  {
+    "chapter": 24,
+    "before": "Centrifugal compressor tip speeds above ~350 m/s risk mechanical failure.",
+    "after": "Use the manufacturer's mechanical speed limit; tip speed alone does not define a universal failure threshold."
+  },
+  {
+    "chapter": 24,
+    "before": "Typical limit: 150–180°C for dry gas seals.",
+    "after": "Use the applicable seal, material and lubricant temperature limits; no universal dry-gas-seal limit is implied."
+  },
+  {
+    "chapter": 24,
+    "before": "Q = N_1 \\cdot F_L \\cdot C_v \\cdot \\sqrt{\\frac{\\Delta P}{\\rho / \\rho_0}}",
+    "after": "Q = N_1 F_P C_v \\sqrt{\\frac{\\Delta P_{\\mathrm{sizing}}}{\\rho/\\rho_0}}"
+  },
+  {
+    "chapter": 24,
+    "before": "W = N_6 \\cdot F_{\\gamma} \\cdot C_v \\cdot Y \\cdot \\sqrt{x \\cdot P_1 \\cdot \\rho_1}",
+    "after": "W = N_6 F_P C_v Y \\sqrt{x_{\\mathrm{sizing}}P_1\\rho_1}"
+  },
+  {
+    "chapter": 24,
+    "before": "where $Y = 1 - x/(3 x_T)$ is the expansion factor, $x = \\Delta P / P_1$ is the pressure drop ratio, and $x_T$ is the critical pressure drop ratio for the valve.",
+    "after": "Here $F_P$ is the piping geometry factor, $x=\\Delta P/P_1$, $x_{\\mathrm{sizing}}=\\min(x,F_\\gamma x_{TP})$, and $Y=1-x_{\\mathrm{sizing}}/(3F_\\gamma x_{TP})$. For liquid service use the lesser of the actual and liquid-choking pressure drop; recovery factor $F_L$ belongs in that choking calculation, not as a general multiplier on subcritical flow. The constants $N_1,N_6$ depend on the stated unit system. See the manufacturer sizing procedure \\cite{emerson2023valves}."
+  },
+  {
+    "chapter": 24,
+    "before": "The valve opening utilization compares required $C_v$ to installed $C_v$:",
+    "after": "A coefficient-capacity ratio compares required $C_v$ to maximum installed $C_v$:"
+  },
+  {
+    "chapter": 24,
+    "before": "Good control practice requires operation between 20% and 80% valve opening.",
+    "after": "The coefficient ratio is not travel unless the installed characteristic is linear. A 20–80% travel window is an illustrative control-authority assumption, not a universal requirement."
+  },
+  {
+    "chapter": 24,
+    "before": "For choke valves in well service, the flow equation includes critical flow effects and multiphase corrections:\n\n$$\nC_{v,\\text{required}} = \\frac{Q_{\\text{total}}}{\\sqrt{\\Delta P / \\rho_m}} \\cdot F_{\\text{multiphase}}\n$$\n\nThe $F_{\\text{multiphase}}$ correction accounts for flashing, two-phase flow, and gas release, and can be 1.2–2.5 times larger than the single-phase $C_v$ requirement.",
+    "after": "For well-service chokes, use a named multiphase/choked-flow model with a defined phase-volume basis and calibrated discharge coefficient. A single arbitrary multiplier on a single-phase $C_v$ expression does not establish flashing or critical-flow capacity."
+  },
+  {
+    "chapter": 24,
+    "before": "The mixture velocity must not exceed the erosional velocity limit to prevent pipe wall erosion:",
+    "after": "An empirical velocity screen can flag a need for further assessment; satisfying it does not establish freedom from erosion, corrosion or sand damage:"
+  },
+  {
+    "chapter": 24,
+    "before": "For multiphase flow, flow-induced vibration is assessed using the DNVGL RP-F101 criteria:",
+    "after": "For multiphase flow, vibration assessment must include excitation, support stiffness, geometry and fatigue response. DNV-RP-F101 addresses corroded pipelines, not vibration screening. The following normalized indicators are illustrative only; apply the relevant Energy Institute guidance or another explicitly qualified method \\cite{dnvf101scope,eivibration}: "
+  },
+  {
+    "chapter": 24,
+    "before": "\\frac{dP}{dL} = \\frac{f \\rho_m v_m^2}{2D} + \\rho_m g \\sin\\theta + \\rho_m v_m \\frac{dv_m}{dL}",
+    "after": "-\\frac{dP}{dL} = \\frac{f_D \\rho_f v_m^2}{2D} + \\rho_h g \\sin\\theta + \\rho_a v_m \\frac{dv_m}{dL}"
+  },
+  {
+    "chapter": 24,
+    "before": "**MAOP**: The Maximum Allowable Operating Pressure is a regulatory/design limit that cannot be exceeded under any conditions.",
+    "after": "The coordinate follows the flow, with positive inclination uphill. The schematic momentum equation distinguishes holdup density $\\rho_h$ from friction/acceleration effective densities; Beggs–Brill applies its own holdup and slip correlations.\n\n**MAOP**: enforce the applicable operating pressure limit and separately assess the design code's transient/protection requirements."
+  },
+  {
+    "chapter": 24,
+    "before": "\\text{NPSH}_A = \\frac{P_{\\text{suction}} - P_{\\text{vapor}}}{\\rho g} + \\frac{v^2}{2g} + z_{\\text{suction}}",
+    "after": "\\text{NPSH}_A = \\frac{P_{s,\\mathrm{abs}}-P_v}{\\rho g}+\\frac{v_s^2}{2g}"
+  },
+  {
+    "chapter": 24,
+    "before": "The NPSH margin should be at least 10–20% ($U_{\\text{NPSH}} < 0.83$–$0.90$) to account for transients and instrument uncertainty.",
+    "after": "Pressure and velocity here are at the suction flange on the pump reference datum; an elevation term is added only when converting from another measurement datum. Required NPSH commonly denotes a specified head-drop test criterion, not zero cavitation. Set the application-specific margin using the pump vendor and applicable guidance."
+  },
+  {
+    "chapter": 24,
+    "before": "W_{\\text{pump}} = \\frac{Q \\cdot \\Delta P}{\\eta_{\\text{pump}} \\cdot \\eta_{\\text{motor}}}",
+    "after": "W_{\\text{electrical}} = \\frac{Q \\Delta P}{\\eta_{\\text{pump}} \\eta_{\\text{motor}}}"
+  },
+  {
+    "chapter": 24,
+    "before": "\\frac{W_{\\text{pump}}}{W_{\\text{driver,max}}}",
+    "after": "\\frac{Q\\Delta P/\\eta_{\\text{pump}}}{W_{\\text{driver,shaft,max}}}"
+  },
+  {
+    "chapter": 24,
+    "before": "U_{\\text{foul}} = \\frac{U_{\\text{clean}}}{U_{\\text{clean}} - R_f \\cdot U_{\\text{clean}}^2} \\cdot \\frac{1}{A \\cdot \\Delta T_{\\text{LMTD}}} \\cdot Q_{\\text{required}}",
+    "after": "\\frac{1}{U_{\\mathrm{fouled}}}=\\frac{1}{U_{\\mathrm{clean}}}+R_f, \\qquad\nU_{\\mathrm{duty}}=\\frac{Q_{\\mathrm{required}}}{U_{\\mathrm{fouled}}A\\Delta T_{\\mathrm{LMTD}}F_t}"
+  },
+  {
+    "chapter": 24,
+    "before": "if the approach temperature is too small, the exchanger is oversized relative to the need; if too large, it may be undersized.",
+    "after": "a small positive approach leaves little thermal driving force and may require large area. A large approach alone does not diagnose undersizing; compare duty and both stream energy balances. Check both terminal differences and internal pinch points when heat capacity or phase state varies."
+  },
+  {
+    "chapter": 24,
+    "before": "When `objectives` is null, the optimizer maximizes the feed stream flow rate.",
+    "after": "With no explicit objectives, score-based modes have zero objective score. Rate-only `BINARY_FEASIBILITY` still seeks the highest feasible rate; supply an objective for all score-based searches."
+  },
+  {
+    "chapter": 24,
+    "before": "O(\\log_\\phi((b-a)/\\text{tolerance}))",
+    "after": "O(\\log_{1/\\phi}((b-a)/\\text{tolerance}))"
+  },
+  {
+    "chapter": 24,
+    "before": "Smooth, convex problems with many variables",
+    "after": "Smooth, concave maximization scores with several variables"
+  },
+  {
+    "chapter": 24,
+    "before": "Global | Convergence",
+    "after": "Global guarantee | Convergence"
+  },
+  {
+    "chapter": 24,
+    "before": "| PARTICLE_SWARM_SCORE | 1–20 | Yes | Yes |",
+    "after": "| PARTICLE_SWARM_SCORE | 1–20 | Yes | No |"
+  },
+  {
+    "chapter": 24,
+    "before": "This analysis directly answers the debottlenecking question: *Which equipment upgrade provides the largest production increase per unit of investment?*",
+    "after": "This sensitivity identifies local production effects under the model assumptions. Investment ranking additionally requires upgrade costs, interactions and independently replayed feasible cases."
+  },
+  {
+    "chapter": 24,
+    "before": "The lift curve shows how facility capacity varies with inlet conditions — this is the \"facility back-pressure curve\" that can be intersected with the reservoir inflow performance relationship (IPR) to find the stable operating point.",
+    "after": "The table shows screened mass capacity at fixed composition and declared inlet conditions. It is not a bottomhole-to-wellhead hydraulic relation, and intersection with an IPR alone does not establish a coupled stable well solution."
+  },
+  {
+    "chapter": 24,
+    "before": "The lift curve generated by `ProcessOptimizationEngine` can be used to create Vertical Flow Performance (VFP) tables for reservoir simulators like Eclipse or IX:",
+    "after": "Reservoir VFP export requires a separately solved, complete BHP grid and consistent datum/phase-volume axes. Generic process-capacity screening cannot be directly exported as VFP:"
+  },
+  {
+    "chapter": 24,
+    "before": "This creates a two-way coupling between the reservoir and facility models, enabling integrated production optimization across the full production system.",
+    "after": "A complete coupling must additionally solve the well hydraulics and match each exchanged pressure and phase rate at the same physical boundary."
+  },
+  {
+    "chapter": 24,
+    "before": "the exchange rate is 0.2 MW per 10,000 kg/hr.",
+    "after": "the exchange rate is 2 MW per 10,000 kg/hr, or 0.2 kWh/kg."
+  },
+  {
+    "chapter": 24,
+    "before": "The knee point represents the best compromise",
+    "after": "A knee, if present under a stated normalization, is one possible compromise"
+  },
+  {
+    "chapter": 24,
+    "before": "SM = 1 - \\frac{Q_{surge}}{Q_{operating}} \\geq SM_{min}",
+    "after": "SM = \\frac{Q_{operating}-Q_{surge}}{Q_{surge}} \\geq SM_{min}"
+  },
+  {
+    "chapter": 24,
+    "before": "with $SM_{min}$ typically 10-15% per API 617.",
+    "after": "with $SM_{min}$ specified by the vendor/control design on this denominator basis; a universal 10–15% API requirement is not established here."
+  },
+  {
+    "chapter": 24,
+    "before": "Heavier gas at lower reservoir pressure requires more head per stage, pushing the compressor toward surge at the same volumetric flow.",
+    "after": "At fixed pressure ratio and inlet temperature, increasing molecular weight generally reduces specific compression head in the constant-property expression; declining suction pressure increases the pressure ratio. These competing effects and the corrected map must be evaluated together."
+  },
+  {
+    "chapter": 24,
+    "before": "The affinity laws relate off-design performance to the design point:",
+    "after": "The affinity laws approximate dynamically similar points with unchanged geometry and inlet density; compressible Mach/Reynolds and gas-property effects limit their application:"
+  },
+  {
+    "chapter": 24,
+    "before": "For common operational scenarios, NeqSim provides preset configurations that pre-populate equipment constraints with industry-standard values:",
+    "after": "Convenience presets enable selected configured checks; they do not certify industry-standard values or installed equipment ratings:"
+  },
+  {
+    "chapter": 24,
+    "before": "These presets encode operational experience: gas turbines lose approximately 0.5-0.7% power output per degree Celsius above ISO conditions (15 °C), so summer ambient temperatures of 30 °C can derate a gas turbine by 8-10%.",
+    "after": "Ambient derating must be supplied from the actual driver map. A preset name does not create that map or qualify a seasonal power allowance."
+  },
+  {
+    "chapter": 24,
+    "before": "- Better water settling → less water in oil",
+    "after": "- Water settling must be evaluated from density difference, viscosity, droplet distribution and residence time; its direction is not determined by pressure alone"
+  },
+  {
+    "chapter": 24,
+    "before": "- More light ends in gas → higher gas heating value",
+    "after": "- The resulting gas composition determines heating value; the direction must be calculated on a common reference basis"
+  },
+  {
+    "chapter": 24,
+    "before": "Optimization is only meaningful when the process is at or near steady state. Transient conditions (slug flow, well startup, separator level cycling) produce meaningless optimization results.",
+    "after": "Steady-state RTO requires sufficiently settled data for its model. Dynamic optimization can treat transients explicitly when the dynamic model and constraints are qualified; transient data are not suitable inputs to an unmodified steady-state reconciliation."
+  },
+  {
+    "chapter": 24,
+    "before": "Norway's petroleum tax system penalizes flaring through a CO₂ tax of approximately 1,000 NOK/tonne ($100/tonne), making flaring reduction directly profitable.",
+    "after": "Use dated, jurisdiction-specific tax and allowance prices when valuing emissions; this chapter does not supply a current fiscal tariff."
+  },
+  {
+    "chapter": 24,
+    "before": "The World Bank's Zero Routine Flaring initiative targets elimination of routine flaring by 2030.",
+    "after": "The voluntary World Bank Zero Routine Flaring initiative targets routine oil-production flaring by 2030; it distinguishes routine disposal from safety and other non-routine events \\cite{worldbankzrf}."
+  },
+  {
+    "chapter": 24,
+    "before": "When the gas compressor is the bottleneck, the zero-flare production rate is typically 15-25% below the mechanical maximum. The optimizer quantifies this trade-off precisely, allowing operators to make informed decisions about flare versus production.",
+    "after": "The production cost of a no-routine-flaring constraint is case-specific. Calculate it with the full gas balance and available recovery/export routes; no generic 15–25% loss is established here."
+  },
+  {
+    "chapter": 24,
+    "before": "Recommended utilization limits by equipment type:",
+    "after": "Illustrative screening margins by equipment type. These are not operating permissions; establish applicable ratings and transient allowance independently:"
+  },
+  {
+    "chapter": 24,
+    "before": "| Single variable, non-monotonic | GOLDEN_SECTION_SCORE |",
+    "after": "| Single variable, unimodal score | GOLDEN_SECTION_SCORE |"
+  },
+  {
+    "chapter": 24,
+    "before": "- Relax utilization limits",
+    "after": "- Check the ratings and bounds; change a limit only when its engineering basis supports the change"
+  },
+  {
+    "chapter": 24,
+    "before": "simulating an upgrade",
+    "after": "forming an unconstrained screening counterfactual"
+  },
+  {
+    "chapter": 24,
+    "before": "Calculate the percentage throughput increase from the upgrade.",
+    "after": "Report this as an upper-bound counterfactual. Then specify a finite upgraded rating and replay all constraints before claiming an upgrade benefit."
+  }
+]

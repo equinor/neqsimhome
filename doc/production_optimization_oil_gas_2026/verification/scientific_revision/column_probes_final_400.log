@@ -1,0 +1,32 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx512m
+DistillationColumn Diagnostics:
+  Name: Stabilizer
+  Solved: true
+  Solver: DIRECT_SUBSTITUTION
+  Last solver used: DIRECT_SUBSTITUTION
+  Solve status: RIGOROUS_CONVERGED
+  Solve status reason: Tray solution satisfies active rigorous convergence gates
+  Trays: 2 total, 1 equilibrium stages
+  Terminal controls:
+    condenser: absent
+    reboiler mode: EQUILIBRIUM
+  Iterations: 39
+  Solve time: 0.6415274 s
+  Residuals:
+    temperature: 6.10538393175375E-8 K (tolerance 1.0E-7)
+    applied temperature step: 6.10538393175375E-8 K
+    mass: 9.09494701772929E-16 (tolerance 1.0E-6)
+    energy: 5.633340135419774E-10 (tolerance 1.0E-5, enforced=true)
+    mesh infinity norm: 2.1467164412568696E-9 (tolerance 1.0E-5, enforced=true)
+      material: 1.0532578873409697E-9, equilibrium: 2.825295553026187E-11, summation: 2.220446049250313E-16, energy: 2.1467164412568696E-9, product draw: 0.0, specification: 0.0
+      per-tray material imbalance: 8.211137068187594E-11 (tolerance 0.02)
+  Feed trays:
+    tray 1 with 1 feed(s), 0 stages above, 1 stages below
+  Recommendations:
+    - No immediate convergence issue detected.
+
+=== Flash vs. Column Stabilization ===
+Flash stabilization: oil rate = 4960.0 kg/hr
+Column stabilization: oil rate = 4816.9 kg/hr
+Additional recovery:  -143.2 kg/hr (-2.9%)
+PROBE ch11 5 {'chapter': 'ch11', 'block': 5, 'status': 'RIGOROUS_CONVERGED', 'mesh': 2.1467164412568696e-09, 'gas_kg_hr': 183.13439460708997, 'liquid_kg_hr': 4816.86560539291, 'seconds': 2.563000000001921}

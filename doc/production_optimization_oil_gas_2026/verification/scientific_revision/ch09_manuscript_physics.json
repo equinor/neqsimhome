@@ -1,0 +1,2208 @@
+{
+  "chapter": "ch09_flow_assurance",
+  "source_sha256": "3c31d476745f264cc9aa650a5a3577ed45d9c4d3e34f4a4d059cf2683d2e95e0",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "literal_blocks": [
+    {
+      "index": 1,
+      "code_sha256": "634432d695cb61b30547305934de1f833ad94d42381ae4c193281c9ed98249a3",
+      "line": 101,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.1487649999999996,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 20.0
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.1487649999999996,
+          "getPressure_bara": 300.0,
+          "getTemperature_C": 27.029829976321253
+        }
+      ],
+      "seconds": 7.01600000000326,
+      "output": " Pressure (bara)   Hydrate T (\u00b0C)\n----------------------------------\n              20             10.3\n              40             15.6\n              60             18.4\n              80             20.1\n             100             21.2\n             150             23.1\n             200             24.6\n             250             25.9\n             300             27.0\n"
+    },
+    {
+      "index": 2,
+      "code_sha256": "b66a56b1c9c3f7688cc3d092cd10478b5ad1c74e9c1dc26c19574421b78f7860",
+      "line": 144,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.3093722499999996,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 20.0
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.3093722499999996,
+          "getPressure_bara": 300.0,
+          "getTemperature_C": 26.761440753690806
+        }
+      ],
+      "seconds": 2.0,
+      "output": "Hydrate Equilibrium Curve:\n  P (bara)   T_hyd (\u00b0C)\n        10          4.7\n        20         10.1\n        30         13.2\n        50         16.9\n        70         19.0\n       100         21.0\n       150         22.8\n       200         24.3\n       250         25.6\n       300         26.8\n"
+    },
+    {
+      "index": 3,
+      "code_sha256": "a4f0b5cd56bbafd332870797e6a9d6ba70cd7c2e7e9f179db3f11428842a62fc",
+      "line": 249,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.3093722499999996,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 20.0
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.3093722499999996,
+          "getPressure_bara": 300.0,
+          "getTemperature_C": 26.761440753690806
+        },
+        {
+          "name": "fluid_with_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.140872,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": -6.79276731698269
+        },
+        {
+          "name": "fluid_no_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.052764,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 21.711841434463963
+        }
+      ],
+      "seconds": 4.764999999999418,
+      "output": "Hydrate temperature with MEG: -6.8 \u00b0C\nHydrate temperature without MEG: 21.7 \u00b0C\nHydrate depression: 28.5 \u00b0C\n"
+    },
+    {
+      "index": 4,
+      "code_sha256": "4f7e4f2d451b51f9c25d95f93b73e07239ed86c425659dc231fb2d0bf54327af",
+      "line": 407,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.383178999999998,
+          "getPressure_bara": 50.0,
+          "getTemperature_C": 60.0
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.383178999999998,
+          "getPressure_bara": 50.0,
+          "getTemperature_C": 10.0
+        },
+        {
+          "name": "fluid_with_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.140872,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": -6.79276731698269
+        },
+        {
+          "name": "fluid_no_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.052764,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 21.711841434463963
+        }
+      ],
+      "seconds": 0.7189999999973224,
+      "output": "  T (\u00b0C)   Phases Liquid density (kg/m3)\n      60        3                  666.7\n      55        3                  670.0\n      50        3                  673.2\n      45        3                  676.2\n      40        3                  679.1\n      35        3                  681.9\n      30        3                  684.6\n      25        3                  687.1\n      20        3                  689.4\n      15        3                  691.6\n      10        3                  693.6\n"
+    },
+    {
+      "index": 5,
+      "code_sha256": "0117b3ae8a0efaac81b9a33cdf989bc9ecd29079e4a0785bb22ed8c679a150bd",
+      "line": 542,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.5956099999999993,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 60.0
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.383178999999998,
+          "getPressure_bara": 50.0,
+          "getTemperature_C": 10.0
+        },
+        {
+          "name": "fluid_with_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.140872,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": -6.79276731698269
+        },
+        {
+          "name": "fluid_no_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.052764,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 21.711841434463963
+        }
+      ],
+      "seconds": 0.09399999999732245,
+      "output": "Total pressure: 80.0 bara\nCO2 mole fraction in gas: 0.0551\nCO2 partial pressure: 4.40 bar\nEstimated corrosion rate: 12.48 mm/year\n\n  Temperature (\u00b0C)   CR (mm/year)\n                20           2.48\n                40           5.86\n                60          12.48\n                80          24.39\n               100          44.36\n               120          75.91\n"
+    },
+    {
+      "index": 6,
+      "code_sha256": "6c01bc7f492b171b4681594cecfb9d37081945a0a33e4772eb6a0de356ca5fea",
+      "line": 863,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.7150597499999995,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 20.0
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.383178999999998,
+          "getPressure_bara": 50.0,
+          "getTemperature_C": 10.0
+        },
+        {
+          "name": "fluid_with_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.140872,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": -6.79276731698269
+        },
+        {
+          "name": "fluid_no_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.052764,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 21.711841434463963
+        },
+        {
+          "name": "phase_env_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.7150597499999995,
+          "getPressure_bara": 0.0,
+          "getTemperature_C": -273.15
+        },
+        {
+          "name": "hyd_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.7150597499999995,
+          "getPressure_bara": 300.0,
+          "getTemperature_C": 26.182999338054685
+        }
+      ],
+      "seconds": 1.8280000000013388,
+      "output": "Phase Envelope calculated.\n\nHydrate Equilibrium Curve:\n  P (bara)   T_hyd (\u00b0C)\n        10          4.4\n        20          9.7\n        40         14.8\n        60         17.5\n        80         19.3\n       100         20.5\n       150         22.4\n       200         23.7\n       250         25.0\n       300         26.2\n\nPipeline Operating Conditions:\n         Wellhead: P = 200 bara, T = 80 \u00b0C\n     Flowline mid: P = 150 bara, T = 40 \u00b0C\n     Flowline end: P = 100 bara, T = 20 \u00b0C\n        Riser top: P = 80 bara, T = 18 \u00b0C\n"
+    },
+    {
+      "index": 9,
+      "code_sha256": "a3190cfdc1aab328dc2eb97c17563433aa252c00860279a9d1d51d05c0ccbff2",
+      "line": 1037,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.7150597499999995,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 20.0
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.383178999999998,
+          "getPressure_bara": 50.0,
+          "getTemperature_C": 10.0
+        },
+        {
+          "name": "fluid_with_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.140872,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": -6.79276731698269
+        },
+        {
+          "name": "fluid_no_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.052764,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 21.711841434463963
+        },
+        {
+          "name": "phase_env_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.7150597499999995,
+          "getPressure_bara": 0.0,
+          "getTemperature_C": -273.15
+        },
+        {
+          "name": "hyd_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.7150597499999995,
+          "getPressure_bara": 300.0,
+          "getTemperature_C": 26.182999338054685
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 50.00000000000001,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "pipeline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 15.440065356582156,
+          "getTemperature_C": 40.0,
+          "inlets": [
+            "Export Gas"
+          ],
+          "outlets": [
+            "Export Pipeline out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 1.110000000000582,
+      "output": "Erosional velocity limit (C=150): 24.5 m/s\n\n  Flow (kg/hr)   Velocity (m/s)   dP (bar)           Status\n----------------------------------------------------------\n        50,000              4.9        4.4               OK\n        80,000              7.8       11.5               OK\n       100,000              9.8       18.8               OK\n       120,000             11.8       28.9               OK\n       150,000             14.7       54.6               OK\n       180,000  INFEASIBLE: no positive outlet-pressure solution\n"
+    },
+    {
+      "index": 10,
+      "code_sha256": "a5933fc47b59b6d9d7645594831321410b203a8bb1ebbfacd3ac28d1dd2b27de",
+      "line": 1112,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.7150597499999995,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 20.0
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.383178999999998,
+          "getPressure_bara": 50.0,
+          "getTemperature_C": 10.0
+        },
+        {
+          "name": "fluid_with_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.140872,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": -6.79276731698269
+        },
+        {
+          "name": "fluid_no_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.052764,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 21.711841434463963
+        },
+        {
+          "name": "phase_env_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.7150597499999995,
+          "getPressure_bara": 0.0,
+          "getTemperature_C": -273.15
+        },
+        {
+          "name": "hyd_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.7150597499999995,
+          "getPressure_bara": 300.0,
+          "getTemperature_C": 26.182999338054685
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "pipeline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 15.440065356582156,
+          "getTemperature_C": 40.0,
+          "inlets": [
+            "Export Gas"
+          ],
+          "outlets": [
+            "Export Pipeline out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 194.41583332929358,
+          "getTemperature_C": 80.0,
+          "inlets": [
+            "Wellstream"
+          ],
+          "outlets": [
+            "Subsea Flowline out stream"
+          ]
+        }
+      ],
+      "seconds": 0.5319999999992433,
+      "output": "Arrival pressure:    194.4 bara\nArrival temperature: 80.0 \u00b0C\nPressure drop:       5.6 bar\n"
+    },
+    {
+      "index": 12,
+      "code_sha256": "68995aacbe25c618f87c005b135a63be88226c1eab7cf823cc6be18a7dbd5eea",
+      "line": 1196,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.7150597499999995,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 20.0
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 8.383178999999998,
+          "getPressure_bara": 50.0,
+          "getTemperature_C": 10.0
+        },
+        {
+          "name": "fluid_with_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.140872,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": -6.79276731698269
+        },
+        {
+          "name": "fluid_no_MEG",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 2.052764,
+          "getPressure_bara": 100.0,
+          "getTemperature_C": 21.711841434463963
+        },
+        {
+          "name": "phase_env_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.7150597499999995,
+          "getPressure_bara": 0.0,
+          "getTemperature_C": -273.15
+        },
+        {
+          "name": "hyd_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.7150597499999995,
+          "getPressure_bara": 300.0,
+          "getTemperature_C": 26.182999338054685
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 33.33333333333333,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 35.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 50.00000000000001,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 35.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "pipeline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 76.8446255045131,
+          "getTemperature_C": 35.0,
+          "inlets": [
+            "Export Gas"
+          ],
+          "outlets": [
+            "Pipeline out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 194.41583332929358,
+          "getTemperature_C": 80.0,
+          "inlets": [
+            "Wellstream"
+          ],
+          "outlets": [
+            "Subsea Flowline out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "pipeline_12",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 42.73774950219699,
+          "getTemperature_C": 35.0,
+          "inlets": [
+            "Export Gas"
+          ],
+          "outlets": [
+            "12-inch Export out stream"
+          ]
+        }
+      ],
+      "seconds": 0.18699999999807915,
+      "output": "=== Pipeline Diameter Comparison ===\n    Diameter   Velocity (m/s)   dP (bar)    P_arrival         Status\n------------------------------------------------------------------\n      8-inch  INFEASIBLE: no positive outlet-pressure solution\n     10-inch             10.1       44.7         35.3             OK\n     12-inch              7.0       14.5         65.5             OK\n     14-inch              5.2        6.3         73.7             OK\n     16-inch              3.9        3.2         76.8             OK\n\n=== 12-inch Pipeline: Flow vs Pressure Drop ===\n  Flow (kg/hr)   dP (bar)   Velocity (m/s)   Arrival (bara)\n----------------------------------------------------------\n        40,000        1.6              2.3             78.4\n        60,000        3.5              3.5             76.5\n        80,000        6.3              4.7             73.7\n       100,000        9.9              5.8             70.1\n       120,000       14.5              7.0             65.5\n       150,000       23.9              8.8             56.1\n       180,000       37.3             10.5             42.7\n"
+    }
+  ],
+  "physical_checks": [
+    {
+      "block": 1,
+      "equipment": "Hydrate result domain",
+      "class": "CaseAcceptance",
+      "scope": "Finite hydrate temperatures and inhibitor-direction check only; no independent hydrate reference data",
+      "checks": [
+        {
+          "name": "nonempty_finite_temperature_in_exercised_230_to_330_K_domain",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "temperature_C": [
+        27.029829976321253
+      ],
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "Hydrate result domain",
+      "class": "CaseAcceptance",
+      "scope": "Finite hydrate temperatures and inhibitor-direction check only; no independent hydrate reference data",
+      "checks": [
+        {
+          "name": "nonempty_finite_temperature_in_exercised_230_to_330_K_domain",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "temperature_C": [
+        26.761440753690806,
+        4.6556491549877705,
+        10.10485422640511,
+        13.208378971497268,
+        16.86351901501621,
+        19.015012279908035,
+        20.973802025032228,
+        22.776854690835876,
+        24.28803871057795,
+        25.59135969926666,
+        26.761440753690806
+      ],
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "Hydrate result domain",
+      "class": "CaseAcceptance",
+      "scope": "Finite hydrate temperatures and inhibitor-direction check only; no independent hydrate reference data",
+      "checks": [
+        {
+          "name": "nonempty_finite_temperature_in_exercised_230_to_330_K_domain",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "MEG_lowers_equilibrium_temperature",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "temperature_C": [
+        26.761440753690806,
+        -6.79276731698269,
+        21.711841434463963
+      ],
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 1.659783421814609e-14,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 8.921752225883779e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 333.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 1.8096635301390052e-14,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 1.0005329897916904e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 328.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 1.970645868709653e-14,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 1.0771383784907467e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 323.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 2.1038726316646716e-14,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 1.2088108292111398e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 318.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 3.3306690738754696e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 3.6637359812630166e-15,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 3.9901415505020164e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 313.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 3.941291737419306e-15,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 2.569056078982282e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 308.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 3.941291737419306e-15,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 2.515765373800288e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 303.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 3.885780586188048e-15,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 2.6689761511985204e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 298.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 3.608224830031759e-15,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 2.424727085781048e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 293.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 2.886579864025407e-15,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 2.2670754162843127e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 288.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 1.099120794378905e-14,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 1.0094147739886828e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 283.15,
+      "pressure_bara": 50.0,
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_2_composition_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 6.439293542825908e-15,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 8.655298699973974e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 3,
+      "temperature_K": 333.15,
+      "pressure_bara": 80.0,
+      "pass": true
+    },
+    {
+      "block": 6,
+      "equipment": "Hydrate result domain",
+      "class": "CaseAcceptance",
+      "scope": "Finite hydrate temperatures and inhibitor-direction check only; no independent hydrate reference data",
+      "checks": [
+        {
+          "name": "nonempty_finite_temperature_in_exercised_230_to_330_K_domain",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "temperature_C": [
+        26.182999338054685
+      ],
+      "pass": true
+    },
+    {
+      "block": 9,
+      "equipment": "Export Pipeline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888889,
+        "mass_out_kg_s": 13.88888888888889,
+        "enthalpy_in_W": 136652.69839660195,
+        "enthalpy_out_W": 199206.30111650086,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 9,
+      "equipment": "Export Pipeline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888889,
+        "mass_out_kg_s": 13.88888888888889,
+        "enthalpy_in_W": 136652.69839660195,
+        "enthalpy_out_W": 199206.30111650086,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 9,
+      "equipment": "Export Pipeline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 22.22222222222222,
+        "mass_out_kg_s": 22.22222222222222,
+        "enthalpy_in_W": 218644.31743456193,
+        "enthalpy_out_W": 482666.0824327504,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 9,
+      "equipment": "Export Pipeline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.77777777777778,
+        "enthalpy_in_W": 273305.3967932039,
+        "enthalpy_out_W": 812300.1181902881,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 9,
+      "equipment": "Export Pipeline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 33.333333333333336,
+        "mass_out_kg_s": 33.333333333333336,
+        "enthalpy_in_W": 327966.4761518445,
+        "enthalpy_out_W": 1325101.4222816178,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 9,
+      "equipment": "Export Pipeline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 41.66666666666664,
+        "mass_out_kg_s": 41.66666666666664,
+        "enthalpy_in_W": 409958.09518981166,
+        "enthalpy_out_W": 2759671.7445411826,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 10,
+      "equipment": "Subsea Flowline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222225,
+        "mass_out_kg_s": 22.222222222222225,
+        "enthalpy_in_W": -1648202.5459718206,
+        "enthalpy_out_W": -2931585.6534205372,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "Pipeline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 33.33333333333333,
+        "mass_out_kg_s": 33.33333333333333,
+        "enthalpy_in_W": -428064.27868825477,
+        "enthalpy_out_W": 1172226.333028866,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "Pipeline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 33.33333333333333,
+        "mass_out_kg_s": 33.33333333333333,
+        "enthalpy_in_W": -428064.27868825477,
+        "enthalpy_out_W": 88606.76372180367,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "Pipeline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 33.33333333333333,
+        "mass_out_kg_s": 33.33333333333333,
+        "enthalpy_in_W": -428064.27868825477,
+        "enthalpy_out_W": -204616.7722151773,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "Pipeline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 33.33333333333333,
+        "mass_out_kg_s": 33.33333333333333,
+        "enthalpy_in_W": -428064.27868825477,
+        "enthalpy_out_W": -316854.54306231346,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "12-inch Export",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111105,
+        "mass_out_kg_s": 11.111111111111105,
+        "enthalpy_in_W": -142688.09289608488,
+        "enthalpy_out_W": -124044.60171374446,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "12-inch Export",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 16.66666666666667,
+        "mass_out_kg_s": 16.66666666666667,
+        "enthalpy_in_W": -214032.13934412785,
+        "enthalpy_out_W": -151984.6630194562,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "12-inch Export",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222225,
+        "mass_out_kg_s": 22.222222222222225,
+        "enthalpy_in_W": -285376.18579217,
+        "enthalpy_out_W": -137890.60379274772,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "12-inch Export",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 27.77777777777778,
+        "mass_out_kg_s": 27.77777777777778,
+        "enthalpy_in_W": -356720.23224021215,
+        "enthalpy_out_W": -64638.48070845264,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "12-inch Export",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 33.33333333333333,
+        "mass_out_kg_s": 33.33333333333333,
+        "enthalpy_in_W": -428064.27868825477,
+        "enthalpy_out_W": 88606.76372180367,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "12-inch Export",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 41.66666666666667,
+        "mass_out_kg_s": 41.66666666666667,
+        "enthalpy_in_W": -535080.3483603187,
+        "enthalpy_out_W": 529837.9315662165,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 12,
+      "equipment": "12-inch Export",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 0.0,
+      "boundary": {
+        "mass_in_kg_s": 50.00000000000001,
+        "mass_out_kg_s": 50.00000000000001,
+        "enthalpy_in_W": -642096.418032384,
+        "enthalpy_out_W": 1357710.8464186988,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    }
+  ]
+}

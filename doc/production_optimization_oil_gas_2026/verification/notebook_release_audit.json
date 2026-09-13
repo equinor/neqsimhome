@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "notebooks": 35,
+  "passed_notebooks": 35,
+  "executed_code_cells": 300,
+  "fresh_figures": 104,
+  "figure_discussions": 104,
+  "source_revisions": [
+    "6cc8026202a5d3f9383c9abd1d97d448993813f9"
+  ],
+  "python_interpreters": [
+    "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+  ],
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "book_local_dependencies": {
+    "ipython": "9.17.1",
+    "jpype1": "1.7.1",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1"
+  },
+  "problems": [],
+  "declared_partial_domains": [
+    {
+      "notebook": "chapters\\ch04_reservoir_engineering\\notebooks\\ch04_reservoir_figures.ipynb",
+      "series": [
+        {
+          "panel": 1,
+          "title": "Gas-Oil Ratio vs Depletion Pressure at Reservoir Temperature",
+          "series": "Molar GOR",
+          "value_axis": "y",
+          "x_label": "Pressure (bara)",
+          "y_label": "Molar GOR (gas moles / oil moles)",
+          "n_points": 50,
+          "n_nonfinite": 21,
+          "x_min": 50.0,
+          "x_max": 192.85714285714286,
+          "y_min": 6.0008116810061995,
+          "y_max": 62.50961584162392,
+          "x_at_y_max": 192.85714285714286
+        }
+      ],
+      "interpretation": "Undefined one-phase quantities or physically infeasible hydraulic trials are explicitly retained as gaps."
+    },
+    {
+      "notebook": "chapters\\ch05_well_performance\\notebooks\\ch05_well_performance_figures.ipynb",
+      "series": [
+        {
+          "panel": 1,
+          "title": "Coupled operating point",
+          "series": "NeqSim tubing + reservoir PI",
+          "value_axis": "y",
+          "x_label": "Production rate (t/hr)",
+          "y_label": "Wellhead pressure (bara)",
+          "n_points": 19,
+          "n_nonfinite": 6,
+          "x_min": 5.0,
+          "x_max": 65.0,
+          "y_min": 7.807884769039227,
+          "y_max": 159.1483973645036,
+          "x_at_y_max": 5.0
+        }
+      ],
+      "interpretation": "Undefined one-phase quantities or physically infeasible hydraulic trials are explicitly retained as gaps."
+    },
+    {
+      "notebook": "chapters\\ch06_wells_artificial_lift\\notebooks\\ch15w_well_networks.ipynb",
+      "series": [
+        {
+          "panel": 1,
+          "title": "",
+          "series": "Choke Outlet P",
+          "value_axis": "y",
+          "x_label": "Choke Opening (%)",
+          "y_label": "Choke Outlet Pressure (bara)",
+          "n_points": 10,
+          "n_nonfinite": 2,
+          "x_min": 30.0,
+          "x_max": 100.0,
+          "y_min": 45.610899714267674,
+          "y_max": 141.55213585795497,
+          "x_at_y_max": 100.0
+        },
+        {
+          "panel": 2,
+          "title": "Choke Sensitivity Study: Pressure vs Choke Opening",
+          "series": "Manifold P",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Manifold Arrival Pressure (bara)",
+          "n_points": 10,
+          "n_nonfinite": 2,
+          "x_min": 30.0,
+          "x_max": 100.0,
+          "y_min": 41.41244102644955,
+          "y_max": 140.25356271921115,
+          "x_at_y_max": 100.0
+        }
+      ],
+      "interpretation": "Undefined one-phase quantities or physically infeasible hydraulic trials are explicitly retained as gaps."
+    },
+    {
+      "notebook": "chapters\\ch08_flowlines_and_risers\\notebooks\\ch07_flowlines_figures.ipynb",
+      "series": [
+        {
+          "panel": 1,
+          "title": "Pressure Drop vs Pipeline Diameter\n(Flow = 50 t/hr, L = 10 km, horizontal)",
+          "series": "Curve 1",
+          "value_axis": "y",
+          "x_label": "Pipeline Inner Diameter (inches)",
+          "y_label": "Pressure Drop (bar)",
+          "n_points": 7,
+          "n_nonfinite": 1,
+          "x_min": 6.0,
+          "x_max": 16.0,
+          "y_min": 0.23946641471921737,
+          "y_max": 75.79305625387994,
+          "x_at_y_max": 6.0
+        }
+      ],
+      "interpretation": "Undefined one-phase quantities or physically infeasible hydraulic trials are explicitly retained as gaps."
+    }
+  ],
+  "validation_scope": "Executed code, source provenance, artifact integrity, finite-result audit and notebook engineering assertions. This does not constitute blanket validation against independent experimental or field data."
+}

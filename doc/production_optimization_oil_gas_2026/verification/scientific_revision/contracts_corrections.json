@@ -1,0 +1,82 @@
+[
+  {
+    "chapter": 31,
+    "fence": 1,
+    "scope": "physical/statistical contract"
+  },
+  {
+    "chapter": 31,
+    "fence": 3,
+    "scope": "physical/statistical contract"
+  },
+  {
+    "chapter": 31,
+    "fence": 5,
+    "scope": "physical/statistical contract"
+  },
+  {
+    "chapter": 31,
+    "fence": 6,
+    "scope": "physical/statistical contract"
+  },
+  {
+    "chapter": 32,
+    "before": "| `getKneePoint()` | A normalized geometric compromise among sampled points; not an economic decision |",
+    "after": "| Application decision rule | Select among sampled non-dominated points using declared economics or preferences; no `getKneePoint()` API is supplied |"
+  },
+  {
+    "chapter": 32,
+    "before": "Reconciling transient data produces meaningless results.",
+    "after": "Steady-state balance reconciliation is inappropriate when unmodeled accumulation is significant; dynamic reconciliation is a different formulation."
+  },
+  {
+    "chapter": 32,
+    "before": "R = \\frac{1}{N-1} \\sum_{k=1}^{N-1} \\frac{(y_k - \\bar{y})(y_{k+1} - \\bar{y})}{s_y^2}",
+    "after": "R = \\frac{\\sum_{k=1}^{N-1}(y_{k+1}-y_k)^2}{2(N-1)s_y^2}"
+  },
+  {
+    "chapter": 32,
+    "before": "For a truly random (steady-state) process, $R \\approx 0$. For a process with trends (transient), $R \\rightarrow 1$.",
+    "after": "For independent, stationary finite-variance noise, $R$ is near one; slow trends often reduce it. The native implementation handles negligible sample variance separately. Autocorrelation, oscillation and sensor freeze require additional checks; this ratio alone does not prove steady state."
+  },
+  {
+    "chapter": 32,
+    "before": "z_i = \\frac{y_i - \\hat{y}_i}{\\sigma_i \\sqrt{1 - r_{ii}}}",
+    "after": "z_i = \\frac{\\hat{y}_i-y_i}{\\sqrt{V_{ii}-V^{\\mathrm{adj}}_{ii}}}"
+  },
+  {
+    "chapter": 32,
+    "before": "where $r_{ii}$ is the diagonal element of the residual projection matrix. If $|z_i| > z_{\\alpha/2}$ (typically 1.96 for 95% confidence), the measurement is flagged as having a gross error \u2014 indicating a sensor fault, calibration drift, or data entry error.",
+    "after": "For full-row-rank linear constraints, $V^{\\mathrm{adj}}=V-VA^T(AVA^T)^{-1}AV$. This is the reconciled covariance, so the denominator is the standard deviation of the **adjustment**. The native method uses this expression. A two-sided Gaussian screen uses $z_{1-\\alpha/2}$ (1.96 for an individual 95% test). Multiple tests, correlated errors and uncertain model constraints affect false-alarm rates; a flag is evidence for investigation, not proof of a faulty sensor. A zero adjustment variance provides no identifiable residual test."
+  },
+  {
+    "chapter": 32,
+    "before": "`runFullFactorial()`",
+    "after": "`.vary(...).build().run()`"
+  },
+  {
+    "chapter": 32,
+    "before": "`runOneAtATime()`",
+    "after": "Application-built parameter cases"
+  },
+  {
+    "chapter": 32,
+    "before": "`runLatinHypercube(N)`",
+    "after": "External LHS sampling and explicit cases"
+  },
+  {
+    "chapter": 32,
+    "before": "`runRandom(N)`",
+    "after": "External seeded sampling and explicit cases"
+  },
+  {
+    "chapter": 32,
+    "before": "A complete model calibration workflow:\n\n**Execution scope:** requires measured time series, reconciler constraints and calibration data.",
+    "after": "The following self-contained local fixture checks native steady-state statistics against the explicit equation, reconciled flows against an independent linear-algebra solution, and recovery of a known compressor efficiency from three synthetic temperature observations. It uses native kelvin observation values because this estimator path does not convert the declared unit string. Synthetic recovery is a contract test, not field calibration or independent EOS validation. Site use still requires time alignment, quality flags, realistic covariance and identifiable parameters."
+  },
+  {
+    "chapter": 32,
+    "fence": 16,
+    "scope": "physical/statistical contract"
+  }
+]

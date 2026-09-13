@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en"><head><base href="file:///C:/Users/solbraa/OneDrive%20-%20NTNU/Documents/GitHub/neqsim/neqsim-paperlab/books/production_optimization_oil_gas_2026/.build/renderer_fixture/submission/book.html">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renderer Verification</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script>
+// Render math with katex.render directly instead of the auto-render delimiter
+// splitter. This is immune to inlining quirks (an inlined <script> never fires
+// `onload`, so an auto-render `onload` trigger is silently dropped) and to
+// delimiter corruption. We walk text nodes, tokenize $$...$$ (display) and
+// $...$ (inline), and call katex.render on each. Polling for `window.katex`
+// works whether KaTeX loads from the CDN (deferred) or is inlined ahead of
+// this block.
+(function () {
+  var SKIP = {SCRIPT:1, STYLE:1, TEXTAREA:1, PRE:1, CODE:1, OPTION:1, NOSCRIPT:1};
+  function escapedAt(text, index) {
+    var backslashes = 0;
+    while (index > 0 && text.charAt(--index) === "\\") backslashes++;
+    return backslashes % 2 === 1;
+  }
+  function literalText(text) { return text.replace(/\\\$/g, "$"); }
+  function processTextNode(node) {
+    var text = node.nodeValue;
+    if (text.indexOf("$") < 0) return;
+    var parts = [], i = 0, n = text.length, last = 0;
+    while (i < n) {
+      if (text.charAt(i) === "$" && !escapedAt(text, i)) {
+        var display = (text.charAt(i + 1) === "$");
+        var delim = display ? "$$" : "$";
+        var start = i + delim.length;
+        var end = text.indexOf(delim, start);
+        while (end >= 0 && escapedAt(text, end)) end = text.indexOf(delim, end + delim.length);
+        if (end < 0) { i++; continue; }
+        if (i > last) parts.push({literal: text.slice(last, i)});
+        parts.push({tex: text.slice(start, end), display: display});
+        i = end + delim.length;
+        last = i;
+      } else { i++; }
+    }
+    if (!parts.length) { node.nodeValue = literalText(text); return; }
+    if (last < n) parts.push({literal: text.slice(last)});
+    var frag = document.createDocumentFragment();
+    for (var k = 0; k < parts.length; k++) {
+      var pt = parts[k];
+      if (pt.literal != null) {
+        frag.appendChild(document.createTextNode(literalText(pt.literal)));
+      } else {
+        var span = document.createElement("span");
+        try {
+          window.katex.render(pt.tex, span, {displayMode: pt.display, throwOnError: false});
+        } catch (e) {
+          span.textContent = (pt.display ? "$$" : "$") + pt.tex + (pt.display ? "$$" : "$");
+        }
+        frag.appendChild(span);
+      }
+    }
+    node.parentNode.replaceChild(frag, node);
+  }
+  function walk(el) {
+    if (el.nodeType === 1 && (SKIP[el.nodeName] || (el.classList && el.classList.contains("katex")))) return;
+    var child = el.firstChild;
+    while (child) {
+      var next = child.nextSibling;
+      if (child.nodeType === 3) processTextNode(child);
+      else if (child.nodeType === 1) walk(child);
+      child = next;
+    }
+  }
+  function renderMath() {
+    if (!window.katex || typeof window.katex.render !== "function") return false;
+    walk(document.body);
+    return true;
+  }
+  function waitAndRender() {
+    if (renderMath()) return;
+    var tries = 0;
+    var timer = setInterval(function () {
+      if (renderMath() || ++tries > 100) clearInterval(timer);
+    }, 50);
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", waitAndRender);
+  } else {
+    waitAndRender();
+  }
+})();
+</script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #222;
+    background: #f9f9f9;
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+nav.sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+nav.sidebar h2 {
+  font-size: 1.1rem;
+  color: #1a5276;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #1a5276;
+}
+nav.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+nav.sidebar li {
+  margin-bottom: 0.3rem;
+}
+nav.sidebar li.part {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #1a5276;
+}
+nav.sidebar a {
+  color: #444;
+  text-decoration: none;
+}
+nav.sidebar a:hover {
+  color: #1a5276;
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    background: #fff;
+}
+main h1 {
+  font-size: 1.8rem;
+  color: #1a5276;
+  margin: 2rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #eee;
+}
+main h1:first-child { border-top: none; padding-top: 0; }
+main h2 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 1.5rem 0 0.7rem;
+}
+main h3 {
+  font-size: 1.15rem;
+  color: #34495e;
+  margin: 1.2rem 0 0.5rem;
+}
+main p {
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+main img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+main pre {
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  padding: 0.9rem 1.1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 1rem 0;
+}
+main code {
+  font-family: 'Consolas', 'Courier New', monospace;
+  background: #f0f0f0;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+}
+main pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: pre;
+  overflow-wrap: normal;
+}
+main .table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+main table {
+  border-collapse: collapse;
+  margin: 1.5rem auto;
+  font-size: 0.9rem;
+  width: auto;
+}
+main th, main td {
+  padding: 0.45rem 1rem;
+  text-align: left;
+  border-left: none;
+  border-right: none;
+}
+main thead tr {
+  border-top: 2px solid #222;
+  border-bottom: 1px solid #222;
+}
+main tbody tr:last-child {
+  border-bottom: 2px solid #222;
+}
+main th {
+  font-weight: bold;
+  color: #1a1a1a;
+}
+main figure {
+    margin: 1.5rem auto;
+    text-align: center;
+}
+main figure.numbered-figure {
+    max-width: 82%;
+}
+main figure.numbered-figure img {
+    max-width: 100%;
+    max-height: 460px;
+    object-fit: contain;
+}
+main figcaption {
+  font-size: 0.88rem;
+  color: #444;
+  margin-top: 0.4rem;
+  font-style: italic;
+  text-align: center;
+}
+main .katex-display {
+  margin: 1.2rem 0;
+  font-size: 1.05em;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+main .katex-display > .katex {
+  text-align: left;
+}
+main :not(.katex-display) > .katex {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
+}
+main blockquote {
+  border-left: 4px solid #1a5276;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  color: #555;
+  background: #f9f9f9;
+}
+main ul, main ol {
+  margin: 0.5rem 0 0.5rem 1.5rem;
+  line-height: 1.7;
+}
+
+/* ── Professional frontmatter pages ── */
+
+.title-page {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  position: relative;
+  page-break-after: always;
+}
+.title-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #0d3b66, #1a5276, #2980b9, #1a5276, #0d3b66);
+}
+.title-page::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0d3b66, #1a5276, #2980b9, #1a5276, #0d3b66);
+}
+.title-page .tp-decoration {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+.title-page .tp-decoration svg {
+  width: 100%;
+  height: 100%;
+}
+.title-page .tp-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #0d3b66;
+  line-height: 1.25;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.02em;
+  max-width: 600px;
+}
+.title-page .tp-subtitle {
+  font-size: 1.15rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  line-height: 1.5;
+}
+.title-page .tp-rule {
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1a5276, transparent);
+  margin: 0 auto 2.5rem;
+}
+.title-page .tp-author {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 0.3rem;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+.title-page .tp-affiliation {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+.title-page .tp-edition {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.3rem;
+}
+.title-page .tp-year {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+.title-page .tp-publisher {
+  font-size: 1rem;
+  color: #444;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Image-cover variant: full-bleed front-cover artwork */
+.title-page.cover-image {
+  padding: 0;
+  background: #0d3b66;
+  min-height: 100vh;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.title-page.cover-image::before,
+.title-page.cover-image::after {
+  display: none;
+}
+.title-page.cover-image img.cover-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: contain;
+  margin: 0 auto;
+  background: #0d3b66;
+}
+.title-page.cover-image .cover-publisher {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #ffffff;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.book-cover-page {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0 -2.5rem;
+    width: calc(100% + 5rem);
+    background: #0d3b66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    page-break-after: always;
+    break-after: page;
+}
+.book-cover-page.back-cover {
+    page-break-before: always;
+    break-before: page;
+}
+main > .book-cover-page:first-child {
+    margin-top: -2rem;
+}
+main > .book-cover-page:last-child {
+    margin-bottom: -2rem;
+}
+.book-cover-page img.cover-art {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    background: #0d3b66;
+}
+
+.half-title-page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  page-break-after: always;
+}
+.half-title-page .htp-title {
+  font-size: 1.6rem;
+  color: #1a5276;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+}
+
+.toc-page {
+  padding: 2rem 0 1rem;
+  page-break-after: always;
+}
+.toc-page h1 {
+  font-size: 1.8rem;
+  color: #1a5276;
+  border-bottom: 2px solid #1a5276;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.2rem;
+}
+.toc-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.toc-list .toc-part {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #1a5276;
+  margin: 1.1rem 0 0.4rem;
+  font-size: 0.95rem;
+}
+.toc-list .toc-chapter {
+  margin: 0.25rem 0;
+}
+.toc-list .toc-chapter a {
+  display: flex;
+  align-items: baseline;
+  text-decoration: none;
+  color: #333;
+}
+.toc-list .toc-chapter a:hover {
+  color: #1a5276;
+}
+.toc-list .toc-num {
+  flex: 0 0 2.2rem;
+  font-weight: bold;
+  color: #1a5276;
+}
+.toc-list .toc-title {
+  flex: 1 1 auto;
+}
+
+.copyright-page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 3rem 4rem;
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.8;
+  page-break-after: always;
+}
+.copyright-page .cp-title {
+  font-weight: bold;
+  color: #222;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.copyright-page p {
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+.copyright-page .cp-isbn {
+  font-family: 'Consolas', monospace;
+  color: #444;
+}
+
+.dedication-page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 3rem;
+  page-break-after: always;
+}
+.dedication-page p {
+  font-style: italic;
+  color: #555;
+  font-size: 1.05rem;
+  max-width: 400px;
+  line-height: 1.8;
+}
+
+section.part-header {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  page-break-before: always;
+  page-break-after: always;
+  padding: 4rem 2rem;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 2rem 0;
+}
+section.part-header .part-eyebrow {
+  font-size: 0.85rem;
+  color: #1a5276;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+section.part-header h1 {
+  font-size: 2.1rem;
+  color: #0d3b66;
+  border-top: none;
+  padding-top: 0;
+  margin: 0;
+  letter-spacing: -0.01em;
+  max-width: 700px;
+  line-height: 1.25;
+}
+section.part-header h1::after {
+  content: '';
+  display: block;
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1a5276, transparent);
+  margin: 1.4rem auto 0;
+}
+
+/* ── Chapter opener (book-style chapter heading with hero illustration) ── */
+section.chapter > .chapter-opener {
+  margin: 2.5rem 0 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  page-break-before: always;
+}
+.chapter-opener .ch-eyebrow {
+  font-size: 0.8rem;
+  color: #1a5276;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+.chapter-opener .ch-number {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: #1a5276;
+  line-height: 1;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.04em;
+}
+.chapter-opener h1.ch-title {
+  font-size: 2rem;
+  color: #0d3b66;
+  border-top: none;
+  padding-top: 0;
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.chapter-opener .ch-rule {
+  width: 90px;
+  height: 2px;
+  background: #1a5276;
+  margin: 0.8rem 0 1.4rem;
+  border: none;
+}
+.chapter-opener figure.ch-hero {
+  margin: 1.5rem 0 0;
+  text-align: center;
+}
+.chapter-opener figure.ch-hero img {
+  max-width: 100%;
+  max-height: 360px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.chapter-opener figure.ch-hero figcaption {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+/* Drop cap on first paragraph after chapter opener */
+section.chapter > .chapter-opener + p::first-letter {
+  font-size: 3.2rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: bold;
+  color: #1a5276;
+  float: left;
+  line-height: 0.9;
+  margin: 0.15rem 0.5rem 0 0;
+}
+
+/* Inline lecture figures (auto-extracted from course slide decks) */
+figure.lecture-fig {
+  margin: 1.8rem auto;
+  padding: 0.9rem 1rem 0.7rem;
+  background: #fafbfc;
+    border: none;
+    border-radius: 4px;
+  max-width: 92%;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+figure.lecture-fig img {
+  display: block;
+  max-width: 100%;
+  max-height: 420px;
+  width: auto;
+  height: auto;
+  margin: 0 auto 0.5rem;
+  background: #fff;
+}
+figure.lecture-fig figcaption {
+  font-size: 0.86rem;
+  color: #444;
+  line-height: 1.45;
+  text-align: left;
+  padding: 0 0.2rem;
+}
+figure.lecture-fig figcaption strong {
+  color: #0d3b66;
+  margin-right: 0.3rem;
+}
+
+p.figure-discussion {
+    max-width: 92%;
+    margin: 1.2rem auto 0.35rem;
+    color: #2c3e50;
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+p.figure-discussion strong {
+    color: #0d3b66;
+}
+p.figure-discussion em {
+    color: #475569;
+}
+
+.figure-inset {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* Worked-example callout */
+.worked-example {
+  background: #f7faff;
+  border: 1px solid #d6e4f5;
+  border-left: 4px solid #1a5276;
+  border-radius: 0 6px 6px 0;
+  padding: 0.85rem 1.15rem 0.7rem;
+  margin: 1.4rem 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.worked-example h4 {
+  margin: 0 0 0.45rem 0;
+  font-size: 1.02rem;
+  color: #0d3b66;
+  border: none;
+  padding: 0;
+}
+.worked-example p {
+  margin: 0.35rem 0;
+  font-size: 0.95rem;
+}
+.worked-example .we-meta {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.45rem;
+}
+.worked-example .we-meta code {
+  background: #eaf1fb;
+  padding: 0.05rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    nav.sidebar { display: none; }
+    main { padding: 1rem; }
+    main figure.numbered-figure { max-width: 100%; }
+    .book-cover-page { margin-left: -1rem; margin-right: -1rem; width: calc(100% + 2rem); }
+    .title-page .tp-title { font-size: 1.6rem; }
+    .title-page .tp-decoration { width: 100px; height: 100px; }
+}
+
+@media print {
+  nav.sidebar { display: none; }
+  body { background: #fff; }
+  main { max-width: 100%; padding: 0; }
+  .title-page { min-height: auto; padding: 8rem 2rem; }
+  .title-page::before, .title-page::after { display: none; }
+    .book-cover-page { min-height: 100vh; }
+    .book-cover-page img.cover-art { max-height: 100vh; }
+}
+</style>
+</head>
+
+<body>
+<nav class="sidebar">
+<h2>Renderer Verification</h2>
+<ul>
+<li class="part">Methods</li>
+<li><a href="#chapter-1">1. Alpha</a></li>
+<li><a href="#chapter-2">2. Beta</a></li>
+<li><a href="#glossary">Glossary</a></li>
+</ul>
+</nav>
+<main>
+<section class="half-title-page"><div class="htp-title">Renderer Verification</div></section>
+<section id="title_page" class="title-page">
+<div class="tp-decoration"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d3b66;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#2980b9;stop-opacity:1"></stop></linearGradient><linearGradient id="g2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#2980b9;stop-opacity:0.3"></stop><stop offset="100%" style="stop-color:#0d3b66;stop-opacity:0.3"></stop></linearGradient></defs><circle cx="60" cy="60" r="56" fill="none" stroke="url(#g1)" stroke-width="3"></circle><circle cx="60" cy="60" r="48" fill="none" stroke="#1a5276" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.3"></circle><circle cx="60" cy="60" r="47" fill="url(#g2)"></circle><line x1="60" y1="30" x2="60" y2="60" stroke="#1a5276" stroke-width="2.2"></line><line x1="34" y1="75" x2="60" y2="60" stroke="#1a5276" stroke-width="2.2"></line><line x1="86" y1="75" x2="60" y2="60" stroke="#1a5276" stroke-width="2.2"></line><line x1="60" y1="30" x2="34" y2="75" stroke="#0d3b66" stroke-width="1.2" opacity="0.35"></line><line x1="60" y1="30" x2="86" y2="75" stroke="#0d3b66" stroke-width="1.2" opacity="0.35"></line><line x1="34" y1="75" x2="86" y2="75" stroke="#0d3b66" stroke-width="1.2" opacity="0.35"></line><circle cx="60" cy="18" r="2" fill="#2980b9" opacity="0.5"></circle><circle cx="24" cy="80" r="2" fill="#2980b9" opacity="0.5"></circle><circle cx="96" cy="80" r="2" fill="#2980b9" opacity="0.5"></circle><circle cx="95" cy="38" r="2" fill="#0d3b66" opacity="0.4"></circle><circle cx="25" cy="38" r="2" fill="#0d3b66" opacity="0.4"></circle><circle cx="60" cy="60" r="10" fill="#1a5276"></circle><circle cx="60" cy="60" r="6" fill="#fff" opacity="0.15"></circle><circle cx="60" cy="30" r="7" fill="#0d3b66"></circle><circle cx="34" cy="75" r="7" fill="#2980b9"></circle><circle cx="86" cy="75" r="7" fill="#2980b9"></circle><circle cx="58" cy="28" r="2" fill="#fff" opacity="0.25"></circle><circle cx="32" cy="73" r="2" fill="#fff" opacity="0.25"></circle><circle cx="84" cy="73" r="2" fill="#fff" opacity="0.25"></circle><circle cx="47" cy="45" r="3" fill="#2980b9" opacity="0.55"></circle><circle cx="73" cy="45" r="3" fill="#2980b9" opacity="0.55"></circle><circle cx="47" cy="68" r="3" fill="#0d3b66" opacity="0.55"></circle><circle cx="73" cy="68" r="3" fill="#0d3b66" opacity="0.55"></circle></svg></div>
+<div class="tp-title">Renderer Verification</div>
+<div class="tp-rule"></div>
+<div class="tp-author">Test Author</div>
+<div class="tp-year">2026</div>
+<div class="tp-publisher">self</div>
+</section>
+<section id="copyright" class="copyright-page">
+<div>
+<p class="cp-title">Renderer Verification</p>
+<div class="cp-custom"><h1 id="rights">Rights</h1>
+<p>CUSTOM_RIGHTS_MARKER. All rights reserved.</p></div>
+<p>Published by Self</p>
+<p style="margin-top: 1.5rem; font-size: 0.8rem; color: #999;">Typeset using NeqSim PaperLab</p>
+</div>
+</section>
+<section id="preface">
+<h1 id="preface-2">Preface</h1>
+<p>PREFACE_MARKER explains the book.</p>
+</section>
+<hr>
+<section id="toc" class="toc-page">
+<h1>Contents</h1>
+<ul class="toc-list">
+<li class="toc-part">Methods</li>
+<li class="toc-chapter"><a href="#chapter-1"><span class="toc-num">1</span><span class="toc-title">Alpha</span></a></li>
+<li class="toc-chapter"><a href="#chapter-2"><span class="toc-num">2</span><span class="toc-title">Beta</span></a></li>
+<li class="toc-chapter"><a href="#glossary"><span class="toc-title">Glossary</span></a></li>
+</ul>
+</section>
+<hr>
+<section class="part-header"><h1>Methods</h1></section>
+<section class="chapter" id="chapter-1">
+<div class="chapter-opener"><div class="ch-eyebrow">Chapter</div><div class="ch-number">1</div><h1 class="ch-title">Alpha</h1><hr class="ch-rule"></div>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>Explain the workflow.</p>
+<h2 id="1-1-introduction">1.1 Introduction</h2>
+<p>The introductory section has its intended number.</p>
+<p><strong>Integration pattern prerequisites:</strong> requires caller-supplied historian data</p>
+<pre><code class="language-python">
+# PATTERN_COMMENT_NOT_A_CHAPTER
+measurement = historian.read("pressure")
+</code></pre>
+<figure><img src="figures_ch01/workflow.svg" alt="A workflow.">
+<figcaption>Figure 1.1: A workflow.</figcaption>
+</figure>
+<div class="math-display"><span><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>p</mi><mo>=</mo><mi>ρ</mi><mi>R</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">p = \rho R T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.8778em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.1389em;">ρRT</span></span></span></span></span></span></div>
+<h2 id="summary">Summary</h2>
+<p>The chapter ends here.</p>
+</section>
+<section class="chapter" id="chapter-2">
+<div class="chapter-opener"><div class="ch-eyebrow">Chapter</div><div class="ch-number">2</div><h1 class="ch-title">Beta</h1><hr class="ch-rule"></div>
+<h2 id="learning-objectives-2">Learning Objectives</h2>
+<p>Explain the workflow.</p>
+<h2 id="2-1-introduction">2.1 Introduction</h2>
+<p>The introductory section has its intended number.</p>
+<p><strong>Integration pattern prerequisites:</strong> requires caller-supplied historian data</p>
+<pre><code class="language-python">
+# PATTERN_COMMENT_NOT_A_CHAPTER
+measurement = historian.read("pressure")
+</code></pre>
+<figure><img src="figures_ch02/workflow.svg" alt="A workflow.">
+<figcaption>Figure 2.1: A workflow.</figcaption>
+</figure>
+<div class="math-display"><span><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>p</mi><mo>=</mo><mi>ρ</mi><mi>R</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">p = \rho R T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.8778em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.1389em;">ρRT</span></span></span></span></span></span></div>
+<h2 id="summary-2">Summary</h2>
+<p>The chapter ends here.</p>
+</section>
+<section id="glossary">
+<h1 id="glossary-2">Glossary</h1>
+<p>GLOSSARY_MARKER: a checked definition.</p>
+</section>
+</main>
+
+<script>
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    const width = window.innerWidth;
+    const out = [];
+    for (const el of document.querySelectorAll('main *')) {
+      if (el.closest('script, style, .katex-mathml')) continue;
+      // KaTeX SVG paths extend beyond their clipped SVG viewport by design.
+      // The surrounding visible math boxes are still measured below.
+      if (el instanceof SVGElement) continue;
+      const cs = getComputedStyle(el);
+      if (cs.display === 'none' || cs.visibility === 'hidden') continue;
+      const r = el.getBoundingClientRect();
+      if (r.width < 1 || r.height < 1) continue;
+      let scrollAncestor = null;
+      for (let p = el.parentElement; p && p.tagName !== 'MAIN'; p = p.parentElement) {
+        if (['auto', 'scroll'].includes(getComputedStyle(p).overflowX)) {
+          scrollAncestor = p; break;
+        }
+      }
+      if (!scrollAncestor && (r.left < -1 || r.right > width + 1)) {
+        out.push({tag:el.tagName, id:el.id, class:el.className,
+          left:r.left, right:r.right, text:el.textContent.trim().slice(0,140)});
+      }
+    }
+    const missingImages = [...document.images]
+      .filter(el => !el.complete || !el.naturalWidth).map(el => el.getAttribute('src'));
+    const data = {width, viewportHeight:window.innerHeight,
+      bodyScrollWidth:document.body.scrollWidth,
+      documentScrollWidth:document.documentElement.scrollWidth,
+      mainWidth:document.querySelector('main').getBoundingClientRect().width,
+      sidebarDisplay:getComputedStyle(document.querySelector('nav.sidebar')).display,
+      overflow:out, missingImages,
+      katexAvailable:!!window.katex,
+      renderedMathCount:document.querySelectorAll('.katex').length,
+      katexErrors:[...document.querySelectorAll('.katex-error')].map(el=>el.textContent)};
+    const report = document.createElement('script');
+    report.type = 'application/json'; report.id = 'renderer-measurements';
+    report.textContent = JSON.stringify(data); document.body.appendChild(report);
+  }, 1000);
+});
+</script>
+
+<script type="application/json" id="renderer-measurements">{"width":500,"viewportHeight":768,"bodyScrollWidth":500,"documentScrollWidth":500,"mainWidth":500,"sidebarDisplay":"none","overflow":[],"missingImages":[],"katexAvailable":true,"renderedMathCount":2,"katexErrors":[]}</script></body></html>

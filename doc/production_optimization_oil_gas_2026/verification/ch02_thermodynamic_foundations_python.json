@@ -1,0 +1,96 @@
+{
+  "chapter": "ch02_thermodynamic_foundations",
+  "source_sha256": "8e292f626afb243ea9e3f861cd62af49e06f2ae275880f1b302673d381b75994",
+  "project_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "blocks": [
+    {
+      "index": 1,
+      "line": 240,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# SRK with classical mixing rules\nfluid_srk = jneqsim.thermo.system.SystemSrkEos(273.15 + 60.0, 100.0)\nfluid_srk.addComponent(\"methane\", 0.80)\nfluid_srk.addComponent(\"ethane\", 0.10)\nfluid_srk.addComponent(\"propane\", 0.05)\nfluid_srk.addComponent(\"n-butane\", 0.03)\nfluid_srk.addComponent(\"CO2\", 0.02)\nfluid_srk.setMixingRule(\"classic\")\n\n# CPA with specialized mixing rules for water-containing systems\nfluid_cpa = jneqsim.thermo.system.SystemSrkCPAstatoil(273.15 + 60.0, 100.0)\nfluid_cpa.addComponent(\"methane\", 0.80)\nfluid_cpa.addComponent(\"water\", 0.15)\nfluid_cpa.addComponent(\"MEG\", 0.05)\nfluid_cpa.setMixingRule(10)  # CPA mixing rule\n",
+      "seconds": 7.859,
+      "output": ""
+    },
+    {
+      "index": 2,
+      "line": 482,
+      "status": "pass",
+      "code": "# Enable multi-phase checking for water-containing systems\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 60.0, 50.0)\nfluid.addComponent(\"methane\", 0.70)\nfluid.addComponent(\"ethane\", 0.08)\nfluid.addComponent(\"propane\", 0.04)\nfluid.addComponent(\"n-heptane\", 0.10)\nfluid.addComponent(\"water\", 0.08)\nfluid.setMixingRule(\"classic\")\nfluid.setMultiPhaseCheck(True)\n",
+      "seconds": 0.125,
+      "output": ""
+    },
+    {
+      "index": 3,
+      "line": 508,
+      "status": "pass",
+      "code": "# Hydrate equilibrium temperature at a given pressure\nfluid_hyd = jneqsim.thermo.system.SystemSrkCPAstatoil(273.15 + 5.0, 100.0)\nfluid_hyd.addComponent(\"methane\", 0.85)\nfluid_hyd.addComponent(\"ethane\", 0.08)\nfluid_hyd.addComponent(\"propane\", 0.04)\nfluid_hyd.addComponent(\"CO2\", 0.03)\nfluid_hyd.addComponent(\"water\", 0.10)\nfluid_hyd.setMixingRule(10)\nfluid_hyd.setHydrateCheck(True)\n\nops_hyd = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid_hyd)\nops_hyd.hydrateFormationTemperature()\nprint(f\"Hydrate equilibrium T at 100 bara: {fluid_hyd.getTemperature('C'):.1f} C\")\n",
+      "seconds": 1.812,
+      "output": "Hydrate equilibrium T at 100 bara: 20.8 C\n"
+    },
+    {
+      "index": 4,
+      "line": 549,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Define composition (mole fractions)\ncomponents = [\n    (\"nitrogen\", 0.5),\n    (\"CO2\", 2.5),\n    (\"methane\", 75.0),\n    (\"ethane\", 7.0),\n    (\"propane\", 4.0),\n    (\"i-butane\", 1.0),\n    (\"n-butane\", 2.0),\n    (\"i-pentane\", 0.8),\n    (\"n-pentane\", 0.7),\n    (\"n-hexane\", 0.5),\n    (\"n-heptane\", 3.0),\n    (\"n-octane\", 2.0),\n    (\"n-nonane\", 1.0),\n]\n\n# Temperature and pressure\nT_K = 273.15 + 80.0  # 80\u00b0C in Kelvin\nP_bara = 150.0\n\n# SRK equation of state\nfluid_srk = jneqsim.thermo.system.SystemSrkEos(T_K, P_bara)\nfor name, moles in components:\n    fluid_srk.addComponent(name, moles)\nfluid_srk.setMixingRule(\"classic\")\n\n# Peng-Robinson equation of state\nfluid_pr = jneqsim.thermo.system.SystemPrEos(T_K, P_bara)\nfor name, moles in components:\n    fluid_pr.addComponent(name, moles)\nfluid_pr.setMixingRule(\"classic\")\n\n# Run TP flash for both\nThermodynamicOperations = jneqsim.thermodynamicoperations.ThermodynamicOperations\n\nops_srk = ThermodynamicOperations(fluid_srk)\nops_srk.TPflash()\nfluid_srk.initProperties()\n\nops_pr = ThermodynamicOperations(fluid_pr)\nops_pr.TPflash()\nfluid_pr.initProperties()\n\n# Compare densities\nprint(f\"SRK liquid density: {fluid_srk.getPhase('oil').getDensity('kg/m3'):.1f} kg/m3\")\nprint(f\"PR  liquid density: {fluid_pr.getPhase('oil').getDensity('kg/m3'):.1f} kg/m3\")\nprint(f\"SRK gas density:    {fluid_srk.getPhase('gas').getDensity('kg/m3'):.1f} kg/m3\")\nprint(f\"PR  gas density:    {fluid_pr.getPhase('gas').getDensity('kg/m3'):.1f} kg/m3\")\n",
+      "seconds": 0.547,
+      "output": "SRK liquid density: 471.1 kg/m3\nPR  liquid density: 463.6 kg/m3\nSRK gas density:    142.6 kg/m3\nPR  gas density:    149.6 kg/m3\n"
+    },
+    {
+      "index": 5,
+      "line": 608,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Create fluid\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 80.0, 100.0)\nfluid.addComponent(\"methane\", 0.85)\nfluid.addComponent(\"ethane\", 0.08)\nfluid.addComponent(\"propane\", 0.04)\nfluid.addComponent(\"n-heptane\", 0.03)\nfluid.setMixingRule(\"classic\")\n\nops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)\n\n# --- TP Flash ---\nops.TPflash()\nfluid.initProperties()\nprint(f\"TP Flash: T = {fluid.getTemperature('C'):.1f} C, P = {fluid.getPressure('bara'):.1f} bara\")\nprint(f\"  Vapor fraction: {fluid.getBeta():.4f}\")\nprint(f\"  Gas density: {fluid.getPhase('gas').getDensity('kg/m3'):.2f} kg/m3\")\n\n# Store the enthalpy for PH flash verification\nH_total = fluid.getEnthalpy(\"J\")\nS_total = fluid.getEntropy(\"J/K\")\n\n# --- PH Flash ---\n# Reduce pressure to 50 bara (e.g., across a valve), keep same enthalpy\nfluid_ph = fluid.clone()\nfluid_ph.setPressure(50.0, \"bara\")\nops_ph = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid_ph)\nops_ph.PHflash(H_total)\nfluid_ph.initProperties()\nprint(f\"\\nPH Flash (isenthalpic expansion to 50 bara):\")\nprint(f\"  Temperature: {fluid_ph.getTemperature('C'):.1f} C\")\nprint(f\"  Vapor fraction: {fluid_ph.getBeta():.4f}\")\n\n# --- PS Flash ---\n# Isentropic compression to 200 bara\nfluid_ps = fluid.clone()\nfluid_ps.setPressure(200.0, \"bara\")\nops_ps = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid_ps)\nops_ps.PSflash(S_total)\nfluid_ps.initProperties()\nprint(f\"\\nPS Flash (isentropic compression to 200 bara):\")\nprint(f\"  Temperature: {fluid_ps.getTemperature('C'):.1f} C\")\n\n# --- Bubble Point ---\nfluid_bp = fluid.clone()\nops_bp = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid_bp)\nops_bp.bubblePointPressureFlash(False)\nprint(f\"\\nBubble point pressure at {fluid_bp.getTemperature('C'):.1f} C: \"\n      f\"{fluid_bp.getPressure('bara'):.1f} bara\")\n\n# --- Dew Point ---\nfluid_dp = fluid.clone()\nops_dp = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid_dp)\nops_dp.dewPointPressureFlash()\nprint(f\"Dew point pressure at {fluid_dp.getTemperature('C'):.1f} C: \"\n      f\"{fluid_dp.getPressure('bara'):.1f} bara\")\n",
+      "seconds": 0.156,
+      "output": "TP Flash: T = 80.0 C, P = 100.0 bara\n  Vapor fraction: 0.9928\n  Gas density: 79.75 kg/m3\n\nPH Flash (isenthalpic expansion to 50 bara):\n  Temperature: 67.5 C\n  Vapor fraction: 0.9805\n\nPS Flash (isentropic compression to 200 bara):\n  Temperature: 130.7 C\n\nBubble point pressure at 80.0 C: 99.4 bara\nDew point pressure at 80.0 C: 29.3 bara\n"
+    },
+    {
+      "index": 6,
+      "line": 673,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 20.0, 50.0)\nfluid.addComponent(\"methane\", 0.80)\nfluid.addComponent(\"ethane\", 0.08)\nfluid.addComponent(\"propane\", 0.05)\nfluid.addComponent(\"n-butane\", 0.03)\nfluid.addComponent(\"n-pentane\", 0.02)\nfluid.addComponent(\"n-heptane\", 0.02)\nfluid.setMixingRule(\"classic\")\n\nops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)\nops.calcPTphaseEnvelope()\n\n# Extract data for plotting\ntemperatures = [t for t in ops.getOperation().get(\"dewT\")]\npressures = [p for p in ops.getOperation().get(\"dewP\")]\nbubble_temps = [t for t in ops.getOperation().get(\"bubT\")]\nbubble_pressures = [p for p in ops.getOperation().get(\"bubP\")]\ncricondenbar_T = ops.getOperation().get(\"cricondenbar\")[0]\ncricondenbar_P = ops.getOperation().get(\"cricondenbar\")[1]\n",
+      "seconds": 0.187,
+      "output": ""
+    },
+    {
+      "index": 7,
+      "line": 719,
+      "status": "pass",
+      "code": "# CORRECT pattern:\nops.TPflash()\nfluid.initProperties()  # MANDATORY\nviscosity = fluid.getPhase(\"gas\").getViscosity(\"kg/msec\")  # Now correct\n\n# UNSAFE pattern (properties may be stale or uninitialized):\nops.TPflash()\n# Missing initProperties()!\nviscosity = fluid.getPhase(\"gas\").getViscosity(\"kg/msec\")  # A getter value alone does not prove initialization\n",
+      "seconds": 0.687,
+      "output": ""
+    },
+    {
+      "index": 8,
+      "line": 735,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\n\n# Create and flash a fluid\nfluid = jneqsim.thermo.system.SystemSrkEos(273.15 + 60.0, 80.0)\nfluid.addComponent(\"methane\", 0.80)\nfluid.addComponent(\"ethane\", 0.10)\nfluid.addComponent(\"propane\", 0.05)\nfluid.addComponent(\"n-heptane\", 0.05)\nfluid.setMixingRule(\"classic\")\n\nops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)\nops.TPflash()\nfluid.initProperties()\n\n# --- Overall properties ---\nprint(f\"Temperature: {fluid.getTemperature('C'):.2f} C\")\nprint(f\"Pressure: {fluid.getPressure('bara'):.2f} bara\")\nprint(f\"Vapor fraction (molar): {fluid.getBeta():.4f}\")\nprint(f\"Number of phases: {fluid.getNumberOfPhases()}\")\n\n# --- Gas phase properties ---\ngas = fluid.getPhase(\"gas\")\nprint(f\"\\nGas phase:\")\nprint(f\"  Density: {gas.getDensity('kg/m3'):.3f} kg/m3\")\nprint(f\"  Molar mass: {gas.getMolarMass('kg/mol') * 1000:.2f} g/mol\")\nprint(f\"  Z-factor: {gas.getZ():.4f}\")\nprint(f\"  Enthalpy: {gas.getEnthalpy('J/mol'):.1f} J/mol\")\nprint(f\"  Entropy: {gas.getEntropy('J/molK'):.3f} J/(mol\u00b7K)\")\nprint(f\"  Cp: {gas.getCp('J/molK'):.3f} J/(mol\u00b7K)\")\nprint(f\"  Cv: {gas.getCv('J/molK'):.3f} J/(mol\u00b7K)\")\nprint(f\"  Cp/Cv ratio: {gas.getGamma():.4f}\")\nprint(f\"  Speed of sound: {gas.getSoundSpeed():.1f} m/s\")\nprint(f\"  Viscosity: {gas.getViscosity('kg/msec'):.6f} Pa\u00b7s\")\nprint(f\"  Thermal conductivity: {gas.getThermalConductivity('W/mK'):.5f} W/(m\u00b7K)\")\nprint(f\"  JT coefficient: {gas.getJouleThomsonCoefficient('K/bar'):.4f} C/bara\")\n\n# --- Liquid phase properties ---\nif fluid.getNumberOfPhases() > 1:\n    oil = fluid.getPhase(\"oil\")\n    print(f\"\\nOil phase:\")\n    print(f\"  Density: {oil.getDensity('kg/m3'):.1f} kg/m3\")\n    print(f\"  Viscosity: {oil.getViscosity('kg/msec'):.6f} Pa\u00b7s\")\n    print(f\"  Thermal conductivity: {oil.getThermalConductivity('W/mK'):.5f} W/(m\u00b7K)\")\n    print(f\"  Surface tension: {fluid.getInterphaseProperties().getSurfaceTension(0, 1):.6f} N/m\")\n",
+      "seconds": 0.079,
+      "output": "Temperature: 60.00 C\nPressure: 80.00 bara\nVapor fraction (molar): 0.9310\nNumber of phases: 2\n\nGas phase:\n  Density: 66.430 kg/m3\n  Molar mass: 19.95 g/mol\n  Z-factor: 0.8712\n  Enthalpy: 809.9 J/mol\n  Entropy: -27.137 J/(mol\u00b7K)\n  Cp: 54.960 J/(mol\u00b7K)\n  Cv: 36.457 J/(mol\u00b7K)\n  Cp/Cv ratio: 1.5075\n  Speed of sound: 405.6 m/s\n  Viscosity: 0.000014 Pa\u00b7s\n  Thermal conductivity: 0.04424 W/(m\u00b7K)\n  JT coefficient: 0.3749 C/bara\n\nOil phase:\n  Density: 557.5 kg/m3\n  Viscosity: 0.000153 Pa\u00b7s\n  Thermal conductivity: 0.09295 W/(m\u00b7K)\n  Surface tension: 0.005473 N/m\n"
+    },
+    {
+      "index": 9,
+      "line": 916,
+      "status": "pass",
+      "code": "# Mole fractions in gas phase\ngas = fluid.getPhase(\"gas\")\nfor i in range(gas.getNumberOfComponents()):\n    comp = gas.getComponent(i)\n    print(f\"  {comp.getComponentName():15s}: x = {comp.getx():.6f}, \"\n          f\"K = {comp.getK():.4f}, \"\n          f\"fugacity coeff = {comp.getFugacityCoefficient():.6f}\")\n",
+      "seconds": 0.031,
+      "output": "  methane        : x = 0.839250, K = 3.0993, fugacity coeff = 0.935538\n  ethane         : x = 0.100098, K = 1.0144, fugacity coeff = 0.694518\n  propane        : x = 0.046435, K = 0.4735, fugacity coeff = 0.549280\n  n-heptane      : x = 0.014217, K = 0.0267, fugacity coeff = 0.222793\n"
+    },
+    {
+      "index": 10,
+      "line": 930,
+      "status": "pass",
+      "code": "# Flash with SRK, then evaluate single-phase gas density with Java GERG-2008.\n# The legacy SystemGERG2004Eos requires a separate native library.\nfluid_gerg = jneqsim.thermo.system.SystemSrkEos(273.15 + 15.0, 50.0)\nfluid_gerg.addComponent(\"methane\", 0.90)\nfluid_gerg.addComponent(\"ethane\", 0.05)\nfluid_gerg.addComponent(\"propane\", 0.02)\nfluid_gerg.addComponent(\"nitrogen\", 0.02)\nfluid_gerg.addComponent(\"CO2\", 0.01)\nfluid_gerg.setMixingRule(\"classic\")\n\nops_gerg = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid_gerg)\nops_gerg.TPflash()\nfluid_gerg.initProperties()\n\nprint(f\"GERG-2008 gas density at 15\u00b0C, 50 bara: \"\n      f\"{fluid_gerg.getPhase('gas').getDensity_GERG2008():.4f} kg/m3\")\n",
+      "seconds": 0.062,
+      "output": "GERG-2008 gas density at 15\u00b0C, 50 bara: 41.9865 kg/m3\n"
+    },
+    {
+      "index": 11,
+      "line": 1018,
+      "status": "pass",
+      "code": "import jpype\njneqsim = jpype.JPackage(\"neqsim\")\nimport json\n\n# North Sea gas condensate composition\ncomposition = {\n    \"nitrogen\": 0.4,\n    \"CO2\": 3.4,\n    \"methane\": 74.2,\n    \"ethane\": 7.8,\n    \"propane\": 3.5,\n    \"i-butane\": 0.7,\n    \"n-butane\": 1.3,\n    \"i-pentane\": 0.5,\n    \"n-pentane\": 0.4,\n    \"n-hexane\": 0.3,\n    \"n-heptane\": 2.5,\n    \"n-octane\": 2.0,\n    \"n-nonane\": 1.5,\n    \"n-decane\": 1.0,\n    \"water\": 0.5,\n}\n\nresults = {}\nfor eos_name, eos_class in [\n    (\"SRK\", jneqsim.thermo.system.SystemSrkEos),\n    (\"PR\", jneqsim.thermo.system.SystemPrEos),\n]:\n    fluid = eos_class(273.15 + 100.0, 200.0)\n    for comp, frac in composition.items():\n        fluid.addComponent(comp, frac)\n    fluid.setMixingRule(\"classic\")\n    fluid.setMultiPhaseCheck(True)\n\n    ops = jneqsim.thermodynamicoperations.ThermodynamicOperations(fluid)\n    ops.TPflash()\n    fluid.initProperties()\n\n    results[eos_name] = {\n        \"vapor_fraction\": fluid.getBeta(),\n        \"gas_density_kg_m3\": fluid.getPhase(\"gas\").getDensity(\"kg/m3\"),\n        \"gas_Z\": fluid.getPhase(\"gas\").getZ(),\n        \"gas_viscosity_cP\": fluid.getPhase(\"gas\").getViscosity(\"kg/msec\") * 1000,\n    }\n\n    if fluid.getNumberOfPhases() > 1:\n        results[eos_name][\"oil_density_kg_m3\"] = fluid.getPhase(\"oil\").getDensity(\"kg/m3\")\n        results[eos_name][\"oil_viscosity_cP\"] = fluid.getPhase(\"oil\").getViscosity(\"kg/msec\") * 1000\n\nprint(json.dumps(results, indent=2))\n",
+      "seconds": 0.391,
+      "output": "{\n  \"SRK\": {\n    \"vapor_fraction\": 0.8831329435644413,\n    \"gas_density_kg_m3\": 191.61721318408777,\n    \"gas_Z\": 0.8627304635592008,\n    \"gas_viscosity_cP\": 0.023548066807390872,\n    \"oil_density_kg_m3\": 431.2694107809412,\n    \"oil_viscosity_cP\": 0.07303538259309203\n  },\n  \"PR\": {\n    \"vapor_fraction\": 0.9266748653045862,\n    \"gas_density_kg_m3\": 204.39210544977186,\n    \"gas_Z\": 0.7972990873323468,\n    \"gas_viscosity_cP\": 0.02464646699927732,\n    \"oil_density_kg_m3\": 422.14703326840373,\n    \"oil_viscosity_cP\": 0.07075149374065397\n  }\n}\n"
+    }
+  ]
+}

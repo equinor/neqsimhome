@@ -1,0 +1,116 @@
+[
+  {
+    "before": "Chapters 25 through 27",
+    "after": "Chapters 22 through 26"
+  },
+  {
+    "before": "Sections 28.",
+    "after": "Sections 27."
+  },
+  {
+    "before": "and 28.",
+    "after": "and 27."
+  },
+  {
+    "before": "through 28.",
+    "after": "through 27."
+  },
+  {
+    "before": "The practical motivation is compelling. Consider a gas field development decision where the key uncertainties are gas-initially-in-place (GIP), gas price, and facility CAPEX. A deterministic analysis using \"best estimate\" values might yield a healthy NPV of 3,000 MNOK. But a Monte Carlo analysis sampling all three uncertainties reveals that the NPV distribution has a 15% probability of being negative — a risk that never appears in the deterministic calculation. Moreover, the tornado analysis shows that gas price has twice the impact of GIP on NPV, redirecting the risk mitigation strategy from appraisal wells to hedging contracts.",
+    "after": "A deterministic base case cannot establish the probability of negative NPV or the value of more information. Those claims require declared joint input distributions, physically consistent production profiles, cash-flow timing and explicit sampling error. Section 27.11 supplies a reproducible reservoir-tank example instead of assuming a risk percentage or sensitivity ranking."
+  },
+  {
+    "before": "Typical Range | Impact on Production",
+    "after": "Illustrative range requiring calibration | Impact on Production"
+  },
+  {
+    "before": "Compressor efficiency decline | 2–5% per year",
+    "after": "Compressor efficiency decline | Service-specific; no annual rate established here"
+  },
+  {
+    "before": "the decision $x$ must be feasible regardless of which future materializes.",
+    "after": "the same decision $x$ must satisfy every included scenario. This is not a guarantee for unrepresented futures or the entire continuous uncertainty set."
+  },
+  {
+    "before": "In oil and gas, where investments are large and irreversible, risk neutrality is rarely appropriate.",
+    "after": "Risk attitude is a declared decision preference; project size and irreversibility alone do not determine it."
+  },
+  {
+    "before": "where $\\alpha$ is the confidence level (typically 0.05 or 0.10).",
+    "after": "Here $\\alpha$ is a lower-tail probability, such as 0.05, rather than the usual upper-tail loss confidence of 0.95. The conditional-mean notation applies to continuous distributions; for atoms use the threshold formulation in Chapter 22."
+  },
+  {
+    "before": "A `ScenarioRequest` encapsulates a named scenario with its own process system, feed stream, optimization configuration, and probability weight.",
+    "after": "A `ScenarioRequest` encapsulates a named scenario with its own process system, feed stream and optimization configuration. Keep probability weights explicitly in the application-level decision analysis."
+  },
+  {
+    "before": "where $f_s^*$ is the optimal objective value for scenario $s$. The variance of performance provides a measure of robustness:",
+    "after": "Here each $f_s^*$ uses a separately optimized decision. Its weighted mean is a wait-and-see (perfect-information/adaptive) value, not the achievable expected value of one here-and-now decision. To evaluate one decision $x$, use $f(x,\\xi_s)$ in every term. The corresponding variance summarizes spread:"
+  },
+  {
+    "before": "The multi-scenario VFP tables ensure that the coupling is valid across the full range of uncertain parameters, not just the base case.",
+    "after": "Qualified tables support interpolation only inside their tested axes and physical validity range. Additional scenarios alone do not validate extrapolation, well hydraulics or convergence of the coupling."
+  },
+  {
+    "before": "This guarantees that the marginal distribution of each parameter is uniformly sampled, even for moderate $N$.",
+    "after": "This stratifies each marginal probability scale, not necessarily the physical value scale. Apply inverse marginal CDFs and a justified dependence model; random pairing represents independent inputs."
+  },
+  {
+    "before": "The improvement in efficiency is significant. For a 5-parameter problem, LHS with $N = 200$ samples typically provides comparable accuracy to simple random sampling with $N = 1000$ — a fivefold reduction in computational cost.",
+    "after": "The benefit of LHS depends on the response and dependence structure. There is no general fivefold sample reduction, particularly for rare events, discontinuities or tail quantiles. Compare independent replicated designs at the required precision \\cite{jcgm101mc}."
+  },
+  {
+    "topic": "Replaced unsupported MC sample-size guarantee with mean/quantile uncertainty and percentile conventions"
+  },
+  {
+    "before": "The total swing $|\\Delta f_j^{+}| + |\\Delta f_j^{-}|$ measures the overall sensitivity to parameter $j$.",
+    "after": "Use the range of the low/base/high responses to describe an OAT swing. Summing absolute endpoint deviations overstates the range when both endpoints lie on the same side of the base. OAT does not quantify interactions or global variance contributions."
+  },
+  {
+    "before": "If gas price has the largest impact on NPV, hedging contracts are more valuable than appraisal wells.",
+    "after": "A large price sensitivity does not prove that hedging is more valuable than appraisal; compare feasible mitigation costs, residual risk and the value of information."
+  },
+  {
+    "before": "where $k = 1.5$–$2.0$ for typical industrial applications, corresponding to approximately 90–95% confidence that the constraint will not be violated.",
+    "after": "A mean-plus-$k\\sigma$ rule is a distributional chance-constraint approximation, not robust feasibility over a bounded set. Under a known Gaussian model, one-sided coverage is $\\Phi(k)$: about 93.3% at 1.5 and 97.7% at 2.0. Non-Gaussian tails, uncertain moments and multiple constraints require separate treatment."
+  },
+  {
+    "before": "The NeqSim constraint framework (Chapter 25) supports this through the `SOFT` constraint type, which applies a penalty rather than a hard cutoff. By increasing the penalty weight, the optimizer is incentivized to maintain a margin from the constraint boundary.",
+    "after": "Enforce the chosen limits explicitly in every required NeqSim scenario. A `SOFT` penalty can influence the objective but does not establish robust feasibility or a minimum safety margin."
+  },
+  {
+    "before": "the direct implementation of the robust formulation above.",
+    "after": "a finite-scenario selection rule whose returned decision still needs independent replay, coverage checks and an explicit percentile convention. A sampled feasible fraction is not a confidence bound."
+  },
+  {
+    "before": "Because each case is independent, the speed-up is near-linear in the number of cores.",
+    "after": "Concurrency performance depends on JVM memory, model cost, shared resources and worker count; benchmark a sequential reference before claiming speed-up."
+  },
+  {
+    "before": "The optimal design is typically larger than the deterministic optimum for the base case, because the upside from capturing high-demand production outweighs the downside of higher CAPEX.",
+    "after": "Whether the stochastic design is larger or smaller than a base-case design depends on the scenario distribution, costs and recourse options; no universal direction follows."
+  },
+  {
+    "before": "The value of the second-stage decisions — the ability to adapt operations to observed conditions — is called the **value of recourse**. It can be quantified as the difference between the stochastic program solution and the \"wait-and-see\" solution (where the uncertainty is known before deciding):",
+    "after": "Recourse is the ability to adapt later decisions using information actually available then. Its value compares otherwise identical models with and without that flexibility. The following different quantity is the **expected value of perfect information**, comparing fully anticipative wait-and-see decisions with the nonanticipative stochastic solution:"
+  },
+  {
+    "before": "The option value is typically 10–30% of the static NPV for oil and gas developments, depending on the degree of uncertainty and the flexibility available.",
+    "after": "Calculate flexibility value for the specified information timing, admissible decisions and costs. No generic percentage of static NPV is established here."
+  },
+  {
+    "topic": "Replaced resource-inconsistent, non-LHS, flat-tax NPV with 400 actual NeqSim depletion profiles and independent inventory checks"
+  },
+  {
+    "before": "With $N = 200$–$500$ NeqSim evaluations, robust estimates of quantiles and risk metrics are achievable.",
+    "after": "Sample size must be justified from precision of the relevant tails and failure probabilities; stratification alone supplies no universal guarantee."
+  },
+  {
+    "before": "robust optimization (maximize the P10 gas production)",
+    "after": "lower-tail reward optimization (maximize the CDF P10 gas production) with separately enforced scenario feasibility"
+  },
+  {
+    "before": "The capacity cost is 500 $/kg/hr of capacity. Lost production due to insufficient capacity costs 0.10 $/kg for each kg/hr of excess production beyond capacity.",
+    "after": "The time-zero capacity cost is 500 USD per (kg/hr) installed. Assume 8,000 equivalent discounted operating hours; each unserved kg has a 0.10 USD opportunity cost. Apply that time factor to convert the loss rate into comparable present value."
+  }
+]

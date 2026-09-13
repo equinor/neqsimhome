@@ -1,0 +1,55 @@
+{
+  "findings": [
+    {
+      "issue": "Third recombination argument mislabeled as mass kg/hr; inherited helper expected 10000 kg/hr",
+      "resolution": "Current primary Java contract uses 10000 Sm3/hr total standard liquid. Validate liquid volume and resulting mass separately. Original mass mismatch retained; tolerance was not relaxed to pass a wrong unit.",
+      "evidence": [
+        ".build\\backups\\ch28_literal_solution_revision\\ch28_java_solution_checks.json",
+        ".build\\backups\\ch28_literal_solution_revision\\ch28_java_solution_checks.log"
+      ],
+      "retained_files": [
+        {
+          "path": ".build\\backups\\ch28_literal_solution_revision\\ch28_java_solution_checks.json",
+          "sha256": "3d40351438a8f2a4f554ca74747aeb6f1480852048b330a47f9d6e7679fc72f1"
+        },
+        {
+          "path": ".build\\backups\\ch28_literal_solution_revision\\ch28_java_solution_checks.log",
+          "sha256": "e186aec672180c9cb84c590ac9584f8a8315207b879e90ecadf3530890bedc1b"
+        }
+      ]
+    },
+    {
+      "issue": "Published export example invented VFPEXP deck text contradicting the actual diagnostic API",
+      "resolution": "Replaced with actual diagnostic column/unit/feasibility contract; exact written UTF-8 output checked against native diagnostic text.",
+      "retained_files": []
+    },
+    {
+      "issue": "Initial supplementary reference-phase component lookup assumed every separated phase had every mixture component",
+      "resolution": "Absent components contribute zero to the independent inventory, as the actual phase composition specifies. No manuscript or model inputs changed.",
+      "evidence": [
+        ".build/backups/ch28_literal_solution_revision/java_hook_missing_reference_components.json"
+      ],
+      "retained_files": [
+        {
+          "path": ".build/backups/ch28_literal_solution_revision/java_hook_missing_reference_components.json",
+          "sha256": "786bf72c2a72f93421705d302571de75a53b26f621e912b33ddddbd6225d7c59"
+        }
+      ]
+    },
+    {
+      "issue": "Initial reference-state hook interpreted unflashed input phase fields as equilibrium",
+      "resolution": "A cloned reference receives an explicit verification TP flash before phase component-balance checking. Input configuration is not misrepresented as a solved equilibrium.",
+      "retained_files": []
+    },
+    {
+      "issue": "3D polygon colors used average facet values with an ambiguous pressure colorbar",
+      "resolution": "Final literal plot uses uniform shading, six explicit black solution markers and a pressure height axis. Numeric arrays remain unchanged.",
+      "retained_files": []
+    },
+    {
+      "issue": "Route alternatives named a booster/FPSO/riser without those equipment changes; economic pattern multiplied total mass by volumetric water cut",
+      "resolution": "Routes now describe changed horizontal lengths with unchanged upward tubing. The external-data economic pattern uses standard oil-plus-water liquid volume and volumetric water cut on a common reference.",
+      "retained_files": []
+    }
+  ]
+}

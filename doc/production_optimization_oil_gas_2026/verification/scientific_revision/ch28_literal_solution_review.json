@@ -1,0 +1,347 @@
+{
+  "chapter": "ch28_field_development",
+  "status": "passed_and_frozen",
+  "timestamp_utc": "2026-09-12T22:01:37.930326+00:00",
+  "python_executable": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_commit": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "chapter_sha256": "192c05f73e68ae91434ddcbd25aec4e407904e13a347845ed0147d9aa40808e2",
+  "counts": {
+    "runnable_python_fences": 8,
+    "runnable_java_fences": 11,
+    "external_input_patterns": 5,
+    "python_check_records": 118,
+    "java_check_records": 1261,
+    "pressure_table_cells_replayed": 96,
+    "python_reference_density_states": 5,
+    "independent_reduced_network_scalar_roots": 2,
+    "new_literal_figures": 3
+  },
+  "fences": [
+    {
+      "number": 1,
+      "language": "java",
+      "code_sha256": "36de4dbef1e8f5f950e6bfbf245be246b94dc780297e9e430652c8e3bf44f37e",
+      "status": "explicit_external_input_pattern",
+      "required_evidence": "pattern: requires a validated local FLUID.E300 reference-fluid file",
+      "scope": "No supplied external dataset or complete configured model; excluded from runnable numerical solution claims."
+    },
+    {
+      "number": 2,
+      "language": "java",
+      "code_sha256": "297ef64d14656343155acd282859e7fa66dd4a7201f34bfdb1066900075f6e5d",
+      "status": "passed",
+      "checks": 1,
+      "report": "verification\\scientific_revision\\ch28_java_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 3,
+      "language": "java",
+      "code_sha256": "e2fa465b5dfee704281012ae28817bd155bebb9ab463864d1226f2f94f139376",
+      "status": "passed",
+      "checks": 53,
+      "report": "verification\\scientific_revision\\ch28_java_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 4,
+      "language": "java",
+      "code_sha256": "cc4e5273569a45d71ab30f0847344ba412a0e781866a74d16067454b224a48c1",
+      "status": "passed",
+      "checks": 279,
+      "report": "verification\\scientific_revision\\ch28_java_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 5,
+      "language": "java",
+      "code_sha256": "f2ec1f16f7db8d224cf8e0745c8245e75aa425d674694d117201e1657780dfa7",
+      "status": "passed",
+      "checks": 2,
+      "report": "verification\\scientific_revision\\ch28_java_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 6,
+      "language": "java",
+      "code_sha256": "a67e1e417d2ce18731601d086829ebc3ccd49861a9b12e52b4e5e0c92d0d0be7",
+      "status": "passed",
+      "checks": 2,
+      "report": "verification\\scientific_revision\\ch28_java_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 7,
+      "language": "java",
+      "code_sha256": "484e106633169fc2d9cefb73d939d9d008d0960b5f73fe1147b1359890b8b2c2",
+      "status": "passed",
+      "checks": 8,
+      "report": "verification\\scientific_revision\\ch28_java_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 8,
+      "language": "java",
+      "code_sha256": "2602f5e1df382b5ce9a000ee91224673bff7f551a7cbd0cbf4c621e98b54909c",
+      "status": "passed",
+      "checks": 5,
+      "report": "verification\\scientific_revision\\ch28_java_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 9,
+      "language": "java",
+      "code_sha256": "1b8f7799c0e5ceb1c698fef456add2e86f22a256e6303168105c480cea1c13c9",
+      "status": "passed",
+      "checks": 3,
+      "report": "verification\\scientific_revision\\ch28_java_solution_checks.json",
+      "classification": "configuration_dimensions_verified"
+    },
+    {
+      "number": 10,
+      "language": "java",
+      "code_sha256": "16f9a4970ae2820baa47dd0bda397a37eaaddf53e27489da1b7db67e5cd6f5b5",
+      "status": "passed",
+      "checks": 71,
+      "report": "verification\\scientific_revision\\ch28_java_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 11,
+      "language": "java",
+      "code_sha256": "a33fab4b9c80df36628bd8dcd0db2ef2738917fc91d8e0ff1209bc8eb13491ba",
+      "status": "passed",
+      "checks": 558,
+      "report": "verification\\scientific_revision\\ch28_java_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 12,
+      "language": "java",
+      "code_sha256": "54e13b311e6a992ae15d492bbea583a6951341268dcef89aab731b9c27030443",
+      "status": "passed",
+      "checks": 279,
+      "report": "verification\\scientific_revision\\ch28_java_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 13,
+      "language": "python",
+      "code_sha256": "e28173dfbf0c9c3912e69d3a274dd6e8f01bf08fde88c9de7cf661345a528a1c",
+      "status": "passed",
+      "checks": 28,
+      "report": "verification\\scientific_revision\\ch28_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 14,
+      "language": "python",
+      "code_sha256": "428dc8c5a31e76986aade372ee207a9d4ca6df230abcf5987fd1bf48eadb9248",
+      "status": "explicit_external_input_pattern",
+      "required_evidence": "pattern: requires a qualified well model and actual well-test data",
+      "scope": "No supplied external dataset or complete configured model; excluded from runnable numerical solution claims."
+    },
+    {
+      "number": 15,
+      "language": "python",
+      "code_sha256": "bd92750060a21054b3cedc67e3dc45da2342fb190b8b4a9627d87f7451d20896",
+      "status": "explicit_external_input_pattern",
+      "required_evidence": "pattern: network assembly requires field-specific nodes and verified boundary data",
+      "scope": "No supplied external dataset or complete configured model; excluded from runnable numerical solution claims."
+    },
+    {
+      "number": 16,
+      "language": "python",
+      "code_sha256": "ee167c8ddcc969724e2875c64b477a7005fba8240d30fcfe6da5ce613df5ec7f",
+      "status": "passed",
+      "checks": 25,
+      "report": "verification\\scientific_revision\\ch28_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 17,
+      "language": "python",
+      "code_sha256": "5ee5f89747462ffa2e5afc397692a15ba53e0f1847c2aa2c974844fb57fa4b1c",
+      "status": "passed",
+      "checks": 25,
+      "report": "verification\\scientific_revision\\ch28_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 18,
+      "language": "python",
+      "code_sha256": "ce1970f65d9a5c788bfa9fe842cd54bfc47dafd439f36fe13d47b23cf95f805f",
+      "status": "passed",
+      "checks": 25,
+      "report": "verification\\scientific_revision\\ch28_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 19,
+      "language": "python",
+      "code_sha256": "22ffcbfea65f5e64bab0cb12ea08a04c23531cf813624c2c5ad2a2cc6ac0fff1",
+      "status": "explicit_external_input_pattern",
+      "required_evidence": "pattern: requires supplied standard liquid rates, volumetric water cuts, and economic threshold",
+      "scope": "No supplied external dataset or complete configured model; excluded from runnable numerical solution claims."
+    },
+    {
+      "number": 20,
+      "language": "python",
+      "code_sha256": "54f9a650bb21c8bb93c4952d461862bee22ea0bdc3ac91e6a71ec15540c6dee2",
+      "status": "passed",
+      "checks": 2,
+      "report": "verification\\scientific_revision\\ch28_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 21,
+      "language": "python",
+      "code_sha256": "6671ec6827fec2300d8d811f635ecf825478e2ff2bcd457799f2be06936e0fb9",
+      "status": "passed",
+      "checks": 11,
+      "report": "verification\\scientific_revision\\ch28_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 22,
+      "language": "python",
+      "code_sha256": "3e4f2eab457ae6b5a7b8721ae569693b44719d3ffac919712376d0e7f7402e69",
+      "status": "passed",
+      "checks": 1,
+      "report": "verification\\scientific_revision\\ch28_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 23,
+      "language": "python",
+      "code_sha256": "7425ee70e8ea744883092565c3e49b35dc4245e0f49b1a6b64653104cc30472c",
+      "status": "passed",
+      "checks": 1,
+      "report": "verification\\scientific_revision\\ch28_solution_checks.json",
+      "classification": "numerical_solution_check"
+    },
+    {
+      "number": 24,
+      "language": "python",
+      "code_sha256": "b9195d02f73ed93c09c0c4fd119d16b12d86da704dd877bbddce8a5cf03dca8d",
+      "status": "explicit_external_input_pattern",
+      "required_evidence": "pattern: requires supplied well-test data and qualified interpolation routine",
+      "scope": "No supplied external dataset or complete configured model; excluded from runnable numerical solution claims."
+    }
+  ],
+  "bound_artifacts": [
+    {
+      "path": "verification\\scientific_revision\\ch28_solution_checks.json",
+      "sha256": "0a6f6d280037206748a12de42b6ca2cde3b7ccec5b88ea408167cabd29f41591"
+    },
+    {
+      "path": "verification\\scientific_revision\\ch28_java_solution_checks.json",
+      "sha256": "e60f130e9a02aaa123b59eb0a448b80ae380fb3a5144c2946ac95cddee9998f8"
+    },
+    {
+      "path": "verification\\ch28_field_development_fences.json",
+      "sha256": "5285ce7eaa52fce8e5b483712b877a1b5c48a80db1441fd3230f0b015829ff4f"
+    },
+    {
+      "path": "verification\\ch28_field_development_java.json",
+      "sha256": "0be39ba9b7edb4b9492623c93f72689623e4c065bb4f24e5d537fa729bd56cd1"
+    },
+    {
+      "path": "chapters\\ch28_field_development\\chapter.md",
+      "sha256": "192c05f73e68ae91434ddcbd25aec4e407904e13a347845ed0147d9aa40808e2"
+    },
+    {
+      "path": "verification\\scientific_revision\\ch28_rejected_diagnostics.json",
+      "sha256": "8fe910480d0d5e481fd24cf7080c1e05e150d354db8dff507d9f8069c5373485"
+    },
+    {
+      "path": "verification\\scientific_revision\\ch28_literal_solution_figure_data.json",
+      "sha256": "90e8359788e3be9cfe0710bcb1e2b6a9c676a9fa5224b239f0a20b8bd53d220f"
+    },
+    {
+      "path": "verification\\scientific_revision\\ch28_literal_solution_figure_review.json",
+      "sha256": "aa8ba0eb7ae77922ce455307a54aba745cfbb2e0016fc8689bf785d1e51e8954"
+    }
+  ],
+  "primary_code_and_verifier_hashes": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim\\src\\main\\java\\neqsim\\process\\util\\optimizer\\FluidMagicInput.java",
+      "sha256": "5371bf7e97feef00613b31110974a23d49335298d7f261f6027082cc6d269df7"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim\\src\\main\\java\\neqsim\\process\\util\\optimizer\\RecombinationFlashGenerator.java",
+      "sha256": "2d73d45843e79399846948144ae60c6d41bf4279a8371b195315bd8239a4de8e"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim\\src\\main\\java\\neqsim\\process\\util\\optimizer\\MultiScenarioVFPGenerator.java",
+      "sha256": "e6fd99490d6e7aca6ceefa6eb4beb0a64a249be3939b7ada04ef33da9c4d4ce6"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim\\src\\main\\java\\neqsim\\process\\fielddevelopment\\integrated\\IntegratedProductionModel.java",
+      "sha256": "bf24719fd26872ffdf04d8658a4136be680c686e9f8ee164d7ff884528ec4204"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim\\src\\main\\java\\neqsim\\process\\fielddevelopment\\integrated\\ReservoirToMarketOptimizer.java",
+      "sha256": "4711397428a9206740f9ec4fa75414af3278bd36f0a50714bc73320c9e3e2c7f"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim\\src\\main\\java\\neqsim\\process\\fielddevelopment\\integrated\\WellDeliverabilityCurve.java",
+      "sha256": "91bc468371666994abb9c29c641146614512ad15b8f77de511703bfcead40e85"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim\\src\\main\\java\\neqsim\\process\\fielddevelopment\\integrated\\WellBranch.java",
+      "sha256": "9588c44180c55117eecc98154b963dcd70d2029d1ef6424086d85c498f4f8022"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim\\src\\main\\java\\neqsim\\process\\fielddevelopment\\integrated\\FlowlineBranch.java",
+      "sha256": "844cb6a8f9c97588ace64684893ffece75c64ac48dedf4f5cf8923270f62144b"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\ch28_solution_hooks.py",
+      "sha256": "87593e4b49507a88a8298769d0a2939177a65af12c9f561c6646379e901cacf3"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\verify_ch28_java_solutions.py",
+      "sha256": "42754780602b194d2d07383b3f1e3df7c4d9ceed6912e5f2ef5671df34d3dffd"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\ch28_base_java_checks.jsh",
+      "sha256": "f3d0bfda53af856d8b5372e9db01faaf420b694d91fdb3ebe15e33afd4917f28"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\ch28_java_extra_checks.jsh",
+      "sha256": "a9da28b66d77ad343d5cac10cade4022e1c79dbbfd251da6ccd7e816d592c47c"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\publish_ch28_literal_figures.py",
+      "sha256": "4ee04b352ec6d2c068933a073bbbbc06ae541f762b2f70b313d00373a6b77455"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\finalize_ch28_solution_review.py",
+      "sha256": "08e114fdd2d73874ac9229b3e80062356ee2c8e359ff4d39e662a01bbae08232"
+    }
+  ],
+  "coverage": [
+    "Phase composition normalization and flash component accounting for recombined literal fluids.",
+    "Independent reference-phase mixing inventory, actual standard liquid volume, GOR and volumetric water-cut reconciliation at 15 C and 1.01325 bara.",
+    "All 96 accepted/unavailable Java and Python table cells: exact configured rate basis, pressure domain, fresh reported/lower inlet pressure bracket, tubing and flowline material/component conservation.",
+    "Java geometric GOR and linear water-cut grids, dimensions, indexed data access and exact diagnostic text content.",
+    "Reduced allocation rate accounting, positive bounded chokes and pressures, revenue/energy/emission unit identities, independent scalar solution of the declared piecewise Vogel/quadratic-line equations and feasible global capacity witness.",
+    "Plot array identity and actual reviewing-agent visual inspection of all three new manuscript figures."
+  ],
+  "applicability_limits": [
+    "These literal hydraulic replays verify the solutions of the supplied correlations; they are not an independent field calibration. Book benchmark evidence remains a separately scoped artifact.",
+    "No pipe heat-transfer boundary is specified in these cases; an energy-conservation claim for an adiabatic pipe is not made.",
+    "Vogel-shaped wellhead curves and default quadratic line resistances are illustrative reduced surrogates. Chokes are mathematical deliverability multipliers, not calibrated valve positions.",
+    "The optimizer returns a feasible near-optimum 0.190% below the independently reachable revenue upper bound. Constant energy and emissions intensities do not constitute a thermodynamic facility or lifecycle assessment.",
+    "Route-length alternatives do not include a subsea booster or FPSO processing model. Standard liquid mixing rates and total mixture mass rates remain separate dimensions.",
+    "No field data is supplied for the five explicitly annotated integration patterns; no execution or solution validation is claimed for those external-data workflows."
+  ],
+  "regeneration": [
+    "Run devtools/verify_optimization_solution_hooks.py --chapter 28 --hooks verification/scientific_revision/ch28_solution_hooks.py using the user-selected runtime.",
+    "Run verification/scientific_revision/verify_ch28_java_solutions.py using the same runtime. The copied helper is exclusive to this chapter.",
+    "Run publish_ch28_literal_figures.py, inspect each resulting actual image, and refresh ch28_literal_solution_figure_review.json/md.",
+    "Run ordinary audit_optimization_examples.py --chapters 28 and audit_optimization_java.py --chapters 28, then finalize_ch28_solution_review.py.",
+    "Do not rerun one-time manuscript repair editors as routine execution steps; do not regenerate the frozen notebook figures."
+  ]
+}

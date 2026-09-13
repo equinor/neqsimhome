@@ -1,0 +1,43 @@
+{
+  "chapter": "ch06_wells_artificial_lift",
+  "source_sha256": "b7c2268165ea643b020e0d774e048c77ab581c05c2bc98e5fcd3219ec484f977",
+  "engine": "JShell, Java snippets constrained to Java 8 syntax",
+  "returncode": 0,
+  "blocks": [
+    {
+      "index": 1,
+      "line": 92,
+      "code": "import org.apache.logging.log4j.LogManager;\nimport org.apache.logging.log4j.Logger;\nLogger logger = LogManager.getLogger(\"BookChapter6\");\nimport neqsim.process.equipment.network.LoopedPipeNetwork;\nimport neqsim.process.equipment.network.LoopedPipeNetwork.*;\nimport neqsim.thermo.system.SystemInterface;\nimport neqsim.thermo.system.SystemSrkEos;\n\n// Create a fluid template for the network\nSystemInterface gas = new SystemSrkEos(273.15 + 80.0, 200.0);\ngas.addComponent(\"methane\", 0.80);\ngas.addComponent(\"ethane\", 0.08);\ngas.addComponent(\"propane\", 0.04);\ngas.addComponent(\"n-butane\", 0.02);\ngas.addComponent(\"n-heptane\", 0.04);\ngas.addComponent(\"water\", 0.02);\ngas.setMixingRule(\"classic\");\ngas.setMultiPhaseCheck(true);\n\n// Create the network\nLoopedPipeNetwork network = new LoopedPipeNetwork(\"Production Network\");\nnetwork.setFluidTemplate(gas);\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_001_BEGIN\"\n\njshell> \njshell> $22 ==> "
+    },
+    {
+      "index": 29,
+      "line": 912,
+      "code": "// Small, independently bounded network for the optimization tutorial.\n// The detailed four-well multiphase calculation is demonstrated in Python below.\nLoopedPipeNetwork study = new LoopedPipeNetwork(\"Choke optimization tutorial\");\nSystemSrkEos studyFluid = new SystemSrkEos(303.15, 90.0);\nstudyFluid.addComponent(\"methane\", 0.95);\nstudyFluid.addComponent(\"ethane\", 0.05);\nstudyFluid.setMixingRule(\"classic\");\nstudy.setFluidTemplate(studyFluid);\nstudy.addSourceNode(\"Source-A\", 90.0, 0.0);\nstudy.addSourceNode(\"Source-B\", 85.0, 0.0);\nstudy.addJunctionNode(\"Down-A\");\nstudy.addJunctionNode(\"Down-B\");\nstudy.addSinkNode(\"Plant\", 0.0);\nstudy.getNode(\"Plant\").setPressure(40.0e5);\nstudy.getNode(\"Plant\").setPressureFixed(true);\nstudy.addChoke(\"Source-A\", \"Down-A\", \"Choke-A\", 20.0, 80.0);\nstudy.addChoke(\"Source-B\", \"Down-B\", \"Choke-B\", 15.0, 80.0);\nstudy.addPipe(\"Down-A\", \"Plant\", \"Line-A\", 5000.0, 0.2032);\nstudy.addPipe(\"Down-B\", \"Plant\", \"Line-B\", 4000.0, 0.2032);\nstudy.setSolverType(SolverType.NEWTON_RAPHSON);\nstudy.setMaxIterations(100);\nstudy.setTolerance(100.0);  // Pa = 0.001 bar for this teaching solve\ndouble[] openings = {40.0, 60.0, 80.0, 100.0};\nfor (double opening : openings) {\n    study.getPipe(\"Choke-A\").setChokeOpening(opening);\n    study.run();\n    logger.info(\"Opening {}%, flow {} kg/hr, converged {}\", opening,\n        study.getPipeFlowRate(\"Line-A\"), study.getSolutionSummary().get(\"converged\"));\n    logger.info(\"Hydraulic residual {} Pa\", study.getSolutionSummary().get(\"maxResidual_Pa\"));\n}\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_029_BEGIN\"\n\njshell> 2026-09-12 20:18:38 INFO  BookChapter6:8 - Opening 40.0%, flow 51903.67645064348 kg/hr, converged false\n2026-09-12 20:18:38 INFO  BookChapter6:10 - Hydraulic residual 212.75386266130954 Pa\n2026-09-12 20:18:38 INFO  BookChapter6:8 - Opening 60.0%, flow 51903.678667034204 kg/hr, converged false\n2026-09-12 20:18:38 INFO  BookChapter6:10 - Hydraulic residual 405.44349404610693 Pa\n2026-09-12 20:18:38 INFO  BookChapter6:8 - Opening 80.0%, flow 51903.6835327447 kg/hr, converged false\n2026-09-12 20:18:38 INFO  BookChapter6:10 - Hydraulic residual 405.4273316413164 Pa\n2026-09-12 20:18:38 INFO  BookChapter6:8 - Opening 100.0%, flow 51903.68585111452 kg/hr, converged false\n2026-09-12 20:18:38 INFO  BookChapter6:10 - Hydraulic residual 405.4273329973221 Pa\n\njshell> $46 ==> "
+    },
+    {
+      "index": 30,
+      "line": 955,
+      "code": "import neqsim.process.equipment.network.NetworkOptimizer;\nNetworkOptimizer optimizer = study.createOptimizer();\noptimizer.setMaxEvaluations(50);\nNetworkOptimizer.OptimizationResult result = optimizer.optimize();\nstudy.run();\nlogger.info(\"Optimizer converged {}, hydraulics converged {}, message {}\",\n    result.converged, study.getSolutionSummary().get(\"converged\"), result.message);\nlogger.info(\"Candidate production {} kg/hr, choke openings {}\",\n    result.totalProductionKgHr, Arrays.toString(result.chokeOpenings));\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_030_BEGIN\"\n\njshell> 2026-09-12 20:18:40 INFO  BookChapter6:5 - Optimizer converged true, hydraulics converged false, message Optimization completed\n2026-09-12 20:18:40 INFO  BookChapter6:5 - Candidate production 92852.43925449443 kg/hr, choke openings [100.0, 100.0]\n\njshell> $55 ==> "
+    },
+    {
+      "index": 31,
+      "line": 969,
+      "code": "NetworkOptimizer optimizer = study.createOptimizer();\noptimizer.setAlgorithm(NetworkOptimizer.Algorithm.CMAES);\noptimizer.setDeterministicSeed(2026L);\noptimizer.setMaxEvaluations(60);\nNetworkOptimizer.OptimizationResult result = optimizer.optimize();\nlogger.info(\"CMA-ES search converged {}, unvalidated candidate {} kg/hr: {}\",\n    result.converged, result.totalProductionKgHr, result.message);\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_031_BEGIN\"\n\njshell> 2026-09-12 20:18:42 INFO  BookChapter6:5 - CMA-ES search converged true, unvalidated candidate 92852.43925616462 kg/hr: Optimization completed\n\njshell> $63 ==> "
+    },
+    {
+      "index": 32,
+      "line": 983,
+      "code": "NetworkOptimizer optimizer = study.createOptimizer();\noptimizer.setParetoPoints(3);\noptimizer.setMaxEvaluations(60);\nList<NetworkOptimizer.OptimizationResult> pareto = optimizer.optimizeMultiObjective();\nfor (NetworkOptimizer.OptimizationResult point : pareto) {\n    logger.info(\"Unvalidated candidate {} kg/hr, compressor power {} kW, weight {}\",\n        point.totalProductionKgHr, point.totalCompressorPowerKW, point.paretoWeight);\n}\n// This unpowered teaching network has no production/power trade-off.\n// Introduce a calibrated compressor and constraints before interpreting a Pareto front.\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_032_BEGIN\"\n\njshell> 2026-09-12 20:18:43 INFO  BookChapter6:6 - Unvalidated candidate 92852.43925449449 kg/hr, compressor power 0.0 kW, weight 0.0\n2026-09-12 20:18:43 INFO  BookChapter6:6 - Unvalidated candidate 92852.4391697163 kg/hr, compressor power 0.0 kW, weight 0.5\n2026-09-12 20:18:43 INFO  BookChapter6:6 - Unvalidated candidate 92852.43925449449 kg/hr, compressor power 0.0 kW, weight 1.0\n\njshell> $70 ==> "
+    }
+  ]
+}

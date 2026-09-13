@@ -1,0 +1,135 @@
+{
+  "status": "passed",
+  "scope": "Three new selected scientific literal figures only; unselected or rejected assets are excluded from approval.",
+  "images": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch24_production_optimization\\figures\\ch24_stock_tank_pressure_sweep.png",
+      "sha256": "787726771901863aea199ba1aa60d4fc0930bdc1990eb25aee6fca58194b2633",
+      "source": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch24_production_optimization\\figures\\sep_pressure_optimization.png",
+      "source_sha256": "787726771901863aea199ba1aa60d4fc0930bdc1990eb25aee6fca58194b2633",
+      "chapter": "ch24_production_optimization",
+      "fence": 62,
+      "code_sha256": "4aecd64d8c7e1394cfedb9dd08bd1c68a7cb18f3e936502046e4245ffb227809",
+      "status": "passed",
+      "full_view_inspected": true,
+      "full_view_evidence": "Full image inspected: all four panels and axes visible; actual reference-state liquid units, sampled 45.0 bara marker and limited-economic-scope labels match the saved arrays.",
+      "source_arrays": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch24_production_optimization\\stock_tank_pressure_sweep.json",
+      "source_arrays_sha256": "8076072eecb6a21b16a6e85073c59dd8760fc66555fff1c4e358d2b1c2939b9e",
+      "solution_report": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\ch24_solution_checks.json",
+      "solution_report_sha256": "32fb06a3c9744d161bb5748cd1498e254f4c48faa77b35f9d0f2ebb377306937",
+      "caption": "Stock-tank oil and a limited product-value screen across 28 separator pressures at 250,000 kg/h feed.",
+      "discussion": "The 28 actual flashes retain all gas, oil and any aqueous products at 15 °C and 1.01325 bara. Stock-tank oil spans 2192.7–2318.8 m³/day, with its sampled maximum at 55 bara; oil density is 677.886–678.983 kg/m³. The assumed product value less compressor electricity peaks at 45 bara and 2294.38 kUSD/day. Mass/component residuals are below 3×10⁻¹¹. Conditioning cooling of 1.21–1.91 MW is recorded but not priced, and flash gas has no sales credit. The different maxima reflect liquid partition, gas value and compression work. This is a 28-point sensitivity with assumed prices and heating value; it does not establish installed capacity, product qualification or a global operating optimum."
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch30_digital_twins_and_automation\\figures\\ch30_literal_input_propagation.png",
+      "sha256": "9bf31e74cb64c7753d73d11b37483c994e20ec0b1018434d91efb914a572527b",
+      "source": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch30_digital_twins_and_automation\\figures\\ch21_digital_twin_tracking.png",
+      "source_sha256": "9bf31e74cb64c7753d73d11b37483c994e20ec0b1018434d91efb914a572527b",
+      "chapter": "ch30_digital_twins_and_automation",
+      "fence": 19,
+      "code_sha256": "632411427db9fa32ce251592e693b3b3e9e10eac2c74fe4f0b0ca6af105b4c95",
+      "status": "passed",
+      "full_view_inspected": true,
+      "full_view_evidence": "Full image inspected: three readable panels, 24 points, explicit synthetic-temperature legend, t/h and MW units; no plant measurements or injected 3 K offset are claimed.",
+      "source_arrays": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\additional_literal_figure_arrays.json",
+      "source_arrays_sha256": "e523ca245de2dd03fe4dcdb7dd80c51cf3ac6d26064cddd82291d5077d2bb159",
+      "solution_report": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\ch30_solution_checks.json",
+      "solution_report_sha256": "b4fa63e924963b05400dd79e4adfde6277b4837035545af21c65426f0a0ec369",
+      "caption": "A 24-hour synthetic input sequence propagated through the source-backed process model.",
+      "discussion": "Feed varies from 95 to 105 t/h, with synthetic temperatures 54.26–64.74 °C and pressures 49.02–50.93 bara. The model compressor requires 3.739–4.321 MW. Separator gas temperature overlays its prescribed feed temperature because this equilibrium separator imposes no temperature change; the matching curves are not independent sensor validation. The case checks automation input propagation and process balances. Field use still requires measured observations and separate calibration."
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch32_advanced_topics\\figures\\ch32_literal_pareto_grid.png",
+      "sha256": "f5023eb47259eb22159ea0ebe8e1c4deabc0d0ddac8ea83fa8138820fd260999",
+      "source": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch32_advanced_topics\\figures\\pareto_front.png",
+      "source_sha256": "f5023eb47259eb22159ea0ebe8e1c4deabc0d0ddac8ea83fa8138820fd260999",
+      "chapter": "ch32_advanced_topics",
+      "fence": 2,
+      "code_sha256": "3914a8e6cc500a37eedcdf31d2609348a810549f4bdd2b140b930c6627cd2077",
+      "status": "passed",
+      "full_view_inspected": true,
+      "full_view_evidence": "Full image inspected: 25 grid samples and one native endpoint are visible, legend distinguishes both sources, axes carry kg/h and kW, and title correctly says sampled non-dominated states.",
+      "source_arrays": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\additional_literal_figure_arrays.json",
+      "source_arrays_sha256": "e523ca245de2dd03fe4dcdb7dd80c51cf3ac6d26064cddd82291d5077d2bb159",
+      "solution_report": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\ch32_solution_checks.json",
+      "solution_report_sha256": "19ae24013455c769ef83a17f70b797bbe039e32f5f1322d1855d77b154c817a2",
+      "caption": "Twenty-five independently solved rate cases compared with the native weighted-search sample.",
+      "discussion": "At fixed 50→150 bara compression and 40 °C suction, the independent grid spans 50,000–200,000 kg/h and 3250.84–13003.37 kW. Its monotonic linear trade-off has no unique knee or preferred throughput without a capacity or economic criterion. The native weighted search returns one endpoint near 200,000 kg/h, which agrees with the independently solved grid. Each grid point passes mass and shaft-work/enthalpy checks; this comparison establishes the sampled model trade-off, not a vendor-map or field validation."
+    }
+  ],
+  "unchanged_prior_reviewed_images": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch27_multi_scenario_optimization\\figures\\fig28_tornado.png",
+      "sha256": "808b9d902c42fc3262b613e2d63eaeffbb0366735a8b22bc4e6cd9d81cd8eded",
+      "status": "unchanged_existing_review_retained"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch27_multi_scenario_optimization\\figures\\ch27_verified_resource_npv.png",
+      "sha256": "c9b914a337e14224465b1d5b9a3a19699981fc8fe1df8d7af28b86c23cbbaeca",
+      "status": "unchanged_existing_review_retained"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch29_dynamic_simulation_and_control\\figures\\ch29_verified_level_inventory.png",
+      "sha256": "a1e18dab02b398b2f607a90e3997acdeee8cf708b06b04ed275d0e12ee3b0661",
+      "status": "unchanged_existing_review_retained"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch29_dynamic_simulation_and_control\\figures\\ch29_verified_blowdown.png",
+      "sha256": "4f80b5e48694a4c42f06138d531d427d8f513840faa8414aaab64daa3a93eef5",
+      "status": "unchanged_existing_review_retained"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch29_dynamic_simulation_and_control\\figures\\ch29_verified_feed_pulse.png",
+      "sha256": "a67e2ebd7f7c301ff6c1d77430a9fba923804907ec5ce38b4cd0f8c4f60e0d19",
+      "status": "unchanged_existing_review_retained"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch34_case_studies\\figures\\ch23_case1_hp_optimization.png",
+      "sha256": "a215f2054389f955af01745228f2f12528965e00df921966a79d6e9d8a26b968",
+      "status": "unchanged_existing_review_retained"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch34_case_studies\\figures\\ch23_case2_water_cut_sensitivity.png",
+      "sha256": "c65904773289c318026dfe69c6de18c23d9a4b0be8825e0b58b7e98ad904e75e",
+      "status": "unchanged_existing_review_retained"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch34_case_studies\\figures\\ch23_case3_debottleneck_analysis.png",
+      "sha256": "2b0b22e7e8df5a5171e51e93f4b8a4a15c745a389b2ab015c41d83a55d18a988",
+      "status": "unchanged_existing_review_retained"
+    }
+  ],
+  "prior_eight_image_ledger": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\literal_figure_copies.json",
+  "prior_eight_image_ledger_sha256": "2314ef39d7ea07eb0dfd060d8fa51619ceb8b7e2ce4f8cc1726fb56bd7f388a7",
+  "unselected_outputs": [
+    {
+      "source": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch24_production_optimization\\figures\\facility_optimization_results.png",
+      "source_sha256": "5c26c4531771376088cc0b5fdde5e03077af278c8025b627caee3135e897f6f2",
+      "status": "not_selected_for_publication",
+      "reason": "Retained as generated supplementary output only. Updated labels distinguish the returned native candidate from an optimum and explicitly state that there is no independently accepted convergence history.",
+      "approved_as_release_figure": false
+    },
+    {
+      "source": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch24_production_optimization\\figures\\optimization_convergence.png",
+      "source_sha256": "0adda712e39dc0c48c0a7287a024e39c37558815b047d76ccf47d8fc4340bb3b",
+      "status": "not_selected_for_publication",
+      "reason": "Native search diagnostic descends to a lower-bound candidate; it is not proof of a production maximum and duplicates the chapter acceptance discussion.",
+      "approved_as_release_figure": false
+    },
+    {
+      "source": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch24_production_optimization\\figures\\pareto_front.png",
+      "source_sha256": "592427cbed252e29d0d0482dd9de83e288920384676ee84e5c7e72379ed5b8f6",
+      "status": "not_selected_for_publication",
+      "reason": "Sparse native sampled states without an independently dense comparison; the new Chapter 32 figure is more informative.",
+      "approved_as_release_figure": false
+    },
+    {
+      "source": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\solution_runs\\ch32_advanced_topics\\figures\\batch_study_contours.png",
+      "source_sha256": "24f3510cc57ba7f32d36b896410cae6ab1bcf9e51d19d81e8a711c1bb2eea386",
+      "status": "not_selected_for_publication",
+      "reason": "Twelve solved cases have valid numerical checks, but the x-axis labels are crowded and existing sweep figures cover this case. Not selected for publication.",
+      "approved_as_release_figure": false
+    }
+  ],
+  "rejected_basis_archive": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\rejected_gas_equivalent_oil_basis\\rejection.json"
+}

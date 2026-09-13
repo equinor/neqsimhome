@@ -1,0 +1,133 @@
+{
+  "status": "passed",
+  "reviewed_at_utc": "2026-09-12T22:43:23.184891+00:00",
+  "scope": "Canonical PDF raw-block typesetting only; no manuscript, notebook, calculation, frozen scientific ledger or full-book PDF changed by this task.",
+  "renderer": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\tools\\book_render_pdf.py",
+  "renderer_sha256": "d3049152d95bbf4c0e96bb43ee02e095dfac3785df0329cbd0fd69d340dbe72e",
+  "problem": {
+    "candidate_pdf_sha256": "3eab83daef268cfcab0fed2d894e2f7086586502d3928940a82496febe6fba47",
+    "pages": [
+      461,
+      1257,
+      1337
+    ],
+    "cause": "Unbroken highlighted member chains and call arguments exceeded the code panel width; ordinary raw wrapping offered insufficient break positions."
+  },
+  "fix": "Scoped raw.line show rules add zero-width discretionary break opportunities at punctuation and bounded non-whitespace runs. Existing block geometry, highlighting,7.2pt font and raw.text stay intact. Inline raw rules are unchanged.",
+  "verification": {
+    "pages": 8,
+    "overflow": [],
+    "code_font_sizes_pt": [
+      7.2
+    ],
+    "raw_source_preserved": true,
+    "blocks": [
+      {
+        "chapter": "ch12_gas_processing",
+        "code_sha256": "7620db5f9042a6ee5a8c53342e54511118197ff903332a2a9a5846208523c10c"
+      },
+      {
+        "chapter": "ch32_advanced_topics",
+        "code_sha256": "013fc3da82f2469d12d796a9d094cbe7aca71014a6794b0189087cf666b9677c"
+      },
+      {
+        "chapter": "ch34_case_studies",
+        "code_sha256": "aeee472f8124849585b309e4e4f638bae548dee2dde90aba231c900551c5b15b"
+      },
+      {
+        "chapter": "long-token-regression",
+        "code_sha256": "90cce102b4e9a27c73f282433b90ea51e7cb7a002b72d6e1cbc4275be49863f7"
+      },
+      {
+        "chapter": "java-layout-regression",
+        "code_sha256": "66d80cde522ee90ca9357fa26ccd532b9ed37faed0640d6c5a613b17f614b942"
+      }
+    ]
+  },
+  "geometry_acceptance": "Every text span lies within the132mm body width, with0.5pt geometric tolerance, for the complete three offending blocks plus long-token and Java regressions.",
+  "font_check": "Every monospace span remains exactly7.2pt; no per-block or global shrinking.",
+  "content_check": "Typst query(raw) equals every original fixture source string exactly, including indentation, newlines, punctuation and the Java Figure24.2 string.",
+  "visual_review": {
+    "status": "passed",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "observations": [
+      "Code remains readable and highlighted; wrapped member/call chains stay inside the shaded panel.",
+      "No clipped glyphs, panel overlap, missing line endings or replacement characters were observed.",
+      "Long code blocks remain page-breakable; no document-wide font reduction or landscape conversion."
+    ],
+    "images": [
+      {
+        "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\pdf_final\\code_layout_probe_01.png",
+        "sha256": "ad442055b6013a78f1cec5cf4224c3674810ffe35cb78d605c09cb9f5171d977"
+      },
+      {
+        "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\pdf_final\\code_layout_probe_02.png",
+        "sha256": "52cffb445c59fa933191eafac12d7f7ae7c6c11acb3d58bb28863fe6fb75b6cc"
+      },
+      {
+        "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\pdf_final\\code_layout_probe_03.png",
+        "sha256": "291f26e43cdef9e5ad8823319d492684ee0cb60fe0e113d842f7af36872d80bc"
+      },
+      {
+        "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\pdf_final\\code_layout_probe_04.png",
+        "sha256": "a9a4ff5361b9d768a73940e911828503b684ca6112c843e3649b76e04ef48261"
+      },
+      {
+        "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\pdf_final\\code_layout_probe_05.png",
+        "sha256": "c329bde0c6a89997842b852fecf355a643a622a34efa5047c872279f173d2e7f"
+      },
+      {
+        "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\pdf_final\\code_layout_probe_06.png",
+        "sha256": "fe2ec8ffc8d4d4dbf2d5f6272764f41e3e7b1c072a2121d150962d9d8e7b193f"
+      },
+      {
+        "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\pdf_final\\code_layout_probe_07.png",
+        "sha256": "c96d45dc7fb2a341e6cde18990fe528e8e85b92f243717cd1e9e055c6aee9994"
+      },
+      {
+        "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\pdf_final\\code_layout_probe_08.png",
+        "sha256": "97634ca9e9707d7ad55afecf4d4a6634db26293ea8f5a1928fe2db91134c8a8d"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\pdf_final\\probe_code_layout.py",
+      "sha256": "5cddd7f8882d40946f4d8c7fc327eb1aa00a9983adf38c126f4afc751dfe630f"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\pdf_final\\code_layout_probe.typ",
+      "sha256": "54263c5e1996e33b3d1b1e89057f01f32aef0b53e4ac35ac0ace7981a189268d"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\pdf_final\\code_layout_probe.pdf",
+      "sha256": "d1ab1cced234c0d6184c0c5b30a65f1736a3756d66ad526980ef49cec192d5be"
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\pdf_final\\code_layout_probe.json",
+      "sha256": "06ee346658771f8939fdae674e86b4d6b6e367e513987102288b63c57af738da"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Typst raw/raw.line documentation",
+      "url": "https://typst.app/docs/reference/text/raw/"
+    },
+    {
+      "title": "Typst general symbols",
+      "url": "https://typst.app/docs/reference/symbols/sym/"
+    }
+  ],
+  "next_action": "Release owner rebuilds the full book and reruns whole-PDF geometry and visual checks; page positions can change after wrapping.",
+  "full_book_rebuild_started": false,
+  "unresolved": []
+}

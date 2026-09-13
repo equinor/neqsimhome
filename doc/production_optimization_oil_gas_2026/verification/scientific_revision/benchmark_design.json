@@ -1,0 +1,17 @@
+{
+  "scope": "Teaching-model verification and selected independent thermodynamic reference comparisons. Not field calibration or certification of every equipment correlation.",
+  "registered_before_actual_comparisons": true,
+  "nist_density_relative_tolerance": 0.03,
+  "nist_density_tolerance_rationale": "Declared 3% teaching accuracy budget for SRK and PR at nine methane states (300,350,400 K; 1,50,100 bara). This is not the NIST uncertainty.",
+  "dilute_gas_density_relative_tolerance": 0.0001,
+  "rachford_rice_beta_absolute_tolerance": 1e-10,
+  "flash_component_absolute_tolerance": 1e-7,
+  "flash_log_fugacity_ratio_absolute_tolerance": 1e-6,
+  "valve_specific_enthalpy_absolute_tolerance_J_kg": 0.1,
+  "ideal_argon_compressor_relative_tolerance": 0.002,
+  "hydrostatic_pressure_relative_tolerance": 0.005,
+  "hydrostatic_rationale": "Low-flow liquid pressure rise/drop benchmark; inlet model density used only as the momentum-equation input. Allows finite compressibility and the implemented gravity constant. Does not independently validate liquid density or multiphase correlation.",
+  "horizontal_zero_flow_absolute_pressure_tolerance_bar": 1e-8,
+  "optimizer_grid_spacing_kg_hr": 1000,
+  "optimizer_relative_power_tolerance": 0.0003
+}

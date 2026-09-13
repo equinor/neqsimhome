@@ -1,0 +1,1426 @@
+{
+  "chapter": "ch07_subsea_production_systems",
+  "source_sha256": "848f365f17cb467bca406f2a10f019f85fca92be7a35b657380aae10fff1d09c",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "literal_blocks": [
+    {
+      "index": 1,
+      "code_sha256": "8379e3ef92baf9caf8199397ade5a05d7dff34d7cf4aa32c118676868ee320f8",
+      "line": 335,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 180.0,
+          "getTemperature_C": 70.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 180.0,
+          "getTemperature_C": 70.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 177.97975606754852,
+          "getTemperature_C": 3.9921801510560613,
+          "inlets": [
+            "Subsea Wellstream"
+          ],
+          "outlets": [
+            "Subsea Flowline out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 7.8439999999973224,
+      "output": "Arrival temperature: 4.0 \u00b0C\nArrival pressure: 178.0 bara\nPressure drop: 2.0 bar\n"
+    },
+    {
+      "index": 2,
+      "code_sha256": "52638718146d64e3421faca853b1a62d83b792ff0ace3a9fa6538731b44879e7",
+      "line": 394,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 16.66666666666667,
+          "getPressure_bara": 280.0,
+          "getTemperature_C": 85.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 180.0,
+          "getTemperature_C": 70.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 106.90379992113607,
+          "getTemperature_C": 3.987206331289542,
+          "inlets": [
+            "Subsea Choke out stream"
+          ],
+          "outlets": [
+            "Subsea Flowline out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "bhp_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.66666666666667,
+          "getPressure_bara": 280.0,
+          "getTemperature_C": 85.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "tubing",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 129.5153763747723,
+          "getTemperature_C": 11.338821940903642,
+          "inlets": [
+            "Bottomhole"
+          ],
+          "outlets": [
+            "Well Tubing out stream"
+          ]
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 110.0,
+          "getTemperature_C": 8.266921362292862,
+          "inlets": [
+            "Well Tubing out stream"
+          ],
+          "outlets": [
+            "Subsea Choke out stream"
+          ]
+        },
+        {
+          "name": "riser",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 94.13939892128211,
+          "getTemperature_C": 1.6272567944224647,
+          "inlets": [
+            "Subsea Flowline out stream"
+          ],
+          "outlets": [
+            "Production Riser out stream"
+          ]
+        }
+      ],
+      "seconds": 4.9060000000026776,
+      "output": "=== Subsea Tieback Pressure Budget ===\nBottomhole pressure:     280.0 bara\nWellhead pressure:       129.5 bara  (tubing dP = 150.5 bar)\nAfter choke:             110.0 bara  (choke dP = 19.5 bar)\nFlowline outlet:         106.9 bara  (flowline dP = 3.1 bar)\nTopside arrival:         94.1 bara  (riser dP = 12.8 bar)\nTopside arrival temp:    1.6 C\n"
+    },
+    {
+      "index": 3,
+      "code_sha256": "894ee5f095b16dc9cad400995abe9b64239ec074a98d780810086cc784bfc860",
+      "line": 522,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.0,
+          "getPressure_bara": 200.0,
+          "getTemperature_C": 70.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 180.0,
+          "getTemperature_C": 70.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 106.90379992113607,
+          "getTemperature_C": 3.987206331289542,
+          "inlets": [
+            "Subsea Choke out stream"
+          ],
+          "outlets": [
+            "Subsea Flowline out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "bhp_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.66666666666667,
+          "getPressure_bara": 280.0,
+          "getTemperature_C": 85.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "tubing",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 129.5153763747723,
+          "getTemperature_C": 11.338821940903642,
+          "inlets": [
+            "Bottomhole"
+          ],
+          "outlets": [
+            "Well Tubing out stream"
+          ]
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 110.0,
+          "getTemperature_C": 8.266921362292862,
+          "inlets": [
+            "Well Tubing out stream"
+          ],
+          "outlets": [
+            "Subsea Choke out stream"
+          ]
+        },
+        {
+          "name": "riser",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 94.13939892128211,
+          "getTemperature_C": 1.6272567944224647,
+          "inlets": [
+            "Subsea Flowline out stream"
+          ],
+          "outlets": [
+            "Production Riser out stream"
+          ]
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 180.0,
+          "getTemperature_C": 70.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 180.0,
+          "getTemperature_C": 70.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "pipe",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 170.18604874226742,
+          "getTemperature_C": 7.2359469702696515,
+          "inlets": [
+            "Feed"
+          ],
+          "outlets": [
+            "Flowline out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 169.31299999999464,
+      "output": " Distance (km)  Arrival T (\u00b0C)  Arrival P (bara)   dP (bar)\n             5            53.7             178.7        1.3\n            10            42.7             177.5        2.5\n            15            31.6             176.3        3.7\n            20            25.4             175.2        4.8\n            30            15.8             173.2        6.8\n            40            11.1             171.5        8.5\n            50             7.2             170.2        9.8\n"
+    },
+    {
+      "index": 4,
+      "code_sha256": "2321d24dceb15e2dc8a22ae2182bf6ff669aaf93bd2a896f1141665ccaa155e8",
+      "line": 694,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 16.666666666666668,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.666666666666664,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 113.33369405820689,
+          "getTemperature_C": 10.235886786027208,
+          "inlets": [
+            "Wellstream"
+          ],
+          "outlets": [
+            "Subsea Flowline out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 343432.4474915527
+        },
+        {
+          "name": "bhp_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.66666666666667,
+          "getPressure_bara": 280.0,
+          "getTemperature_C": 85.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "tubing",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 129.5153763747723,
+          "getTemperature_C": 11.338821940903642,
+          "inlets": [
+            "Bottomhole"
+          ],
+          "outlets": [
+            "Well Tubing out stream"
+          ]
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 110.0,
+          "getTemperature_C": 8.266921362292862,
+          "inlets": [
+            "Well Tubing out stream"
+          ],
+          "outlets": [
+            "Subsea Choke out stream"
+          ]
+        },
+        {
+          "name": "riser",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 135.05334993035368,
+          "getTemperature_C": 19.61043196041544,
+          "inlets": [
+            "Subsea Booster out stream"
+          ],
+          "outlets": [
+            "Riser out stream"
+          ]
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 180.0,
+          "getTemperature_C": 70.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 180.0,
+          "getTemperature_C": 70.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "pipe",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 170.18604874226742,
+          "getTemperature_C": 7.2359469702696515,
+          "inlets": [
+            "Feed"
+          ],
+          "outlets": [
+            "Flowline out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "booster",
+          "class": "neqsim.process.equipment.compressor.Compressor",
+          "getPressure_bara": 150.0,
+          "getTemperature_C": 22.444691838765152,
+          "getPower_W": 343432.4474915527,
+          "inlets": [
+            "Subsea Flowline out stream"
+          ],
+          "outlets": [
+            "Subsea Booster out stream"
+          ]
+        }
+      ],
+      "seconds": 0.7660000000032596,
+      "output": "Topside arrival pressure: 135.1 bara\nTopside arrival temperature: 19.6 \u00b0C\nSubsea booster power: 343 kW\n"
+    },
+    {
+      "index": 5,
+      "code_sha256": "62cb15ae0fad377dc6c736e81a963569c6c43ab1754148b55ef64230f2eb513b",
+      "line": 773,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888888,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 90.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.666666666666664,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 113.33369405820689,
+          "getTemperature_C": 10.235886786027208,
+          "inlets": [
+            "Wellstream"
+          ],
+          "outlets": [
+            "Subsea Flowline out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 343432.4474915527
+        },
+        {
+          "name": "bhp_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.66666666666667,
+          "getPressure_bara": 280.0,
+          "getTemperature_C": 85.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "tubing",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 129.5153763747723,
+          "getTemperature_C": 11.338821940903642,
+          "inlets": [
+            "Bottomhole"
+          ],
+          "outlets": [
+            "Well Tubing out stream"
+          ]
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 110.0,
+          "getTemperature_C": 8.266921362292862,
+          "inlets": [
+            "Well Tubing out stream"
+          ],
+          "outlets": [
+            "Subsea Choke out stream"
+          ]
+        },
+        {
+          "name": "riser",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 135.05334993035368,
+          "getTemperature_C": 19.61043196041544,
+          "inlets": [
+            "Subsea Booster out stream"
+          ],
+          "outlets": [
+            "Riser out stream"
+          ]
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 180.0,
+          "getTemperature_C": 70.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 180.0,
+          "getTemperature_C": 70.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "pipe",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 170.18604874226742,
+          "getTemperature_C": 7.2359469702696515,
+          "inlets": [
+            "Feed"
+          ],
+          "outlets": [
+            "Flowline out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "booster",
+          "class": "neqsim.process.equipment.compressor.Compressor",
+          "getPressure_bara": 150.0,
+          "getTemperature_C": 22.444691838765152,
+          "getPower_W": 343432.4474915527,
+          "inlets": [
+            "Subsea Flowline out stream"
+          ],
+          "outlets": [
+            "Subsea Booster out stream"
+          ]
+        },
+        {
+          "name": "stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.888888888888886,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 90.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "well",
+          "class": "neqsim.process.equipment.subsea.SubseaWell",
+          "inlets": [
+            "Well Stream"
+          ],
+          "outlets": [
+            "Producer-1 out stream"
+          ]
+        },
+        {
+          "name": "design",
+          "class": "neqsim.process.mechanicaldesign.subsea.WellMechanicalDesign"
+        }
+      ],
+      "seconds": 0.2180000000007567,
+      "output": "{\n  \"name\": \"Producer-1\",\n  \"equipmentType\": \"SubseaWell\",\n  \"equipmentClass\": \"SubseaWell\",\n  \"totalWeight\": 0.0,\n  \"vesselWeight\": 0.0,\n  \"internalsWeight\": 0.0,\n  \"pipingWeight\": 0.0,\n  \"nozzlesWeight\": 0.0,\n  \"eiWeight\": 0.0,\n  \"structuralWeight\": 0.0,\n  \"operatingWeight\": 0.0,\n  \"maxDesignPressure\": 110.00000000000001,\n  \"minDesignPressure\": 0.0,\n  \"maxDesignTemperature\": \"NaN\",\n  \"minDesignTemperature\": \"NaN\",\n  \"maxOperatingPressure\": 100.0,\n  \"maxOperatingTemperature\": -173.14999999999998,\n  \"innerDiameter\": 0.0,\n  \"outerDiameter\": 0.0,\n  \"tangentLength\": 0.0,\n  \"wallThickness\": 0.0,\n  \"moduleLength\": 0.0,\n  \"moduleWidth\": 0.0,\n  \"moduleHeight\": 0.0,\n  \"totalVolume\": 2.0,\n  \"corrosionAllowance\": 0.0,\n  \"power\": 0.0,\n  \"duty\": 0.0,\n  \"specificParameters\": {},\n  \"isSystemLevel\": false,\n  \"equipmentCount\": 0,\n  \"totalPowerRequired\": 0.0,\n  \"totalPowerRecovered\": 0.0,\n  \"netPower\": 0.0,\n  \"totalHeatingDuty\": 0.0,\n  \"totalCoolingDuty\": 0.0,\n  \"totalPlotSpace\": 0.0,\n  \"footprintLength\": 0.0,\n  \"footprintWidth\": 0.0,\n  \"maxHeight\": 0.0,\n  \"weightByType\": {},\n  \"countByType\": {},\n  \"weightByDiscipline\": {},\n  \"equipmentList\": [],\n  \"designStandardCode\": \"NORSOK-D-010\",\n  \"configuration\": {\n    \"wellType\": \"OIL_PRODUCER\",\n    \"completionType\": \"CASED_PERFORATED\",\n    \"rigType\": \"SEMI_SUBMERSIBLE\",\n    \"hasDHSV\": true,\n    \"numberOfCasingStrings\": 4\n  },\n  \"geometry\": {\n    \"measuredDepthM\": 3800.0,\n    \"trueVerticalDepthM\": 3200.0,\n    \"waterDepthM\": 350.0,\n    \"kickOffPointM\": 1500.0,\n    \"maxInclinationDeg\": 45.0\n  },\n  \"casingProgram\": {\n    \"conductorOD_in\": 30.0,\n    \"conductorDepthM\": 100.0,\n    \"surfaceCasingOD_in\": 20.0,\n    \"surfaceCasingDepthM\": 800.0,\n    \"intermediateCasingOD_in\": 13.375,\n    \"intermediateCasingDepthM\": 2500.0,\n    \"productionCasingOD_in\": 9.625,\n    \"productionCasingDepthM\": 3800.0\n  },\n  \"tubing\": {\n    \"tubingOD_in\": 5.5,\n    \"tubingWeight_lbft\": 23.0,\n    \"tubingGrade\": \"L80\"\n  },\n  \"designResults\": {\n    \"productionCasingWallThicknessMm\": 8.9,\n    \"intermediateCasingWallThicknessMm\": 14.385999773550727,\n    \"surfaceCasingWallThicknessMm\": 12.7,\n    \"tubingWallThicknessMm\": 6.4,\n    \"productionCasingBurstDF\": 1.5996893668923793,\n    \"productionCasingCollapseDF\": 1.3815177085428456,\n    \"productionCasingTensionDF\": 2.590281387256292,\n    \"productionCasingVME_DF\": 1.7410832860870662,\n    \"temperatureDeratingFactor\": 0.988,\n    \"tubingBurstDF\": 1.4659985683607732\n  },\n  \"weights\": {\n    \"totalCasingWeightTonnes\": 655.2851055101029,\n    \"totalTubingWeightTonnes\": 118.08779527559055,\n    \"totalCementVolumeM3\": 361.44756359120527,\n    \"totalCuttingsVolumeM3\": 668.0969781117951\n  },\n  \"barrierVerification\": {\n    \"verificationPassed\": true,\n    \"issueCount\": 0,\n    \"notes\": [\n      \"INFO: Annular pressure monitoring required per NORSOK D-010 Sec 9 / API RP 90\",\n      \"PASS: Two-barrier principle satisfied per NORSOK D-010\"\n    ],\n    \"primaryElementCount\": 4,\n    \"primaryFunctionalCount\": 4,\n    \"secondaryElementCount\": 3,\n    \"secondaryFunctionalCount\": 3\n  },\n  \"appliedStandards\": [\n    \"NORSOK D-010 Rev 5 Table 18 (production load cases)\",\n    \"NORSOK D-010 Rev 5 - VME triaxial check\",\n    \"NORSOK D-010 Rev 5 Section 5 - Two-barrier principle\",\n    \"NORSOK D-010 Rev 5 Section 9 - Annulus monitoring\",\n    \"NORSOK D-010 Rev 5 - Well Integrity\",\n    \"NORSOK D-010 Table 20 - Production Well Barriers\",\n    \"API RP 90 - Annular Casing Pressure Management\"\n  ],\n  \"costEstimation\": {\n    \"totalCostUSD\": 4.88786225E7,\n    \"drillingCostUSD\": 1.575E7,\n    \"completionCostUSD\": 1.6175E7,\n    \"wellheadCostUSD\": 3375000.0,\n    \"loggingCostUSD\": 1012500.0,\n    \"materialCostUSD\": 4075650.0000000005,\n    \"contingencyCostUSD\": 6375472.5,\n    \"contingencyPct\": 15.0,\n    \"region\": \"NORWAY\"\n  },\n  \"schedule\": {\n    \"drillingDays\": 45.0,\n    \"completionDays\": 25.0,\n    \"totalDays\": 70.0,\n    \"rigDayRateUSD\": 350000.0\n  }\n}\n"
+    },
+    {
+      "index": 6,
+      "code_sha256": "fe609ec5111d0457011be63ff84a556dc80dc50762117176ecd21dcffb789177",
+      "line": 885,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888888,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 90.0
+        },
+        {
+          "name": "wellstream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.666666666666664,
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 60.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "flowline",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 113.33369405820689,
+          "getTemperature_C": 10.235886786027208,
+          "inlets": [
+            "Wellstream"
+          ],
+          "outlets": [
+            "Subsea Flowline out stream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 343432.4474915527
+        },
+        {
+          "name": "bhp_stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 16.66666666666667,
+          "getPressure_bara": 280.0,
+          "getTemperature_C": 85.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "tubing",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 129.5153763747723,
+          "getTemperature_C": 11.338821940903642,
+          "inlets": [
+            "Bottomhole"
+          ],
+          "outlets": [
+            "Well Tubing out stream"
+          ]
+        },
+        {
+          "name": "choke",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 110.0,
+          "getTemperature_C": 8.266921362292862,
+          "inlets": [
+            "Well Tubing out stream"
+          ],
+          "outlets": [
+            "Subsea Choke out stream"
+          ]
+        },
+        {
+          "name": "riser",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 135.05334993035368,
+          "getTemperature_C": 19.61043196041544,
+          "inlets": [
+            "Subsea Booster out stream"
+          ],
+          "outlets": [
+            "Riser out stream"
+          ]
+        },
+        {
+          "name": "test_fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 180.0,
+          "getTemperature_C": 70.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 22.222222222222225,
+          "getPressure_bara": 180.0,
+          "getTemperature_C": 70.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "pipe",
+          "class": "neqsim.process.equipment.pipeline.PipeBeggsAndBrills",
+          "getPressure_bara": 170.18604874226742,
+          "getTemperature_C": 7.2359469702696515,
+          "inlets": [
+            "Feed"
+          ],
+          "outlets": [
+            "Flowline out stream"
+          ]
+        },
+        {
+          "name": "proc",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "booster",
+          "class": "neqsim.process.equipment.compressor.Compressor",
+          "getPressure_bara": 150.0,
+          "getTemperature_C": 22.444691838765152,
+          "getPower_W": 343432.4474915527,
+          "inlets": [
+            "Subsea Flowline out stream"
+          ],
+          "outlets": [
+            "Subsea Booster out stream"
+          ]
+        },
+        {
+          "name": "stream",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.888888888888886,
+          "getPressure_bara": 250.0,
+          "getTemperature_C": 90.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "well",
+          "class": "neqsim.process.equipment.subsea.SubseaWell",
+          "inlets": [
+            "Well Stream"
+          ],
+          "outlets": [
+            "Producer-1 out stream"
+          ]
+        },
+        {
+          "name": "design",
+          "class": "neqsim.process.mechanicaldesign.subsea.WellMechanicalDesign"
+        }
+      ],
+      "seconds": 0.0,
+      "output": "Subsea trees:   150 MNOK\nManifolds:      80 MNOK\nFlowlines:      300 MNOK\nUmbilicals:     176 MNOK\nRisers:         4 MNOK\nTotal SURF:     710 MNOK\n"
+    }
+  ],
+  "physical_checks": [
+    {
+      "block": 1,
+      "equipment": "Subsea Flowline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 20818.585763543255,
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222225,
+        "mass_out_kg_s": 22.222222222222225,
+        "enthalpy_in_W": -2157791.767390693,
+        "enthalpy_out_W": -7389773.189589295,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "Well Tubing",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 34812.68809735541,
+      "boundary": {
+        "mass_in_kg_s": 16.66666666666667,
+        "mass_out_kg_s": 16.66666666666667,
+        "enthalpy_in_W": -2263046.2668175255,
+        "enthalpy_out_W": -5683971.501740776,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "Subsea Choke",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.3065452927956135e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.66666666666667,
+        "mass_out_kg_s": 16.66666666666667,
+        "enthalpy_in_W": -5683971.501740776,
+        "enthalpy_out_W": -5683971.50173335,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "Subsea Flowline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "ESTIMATED_INNER_H",
+      "U_W_m2K": 8476.999411172008,
+      "boundary": {
+        "mass_in_kg_s": 16.66666666666667,
+        "mass_out_kg_s": 16.66666666666667,
+        "enthalpy_in_W": -5683971.50173335,
+        "enthalpy_out_W": -5884305.586962917,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "Production Riser",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "SPECIFIED_U",
+      "U_W_m2K": 5.0,
+      "boundary": {
+        "mass_in_kg_s": 16.66666666666667,
+        "mass_out_kg_s": 16.66666666666667,
+        "enthalpy_in_W": -5884305.586962917,
+        "enthalpy_out_W": -5876124.84001455,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "Flowline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.552488851075395e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "SPECIFIED_U",
+      "U_W_m2K": 5.0,
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222225,
+        "mass_out_kg_s": 22.222222222222225,
+        "enthalpy_in_W": -2157791.767390693,
+        "enthalpy_out_W": -3884916.2908596336,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "Flowline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.552488851075395e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "SPECIFIED_U",
+      "U_W_m2K": 5.0,
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222225,
+        "mass_out_kg_s": 22.222222222222225,
+        "enthalpy_in_W": -2157791.767390693,
+        "enthalpy_out_W": -4676462.783439331,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "Flowline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.552488851075395e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "SPECIFIED_U",
+      "U_W_m2K": 5.0,
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222225,
+        "mass_out_kg_s": 22.222222222222225,
+        "enthalpy_in_W": -2157791.767390693,
+        "enthalpy_out_W": -5462839.242621313,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "Flowline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.552488851075395e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "SPECIFIED_U",
+      "U_W_m2K": 5.0,
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222225,
+        "mass_out_kg_s": 22.222222222222225,
+        "enthalpy_in_W": -2157791.767390693,
+        "enthalpy_out_W": -5905762.079249366,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "Flowline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "SPECIFIED_U",
+      "U_W_m2K": 5.0,
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222225,
+        "mass_out_kg_s": 22.222222222222225,
+        "enthalpy_in_W": -2157791.767390693,
+        "enthalpy_out_W": -6581987.835906029,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "Flowline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "SPECIFIED_U",
+      "U_W_m2K": 5.0,
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222225,
+        "mass_out_kg_s": 22.222222222222225,
+        "enthalpy_in_W": -2157791.767390693,
+        "enthalpy_out_W": -6906897.762127301,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "Flowline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.552488851075395e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "SPECIFIED_U",
+      "U_W_m2K": 5.0,
+      "boundary": {
+        "mass_in_kg_s": 22.222222222222225,
+        "mass_out_kg_s": 22.222222222222225,
+        "enthalpy_in_W": -2157791.767390693,
+        "enthalpy_out_W": -7163588.450831318,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "Subsea Flowline",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "SPECIFIED_U",
+      "U_W_m2K": 5.0,
+      "boundary": {
+        "mass_in_kg_s": 16.666666666666664,
+        "mass_out_kg_s": 16.666666666666664,
+        "enthalpy_in_W": -2252950.883441736,
+        "enthalpy_out_W": -4989276.629790946,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "Subsea Booster",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.666666666666664,
+        "mass_out_kg_s": 16.666666666666664,
+        "enthalpy_in_W": -4989276.629790946,
+        "enthalpy_out_W": -4645844.182299393,
+        "external_energy_W": 343432.4474915527
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "Riser",
+      "class": "PipeBeggsAndBrills",
+      "scope": "pipeline material conservation, finite pressure/temperature, positive-rise pressure-loss sign and profile domain; no heat-loss or multiphase correlation calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_upward_or_horizontal_pressure_drop",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_profile",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "thermal_mode": "SPECIFIED_U",
+      "U_W_m2K": 5.0,
+      "boundary": {
+        "mass_in_kg_s": 16.666666666666664,
+        "mass_out_kg_s": 16.666666666666664,
+        "enthalpy_in_W": -4645844.182299393,
+        "enthalpy_out_W": -4679584.599991742,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    }
+  ]
+}

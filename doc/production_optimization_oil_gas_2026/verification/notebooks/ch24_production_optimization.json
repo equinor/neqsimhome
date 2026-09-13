@@ -1,0 +1,351 @@
+{
+  "notebook": "chapters\\ch24_production_optimization\\notebooks\\ch18_prod_optimization.ipynb",
+  "status": "passed",
+  "executed_at": "2026-09-12T20:12:12.130448+00:00",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "runtime_seconds": 17.44,
+  "code_cells": 8,
+  "executed_cells": 8,
+  "cell_runs": [
+    {
+      "cell_index": 1,
+      "execution_count": 1,
+      "runtime_seconds": 5.281,
+      "sha256": "b5bca40728b9cb313b22f11db50f949665cfe9715c632ea1fe187d87d31efcf1",
+      "status": "passed"
+    },
+    {
+      "cell_index": 3,
+      "execution_count": 2,
+      "runtime_seconds": 2.813,
+      "sha256": "621053b485ebc2a170632f9499af7a2d6ea0af445a2ec3ef510aed6bbc84c15c",
+      "status": "passed"
+    },
+    {
+      "cell_index": 5,
+      "execution_count": 3,
+      "runtime_seconds": 1.593,
+      "sha256": "58089fd930148397dec98c10a8dca57f3eb4a5d66c6c03fae15e60a539cd7b86",
+      "status": "passed"
+    },
+    {
+      "cell_index": 7,
+      "execution_count": 4,
+      "runtime_seconds": 1.657,
+      "sha256": "7749e76c20a25aeaf080a209afaec5cbddf501420d43d196391cb1477255e486",
+      "status": "passed"
+    },
+    {
+      "cell_index": 10,
+      "execution_count": 5,
+      "runtime_seconds": 4.703,
+      "sha256": "f7db048934323ed771a6ef4e66f43324cab7f37841d5cf0eea62fbcc8f1ca151",
+      "status": "passed"
+    },
+    {
+      "cell_index": 12,
+      "execution_count": 6,
+      "runtime_seconds": 0.812,
+      "sha256": "827df1b52ffb9c2d31e960c4e22ef8815695a6abe190e1c3a0c17c8ed3b9001e",
+      "status": "passed"
+    },
+    {
+      "cell_index": 16,
+      "execution_count": 7,
+      "runtime_seconds": 0.563,
+      "sha256": "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+      "status": "passed"
+    },
+    {
+      "cell_index": 18,
+      "execution_count": 8,
+      "runtime_seconds": 0.015,
+      "sha256": "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "source_revision": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "java_version": "25.0.4.1",
+  "neqsim_class_origin": "file:/C:/Users/solbraa/OneDrive%20-%20NTNU/Documents/ChatGPT/NeqSim/target/classes/",
+  "figures": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch24_production_optimization\\figures\\ch18_optimization_convergence.png",
+      "sha256": "e876baed70aae1a97fd19f39fb17baad4862814c22d9f25cccdf5f5ef37deca3",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Binary Search Convergence for Maximum Throughput",
+          "series": "Curve 1",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Feed Rate (t/hr)",
+          "n_points": 8,
+          "n_nonfinite": 0,
+          "x_min": 1.0,
+          "x_max": 8.0,
+          "y_min": 60.0,
+          "y_max": 80.0,
+          "x_at_y_max": 2.0
+        },
+        {
+          "panel": 1,
+          "title": "Binary Search Convergence for Maximum Throughput",
+          "series": "Max feasible = 68.8 t/hr",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Feed Rate (t/hr)",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_min": 68.75,
+          "y_max": 68.75,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 1,
+          "title": "Binary Search Convergence for Maximum Throughput",
+          "series": "Design rate = 60 t/hr",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Feed Rate (t/hr)",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_min": 60.0,
+          "y_max": 60.0,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 1,
+          "title": "Binary Search Convergence for Maximum Throughput",
+          "series": "Points 1",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Feed Rate (t/hr)",
+          "n_points": 8,
+          "n_nonfinite": 0,
+          "x_min": 1.0,
+          "x_max": 8.0,
+          "y_min": 60.0,
+          "y_max": 80.0,
+          "x_at_y_max": 2.0
+        },
+        {
+          "panel": 2,
+          "title": "",
+          "series": "100% capacity",
+          "value_axis": "y",
+          "x_label": "Iteration",
+          "y_label": "Bottleneck Utilization (%)",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_min": 100.0,
+          "y_max": 100.0,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 2,
+          "title": "",
+          "series": "Bars 1",
+          "value_axis": "y",
+          "x_label": "Iteration",
+          "y_label": "Bottleneck Utilization (%)",
+          "n_points": 8,
+          "n_nonfinite": 0,
+          "x_min": 1.0,
+          "x_max": 8.0,
+          "y_min": 86.95652173913045,
+          "y_max": 115.94202898550732,
+          "x_at_y_max": 2.0
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch24_production_optimization\\figures\\ch18_algorithm_comparison.png",
+      "sha256": "895712467ab6a4fc1905d3f05add75e8442693727ad7ef9ece348c6cfe7cee3a",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Optimal Throughput by Algorithm",
+          "series": "Bars 1",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Maximum Rate (t/hr)",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_min": 68.99983860426559,
+          "y_max": 68.99999782443047,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 2,
+          "title": "Feasibility at returned optimum",
+          "series": "Bars 1",
+          "value_axis": "y",
+          "x_label": "",
+          "y_label": "Maximum equipment utilization (%)",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_min": 99.99976609313826,
+          "y_max": 99.99999684700056,
+          "x_at_y_max": 0.0
+        }
+      ]
+    }
+  ],
+  "nonfinite_series": [],
+  "numeric_results": {
+    "design_rate": 60000.0,
+    "low": 68750.0,
+    "high": 69062.5,
+    "tol": 500.0,
+    "i": 7.0,
+    "mid": 69062.5,
+    "bn_util": 100.09057971014495,
+    "max_rate": 68750.0,
+    "iters": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0
+    ],
+    "rates": [
+      60.0,
+      80.0,
+      70.0,
+      65.0,
+      67.5,
+      68.75,
+      69.375,
+      69.0625
+    ],
+    "feasibility": [
+      1.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "utils": [
+      86.95652173913045,
+      115.94202898550732,
+      101.44927536231896,
+      94.20289855072457,
+      97.82608695652192,
+      99.63768115942044,
+      100.54347826086926,
+      100.09057971014495
+    ],
+    "opt_rates": [
+      68999.99782443047,
+      68999.83860426559
+    ],
+    "opt_utils": [
+      99.99999684700056,
+      99.99976609313826
+    ],
+    "utilization": 99.99976609313826,
+    "val": 99.99976609313826
+  },
+  "figure_discussions": [
+    {
+      "chapter": "ch24_production_optimization",
+      "chapter_number": 24,
+      "figure": "ch18_optimization_convergence.png",
+      "figure_path": "figures/ch18_optimization_convergence.png",
+      "caption": "Binary Search Convergence for Maximum Throughput.",
+      "title": "Binary Search Convergence for Maximum Throughput",
+      "observation": "Feed Rate spans 60–80 t/hr across the plotted cases. Bottleneck Utilization spans 86.96–115.9 % across the plotted cases.",
+      "mechanism": "Bisection retains a feasible lower rate and an infeasible upper rate, halving their separation after each process evaluation.",
+      "implication": "The final lower bound is a conservative approximation to the declared capacity boundary.",
+      "recommendation": "Preserve both endpoints and the stopping tolerance with the reported capacity.",
+      "notebook": "notebooks/ch18_prod_optimization.ipynb",
+      "dpi": 220,
+      "sha256": "e876baed70aae1a97fd19f39fb17baad4862814c22d9f25cccdf5f5ef37deca3",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Feed Rate",
+            60.0,
+            80.0,
+            "t/hr"
+          ],
+          [
+            "Bottleneck Utilization",
+            86.95652173913045,
+            115.94202898550732,
+            "%"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    },
+    {
+      "chapter": "ch24_production_optimization",
+      "chapter_number": 24,
+      "figure": "ch18_algorithm_comparison.png",
+      "figure_path": "figures/ch18_algorithm_comparison.png",
+      "caption": "Optimal Throughput by Algorithm.",
+      "title": "Optimal Throughput by Algorithm",
+      "observation": "Binary and golden-section searches return 69.0000 and 68.9998 t/hr. Independent reruns give maximum utilizations of 100.000 and 100.000 percent.",
+      "mechanism": "The two searches use the same process and capacity definitions; the second panel reruns utilization at each returned optimum.",
+      "implication": "A reported convergence flag is insufficient unless the returned rate also satisfies the physical constraints.",
+      "recommendation": "Use the independently checked utilization and pressure alongside the search result.",
+      "notebook": "notebooks/ch18_prod_optimization.ipynb",
+      "dpi": 220,
+      "sha256": "895712467ab6a4fc1905d3f05add75e8442693727ad7ef9ece348c6cfe7cee3a",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": []
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    }
+  ],
+  "notebook_sha256": "be78b090e5be78d8b27fa9f08aced81a3daa82c2ce1b70b7f04132ccd01a3309",
+  "editorial_review": {
+    "reviewed_at": "2026-09-12T20:15:02.459204+00:00",
+    "pre_review_notebook_sha256": "fba0505fc59701b58eb21f043c34a2553b51eb5a21d7e3a2d816a95953f64f11",
+    "code_and_outputs_unchanged": true,
+    "description": "Replaced generated discussion prose with plot-specific reviewed interpretation; every executed code hash rechecked."
+  },
+  "scientific_validation": {
+    "physics_report": "verification\\scientific_revision\\notebooks\\ch24_production_optimization.json",
+    "validation_helper_sha256": {
+      "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+      "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+      "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+    },
+    "pre_scope_markdown_sha256": "be78b090e5be78d8b27fa9f08aced81a3daa82c2ce1b70b7f04132ccd01a3309",
+    "post_execution_edit": "Added scope and independent benchmark links only; every executed code-cell hash rechecked."
+  }
+}

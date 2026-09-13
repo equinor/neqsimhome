@@ -1,0 +1,197 @@
+{
+  "chapter": "ch26_well_network_optimization",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "execution_model": "Sequential literal Python in a fresh JVM; ordinary executions supplemented by exact-source hook runs. Per-example evidence links identify reused executions.",
+  "examples": [
+    {
+      "number": 1,
+      "language": "python",
+      "line": 158,
+      "sha256": "1c9a1d2e093ea5a2446b98679d986c54956db10c898ea26c7c7cc06a428e6b82",
+      "status": "passed",
+      "seconds": 2.36,
+      "output": "[Wellbore-A, Reservoir-A]\n",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 2,
+      "language": "python",
+      "line": 172,
+      "sha256": "d0f0abebe607b7caca0300c1dfa4c5d4054bf4a5dcbe87834ea811e2e97e5f18",
+      "status": "passed",
+      "seconds": 10.48399999999674,
+      "output": "ch26_well_network_optimization:fence2:39: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 3,
+      "language": "python",
+      "line": 240,
+      "sha256": "e4a441983b96c27b6d71e760bb4c12763cf6400e86cfec4d1d764066ca3f6940",
+      "status": "integration_pattern",
+      "reason": "pattern: requires wellstream and calibrated IPR test inputs"
+    },
+    {
+      "number": 4,
+      "language": "python",
+      "line": 264,
+      "sha256": "c8d42da2872f2544aea1b2dad1715f1fafa11a73ca2102be400fec3f5170ffee",
+      "status": "passed",
+      "seconds": 0.031000000002677552,
+      "output": "",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 5,
+      "language": "python",
+      "line": 277,
+      "sha256": "9cbbcda899ffa9b665ad715856d416e95679223874644323ff70ae6eb9b5fc89",
+      "status": "passed",
+      "seconds": 0.01599999999598367,
+      "output": "Reservoir pressure: 248.5 RMS error: 76.79558488651863\n",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 6,
+      "language": "python",
+      "line": 325,
+      "sha256": "fd7d68d8a33e4928505a866778b0b089af0119d89e1eb7d899182b9854be43ad",
+      "status": "passed",
+      "seconds": 5.5310000000026776,
+      "output": "Tubing head pressure: 85.5 bara\n",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 7,
+      "language": "python",
+      "line": 371,
+      "sha256": "2ef0fe02c17ec3ec8291bdc6ae5cfb0e786c0ff7b00691394c7b4446fd0978f3",
+      "status": "integration_pattern",
+      "reason": "pattern: requires tubing-specific valid flow envelope and rejection handling"
+    },
+    {
+      "number": 8,
+      "language": "python",
+      "line": 434,
+      "sha256": "a0edfed88f2fe46d04070c233c0205aa6347f1134c6559ae612a0c25bd326339",
+      "status": "passed",
+      "seconds": 0.125,
+      "output": "=== Network Solution Report ===\nNetwork: Gathering Network | Converged: true | Iterations: 17 | Max Residual: 0,00 Pa\r\n\n--- Nodes ---\nName                 Type           P (bara) Demand (kg/h)\r\nManifold             JUNCTION          86,94         0,00\r\nPlatform             SINK              85,00         0,00\r\nSupply-A             SOURCE            90,00    -10000,00\r\n\n--- Elements ---\nName                 Type         From         To        Flow (kg/h)     dP (bar)   Velocity\r\nFlowline-A           PIPE         Supply-A     Manifold     39036,84       3,0648       4,96\r\nExport               PIPE         Manifold     Platform     39036,84       1,9352       3,18\r\n\n--- Gas Composition at Nodes ---\nNode                   Components\r\nSupply-A                        2\r\n\nMass balance residual: 0.0\n",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 9,
+      "language": "python",
+      "line": 475,
+      "sha256": "a0e58e25a5851e532aeaf153d938a3dc1d914898b9614db849defeae73780570",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "Converged: True, Iterations: 17, Residual: 3.80e-07\n",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 10,
+      "language": "python",
+      "line": 541,
+      "sha256": "38538337fc93106328b3260bdff11e01521a55f61ef5f71f3376932453c64888",
+      "status": "integration_pattern",
+      "reason": "pattern: algorithm requires caller well identities base rates and choke adapters"
+    },
+    {
+      "number": 11,
+      "language": "python",
+      "line": 647,
+      "sha256": "baf1a904522020d00d2252ecaba2591a0734a4a64b34450778e4fc3dd6862f92",
+      "status": "passed",
+      "seconds": 4.203000000001339,
+      "output": "Lift allocation: {'Well-A': 1019999.9389648444, 'Well-B': 1019999.9389648444}\nOil rates: {'Well-A': 3709.9999694824223, 'Well-B': 3109.9999694824223}\nTotal oil: 6819.999938964845 Sm3/d\nTotal lift used: 2039999.877929689 Sm3/d\nChecked allocation Sm3/day: [1000000. 1500000.] oil: 7050.0\nNative candidate objective gap: 230.00006103515534\nNative candidate rejected as an optimum for these tabulated curves.\n",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 12,
+      "language": "python",
+      "line": 700,
+      "sha256": "ccc2f3f18f767003a7a937d54ee6e846440c909220c7b4f2c7bfd6bce724244b",
+      "status": "passed",
+      "seconds": 0.031000000002677552,
+      "output": "  Well-A: GL = 205000 Sm3/d, Oil = 2418 Sm3/d\n  Well-B: GL = 155000 Sm3/d, Oil = 2111 Sm3/d\n  Well-C: GL = 140000 Sm3/d, Oil = 1023 Sm3/d\n",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 13,
+      "language": "python",
+      "line": 788,
+      "sha256": "c707fdb6c9dc3590abbc9e0c8fdbcc03a0afbb9a6921688e5a8508d2d4f9d63c",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "Flowline-A 39036.84347516554 kg/hr 4.962067360224117 m/s\nExport 39036.84347516554 kg/hr 3.1757231105434354 m/s\nPlatform pressure: 85.0 bara\n",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 14,
+      "language": "python",
+      "line": 853,
+      "sha256": "2fd2e828e283ab5e574df139d1edc4ce06760d6d2596f3b0faa82deff1bc345f",
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "Allocated oil: 6819.999938964845 Sm3/day\n",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 15,
+      "language": "python",
+      "line": 869,
+      "sha256": "c75a0e818d139a112c9e5593b9dacc4b4c3357dae309aa3e3e7b758ba04ffe07",
+      "status": "passed",
+      "seconds": 0.062000000005355105,
+      "output": "[259908.04036458337, 1040242.5130208335, 1199849.4466145835] 5835.786549551755 True\n",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 16,
+      "language": "python",
+      "line": 886,
+      "sha256": "3b0ff330b53075c73799a85ba2f2ef1970cccec3dcc27c680d3d2112cdf3d03d",
+      "status": "passed",
+      "seconds": 0.01599999999598367,
+      "output": "Converged: True in 3 iters\nField rate: 1684230.0800661817 Sm3/d\nWell rates: {'Well-A': 926529.059339204, 'Well-B': 757701.0207269778}\nRevenue: 5052690.240198545 energy: 202107.6096079418 kWh/d\n",
+      "execution_evidence": "verification\\scientific_revision\\ch26_solution_checks.json",
+      "execution_evidence_sha256": "065ce263a0f84c16500da7bd59bb9baad44b1311bc7c7fc1c4003bc7e4c785b8",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9a3abbfe3515ad76784b2b003695d18436d4576633c203f69663b30714ef26ef.json"
+    },
+    {
+      "number": 17,
+      "language": "python",
+      "line": 968,
+      "sha256": "83541248df82c2204b1ada88417cb9336edfdb56aad72d1a6b03af4307ba2836",
+      "status": "passed",
+      "seconds": 2.219,
+      "output": "Oil allocation P-1..P-6 (Sm3/day): [4500. 3800. 2344. 5000. 2800. 4200.]\nOil 22644.000; gas 3500000.000; water 5210.421\nPower 6678.192 kW; dual bound 22644.000 Sm3/day\n"
+    }
+  ]
+}

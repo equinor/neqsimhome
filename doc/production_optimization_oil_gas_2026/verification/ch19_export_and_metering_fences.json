@@ -1,0 +1,80 @@
+{
+  "chapter": "ch19_export_and_metering",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "execution_model": "sequential Python fences, fresh JVM per chapter",
+  "examples": [
+    {
+      "number": 1,
+      "language": "python",
+      "line": 257,
+      "sha256": "19cbf01e1b6472bc4213e45761b4fb6728e76727ebd47fffcf49383d7234290c",
+      "status": "passed",
+      "seconds": 1.578,
+      "output": "=== ISO 6976:2016 Gas Quality Report ===\nReference conditions: volume at 15 °C, combustion at 25 °C\nSuperior Calorific Value (GCV):  40.85 MJ/Sm³\nInferior Calorific Value (NCV):  36.94 MJ/Sm³\nSuperior Wobbe Index:            51.02 MJ/Sm³\nRelative Density (air=1):        0.6409\nMolar Mass:                      18.52 g/mol\n"
+    },
+    {
+      "number": 2,
+      "language": "python",
+      "line": 305,
+      "sha256": "1f242295a4a0696d7b876799301609999185806a3aa137079fc4976815bf081c",
+      "status": "passed",
+      "seconds": 0.313,
+      "output": "  C2+ (mol%)   GCV (MJ/Sm³)   Wobbe (MJ/Sm³)    d (rel)\n------------------------------------------------------\n         2.0          37.68            49.11     0.5885\n         4.0          38.56            49.63     0.6036\n         6.0          39.44            50.14     0.6187\n         8.0          40.32            50.64     0.6339\n        10.0          41.20            51.14     0.6490\n        12.0          42.08            51.64     0.6642\n        15.0          43.41            52.37     0.6869\n"
+    },
+    {
+      "number": 3,
+      "language": "python",
+      "line": 354,
+      "sha256": "fa9acb4436b78a3be4565bd4261c3f132cbf0d5edb7af15c30e25c136a85491a",
+      "status": "passed",
+      "seconds": 8.546,
+      "output": "Water VLE dew point; ice/hydrate phases are outside this calculation\n  20.0 bara:  -35.15 C\n  40.0 bara:  -29.28 C\n  60.0 bara:  -26.53 C\n  70.0 bara:  -25.78 C\n  80.0 bara:  -25.33 C\n 100.0 bara:  -25.10 C\n 120.0 bara:  -25.34 C\n 150.0 bara:  -25.82 C\n"
+    },
+    {
+      "number": 4,
+      "language": "python",
+      "line": 399,
+      "sha256": "3040e44026ac91c92590723409cd22051670366a0b9a7e18ed1f058d29448f09",
+      "status": "passed",
+      "seconds": 0.172,
+      "output": "Undefined terminal envelope slots excluded: 1\nSampled dew-curve maximum: 27.3 °C at 48.9 bara\n\n    T (°C)   P (bara)\n----------------------\n     -23.0        1.1\n     -21.6        1.2\n     -20.2        1.3\n     -18.8        1.5\n     -17.3        1.7\n     -15.5        1.9\n     -13.6        2.1\n     -11.5        2.5\n      -9.1        2.9\n      -6.5        3.5\n      -3.6        4.2\n      -0.3        5.2\n       3.3        6.5\n       7.2        8.4\n      11.5       11.0\n      15.9       14.9\n      20.4       20.6\n      24.5       29.2\n      26.7       39.0\n      27.3       48.9\n      26.6       58.7\n      24.9       68.4\n      22.0       78.0\n      18.0       87.5\n      12.4       96.7\n       6.2      103.5\n      -0.9      108.5\n      -8.9      111.0\n     -17.4      110.5\n     -25.4      107.5\n     -32.6      102.8\n     -39.4       96.6\n     -45.5       89.8\n     -50.1       83.7\n     -53.8       78.5\n     -56.2       74.7\n     -57.8       72.2\n     -58.8       70.6\n     -59.6       69.5\n     -59.7       69.2\n     -59.8       69.0\n     -60.0       68.8\n     -60.1       68.6\n     -60.1       68.5\n"
+    },
+    {
+      "number": 5,
+      "language": "python",
+      "line": 786,
+      "sha256": "bd9fe9c52d1f27721bab77786601094a472fde6c38007c1efc3447dedabeac2c",
+      "status": "passed",
+      "seconds": 0.406,
+      "output": "=== Export Pipeline Results ===\nInlet:  150.0 bara, 40.0 °C\nOutlet: 145.8 bara, 40.0 °C\nPressure drop: 4.2 bar over 200 km\nSpecific dP: 0.02 bar/km\n"
+    },
+    {
+      "number": 6,
+      "language": "python",
+      "line": 844,
+      "sha256": "4ba7ed4d4d7b10829e3465d356b479818e6ca5eb432925d35c8c3b2fc19b1c9f",
+      "status": "passed",
+      "seconds": 0.531,
+      "output": " ID (inch)     ID (m)   dP (bar)    v (m/s)    Arrival P\n------------------------------------------------------\n        24     0.6096       40.4        3.6        109.6\n        28     0.7112       17.1        2.6        132.9\n        30     0.7620       11.9        2.3        138.1\n        32     0.8128        8.5        2.0        141.5\n        36     0.9144        4.7        1.6        145.3\n        40     1.0160        2.8        1.3        147.2\n        42     1.0668        2.2        1.2        147.8\n"
+    },
+    {
+      "number": 7,
+      "language": "python",
+      "line": 920,
+      "sha256": "beea294d2a9cf9d14677dce81b5bca1de286e2d1359f69f0025b4b24e7567f32",
+      "status": "passed",
+      "seconds": 0.235,
+      "output": "=== Export System Results ===\nCompressor suction:   80.0 bara, 35.0 °C\nCompressor discharge: 170.0 bara, 102.9 °C\nCompressor power:     14.17 MW\nAfter cooler outlet:  170.0 bara, 40.0 °C\nPipeline arrival:     164.4 bara, 40.0 °C\nPipeline dP:          5.6 bar\n"
+    },
+    {
+      "number": 8,
+      "language": "python",
+      "line": 1021,
+      "sha256": "cc7c26f56b45396f6f3a4f8df20cb568df8246f7457ecca9affb15b961941e91",
+      "status": "passed",
+      "seconds": 0.078,
+      "output": "=== Gas Quality vs. Specification ===\nParameter                                Value      Min      Max   Status\n-----------------------------------------------------------------------\nGCV (MJ/Sm³)                             40.85     36.0     44.0     PASS\nWobbe Index (MJ/Sm³)                     51.02     46.5     54.0     PASS\nCO2 (mol%)                                1.50        —      2.5     PASS\n"
+    }
+  ]
+}

@@ -1,0 +1,3215 @@
+{
+  "chapter": "ch28_field_development",
+  "source_commit": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "python_executable": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "hook_module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\ch28_solution_hooks.py",
+  "hook_sha256": "87593e4b49507a88a8298769d0a2939177a65af12c9f561c6646379e901cacf3",
+  "hook_snapshot": "verification\\scientific_revision\\hook_sources\\87593e4b49507a88a8298769d0a2939177a65af12c9f561c6646379e901cacf3.py",
+  "helper_sources": [
+    {
+      "module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\verify_optimization_solution_hooks.py",
+      "sha256": "57ad44d5e87dd4aaa28e1fe34698976f0645f7b397658b3621b4bf854dab275b",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\57ad44d5e87dd4aaa28e1fe34698976f0645f7b397658b3621b4bf854dab275b.py"
+    }
+  ],
+  "interpretation": "Exact literal execution with supplementary numerical/physical/software solution checks; not field calibration.",
+  "prerequisite_fences": [
+    {
+      "number": 13,
+      "sha256": "e28173dfbf0c9c3912e69d3a274dd6e8f01bf08fde88c9de7cf661345a528a1c",
+      "status": "passed"
+    },
+    {
+      "number": 16,
+      "sha256": "ee167c8ddcc969724e2875c64b477a7005fba8240d30fcfe6da5ce613df5ec7f",
+      "status": "passed"
+    },
+    {
+      "number": 17,
+      "sha256": "5ee5f89747462ffa2e5afc397692a15ba53e0f1847c2aa2c974844fb57fa4b1c",
+      "status": "passed"
+    },
+    {
+      "number": 18,
+      "sha256": "ce1970f65d9a5c788bfa9fe842cd54bfc47dafd439f36fe13d47b23cf95f805f",
+      "status": "passed"
+    },
+    {
+      "number": 20,
+      "sha256": "54f9a650bb21c8bb93c4952d461862bee22ea0bdc3ac91e6a71ec15540c6dee2",
+      "status": "passed"
+    },
+    {
+      "number": 21,
+      "sha256": "6671ec6827fec2300d8d811f635ecf825478e2ff2bcd457799f2be06936e0fb9",
+      "status": "passed"
+    },
+    {
+      "number": 22,
+      "sha256": "3e4f2eab457ae6b5a7b8721ae569693b44719d3ffac919712376d0e7f7402e69",
+      "status": "passed"
+    },
+    {
+      "number": 23,
+      "sha256": "7425ee70e8ea744883092565c3e49b35dc4245e0f49b1a6b64653104cc30472c",
+      "status": "passed"
+    }
+  ],
+  "entries": [
+    {
+      "number": 13,
+      "sha256": "e28173dfbf0c9c3912e69d3a274dd6e8f01bf08fde88c9de7cf661345a528a1c",
+      "code_sha256": "e28173dfbf0c9c3912e69d3a274dd6e8f01bf08fde88c9de7cf661345a528a1c",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Configured reference after explicit verification TP flash",
+          "passed": true,
+          "observed": {
+            "T_K": 358.15,
+            "P_bara": 200.0,
+            "rho_kg_m3": 285.47683313525835,
+            "mol_s": 100.0,
+            "phases": [
+              {
+                "type": "gas",
+                "mole_fraction": 0.5784788926237424
+              },
+              {
+                "type": "oil",
+                "mole_fraction": 0.4119983477429195
+              },
+              {
+                "type": "aqueous",
+                "mole_fraction": 0.009522759633338197
+              }
+            ],
+            "component_flash_balance_absolute": 7.771561172376096e-16
+          },
+          "tolerance": 1e-08,
+          "scope": null
+        },
+        {
+          "name": "Base 12 km tubing [0, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 105.078125,
+            "outlet_bara": 30.234342360758077,
+            "pressure_loss_bar": 74.84378263924192
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km flowline [0, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 30.234342360758077,
+            "outlet_bara": 30.086848002160025,
+            "pressure_loss_bar": 0.1474943585980526
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km tubing [0, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 79.94140625,
+            "outlet_bara": 30.354938373791118,
+            "pressure_loss_bar": 49.586467876208886
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km flowline [0, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 30.354938373791118,
+            "outlet_bara": 30.087781729982144,
+            "pressure_loss_bar": 0.2671566438089741
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km tubing [0, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 141.171875,
+            "outlet_bara": 50.31878328858967,
+            "pressure_loss_bar": 90.85309171141033
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km flowline [0, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 50.31878328858967,
+            "outlet_bara": 50.23019945776805,
+            "pressure_loss_bar": 0.08858383082161936
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km tubing [0, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 119.90234375,
+            "outlet_bara": 50.2512973956686,
+            "pressure_loss_bar": 69.6510463543314
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km flowline [0, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 50.2512973956686,
+            "outlet_bara": 50.094412173868896,
+            "pressure_loss_bar": 0.15688522179970477
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km tubing [1, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 103.7890625,
+            "outlet_bara": 30.78808447317245,
+            "pressure_loss_bar": 73.00097802682755
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km flowline [1, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 30.78808447317245,
+            "outlet_bara": 30.251607442501633,
+            "pressure_loss_bar": 0.5364770306708166
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km tubing [1, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 75.4296875,
+            "outlet_bara": 31.204960252263632,
+            "pressure_loss_bar": 44.22472724773637
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km flowline [1, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 31.204960252263632,
+            "outlet_bara": 30.35201347352279,
+            "pressure_loss_bar": 0.8529467787408436
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km tubing [1, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 138.59375,
+            "outlet_bara": 50.67810416426929,
+            "pressure_loss_bar": 87.91564583573071
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km flowline [1, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 50.67810416426929,
+            "outlet_bara": 50.34893064899627,
+            "pressure_loss_bar": 0.32917351527301975
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km tubing [1, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 105.078125,
+            "outlet_bara": 50.7868769867289,
+            "pressure_loss_bar": 54.2912480132711
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km flowline [1, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 50.7868769867289,
+            "outlet_bara": 50.201324784387786,
+            "pressure_loss_bar": 0.5855522023411126
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km tubing [2, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 112.8125,
+            "outlet_bara": 32.499341210232586,
+            "pressure_loss_bar": 80.31315878976741
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km flowline [2, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 32.499341210232586,
+            "outlet_bara": 30.2732910400902,
+            "pressure_loss_bar": 2.2260501701423863
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km tubing [2, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 94.12109375,
+            "outlet_bara": 34.317340932486864,
+            "pressure_loss_bar": 59.803752817513136
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km flowline [2, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 34.317340932486864,
+            "outlet_bara": 30.28183072069503,
+            "pressure_loss_bar": 4.035510211791834
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km tubing [2, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 143.10546875,
+            "outlet_bara": 51.62976591454352,
+            "pressure_loss_bar": 91.47570283545647
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km flowline [2, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 51.62976591454352,
+            "outlet_bara": 50.28199585720861,
+            "pressure_loss_bar": 1.3477700573349125
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km tubing [2, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 117.32421875,
+            "outlet_bara": 52.571436405169045,
+            "pressure_loss_bar": 64.75278234483096
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km flowline [2, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 52.571436405169045,
+            "outlet_bara": 50.12369624748423,
+            "pressure_loss_bar": 2.4477401576848123
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Base 12 km all 12 pressure roots and explicit unavailable-domain cells",
+          "passed": true,
+          "observed": [
+            {
+              "indices": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 105.078125,
+              "accepted": true,
+              "replayed_outlet_bara": 30.086848002160025,
+              "lower_inlet_bara": 104.07812499,
+              "lower_outlet_bara": 29.58211910788493
+            },
+            {
+              "indices": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 79.94140625,
+              "accepted": true,
+              "replayed_outlet_bara": 30.087781729982144,
+              "lower_inlet_bara": 78.94140624,
+              "lower_outlet_bara": 29.631729203662147
+            },
+            {
+              "indices": [
+                0,
+                1,
+                0,
+                0
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 141.171875,
+              "accepted": true,
+              "replayed_outlet_bara": 50.23019945776805,
+              "lower_inlet_bara": 140.17187499,
+              "lower_outlet_bara": 49.623915551006846
+            },
+            {
+              "indices": [
+                0,
+                1,
+                0,
+                1
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 119.90234375,
+              "accepted": true,
+              "replayed_outlet_bara": 50.094412173868896,
+              "lower_inlet_bara": 118.90234374,
+              "lower_outlet_bara": 49.54704009133244
+            },
+            {
+              "indices": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 103.7890625,
+              "accepted": true,
+              "replayed_outlet_bara": 30.251607442501633,
+              "lower_inlet_bara": 102.78906249,
+              "lower_outlet_bara": 29.71292515962902
+            },
+            {
+              "indices": [
+                1,
+                0,
+                0,
+                1
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 75.4296875,
+              "accepted": true,
+              "replayed_outlet_bara": 30.35201347352279,
+              "lower_inlet_bara": 74.42968749,
+              "lower_outlet_bara": 29.66171675047529
+            },
+            {
+              "indices": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 138.59375,
+              "accepted": true,
+              "replayed_outlet_bara": 50.34893064899627,
+              "lower_inlet_bara": 137.59374999,
+              "lower_outlet_bara": 49.73538093263726
+            },
+            {
+              "indices": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 105.078125,
+              "accepted": true,
+              "replayed_outlet_bara": 50.201324784387786,
+              "lower_inlet_bara": 104.07812499,
+              "lower_outlet_bara": 49.523662238905494
+            },
+            {
+              "indices": [
+                2,
+                0,
+                0,
+                0
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 112.8125,
+              "accepted": true,
+              "replayed_outlet_bara": 30.2732910400902,
+              "lower_inlet_bara": 111.81249999,
+              "lower_outlet_bara": 29.603756738025627
+            },
+            {
+              "indices": [
+                2,
+                0,
+                0,
+                1
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 94.12109375,
+              "accepted": true,
+              "replayed_outlet_bara": 30.28183072069503,
+              "lower_inlet_bara": 93.12109374,
+              "lower_outlet_bara": 29.392046012820135
+            },
+            {
+              "indices": [
+                2,
+                1,
+                0,
+                0
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 143.10546875,
+              "accepted": true,
+              "replayed_outlet_bara": 50.28199585720861,
+              "lower_inlet_bara": 142.10546874,
+              "lower_outlet_bara": 49.61542308380332
+            },
+            {
+              "indices": [
+                2,
+                1,
+                0,
+                1
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 117.32421875,
+              "accepted": true,
+              "replayed_outlet_bara": 50.12369624748423,
+              "lower_inlet_bara": 116.32421874,
+              "lower_outlet_bara": 49.316267532411786
+            }
+          ],
+          "tolerance": {
+            "pressure_search_width_bar": 1.0,
+            "target_numerical_bar": 1e-06
+          },
+          "scope": "Fresh NeqSim replay checks the reported root and lower bracket; mass/components and pressure domains checked for both physical pipe segments. Correlation validity against field data remains uncalibrated."
+        },
+        {
+          "name": "Base mixture operating flash",
+          "passed": true,
+          "observed": {
+            "T_K": 358.15,
+            "P_bara": 50.0,
+            "rho_kg_m3": 72.14883469895786,
+            "mol_s": 132376.65996864354,
+            "phases": [
+              {
+                "type": "gas",
+                "mole_fraction": 0.7793096688858864
+              },
+              {
+                "type": "oil",
+                "mole_fraction": 0.17696527684939098
+              },
+              {
+                "type": "aqueous",
+                "mole_fraction": 0.04372505426472261
+              }
+            ],
+            "component_flash_balance_absolute": 2.398081733190338e-14
+          },
+          "tolerance": 1e-08,
+          "scope": null
+        },
+        {
+          "name": "Base mixture independent composition and standard-volume contract",
+          "passed": true,
+          "observed": {
+            "requested_GOR_Sm3_Sm3": 1000.0,
+            "requested_watercut": 0.05,
+            "standard_liquid_rate_Sm3_hr": 9999.999999999993,
+            "requested_liquid_rate_Sm3_hr": 10000.0,
+            "actual_equilibrium_GOR": 999.9999840531812,
+            "actual_equilibrium_watercut": 0.0500000186187892,
+            "mass_rate_kg_hr": 15554257.826262815,
+            "relative_liquid_error": 7.275957614183426e-16,
+            "max_composition_error": 0.0
+          },
+          "tolerance": {
+            "standard_liquid_relative": 1e-06,
+            "composition_absolute": 1e-08,
+            "GOR_relative": 1e-06,
+            "watercut_absolute": 1e-06
+          },
+          "scope": "GOR and water cut prescribe reference-phase mixing; equilibrated standard ratios are separately checked for these literal recipes, not assumed exact for arbitrary fluids."
+        }
+      ],
+      "status": "passed",
+      "seconds": 20.875,
+      "output": "Feasible: 12/12\nProcess screening diagnostics exported\n"
+    },
+    {
+      "number": 16,
+      "sha256": "ee167c8ddcc969724e2875c64b477a7005fba8240d30fcfe6da5ce613df5ec7f",
+      "code_sha256": "ee167c8ddcc969724e2875c64b477a7005fba8240d30fcfe6da5ce613df5ec7f",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Route 1 tubing [0, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 105.400390625,
+            "outlet_bara": 30.39681513860453,
+            "pressure_loss_bar": 75.00357548639548
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 flowline [0, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 30.39681513860453,
+            "outlet_bara": 30.028794606054404,
+            "pressure_loss_bar": 0.36802053255012623
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 tubing [0, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 80.908203125,
+            "outlet_bara": 30.79494647359006,
+            "pressure_loss_bar": 50.11325665140994
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 flowline [0, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 30.79494647359006,
+            "outlet_bara": 30.13278916783471,
+            "pressure_loss_bar": 0.6621573057553505
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 tubing [0, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 141.171875,
+            "outlet_bara": 50.31878328858967,
+            "pressure_loss_bar": 90.85309171141033
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 flowline [0, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 50.31878328858967,
+            "outlet_bara": 50.09705102614954,
+            "pressure_loss_bar": 0.22173226244012767
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 tubing [0, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 120.224609375,
+            "outlet_bara": 50.427355458453874,
+            "pressure_loss_bar": 69.79725391654613
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 flowline [0, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 50.427355458453874,
+            "outlet_bara": 50.03567366658537,
+            "pressure_loss_bar": 0.39168179186850693
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 tubing [1, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 105.078125,
+            "outlet_bara": 31.47489304174759,
+            "pressure_loss_bar": 73.60323195825241
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 flowline [1, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 31.47489304174759,
+            "outlet_bara": 30.14596091759118,
+            "pressure_loss_bar": 1.3289321241564096
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 tubing [1, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 77.041015625,
+            "outlet_bara": 32.26190898571919,
+            "pressure_loss_bar": 44.77910663928081
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 flowline [1, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 32.26190898571919,
+            "outlet_bara": 30.18703026202222,
+            "pressure_loss_bar": 2.074878723696969
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 tubing [1, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 138.916015625,
+            "outlet_bara": 50.875062841153756,
+            "pressure_loss_bar": 88.04095278384625
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 flowline [1, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 50.875062841153756,
+            "outlet_bara": 50.0515206046987,
+            "pressure_loss_bar": 0.8235422364550544
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 tubing [1, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 106.3671875,
+            "outlet_bara": 51.65137118689137,
+            "pressure_loss_bar": 54.71581631310863
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 flowline [1, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 51.65137118689137,
+            "outlet_bara": 50.20029761466669,
+            "pressure_loss_bar": 1.4510735722246793
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 tubing [2, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 117.646484375,
+            "outlet_bara": 35.49891873801392,
+            "pressure_loss_bar": 82.14756563698609
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 flowline [2, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 35.49891873801392,
+            "outlet_bara": 30.210768239777323,
+            "pressure_loss_bar": 5.288150498236597
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 tubing [2, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 100.56640625,
+            "outlet_bara": 39.507860111785625,
+            "pressure_loss_bar": 61.058546138214375
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 flowline [2, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 39.507860111785625,
+            "outlet_bara": 30.2674915075234,
+            "pressure_loss_bar": 9.240368604262226
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 tubing [2, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 146.005859375,
+            "outlet_bara": 53.52057391431806,
+            "pressure_loss_bar": 92.48528546068195
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 flowline [2, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 53.52057391431806,
+            "outlet_bara": 50.21306309233094,
+            "pressure_loss_bar": 3.3075108219871154
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 tubing [2, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 121.8359375,
+            "outlet_bara": 56.01365950040358,
+            "pressure_loss_bar": 65.82227799959642
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 flowline [2, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 56.01365950040358,
+            "outlet_bara": 50.116525028914324,
+            "pressure_loss_bar": 5.897134471489252
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 1 all 12 pressure roots and explicit unavailable-domain cells",
+          "passed": true,
+          "observed": [
+            {
+              "indices": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 105.400390625,
+              "accepted": true,
+              "replayed_outlet_bara": 30.028794606054404,
+              "lower_inlet_bara": 104.900390615,
+              "lower_outlet_bara": 29.77368555482346
+            },
+            {
+              "indices": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 80.908203125,
+              "accepted": true,
+              "replayed_outlet_bara": 30.13278916783471,
+              "lower_inlet_bara": 80.408203115,
+              "lower_outlet_bara": 29.899696007318678
+            },
+            {
+              "indices": [
+                0,
+                1,
+                0,
+                0
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 141.171875,
+              "accepted": true,
+              "replayed_outlet_bara": 50.09705102614954,
+              "lower_inlet_bara": 140.67187499,
+              "lower_outlet_bara": 49.79295131868159
+            },
+            {
+              "indices": [
+                0,
+                1,
+                0,
+                1
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 120.224609375,
+              "accepted": true,
+              "replayed_outlet_bara": 50.03567366658537,
+              "lower_inlet_bara": 119.724609365,
+              "lower_outlet_bara": 49.76016766458757
+            },
+            {
+              "indices": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 105.078125,
+              "accepted": true,
+              "replayed_outlet_bara": 30.14596091759118,
+              "lower_inlet_bara": 104.57812499,
+              "lower_outlet_bara": 29.86842854427686
+            },
+            {
+              "indices": [
+                1,
+                0,
+                0,
+                1
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 77.041015625,
+              "accepted": true,
+              "replayed_outlet_bara": 30.18703026202222,
+              "lower_inlet_bara": 76.541015615,
+              "lower_outlet_bara": 29.81787218548186
+            },
+            {
+              "indices": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 138.916015625,
+              "accepted": true,
+              "replayed_outlet_bara": 50.0515206046987,
+              "lower_inlet_bara": 138.416015615,
+              "lower_outlet_bara": 49.741065508742864
+            },
+            {
+              "indices": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 106.3671875,
+              "accepted": true,
+              "replayed_outlet_bara": 50.20029761466669,
+              "lower_inlet_bara": 105.86718749,
+              "lower_outlet_bara": 49.855194612114346
+            },
+            {
+              "indices": [
+                2,
+                0,
+                0,
+                0
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 117.646484375,
+              "accepted": true,
+              "replayed_outlet_bara": 30.210768239777323,
+              "lower_inlet_bara": 117.146484365,
+              "lower_outlet_bara": 29.841838448159482
+            },
+            {
+              "indices": [
+                2,
+                0,
+                0,
+                1
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 100.56640625,
+              "accepted": true,
+              "replayed_outlet_bara": 30.2674915075234,
+              "lower_inlet_bara": 100.06640624,
+              "lower_outlet_bara": 29.724388344009
+            },
+            {
+              "indices": [
+                2,
+                1,
+                0,
+                0
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 146.005859375,
+              "accepted": true,
+              "replayed_outlet_bara": 50.21306309233094,
+              "lower_inlet_bara": 145.505859365,
+              "lower_outlet_bara": 49.86469775906953
+            },
+            {
+              "indices": [
+                2,
+                1,
+                0,
+                1
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 121.8359375,
+              "accepted": true,
+              "replayed_outlet_bara": 50.116525028914324,
+              "lower_inlet_bara": 121.33593749,
+              "lower_outlet_bara": 49.68795507346528
+            }
+          ],
+          "tolerance": {
+            "pressure_search_width_bar": 0.5,
+            "target_numerical_bar": 1e-06
+          },
+          "scope": "Fresh NeqSim replay checks the reported root and lower bracket; mass/components and pressure domains checked for both physical pipe segments. Correlation validity against field data remains uncalibrated."
+        }
+      ],
+      "status": "passed",
+      "seconds": 17.89100000000326,
+      "output": ""
+    },
+    {
+      "number": 17,
+      "sha256": "5ee5f89747462ffa2e5afc397692a15ba53e0f1847c2aa2c974844fb57fa4b1c",
+      "code_sha256": "5ee5f89747462ffa2e5afc397692a15ba53e0f1847c2aa2c974844fb57fa4b1c",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Route 2 tubing [0, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 105.078125,
+            "outlet_bara": 30.234342360758077,
+            "pressure_loss_bar": 74.84378263924192
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 flowline [0, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 30.234342360758077,
+            "outlet_bara": 30.136090191016507,
+            "pressure_loss_bar": 0.09825216974157058
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 tubing [0, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 79.619140625,
+            "outlet_bara": 30.208841765361615,
+            "pressure_loss_bar": 49.41029885963839
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 flowline [0, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 30.208841765361615,
+            "outlet_bara": 30.030099609575327,
+            "pressure_loss_bar": 0.1787421557862885
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 tubing [0, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 140.849609375,
+            "outlet_bara": 50.12354852796257,
+            "pressure_loss_bar": 90.72606084703743
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 flowline [0, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 50.12354852796257,
+            "outlet_bara": 50.06428368762553,
+            "pressure_loss_bar": 0.05926484033703616
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 tubing [0, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 119.90234375,
+            "outlet_bara": 50.2512973956686,
+            "pressure_loss_bar": 69.6510463543314
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 flowline [0, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 50.2512973956686,
+            "outlet_bara": 50.14676187836504,
+            "pressure_loss_bar": 0.10453551730356025
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 tubing [1, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 103.14453125,
+            "outlet_bara": 30.446115250121935,
+            "pressure_loss_bar": 72.69841599987807
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 flowline [1, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 30.446115250121935,
+            "outlet_bara": 30.085727015271342,
+            "pressure_loss_bar": 0.3603882348505927
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 tubing [1, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 74.78515625,
+            "outlet_bara": 30.78187979279682,
+            "pressure_loss_bar": 44.003276457203185
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 flowline [1, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 30.78187979279682,
+            "outlet_bara": 30.203591295721214,
+            "pressure_loss_bar": 0.5782884970756044
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 tubing [1, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 137.94921875,
+            "outlet_bara": 50.28493725420631,
+            "pressure_loss_bar": 87.66428149579369
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 flowline [1, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 50.28493725420631,
+            "outlet_bara": 50.064015886533056,
+            "pressure_loss_bar": 0.22092136767325599
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 tubing [1, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 104.755859375,
+            "outlet_bara": 50.57102718067581,
+            "pressure_loss_bar": 54.18483219432419
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 flowline [1, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 50.57102718067581,
+            "outlet_bara": 50.17972126947278,
+            "pressure_loss_bar": 0.39130591120303393
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 tubing [2, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 111.5234375,
+            "outlet_bara": 31.700340990151066,
+            "pressure_loss_bar": 79.82309650984894
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 flowline [2, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 31.700340990151066,
+            "outlet_bara": 30.19289677954771,
+            "pressure_loss_bar": 1.5074442106033565
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 tubing [2, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 92.509765625,
+            "outlet_bara": 33.01499396893907,
+            "pressure_loss_bar": 59.49477165606093
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 flowline [2, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 33.01499396893907,
+            "outlet_bara": 30.26044500261476,
+            "pressure_loss_bar": 2.7545489663243146
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 tubing [2, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 142.138671875,
+            "outlet_bara": 51.00231822589719,
+            "pressure_loss_bar": 91.1363536491028
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 flowline [2, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 51.00231822589719,
+            "outlet_bara": 50.09639357027565,
+            "pressure_loss_bar": 0.9059246556215399
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 tubing [2, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 116.357421875,
+            "outlet_bara": 51.83033455900431,
+            "pressure_loss_bar": 64.52708731599569
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 flowline [2, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 51.83033455900431,
+            "outlet_bara": 50.18616437282719,
+            "pressure_loss_bar": 1.6441701861771136
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 2 all 12 pressure roots and explicit unavailable-domain cells",
+          "passed": true,
+          "observed": [
+            {
+              "indices": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 105.078125,
+              "accepted": true,
+              "replayed_outlet_bara": 30.136090191016507,
+              "lower_inlet_bara": 104.57812499,
+              "lower_outlet_bara": 29.883784743817273
+            },
+            {
+              "indices": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 79.619140625,
+              "accepted": true,
+              "replayed_outlet_bara": 30.030099609575327,
+              "lower_inlet_bara": 79.119140615,
+              "lower_outlet_bara": 29.80289756967463
+            },
+            {
+              "indices": [
+                0,
+                1,
+                0,
+                0
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 140.849609375,
+              "accepted": true,
+              "replayed_outlet_bara": 50.06428368762553,
+              "lower_inlet_bara": 140.349609365,
+              "lower_outlet_bara": 49.76143174770401
+            },
+            {
+              "indices": [
+                0,
+                1,
+                0,
+                1
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 119.90234375,
+              "accepted": true,
+              "replayed_outlet_bara": 50.14676187836504,
+              "lower_inlet_bara": 119.40234374,
+              "lower_outlet_bara": 49.873008978025005
+            },
+            {
+              "indices": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 103.14453125,
+              "accepted": true,
+              "replayed_outlet_bara": 30.085727015271342,
+              "lower_inlet_bara": 102.64453124,
+              "lower_outlet_bara": 29.818259052678748
+            },
+            {
+              "indices": [
+                1,
+                0,
+                0,
+                1
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 74.78515625,
+              "accepted": true,
+              "replayed_outlet_bara": 30.203591295721214,
+              "lower_inlet_bara": 74.28515624,
+              "lower_outlet_bara": 29.863936649744396
+            },
+            {
+              "indices": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 137.94921875,
+              "accepted": true,
+              "replayed_outlet_bara": 50.064015886533056,
+              "lower_inlet_bara": 137.44921874,
+              "lower_outlet_bara": 49.75837147033095
+            },
+            {
+              "indices": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 104.755859375,
+              "accepted": true,
+              "replayed_outlet_bara": 50.17972126947278,
+              "lower_inlet_bara": 104.255859365,
+              "lower_outlet_bara": 49.8421016421986
+            },
+            {
+              "indices": [
+                2,
+                0,
+                0,
+                0
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 111.5234375,
+              "accepted": true,
+              "replayed_outlet_bara": 30.19289677954771,
+              "lower_inlet_bara": 111.02343749,
+              "lower_outlet_bara": 29.866284617529494
+            },
+            {
+              "indices": [
+                2,
+                0,
+                0,
+                1
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 92.509765625,
+              "accepted": true,
+              "replayed_outlet_bara": 30.26044500261476,
+              "lower_inlet_bara": 92.009765615,
+              "lower_outlet_bara": 29.782375908146385
+            },
+            {
+              "indices": [
+                2,
+                1,
+                0,
+                0
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 142.138671875,
+              "accepted": true,
+              "replayed_outlet_bara": 50.09639357027565,
+              "lower_inlet_bara": 141.638671865,
+              "lower_outlet_bara": 49.76654016499817
+            },
+            {
+              "indices": [
+                2,
+                1,
+                0,
+                1
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 116.357421875,
+              "accepted": true,
+              "replayed_outlet_bara": 50.18616437282719,
+              "lower_inlet_bara": 115.857421865,
+              "lower_outlet_bara": 49.788715721083875
+            }
+          ],
+          "tolerance": {
+            "pressure_search_width_bar": 0.5,
+            "target_numerical_bar": 1e-06
+          },
+          "scope": "Fresh NeqSim replay checks the reported root and lower bracket; mass/components and pressure domains checked for both physical pipe segments. Correlation validity against field data remains uncalibrated."
+        }
+      ],
+      "status": "passed",
+      "seconds": 19.06199999999808,
+      "output": ""
+    },
+    {
+      "number": 18,
+      "sha256": "ce1970f65d9a5c788bfa9fe842cd54bfc47dafd439f36fe13d47b23cf95f805f",
+      "code_sha256": "ce1970f65d9a5c788bfa9fe842cd54bfc47dafd439f36fe13d47b23cf95f805f",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Route 3 tubing [0, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 104.755859375,
+            "outlet_bara": 30.07217955097102,
+            "pressure_loss_bar": 74.68367982402899
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 flowline [0, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 30.07217955097102,
+            "outlet_bara": 30.066014218251464,
+            "pressure_loss_bar": 0.006165332719554328
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 tubing [0, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 79.296875,
+            "outlet_bara": 30.06310405470218,
+            "pressure_loss_bar": 49.23377094529782
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 flowline [0, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 30.06310405470218,
+            "outlet_bara": 30.05190720322999,
+            "pressure_loss_bar": 0.01119685147218874
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 tubing [0, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 140.849609375,
+            "outlet_bara": 50.12354852796257,
+            "pressure_loss_bar": 90.72606084703743
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 flowline [0, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888888347,
+            "inlet_bara": 50.12354852796257,
+            "outlet_bara": 50.11984638258025,
+            "pressure_loss_bar": 0.0037021453823200545
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 tubing [0, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 119.580078125,
+            "outlet_bara": 50.07516002608722,
+            "pressure_loss_bar": 69.50491809891278
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 flowline [0, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 1.3888888888891362,
+            "inlet_bara": 50.07516002608722,
+            "outlet_bara": 50.06860872254101,
+            "pressure_loss_bar": 0.006551303546210363
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 tubing [1, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 102.5,
+            "outlet_bara": 30.10509856293038,
+            "pressure_loss_bar": 72.39490143706962
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 flowline [1, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 30.10509856293038,
+            "outlet_bara": 30.08245386662869,
+            "pressure_loss_bar": 0.02264469630168975
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 tubing [1, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 73.818359375,
+            "outlet_bara": 30.146834988634374,
+            "pressure_loss_bar": 43.671524386365626
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 flowline [1, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 30.146834988634374,
+            "outlet_bara": 30.109889977078545,
+            "pressure_loss_bar": 0.03694501155582941
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 tubing [1, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 137.626953125,
+            "outlet_bara": 50.08872885042284,
+            "pressure_loss_bar": 87.53822427457716
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 flowline [1, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777776693,
+            "inlet_bara": 50.08872885042284,
+            "outlet_bara": 50.07489468561136,
+            "pressure_loss_bar": 0.013834164811477478
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 tubing [1, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 104.111328125,
+            "outlet_bara": 50.13917082312642,
+            "pressure_loss_bar": 53.97215730187358
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 flowline [1, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 2.7777777777782724,
+            "inlet_bara": 50.13917082312642,
+            "outlet_bara": 50.11459139774443,
+            "pressure_loss_bar": 0.024579425381993758
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 tubing [2, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 108.9453125,
+            "outlet_bara": 30.10204056008442,
+            "pressure_loss_bar": 78.84327193991558
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 flowline [2, 0, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 30.10204056008442,
+            "outlet_bara": 30.00470876599371,
+            "pressure_loss_bar": 0.09733179409071013
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 tubing [2, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 89.287109375,
+            "outlet_bara": 30.253391714238617,
+            "pressure_loss_bar": 59.03371766076138
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 flowline [2, 0, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 30.253391714238617,
+            "outlet_bara": 30.071646473502348,
+            "pressure_loss_bar": 0.1817452407362694
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 tubing [2, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 140.849609375,
+            "outlet_bara": 50.16786495493793,
+            "pressure_loss_bar": 90.68174442006207
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 flowline [2, 1, 0, 0]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555555339,
+            "inlet_bara": 50.16786495493793,
+            "outlet_bara": 50.11075719172261,
+            "pressure_loss_bar": 0.05710776321532052
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 tubing [2, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 114.423828125,
+            "outlet_bara": 50.343721807415314,
+            "pressure_loss_bar": 64.0801063175847
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 flowline [2, 1, 0, 1]",
+          "passed": true,
+          "observed": {
+            "mass_relative": 0.0,
+            "component_relative": 0.0,
+            "inlet_kg_s": 5.555555555556545,
+            "inlet_bara": 50.343721807415314,
+            "outlet_bara": 50.23930175849668,
+            "pressure_loss_bar": 0.10442004891863377
+          },
+          "tolerance": {
+            "mass": 1e-07,
+            "components": 1e-07,
+            "energy": null
+          },
+          "scope": "Steady boundary quantities; pipeline thermal duty is not inferred if unspecified."
+        },
+        {
+          "name": "Route 3 all 12 pressure roots and explicit unavailable-domain cells",
+          "passed": true,
+          "observed": [
+            {
+              "indices": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 104.755859375,
+              "accepted": true,
+              "replayed_outlet_bara": 30.066014218251464,
+              "lower_inlet_bara": 104.255859365,
+              "lower_outlet_bara": 29.81497724876568
+            },
+            {
+              "indices": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 79.296875,
+              "accepted": true,
+              "replayed_outlet_bara": 30.05190720322999,
+              "lower_inlet_bara": 78.79687499,
+              "lower_outlet_bara": 29.82691255018993
+            },
+            {
+              "indices": [
+                0,
+                1,
+                0,
+                0
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 140.849609375,
+              "accepted": true,
+              "replayed_outlet_bara": 50.11984638258025,
+              "lower_inlet_bara": 140.349609365,
+              "lower_outlet_bara": 49.817324785375945
+            },
+            {
+              "indices": [
+                0,
+                1,
+                0,
+                1
+              ],
+              "rate_kg_hr": 5000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 119.580078125,
+              "accepted": true,
+              "replayed_outlet_bara": 50.06860872254101,
+              "lower_inlet_bara": 119.080078115,
+              "lower_outlet_bara": 49.79590068212655
+            },
+            {
+              "indices": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 102.5,
+              "accepted": true,
+              "replayed_outlet_bara": 30.08245386662869,
+              "lower_inlet_bara": 101.99999999,
+              "lower_outlet_bara": 29.81838454855464
+            },
+            {
+              "indices": [
+                1,
+                0,
+                0,
+                1
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 73.818359375,
+              "accepted": true,
+              "replayed_outlet_bara": 30.109889977078545,
+              "lower_inlet_bara": 73.318359365,
+              "lower_outlet_bara": 29.7805099620167
+            },
+            {
+              "indices": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 137.626953125,
+              "accepted": true,
+              "replayed_outlet_bara": 50.07489468561136,
+              "lower_inlet_bara": 137.126953115,
+              "lower_outlet_bara": 49.77088576975048
+            },
+            {
+              "indices": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "rate_kg_hr": 10000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 104.111328125,
+              "accepted": true,
+              "replayed_outlet_bara": 50.11459139774443,
+              "lower_inlet_bara": 103.611328115,
+              "lower_outlet_bara": 49.779712890299685
+            },
+            {
+              "indices": [
+                2,
+                0,
+                0,
+                0
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 108.9453125,
+              "accepted": true,
+              "replayed_outlet_bara": 30.00470876599371,
+              "lower_inlet_bara": 108.44531249,
+              "lower_outlet_bara": 29.69347014988776
+            },
+            {
+              "indices": [
+                2,
+                0,
+                0,
+                1
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 30.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 89.287109375,
+              "accepted": true,
+              "replayed_outlet_bara": 30.071646473502348,
+              "lower_inlet_bara": 88.787109365,
+              "lower_outlet_bara": 29.616487565755982
+            },
+            {
+              "indices": [
+                2,
+                1,
+                0,
+                0
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 300.0,
+              "required_inlet_bara": 140.849609375,
+              "accepted": true,
+              "replayed_outlet_bara": 50.11075719172261,
+              "lower_inlet_bara": 140.349609365,
+              "lower_outlet_bara": 49.7873694501669
+            },
+            {
+              "indices": [
+                2,
+                1,
+                0,
+                1
+              ],
+              "rate_kg_hr": 20000.0,
+              "outlet_target_bara": 50.0,
+              "watercut_input": 0.05,
+              "GOR_input": 1000.0,
+              "required_inlet_bara": 114.423828125,
+              "accepted": true,
+              "replayed_outlet_bara": 50.23930175849668,
+              "lower_inlet_bara": 113.923828115,
+              "lower_outlet_bara": 49.852979346831624
+            }
+          ],
+          "tolerance": {
+            "pressure_search_width_bar": 0.5,
+            "target_numerical_bar": 1e-06
+          },
+          "scope": "Fresh NeqSim replay checks the reported root and lower bracket; mass/components and pressure domains checked for both physical pipe segments. Correlation validity against field data remains uncalibrated."
+        }
+      ],
+      "status": "passed",
+      "seconds": 17.514999999999418,
+      "output": "Concept 1 (30 km tieback):    12 feasible points\nConcept 2 (8 km route only):   12 feasible points\nConcept 3 (short route):             12 feasible points\n"
+    },
+    {
+      "number": 20,
+      "sha256": "54f9a650bb21c8bb93c4952d461862bee22ea0bdc3ac91e6a71ec15540c6dee2",
+      "code_sha256": "54f9a650bb21c8bb93c4952d461862bee22ea0bdc3ac91e6a71ec15540c6dee2",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Converged reduced-network allocation and independent revenue upper bound",
+          "passed": true,
+          "observed": {
+            "field_rate_Sm3_day": 39923.983291580174,
+            "well_rates": {
+              "Well-A": 3208.209564521552,
+              "Well-B": 36715.77372705862
+            },
+            "chokes": {
+              "Well-A": 0.001953125,
+              "Well-B": 0.03125
+            },
+            "revenue_currency_day": 119771.94987474053,
+            "upper_bound_currency_day": 120000,
+            "relative_upper_bound_gap": 0.0019004177104956397,
+            "energy_kWh_day": 4790.877994989621,
+            "emissions_kg_day": 798.4796658316035,
+            "nodes": {
+              "EXPORT": 90.0,
+              "Well-A_RES": 250.0,
+              "Well-A_WH": 90.00102926086099,
+              "Well-B_RES": 220.0,
+              "Well-B_WH": 90.13480480403766
+            }
+          },
+          "tolerance": {
+            "rate_accounting_absolute": 1e-08,
+            "upper_bound_gap": 0.005
+          },
+          "scope": "Reduced Vogel/network model and assumed constant intensities; objective bound follows rate<=40000 and common positive price, not field-calibrated optimality."
+        },
+        {
+          "name": "Independent piecewise Vogel and quadratic-line solution plus feasible capacity witness",
+          "passed": true,
+          "observed": {
+            "native_candidate_wells": [
+              {
+                "well": "Well-A",
+                "native_rate_Sm3_day": 3208.209564521552,
+                "independent_scalar_root_Sm3_day": 3212.487744907955,
+                "absolute_rate_difference_Sm3_day": 4.2781803864031644,
+                "wellhead_bara": 90.00102926086099,
+                "node_continuity_residual_Sm3_day": 4.278213005723501,
+                "flowline_equation_residual_bar": 0.0
+              },
+              {
+                "well": "Well-B",
+                "native_rate_Sm3_day": 36715.77372705862,
+                "independent_scalar_root_Sm3_day": 36706.54302535223,
+                "absolute_rate_difference_Sm3_day": 9.23070170639403,
+                "wellhead_bara": 90.13480480403766,
+                "node_continuity_residual_Sm3_day": 9.243986941000912,
+                "flowline_equation_residual_bar": 0.0
+              }
+            ],
+            "capacity_witness": {
+              "Well-A_choke": 0.0,
+              "Well-B_choke": 0.03405846910277607,
+              "Well-B_rate_Sm3_day": 40000.0,
+              "Well-B_wellhead_bara": 90.16,
+              "revenue_currency_day": 120000.0
+            }
+          },
+          "tolerance": {
+            "network_rate_absolute_Sm3_day": 10.0,
+            "flowline_equation_bar": 1e-08,
+            "independent_root_xtol_Sm3_day": 1e-08
+          },
+          "scope": "Independent Python equations reproduce the declared 11-point Vogel interpolation and default line coefficient 1e-10 bar/(Sm3/day)^2. The 10 Sm3/day rate tolerance is the native documented network stopping tolerance; the exact capacity witness establishes a reachable upper bound for this reduced model."
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.25,
+      "output": "Feasible: True objective: 119771.94987474053\nField rate: 39923.983291580174 Sm3/d revenue: 119771.94987474053\nChoke settings: {'Well-A': 0.001953125, 'Well-B': 0.03125}\nWell rates: {'Well-A': 3208.209564521552, 'Well-B': 36715.77372705862}\n"
+    },
+    {
+      "number": 21,
+      "sha256": "6671ec6827fec2300d8d811f635ecf825478e2ff2bcd457799f2be06936e0fb9",
+      "code_sha256": "6671ec6827fec2300d8d811f635ecf825478e2ff2bcd457799f2be06936e0fb9",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Density sample GOR 200.0 operating flash",
+          "passed": true,
+          "observed": {
+            "T_K": 353.15,
+            "P_bara": 50.0,
+            "rho_kg_m3": 187.26644085048912,
+            "mol_s": 46656.04981376825,
+            "phases": [
+              {
+                "type": "gas",
+                "mole_fraction": 0.34118432199952226
+              },
+              {
+                "type": "oil",
+                "mole_fraction": 0.4076802625586208
+              },
+              {
+                "type": "aqueous",
+                "mole_fraction": 0.251135415441857
+              }
+            ],
+            "component_flash_balance_absolute": 7.049916206369744e-15
+          },
+          "tolerance": 1e-08,
+          "scope": null
+        },
+        {
+          "name": "Density sample GOR 200.0 independent composition and standard-volume contract",
+          "passed": true,
+          "observed": {
+            "requested_GOR_Sm3_Sm3": 200.0,
+            "requested_watercut": 0.1,
+            "standard_liquid_rate_Sm3_hr": 9999.999999999993,
+            "requested_liquid_rate_Sm3_hr": 10000,
+            "actual_equilibrium_GOR": 199.9999996886605,
+            "actual_equilibrium_watercut": 0.10000000037729531,
+            "mass_rate_kg_hr": 7869378.035601696,
+            "relative_liquid_error": 7.275957614183426e-16,
+            "max_composition_error": 2.7755575615628914e-17
+          },
+          "tolerance": {
+            "standard_liquid_relative": 1e-06,
+            "composition_absolute": 1e-08,
+            "GOR_relative": 1e-06,
+            "watercut_absolute": 1e-06
+          },
+          "scope": "GOR and water cut prescribe reference-phase mixing; equilibrated standard ratios are separately checked for these literal recipes, not assumed exact for arbitrary fluids."
+        },
+        {
+          "name": "Density sample GOR 500.0 operating flash",
+          "passed": true,
+          "observed": {
+            "T_K": 353.15,
+            "P_bara": 50.0,
+            "rho_kg_m3": 102.13209559269515,
+            "mol_s": 78503.60722525448,
+            "phases": [
+              {
+                "type": "gas",
+                "mole_fraction": 0.5896115839330641
+              },
+              {
+                "type": "oil",
+                "mole_fraction": 0.2601133794521907
+              },
+              {
+                "type": "aqueous",
+                "mole_fraction": 0.1502750366147452
+              }
+            ],
+            "component_flash_balance_absolute": 8.659739592076221e-15
+          },
+          "tolerance": 1e-08,
+          "scope": null
+        },
+        {
+          "name": "Density sample GOR 500.0 independent composition and standard-volume contract",
+          "passed": true,
+          "observed": {
+            "requested_GOR_Sm3_Sm3": 500.0,
+            "requested_watercut": 0.1,
+            "standard_liquid_rate_Sm3_hr": 9999.999999999989,
+            "requested_liquid_rate_Sm3_hr": 10000,
+            "actual_equilibrium_GOR": 499.99999967777865,
+            "actual_equilibrium_watercut": 0.10000000037857293,
+            "mass_rate_kg_hr": 10403107.799800925,
+            "relative_liquid_error": 1.0913936421275138e-15,
+            "max_composition_error": 1.1102230246251565e-16
+          },
+          "tolerance": {
+            "standard_liquid_relative": 1e-06,
+            "composition_absolute": 1e-08,
+            "GOR_relative": 1e-06,
+            "watercut_absolute": 1e-06
+          },
+          "scope": "GOR and water cut prescribe reference-phase mixing; equilibrated standard ratios are separately checked for these literal recipes, not assumed exact for arbitrary fluids."
+        },
+        {
+          "name": "Density sample GOR 1000.0 operating flash",
+          "passed": true,
+          "observed": {
+            "T_K": 353.15,
+            "P_bara": 50.0,
+            "rho_kg_m3": 72.20328225756087,
+            "mol_s": 131582.86957763636,
+            "phases": [
+              {
+                "type": "gas",
+                "mole_fraction": 0.743588018323209
+              },
+              {
+                "type": "oil",
+                "mole_fraction": 0.16577592615680514
+              },
+              {
+                "type": "aqueous",
+                "mole_fraction": 0.09063605551998606
+              }
+            ],
+            "component_flash_balance_absolute": 3.3861802251067274e-14
+          },
+          "tolerance": 1e-08,
+          "scope": null
+        },
+        {
+          "name": "Density sample GOR 1000.0 independent composition and standard-volume contract",
+          "passed": true,
+          "observed": {
+            "requested_GOR_Sm3_Sm3": 1000.0,
+            "requested_watercut": 0.1,
+            "standard_liquid_rate_Sm3_hr": 9999.999999999987,
+            "requested_liquid_rate_Sm3_hr": 10000,
+            "actual_equilibrium_GOR": 999.999999658855,
+            "actual_equilibrium_watercut": 0.10000000037925884,
+            "mass_rate_kg_hr": 14625990.740063649,
+            "relative_liquid_error": 1.2732925824820995e-15,
+            "max_composition_error": 0.0
+          },
+          "tolerance": {
+            "standard_liquid_relative": 1e-06,
+            "composition_absolute": 1e-08,
+            "GOR_relative": 1e-06,
+            "watercut_absolute": 1e-06
+          },
+          "scope": "GOR and water cut prescribe reference-phase mixing; equilibrated standard ratios are separately checked for these literal recipes, not assumed exact for arbitrary fluids."
+        },
+        {
+          "name": "Density sample GOR 2000.0 operating flash",
+          "passed": true,
+          "observed": {
+            "T_K": 353.15,
+            "P_bara": 50.0,
+            "rho_kg_m3": 56.982064577681506,
+            "mol_s": 237741.39428272346,
+            "phases": [
+              {
+                "type": "gas",
+                "mole_fraction": 0.8493996689501311
+              },
+              {
+                "type": "oil",
+                "mole_fraction": 0.09937141744177301
+              },
+              {
+                "type": "aqueous",
+                "mole_fraction": 0.05122891360809598
+              }
+            ],
+            "component_flash_balance_absolute": 1.7430501486614958e-14
+          },
+          "tolerance": 1e-08,
+          "scope": null
+        },
+        {
+          "name": "Density sample GOR 2000.0 independent composition and standard-volume contract",
+          "passed": true,
+          "observed": {
+            "requested_GOR_Sm3_Sm3": 2000.0,
+            "requested_watercut": 0.1,
+            "standard_liquid_rate_Sm3_hr": 9999.999999999976,
+            "requested_liquid_rate_Sm3_hr": 10000,
+            "actual_equilibrium_GOR": 1999.999999624653,
+            "actual_equilibrium_watercut": 0.10000000037991917,
+            "mass_rate_kg_hr": 23071756.620581284,
+            "relative_liquid_error": 2.3646862246096133e-15,
+            "max_composition_error": 0.0
+          },
+          "tolerance": {
+            "standard_liquid_relative": 1e-06,
+            "composition_absolute": 1e-08,
+            "GOR_relative": 1e-06,
+            "watercut_absolute": 1e-06
+          },
+          "scope": "GOR and water cut prescribe reference-phase mixing; equilibrated standard ratios are separately checked for these literal recipes, not assumed exact for arbitrary fluids."
+        },
+        {
+          "name": "Density sample GOR 5000.0 operating flash",
+          "passed": true,
+          "observed": {
+            "T_K": 353.15,
+            "P_bara": 50.0,
+            "rho_kg_m3": 47.76791526174039,
+            "mol_s": 556216.96839915,
+            "phases": [
+              {
+                "type": "gas",
+                "mole_fraction": 0.9278921189925043
+              },
+              {
+                "type": "oil",
+                "mole_fraction": 0.0488645373429063
+              },
+              {
+                "type": "aqueous",
+                "mole_fraction": 0.0232433436645894
+              }
+            ],
+            "component_flash_balance_absolute": 4.884981308350689e-15
+          },
+          "tolerance": 1e-08,
+          "scope": null
+        },
+        {
+          "name": "Density sample GOR 5000.0 independent composition and standard-volume contract",
+          "passed": true,
+          "observed": {
+            "requested_GOR_Sm3_Sm3": 5000.0,
+            "requested_watercut": 0.1,
+            "standard_liquid_rate_Sm3_hr": 9999.999999999984,
+            "requested_liquid_rate_Sm3_hr": 10000,
+            "actual_equilibrium_GOR": 4999.999999535141,
+            "actual_equilibrium_watercut": 0.10000000038062029,
+            "mass_rate_kg_hr": 48409054.262178384,
+            "relative_liquid_error": 1.6370904631912708e-15,
+            "max_composition_error": 1.1102230246251565e-16
+          },
+          "tolerance": {
+            "standard_liquid_relative": 1e-06,
+            "composition_absolute": 1e-08,
+            "GOR_relative": 1e-06,
+            "watercut_absolute": 1e-06
+          },
+          "scope": "GOR and water cut prescribe reference-phase mixing; equilibrated standard ratios are separately checked for these literal recipes, not assumed exact for arbitrary fluids."
+        },
+        {
+          "name": "Five actual density samples, finite and decreasing for this fixed composition family",
+          "passed": true,
+          "observed": {
+            "GOR_input": [
+              200,
+              500,
+              1000,
+              2000,
+              5000
+            ],
+            "density_kg_m3": [
+              187.26644085048912,
+              102.13209559269515,
+              72.20328225756087,
+              56.982064577681506,
+              47.76791526174039
+            ]
+          },
+          "tolerance": null,
+          "scope": "Thermodynamic bulk density, not in-situ slip/holdup-weighted pipe density."
+        }
+      ],
+      "status": "passed",
+      "seconds": 15.81199999999808,
+      "output": "ch28_field_development:fence21:54: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    },
+    {
+      "number": 22,
+      "sha256": "3e4f2eab457ae6b5a7b8721ae569693b44719d3ffac919712376d0e7f7402e69",
+      "code_sha256": "3e4f2eab457ae6b5a7b8721ae569693b44719d3ffac919712376d0e7f7402e69",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Plot arrays retain exact previously checked table values",
+          "passed": true,
+          "observed": {
+            "flow_kg_hr": [
+              5000.0,
+              10000.0,
+              20000.0
+            ],
+            "outlet_bara": [
+              30.0,
+              50.0
+            ],
+            "GOR_1000_inlet_bara": [
+              [
+                79.94140625,
+                119.90234375
+              ],
+              [
+                75.4296875,
+                105.078125
+              ],
+              [
+                94.12109375,
+                117.32421875
+              ]
+            ],
+            "feasible_points": 12
+          },
+          "tolerance": 0.0,
+          "scope": "Explicit actual source table, no extrapolated or fabricated unavailable cells."
+        }
+      ],
+      "status": "passed",
+      "seconds": 2.014999999999418,
+      "output": "ch28_field_development:fence22:33: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    },
+    {
+      "number": 23,
+      "sha256": "7425ee70e8ea744883092565c3e49b35dc4245e0f49b1a6b64653104cc30472c",
+      "code_sha256": "7425ee70e8ea744883092565c3e49b35dc4245e0f49b1a6b64653104cc30472c",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Plot arrays retain exact previously checked table values",
+          "passed": true,
+          "observed": {
+            "flow_kg_hr": [
+              5000.0,
+              10000.0,
+              20000.0
+            ],
+            "outlet_bara": [
+              30.0,
+              50.0
+            ],
+            "GOR_1000_inlet_bara": [
+              [
+                79.94140625,
+                119.90234375
+              ],
+              [
+                75.4296875,
+                105.078125
+              ],
+              [
+                94.12109375,
+                117.32421875
+              ]
+            ],
+            "feasible_points": 12
+          },
+          "tolerance": 0.0,
+          "scope": "Explicit actual source table, no extrapolated or fabricated unavailable cells."
+        }
+      ],
+      "status": "passed",
+      "seconds": 1.5630000000019209,
+      "output": "ch28_field_development:fence23:29: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    }
+  ],
+  "all_targeted_checks_passed": true
+}

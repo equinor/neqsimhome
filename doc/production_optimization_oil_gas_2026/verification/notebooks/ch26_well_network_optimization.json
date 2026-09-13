@@ -1,0 +1,471 @@
+{
+  "notebook": "chapters\\ch26_well_network_optimization\\notebooks\\ch27_well_network.ipynb",
+  "status": "passed",
+  "executed_at": "2026-09-12T20:12:26.124217+00:00",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "runtime_seconds": 14.89,
+  "code_cells": 6,
+  "executed_cells": 6,
+  "cell_runs": [
+    {
+      "cell_index": 1,
+      "execution_count": 1,
+      "runtime_seconds": 3.906,
+      "sha256": "06b115502076f86aa4f6b8e02576b895f3d0925ec0dee491d0432618b54f40e6",
+      "status": "passed"
+    },
+    {
+      "cell_index": 3,
+      "execution_count": 2,
+      "runtime_seconds": 2.672,
+      "sha256": "65b65aee0bfd8d6ff65cea925fa528105d040d2b6ce1ed2e7b8ce55bcbb9eb99",
+      "status": "passed"
+    },
+    {
+      "cell_index": 5,
+      "execution_count": 3,
+      "runtime_seconds": 2.625,
+      "sha256": "8f40b78b1f13c814333e24e42d15136017312951813476c523f4199504627129",
+      "status": "passed"
+    },
+    {
+      "cell_index": 8,
+      "execution_count": 4,
+      "runtime_seconds": 5.094,
+      "sha256": "94e5fe39970f4e4938e9f757a6f5d52723f063a6d3199b005a1a8dc13584f3bc",
+      "status": "passed"
+    },
+    {
+      "cell_index": 12,
+      "execution_count": 5,
+      "runtime_seconds": 0.562,
+      "sha256": "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+      "status": "passed"
+    },
+    {
+      "cell_index": 14,
+      "execution_count": 6,
+      "runtime_seconds": 0.031,
+      "sha256": "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "source_revision": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "java_version": "25.0.4.1",
+  "neqsim_class_origin": "file:/C:/Users/solbraa/OneDrive%20-%20NTNU/Documents/ChatGPT/NeqSim/target/classes/",
+  "figures": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch26_well_network_optimization\\figures\\ch27_manifold_pressure_sweep.png",
+      "sha256": "65834956b038ccb3eaffb2a3b18526e41e6f822b92b5e9e62f235d5b9fd27b8f",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Individual Well Rates vs Manifold Pressure",
+          "series": "Well A",
+          "value_axis": "y",
+          "x_label": "Manifold Pressure (bara)",
+          "y_label": "Well Rate (1000 kg/hr)",
+          "n_points": 20,
+          "n_nonfinite": 0,
+          "x_min": 50.0,
+          "x_max": 150.0,
+          "y_min": 20.349264705882348,
+          "y_max": 32.48161764705881,
+          "x_at_y_max": 50.0
+        },
+        {
+          "panel": 1,
+          "title": "Individual Well Rates vs Manifold Pressure",
+          "series": "Well B",
+          "value_axis": "y",
+          "x_label": "Manifold Pressure (bara)",
+          "y_label": "Well Rate (1000 kg/hr)",
+          "n_points": 20,
+          "n_nonfinite": 0,
+          "x_min": 50.0,
+          "x_max": 150.0,
+          "y_min": 14.143920595533501,
+          "y_max": 27.79156327543425,
+          "x_at_y_max": 50.0
+        },
+        {
+          "panel": 1,
+          "title": "Individual Well Rates vs Manifold Pressure",
+          "series": "Well C",
+          "value_axis": "y",
+          "x_label": "Manifold Pressure (bara)",
+          "y_label": "Well Rate (1000 kg/hr)",
+          "n_points": 20,
+          "n_nonfinite": 0,
+          "x_min": 50.0,
+          "x_max": 150.0,
+          "y_min": 9.028213166144196,
+          "y_max": 22.821316614420056,
+          "x_at_y_max": 50.0
+        },
+        {
+          "panel": 1,
+          "title": "Individual Well Rates vs Manifold Pressure",
+          "series": "Well D",
+          "value_axis": "y",
+          "x_label": "Manifold Pressure (bara)",
+          "y_label": "Well Rate (1000 kg/hr)",
+          "n_points": 20,
+          "n_nonfinite": 0,
+          "x_min": 50.0,
+          "x_max": 150.0,
+          "y_min": 4.197530864197532,
+          "y_max": 17.777777777777786,
+          "x_at_y_max": 50.0
+        },
+        {
+          "panel": 2,
+          "title": "Total Production vs Manifold Pressure",
+          "series": "Curve 1",
+          "value_axis": "y",
+          "x_label": "Manifold Pressure (bara)",
+          "y_label": "Total Production (1000 kg/hr)",
+          "n_points": 20,
+          "n_nonfinite": 0,
+          "x_min": 50.0,
+          "x_max": 150.0,
+          "y_min": 47.71892933175758,
+          "y_max": 100.8722753146909,
+          "x_at_y_max": 50.0
+        },
+        {
+          "panel": 2,
+          "title": "Total Production vs Manifold Pressure",
+          "series": "Design (80.0 bara)",
+          "value_axis": "y",
+          "x_label": "Manifold Pressure (bara)",
+          "y_label": "Total Production (1000 kg/hr)",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 80.0,
+          "x_max": 80.0,
+          "y_min": 0.0,
+          "y_max": 1.0,
+          "x_at_y_max": 80.0
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch26_well_network_optimization\\figures\\ch27_choke_sensitivity.png",
+      "sha256": "b9eba5cd422c94bc6a9033f096685705c0f1461045306a93dacd78ce9762fe1b",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Well A — Choke Sensitivity",
+          "series": "Well A rate",
+          "value_axis": "y",
+          "x_label": "Additional Choke dP (bar)",
+          "y_label": "Rate (1000 kg/hr)",
+          "n_points": 20,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 100.0,
+          "y_min": 14.558823529411764,
+          "y_max": 29.999999999999996,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 2,
+          "title": "Well B — Choke Sensitivity",
+          "series": "Well B rate",
+          "value_axis": "y",
+          "x_label": "Additional Choke dP (bar)",
+          "y_label": "Rate (1000 kg/hr)",
+          "n_points": 20,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 100.0,
+          "y_min": 7.630272952853599,
+          "y_max": 25.0,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 3,
+          "title": "Well C — Choke Sensitivity",
+          "series": "Well C rate",
+          "value_axis": "y",
+          "x_label": "Additional Choke dP (bar)",
+          "y_label": "Rate (1000 kg/hr)",
+          "n_points": 20,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 100.0,
+          "y_min": 2.4451410658307178,
+          "y_max": 20.0,
+          "x_at_y_max": 0.0
+        },
+        {
+          "panel": 4,
+          "title": "Well D — Choke Sensitivity",
+          "series": "Well D rate",
+          "value_axis": "y",
+          "x_label": "Additional Choke dP (bar)",
+          "y_label": "Rate (1000 kg/hr)",
+          "n_points": 20,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 100.0,
+          "y_min": 0.02221604938271625,
+          "y_max": 14.999999999999998,
+          "x_at_y_max": 0.0
+        }
+      ]
+    }
+  ],
+  "nonfinite_series": [],
+  "numeric_results": {
+    "manifold_pressure": 80.0,
+    "total_rate": 90000.00000000001,
+    "i": 3.0,
+    "manifold_pressures": [
+      50.0,
+      55.26315789473684,
+      60.526315789473685,
+      65.78947368421052,
+      71.05263157894737,
+      76.31578947368422,
+      81.57894736842105,
+      86.84210526315789,
+      92.10526315789474,
+      97.36842105263159,
+      102.63157894736842,
+      107.89473684210526,
+      113.15789473684211,
+      118.42105263157896,
+      123.6842105263158,
+      128.94736842105263,
+      134.21052631578948,
+      139.47368421052633,
+      144.73684210526318,
+      150.0
+    ],
+    "total_rates": [
+      100872.2753146909,
+      99279.41503466846,
+      97552.70094960215,
+      95692.13305949191,
+      93697.71136433778,
+      91569.43586413976,
+      89307.30655889779,
+      86911.32344861198,
+      84381.48653328224,
+      81717.79581290859,
+      78920.25128749105,
+      75988.8529570296,
+      72923.60082152426,
+      69724.49488097499,
+      66391.53513538186,
+      62924.72158474481,
+      59324.054229063855,
+      55589.53306833898,
+      51721.15810257023,
+      47718.92933175758
+    ],
+    "p_man": 150.0,
+    "total": 47718.92933175758,
+    "rate": 4197.530864197532,
+    "choke_dp_range": [
+      0.0,
+      5.2631578947368425,
+      10.526315789473685,
+      15.789473684210527,
+      21.05263157894737,
+      26.315789473684212,
+      31.578947368421055,
+      36.8421052631579,
+      42.10526315789474,
+      47.36842105263158,
+      52.631578947368425,
+      57.89473684210527,
+      63.15789473684211,
+      68.42105263157896,
+      73.6842105263158,
+      78.94736842105263,
+      84.21052631578948,
+      89.47368421052633,
+      94.73684210526316,
+      100.0
+    ],
+    "idx": 3.0,
+    "rates_this_well": [
+      14999.999999999998,
+      14398.105399952126,
+      13762.012243083347,
+      13091.720529393664,
+      12387.230258883077,
+      11648.541431551588,
+      10875.6540473992,
+      10068.568106425915,
+      9227.283608631717,
+      8351.800554016621,
+      7442.11894258062,
+      6498.238774323726,
+      5520.160049245921,
+      4507.882767347217,
+      3461.406928627611,
+      2380.732533087104,
+      1265.859580725692,
+      116.78807154337693,
+      22.21604938271625,
+      22.21604938271625
+    ],
+    "rates_total": [
+      90000.00000000001,
+      89398.10539995211,
+      88762.01224308334,
+      88091.72052939366,
+      87387.23025888306,
+      86648.54143155158,
+      85875.65404739919,
+      85068.56810642593,
+      84227.2836086317,
+      83351.8005540166,
+      82442.11894258064,
+      81498.23877432372,
+      80520.1600492459,
+      79507.88276734721,
+      78461.40692862762,
+      77380.7325330871,
+      76265.85958072565,
+      75116.78807154336,
+      75022.21604938273,
+      75022.21604938273
+    ],
+    "dp_extra": 100.0,
+    "p_out": 80.0
+  },
+  "figure_discussions": [
+    {
+      "chapter": "ch26_well_network_optimization",
+      "chapter_number": 26,
+      "figure": "ch27_manifold_pressure_sweep.png",
+      "figure_path": "figures/ch27_manifold_pressure_sweep.png",
+      "caption": "Individual Well Rates vs Manifold Pressure. NeqSim WellFlow inflow-only model.",
+      "title": "Individual Well Rates vs Manifold Pressure",
+      "observation": "Well A: well rate spans 20.35–32.48 1000 kg/hr across the plotted cases. Well B: well rate spans 14.14–27.79 1000 kg/hr across the plotted cases.",
+      "mechanism": "The NeqSim WellFlow pressure-squared inflow relation reduces the drawdown available to each well as manifold pressure rises.",
+      "implication": "This is an inflow-only gathering illustration, with no tubing hydraulics or reservoir depletion.",
+      "recommendation": "Calibrate well productivity and add tubing and shared-header losses before scheduling field production.",
+      "notebook": "notebooks/ch27_well_network.ipynb",
+      "dpi": 220,
+      "sha256": "65834956b038ccb3eaffb2a3b18526e41e6f822b92b5e9e62f235d5b9fd27b8f",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Well A: well rate",
+            20.349264705882348,
+            32.48161764705881,
+            "1000 kg/hr"
+          ],
+          [
+            "Well B: well rate",
+            14.143920595533501,
+            27.79156327543425,
+            "1000 kg/hr"
+          ],
+          [
+            "Well C: well rate",
+            9.028213166144196,
+            22.821316614420056,
+            "1000 kg/hr"
+          ],
+          [
+            "Well D: well rate",
+            4.197530864197532,
+            17.777777777777786,
+            "1000 kg/hr"
+          ],
+          [
+            "Total Production",
+            47.71892933175758,
+            100.8722753146909,
+            "1000 kg/hr"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    },
+    {
+      "chapter": "ch26_well_network_optimization",
+      "chapter_number": 26,
+      "figure": "ch27_choke_sensitivity.png",
+      "figure_path": "figures/ch27_choke_sensitivity.png",
+      "caption": "Well A — Choke Sensitivity. Inflow sensitivity to an assumed additional pressure loss.",
+      "title": "Well A — Choke Sensitivity",
+      "observation": "Well A rate: rate spans 14.56–30 1000 kg/hr across the plotted cases. Well B rate: rate spans 7.63–25 1000 kg/hr across the plotted cases.",
+      "mechanism": "An assumed additional choke-pressure loss raises the outlet-pressure boundary seen by the selected well inflow model.",
+      "implication": "Wells with lower reservoir pressure lose a larger fraction of deliverability for the same extra pressure loss.",
+      "recommendation": "Evaluate the weakest-pressure wells first when allocating manifold backpressure.",
+      "notebook": "notebooks/ch27_well_network.ipynb",
+      "dpi": 220,
+      "sha256": "b9eba5cd422c94bc6a9033f096685705c0f1461045306a93dacd78ce9762fe1b",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "Well A rate: rate",
+            14.558823529411764,
+            29.999999999999996,
+            "1000 kg/hr"
+          ],
+          [
+            "Well B rate: rate",
+            7.630272952853599,
+            25.0,
+            "1000 kg/hr"
+          ],
+          [
+            "Well C rate: rate",
+            2.4451410658307178,
+            20.0,
+            "1000 kg/hr"
+          ],
+          [
+            "Well D rate: rate",
+            0.02221604938271625,
+            14.999999999999998,
+            "1000 kg/hr"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    }
+  ],
+  "notebook_sha256": "fa243f8b4a2907537aca67b286aa46bd0bb5559258d1ecf0cbce076f3a883d5a",
+  "editorial_review": {
+    "reviewed_at": "2026-09-12T20:15:02.482294+00:00",
+    "pre_review_notebook_sha256": "943ed6017994356ee448fe3f05efb21362c21dc62b184c5b887107140e991b70",
+    "code_and_outputs_unchanged": true,
+    "description": "Replaced generated discussion prose with plot-specific reviewed interpretation; every executed code hash rechecked."
+  },
+  "scientific_validation": {
+    "physics_report": "verification\\scientific_revision\\notebooks\\ch26_well_network_optimization.json",
+    "validation_helper_sha256": {
+      "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+      "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+      "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+    },
+    "pre_scope_markdown_sha256": "fa243f8b4a2907537aca67b286aa46bd0bb5559258d1ecf0cbce076f3a883d5a",
+    "post_execution_edit": "Added scope and independent benchmark links only; every executed code-cell hash rechecked."
+  }
+}

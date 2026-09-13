@@ -1,0 +1,2412 @@
+{
+  "chapter": "ch12_gas_processing",
+  "source_sha256": "f0f749626a4fd212c91095a4e7bd64e6fa9cb9d8cd7bd1e5547f59d24d4b444d",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "literal_blocks": [
+    {
+      "index": 1,
+      "code_sha256": "bd5c8be742e1695a67aefde549aafbc52e86c64379105a6e2ab7d4a3c331383b",
+      "line": 456,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "sour_gas",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 43.07989477120058,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "lean_amine",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 83.33333333333334,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "gas_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 43.07989477120058,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "amine_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 83.33333333333334,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "absorber",
+          "class": "neqsim.process.equipment.absorber.SimpleAmineAbsorber",
+          "inlets": [
+            "Sour Gas",
+            "Lean MDEA"
+          ],
+          "outlets": [
+            "Amine Absorber sweet gas out",
+            "Amine Absorber rich amine out"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "sweet_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 37.57232632307171,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "rich_amine",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.8409017814622,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 6.139999999999418,
+      "output": "Sweet gas CO2: 5524 ppm\nNet acid pickup: 0.366 mol/mol MDEA\nRejected 5 t/hr solvent case: 21.96 mol/mol MDEA\nRequired isothermal heat input: -467.9 kW\n"
+    },
+    {
+      "index": 2,
+      "code_sha256": "b6a7585125a6a05734e075596d98a66eb16636613199e66ab99ac30461e011b5",
+      "line": 669,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "sour_gas",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 43.07989477120058,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "lean_amine",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 83.33333333333334,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "gas_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 43.07989477120058,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "amine_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 83.33333333333334,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "absorber",
+          "class": "neqsim.process.equipment.distillation.DistillationColumn",
+          "inlets": [
+            "gasOutStream",
+            "Lean TEG"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "sweet_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 37.57232632307171,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "rich_amine",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.8409017814622,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "wet_gas",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 91.76052115024598,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "wet_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 91.76052115024596,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "inlet_scrubber",
+          "class": "neqsim.process.equipment.separator.ThreePhaseSeparator",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [
+            "Wet Gas Feed"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream",
+            "waterOutStream"
+          ]
+        },
+        {
+          "name": "saturated_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.28738354603881,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "teg_fluid",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 1.3888888888888862,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 43.0
+        },
+        {
+          "name": "lean_teg",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 1.3888888888874973,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 43.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "dry_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.20404321208589,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.82467227087409,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "rich_teg",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 1.4722292228389746,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.520289199178762,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 96.95300000000134,
+      "output": "DistillationColumn Diagnostics:\n  Name: TEG Absorber\n  Solved: true\n  Solver: DIRECT_SUBSTITUTION\n  Last solver used: DIRECT_SUBSTITUTION\n  Solve status: RIGOROUS_CONVERGED\n  Solve status reason: Tray solution satisfies active rigorous convergence gates\n  Trays: 5 total, 5 equilibrium stages\n  Terminal controls:\n    condenser: absent\n    reboiler: absent\n  Iterations: 12\n  Solve time: 37.1886105 s\n  Residuals:\n    temperature: 6.49923094897531E-8 K (tolerance 1.0E-7)\n    applied temperature step: 6.49923094897531E-8 K\n    mass: 1.6046861550615056E-14 (tolerance 1.0E-6)\n    energy: 6.208438140239702E-10 (tolerance 1.0E-5, enforced=true)\n    mesh infinity norm: 2.3103436963302864E-7 (tolerance 1.0E-5, enforced=true)\n      material: 2.3103436963302864E-7, equilibrium: 5.005995618036084E-13, summation: 3.419486915845482E-14, energy: 3.1042190691562333E-10, product draw: 0.0, specification: 0.0\n      per-tray material imbalance: 4.322922779732115E-11 (tolerance 0.02)\n  Feed trays:\n    tray 0 with 1 feed(s), 4 stages above, 0 stages below\n    tray 4 with 1 feed(s), 0 stages above, 4 stages below\n  Recommendations:\n    - No immediate convergence issue detected.\n\n=== TEG Dehydration Results ===\nDry gas flow:  9.60 MSm3/day\nDry gas T:     30.8 C\nRich TEG flow: 5300 kg/hr\nRich TEG T:    30.5 C\nWater in dry gas: 20.0 ppm (mole)\n"
+    },
+    {
+      "index": 3,
+      "code_sha256": "71589936bc3a5341efb8ca27f3d67d6bbba1a15b364a4395e72715aa5fa2d581",
+      "line": 777,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "sour_gas",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 43.07989477120058,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "lean_amine",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 83.33333333333334,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "gas_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 43.07989477120058,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "amine_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 83.33333333333334,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "absorber",
+          "class": "neqsim.process.equipment.distillation.DistillationColumn",
+          "inlets": [
+            "gasOutStream",
+            "Lean TEG"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "sweet_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 37.57232632307171,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "rich_amine",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.8409017814622,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "wet_gas",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 91.76052115024598,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "wet_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 91.76052115024596,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "inlet_scrubber",
+          "class": "neqsim.process.equipment.separator.ThreePhaseSeparator",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [
+            "Wet Gas Feed"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream",
+            "waterOutStream"
+          ]
+        },
+        {
+          "name": "saturated_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.28738354603881,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "teg_fluid",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 1.3888888888888862,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 43.0
+        },
+        {
+          "name": "lean_teg",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 1.3888888888874973,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 43.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "dry_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.20404321208589,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.82467227087409,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "rich_teg",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 1.4722292228389746,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.520289199178762,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 54.5626860078194,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 54.56268600781941,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "inlet_cooler",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Rich Gas"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "jt_valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086655258594,
+          "inlets": [
+            "outStream"
+          ],
+          "outlets": [
+            "JT Valve out stream"
+          ]
+        },
+        {
+          "name": "cold_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086655258594,
+          "inlets": [
+            "JT Valve out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "cold_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 42.61258188409392,
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086655258594,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "condensate",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 11.950104123725469,
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086655258594,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "dew_gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 42.61258188409392,
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086661517054
+        }
+      ],
+      "seconds": 0.7810000000026776,
+      "output": "=== JT Dew Point Control Results ===\nFeed T/P:        30.0 C / 70.0 bara\nAfter cooler:    10.0 C\nAfter JT valve:  -2.9 C / 40.0 bara\nCold sep gas:    4.543 MSm3/day\nCondensate:      43020.4 kg/hr\nHC dew point:    -2.9 C at 40.0 bara\n"
+    },
+    {
+      "index": 4,
+      "code_sha256": "7620db5f9042a6ee5a8c53342e54511118197ff903332a2a9a5846208523c10c",
+      "line": 852,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "sour_gas",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 43.07989477120058,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "lean_amine",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 83.33333333333334,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "gas_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 43.07989477120058,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "amine_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 83.33333333333334,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "absorber",
+          "class": "neqsim.process.equipment.distillation.DistillationColumn",
+          "inlets": [
+            "gasOutStream",
+            "Lean TEG"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "sweet_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 37.57232632307171,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "rich_amine",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.8409017814622,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "wet_gas",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 91.76052115024598,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "wet_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 91.76052115024596,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "inlet_scrubber",
+          "class": "neqsim.process.equipment.separator.ThreePhaseSeparator",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [
+            "Wet Gas Feed"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream",
+            "waterOutStream"
+          ]
+        },
+        {
+          "name": "saturated_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.28738354603881,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "teg_fluid",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 1.3888888888888862,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 43.0
+        },
+        {
+          "name": "lean_teg",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 1.3888888888874973,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 43.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "dry_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.20404321208589,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.82467227087409,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "rich_teg",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 1.4722292228389746,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.520289199178762,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 54.5626860078194,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 54.56268600781941,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "inlet_cooler",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Rich Gas"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "jt_valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086655258594,
+          "inlets": [
+            "outStream"
+          ],
+          "outlets": [
+            "JT Valve out stream"
+          ]
+        },
+        {
+          "name": "cold_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086655258594,
+          "inlets": [
+            "JT Valve out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "cold_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 42.61258188409392,
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086655258594,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "condensate",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 11.950104123725469,
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086655258594,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "dew_gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 42.61258188409392,
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086661517054
+        },
+        {
+          "name": "ngl",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.5555555555555562,
+          "getPressure_bara": 25.0,
+          "getTemperature_C": -30.0
+        },
+        {
+          "name": "ngl_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.5555555555555562,
+          "getPressure_bara": 25.0,
+          "getTemperature_C": -30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "deethanizer",
+          "class": "neqsim.process.equipment.distillation.DistillationColumn",
+          "inlets": [
+            "NGL Feed"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "overhead",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.012109163025795927,
+          "getPressure_bara": 25.0,
+          "getTemperature_C": 6.836333678809751,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "bottoms",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.5434463925297598,
+          "getPressure_bara": 26.0,
+          "getTemperature_C": 38.24155438388499,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 1.6409999999959837,
+      "output": "DistillationColumn Diagnostics:\n  Name: NGL Stabilizer\n  Solved: true\n  Solver: DIRECT_SUBSTITUTION\n  Last solver used: DIRECT_SUBSTITUTION\n  Solve status: RIGOROUS_CONVERGED\n  Solve status reason: Tray solution satisfies active rigorous convergence gates\n  Trays: 2 total, 1 equilibrium stages\n  Terminal controls:\n    condenser: absent\n    reboiler mode: EQUILIBRIUM\n  Iterations: 35\n  Solve time: 1.3804554 s\n  Residuals:\n    temperature: 5.647936518471397E-8 K (tolerance 1.0E-7)\n    applied temperature step: 5.647936518471397E-8 K\n    mass: 9.09494701772927E-16 (tolerance 1.0E-6)\n    energy: 1.6058996077128222E-9 (tolerance 1.0E-5, enforced=true)\n    mesh infinity norm: 8.029498032116827E-10 (tolerance 1.0E-5, enforced=true)\n      material: 3.1273376728073747E-10, equilibrium: 4.0987213623027535E-12, summation: 2.220446049250313E-16, energy: 8.029498032116827E-10, product draw: 0.0, specification: 0.0\n      per-tray material imbalance: 3.6595412761467384E-11 (tolerance 0.02)\n  Feed trays:\n    tray 1 with 1 feed(s), 0 stages above, 1 stages below\n  Recommendations:\n    - No immediate convergence issue detected.\n\n=== NGL Stripping Results ===\nOverhead T: 6.8 C\nOverhead P: 25.0 bara\nBottoms T:  38.2 C\nReboiler duty: 100.0 kW\n"
+    },
+    {
+      "index": 5,
+      "code_sha256": "fd42ae9da3576e615abc39851bb340b5f6114bc963154c5d4bcdd3265bbb3f92",
+      "line": 922,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "sour_gas",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 43.07989477120058,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "lean_amine",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 83.33333333333334,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "gas_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 43.07989477120058,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "amine_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 83.33333333333334,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "absorber",
+          "class": "neqsim.process.equipment.distillation.DistillationColumn",
+          "inlets": [
+            "gasOutStream",
+            "Lean TEG"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 1696455.8465743633
+        },
+        {
+          "name": "sweet_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 37.57232632307171,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "rich_amine",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.8409017814622,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "wet_gas",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 91.76052115024598,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "wet_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 91.76052115024596,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "inlet_scrubber",
+          "class": "neqsim.process.equipment.separator.ThreePhaseSeparator",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [
+            "Wet Gas Feed"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream",
+            "waterOutStream"
+          ]
+        },
+        {
+          "name": "saturated_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.28738354603881,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "teg_fluid",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 1.3888888888888862,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 43.0
+        },
+        {
+          "name": "lean_teg",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 1.3888888888874973,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 43.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "dry_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.20404321208589,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.82467227087409,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "rich_teg",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 1.4722292228389746,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.520289199178762,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 54.5626860078194,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 86.80305470978277,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 35.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "inlet_cooler",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Rich Gas"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "jt_valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 4.657139501736367,
+          "inlets": [
+            "outStream"
+          ],
+          "outlets": [
+            "JT Valve out stream"
+          ]
+        },
+        {
+          "name": "cold_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 4.657139501736367,
+          "inlets": [
+            "JT Valve out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "cold_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 42.61258188409392,
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086655258594,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "condensate",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 11.950104123725469,
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086655258594,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "dew_gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 42.61258188409392,
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086661517054
+        },
+        {
+          "name": "ngl",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 7.692455536968039,
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 4.657139501736367,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "ngl_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.5555555555555562,
+          "getPressure_bara": 25.0,
+          "getTemperature_C": -30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "deethanizer",
+          "class": "neqsim.process.equipment.distillation.DistillationColumn",
+          "inlets": [
+            "NGL Feed"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "overhead",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.012109163025795927,
+          "getPressure_bara": 25.0,
+          "getTemperature_C": 6.836333678809751,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "bottoms",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.5434463925297598,
+          "getPressure_bara": 26.0,
+          "getTemperature_C": 38.24155438388499,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "raw_gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 86.80305470978277,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 35.0
+        },
+        {
+          "name": "inlet_sep",
+          "class": "neqsim.process.equipment.separator.ThreePhaseSeparator",
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 35.0,
+          "inlets": [
+            "Raw Gas"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream",
+            "waterOutStream"
+          ]
+        },
+        {
+          "name": "gas_cooler",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "gasOutStream"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "compressor",
+          "class": "neqsim.process.equipment.compressor.Compressor",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 21.65406305850945,
+          "getPower_W": 1696455.8465743633,
+          "inlets": [
+            "gasOutStream"
+          ],
+          "outlets": [
+            "Recompressor out stream"
+          ]
+        },
+        {
+          "name": "after_cooler",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Recompressor out stream"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "sales_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 71.7036417414625,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 1.0940000000045984,
+      "output": "============================================================\nINTEGRATED GAS PROCESSING RESULTS\n============================================================\n\nRaw gas rate:     8.00 MSm3/day\nSales gas rate:   7.36 MSm3/day\nNGL condensate:   27693 kg/hr\nSales gas T/P:    30.0 C / 70.0 bara\nCompressor power: 1696.5 kW\nJT temperature:   4.7 C\n"
+    },
+    {
+      "index": 6,
+      "code_sha256": "fa173959b4a1181cd1aff5fae7ebbe409fac7619f12021214bd88397fab45171",
+      "line": 1012,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "sour_gas",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 43.07989477120058,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "lean_amine",
+          "class": "neqsim.thermo.system.SystemElectrolyteCPAstatoil",
+          "getFlowRate_kg/sec": 83.33333333333334,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0
+        },
+        {
+          "name": "gas_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 43.07989477120058,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "amine_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 83.33333333333334,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "absorber",
+          "class": "neqsim.process.equipment.distillation.DistillationColumn",
+          "inlets": [
+            "gasOutStream",
+            "Lean TEG"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 1696455.8465743633
+        },
+        {
+          "name": "sweet_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 37.57232632307171,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "rich_amine",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.8409017814622,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 40.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "wet_gas",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 91.76052115024598,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0
+        },
+        {
+          "name": "wet_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 91.76052115024596,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "inlet_scrubber",
+          "class": "neqsim.process.equipment.separator.ThreePhaseSeparator",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [
+            "Wet Gas Feed"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream",
+            "waterOutStream"
+          ]
+        },
+        {
+          "name": "saturated_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.28738354603881,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "teg_fluid",
+          "class": "neqsim.thermo.system.SystemSrkCPAstatoil",
+          "getFlowRate_kg/sec": 1.3888888888888862,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 43.0
+        },
+        {
+          "name": "lean_teg",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 1.3888888888874973,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 43.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "dry_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 88.20404321208589,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.82467227087409,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "rich_teg",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 1.4722292228389746,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.520289199178762,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 2.2753175,
+          "getPressure_bara": 0.0,
+          "getTemperature_C": -273.15
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 86.80305470978277,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 35.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "inlet_cooler",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Rich Gas"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "jt_valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 4.657139501736367,
+          "inlets": [
+            "outStream"
+          ],
+          "outlets": [
+            "JT Valve out stream"
+          ]
+        },
+        {
+          "name": "cold_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 4.657139501736367,
+          "inlets": [
+            "JT Valve out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "cold_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 42.61258188409392,
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086655258594,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "condensate",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 11.950104123725469,
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086655258594,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "dew_gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 42.61258188409392,
+          "getPressure_bara": 40.0,
+          "getTemperature_C": -2.9368086661517054
+        },
+        {
+          "name": "ngl",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 7.692455536968039,
+          "getPressure_bara": 55.0,
+          "getTemperature_C": 4.657139501736367,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "ngl_feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.5555555555555562,
+          "getPressure_bara": 25.0,
+          "getTemperature_C": -30.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "deethanizer",
+          "class": "neqsim.process.equipment.distillation.DistillationColumn",
+          "inlets": [
+            "NGL Feed"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "overhead",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.012109163025795927,
+          "getPressure_bara": 25.0,
+          "getTemperature_C": 6.836333678809751,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "bottoms",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 0.5434463925297598,
+          "getPressure_bara": 26.0,
+          "getTemperature_C": 38.24155438388499,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "raw_gas",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 86.80305470978277,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 35.0
+        },
+        {
+          "name": "inlet_sep",
+          "class": "neqsim.process.equipment.separator.ThreePhaseSeparator",
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 35.0,
+          "inlets": [
+            "Raw Gas"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream",
+            "waterOutStream"
+          ]
+        },
+        {
+          "name": "gas_cooler",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "gasOutStream"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "compressor",
+          "class": "neqsim.process.equipment.compressor.Compressor",
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 21.65406305850945,
+          "getPower_W": 1696455.8465743633,
+          "inlets": [
+            "gasOutStream"
+          ],
+          "outlets": [
+            "Recompressor out stream"
+          ]
+        },
+        {
+          "name": "after_cooler",
+          "class": "neqsim.process.equipment.heatexchanger.Heater",
+          "inlets": [
+            "Recompressor out stream"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "sales_gas",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 71.7036417414625,
+          "getPressure_bara": 70.0,
+          "getTemperature_C": 30.0,
+          "inlets": [],
+          "outlets": []
+        }
+      ],
+      "seconds": 0.7340000000040163,
+      "output": "Finite trace candidates A/B: 50/37\nBranch identity and full-envelope completeness require independent TP transition brackets.\n"
+    }
+  ],
+  "physical_checks": [
+    {
+      "block": 1,
+      "equipment": "Amine loading and material allocation",
+      "class": "CaseAcceptance",
+      "scope": "Literal component/mass assertions and explicit net-loading screen; inferred isothermal heat is not an independent energy-closure test",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.1241588343468873e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "net_loading_within_stated_limit",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "original_5_tph_rejected",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "values": {
+        "net_loading_mol_mol": 0.3660808773644029,
+        "isothermal_heat_input_W": -467900.2729266733
+      },
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "Inlet Scrubber",
+      "class": "ThreePhaseSeparator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.097378815434923e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.574056161504234e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.844084141576948e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 91.76052115024596,
+        "mass_out_kg_s": 91.76052115024599,
+        "enthalpy_in_W": -9797558.633437473,
+        "enthalpy_out_W": -9797558.633390013,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "Inlet Scrubber",
+      "class": "ThreePhaseSeparator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.097378815434923e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 5.574056161504234e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.844084141576948e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 91.76052115024596,
+        "mass_out_kg_s": 91.76052115024599,
+        "enthalpy_in_W": -9797558.633437473,
+        "enthalpy_out_W": -9797558.633390013,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "TEG Absorber",
+      "class": "DistillationColumn",
+      "scope": "specified-feed equilibrium column conservation, active MESH and phase equilibrium; not tray efficiency or field calibration",
+      "checks": [
+        {
+          "name": "mass_relative",
+          "error": 1.600530761664884e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_relative_with_trace_floor",
+          "error": 9.999240499412166e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "energy_relative",
+          "error": 1.2107903664800618e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_state",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "rigorous_converged_status",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "mesh_infinity_norm",
+          "error": 2.3103436963302864e-07,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 89.6762724349263,
+        "mass_out_kg_s": 89.67627243492487,
+        "enthalpy_in_W": -2404748.9371312866,
+        "enthalpy_out_W": -2404748.9400429334,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "TEG Absorber stage 0",
+      "class": "DistillationColumn",
+      "scope": "specified-feed equilibrium column conservation, active MESH and phase equilibrium; not tray efficiency or field calibration",
+      "checks": [
+        {
+          "name": "mass_relative",
+          "error": 1.584084734903475e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_relative_with_trace_floor",
+          "error": 1.8632528100038954e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "energy_relative",
+          "error": 6.529957655225011e-11,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_state",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "phase_0_mole_fraction_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_mole_fraction_sum",
+          "error": 3.419486915845482e-14,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "max_log_phase_fugacity_ratio",
+          "error": 3.901323708533561e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 89.71019290876464,
+        "mass_out_kg_s": 89.71019290876463,
+        "enthalpy_in_W": -2478910.0978313526,
+        "enthalpy_out_W": -2478910.0979932244,
+        "external_energy_W": 0.0
+      },
+      "pass": true,
+      "phase_count": 2
+    },
+    {
+      "block": 2,
+      "equipment": "TEG Absorber stage 1",
+      "class": "DistillationColumn",
+      "scope": "specified-feed equilibrium column conservation, active MESH and phase equilibrium; not tray efficiency or field calibration",
+      "checks": [
+        {
+          "name": "mass_relative",
+          "error": 3.170259316226262e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_relative_with_trace_floor",
+          "error": 1.4487154293275264e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "energy_relative",
+          "error": 1.8530769412790363e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_state",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "phase_0_mole_fraction_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_mole_fraction_sum",
+          "error": 3.3084646133829665e-14,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "max_log_phase_fugacity_ratio",
+          "error": 5.005995618036084e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 89.65105562479971,
+        "mass_out_kg_s": 89.65105562479968,
+        "enthalpy_in_W": -2326734.6855952744,
+        "enthalpy_out_W": -2326734.6860264363,
+        "external_energy_W": 0.0
+      },
+      "pass": true,
+      "phase_count": 2
+    },
+    {
+      "block": 2,
+      "equipment": "TEG Absorber stage 2",
+      "class": "DistillationColumn",
+      "scope": "specified-feed equilibrium column conservation, active MESH and phase equilibrium; not tray efficiency or field calibration",
+      "checks": [
+        {
+          "name": "mass_relative",
+          "error": 7.926698051608103e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_relative_with_trace_floor",
+          "error": 8.02981897435341e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "energy_relative",
+          "error": 6.208440164344177e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_state",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "phase_0_mole_fraction_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_mole_fraction_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "max_log_phase_fugacity_ratio",
+          "error": 8.637535131583344e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 89.6391828140787,
+        "mass_out_kg_s": 89.63918281407862,
+        "enthalpy_in_W": -2296206.6743846033,
+        "enthalpy_out_W": -2296206.6758101895,
+        "external_energy_W": 0.0
+      },
+      "pass": true,
+      "phase_count": 2
+    },
+    {
+      "block": 2,
+      "equipment": "TEG Absorber stage 3",
+      "class": "DistillationColumn",
+      "scope": "specified-feed equilibrium column conservation, active MESH and phase equilibrium; not tray efficiency or field calibration",
+      "checks": [
+        {
+          "name": "mass_relative",
+          "error": 6.3415520510594965e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_relative_with_trace_floor",
+          "error": 2.3741906870617436e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "energy_relative",
+          "error": 2.7743217360672093e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_state",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "phase_0_mole_fraction_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_mole_fraction_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "max_log_phase_fugacity_ratio",
+          "error": 2.8865798640253654e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 89.63644609888689,
+        "mass_out_kg_s": 89.63644609888684,
+        "enthalpy_in_W": -2288844.174711161,
+        "enthalpy_out_W": -2288844.174076162,
+        "external_energy_W": 0.0
+      },
+      "pass": true,
+      "phase_count": 2
+    },
+    {
+      "block": 2,
+      "equipment": "TEG Absorber stage 4",
+      "class": "DistillationColumn",
+      "scope": "specified-feed equilibrium column conservation, active MESH and phase equilibrium; not tray efficiency or field calibration",
+      "checks": [
+        {
+          "name": "mass_relative",
+          "error": 2.0615114815177467e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_relative_with_trace_floor",
+          "error": 1.3279999198063108e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "energy_relative",
+          "error": 2.019340652561351e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_state",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "phase_0_mole_fraction_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_mole_fraction_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "max_log_phase_fugacity_ratio",
+          "error": 1.1635137298070964e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 89.61439844206645,
+        "mass_out_kg_s": 89.61439844206626,
+        "enthalpy_in_W": -2245211.042297795,
+        "enthalpy_out_W": -2245211.0418444104,
+        "external_energy_W": 0.0
+      },
+      "pass": true,
+      "phase_count": 2
+    },
+    {
+      "block": 3,
+      "equipment": "Inlet Cooler",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2823557548203801e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 54.56268600781941,
+        "mass_out_kg_s": 54.56268600781941,
+        "enthalpy_in_W": -3574290.5763413236,
+        "enthalpy_out_W": -7262591.298199688,
+        "external_energy_W": -3688300.7218583655
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "JT Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.288209708841135e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 54.56268600781941,
+        "mass_out_kg_s": 54.56268600781941,
+        "enthalpy_in_W": -7262591.298199688,
+        "enthalpy_out_W": -7262591.288843947,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "Cold Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 3.9067508644549055e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.8580187205014111e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 54.56268600781941,
+        "mass_out_kg_s": 54.56268600781939,
+        "enthalpy_in_W": -7262591.288843947,
+        "enthalpy_out_W": -7262591.288843947,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "NGL Stabilizer",
+      "class": "DistillationColumn",
+      "scope": "specified-feed equilibrium column conservation, active MESH and phase equilibrium; not tray efficiency or field calibration",
+      "checks": [
+        {
+          "name": "mass_relative",
+          "error": 9.992007221626397e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_relative_with_trace_floor",
+          "error": 2.28716845462884e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "energy_relative",
+          "error": 1.97620337347612e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_state",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "rigorous_converged_status",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "mesh_infinity_norm",
+          "error": 8.029498032116827e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 0.5555555555555562,
+        "mass_out_kg_s": 0.5555555555555557,
+        "enthalpy_in_W": -254054.99053271307,
+        "enthalpy_out_W": -154054.99101832698,
+        "external_energy_W": 100000.00001645042
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "NGL Stabilizer stage 0",
+      "class": "DistillationColumn",
+      "scope": "specified-feed equilibrium column conservation, active MESH and phase equilibrium; not tray efficiency or field calibration",
+      "checks": [
+        {
+          "name": "mass_relative",
+          "error": 4.26011091209304e-10,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_relative_with_trace_floor",
+          "error": 1.1988489103594893e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "energy_relative",
+          "error": 3.4222476647585576e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_state",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "phase_0_mole_fraction_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_mole_fraction_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "max_log_phase_fugacity_ratio",
+          "error": 3.428368700043071e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 0.6918226780203449,
+        "mass_out_kg_s": 0.691822678315069,
+        "enthalpy_in_W": -251869.21516159404,
+        "enthalpy_out_W": -151869.2152313395,
+        "external_energy_W": 100000.00001645042
+      },
+      "pass": true,
+      "phase_count": 2
+    },
+    {
+      "block": 4,
+      "equipment": "NGL Stabilizer stage 1",
+      "class": "DistillationColumn",
+      "scope": "specified-feed equilibrium column conservation, active MESH and phase equilibrium; not tray efficiency or field calibration",
+      "checks": [
+        {
+          "name": "mass_relative",
+          "error": 3.722130729481554e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_relative_with_trace_floor",
+          "error": 3.769569334685207e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "energy_relative",
+          "error": 1.6058994897939235e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_state",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "phase_0_mole_fraction_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_mole_fraction_sum",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "max_log_phase_fugacity_ratio",
+          "error": 4.0987213623027535e-12,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 0.7039318413408655,
+        "mass_out_kg_s": 0.7039318413408393,
+        "enthalpy_in_W": -252330.79726781423,
+        "enthalpy_out_W": -252330.79767303212,
+        "external_energy_W": 0.0
+      },
+      "pass": true,
+      "phase_count": 2
+    },
+    {
+      "block": 5,
+      "equipment": "Inlet Separator",
+      "class": "ThreePhaseSeparator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 8.513115669271745e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 1.1844869343196496e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 4.576697010872206e-13,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 86.80305470978277,
+        "mass_out_kg_s": 86.80305470977538,
+        "enthalpy_in_W": -4474795.549529163,
+        "enthalpy_out_W": -4474795.549527115,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "Gas Cooler",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.1993312721357219e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 79.39609727872481,
+        "mass_out_kg_s": 79.39609727872481,
+        "enthalpy_in_W": -2434977.0699711405,
+        "enthalpy_out_W": -7765348.876103397,
+        "external_energy_W": -5330371.806132256
+      },
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "JT Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 7.781772208738492e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 79.39609727872481,
+        "mass_out_kg_s": 79.39609727872481,
+        "enthalpy_in_W": -7765348.876103397,
+        "enthalpy_out_W": -7765348.87006058,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "Cold Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 5.3244998250198496e-12,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.3360444941665583e-12,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 79.39609727872481,
+        "mass_out_kg_s": 79.39609727914755,
+        "enthalpy_in_W": -7765348.87006058,
+        "enthalpy_out_W": -7765348.87006058,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "Recompressor",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 8.999750876498619e-12,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 7.558780436059102e-12,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 71.70364174217951,
+        "mass_out_kg_s": 71.7036417415342,
+        "enthalpy_in_W": -5043196.382364063,
+        "enthalpy_out_W": -3346740.5357896993,
+        "external_energy_W": 1696455.8465743633
+      },
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "After Cooler",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 9.99862214762038e-13,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 8.398644929030142e-13,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 6.956937389200108e-17,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 71.7036417415342,
+        "mass_out_kg_s": 71.7036417414625,
+        "enthalpy_in_W": -3346740.5357896993,
+        "enthalpy_out_W": -1731622.917513129,
+        "external_energy_W": 1615117.61827657
+      },
+      "pass": true
+    }
+  ]
+}

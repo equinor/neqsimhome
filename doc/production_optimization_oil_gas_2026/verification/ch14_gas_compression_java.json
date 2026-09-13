@@ -1,0 +1,85 @@
+{
+  "chapter": "ch14_gas_compression",
+  "source_sha256": "c320f8615396dbad6c0e45bcfcb8b372d457b594ed59d5d23d753c8f8b97c136",
+  "engine": "JShell, Java snippets constrained to Java 8 syntax",
+  "returncode": 0,
+  "blocks": [
+    {
+      "index": 6,
+      "line": 853,
+      "code": "import org.apache.logging.log4j.LogManager;\nimport org.apache.logging.log4j.Logger;\nLogger logger = LogManager.getLogger(\"BookChapter14\");\nimport neqsim.thermo.system.SystemSrkEos;\nimport neqsim.process.equipment.stream.Stream;\nimport neqsim.process.processmodel.ProcessSystem;\nimport neqsim.process.equipment.capacity.CapacityConstraint;\nimport neqsim.process.util.optimizer.ProductionOptimizer;\nimport java.util.*;\nSystemSrkEos fluid = new SystemSrkEos(313.15, 80.0);\nfluid.addComponent(\"methane\", 0.80);\nfluid.addComponent(\"ethane\", 0.10);\nfluid.addComponent(\"n-heptane\", 0.08);\nfluid.addComponent(\"water\", 0.02);\nfluid.setMixingRule(\"classic\");\nfluid.setMultiPhaseCheck(true);\nStream feed = new Stream(\"Feed\", fluid);\nfeed.setFlowRate(20000.0, \"kg/hr\");\nProcessSystem process = new ProcessSystem();\nprocess.add(feed);\nprocess.run();\nimport neqsim.process.equipment.compressor.*;\n// The interface methods (simplified)\npublic interface CapacityConstrainedEquipment {\n    Map<String, CapacityConstraint> getCapacityConstraints();\n    double getMaxUtilization();           // highest utilization across all constraints\n    boolean isCapacityAnalysisEnabled();\n    void setCapacityAnalysisEnabled(boolean enabled);\n    void enableConstraints();\n}\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_006_BEGIN\"\n\njshell> \njshell> $27 ==> "
+    },
+    {
+      "index": 7,
+      "line": 922,
+      "code": "Compressor comp = new Compressor(\"Export Compressor\", feed);\ncomp.setOutletPressure(120.0);\ncomp.setPolytropicEfficiency(0.82);\ncomp.setUsePolytropicCalc(true);\n\n// Set explicit constraints\ncomp.setMaximumSpeed(11500.0);       // rpm\ncomp.updatePowerConstraint((25.0e6) / 1000.0);        // kW (25 MW)\ncomp.getAntiSurge().setSurgeControlFactor(1.10);           // 10% minimum\ncomp.reinitializeCapacityConstraints();            // Activate constraint tracking\n\nprocess.add(comp);\nprocess.run();\nCompressor compressor = comp;\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_007_BEGIN\"\n\njshell> \njshell> $40 ==> "
+    },
+    {
+      "index": 8,
+      "line": 941,
+      "code": "// First run the process to establish the operating point\nprocess.run();\n\n// autoSize creates constraints based on current operating point + design margin\ncomp.autoSize(1.2);  // 20% design margin above current operating point\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_008_BEGIN\"\n\njshell> \njshell> $44 ==> "
+    },
+    {
+      "index": 9,
+      "line": 962,
+      "code": "// Set up chart first\nCompressorChartGenerator generator = new CompressorChartGenerator(comp);\ncomp.setCompressorChart(generator.generateCompressorChart(\"normal curves\", 5));\n\n// Now reinitialize constraints based on the chart\ncomp.reinitializeCapacityConstraints();\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_009_BEGIN\"\n\njshell> \njshell> $49 ==> "
+    },
+    {
+      "index": 10,
+      "line": 975,
+      "code": "// After process.run()\ndouble utilization = comp.getMaxUtilization();\nMap<String, CapacityConstraint> constraints = comp.getCapacityConstraints();\n\nfor (Map.Entry<String, CapacityConstraint> entry : constraints.entrySet()) {\n    CapacityConstraint c = entry.getValue();\n    logger.info(entry.getKey() + \": \"\n        + c.getCurrentValue() + \" / \" + c.getDesignValue()\n        + \" = \" + String.format(\"%.1f%%\", c.getUtilization() * 100));\n}\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_010_BEGIN\"\n\njshell> 2026-09-12 20:11:51 INFO  BookChapter14:7 - speed: 3000.0 / 3000.0 = 100,0%\n2026-09-12 20:11:51 INFO  BookChapter14:7 - minSpeed: 3000.0 / 1.7976931348623157E308 = 75,0%\n2026-09-12 20:11:51 INFO  BookChapter14:7 - power: 83.33333333333334 / 100.0 = 83,3%\n2026-09-12 20:11:51 INFO  BookChapter14:7 - ratedPower: 83.33333333333334 / 100.0 = 83,3%\n2026-09-12 20:11:51 INFO  BookChapter14:7 - surgeMargin: 33.4772688937917 / 1.7976931348623157E308 = 29,9%\n2026-09-12 20:11:51 INFO  BookChapter14:7 - stonewallMargin: 69.54320987654319 / 1.7976931348623157E308 = 7,2%\n\njshell> $54 ==> "
+    },
+    {
+      "index": 11,
+      "line": 1003,
+      "code": "// Generate curves at the current design point\nCompressorChartGenerator generator = new CompressorChartGenerator(compressor);\nCompressorChartInterface chart = generator.generateCompressorChart(\"normal curves\", 5);\n\n// Apply to compressor\ncompressor.setCompressorChart(chart);\n// Generated charts already use interpolation and extrapolation.\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_011_BEGIN\"\n\njshell> \njshell> $59 ==> "
+    },
+    {
+      "index": 12,
+      "line": 1045,
+      "code": "// Set max speed 15% above current operating speed\ndouble designSpeed = compressor.getSpeed();\ncompressor.setMaximumSpeed(designSpeed * 1.15);\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_012_BEGIN\"\n\njshell> \njshell> $63 ==> "
+    },
+    {
+      "index": 13,
+      "line": 1062,
+      "code": "ProductionOptimizer optimizer = new ProductionOptimizer();\nProductionOptimizer.OptimizationResult optimum = optimizer.optimizeThroughput(\n    process, feed, 5000.0, 30000.0, \"kg/hr\", null);\nlogger.info(\"Feasible: {}, rate: {} kg/hr\", optimum.isFeasible(), optimum.getOptimalRate());\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_013_BEGIN\"\n\njshell> 2026-09-12 20:12:21 INFO  BookChapter14:5 - Feasible: false, rate: 5000.0 kg/hr\n\njshell> $68 ==> "
+    },
+    {
+      "index": 14,
+      "line": 1098,
+      "code": "// Configure VFD-equipped compressor\ncompressor.setMaximumSpeed(11500.0);  // Maximum VFD speed\ncompressor.setMinimumSpeed(7000.0);   // Minimum stable speed (~60% of max)\n\n// The optimizer can now vary speed to find optimal operating point\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_014_BEGIN\"\n\njshell> \njshell> $72 ==> "
+    },
+    {
+      "index": 15,
+      "line": 1121,
+      "code": "// Separate parallel-machine setup; an optimizer needs independent split decisions.\nStream feedA = new Stream(\"Train A feed\", fluid.clone());\nStream feedB = new Stream(\"Train B feed\", fluid.clone());\nfeedA.setFlowRate(10000.0, \"kg/hr\");\nfeedB.setFlowRate(10000.0, \"kg/hr\");\nfeedA.run();\nfeedB.run();\nCompressor compA = new Compressor(\"Train A\", feedA);\nCompressor compB = new Compressor(\"Train B\", feedB);\ncompA.setOutletPressure(120.0);\ncompB.setOutletPressure(120.0);\ncompA.run();\ncompB.run();\nlogger.info(\"Parallel baseline power: {} kW\", compA.getPower(\"kW\") + compB.getPower(\"kW\"));\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_015_BEGIN\"\n\njshell> 2026-09-12 20:12:26 INFO  BookChapter14:5 - Parallel baseline power: 198.56437092380716 kW\n\njshell> $87 ==> "
+    },
+    {
+      "index": 16,
+      "line": 1187,
+      "code": "// Gas turbine with 25 MW rated power at ISO conditions\n// De-rate for ambient temperature of 30\u00b0C\ndouble ambientTemp = 30.0;  // \u00b0C\ndouble isoRating = 25.0e6;  // W\ndouble derating = 1.0 - 0.007 * (ambientTemp - 15.0);  // ~0.7%/\u00b0C\ncomp.updatePowerConstraint((isoRating * derating) / 1000.0);  // ~22.4 MW available\n",
+      "status": "pass",
+      "output": "\"BOOK_BLOCK_016_BEGIN\"\n\njshell> \njshell> $93 ==> "
+    }
+  ]
+}

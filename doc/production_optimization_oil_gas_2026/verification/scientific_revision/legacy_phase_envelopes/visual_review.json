@@ -1,0 +1,109 @@
+{
+  "created_utc": "2026-09-12T20:32:21.553446+00:00",
+  "scope": "Four legacy manuscript phase-envelope replacements, separate from the 104 notebook plots and NIST plot audit.",
+  "summary": {
+    "images": 4,
+    "full_resolution_views": 4,
+    "fresh_TP_flash_states": 48,
+    "physical_scope": "Three transition brackets per branch per fluid, component conservation, positive phase density, normalized compositions and two-phase fugacity equality. No independent laboratory validation or critical-point claim.",
+    "max_component_closure": 1.2945200467129325e-13,
+    "max_absolute_log_fugacity_ratio": 2.1241870462239674e-09
+  },
+  "records": [
+    {
+      "chapter": "ch02_thermodynamic_foundations",
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch02_thermodynamic_foundations\\figures\\phase_envelope.png",
+      "sha256": "0665758b0568539165c3dadff6ca43b46802e7275256ddc748a25f95abb37a2b",
+      "csv_sha256": "540699be58a6850bcf2e95424794a58a7dc4e5a06a9d0a3bd18477c45c5904ef",
+      "full_resolution_inspected": true,
+      "status": "passed_scoped_visual_review",
+      "basis_match": "exact_manuscript_component_amounts_and_EOS",
+      "finding": "Axes and units, branch legend, sampled extrema, qualified VLE-only footer and retained continuation gaps are clear. No fabricated critical point or operating trajectory is shown.",
+      "csv_extrema_and_temperature_units": "passed",
+      "physical_checks": {
+        "status": "passed_scoped_VLE_checks",
+        "fresh_TP_flash_states": 12,
+        "component_closure_max_abs": 2.220446049250313e-16,
+        "component_closure_tolerance": 1e-07,
+        "phase_composition_sum_tolerance": 1e-07,
+        "two_phase_fugacity_max_abs_log_ratio": 1.2615533070600763e-09,
+        "log_fugacity_ratio_tolerance": 1e-06,
+        "positive_finite_phase_densities": true,
+        "limitation": "Three low/moderate-pressure transition brackets per branch verify classification and local VLE consistency; they do not validate every continuation point or EOS accuracy against laboratory data. Sampled extrema and open continuation gaps remain explicitly qualified."
+      }
+    },
+    {
+      "chapter": "ch03_fluid_characterization",
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch03_fluid_characterization\\figures\\gas_condensate_phase_envelope.png",
+      "sha256": "91ae60b5e414c99500ab39c73e37535df1913f3396475a0fc1f272a5d54aebcb",
+      "csv_sha256": "c8cd21ffa157aad678c8eb0d3737dc03c625c04e898542b6a6974ece23d4a16a",
+      "full_resolution_inspected": true,
+      "status": "passed_scoped_visual_review",
+      "basis_match": "illustration_only_surrogate",
+      "finding": "Axes and units, branch legend, sampled extrema, qualified VLE-only footer and retained continuation gaps are clear. No fabricated critical point or operating trajectory is shown.",
+      "csv_extrema_and_temperature_units": "passed",
+      "physical_checks": {
+        "status": "passed_scoped_VLE_checks",
+        "fresh_TP_flash_states": 12,
+        "component_closure_max_abs": 1.2945200467129325e-13,
+        "component_closure_tolerance": 1e-07,
+        "phase_composition_sum_tolerance": 1e-07,
+        "two_phase_fugacity_max_abs_log_ratio": 6.37525587856231e-11,
+        "log_fugacity_ratio_tolerance": 1e-06,
+        "positive_finite_phase_densities": true,
+        "limitation": "Three low/moderate-pressure transition brackets per branch verify classification and local VLE consistency; they do not validate every continuation point or EOS accuracy against laboratory data. Sampled extrema and open continuation gaps remain explicitly qualified."
+      }
+    },
+    {
+      "chapter": "ch12_gas_processing",
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch12_gas_processing\\figures\\phase_envelope_gas.png",
+      "sha256": "fd78be9af8141068f55252d2fb9c9bd08cc91513fd90f745498cc0c6fb750399",
+      "csv_sha256": "dbbffb9e0a672029759645fd97964e50b11575c5e62022d22648ad577f8d190f",
+      "full_resolution_inspected": true,
+      "status": "passed_scoped_visual_review",
+      "basis_match": "exact_manuscript_component_amounts_and_EOS",
+      "finding": "Axes and units, branch legend, sampled extrema, qualified VLE-only footer and retained continuation gaps are clear. No fabricated critical point or operating trajectory is shown.",
+      "csv_extrema_and_temperature_units": "passed",
+      "physical_checks": {
+        "status": "passed_scoped_VLE_checks",
+        "fresh_TP_flash_states": 12,
+        "component_closure_max_abs": 5.284661597215745e-14,
+        "component_closure_tolerance": 1e-07,
+        "phase_composition_sum_tolerance": 1e-07,
+        "two_phase_fugacity_max_abs_log_ratio": 2.1241870462239674e-09,
+        "log_fugacity_ratio_tolerance": 1e-06,
+        "positive_finite_phase_densities": true,
+        "limitation": "Three low/moderate-pressure transition brackets per branch verify classification and local VLE consistency; they do not validate every continuation point or EOS accuracy against laboratory data. Sampled extrema and open continuation gaps remain explicitly qualified."
+      }
+    },
+    {
+      "chapter": "ch19_export_and_metering",
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch19_export_and_metering\\figures\\phase_envelope_export_gas.png",
+      "sha256": "f0e7016aa046c2b4b287be80909f5507cad461ed93ba7bfec02699e296aa9dbd",
+      "csv_sha256": "753a8004b356fa0ce5b8954106cef9cc4e01b2954d45ca27cdccf03d60c3366a",
+      "full_resolution_inspected": true,
+      "status": "passed_scoped_visual_review",
+      "basis_match": "exact_manuscript_component_amounts_and_EOS",
+      "finding": "Axes and units, branch legend, sampled extrema, qualified VLE-only footer and retained continuation gaps are clear. No fabricated critical point or operating trajectory is shown.",
+      "csv_extrema_and_temperature_units": "passed",
+      "physical_checks": {
+        "status": "passed_scoped_VLE_checks",
+        "fresh_TP_flash_states": 12,
+        "component_closure_max_abs": 6.661338147750939e-16,
+        "component_closure_tolerance": 1e-07,
+        "phase_composition_sum_tolerance": 1e-07,
+        "two_phase_fugacity_max_abs_log_ratio": 1.0666711958720502e-10,
+        "log_fugacity_ratio_tolerance": 1e-06,
+        "positive_finite_phase_densities": true,
+        "limitation": "Three low/moderate-pressure transition brackets per branch verify classification and local VLE consistency; they do not validate every continuation point or EOS accuracy against laboratory data. Sampled extrema and open continuation gaps remain explicitly qualified."
+      }
+    }
+  ],
+  "limitations": [
+    "Chapter 3 image is a six-defined-component PR surrogate with an explicit new recipe; it does not validate the original TBP case.",
+    "Chapter 12 has unresolved continuation segments left visibly open; the sampled maxima and limited branch checks do not certify a complete saturation locus.",
+    "Solids, hydrates and aqueous phase stability are outside these VLE illustrations.",
+    "Original failed TBP and intermediate heavy-surrogate evidence is retained alongside final evidence."
+  ],
+  "manifest_sha256": "41ac78994d0807a2abe82064f45028433a6eaa1bb823ea05b90d1b3b1ccd40cc"
+}

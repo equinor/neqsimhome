@@ -1,0 +1,212 @@
+{
+  "chapter": "ch33_onshore_processing_plants",
+  "status": "reviewed_and_verified_with_stated_model_limits",
+  "full_text_review": true,
+  "chapter_sha256": "8ff1c5dc3b35287fb20c9913d807ece08a08cc052dd69b6b36f6d377f90812d2",
+  "source_revision": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "issue_families": [
+    {
+      "topic": "Inventory sizing",
+      "correction": "Separated transient surge accumulation from residence-time inventory and defined standard/actual volume bases."
+    },
+    {
+      "topic": "Amine circulation",
+      "correction": "Restored solvent molar mass in the solution mass-flow relation; separated loadings, weight fraction and circulation."
+    },
+    {
+      "topic": "Hydrogen sulfide",
+      "correction": "Replaced unsupported concentration/consequence claims with the NIOSH 100 ppm IDLH value and a primary citation."
+    },
+    {
+      "topic": "TEG composition",
+      "correction": "Converted 99.5 mass% lean solution to molar amounts; the old molar recipe did not represent the stated concentration."
+    },
+    {
+      "topic": "TEG energy conservation",
+      "correction": "Exposed the native approximate absorber residual and solved an explicit fixed-composition outlet-temperature energy reconstruction; retained the raw residual."
+    },
+    {
+      "topic": "Cryogenic pretreatment",
+      "correction": "Defined the numerical feed as dry and acid-gas-free; distinguished TEG dew-point reduction from molecular-sieve cryogenic pretreatment."
+    },
+    {
+      "topic": "Heat exchange boundary",
+      "correction": "Replaced unsupported one-sided heat-recovery credit with a cooler having an explicit external thermal duty."
+    },
+    {
+      "topic": "Expander inlet",
+      "correction": "Added a knockout separator, gas-only expansion and separate liquid letdown/remixing to avoid expanding a wet two-phase feed as turbine gas."
+    },
+    {
+      "topic": "Expander efficiency",
+      "correction": "Corrected the efficiency/temperature relation; lower efficiency produces less cooling at fixed pressure ratio."
+    },
+    {
+      "topic": "Refrigeration",
+      "correction": "Used enthalpy duty without adding latent heat twice; stated the Carnot COP upper bound and utility-model requirement."
+    },
+    {
+      "topic": "Recovery basis",
+      "correction": "Computed recovery by component molar flow rather than mixed-phase volume ratios, accounting for all loss paths."
+    },
+    {
+      "topic": "Distillation shortcuts",
+      "correction": "Corrected the saturated-liquid Underwood formulation and its root interval, with an independently checked binary example."
+    },
+    {
+      "topic": "Column acceptance",
+      "correction": "Replaced a failed large column with a converged equilibrium-stage stabilizer and explicit stage heat input, stage energy and MESH gates."
+    },
+    {
+      "topic": "Column duty accounting",
+      "correction": "Matched reboiler heatInput to the stage-energy boundary; rejected a fixed-temperature result that appeared solved while failing rigorous energy residuals."
+    },
+    {
+      "topic": "Sulfur recovery",
+      "correction": "Corrected sulfur atom accounting and removed an ambiguous reaction-enthalpy value without a specified sulfur reference state."
+    },
+    {
+      "topic": "Ethane storage",
+      "correction": "Used NIST boiling/critical properties and removed an unsupported ambient-pressure liquid-storage guarantee near the critical temperature."
+    },
+    {
+      "topic": "Plant scope",
+      "correction": "Replaced the claimed complete raw-gas plant with an explicit three-area dry-gas teaching flowsheet; standalone TEG is a separate model."
+    },
+    {
+      "topic": "Product specification",
+      "correction": "Reported 2.2246 mol% methane in stabilizer bottoms as a calculated composition, without claiming an untested storage/product specification."
+    },
+    {
+      "topic": "Export constraint",
+      "correction": "Made 70 bara export pressure an explicit requirement rather than treating low-pressure gas as sales-ready production."
+    },
+    {
+      "topic": "Energy objective",
+      "correction": "Reported gross compression, recovered expansion and thermal cooling separately; no shaft coupling or utility conversion is silently assumed."
+    },
+    {
+      "topic": "Persistence",
+      "correction": "Rebuilt from a checked input specification rather than claiming an unverified whole-state archive proves reproducibility."
+    },
+    {
+      "topic": "Sensitivity",
+      "correction": "Rebuilt every plant for seven temperatures and retained the nonmonotonic recovery maximum under fixed stabilizer heat input."
+    },
+    {
+      "topic": "Design numbers",
+      "correction": "Removed universal cost, recovery, life and capacity claims without a documented basis."
+    },
+    {
+      "topic": "Exercises and standards",
+      "correction": "Labeled design assignments and standards scope explicitly; no unsolved exercise or catalogue citation is represented as an executed design or compliance proof."
+    }
+  ],
+  "entries": [
+    {
+      "block": 1,
+      "line": 83,
+      "code_sha256": "ad5960ec8aacb3ac65d636717b9b67939787c10b2051f1ee9e0ca586f44f3765",
+      "status": "passed",
+      "purpose": "bindings and conservation helper",
+      "engineering_evidence": "Reusable mass, each-component and enthalpy/work/heat residual calculations are exercised by all subsequent process cases.",
+      "classification": "executed verification helper"
+    },
+    {
+      "block": 2,
+      "line": 145,
+      "code_sha256": "7c7eb1a312a0bb23e3b8af912213ea143154b6b63400d9a7212c5a54909dc869",
+      "status": "passed",
+      "purpose": "surge inventory",
+      "engineering_evidence": "Independent dimensional arithmetic: 60 m3 of accumulated liquid from flow imbalance and duration.",
+      "classification": "calculation/derived output"
+    },
+    {
+      "block": 3,
+      "line": 196,
+      "code_sha256": "2f1081cae9068da8d18e955f3d6be28c3af5ab04409b2da93c245f57504064f0",
+      "status": "passed",
+      "purpose": "amine circulation",
+      "engineering_evidence": "Independent dimensional arithmetic: 67.8974 kg/s of lean solution including solvent molar mass, weight fraction and loading change.",
+      "classification": "calculation/derived output"
+    },
+    {
+      "block": 4,
+      "line": 248,
+      "code_sha256": "0e8fb15feb7d19aa2e125d55673cfc4ad8e824c8ed4a70b4a52ee540d07436cf",
+      "status": "passed",
+      "purpose": "TEG contactor",
+      "engineering_evidence": "Mass, each component and explicit corrected energy boundary; raw energy residual retained. Positive heat capacities/densities, single retained phase and bounded temperature correction.",
+      "classification": "calculation/derived output"
+    },
+    {
+      "block": 5,
+      "line": 372,
+      "code_sha256": "c8429a4245f87645be85dcd1a563aba92096d032783953ae9ab84b93a2421249",
+      "status": "passed",
+      "purpose": "ideal-gas expansion limit",
+      "engineering_evidence": "Analytical temperature/efficiency relation, correct sign of work and temperature drop.",
+      "classification": "calculation/derived output"
+    },
+    {
+      "block": 6,
+      "line": 404,
+      "code_sha256": "098289992ecfd54e8e52757dcf28ea89beb8ad969d15ebc3182107b57d820e7b",
+      "status": "passed",
+      "purpose": "binary shortcut distillation",
+      "engineering_evidence": "Independent Fenske/Underwood/Gilliland assumptions; saturated-liquid binary Underwood root 4/3 and minimum reflux 1.7.",
+      "classification": "calculation/derived output"
+    },
+    {
+      "block": 7,
+      "line": 471,
+      "code_sha256": "8fd3710e275de18db881a700404bf551415f818babf39a7a4fd343d817ac62ed",
+      "status": "passed",
+      "purpose": "complete dry-gas plant",
+      "engineering_evidence": "Unit and whole-plant mass/component/energy balances, rigorous column status and MESH residual, independent fugacity equality and reconstructed expander efficiency.",
+      "classification": "calculation/derived output"
+    },
+    {
+      "block": 8,
+      "line": 671,
+      "code_sha256": "86c228c37956c52bd067bb0be0dd09364d3f4f7ac0ea04006a79f2330f24d37f",
+      "status": "passed",
+      "purpose": "automation and saved input record",
+      "engineering_evidence": "Pressure readback matches the accepted process; fresh model rebuild from the serialized input specification reproduces export/product/energy results.",
+      "classification": "calculation/derived output"
+    },
+    {
+      "block": 9,
+      "line": 693,
+      "code_sha256": "ae455f3baa08d05b81ba37ed7621de2d244f1f8141b37bea18c04d0da708bc16",
+      "status": "passed",
+      "purpose": "seven-case temperature sweep and scientific figure",
+      "engineering_evidence": "Fresh whole-plant rebuild at each temperature; all physical acceptance checks, component recovery plus every loss path sums to one; plot uses executed data and separate heat/shaft-power quantities.",
+      "classification": "calculation/derived output"
+    }
+  ],
+  "balance_evaluations": 146,
+  "maximum_relative_residuals": {
+    "mass_relative": 2.3539038213300834e-10,
+    "component_relative": 1.5046166788618744e-09,
+    "energy_relative": 1.2158039832669028e-07
+  },
+  "execution_record": "verification/scientific_revision/ch33_physical_execution.json",
+  "independent_references": [
+    "nioshH2S2026",
+    "nistEthanePhase2026",
+    "waterlooDistillation2026",
+    "uopMercuryRemoval2026",
+    "twuTEG2005",
+    "neaguTEG2017",
+    "epaGasProcessing1995"
+  ],
+  "limitations": [
+    "Conservation, equilibrium and reconstructed efficiency are solution verification; the same EOS is not an independent experimental reference.",
+    "No measured performance data were available for this synthetic plant or TEG case; no field calibration is claimed.",
+    "SimpleTEGAbsorber water transfer remains an approximate stage-efficiency model; the explicit energy reconstruction does not make it a rigorous rate-based contactor.",
+    "The small stabilizer is a converged teaching calculation, not a sized or validated commercial fractionation train.",
+    "Only the specified dry feed, pressure, temperature and duty range is covered by the executed plant checks.",
+    "References to safety values and standards do not establish a facility safety assessment or regulatory compliance."
+  ]
+}

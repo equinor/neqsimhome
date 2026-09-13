@@ -1,0 +1,660 @@
+{
+  "chapter": "ch01_introduction",
+  "source_sha256": "fc4ec78cfc3496b92c6915fddad4b13c9fef9763777cc260742a1825dfea05e9",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "literal_blocks": [
+    {
+      "index": 1,
+      "code_sha256": "42fcc51beb184ac1a5a7ca8db0eb2839d4c151d306ea87b2d28450a45e321108",
+      "line": 520,
+      "execution": "pass",
+      "objects": [],
+      "seconds": 0.1559999999954016,
+      "output": "NeqSim loaded from C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim\\target\\classes\n"
+    },
+    {
+      "index": 2,
+      "code_sha256": "743b62e961e832d0b0aad77874618a790a73e1f2de3637f1446740d0f4a1e6b9",
+      "line": 549,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.0,
+          "getPressure_bara": 150.0,
+          "getTemperature_C": 80.0
+        }
+      ],
+      "seconds": 1.1710000000020955,
+      "output": ""
+    },
+    {
+      "index": 3,
+      "code_sha256": "5c8007e6a9bd724a07f3700de583380c4048a93f39fc5e8ca9a4ede696e5495d",
+      "line": 600,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 0.024258595,
+          "getPressure_bara": 60.0,
+          "getTemperature_C": 80.0
+        }
+      ],
+      "seconds": 0.14099999999598367,
+      "output": "Number of phases: 2\nGas density: 48.57 kg/m3\nGas viscosity: 0.000014 kg/(m\u00b7s)\nGas Cp: 55.35 J/(mol\u00b7K)\nGas Z-factor: 0.9058\nOil density: 558.65 kg/m3\nOil viscosity: 0.000154 kg/(m\u00b7s)\n"
+    },
+    {
+      "index": 4,
+      "code_sha256": "38f7f44356821f826d3aab84f0a6e8f156a190bab4a7389dd04015871ba4a4f8",
+      "line": 648,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888891,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hp_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 80.0,
+          "inlets": [
+            "Well Stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 25.0,
+          "getTemperature_C": 73.16191399146811,
+          "inlets": [
+            "liquidOutStream"
+          ],
+          "outlets": [
+            "HP-MP Valve out stream"
+          ]
+        },
+        {
+          "name": "mp_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 25.0,
+          "getTemperature_C": 73.16191399146811,
+          "inlets": [
+            "HP-MP Valve out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        }
+      ],
+      "seconds": 0.4059999999954016,
+      "output": "HP separator gas: 0.811 MSm3/day\nMP separator gas: 0.044 MSm3/day\nTotal gas: 0.855 MSm3/day\nOil export: 27.08 m3/hr\n"
+    },
+    {
+      "index": 5,
+      "code_sha256": "e0c00e3ceb5bc09ef1d8526fae6b8d32ea3aee3edb51146945a88e2064ba9e46",
+      "line": 733,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888891,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hp_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 80.0,
+          "inlets": [
+            "Well Stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 25.0,
+          "getTemperature_C": 73.16191399146811,
+          "inlets": [
+            "liquidOutStream"
+          ],
+          "outlets": [
+            "HP-MP Valve out stream"
+          ]
+        },
+        {
+          "name": "mp_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 25.0,
+          "getTemperature_C": 73.16191399146811,
+          "inlets": [
+            "HP-MP Valve out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "separation_system",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "compressor",
+          "class": "neqsim.process.equipment.compressor.Compressor",
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 115.90609085176237,
+          "getPower_W": 583690.1866928478,
+          "inlets": [
+            "gasOutStream"
+          ],
+          "outlets": [
+            "Export compressor out stream"
+          ]
+        },
+        {
+          "name": "compression_system",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 583690.1866928478
+        },
+        {
+          "name": "cooler",
+          "class": "neqsim.process.equipment.heatexchanger.Cooler",
+          "inlets": [
+            "Export compressor out stream"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "gas_processing_system",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "plant",
+          "class": "neqsim.process.processmodel.ProcessModel",
+          "getPower_W": 583690.1866928478
+        }
+      ],
+      "seconds": 0.17200000000593718,
+      "output": ""
+    },
+    {
+      "index": 6,
+      "code_sha256": "ce2bbd286dbd32c9c6a00ea37029b534de0db896fc0d47128a7777f9061206a2",
+      "line": 762,
+      "execution": "pass",
+      "objects": [
+        {
+          "name": "fluid",
+          "class": "neqsim.thermo.system.SystemSrkEos",
+          "getFlowRate_kg/sec": 13.888888888888891,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 80.0
+        },
+        {
+          "name": "feed",
+          "class": "neqsim.process.equipment.stream.Stream",
+          "getFlowRate_kg/sec": 13.88888888888889,
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 80.0,
+          "inlets": [],
+          "outlets": []
+        },
+        {
+          "name": "hp_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 80.0,
+          "getTemperature_C": 80.0,
+          "inlets": [
+            "Well Stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "valve",
+          "class": "neqsim.process.equipment.valve.ThrottlingValve",
+          "getPressure_bara": 20.0,
+          "getTemperature_C": 71.39206317783783,
+          "inlets": [
+            "liquidOutStream"
+          ],
+          "outlets": [
+            "HP-MP Valve out stream"
+          ]
+        },
+        {
+          "name": "mp_sep",
+          "class": "neqsim.process.equipment.separator.Separator",
+          "getPressure_bara": 20.0,
+          "getTemperature_C": 71.39206317783783,
+          "inlets": [
+            "HP-MP Valve out stream"
+          ],
+          "outlets": [
+            "gasOutStream",
+            "liquidOutStream"
+          ]
+        },
+        {
+          "name": "process",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "separation_system",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "compressor",
+          "class": "neqsim.process.equipment.compressor.Compressor",
+          "getPressure_bara": 120.0,
+          "getTemperature_C": 115.90609085176237,
+          "getPower_W": 583690.1866928478,
+          "inlets": [
+            "gasOutStream"
+          ],
+          "outlets": [
+            "Export compressor out stream"
+          ]
+        },
+        {
+          "name": "compression_system",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 583690.1866928478
+        },
+        {
+          "name": "cooler",
+          "class": "neqsim.process.equipment.heatexchanger.Cooler",
+          "inlets": [
+            "Export compressor out stream"
+          ],
+          "outlets": [
+            "outStream"
+          ]
+        },
+        {
+          "name": "gas_processing_system",
+          "class": "neqsim.process.processmodel.ProcessSystem",
+          "getPower_W": 0.0
+        },
+        {
+          "name": "plant",
+          "class": "neqsim.process.processmodel.ProcessModel",
+          "getPower_W": 583690.1866928478
+        },
+        {
+          "name": "auto",
+          "class": "neqsim.process.automation.ProcessAutomation"
+        },
+        {
+          "name": "v",
+          "class": "neqsim.process.automation.SimulationVariable"
+        }
+      ],
+      "seconds": 0.07899999999790452,
+      "output": "  HP Separator.temperature (OUTPUT) [K]\n  HP Separator.pressure (OUTPUT) [bara]\n  HP Separator.gasOutStream.temperature (OUTPUT) [K]\n  HP Separator.gasOutStream.pressure (OUTPUT) [bara]\n  HP Separator.gasOutStream.flowRate (OUTPUT) [kg/hr]\n  HP Separator.gasOutStream.density (OUTPUT) [kg/m3]\n  HP Separator.gasOutStream.molarMass (OUTPUT) [kg/mol]\n  HP Separator.liquidOutStream.temperature (OUTPUT) [K]\n  HP Separator.liquidOutStream.pressure (OUTPUT) [bara]\n  HP Separator.liquidOutStream.flowRate (OUTPUT) [kg/hr]\n  HP Separator.liquidOutStream.density (OUTPUT) [kg/m3]\n  HP Separator.liquidOutStream.molarMass (OUTPUT) [kg/mol]\n"
+    }
+  ],
+  "physical_checks": [
+    {
+      "block": 3,
+      "equipment": "ops",
+      "class": "TPflash",
+      "scope": "phase material/fugacity closure and state domain; not independent EOS calibration",
+      "checks": [
+        {
+          "name": "finite_positive_T_P",
+          "error": 0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "beta_sum",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "beta_domain",
+          "error": 0,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_0_composition_sum",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "phase_1_composition_sum",
+          "error": 2.3314683517128287e-15,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "name": "feed_composition_reconstruction",
+          "error": 0.0,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "name": "maximum_log_phase_fugacity_ratio",
+          "error": 4.884981308350677e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "phase_count": 2,
+      "temperature_K": 353.15,
+      "pressure_bara": 60.0,
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 2.864908310584724e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.955183930969725e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.552831329672884e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888889,
+        "mass_out_kg_s": 13.888888888888491,
+        "enthalpy_in_W": -231432.3517595655,
+        "enthalpy_out_W": -231432.3517595596,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "HP-MP Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2148104906555045e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.116383559800942,
+        "mass_out_kg_s": 5.116383559800942,
+        "enthalpy_in_W": -959315.107575882,
+        "enthalpy_out_W": -959315.1074593434,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "MP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 1.1283672657793124e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 6.980598949689602e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.2135253674389618e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.116383559800942,
+        "mass_out_kg_s": 5.116383559800885,
+        "enthalpy_in_W": -959315.1074593434,
+        "enthalpy_out_W": -959315.1074593446,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 6,
+      "equipment": "HP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 2.864908310584724e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 9.955183930969725e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 2.552831329672884e-14,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888889,
+        "mass_out_kg_s": 13.888888888888491,
+        "enthalpy_in_W": -231432.3517595655,
+        "enthalpy_out_W": -231432.3517595596,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 6,
+      "equipment": "HP-MP Valve",
+      "class": "ThrottlingValve",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.0531130895653757e-10,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_pressure_drop_bar",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.116383559800942,
+        "mass_out_kg_s": 5.116383559800942,
+        "enthalpy_in_W": -959315.107575882,
+        "enthalpy_out_W": -959315.1074748553,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 6,
+      "equipment": "MP Separator",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 4.548188055910459e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 2.6720438363712517e-14,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 8.494677571935386e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.116383559800942,
+        "mass_out_kg_s": 5.11638355980071,
+        "enthalpy_in_W": -959315.1074748553,
+        "enthalpy_out_W": -959315.1074748544,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    }
+  ]
+}

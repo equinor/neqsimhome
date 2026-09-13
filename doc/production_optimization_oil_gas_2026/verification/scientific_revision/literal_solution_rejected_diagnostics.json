@@ -1,0 +1,50 @@
+{
+  "scope": "Rejected native dew-point method diagnosis before the manuscript switched to the multiphase method and verified the phase boundary. These are observed outputs from the retained probe, not fabricated reference values.",
+  "probe_script": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\probe_ch19_export.py",
+  "probe_script_sha256": "a2cd455bd4d7d4f7260b5766cab89ba61ee5768d94ef5c8869da05a6b0ef46e3",
+  "rejected_results": [
+    {
+      "method": "raw waterDewPointTemperatureFlash",
+      "pressure_bara": 20.0,
+      "returned_temperature_K": 0.0,
+      "accepted": false
+    },
+    {
+      "method": "raw waterDewPointTemperatureFlash",
+      "pressure_bara": 70.0,
+      "returned_temperature_K": 0.0,
+      "accepted": false
+    },
+    {
+      "method": "raw waterDewPointTemperatureFlash",
+      "pressure_bara": 150.0,
+      "returned_temperature_K": 0.0,
+      "accepted": false
+    },
+    {
+      "method": "init(0) then waterDewPointTemperatureFlash",
+      "pressure_bara": 20.0,
+      "returned_temperature_K": 0.0,
+      "accepted": false
+    },
+    {
+      "method": "init(0) then waterDewPointTemperatureFlash",
+      "pressure_bara": 70.0,
+      "returned_temperature_K": 0.0,
+      "accepted": false
+    },
+    {
+      "method": "init(0) then waterDewPointTemperatureFlash",
+      "pressure_bara": 150.0,
+      "returned_temperature_K": 0.0,
+      "accepted": false
+    }
+  ],
+  "accepted_method": "waterDewPointTemperatureMultiphaseFlash with fresh TP phase-onset brackets at -0.2/+0.2 K; exact eight-state evidence in ch19_solution_checks.json",
+  "other_diagnostics": [
+    "ch19_initial_solution_failure.json",
+    "ch19_envelope_array_probe.json",
+    "ch22_solution_checks.json: fence1 rejected_solver_diagnostics",
+    "literal_solution_previous_execution/"
+  ]
+}

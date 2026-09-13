@@ -1,0 +1,2062 @@
+{
+  "chapter": "ch14_gas_compression",
+  "source_sha256": "7364bc75874bbfac73acd3b7d6ffbe839f54d2af403f68e2215f54a63943625c",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "literal_blocks": [
+    {
+      "index": 1,
+      "code_sha256": "dc6163b7a3cd1557ec12308fd6deda85bfcc9340f3877a36f7387e91352e1d0a",
+      "line": 459,
+      "execution": "pass",
+      "seconds": 1.6089999999967404,
+      "output": "Available shaft power (MW): 30.0\nDemanded shaft power (MW): 20.0\nThermal efficiency: 0.3645282509394479\nFuel demand (kg/hr): 4090.4502839127767\nPower shortfall (MW): 0.0\nDriven load (MW): 3.798084525074302\nFuel (kg/hr): 1308.6146345696798\n"
+    },
+    {
+      "index": 2,
+      "code_sha256": "ea765ae7497aa41389249a80953b71302b5c64f73571d507d0f83180a25db7cb",
+      "line": 502,
+      "execution": "pass",
+      "seconds": 0.20300000000133878,
+      "output": "=== Single-Stage Compression Results ===\nSuction T/P:   30.0 C / 10.0 bara\nDischarge T/P: 120.7 C / 30.0 bara\nPressure ratio: 3.00\nPolytropic eff: 80.0%\nPower:         2554.3 kW\nPolytropic head: 147.1 kJ/kg\n"
+    },
+    {
+      "index": 3,
+      "code_sha256": "e840bc9aefa2aaf7700a064d48472e492827d6413f86a9dea48c8f980c4d205f",
+      "line": 556,
+      "execution": "pass",
+      "seconds": 0.28100000000267755,
+      "output": "======================================================================\n3-STAGE RECOMPRESSION TRAIN RESULTS\n======================================================================\n\n1st Stage:\n  Suction:    40.0 C / 2.5 bara\n  Discharge:  133.9 C / 8.0 bara\n  PR:         3.20\n  Power:      1651 kW\n  After cool: 35.0 C\n\n2nd Stage:\n  Suction:    35.0 C / 8.0 bara\n  Discharge:  125.4 C / 25.0 bara\n  PR:         3.12\n  Power:      1520 kW\n  After cool: 35.0 C\n\n3rd Stage:\n  Suction:    35.0 C / 25.0 bara\n  Discharge:  124.0 C / 75.0 bara\n  PR:         3.00\n  Power:      1357 kW\n  After cool: 35.0 C\n\n======================================================================\nTOTAL COMPRESSION POWER: 4528 kW (4.5 MW)\nOverall PR: 30.0\n======================================================================\n"
+    },
+    {
+      "index": 4,
+      "code_sha256": "93c94ef67c461876efde1dc40acdcd68d54a948b42b35bb363bca1004ecd6611",
+      "line": 678,
+      "execution": "pass",
+      "seconds": 0.8120000000053551,
+      "output": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch14_gas_compression\\chapter.md:678:59: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    },
+    {
+      "index": 5,
+      "code_sha256": "0172934d58e917e814176a6c1bfe7eb128b8878038d6d96b0eac8bb2cefc21d4",
+      "line": 748,
+      "execution": "pass",
+      "seconds": 0.125,
+      "output": "Gas Type                   MW      Power    T_out       Head\n------------------------------------------------------------\nLean gas (MW~18)         18.0     1224 kW  131.7 C    176.3 kJ/kg\nRich gas (MW~22)         22.0      968 kW  118.8 C    139.4 kJ/kg\nVery rich (MW~26)        27.6      717 kW   97.7 C    103.2 kJ/kg\n"
+    },
+    {
+      "index": 17,
+      "code_sha256": "4646e4afe9a7c3af80c898780a40f1efffb38f9fa23fbfecb19030be1a204aeb",
+      "line": 1250,
+      "execution": "pass",
+      "seconds": 0.0940000000045984,
+      "output": "=== Compressor with Performance Chart ===\nOperating speed: 3000 rpm\nMaximum speed:   3450 rpm\nPower:           2440.5 kW\nPolytropic head: 140.1 kJ/kg\nPolytropic eff:  79.7%\nDischarge T:     116.9 \u00b0C\nPressure ratio:  2.87\n"
+    },
+    {
+      "index": 18,
+      "code_sha256": "d1fb545706fd7976f78153d680136c2dc3540372abae87b4f955fb865a3a287e",
+      "line": 1325,
+      "execution": "pass",
+      "seconds": 0.10899999999674037,
+      "output": "=== Two-Stage Compression with Capacity Constraints ===\n\n1st Stage:\n  Power:       2279 kW\n  Utilization: 100.7%\n  Speed:       3020 rpm\n\n2nd Stage:\n  Power:       2210 kW\n  Utilization: 100.1%\n  Speed:       3002 rpm\n\nTotal compression power: 4488 kW (4.49 MW)\n"
+    },
+    {
+      "index": 19,
+      "code_sha256": "afa4b6b7751596713c7fe41347187cc91f658850ea04232b45ed174f1c062635",
+      "line": 1409,
+      "execution": "pass",
+      "seconds": 0.4530000000013388,
+      "output": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch14_gas_compression\\chapter.md:1409:55: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    },
+    {
+      "index": 20,
+      "code_sha256": "d01ea2bbd4a3e5b4012118796236a961808386f92cbe7e513f7ddc6871d95393",
+      "line": 1475,
+      "execution": "pass",
+      "seconds": 0.6720000000059372,
+      "output": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch14_gas_compression\\chapter.md:1475:69: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    },
+    {
+      "index": 21,
+      "code_sha256": "fa42d8d9d7c1364147773eaec7e0404591a33a4add3277107576e1d170c30a97",
+      "line": 1569,
+      "execution": "pass",
+      "seconds": 0.1559999999954016,
+      "output": "Feasible: True Rate (kg/hr): 34173.93922805786\nIndependent linear-power boundary (kg/hr): 34173.939377462804\n| Equipment | Duty | Capacity | Utilization | Limit |\n|---|---|---|---|---|\n|Power-limited compressor|0,95|1,00|0,950|0,950|\n\n"
+    }
+  ],
+  "physical_checks": [
+    {
+      "block": 1,
+      "equipment": "Driven compressor",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.888888888888888,
+        "mass_out_kg_s": 13.888888888888888,
+        "enthalpy_in_W": 323705.8600312697,
+        "enthalpy_out_W": 4121790.385105572,
+        "external_energy_W": 3798084.525074302
+      },
+      "pass": true
+    },
+    {
+      "block": 1,
+      "equipment": "Turbine performance bookkeeping",
+      "class": "CaseAcceptance",
+      "scope": "Package heat-rate/efficiency, positive fuel and power-domain identities only; synthetic map and exhaust composition are not a combustor or OEM validation",
+      "checks": [
+        {
+          "name": "efficiency_domain",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "heat_rate_efficiency_identity",
+          "error": 0.0,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "name": "nonnegative_fuel_and_available_power",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "block": 2,
+      "equipment": "1st Stage Compressor",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888889,
+        "mass_out_kg_s": 13.88888888888889,
+        "enthalpy_in_W": 647708.7274010037,
+        "enthalpy_out_W": 3201980.9209326967,
+        "external_energy_W": 2554272.193531693
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "1st Stage Compressor",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333334,
+        "mass_out_kg_s": 8.333333333333334,
+        "enthalpy_in_W": 616973.9094843271,
+        "enthalpy_out_W": 2268381.4066412384,
+        "external_energy_W": 1651407.4971569113
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "1st Intercooler",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333334,
+        "mass_out_kg_s": 8.333333333333334,
+        "enthalpy_in_W": 2268381.4066412384,
+        "enthalpy_out_W": 478438.4460246565,
+        "external_energy_W": -1789942.9606165818
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "1st Scrubber",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333334,
+        "mass_out_kg_s": 8.333333333333334,
+        "enthalpy_in_W": 478438.4460246565,
+        "enthalpy_out_W": 478438.4460246565,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "2nd Stage Compressor",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333334,
+        "mass_out_kg_s": 8.333333333333334,
+        "enthalpy_in_W": 478438.4460246565,
+        "enthalpy_out_W": 1998542.7462522844,
+        "external_energy_W": 1520104.3002276279
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "2nd Intercooler",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333334,
+        "mass_out_kg_s": 8.333333333333334,
+        "enthalpy_in_W": 1998542.7462522844,
+        "enthalpy_out_W": 273317.2909549796,
+        "external_energy_W": -1725225.4552973048
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "2nd Scrubber",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 4.263256414560601e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 7.816761869783307e-16,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.4907714948096217e-15,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333334,
+        "mass_out_kg_s": 8.33333333333333,
+        "enthalpy_in_W": 273317.2909549796,
+        "enthalpy_out_W": 273317.29095498,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "3rd Stage Compressor",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.247454874079452,
+        "mass_out_kg_s": 8.247454874079452,
+        "enthalpy_in_W": 299769.16386035446,
+        "enthalpy_out_W": 1656578.8784575134,
+        "external_energy_W": 1356809.714597159
+      },
+      "pass": true
+    },
+    {
+      "block": 3,
+      "equipment": "After Cooler",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.247454874079452,
+        "mass_out_kg_s": 8.247454874079452,
+        "enthalpy_in_W": 1656578.8784575134,
+        "enthalpy_out_W": -320457.3106616853,
+        "external_energy_W": -1977036.1891191988
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.5555555555555545,
+        "mass_out_kg_s": 5.5555555555555545,
+        "enthalpy_in_W": 270341.9662186165,
+        "enthalpy_out_W": 644742.9720736424,
+        "external_energy_W": 374401.0058550259
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.5555555555555545,
+        "mass_out_kg_s": 5.5555555555555545,
+        "enthalpy_in_W": 270341.9662186165,
+        "enthalpy_out_W": 935199.8077260305,
+        "external_energy_W": 664857.8415074139
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.5555555555555545,
+        "mass_out_kg_s": 5.5555555555555545,
+        "enthalpy_in_W": 270341.9662186165,
+        "enthalpy_out_W": 1175590.2365661091,
+        "external_energy_W": 905248.2703474925
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.5555555555555545,
+        "mass_out_kg_s": 5.5555555555555545,
+        "enthalpy_in_W": 270341.9662186165,
+        "enthalpy_out_W": 1382300.3968893385,
+        "external_energy_W": 1111958.430670722
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.5555555555555545,
+        "mass_out_kg_s": 5.5555555555555545,
+        "enthalpy_in_W": 270341.9662186165,
+        "enthalpy_out_W": 1564623.4376018816,
+        "external_energy_W": 1294281.471383265
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.5555555555555545,
+        "mass_out_kg_s": 5.5555555555555545,
+        "enthalpy_in_W": 270341.9662186165,
+        "enthalpy_out_W": 1728383.5084936388,
+        "external_energy_W": 1458041.5422750222
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.5555555555555545,
+        "mass_out_kg_s": 5.5555555555555545,
+        "enthalpy_in_W": 270341.9662186165,
+        "enthalpy_out_W": 1877491.9337014146,
+        "external_energy_W": 1607149.967482798
+      },
+      "pass": true
+    },
+    {
+      "block": 4,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 1.155651916562601e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.5555555555555545,
+        "mass_out_kg_s": 5.5555555555555545,
+        "enthalpy_in_W": 270341.9662186165,
+        "enthalpy_out_W": 2014712.5645445797,
+        "external_energy_W": 1744370.5983259634
+      },
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 3.087505709673098e-16,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.555555555555557,
+        "mass_out_kg_s": 5.555555555555557,
+        "enthalpy_in_W": 283819.5283965961,
+        "enthalpy_out_W": 1508211.9066171476,
+        "external_energy_W": 1224392.3782205512
+      },
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.555555555555556,
+        "mass_out_kg_s": 5.555555555555556,
+        "enthalpy_in_W": 248188.38996885013,
+        "enthalpy_out_W": 1215915.6902529204,
+        "external_energy_W": 967727.3002840702
+      },
+      "pass": true
+    },
+    {
+      "block": 5,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.555555555555557,
+        "mass_out_kg_s": 5.555555555555557,
+        "enthalpy_in_W": 134609.51539945375,
+        "enthalpy_out_W": 851382.9591257962,
+        "external_energy_W": 716773.4437263424
+      },
+      "pass": true
+    },
+    {
+      "block": 17,
+      "equipment": "1st Stage Compressor",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888889,
+        "mass_out_kg_s": 13.88888888888889,
+        "enthalpy_in_W": 647708.7274010037,
+        "enthalpy_out_W": 3201980.9209326967,
+        "external_energy_W": 2554272.193531693
+      },
+      "pass": true
+    },
+    {
+      "block": 17,
+      "equipment": "1st Stage Compressor",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.88888888888889,
+        "mass_out_kg_s": 13.88888888888889,
+        "enthalpy_in_W": 647708.7274010037,
+        "enthalpy_out_W": 3088192.577331017,
+        "external_energy_W": 2440483.849930013
+      },
+      "pass": true
+    },
+    {
+      "block": 18,
+      "equipment": "1st Stage",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111112,
+        "mass_out_kg_s": 11.111111111111112,
+        "enthalpy_in_W": 694051.8373654288,
+        "enthalpy_out_W": 2885044.1106788535,
+        "external_energy_W": 2190992.2733134245
+      },
+      "pass": true
+    },
+    {
+      "block": 18,
+      "equipment": "Intercooler",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111112,
+        "mass_out_kg_s": 11.111111111111112,
+        "enthalpy_in_W": 2885044.1106788535,
+        "enthalpy_out_W": 565932.1774696648,
+        "external_energy_W": -2319111.9332091887
+      },
+      "pass": true
+    },
+    {
+      "block": 18,
+      "equipment": "Interstage Scrubber",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111112,
+        "mass_out_kg_s": 11.111111111111112,
+        "enthalpy_in_W": 565932.1774696648,
+        "enthalpy_out_W": 565932.1774696648,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 18,
+      "equipment": "2nd Stage",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111112,
+        "mass_out_kg_s": 11.111111111111112,
+        "enthalpy_in_W": 565932.1774696648,
+        "enthalpy_out_W": 2650064.6109255664,
+        "external_energy_W": 2084132.4334559017
+      },
+      "pass": true
+    },
+    {
+      "block": 18,
+      "equipment": "1st Stage",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111112,
+        "mass_out_kg_s": 11.111111111111112,
+        "enthalpy_in_W": 694051.8373654288,
+        "enthalpy_out_W": 2972717.703131459,
+        "external_energy_W": 2278665.8657660303
+      },
+      "pass": true
+    },
+    {
+      "block": 18,
+      "equipment": "Intercooler",
+      "class": "Heater",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111112,
+        "mass_out_kg_s": 11.111111111111112,
+        "enthalpy_in_W": 2972717.703131459,
+        "enthalpy_out_W": 565932.1774696648,
+        "external_energy_W": -2406785.5256617945
+      },
+      "pass": true
+    },
+    {
+      "block": 18,
+      "equipment": "Interstage Scrubber",
+      "class": "Separator",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111112,
+        "mass_out_kg_s": 11.111111111111112,
+        "enthalpy_in_W": 565932.1774696648,
+        "enthalpy_out_W": 565932.1774696648,
+        "external_energy_W": 0.0
+      },
+      "pass": true
+    },
+    {
+      "block": 18,
+      "equipment": "2nd Stage",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111112,
+        "mass_out_kg_s": 11.111111111111112,
+        "enthalpy_in_W": 565932.1774696648,
+        "enthalpy_out_W": 2775453.1464076564,
+        "external_energy_W": 2209520.9689379917
+      },
+      "pass": true
+    },
+    {
+      "block": 20,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 4.166666666666667,
+        "mass_out_kg_s": 4.166666666666667,
+        "enthalpy_in_W": 202756.47466396244,
+        "enthalpy_out_W": 1036725.2976670054,
+        "external_energy_W": 833968.823003043
+      },
+      "pass": true
+    },
+    {
+      "block": 20,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 5.5555555555555545,
+        "mass_out_kg_s": 5.5555555555555545,
+        "enthalpy_in_W": 270341.9662186165,
+        "enthalpy_out_W": 1382300.3968893385,
+        "external_energy_W": 1111958.430670722
+      },
+      "pass": true
+    },
+    {
+      "block": 20,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 6.944444444444444,
+        "mass_out_kg_s": 6.944444444444444,
+        "enthalpy_in_W": 337927.4577732706,
+        "enthalpy_out_W": 1727875.4961116759,
+        "external_energy_W": 1389948.0383384053
+      },
+      "pass": true
+    },
+    {
+      "block": 20,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333334,
+        "mass_out_kg_s": 8.333333333333334,
+        "enthalpy_in_W": 405512.94932792487,
+        "enthalpy_out_W": 2073450.595334011,
+        "external_energy_W": 1667937.646006086
+      },
+      "pass": true
+    },
+    {
+      "block": 20,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 9.624976046257797e-17,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 9.722222222222221,
+        "mass_out_kg_s": 9.722222222222221,
+        "enthalpy_in_W": 473098.44088257913,
+        "enthalpy_out_W": 2419025.694556346,
+        "external_energy_W": 1945927.2536737672
+      },
+      "pass": true
+    },
+    {
+      "block": 20,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 11.111111111111109,
+        "mass_out_kg_s": 11.111111111111109,
+        "enthalpy_in_W": 540683.932437233,
+        "enthalpy_out_W": 2764600.793778677,
+        "external_energy_W": 2223916.861341444
+      },
+      "pass": true
+    },
+    {
+      "block": 20,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 12.499999999999998,
+        "mass_out_kg_s": 12.499999999999998,
+        "enthalpy_in_W": 608269.4239918875,
+        "enthalpy_out_W": 3110175.8930010167,
+        "external_energy_W": 2501906.4690091293
+      },
+      "pass": true
+    },
+    {
+      "block": 20,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 13.888888888888888,
+        "mass_out_kg_s": 13.888888888888888,
+        "enthalpy_in_W": 675854.9155465412,
+        "enthalpy_out_W": 3455750.9922233517,
+        "external_energy_W": 2779896.0766768106
+      },
+      "pass": true
+    },
+    {
+      "block": 20,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 15.277777777777773,
+        "mass_out_kg_s": 15.277777777777773,
+        "enthalpy_in_W": 743440.4071011952,
+        "enthalpy_out_W": 3801326.091445684,
+        "external_energy_W": 3057885.6843444887
+      },
+      "pass": true
+    },
+    {
+      "block": 20,
+      "equipment": "Comp",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 16.666666666666668,
+        "mass_out_kg_s": 16.666666666666668,
+        "enthalpy_in_W": 811025.8986558497,
+        "enthalpy_out_W": 4146901.190668022,
+        "external_energy_W": 3335875.292012172
+      },
+      "pass": true
+    },
+    {
+      "block": 21,
+      "equipment": "Power-limited compressor",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 8.333333333333334,
+        "mass_out_kg_s": 8.333333333333334,
+        "enthalpy_in_W": 405512.94932792487,
+        "enthalpy_out_W": 2073450.595334011,
+        "external_energy_W": 1667937.646006086
+      },
+      "pass": true
+    },
+    {
+      "block": 21,
+      "equipment": "Power-limited compressor",
+      "class": "Compressor",
+      "scope": "steady-flow conservation and state domain; not empirical model calibration",
+      "checks": [
+        {
+          "name": "relative_mass_closure",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "component_mole_closure_normalized_by_total_feed",
+          "error": 0.0,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_pressure_temperature_nonnegative_flow",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "energy_closure_relative_to_boundary_enthalpy_or_duty",
+          "error": 0.0,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "name": "compression_pressure_and_work_sign",
+          "error": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      ],
+      "boundary": {
+        "mass_in_kg_s": 9.492760896682737,
+        "mass_out_kg_s": 9.492760896682737,
+        "enthalpy_in_W": 461932.4962174335,
+        "enthalpy_out_W": 2361932.4879108286,
+        "external_energy_W": 1899999.9916933952
+      },
+      "pass": true
+    },
+    {
+      "block": 21,
+      "equipment": "Throughput optimizer acceptance",
+      "class": "CaseAcceptance",
+      "scope": "Returned numerical feasibility and declared active upper/lower constraints; objective global optimality is not inferred",
+      "checks": [
+        {
+          "name": "optimizer_feasible",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        },
+        {
+          "name": "finite_positive_rate",
+          "error": 0.0,
+          "tolerance": 0,
+          "pass": true
+        }
+      ],
+      "pass": true
+    }
+  ]
+}

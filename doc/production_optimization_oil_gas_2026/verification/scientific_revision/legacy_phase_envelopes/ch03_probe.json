@@ -1,0 +1,286 @@
+{
+  "case": {
+    "chapter": "ch03_fluid_characterization",
+    "file": "gas_condensate_phase_envelope.png",
+    "title": "Characterized gas condensate: PR phase envelope",
+    "eos": "SystemPrEos",
+    "basis_section": "3.7.5",
+    "components": [
+      [
+        "nitrogen",
+        0.5
+      ],
+      [
+        "CO2",
+        3
+      ],
+      [
+        "methane",
+        75
+      ],
+      [
+        "ethane",
+        8
+      ],
+      [
+        "propane",
+        4
+      ],
+      [
+        "i-butane",
+        1
+      ],
+      [
+        "n-butane",
+        1.5
+      ],
+      [
+        "i-pentane",
+        0.5
+      ],
+      [
+        "n-pentane",
+        0.4
+      ],
+      [
+        "n-hexane",
+        0.6
+      ]
+    ],
+    "tbp": [
+      [
+        "C7",
+        2,
+        0.096,
+        0.738
+      ],
+      [
+        "C10",
+        1.5,
+        0.134,
+        0.792
+      ],
+      [
+        "C20",
+        2,
+        0.35,
+        0.88
+      ]
+    ],
+    "characterise_plus": true
+  },
+  "probes": [
+    {
+      "T_K": 130.0,
+      "P_bara": 4.787423008443752,
+      "gas_labelled_fraction": 0.0,
+      "phases": [
+        {
+          "type": "OIL",
+          "beta": 1.0,
+          "density_kg_m3": 584.912504528033
+        }
+      ],
+      "component_closure_max_abs": 0.0
+    },
+    {
+      "T_K": 135.0,
+      "P_bara": 4.787423008443752,
+      "gas_labelled_fraction": 0.0,
+      "phases": [
+        {
+          "type": "OIL",
+          "beta": 1.0,
+          "density_kg_m3": 579.9569975601623
+        }
+      ],
+      "component_closure_max_abs": 0.0
+    },
+    {
+      "T_K": 136.0,
+      "P_bara": 4.787423008443752,
+      "gas_labelled_fraction": 0.0,
+      "phases": [
+        {
+          "type": "OIL",
+          "beta": 1.0,
+          "density_kg_m3": 578.9437043881061
+        }
+      ],
+      "component_closure_max_abs": 0.0
+    },
+    {
+      "T_K": 140.0,
+      "P_bara": 4.787423008443752,
+      "gas_labelled_fraction": 0.0,
+      "phases": [
+        {
+          "type": "OIL",
+          "beta": 1.0,
+          "density_kg_m3": 574.8137692332471
+        }
+      ],
+      "component_closure_max_abs": 0.0
+    },
+    {
+      "T_K": 145,
+      "error": "AssertionError()"
+    },
+    {
+      "T_K": 150,
+      "error": "AssertionError()"
+    },
+    {
+      "T_K": 160.0,
+      "P_bara": 4.787423008443752,
+      "gas_labelled_fraction": 0.7032702103392235,
+      "phases": [
+        {
+          "type": "GAS",
+          "beta": 0.7032702103392235,
+          "density_kg_m3": 6.4468756008561465
+        },
+        {
+          "type": "OIL",
+          "beta": 0.29672978966077646,
+          "density_kg_m3": 736.4753942412368
+        }
+      ],
+      "component_closure_max_abs": 1.1102230246251565e-16
+    },
+    {
+      "T_K": 180.0,
+      "P_bara": 4.787423008443752,
+      "gas_labelled_fraction": 0.7853700545374314,
+      "phases": [
+        {
+          "type": "GAS",
+          "beta": 0.7853700545374314,
+          "density_kg_m3": 5.913545897178266
+        },
+        {
+          "type": "OIL",
+          "beta": 0.21462994546256864,
+          "density_kg_m3": 755.2324197696104
+        }
+      ],
+      "component_closure_max_abs": 2.1094237467877974e-15
+    },
+    {
+      "T_K": 200.0,
+      "P_bara": 4.787423008443752,
+      "gas_labelled_fraction": 0.8369958714268068,
+      "phases": [
+        {
+          "type": "GAS",
+          "beta": 0.8369958714268068,
+          "density_kg_m3": 5.492010660454319
+        },
+        {
+          "type": "OIL",
+          "beta": 0.16300412857319324,
+          "density_kg_m3": 770.0614699480722
+        }
+      ],
+      "component_closure_max_abs": 2.8632651805082787e-13
+    },
+    {
+      "T_K": 250.0,
+      "P_bara": 4.787423008443752,
+      "gas_labelled_fraction": 0.9074050868226947,
+      "phases": [
+        {
+          "type": "GAS",
+          "beta": 0.9074050868226947,
+          "density_kg_m3": 4.724096666384135
+        },
+        {
+          "type": "OIL",
+          "beta": 0.09259491317730528,
+          "density_kg_m3": 801.5985275094912
+        }
+      ],
+      "component_closure_max_abs": 2.220446049250313e-16
+    },
+    {
+      "T_K": 300.0,
+      "P_bara": 4.787423008443752,
+      "gas_labelled_fraction": 0.9393247604066063,
+      "phases": [
+        {
+          "type": "GAS",
+          "beta": 0.9393247604066063,
+          "density_kg_m3": 4.180159710412383
+        },
+        {
+          "type": "OIL",
+          "beta": 0.060675239593393715,
+          "density_kg_m3": 817.6966091299238
+        }
+      ],
+      "component_closure_max_abs": 2.220446049250313e-16
+    },
+    {
+      "T_K": 350.0,
+      "P_bara": 4.787423008443752,
+      "gas_labelled_fraction": 0.9627572583161661,
+      "phases": [
+        {
+          "type": "GAS",
+          "beta": 0.9627572583161661,
+          "density_kg_m3": 3.8485557711291096
+        },
+        {
+          "type": "OIL",
+          "beta": 0.0372427416838339,
+          "density_kg_m3": 830.2854629629387
+        }
+      ],
+      "component_closure_max_abs": 1.9984014443252818e-15
+    },
+    {
+      "T_K": 400.0,
+      "P_bara": 4.787423008443752,
+      "gas_labelled_fraction": 0.9753107691718753,
+      "phases": [
+        {
+          "type": "GAS",
+          "beta": 0.9753107691718753,
+          "density_kg_m3": 3.5242027275076526
+        },
+        {
+          "type": "OIL",
+          "beta": 0.024689230828124686,
+          "density_kg_m3": 836.0567498732114
+        }
+      ],
+      "component_closure_max_abs": 2.220446049250313e-16
+    },
+    {
+      "T_K": 450.0,
+      "P_bara": 4.787423008443752,
+      "gas_labelled_fraction": 0.9784751393688416,
+      "phases": [
+        {
+          "type": "GAS",
+          "beta": 0.9784751393688416,
+          "density_kg_m3": 3.1654258503037767
+        },
+        {
+          "type": "OIL",
+          "beta": 0.021524860631158438,
+          "density_kg_m3": 825.2740418992626
+        }
+      ],
+      "component_closure_max_abs": 4.440892098500626e-16
+    }
+  ],
+  "bubblePointTemperatureFlash": {
+    "T_K": 135.6966502731962,
+    "P_bara": 4.787423008443752
+  },
+  "dewPointTemperatureFlash": {
+    "T_K": 2299.4412025893675,
+    "P_bara": 4.787423008443752
+  }
+}

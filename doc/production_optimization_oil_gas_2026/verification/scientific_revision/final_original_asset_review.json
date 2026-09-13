@@ -1,0 +1,524 @@
+{
+  "status": "passed",
+  "created_utc": "2026-09-12T22:31:45.010078+00:00",
+  "scope": "Eleven placed numerical manuscript assets in Chapters 10,14,15,17,18,19. Independent of the 104 notebook figures and earlier frozen repair ledger.",
+  "method": "Exact-source replay with observational figure-array capture; accepted literal hook arrays; explicit analytical fixture; visual inspection by the reviewing agent.",
+  "images": [
+    {
+      "path": "chapters\\ch10_separation_technology\\figures\\mp_pressure_lp_liquid_recovery.png",
+      "sha256": "4b498b8fe221c3b0aad20b1625595fe5ebce3369b096fbb05d59e0c108b0d5ad",
+      "source": {
+        "type": "unchanged_published_literal_replay",
+        "chapter": 10,
+        "source_fence_index": 7,
+        "code_sha256": "f29ad326a29b8933a641646a4d97ffb0d334a516d740179305a4cef6517f0948",
+        "captured_arrays": "verification\\scientific_revision\\final_original_ch10_plot_arrays.json",
+        "captured_arrays_sha256": "43587ddb2edb6524f65b0162f0785ccbe559873b43948facd4cbeb7a9d015c8c",
+        "physics_report": "verification\\scientific_revision\\ch10_manuscript_physics.json",
+        "physics_report_sha256": "687ac0e4df78b163896a5f5f61f97d0cbb7b887444a35a28691eae5f427be6aa",
+        "replayed_image_sha256": "4b498b8fe221c3b0aad20b1625595fe5ebce3369b096fbb05d59e0c108b0d5ad"
+      },
+      "transformation": "Byte-for-byte copy from the accepted exact-literal replay; all line arrays retained separately.",
+      "checks": [],
+      "previous_asset": ".build\\backups\\final_original_asset_provenance\\chapters\\ch10_separation_technology\\figures\\mp_pressure_lp_liquid_recovery.png",
+      "previous_sha256": "4b498b8fe221c3b0aad20b1625595fe5ebce3369b096fbb05d59e0c108b0d5ad",
+      "visual_review_status": "passed",
+      "current_chapter_sha256": "2cfa150f0a7662610774c3fb69b1c2e3d23b2118d21a991b8fe4bd96e839ec56",
+      "caption_evidence": {
+        "chapter": 10,
+        "figure": "mp_pressure_lp_liquid_recovery.png",
+        "previous_prose": "![Figure 10.4: LP separator liquid recovery at 2 bara vs. intermediate separator pressure](figures/mp_pressure_lp_liquid_recovery.png)",
+        "caption": "LP separator liquid recovery at 2 bara, from the published three-stage sweep",
+        "discussion": "At 100 t/hr feed, 75 °C and 70 bara first-stage pressure, the calculated final-separator liquid rate decreases from 97.14 to 92.58 m³/hr as intermediate pressure increases from 10 to 50 bara. These are liquid-stream volumes at the 2 bara final separator and its calculated flash temperature; they include the modeled liquid phases and are not reference-condition stock-tank oil rates.",
+        "source_code_unchanged": true
+      },
+      "full_resolution_inspected": true,
+      "visual_findings": [
+        "Full view confirms nine calculated points, MP10–50bara and LP-liquid volume97.142–92.579m3/hr. Axis/caption explicitly use final2bara liquid, not reference-condition oil."
+      ]
+    },
+    {
+      "path": "chapters\\ch10_separation_technology\\figures\\separator_utilization_profile.png",
+      "sha256": "799d49f9901218cb51cbe23fa3cb173143a25e682494fad13fd52b11891590f7",
+      "source": {
+        "type": "unchanged_published_literal_replay",
+        "chapter": 10,
+        "source_fence_index": 25,
+        "code_sha256": "051e2fa5e55a08edf00a044bb918429fa3d9cec4a2eab5cc7f9abb2ed866c045",
+        "captured_arrays": "verification\\scientific_revision\\final_original_ch10_plot_arrays.json",
+        "captured_arrays_sha256": "43587ddb2edb6524f65b0162f0785ccbe559873b43948facd4cbeb7a9d015c8c",
+        "physics_report": "verification\\scientific_revision\\ch10_manuscript_physics.json",
+        "physics_report_sha256": "687ac0e4df78b163896a5f5f61f97d0cbb7b887444a35a28691eae5f427be6aa",
+        "replayed_image_sha256": "799d49f9901218cb51cbe23fa3cb173143a25e682494fad13fd52b11891590f7"
+      },
+      "transformation": "Byte-for-byte copy from the accepted exact-literal replay; all line arrays retained separately.",
+      "checks": [],
+      "previous_asset": ".build\\backups\\final_original_asset_provenance\\chapters\\ch10_separation_technology\\figures\\separator_utilization_profile.png",
+      "previous_sha256": "799d49f9901218cb51cbe23fa3cb173143a25e682494fad13fd52b11891590f7",
+      "visual_review_status": "passed",
+      "current_chapter_sha256": "2cfa150f0a7662610774c3fb69b1c2e3d23b2118d21a991b8fe4bd96e839ec56",
+      "caption_evidence": {
+        "chapter": 10,
+        "figure": "separator_utilization_profile.png",
+        "previous_prose": "![Figure 10.9: Separator utilization and K-factor vs. production rate](figures/separator_utilization_profile.png)\n\nHP Separator gas capacity utilization (left) and actual gas load factor (right) as functions of total feed rate. The green zone indicates normal operation (< 85%), orange indicates approaching capacity (85–100%), and red indicates the separator is over-capacity. The design K-factor is shown as a red dashed line.",
+        "caption": "Fixed-vessel separator gas utilization and K-factor across the declared feed-rate sweep",
+        "discussion": "The vessel is sized once at 100 t/hr, 70 bara and 70 °C with the example sizing factor 1.2. Across 50–175 t/hr, gas utilization rises from 41.48% to 145.17%; the plot retains the over-capacity points. The 85% warning line is an illustrative operating threshold, and the 0.107 m/s design K-factor is the assumed screening basis rather than a measured internals rating.",
+        "source_code_unchanged": true
+      },
+      "full_resolution_inspected": true,
+      "visual_findings": [
+        "Full view confirms unclipped utilization41.477–145.170%, explicit85/100% lines and K0.044381–0.155332m/s versus assumed0.107m/s. Caption uses actual captured endpoints, not nominal sizing-factor estimates."
+      ]
+    },
+    {
+      "path": "chapters\\ch10_separation_technology\\figures\\separator_pressure_optimization.png",
+      "sha256": "c67a9cb00c5cad667edb409df63491f311480df88c5776ba1e90ded6c782b069",
+      "source": {
+        "type": "unchanged_published_literal_replay",
+        "chapter": 10,
+        "source_fence_index": 27,
+        "code_sha256": "e0114a974630b0b527b42cd16fe881133689b28a55ee4767846d8d5b7eadb87e",
+        "captured_arrays": "verification\\scientific_revision\\final_original_ch10_plot_arrays.json",
+        "captured_arrays_sha256": "43587ddb2edb6524f65b0162f0785ccbe559873b43948facd4cbeb7a9d015c8c",
+        "physics_report": "verification\\scientific_revision\\ch10_manuscript_physics.json",
+        "physics_report_sha256": "687ac0e4df78b163896a5f5f61f97d0cbb7b887444a35a28691eae5f427be6aa",
+        "replayed_image_sha256": "c67a9cb00c5cad667edb409df63491f311480df88c5776ba1e90ded6c782b069"
+      },
+      "transformation": "Byte-for-byte copy from the accepted exact-literal replay; all line arrays retained separately.",
+      "checks": [],
+      "previous_asset": ".build\\backups\\final_original_asset_provenance\\chapters\\ch10_separation_technology\\figures\\separator_pressure_optimization.png",
+      "previous_sha256": "c67a9cb00c5cad667edb409df63491f311480df88c5776ba1e90ded6c782b069",
+      "visual_review_status": "passed",
+      "current_chapter_sha256": "2cfa150f0a7662610774c3fb69b1c2e3d23b2118d21a991b8fe4bd96e839ec56",
+      "caption_evidence": {
+        "chapter": 10,
+        "figure": "separator_pressure_optimization.png",
+        "previous_prose": "![Figure 10.10: Oil recovery and separator utilization vs. MP separator pressure](figures/separator_pressure_optimization.png)\n\nLiquid recovery at 3 bara LP pressure (left) and separator gas capacity utilization for vessels sized once at 30 bara MP pressure (right) as functions of the intermediate (MP) separator pressure. Lower MP pressure increases gas flashing in the MP separator (higher MP utilization) while potentially improving oil recovery up to an optimum. The highest sampled recovery is a candidate only; reject pressures that violate fixed-vessel capacity or export quality constraints.",
+        "caption": "LP separator liquid recovery at 3 bara and fixed-vessel gas utilization versus MP pressure",
+        "discussion": "The left panel reports liquid-stream volume at the 3 bara final separator and calculated flash temperature. Vessels in the right panel are sized once at 30 bara MP pressure. Lower MP pressure increases gas flashing and MP loading; the highest sampled liquid recovery at 10 bara is rejected by the fixed-vessel gas-capacity constraint. A reference-condition oil objective requires an additional declared flash.",
+        "source_code_unchanged": true
+      },
+      "full_resolution_inspected": true,
+      "visual_findings": [
+        "Full view confirms recovery99.841–96.060m3/hr at LP3bara; MPutil248.622–32.195%, with over-capacity low-pressure cases visible. Caption explicitly rejects the highest-recovery case by fixed capacity."
+      ]
+    },
+    {
+      "path": "chapters\\ch14_gas_compression\\figures\\compression_pr_sensitivity.png",
+      "sha256": "ea2aa688a13f09b4e624025ef1cb1f5e008b871bab4e0da0545afe672163c95c",
+      "source": {
+        "type": "unchanged_published_literal_replay",
+        "chapter": 14,
+        "source_fence_index": 4,
+        "code_sha256": "93c94ef67c461876efde1dc40acdcd68d54a948b42b35bb363bca1004ecd6611",
+        "captured_arrays": "verification\\scientific_revision\\final_original_ch14_plot_arrays.json",
+        "captured_arrays_sha256": "7e906c9611f53e50c0cce853b612bb42b4638ddb9c548f427aebe1a5c9079861",
+        "physics_report": "verification\\scientific_revision\\ch14_manuscript_physics.json",
+        "physics_report_sha256": "3fab7295cdf2a3837643d5c5e0f05e87a56d2dcba930efb4366d6b19afb436df",
+        "replayed_image_sha256": "ea2aa688a13f09b4e624025ef1cb1f5e008b871bab4e0da0545afe672163c95c"
+      },
+      "transformation": "Byte-for-byte copy from the accepted exact-literal replay; all line arrays retained separately.",
+      "checks": [],
+      "previous_asset": ".build\\backups\\final_original_asset_provenance\\chapters\\ch14_gas_compression\\figures\\compression_pr_sensitivity.png",
+      "previous_sha256": "ea2aa688a13f09b4e624025ef1cb1f5e008b871bab4e0da0545afe672163c95c",
+      "visual_review_status": "passed",
+      "current_chapter_sha256": "0852b34de33cd7215d88c0e92a2961139dd411ace62a7e756ddb56c9d9fb397e",
+      "caption_evidence": {
+        "chapter": 14,
+        "figure": "compression_pr_sensitivity.png",
+        "previous_prose": "![Figure 14.2: Compressor power and discharge temperature vs. pressure ratio](figures/compression_pr_sensitivity.png)\n\nCompressor power (left) and discharge temperature (right) as functions of pressure ratio for a single-stage centrifugal compressor. The dashed line indicates the typical discharge temperature limit of 150°C, which constrains the maximum practical pressure ratio per stage.",
+        "caption": "Calculated power and discharge temperature for the 20 t/hr, 80% polytropic-efficiency pressure-ratio sweep",
+        "discussion": "At 10 bara and 30 °C suction, increasing pressure ratio from 1.5 to 5 raises power from 374.40 to 1744.37 kW and discharge temperature from 63.58 to 174.63 °C. The 150 °C dashed line is an illustrative temperature constraint; an actual allowable temperature must come from the selected machine and service.",
+        "source_code_unchanged": true
+      },
+      "full_resolution_inspected": true,
+      "visual_findings": [
+        "Both panels and labels are readable; eight exact points spanPR1.5–5,power374.401–1744.371kW,T63.580–174.633C. Caption identifies150C as an illustrative constraint."
+      ]
+    },
+    {
+      "path": "chapters\\ch14_gas_compression\\figures\\compressor_speed_sensitivity.png",
+      "sha256": "2f294caaa4b1dfa66149e68fd2f4dfdca66c4ca78f80ccfe313f41a346b4b113",
+      "source": {
+        "type": "unchanged_published_literal_replay",
+        "chapter": 14,
+        "source_fence_index": 20,
+        "code_sha256": "d01ea2bbd4a3e5b4012118796236a961808386f92cbe7e513f7ddc6871d95393",
+        "captured_arrays": "verification\\scientific_revision\\final_original_ch14_plot_arrays.json",
+        "captured_arrays_sha256": "7e906c9611f53e50c0cce853b612bb42b4638ddb9c548f427aebe1a5c9079861",
+        "physics_report": "verification\\scientific_revision\\ch14_manuscript_physics.json",
+        "physics_report_sha256": "3fab7295cdf2a3837643d5c5e0f05e87a56d2dcba930efb4366d6b19afb436df",
+        "replayed_image_sha256": "2f294caaa4b1dfa66149e68fd2f4dfdca66c4ca78f80ccfe313f41a346b4b113"
+      },
+      "transformation": "Byte-for-byte copy from the accepted exact-literal replay; all line arrays retained separately.",
+      "checks": [],
+      "previous_asset": ".build\\backups\\final_original_asset_provenance\\chapters\\ch14_gas_compression\\figures\\compressor_speed_sensitivity.png",
+      "previous_sha256": "2f294caaa4b1dfa66149e68fd2f4dfdca66c4ca78f80ccfe313f41a346b4b113",
+      "visual_review_status": "passed",
+      "current_chapter_sha256": "0852b34de33cd7215d88c0e92a2961139dd411ace62a7e756ddb56c9d9fb397e",
+      "caption_evidence": {
+        "chapter": 14,
+        "figure": "compressor_speed_sensitivity.png",
+        "previous_prose": "![Figure 14.9: Compressor power and efficiency vs. flow rate](figures/compressor_speed_sensitivity.png)\n\nCompressor power (left) and efficiency (right) vs. mass flow rate. The blue markers show NeqSim real-gas calculations; the red dashed line shows the theoretical cubic affinity law scaling. At fixed polytropic efficiency, power scales linearly with mass flow (at constant pressure ratio), The cubic relation applies only to corresponding similar points with head changing as speed squared; it cannot be inferred from this fixed-pressure-ratio sweep.",
+        "caption": "Fixed-pressure-ratio NeqSim power sweep and a separate cubic affinity-law reference",
+        "discussion": "At the fixed 10-to-30 bara pressure ratio, 30 °C suction and prescribed 80% polytropic efficiency, calculated power increases linearly from 833.97 to 3335.88 kW over 15–60 t/hr. The red cubic reference is anchored at 40 t/hr and describes a different similarity trajectory with changing head; it is not a fit to these fixed-pressure-ratio results. The flat efficiency trace is an input assumption.",
+        "source_code_unchanged": true
+      },
+      "full_resolution_inspected": true,
+      "visual_findings": [
+        "Full view confirms fixed-PR linear power and prescribed80% efficiency. Cubic reference is separately labeled and discussion distinguishes the two trajectories."
+      ]
+    },
+    {
+      "path": "chapters\\ch18_power_production\\figures\\gt_ambient_performance.png",
+      "sha256": "ce34a16d08d26a60a5b17cb41a04c6311b1485eadf3c0895345861a0af643285",
+      "source": {
+        "type": "unchanged_published_literal_replay",
+        "chapter": 18,
+        "source_fence_index": 2,
+        "code_sha256": "450d0c662c162237e776a25ada4ff015d05119a55e33890f856d6d771b8ee132",
+        "captured_arrays": "verification\\scientific_revision\\final_original_ch18_plot_arrays.json",
+        "captured_arrays_sha256": "ec75d90ec05f7bf0dc1c422204141a80881ade6e292edbc94832338778431c88",
+        "physics_report": "verification\\scientific_revision\\ch18_manuscript_physics.json",
+        "physics_report_sha256": "94137c38fe262e021fe82b96a2985c07d916f2f91c1ca141f845a05128ed7195",
+        "replayed_image_sha256": "ce34a16d08d26a60a5b17cb41a04c6311b1485eadf3c0895345861a0af643285"
+      },
+      "transformation": "Byte-for-byte copy from the accepted exact-literal replay; all line arrays retained separately.",
+      "checks": [],
+      "previous_asset": ".build\\backups\\final_original_asset_provenance\\chapters\\ch18_power_production\\figures\\gt_ambient_performance.png",
+      "previous_sha256": "ce34a16d08d26a60a5b17cb41a04c6311b1485eadf3c0895345861a0af643285",
+      "visual_review_status": "passed",
+      "current_chapter_sha256": "0d3122014acad495de70194257c2c63ee96a794a559da45301ee75230b409968",
+      "caption_evidence": {
+        "chapter": 18,
+        "figure": "gt_ambient_performance.png",
+        "previous_prose": "![Figure 18.2: Gas turbine power output and efficiency as a function of ambient temperature](figures/gt_ambient_performance.png)",
+        "caption": "Available shaft power and fuel demand versus ambient temperature at 20 MW shaft demand",
+        "discussion": "This illustrative gas-turbine package model retains a fixed 20 MW shaft demand. Available power decreases from 37.35 to 24.75 MW over −20 to 40 °C. The right panel shows fuel demand, not efficiency: it reaches a shallow minimum near 30 °C before increasing. That shape follows the assumed ambient and part-load corrections; it is not a universal gas-turbine performance trend or an OEM guarantee.",
+        "source_code_unchanged": true
+      },
+      "full_resolution_inspected": true,
+      "visual_findings": [
+        "Full view confirms available shaft power37.35–24.75MW with20MWdemand; right panel is fuel demand and retains the minimum3984.904kg/hr at30C. Corrected caption no longer calls it an efficiency plot."
+      ]
+    },
+    {
+      "path": "chapters\\ch14_gas_compression\\figures\\compressor_performance_map.png",
+      "sha256": "eb9714a0ed4d69af0a40d65f64139696e137d4f69175f748959b2af8b782cdd5",
+      "source": {
+        "type": "unchanged_published_literal_replay",
+        "chapter": 14,
+        "source_fence_index": 19,
+        "code_sha256": "afa4b6b7751596713c7fe41347187cc91f658850ea04232b45ed174f1c062635",
+        "captured_arrays": "verification\\scientific_revision\\final_original_ch14_plot_arrays.json",
+        "captured_arrays_sha256": "7e906c9611f53e50c0cce853b612bb42b4638ddb9c548f427aebe1a5c9079861",
+        "physics_report": "verification\\scientific_revision\\ch14_manuscript_physics.json",
+        "physics_report_sha256": "3fab7295cdf2a3837643d5c5e0f05e87a56d2dcba930efb4366d6b19afb436df",
+        "replayed_image_sha256": "cc1038bf507d52f0e3813ba658d2fca957a53e0e61da854b8efb0b9a1f1b98f1"
+      },
+      "transformation": "Unchanged captured five analytic speed-line arrays and computed point. Removed the unsupported synthetic surge series; moved legend/annotation clear of data. The curves are an illustration, not an installed compressor rating.",
+      "checks": [
+        {
+          "name": "source arrays preserved",
+          "passed": true,
+          "retained_lines": 6,
+          "removed_lines": 1
+        },
+        {
+          "name": "computed point",
+          "flow_m3_hr": 3159.709508573522,
+          "head_kJ_kg": 150.13694983933652
+        }
+      ],
+      "previous_asset": ".build\\backups\\final_original_asset_provenance\\chapters\\ch14_gas_compression\\figures\\compressor_performance_map.png",
+      "previous_sha256": "cc1038bf507d52f0e3813ba658d2fca957a53e0e61da854b8efb0b9a1f1b98f1",
+      "visual_review_status": "passed",
+      "current_chapter_sha256": "0852b34de33cd7215d88c0e92a2961139dd411ace62a7e756ddb56c9d9fb397e",
+      "caption_evidence": {
+        "chapter": 14,
+        "figure": "compressor_performance_map.png",
+        "previous_prose": "![Figure 14.8: Compressor performance map showing operating point and speed lines](figures/compressor_performance_map.png)\n\nCompressor performance map with head vs. flow curves at five speed lines. The operating point (black dot) sits on the 100% speed line. The red dashed line indicates the surge limit. The optimizer can vary the speed between the minimum and maximum speed lines to adjust throughput while maintaining adequate surge margin.",
+        "caption": "Illustrative analytic head curves around a calculated thermodynamic point; no surge boundary is established",
+        "discussion": "The five speed families are the explicit polynomial/affinity illustration in the code, anchored to the computed point of 3159.7 m³/hr and 150.14 kJ/kg. They are not extracted manufacturer curves or an installed compressor rating. The publication view omits the code’s independently invented surge series because it does not establish a stability boundary on those curves. A throughput optimizer needs a calibrated chart and measured surge data before using a speed or surge constraint.",
+        "source_code_unchanged": true
+      },
+      "full_resolution_inspected": true,
+      "visual_findings": [
+        "Final full view confirms all five original analytic speed-line arrays plus computed point; unsupported surge curve is removed and legend/point annotation are readable. Illustration scope is explicit."
+      ]
+    },
+    {
+      "path": "chapters\\ch15_compressor_characteristics\\figures\\compressor_map_complete.png",
+      "sha256": "914aab956f6373c9d0c8301c543c93a0a256cdfc597c369f9a38a7fe42e5df13",
+      "source": {
+        "type": "unchanged_published_literal_replay",
+        "chapter": 15,
+        "source_fence_index": 3,
+        "code_sha256": "ccca9ac6309dd370fc071a1e538b3469904eed8d5258d4bea06fa393b3dba6ef",
+        "captured_arrays": "verification\\scientific_revision\\final_original_ch15_plot_arrays.json",
+        "captured_arrays_sha256": "9810c8cc174e79ce90dbd18d62ab3d76f1ac7841551098de2652f23d4fa7c658",
+        "physics_report": "verification\\scientific_revision\\ch15_manuscript_physics.json",
+        "physics_report_sha256": "8043ca85679a9e93fa7c528bf9e738b0a22859feb346a02691890f482f1c1d39",
+        "replayed_image_sha256": "2a79e2db97f10a8e62ba925a450b3887a657a4c53dd3858ae0d116aa96929c63"
+      },
+      "transformation": "Use captured arrays only; reject the one nonphysical efficiency sample from BOTH paired panels, expand efficiency scale to zero, remove unrelated shading, and identify the selected boundary as assumed.",
+      "checks": [
+        {
+          "name": "explicit sample-domain ledger",
+          "passed": true,
+          "original_paired_samples": 100,
+          "accepted_paired_samples": 99,
+          "rejected_samples": [
+            {
+              "speed_line": "70% speed",
+              "sample_index": 19,
+              "flow_m3_hr": 4252.5,
+              "head_kJ_kg": 14.936249999999982,
+              "efficiency_percent": -2.608979591836766,
+              "reason": "polynomial extrapolation has efficiency outside (0,100]% or nonpositive head"
+            }
+          ],
+          "acceptance": "finite positive head and 0 < efficiency_percent <= 100; no empirical-map validation implied"
+        }
+      ],
+      "previous_asset": ".build\\backups\\final_original_asset_provenance\\chapters\\ch15_compressor_characteristics\\figures\\compressor_map_complete.png",
+      "previous_sha256": "2a79e2db97f10a8e62ba925a450b3887a657a4c53dd3858ae0d116aa96929c63",
+      "visual_review_status": "passed",
+      "current_chapter_sha256": "a646726b5ffcae1eb728d73415435cabb32c9b25b1f26330262f6475935a0237",
+      "caption_evidence": {
+        "chapter": 15,
+        "figure": "compressor_map_complete.png",
+        "previous_prose": "![Figure 15.3: Complete compressor performance map with head and efficiency curves at multiple speeds](figures/compressor_map_complete.png)\n\nGenerated compressor performance map showing (top) polytropic head vs. actual inlet volume flow at five speeds from 70% to 105% of design, with the surge line marked in red; and (bottom) polytropic efficiency vs. flow at the same speeds. The design point is at 100% speed, 4500 m$^3$/hr, with 80% polytropic efficiency.",
+        "caption": "Illustrative polynomial compressor map, with nonphysical extrapolation rejected and the boundary explicitly assumed",
+        "discussion": "These are teaching polynomials at five assumed speeds, not NeqSim-derived or manufacturer performance data. Of 100 paired head/efficiency samples, 99 meet positive-head and 0 < efficiency ≤ 100% bounds. The 70% speed point at 4252.5 m³/hr predicts −2.609% efficiency and is rejected from both panels; it was previously hidden by the axis range. The dashed curve simply joins the third sample on each speed line and is an assumed boundary, not validated surge onset. The nominal fixture basis is 4500 m³/hr, 105 kJ/kg, 80% efficiency and 11500 rpm.",
+        "source_code_unchanged": true
+      },
+      "full_resolution_inspected": true,
+      "visual_findings": [
+        "Final full view confirms the complete positive efficiency range, clear assumed-boundary label, no misleading shading, and visible rejection note. One70%-speed point at4252.5m3/hr and−2.6089796% efficiency is retained in the rejection ledger and omitted from both plotted panels;99/100 paired points shown."
+      ]
+    },
+    {
+      "path": "chapters\\ch19_export_and_metering\\figures\\gcv_wobbe_vs_ngl.png",
+      "sha256": "098c35058132d9996248d8e0a0ee2efcb9cb57eae1d666928b6bca8c0675cf21",
+      "source": {
+        "type": "accepted_exact_literal_solution_hook_data",
+        "chapter": 19,
+        "source_fence_index": 2,
+        "code_sha256": "1f242295a4a0696d7b876799301609999185806a3aa137079fc4976815bf081c",
+        "report": "verification\\scientific_revision\\ch19_solution_checks.json",
+        "report_sha256": "1bbac101a2c86dddfcea7d26006c8af6c76ac0e0795c22641e2a3322f5bf171c",
+        "data_path": "verification\\scientific_revision\\final_original_gcv_wobbe_vs_ngl_data.json",
+        "data_sha256": "db3e3f86891c8e2aec50cf974d749f67026928eebb21608fd2dc0631e13d822b"
+      },
+      "transformation": "Redrawn directly from accepted exact-source output records. No surrogate formulas or independently invented sample values.",
+      "checks": [
+        {
+          "name": "literal code hash and data coverage",
+          "passed": true,
+          "points": 7
+        }
+      ],
+      "previous_asset": ".build\\backups\\final_original_asset_provenance\\chapters\\ch19_export_and_metering\\figures\\gcv_wobbe_vs_ngl.png",
+      "previous_sha256": "4087e0d588a659cebb4e54fb762cb385734e7b3c638ceb06682f1b01b1c5cbaf",
+      "visual_review_status": "passed",
+      "current_chapter_sha256": "3591733ab6a302cc8dcb4095e8a729583e4a9c06042fe7c3f7c2ddf9761893e4",
+      "caption_evidence": {
+        "chapter": 19,
+        "figure": "gcv_wobbe_vs_ngl.png",
+        "previous_prose": "![Figure 19.1: Effect of NGL content on gas heating value and Wobbe index](figures/gcv_wobbe_vs_ngl.png)",
+        "caption": "Calculated GCV and superior Wobbe index versus C₂+ content on the declared ISO6976 basis",
+        "discussion": "For C₂+ increasing from 2 to 15 mol%, GCV rises from 37.677 to 43.405 MJ/Sm³ and superior Wobbe index from 49.114 to 52.372 MJ/Sm³. The mixture assigns C₂+ as 60% ethane, 25% propane and 15% n-butane, with fixed 1% nitrogen and 1.5% CO₂. The reference basis is 15 °C volume and 25 °C combustion. These points come from the exact published calculation and satisfy the same-basis Wobbe identity; they do not certify custody-transfer metering.",
+        "source_code_unchanged": true
+      },
+      "full_resolution_inspected": true,
+      "visual_findings": [
+        "Final full view confirms seven exact ISO6976 cases, correctly separated GCV and Wobbe axes/units and explicit reference temperatures. Values reconcile to accepted same-code hook records."
+      ]
+    },
+    {
+      "path": "chapters\\ch19_export_and_metering\\figures\\pipeline_sizing_dp_vs_diameter.png",
+      "sha256": "d45e5172b0af7eddb13b5e465d6287cbe3726394ba93b0036496421d784f668e",
+      "source": {
+        "type": "accepted_exact_literal_solution_hook_data",
+        "chapter": 19,
+        "source_fence_index": 6,
+        "code_sha256": "4ba7ed4d4d7b10829e3465d356b479818e6ca5eb432925d35c8c3b2fc19b1c9f",
+        "report": "verification\\scientific_revision\\ch19_solution_checks.json",
+        "report_sha256": "1bbac101a2c86dddfcea7d26006c8af6c76ac0e0795c22641e2a3322f5bf171c",
+        "data_path": "verification\\scientific_revision\\final_original_pipeline_sizing_dp_vs_diameter_data.json",
+        "data_sha256": "03042e6541c135f8eff77aa2e554a9323409e75fb67b70d62c690051c7aeecb6"
+      },
+      "transformation": "Redrawn directly from accepted exact-source output records. No surrogate formulas or independently invented sample values.",
+      "checks": [
+        {
+          "name": "literal code hash and data coverage",
+          "passed": true,
+          "points": 7
+        }
+      ],
+      "previous_asset": ".build\\backups\\final_original_asset_provenance\\chapters\\ch19_export_and_metering\\figures\\pipeline_sizing_dp_vs_diameter.png",
+      "previous_sha256": "fd6a03c2f9875607592280e75ecea5dfdd108401d0f9880d20c5820d2e20796c",
+      "visual_review_status": "passed",
+      "current_chapter_sha256": "3591733ab6a302cc8dcb4095e8a729583e4a9c06042fe7c3f7c2ddf9761893e4",
+      "caption_evidence": {
+        "chapter": 19,
+        "figure": "pipeline_sizing_dp_vs_diameter.png",
+        "previous_prose": "![Figure 19.3: Pipeline sizing study: pressure drop vs. diameter for 15 MSm³/d over 300 km](figures/pipeline_sizing_dp_vs_diameter.png)",
+        "caption": "Accepted 300 km pipeline pressure-drop and inlet-velocity results at 15 MSm³/day",
+        "discussion": "All seven sampled diameters have a finite positive outlet-pressure solution for the stated horizontal pipe, 150 bara/40 °C inlet and 5 μm roughness. Increasing internal diameter from 24 to 42 inches decreases pressure drop from 40.394 to 2.168 bar and inlet gas velocity from 3.585 to 1.171 m/s. Pressure positivity is only a domain check: an arrival-pressure specification, thermal analysis and lifecycle costs are still required to choose a diameter.",
+        "source_code_unchanged": true
+      },
+      "full_resolution_inspected": true,
+      "visual_findings": [
+        "Final full view confirms all seven accepted300km cases; pressure drop40.394–2.168bar and inletvelocity3.585–1.171m/s. Diameter axis, pressure difference versus absolute-pressure basis and caption agree."
+      ]
+    },
+    {
+      "path": "chapters\\ch17_valves_and_flow_control\\figures\\valve_characteristics_curves.png",
+      "sha256": "dad638a7d5d516c21187ff81c16926fb0711ef7fbdd515b3298e64409c5bebdf",
+      "source": {
+        "type": "declared_analytic_fixture",
+        "data_path": "verification\\scientific_revision\\final_original_valve_characteristics_data.json",
+        "data_sha256": "2314d4b6812f7cf535b79d6ae9d376fa6b9555e9ab20fb9ce0cc7c66d1e36dc0",
+        "source_equations": "Chapter 17, section 17.2.2",
+        "legacy_generator_sha256": "381b77a39429112bf6adde81e0bcc1ee0ad34299a50cd6e679b7d476fef17881"
+      },
+      "transformation": "Recreated the three published equations on 200 normalized travel points; explicit fixture labels and units.",
+      "checks": [
+        {
+          "name": "analytical endpoints and domain",
+          "passed": true,
+          "equal_percentage_minimum": 0.02,
+          "linear_endpoints": [
+            0,
+            1
+          ],
+          "square_root_endpoints": [
+            0,
+            1
+          ],
+          "monotonic_nonnegative_bounded": true
+        }
+      ],
+      "previous_asset": ".build\\backups\\final_original_asset_provenance\\chapters\\ch17_valves_and_flow_control\\figures\\valve_characteristics_curves.png",
+      "previous_sha256": "51a2c3042e889bd0e4378f090964c4847d86afe306aab8f038273fcadce45554",
+      "visual_review_status": "passed",
+      "current_chapter_sha256": "c09deffcaa7ad0a56c716fc4f30ec66a9ab58c28c46e1c6d5218d817202d1210",
+      "caption_evidence": {
+        "chapter": 17,
+        "figure": "valve_characteristics_curves.png",
+        "previous_prose": "![Figure 17.1: Control valve inherent characteristics: linear, equal percentage, and quick opening](figures/valve_characteristics_curves.png)",
+        "caption": "Idealized normalized Cv equations: linear, equal-percentage R = 50, and square-root quick opening",
+        "discussion": "The figure evaluates the three stated equations, not measured valve data. At 50% travel their normalized capacities are 50%, 14.14% and 70.71%, respectively. The equal-percentage endpoint of 1/R = 2% is the minimum controllable-capacity model, not a shutoff-leakage prediction. The square-root curve is an illustrative quick-opening approximation; installed flow also depends on the changing system pressure drop.",
+        "source_code_unchanged": true
+      },
+      "full_resolution_inspected": true,
+      "visual_findings": [
+        "Final full view confirms linear, exponentialR50 and square-root curves from retained200-point arrays. Normalized travel/Cv axes, legend and minimum-capacity versus shutoff limitation agree with the equations."
+      ]
+    }
+  ],
+  "removed_placements": [],
+  "prose_changes": [
+    {
+      "chapter": 10,
+      "figure": "mp_pressure_lp_liquid_recovery.png",
+      "previous_prose": "![Figure 10.4: LP separator liquid recovery at 2 bara vs. intermediate separator pressure](figures/mp_pressure_lp_liquid_recovery.png)",
+      "caption": "LP separator liquid recovery at 2 bara, from the published three-stage sweep",
+      "discussion": "At 100 t/hr feed, 75 °C and 70 bara first-stage pressure, the calculated final-separator liquid rate decreases from 97.14 to 92.58 m³/hr as intermediate pressure increases from 10 to 50 bara. These are liquid-stream volumes at the 2 bara final separator and its calculated flash temperature; they include the modeled liquid phases and are not reference-condition stock-tank oil rates.",
+      "source_code_unchanged": true
+    },
+    {
+      "chapter": 10,
+      "figure": "separator_utilization_profile.png",
+      "previous_prose": "![Figure 10.9: Separator utilization and K-factor vs. production rate](figures/separator_utilization_profile.png)\n\nHP Separator gas capacity utilization (left) and actual gas load factor (right) as functions of total feed rate. The green zone indicates normal operation (< 85%), orange indicates approaching capacity (85–100%), and red indicates the separator is over-capacity. The design K-factor is shown as a red dashed line.",
+      "caption": "Fixed-vessel separator gas utilization and K-factor across the declared feed-rate sweep",
+      "discussion": "The vessel is sized once at 100 t/hr, 70 bara and 70 °C with the example sizing factor 1.2. Across 50–175 t/hr, gas utilization rises from 41.48% to 145.17%; the plot retains the over-capacity points. The 85% warning line is an illustrative operating threshold, and the 0.107 m/s design K-factor is the assumed screening basis rather than a measured internals rating.",
+      "source_code_unchanged": true
+    },
+    {
+      "chapter": 10,
+      "figure": "separator_pressure_optimization.png",
+      "previous_prose": "![Figure 10.10: Oil recovery and separator utilization vs. MP separator pressure](figures/separator_pressure_optimization.png)\n\nLiquid recovery at 3 bara LP pressure (left) and separator gas capacity utilization for vessels sized once at 30 bara MP pressure (right) as functions of the intermediate (MP) separator pressure. Lower MP pressure increases gas flashing in the MP separator (higher MP utilization) while potentially improving oil recovery up to an optimum. The highest sampled recovery is a candidate only; reject pressures that violate fixed-vessel capacity or export quality constraints.",
+      "caption": "LP separator liquid recovery at 3 bara and fixed-vessel gas utilization versus MP pressure",
+      "discussion": "The left panel reports liquid-stream volume at the 3 bara final separator and calculated flash temperature. Vessels in the right panel are sized once at 30 bara MP pressure. Lower MP pressure increases gas flashing and MP loading; the highest sampled liquid recovery at 10 bara is rejected by the fixed-vessel gas-capacity constraint. A reference-condition oil objective requires an additional declared flash.",
+      "source_code_unchanged": true
+    },
+    {
+      "chapter": 14,
+      "figure": "compression_pr_sensitivity.png",
+      "previous_prose": "![Figure 14.2: Compressor power and discharge temperature vs. pressure ratio](figures/compression_pr_sensitivity.png)\n\nCompressor power (left) and discharge temperature (right) as functions of pressure ratio for a single-stage centrifugal compressor. The dashed line indicates the typical discharge temperature limit of 150°C, which constrains the maximum practical pressure ratio per stage.",
+      "caption": "Calculated power and discharge temperature for the 20 t/hr, 80% polytropic-efficiency pressure-ratio sweep",
+      "discussion": "At 10 bara and 30 °C suction, increasing pressure ratio from 1.5 to 5 raises power from 374.40 to 1744.37 kW and discharge temperature from 63.58 to 174.63 °C. The 150 °C dashed line is an illustrative temperature constraint; an actual allowable temperature must come from the selected machine and service.",
+      "source_code_unchanged": true
+    },
+    {
+      "chapter": 14,
+      "figure": "compressor_performance_map.png",
+      "previous_prose": "![Figure 14.8: Compressor performance map showing operating point and speed lines](figures/compressor_performance_map.png)\n\nCompressor performance map with head vs. flow curves at five speed lines. The operating point (black dot) sits on the 100% speed line. The red dashed line indicates the surge limit. The optimizer can vary the speed between the minimum and maximum speed lines to adjust throughput while maintaining adequate surge margin.",
+      "caption": "Illustrative analytic head curves around a calculated thermodynamic point; no surge boundary is established",
+      "discussion": "The five speed families are the explicit polynomial/affinity illustration in the code, anchored to the computed point of 3159.7 m³/hr and 150.14 kJ/kg. They are not extracted manufacturer curves or an installed compressor rating. The publication view omits the code’s independently invented surge series because it does not establish a stability boundary on those curves. A throughput optimizer needs a calibrated chart and measured surge data before using a speed or surge constraint.",
+      "source_code_unchanged": true
+    },
+    {
+      "chapter": 14,
+      "figure": "compressor_speed_sensitivity.png",
+      "previous_prose": "![Figure 14.9: Compressor power and efficiency vs. flow rate](figures/compressor_speed_sensitivity.png)\n\nCompressor power (left) and efficiency (right) vs. mass flow rate. The blue markers show NeqSim real-gas calculations; the red dashed line shows the theoretical cubic affinity law scaling. At fixed polytropic efficiency, power scales linearly with mass flow (at constant pressure ratio), The cubic relation applies only to corresponding similar points with head changing as speed squared; it cannot be inferred from this fixed-pressure-ratio sweep.",
+      "caption": "Fixed-pressure-ratio NeqSim power sweep and a separate cubic affinity-law reference",
+      "discussion": "At the fixed 10-to-30 bara pressure ratio, 30 °C suction and prescribed 80% polytropic efficiency, calculated power increases linearly from 833.97 to 3335.88 kW over 15–60 t/hr. The red cubic reference is anchored at 40 t/hr and describes a different similarity trajectory with changing head; it is not a fit to these fixed-pressure-ratio results. The flat efficiency trace is an input assumption.",
+      "source_code_unchanged": true
+    },
+    {
+      "chapter": 15,
+      "figure": "compressor_map_complete.png",
+      "previous_prose": "![Figure 15.3: Complete compressor performance map with head and efficiency curves at multiple speeds](figures/compressor_map_complete.png)\n\nGenerated compressor performance map showing (top) polytropic head vs. actual inlet volume flow at five speeds from 70% to 105% of design, with the surge line marked in red; and (bottom) polytropic efficiency vs. flow at the same speeds. The design point is at 100% speed, 4500 m$^3$/hr, with 80% polytropic efficiency.",
+      "caption": "Illustrative polynomial compressor map, with nonphysical extrapolation rejected and the boundary explicitly assumed",
+      "discussion": "These are teaching polynomials at five assumed speeds, not NeqSim-derived or manufacturer performance data. Of 100 paired head/efficiency samples, 99 meet positive-head and 0 < efficiency ≤ 100% bounds. The 70% speed point at 4252.5 m³/hr predicts −2.609% efficiency and is rejected from both panels; it was previously hidden by the axis range. The dashed curve simply joins the third sample on each speed line and is an assumed boundary, not validated surge onset. The nominal fixture basis is 4500 m³/hr, 105 kJ/kg, 80% efficiency and 11500 rpm.",
+      "source_code_unchanged": true
+    },
+    {
+      "chapter": 18,
+      "figure": "gt_ambient_performance.png",
+      "previous_prose": "![Figure 18.2: Gas turbine power output and efficiency as a function of ambient temperature](figures/gt_ambient_performance.png)",
+      "caption": "Available shaft power and fuel demand versus ambient temperature at 20 MW shaft demand",
+      "discussion": "This illustrative gas-turbine package model retains a fixed 20 MW shaft demand. Available power decreases from 37.35 to 24.75 MW over −20 to 40 °C. The right panel shows fuel demand, not efficiency: it reaches a shallow minimum near 30 °C before increasing. That shape follows the assumed ambient and part-load corrections; it is not a universal gas-turbine performance trend or an OEM guarantee.",
+      "source_code_unchanged": true
+    },
+    {
+      "chapter": 19,
+      "figure": "gcv_wobbe_vs_ngl.png",
+      "previous_prose": "![Figure 19.1: Effect of NGL content on gas heating value and Wobbe index](figures/gcv_wobbe_vs_ngl.png)",
+      "caption": "Calculated GCV and superior Wobbe index versus C₂+ content on the declared ISO6976 basis",
+      "discussion": "For C₂+ increasing from 2 to 15 mol%, GCV rises from 37.677 to 43.405 MJ/Sm³ and superior Wobbe index from 49.114 to 52.372 MJ/Sm³. The mixture assigns C₂+ as 60% ethane, 25% propane and 15% n-butane, with fixed 1% nitrogen and 1.5% CO₂. The reference basis is 15 °C volume and 25 °C combustion. These points come from the exact published calculation and satisfy the same-basis Wobbe identity; they do not certify custody-transfer metering.",
+      "source_code_unchanged": true
+    },
+    {
+      "chapter": 19,
+      "figure": "pipeline_sizing_dp_vs_diameter.png",
+      "previous_prose": "![Figure 19.3: Pipeline sizing study: pressure drop vs. diameter for 15 MSm³/d over 300 km](figures/pipeline_sizing_dp_vs_diameter.png)",
+      "caption": "Accepted 300 km pipeline pressure-drop and inlet-velocity results at 15 MSm³/day",
+      "discussion": "All seven sampled diameters have a finite positive outlet-pressure solution for the stated horizontal pipe, 150 bara/40 °C inlet and 5 μm roughness. Increasing internal diameter from 24 to 42 inches decreases pressure drop from 40.394 to 2.168 bar and inlet gas velocity from 3.585 to 1.171 m/s. Pressure positivity is only a domain check: an arrival-pressure specification, thermal analysis and lifecycle costs are still required to choose a diameter.",
+      "source_code_unchanged": true
+    },
+    {
+      "chapter": 17,
+      "figure": "valve_characteristics_curves.png",
+      "previous_prose": "![Figure 17.1: Control valve inherent characteristics: linear, equal percentage, and quick opening](figures/valve_characteristics_curves.png)",
+      "caption": "Idealized normalized Cv equations: linear, equal-percentage R = 50, and square-root quick opening",
+      "discussion": "The figure evaluates the three stated equations, not measured valve data. At 50% travel their normalized capacities are 50%, 14.14% and 70.71%, respectively. The equal-percentage endpoint of 1/R = 2% is the minimum controllable-capacity model, not a shutoff-leakage prediction. The square-root curve is an illustrative quick-opening approximation; installed flow also depends on the changing system pressure drop.",
+      "source_code_unchanged": true
+    }
+  ],
+  "manuscript_code_unchanged": true,
+  "renderer": "verification\\scientific_revision\\finalize_original_asset_provenance.py",
+  "renderer_sha256": "6177404f6f13bb04336983c1e721fb0555c25f404d986838ed31635e878f5c81",
+  "summary": {
+    "placed_images_verified": 11,
+    "full_resolution_views": 11,
+    "rejected_analytic_samples": 1,
+    "removed_unsupported_surge_series": 1,
+    "unresolved_material_visual_defects": 0,
+    "manuscript_code_changes": 0
+  }
+}

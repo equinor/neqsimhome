@@ -1,0 +1,1966 @@
+{
+  "status": "passed",
+  "timestamp_utc": "2026-09-12T22:13:43.812874+00:00",
+  "scope": {
+    "detailed_figure_adjacent_prose_review_chapters": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "caption_placement_and_reference_check_chapters": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "placed_figures": 200,
+    "notebook_figures_placed_exactly_once": 104,
+    "changes_allowed": "Only necessary prose; no code, image, caption, label or ordering changes."
+  },
+  "fixes": [
+    {
+      "chapter": 24,
+      "reason": "Figure 24.1 is now the accepted/rejected pressure grid, not a capacity staircase.",
+      "before": "This leads to the **capacity staircase** pattern (Figure 24.1), where each debottlenecking step unlocks capacity up to the next constraint.",
+      "after": "This leads to the **capacity staircase** pattern, where each debottlenecking step unlocks capacity up to the next constraint."
+    },
+    {
+      "chapter": 24,
+      "reason": "The local CSV plotting example is not the separately reproduced binary-search figure now numbered 24.2.",
+      "before": "The CSV can be loaded into pandas for plotting convergence curves (Figure 24.2):",
+      "after": "The CSV can be loaded into pandas for plotting convergence histories:"
+    },
+    {
+      "chapter": 24,
+      "reason": "Figure 24.4 no longer exists; the following unnumbered text schematic remains.",
+      "before": "This creates a **capacity staircase** (Figure 24.4):",
+      "after": "This creates a **capacity staircase**, shown schematically below:"
+    },
+    {
+      "chapter": 24,
+      "reason": "Restore missing spaces between prose numbers, units and adjacent words; numerical values unchanged.",
+      "before": "Thirty states satisfy the declared1ppm mass/component and10ppm enthalpy acceptance checks. The80bara feed/140bara discharge combination fails the material check at both rates: the native phase extraction loses0.407180kg/h at250t/h and0.570052kg/h at350t/h, or2.345ppm.",
+      "after": "Thirty states satisfy the declared 1 ppm mass/component and 10 ppm enthalpy acceptance checks. The 80 bara feed/140 bara discharge combination fails the material check at both rates: the native phase extraction loses 0.407180 kg/h at 250 t/h and 0.570052 kg/h at 350 t/h, or 2.345 ppm."
+    },
+    {
+      "chapter": 26,
+      "reason": "Remove the deleted gas-lift diagram's three-region narrative, which contradicted the explicitly monotone equation.",
+      "before": "The curve has three important regions:\n\n1. **Low injection rate:** Each unit of injected gas produces a significant increment of oil. The gas lift is highly efficient.\n2. **Optimal injection rate:** The point of maximum economic return, balancing the value of incremental oil against the cost of compression for the lift gas.\n3. **High injection rate:** Diminishing returns — additional gas produces minimal incremental oil. Beyond a critical rate, friction effects from excessive gas velocity actually reduce oil production.",
+      "after": "Economic selection additionally requires the value of incremental oil and an explicit lift-gas cost or shared-supply constraint. The monotone exponential alone does not locate a finite production maximum."
+    },
+    {
+      "chapter": 26,
+      "reason": "Remove a stale unconditional optimality guarantee that contradicted the immediately preceding rejected native allocation.",
+      "before": "Because the optimizer equalizes `incrementalSlope` across wells, the allocation it returns satisfies the equal-slope optimality condition derived above.",
+      "after": "Check the returned allocation against the equal-slope conditions and bounds; the tabulated example above demonstrates why the native candidate must be checked independently."
+    },
+    {
+      "chapter": 33,
+      "reason": "The replacement block diagram now represents the executed dry-hydrocarbon model; old generic-diagram prose was contradictory and duplicated the new caption discussion.",
+      "before": "The diagram shows possible areas and material paths. It is a process concept, not the exact simulated flowsheet in Section 33.10. The worked model declares its narrower dry-hydrocarbon boundary and accounts for every product crossing that boundary.",
+      "after": "Section 33.10 specifies the dry-hydrocarbon feed and the operating assumptions for this diagram's four-product calculation boundary."
+    },
+    {
+      "chapter": 33,
+      "reason": "Remove the old topology description of heat recovery/fractionation absent from the replacement gas-only expansion diagram.",
+      "before": "This conceptual diagram shows where heat recovery and fractionation can enter a plant. The worked model represents precooling as an external cooler, provides a knockout before the expander and accounts for its liquid bypass. It credits no gas-gas heat recovery or automatic shaft coupling.",
+      "after": "The worked model represents precooling as an external cooler, provides a knockout before the expander and accounts for its liquid bypass. It credits no gas-gas heat recovery or automatic shaft coupling."
+    }
+  ],
+  "source_hashes_and_preservation_proof": [
+    {
+      "chapter": 1,
+      "path": "chapters\\ch01_introduction\\chapter.md",
+      "before_sha256": "8d2233fd33aad0244c82517d70cd9707f67e93b9e433bc4daf530b0674a268aa",
+      "after_sha256": "8d2233fd33aad0244c82517d70cd9707f67e93b9e433bc4daf530b0674a268aa",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "55250b1f58f0cabfb5d07600137b6c05469f12a8d59f3487f4c21ecdafc2a150",
+      "image_markup_sha256": "7c63ec724ff66410b8efd351a51df81ba141bca50b00ce2831eaf48eccb6db53"
+    },
+    {
+      "chapter": 2,
+      "path": "chapters\\ch02_thermodynamic_foundations\\chapter.md",
+      "before_sha256": "680e95bc9bd5b81fec43b698031a100f22c5ceafedfc2948c836bdce0e879031",
+      "after_sha256": "680e95bc9bd5b81fec43b698031a100f22c5ceafedfc2948c836bdce0e879031",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "aa554288c6fc186db2c4cb75ec5ecebbcdea1f2f542edb00f934eb4dea23d607",
+      "image_markup_sha256": "1f65d60e451770e09845622a997a3c10b3c659055bb4bf02bd25f74a23454558"
+    },
+    {
+      "chapter": 3,
+      "path": "chapters\\ch03_fluid_characterization\\chapter.md",
+      "before_sha256": "78377945b7ed43ce2b7f12d99bcc60aaf8658fb755d1a61d12d3564fc95cf0fb",
+      "after_sha256": "78377945b7ed43ce2b7f12d99bcc60aaf8658fb755d1a61d12d3564fc95cf0fb",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "533c0a33833f004f9f5e3723b6cdbba376c4547f8a6cabeadd52adeeba72b213",
+      "image_markup_sha256": "8243453ac47378eec970a0efa8fc2e95910418cf0ac4da9f4a28a0f96845d426"
+    },
+    {
+      "chapter": 4,
+      "path": "chapters\\ch04_reservoir_engineering\\chapter.md",
+      "before_sha256": "d8be93b72dc8b67b6ae862767475ea7c072b82bb7884e4b79b8614b8aa8d97c4",
+      "after_sha256": "d8be93b72dc8b67b6ae862767475ea7c072b82bb7884e4b79b8614b8aa8d97c4",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "36879a3f47615574fa665b2bbffb2ec41196dcb606a39a6ed5aeb5f36b7e149b",
+      "image_markup_sha256": "f99c3e6ed4c081f16413086e5bf099e9a410df6d78b02042cdee2718150dbffb"
+    },
+    {
+      "chapter": 5,
+      "path": "chapters\\ch05_well_performance\\chapter.md",
+      "before_sha256": "adb9d9019936a1913928bf2a8c94f18721fa47b6ce7dcd9f1f311c3b8d3cb480",
+      "after_sha256": "adb9d9019936a1913928bf2a8c94f18721fa47b6ce7dcd9f1f311c3b8d3cb480",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "1ddb268bed2bbd778455f107c61913e920d79103f5781b2a00fc040c7f80585b",
+      "image_markup_sha256": "a47cbf54964819b928434bdeeddc107a4b89b73d27fbac36b6adaac692be9f16"
+    },
+    {
+      "chapter": 6,
+      "path": "chapters\\ch06_wells_artificial_lift\\chapter.md",
+      "before_sha256": "d17a1fd18b0185112ca81662a78b7d63ac701627876bb539fc183f0d52909ef7",
+      "after_sha256": "d17a1fd18b0185112ca81662a78b7d63ac701627876bb539fc183f0d52909ef7",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "ef535facf12e14b4264626b98f5aec021c1d6a89738bb7ce3fca2e435bc3b48f",
+      "image_markup_sha256": "1c3134ee789ae3899e74f3d11fc8fc7d0c8f4c9705eaf01592f5b4704dfb9e1d"
+    },
+    {
+      "chapter": 7,
+      "path": "chapters\\ch07_subsea_production_systems\\chapter.md",
+      "before_sha256": "41abe22a6780cd982730ba4678a60ab1213e48564de3e319a4d6cac8076bcea3",
+      "after_sha256": "41abe22a6780cd982730ba4678a60ab1213e48564de3e319a4d6cac8076bcea3",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "f08bee9197d3a9521a404918b47cd1f9cde47a0c486cc1dd9c82c6e480826e6d",
+      "image_markup_sha256": "189c3cb134f168591b3706f4a863bd37409dea7f6c6286330ed5ddd78b6359d7"
+    },
+    {
+      "chapter": 8,
+      "path": "chapters\\ch08_flowlines_and_risers\\chapter.md",
+      "before_sha256": "7d1fac7f06f86176d4c3698ab05b172bfd6c55bc9372cc7fcbed7656edb23b04",
+      "after_sha256": "7d1fac7f06f86176d4c3698ab05b172bfd6c55bc9372cc7fcbed7656edb23b04",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "b20d24271447aa82a361cd074183b541c56fc3bbdf68563739d960234bb0a067",
+      "image_markup_sha256": "0b74e49429d6654a40fbfffe8cb7768c8262d9d849c0caf46fb8eb6a8a8ca8a0"
+    },
+    {
+      "chapter": 9,
+      "path": "chapters\\ch09_flow_assurance\\chapter.md",
+      "before_sha256": "b77d50886181fd0fc66d64668e8bb0e9170b4da01381c48899d9a920c0d9715c",
+      "after_sha256": "b77d50886181fd0fc66d64668e8bb0e9170b4da01381c48899d9a920c0d9715c",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "2d47772f5fb4491b6f37f134fc14c169c4cfe73321836b8e66f6929a49ea9a2a",
+      "image_markup_sha256": "979dda1907fb7a4c2dc005ec01b545dfda970c1923ffaf920850049f39e48698"
+    },
+    {
+      "chapter": 10,
+      "path": "chapters\\ch10_separation_technology\\chapter.md",
+      "before_sha256": "38305aef18b8ccc3dd20b200a7c99462a23748a5b8abee3491241cb812eb8933",
+      "after_sha256": "38305aef18b8ccc3dd20b200a7c99462a23748a5b8abee3491241cb812eb8933",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "3f7d91d5df0e8985f725e579051524c99fa51f2536eedd655290169b2cce5a43",
+      "image_markup_sha256": "9020a11b83d2cdca00985cc9498c63acaf7b78fd10707f2a53f4a4875bb02557"
+    },
+    {
+      "chapter": 11,
+      "path": "chapters\\ch11_oil_processing\\chapter.md",
+      "before_sha256": "d5e3f1749cca39009f0976c6f4bebcd7ea48c37c112f5bc2fed3c218a0328333",
+      "after_sha256": "d5e3f1749cca39009f0976c6f4bebcd7ea48c37c112f5bc2fed3c218a0328333",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "8acddbaa4903d763c073635da0dd3bf3aaa7cbac25e6215d248e703276fc7dff",
+      "image_markup_sha256": "90e24c576c186cbcdb4b3d5da148d79ba9f82f3e943b026743fa5eedf73ae31a"
+    },
+    {
+      "chapter": 12,
+      "path": "chapters\\ch12_gas_processing\\chapter.md",
+      "before_sha256": "67d6cbda77ac8bf660fc44ae08698edf62224e325569d115b68ea150115bfd0d",
+      "after_sha256": "67d6cbda77ac8bf660fc44ae08698edf62224e325569d115b68ea150115bfd0d",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "7da5d357e9522ffb5bf02c61a8f5ae209835d5b025d81a465bad07e52d9775dd",
+      "image_markup_sha256": "e3180ef71c833c3bac15efd5d34a89f4322ffde4afd77b4f2837d9d3a4de07c8"
+    },
+    {
+      "chapter": 13,
+      "path": "chapters\\ch13_produced_water_treatment\\chapter.md",
+      "before_sha256": "311384180e1bc6ec7df33ace5b8136320e20ba02d928575bcebf066eb69ba87a",
+      "after_sha256": "311384180e1bc6ec7df33ace5b8136320e20ba02d928575bcebf066eb69ba87a",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "2e53ca8e60dbf2e1fe19f49322078583e44070bbd5321a95ac967498ece995ee",
+      "image_markup_sha256": "dbd3910d5650a3003001eb8e2e77feb222dd885545db46d7168a77ae5e41ac4f"
+    },
+    {
+      "chapter": 14,
+      "path": "chapters\\ch14_gas_compression\\chapter.md",
+      "before_sha256": "e02891cb311ee7e93fdd3dec2f5ca49897bef0c6d6753417c2fc6d1d64ddf2e9",
+      "after_sha256": "e02891cb311ee7e93fdd3dec2f5ca49897bef0c6d6753417c2fc6d1d64ddf2e9",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "d27696ab255664630316b07e71aea82ec8df270efd48fd9fb1d676a0d824ff73",
+      "image_markup_sha256": "34d59c8665f15413b861f8c19bfb36bb4e87d8a889b0f07e4014c25e97e9a9ad"
+    },
+    {
+      "chapter": 15,
+      "path": "chapters\\ch15_compressor_characteristics\\chapter.md",
+      "before_sha256": "1ec38222fca0ec2f971cbf3ccdb3f7e6336343d2c2415d35822ef5929c75767a",
+      "after_sha256": "1ec38222fca0ec2f971cbf3ccdb3f7e6336343d2c2415d35822ef5929c75767a",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "773719eb27d0754d93f204fb0b198e0d439ce1949491cc96016df76e47d5149e",
+      "image_markup_sha256": "d1825328fd01307f20524454cee7ec3b53ad59280edf9ce5c703d1cc9ed95c90"
+    },
+    {
+      "chapter": 16,
+      "path": "chapters\\ch16_heat_exchangers\\chapter.md",
+      "before_sha256": "bff2a4bd3d80bd55cd732b80e45ffd23379d55920a3356163cf243cc78ead4d9",
+      "after_sha256": "bff2a4bd3d80bd55cd732b80e45ffd23379d55920a3356163cf243cc78ead4d9",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "db3cc58593df3fe4107e526764a542b19a628f41c7bb86bbef1975776a47c280",
+      "image_markup_sha256": "5d1534375c052c6cf49a6804d7f621e14ad4bd20056ab94cf0d15765be4f6cfe"
+    },
+    {
+      "chapter": 17,
+      "path": "chapters\\ch17_valves_and_flow_control\\chapter.md",
+      "before_sha256": "b9852a8b2eb78845d44e5604cf6bcc3b3996e6a5bbb27d57dc9a8e7c2ffe7287",
+      "after_sha256": "b9852a8b2eb78845d44e5604cf6bcc3b3996e6a5bbb27d57dc9a8e7c2ffe7287",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "44e7071b3532e621203d8e3f76fe51be95b907c5d42fa74b47a5902afc64f720",
+      "image_markup_sha256": "c9d9c6019311b128344e66db2a6894269cfbff931b40560cfbdee147af87eb76"
+    },
+    {
+      "chapter": 18,
+      "path": "chapters\\ch18_power_production\\chapter.md",
+      "before_sha256": "9087f786e91c0467dabbcbb0215ae8b75e8d6a296c3caa2d5aba3b3534484dd7",
+      "after_sha256": "9087f786e91c0467dabbcbb0215ae8b75e8d6a296c3caa2d5aba3b3534484dd7",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "68aebabfff9675f91ae02dadfd333f656a193869fba477112501629f9dd47d8a",
+      "image_markup_sha256": "d36933f975dda753809849b005553afc6d20af3948b22d13f89b1089e27c947f"
+    },
+    {
+      "chapter": 19,
+      "path": "chapters\\ch19_export_and_metering\\chapter.md",
+      "before_sha256": "9d530c1754dc565f73ff57a8537e6e3329fd5ab42d256d13d9c004f3366e573b",
+      "after_sha256": "9d530c1754dc565f73ff57a8537e6e3329fd5ab42d256d13d9c004f3366e573b",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "45966deb33d02bbaebca69be72669693df903dc5ffb85db7dafb4b84bce9bfc5",
+      "image_markup_sha256": "2c8e27e5d88d87e6145bc6e85740d76eb64f7cb89d0b8be95178a9f02d642d26"
+    },
+    {
+      "chapter": 20,
+      "path": "chapters\\ch20_capacity_checks_and_utilization\\chapter.md",
+      "before_sha256": "9f58884bc1eea3c266a9fd9de59b502aa5d68512b1cefeca0f9460234d84fe0c",
+      "after_sha256": "9f58884bc1eea3c266a9fd9de59b502aa5d68512b1cefeca0f9460234d84fe0c",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "654dc65de9861056e89645959bbb43c8db28f9a5dbb993681cfd703942146dd3",
+      "image_markup_sha256": "1c6b85d8070bdab44cdc860b8094a14d82793888219d6ca2b2b319eee5204483"
+    },
+    {
+      "chapter": 21,
+      "path": "chapters\\ch21_debottlenecking\\chapter.md",
+      "before_sha256": "febbe37baea23460d8ac353b92442c53daea8851969dad8f95fe22fc6acb5fea",
+      "after_sha256": "febbe37baea23460d8ac353b92442c53daea8851969dad8f95fe22fc6acb5fea",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "255161f5efa9aca707ebd1bc2a8d55c487e16234ee1f387e1229c84d73538c78",
+      "image_markup_sha256": "4b93eff3a4430158da5e8c0fde801608fd0e6ee31858d9929c96fab81cd0cc86"
+    },
+    {
+      "chapter": 22,
+      "path": "chapters\\ch22_production_optimization_theory\\chapter.md",
+      "before_sha256": "b3a83dbd307f36c4b2e5f28ec46f012d6f28c80cfbb16ccb5c8f25e26073b798",
+      "after_sha256": "b3a83dbd307f36c4b2e5f28ec46f012d6f28c80cfbb16ccb5c8f25e26073b798",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "c0eca151dba42d4d2d9aa3916ae6847f85c26b0272beae14efe3c8bc6a157dfe",
+      "image_markup_sha256": "3daae9826c78d032b1a5482734f18c7fd981927e928764d64cdc7121a3d7266d"
+    },
+    {
+      "chapter": 23,
+      "path": "chapters\\ch23_neqsim_optimization_framework\\chapter.md",
+      "before_sha256": "f8e8a24c23e5b7a7205e6202882bc71701f8c00972f6b7b9760bd7242f7e507a",
+      "after_sha256": "f8e8a24c23e5b7a7205e6202882bc71701f8c00972f6b7b9760bd7242f7e507a",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "b625fcdb42a10767b0432f9da8901fd9df4cfc9488044c6eb6ed928d510d0bd3",
+      "image_markup_sha256": "490545c09c1ebc83ce480905fbd9aee189e056c08feeb52bec449e5bbdc8acf8"
+    },
+    {
+      "chapter": 24,
+      "path": "chapters\\ch24_production_optimization\\chapter.md",
+      "before_sha256": "47c3e3f7dcddc114a8f1ed8ba9153bf4b1aa1a735437f202d8d9b91fcb835c37",
+      "after_sha256": "24d3e5ff3e2932d18756c833c337a3d42d0bff05020c343616ac4c9f73149232",
+      "changed": true,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "1026429866ed7c2dbc84788f5f3d8d40bee051a7f285d50c470a0759666d268c",
+      "image_markup_sha256": "de57cd7e62ecbfa12dafdd3ddadb74a517943b2c70a40f2ed9e8a2d5ad35362d"
+    },
+    {
+      "chapter": 25,
+      "path": "chapters\\ch25_utilization_monitoring\\chapter.md",
+      "before_sha256": "fd5bd68bf7291b2578a6806916013f63888fa5d8688a0a5c023473498efab347",
+      "after_sha256": "fd5bd68bf7291b2578a6806916013f63888fa5d8688a0a5c023473498efab347",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "782f8ac4fc049599e713daf5d0c415f032b1641c875173547dc121f7f17ee0fd",
+      "image_markup_sha256": "35d6bff0fe2f277f9eb026884174134fc7c9a134008b3e7144f8b1486ea45151"
+    },
+    {
+      "chapter": 26,
+      "path": "chapters\\ch26_well_network_optimization\\chapter.md",
+      "before_sha256": "1b88938974e06c207dd03eb3c53b2f1ebb6ac4ab4161a31c4baed2b485395f78",
+      "after_sha256": "9b22714c730d6ff1e1d356e82be8cab93e9a3db315ee1c52d0dde03e3c0a673d",
+      "changed": true,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "939f28c16aaf9e568e90447a2033990b194f143aa8431f33e605a4c37735f6f5",
+      "image_markup_sha256": "06baa7653f6453de96ad57c30ce16eae4a741ed1f89eea0c11a251acd050bab1"
+    },
+    {
+      "chapter": 27,
+      "path": "chapters\\ch27_multi_scenario_optimization\\chapter.md",
+      "before_sha256": "5fe74505eead6cf327bf0ee383e2277f998a5607488d0db677f5c9a29208fc68",
+      "after_sha256": "5fe74505eead6cf327bf0ee383e2277f998a5607488d0db677f5c9a29208fc68",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "23ed6b98d5fd26b3c3911ce188cad0932e5c43d20d4179126693de4c459ee611",
+      "image_markup_sha256": "1d9d4e9fd50b7521237eeb7eb94a4421338933968b36edafa2fc282e5bce33c6"
+    },
+    {
+      "chapter": 28,
+      "path": "chapters\\ch28_field_development\\chapter.md",
+      "before_sha256": "12cc0e9866a1029395aa1be4abd2ea6654c5d1744caafc78c87fe64e471bc954",
+      "after_sha256": "12cc0e9866a1029395aa1be4abd2ea6654c5d1744caafc78c87fe64e471bc954",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "9052e032100cc868418b1b63929bd5b343f840f00d48115c5be7b60a7aeb3512",
+      "image_markup_sha256": "1bed55da0260d7bb043840c7336b9045e47af602e17962786afa644d8d9bf017"
+    },
+    {
+      "chapter": 29,
+      "path": "chapters\\ch29_dynamic_simulation_and_control\\chapter.md",
+      "before_sha256": "41e9bd6ee399a17ef369e3abd033430ee0007229b480bba9b9b846e9178d9b39",
+      "after_sha256": "41e9bd6ee399a17ef369e3abd033430ee0007229b480bba9b9b846e9178d9b39",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "626c46536447740a028cbc215ef21cc829b484231f81fc36ec33f631be08a479",
+      "image_markup_sha256": "e6dfd20a9100acbc651d2847b512099a3c4c9b1b5ed677247e01555c5d9e0b07"
+    },
+    {
+      "chapter": 30,
+      "path": "chapters\\ch30_digital_twins_and_automation\\chapter.md",
+      "before_sha256": "6c51737e4b09c856f4e8a430431f4310dbe347310e0b25ed5e31c4497919db02",
+      "after_sha256": "6c51737e4b09c856f4e8a430431f4310dbe347310e0b25ed5e31c4497919db02",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "04198fb61990157f32c858bb9c187d8476f770b4ae165364025a8c376d0bd1ef",
+      "image_markup_sha256": "c3dbebfaf86e4a3bd31bcc75c107f7640bef9b743e1cf9a77b78622a93b6f212"
+    },
+    {
+      "chapter": 31,
+      "path": "chapters\\ch31_solver_methods\\chapter.md",
+      "before_sha256": "682144a7c87dcacdeb3fb0d2abc3ab549d0dc27e4b8c84147d27906d21b4d66d",
+      "after_sha256": "682144a7c87dcacdeb3fb0d2abc3ab549d0dc27e4b8c84147d27906d21b4d66d",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "2e7030387707fa6b3ff9ac9cd55e64e899e000b855bb8cda404c71811068b4db",
+      "image_markup_sha256": "9e196fada92acec5380abc51b10694a0fde592c10a4e0adbe66ee78812301c83"
+    },
+    {
+      "chapter": 32,
+      "path": "chapters\\ch32_advanced_topics\\chapter.md",
+      "before_sha256": "caff729726621e0aaa402f99cc94b523a47ce53dbad8ccee1ce28616e8f438ab",
+      "after_sha256": "caff729726621e0aaa402f99cc94b523a47ce53dbad8ccee1ce28616e8f438ab",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "cd738c35a0e5e25f06a907fcb4fd5f5fc0974f529f494878c1187223a41bd7fe",
+      "image_markup_sha256": "cb442be7f49b634a4053140652a53cb3cfc01ce4a6e317db70e6bac186aa571a"
+    },
+    {
+      "chapter": 33,
+      "path": "chapters\\ch33_onshore_processing_plants\\chapter.md",
+      "before_sha256": "90c6e40f0fa7cdd856325a77bc4c42c24ba5704810a71ed140c6852996974a00",
+      "after_sha256": "8ff1c5dc3b35287fb20c9913d807ece08a08cc052dd69b6b36f6d377f90812d2",
+      "changed": true,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "1db27f35c3f795bd65492351f1df52277de45a900280a401b26fd72a1e95afce",
+      "image_markup_sha256": "c6909f010e876a94c704eb75e4ba1408b4637dc99ebac570d191d16ac7d66eb7"
+    },
+    {
+      "chapter": 34,
+      "path": "chapters\\ch34_case_studies\\chapter.md",
+      "before_sha256": "49d610a155382212d3aa0339bc451d28d5e643fe92139eae28663dc9bca8e93c",
+      "after_sha256": "49d610a155382212d3aa0339bc451d28d5e643fe92139eae28663dc9bca8e93c",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "6889859cd1576131265e80cdaf740c5cc2e8c64c4138463e3afe98a10c43ac14",
+      "image_markup_sha256": "3d1ad5a3e83cb7e7439eb88054ce76805f1d680f4e684247bf6899ff735c1dff"
+    },
+    {
+      "chapter": 35,
+      "path": "chapters\\ch35_future_directions\\chapter.md",
+      "before_sha256": "fe80efd3e4797d2dc298233d5382ece80b881ae2287d9bb136c20a7909772c69",
+      "after_sha256": "fe80efd3e4797d2dc298233d5382ece80b881ae2287d9bb136c20a7909772c69",
+      "changed": false,
+      "all_code_fences_unchanged": true,
+      "all_image_caption_markup_and_order_unchanged": true,
+      "code_fences_sha256": "58b7f4cca08a6a268996ff26380cf79cfcfd5a0a3af35dad9c1ab3abaff2174e",
+      "image_markup_sha256": "29c9a211c0a6fe6b264f8183591c91c0b6a266e7bb8c2c467955cb5b2118cdb8"
+    }
+  ],
+  "final_figure_placements": [
+    {
+      "chapter": 1,
+      "label": "1.1",
+      "path": "chapters\\ch01_introduction\\figures\\production_system_schematic.png",
+      "caption": "Figure 1.1: Schematic of a complete production system from reservoir to export, showing the coupling between reservoir, wells, subsea, topside processing, compression, and export systems.",
+      "image_sha256": "27db7ade32bfe27fa93afc26a0a1d18680fe5297cbee074703ea8fbbf1706df7"
+    },
+    {
+      "chapter": 1,
+      "label": "1.2",
+      "path": "chapters\\ch01_introduction\\figures\\topside_process_schematic.png",
+      "caption": "Figure 1.2: Conceptual gas and liquid processing paths after inlet separation",
+      "image_sha256": "8e6f58f2d688e2e02b32991ac3aaaaa3751afe024ef200630a2fe6392bb790b5"
+    },
+    {
+      "chapter": 1,
+      "label": "1.3",
+      "path": "chapters\\ch01_introduction\\figures\\optimization_workflow.png",
+      "caption": "Figure 1.3: Conceptual sequence from objective and model definition to search and result verification",
+      "image_sha256": "657f9cb0b37309039aaef88457bc5875a30b456c8b3089ed9a4c87f91156a33b"
+    },
+    {
+      "chapter": 1,
+      "label": "1.4",
+      "path": "chapters\\ch01_introduction\\figures\\fig01_density_vs_pressure.png",
+      "caption": "Figure 1.4: Natural Gas Density vs Pressure at 25°C",
+      "image_sha256": "dc072b091821824e1fc8c3d5f0c9952e48b38f3d9ca92e9088966fed1638c396"
+    },
+    {
+      "chapter": 1,
+      "label": "1.5",
+      "path": "chapters\\ch01_introduction\\figures\\fig02_z_factor_vs_pressure.png",
+      "caption": "Figure 1.5: Z-Factor vs Pressure at 25°C",
+      "image_sha256": "77145aeaa873d754c2a912b5abf8f75ae37f56790b2d1451a28777b5f8a17058"
+    },
+    {
+      "chapter": 1,
+      "label": "1.6",
+      "path": "chapters\\ch01_introduction\\figures\\fig03_phase_envelope.png",
+      "caption": "Figure 1.6: Natural gas saturation envelope",
+      "image_sha256": "3300c23b0883f27c98b1f9244a90ebdd682f19e79c3b84cecf80d43ece05e8a5"
+    },
+    {
+      "chapter": 1,
+      "label": "1.7",
+      "path": "chapters\\ch01_introduction\\figures\\fig04_production_sensitivity.png",
+      "caption": "Figure 1.7: Volumetric equipment load at 50 t/hr and 40 °C",
+      "image_sha256": "a41eeeb6bf66845bc48f4a48e8d22dfe9fb333f97afe4ccb0c78dbeb002450f4"
+    },
+    {
+      "chapter": 2,
+      "label": "2.1",
+      "path": "chapters\\ch02_thermodynamic_foundations\\figures\\phase_envelope.png",
+      "caption": "Figure 2.1: NeqSim SRK vapour-liquid saturation envelope for the explicitly specified fluid in Section 2.6.3. The traced maxima are 83.8 °C (cricondentherm) and 154.7 bara (cricondenbar). Markers are sampled continuation extrema; no critical point or production/export trajectory is inferred. Dew/bubble assignment was checked by fresh TP flashes at three pressures around each branch. Continuation gaps remain open; solids, hydrates and aqueous stability are outside this VLE calculation.",
+      "image_sha256": "0665758b0568539165c3dadff6ca43b46802e7275256ddc748a25f95abb37a2b"
+    },
+    {
+      "chapter": 2,
+      "label": "2.2",
+      "path": "chapters\\ch02_thermodynamic_foundations\\figures\\eos_comparison.png",
+      "caption": "Figure 2.2: SRK and Peng–Robinson methane density compared with independent NIST reference-fluid data at nine states",
+      "image_sha256": "26cb6604e75ea9e6deac74de028192df89fbbe35ea9fedac7ec6ad298546e7d2"
+    },
+    {
+      "chapter": 2,
+      "label": "2.3",
+      "path": "chapters\\ch02_thermodynamic_foundations\\figures\\fig01_density_srk_vs_pr.png",
+      "caption": "Figure 2.3: Gas Density — SRK vs Peng-Robinson at 25°C",
+      "image_sha256": "02d51b6ff354412dd29dcb8cfd5fa8bdca3c924f96d22a53a992657dda84ae0f"
+    },
+    {
+      "chapter": 2,
+      "label": "2.4",
+      "path": "chapters\\ch02_thermodynamic_foundations\\figures\\fig02_cp_vs_temperature.png",
+      "caption": "Figure 2.4: Gas Heat Capacity vs Temperature at 50 bara",
+      "image_sha256": "4ace7e44fe69fb666b1f99957100728836e5b49eeec2a77e016dc6f01c97c00e"
+    },
+    {
+      "chapter": 2,
+      "label": "2.5",
+      "path": "chapters\\ch02_thermodynamic_foundations\\figures\\fig03_enthalpy_vs_temperature.png",
+      "caption": "Figure 2.5: Mixture Enthalpy vs Temperature at 50 bara",
+      "image_sha256": "3ac2c4644b699522dadfde445a9273eaeb9c35b4a1221bdba0c7392c9a97a837"
+    },
+    {
+      "chapter": 2,
+      "label": "2.6",
+      "path": "chapters\\ch02_thermodynamic_foundations\\figures\\fig04_viscosity_vs_pressure.png",
+      "caption": "Figure 2.6: Gas Viscosity vs Pressure at 25°C",
+      "image_sha256": "2fb8d3da99d83d54f7285f362035487631d54ea77fbeeac2aa5d85831344a711"
+    },
+    {
+      "chapter": 2,
+      "label": "2.7",
+      "path": "chapters\\ch02_thermodynamic_foundations\\figures\\fig05_jt_coefficient_vs_pressure.png",
+      "caption": "Figure 2.7: JT Coefficient vs Pressure at 25°C",
+      "image_sha256": "d3738e6b751960a40da88742fc3e7113925907a935c33de9af5b0ed122d92944"
+    },
+    {
+      "chapter": 3,
+      "label": "3.1",
+      "path": "chapters\\ch03_fluid_characterization\\figures\\fluid_characterization_workflow.png",
+      "caption": "Figure 3.1: Conceptual fluid-characterization workflow linking samples, composition, EOS parameters and validation",
+      "image_sha256": "a75301b654f024c0a940ffa686951a11cb771086c7077027c118e9644f6178c3"
+    },
+    {
+      "chapter": 3,
+      "label": "3.2",
+      "path": "chapters\\ch03_fluid_characterization\\figures\\gas_condensate_phase_envelope.png",
+      "caption": "Figure 3.2: NeqSim PR vapour-liquid saturation envelope for an illustration-only defined-compound surrogate, not the Section 3.7.5 TBP fluid. The traced maxima are 83.5 °C (cricondentherm) and 138.8 bara (cricondenbar). Markers are sampled continuation extrema; no critical point or production/export trajectory is inferred. Dew/bubble assignment was checked by fresh TP flashes at three pressures around each branch. Continuation gaps remain open; solids, hydrates and aqueous stability are outside this VLE calculation.",
+      "image_sha256": "91ae60b5e414c99500ab39c73e37535df1913f3396475a0fc1f272a5d54aebcb"
+    },
+    {
+      "chapter": 3,
+      "label": "3.3",
+      "path": "chapters\\ch03_fluid_characterization\\figures\\fig01_molecular_weight_distribution.png",
+      "caption": "Figure 3.3: Molecular Weight Distribution of Gas Condensate Components. Input characterization and component molecular weights",
+      "image_sha256": "e1ec917dc221255ba60f6de1d372f0376e144f6c92bdc5aa99db88bc6cd60fc9"
+    },
+    {
+      "chapter": 3,
+      "label": "3.4",
+      "path": "chapters\\ch03_fluid_characterization\\figures\\fig02_phase_envelope_condensate.png",
+      "caption": "Figure 3.4: Gas-condensate saturation envelope",
+      "image_sha256": "2173ba9d1cc743ddd9b4276338fe762a26f73fee8dc97efed20c90067bd6b23f"
+    },
+    {
+      "chapter": 3,
+      "label": "3.5",
+      "path": "chapters\\ch03_fluid_characterization\\figures\\fig03_liquid_dropout_curve.png",
+      "caption": "Figure 3.5: Constant-composition liquid fraction at 90 °C",
+      "image_sha256": "38be30185e5bb10da3f4d3e8955db2db9a79911438fb38b37838e75fa10bb950"
+    },
+    {
+      "chapter": 3,
+      "label": "3.6",
+      "path": "chapters\\ch03_fluid_characterization\\figures\\fig04_gor_vs_pressure.png",
+      "caption": "Figure 3.6: GOR vs Pressure at 90°C",
+      "image_sha256": "57446d4d08e543cb31513d03d31037b7fabd85860abd81c2b9e4c7185ea969e3"
+    },
+    {
+      "chapter": 3,
+      "label": "3.7",
+      "path": "chapters\\ch03_fluid_characterization\\figures\\fig05_bo_vs_pressure.png",
+      "caption": "Figure 3.7: Bo vs Pressure at 90°C",
+      "image_sha256": "263d49bd8dbe06d7b8fc4b592cf363cef40629e673f2db27e4083d30ed0e092c"
+    },
+    {
+      "chapter": 4,
+      "label": "4.1",
+      "path": "chapters\\ch04_reservoir_engineering\\figures\\horner_plot.png",
+      "caption": "Figure 4.1: Analytical Horner buildup illustration with increasing shut-in time toward the right",
+      "image_sha256": "048ae0ab4e8aed157c477ed0ca1fd34976087ff9005435d15a312ec2a963809a"
+    },
+    {
+      "chapter": 4,
+      "label": "4.2",
+      "path": "chapters\\ch04_reservoir_engineering\\figures\\ipr_curves.png",
+      "caption": "Figure 4.2: Analytical PI, Vogel and Fetkovich inflow curves with all assumed parameters stated",
+      "image_sha256": "ff618f544d489042af0a0f672d89d6a4c8c86bb6c7b42e15bc6995b85dd7eed3"
+    },
+    {
+      "chapter": 4,
+      "label": "4.3",
+      "path": "chapters\\ch04_reservoir_engineering\\figures\\pz_plot.png",
+      "caption": "Figure 4.3: Analytical straight-line p/Z material-balance illustration for a specified volumetric gas reservoir",
+      "image_sha256": "a23e72dff6f46a2506be14606545f4bc6542d7c882cfdcdf691c595de1e88aa8"
+    },
+    {
+      "chapter": 4,
+      "label": "4.4",
+      "path": "chapters\\ch04_reservoir_engineering\\figures\\nodal_analysis.png",
+      "caption": "Figure 4.4: Checked analytical nodal intersections with fixed hydrostatic head and diameter-dependent friction",
+      "image_sha256": "7d8ef9e93e5535daf4da59d6dfd3b6f48ddb5096e10424cf6a0c26d980ba0ecd"
+    },
+    {
+      "chapter": 4,
+      "label": "4.5",
+      "path": "chapters\\ch04_reservoir_engineering\\figures\\decline_curve.png",
+      "caption": "Figure 4.5: Illustrative exponential, hyperbolic and harmonic rate histories over 20 years",
+      "image_sha256": "338997c00bc41729ed07b3622a0fefad1158d28366c062a56f0e1df1f6a89fd0"
+    },
+    {
+      "chapter": 4,
+      "label": "4.6",
+      "path": "chapters\\ch04_reservoir_engineering\\figures\\ch04_fig01_ipr_curves.png",
+      "caption": "Figure 4.6: Inflow Performance Relationship (IPR) Curves. Analytical linear-PI and Vogel inflow relationships",
+      "image_sha256": "14ef430a519517df04b3a454c801d5771dee4efb33df0134ddfb6ade8ce7bcf6"
+    },
+    {
+      "chapter": 4,
+      "label": "4.7",
+      "path": "chapters\\ch04_reservoir_engineering\\figures\\ch04_fig02_gor_vs_pressure.png",
+      "caption": "Figure 4.7: Gas-Oil Ratio vs Depletion Pressure at Reservoir Temperature",
+      "image_sha256": "e3dbba48440073b16d9eebecf736edbaadb63cd5ffc4e2523a3eb08a202d31c8"
+    },
+    {
+      "chapter": 4,
+      "label": "4.8",
+      "path": "chapters\\ch04_reservoir_engineering\\figures\\ch04_fig03_density_vs_depth.png",
+      "caption": "Figure 4.8: Fluid Density and Temperature vs Depth. NeqSim properties evaluated along prescribed temperature and pressure gradients",
+      "image_sha256": "6ce8aaca1a4e3157a8870a2c545a74292b524adb2fcc860e5d399cadae820fb0"
+    },
+    {
+      "chapter": 4,
+      "label": "4.9",
+      "path": "chapters\\ch04_reservoir_engineering\\figures\\ch04_fig04_rel_perm_curves.png",
+      "caption": "Figure 4.9: Relative Permeability Curves (Corey Model). Analytical Corey relative-permeability model",
+      "image_sha256": "fd9e61d3eae5eb1a64b74a3e2aa779ab672f68b23473530c6c0f037c11c8926a"
+    },
+    {
+      "chapter": 5,
+      "label": "5.1",
+      "path": "chapters\\ch05_well_performance\\figures\\flow_patterns_vertical.png",
+      "caption": "Figure 5.1: Flow patterns in vertical upward multiphase flow",
+      "image_sha256": "457176a3c7522dfd29ee3d8bf66df3dae3724cca21db0cc78c4e005e24487192"
+    },
+    {
+      "chapter": 5,
+      "label": "5.2",
+      "path": "chapters\\ch05_well_performance\\figures\\pressure_traverse.png",
+      "caption": "Figure 5.2: Pressure traverse curves for different tubing flow rates",
+      "image_sha256": "70b1e28ffab806b885c500c2f10a229a8f6ab3af485ae3b6605dbcd21b252c18"
+    },
+    {
+      "chapter": 5,
+      "label": "5.3",
+      "path": "chapters\\ch05_well_performance\\figures\\gas_lift_performance.png",
+      "caption": "Figure 5.3: Analytical gas-lift illustration with an explicit marginal cost-equivalent assumption",
+      "image_sha256": "d4f54d6b1bd631b1463729d7411a5302ac0cf26dc45b14ad1ed712094db50ef0"
+    },
+    {
+      "chapter": 5,
+      "label": "5.4",
+      "path": "chapters\\ch05_well_performance\\figures\\log_log_diagnostic.png",
+      "caption": "Figure 5.4: Log-log diagnostic plot showing wellbore storage, radial flow, and boundary effects",
+      "image_sha256": "b7f0814bff2125f51a685f7e0c4a7f9fae5af56be08eaa0bac2cd801eb2fb09f"
+    },
+    {
+      "chapter": 5,
+      "label": "5.5",
+      "path": "chapters\\ch05_well_performance\\figures\\vfp_curves.png",
+      "caption": "Figure 5.5: Illustrative pressure-rate curves at four assumed wellhead pressures",
+      "image_sha256": "401d2f7db6b7836f795b47db79f1157c9436acf8fe643e3b15002998c43d9050"
+    },
+    {
+      "chapter": 5,
+      "label": "5.6",
+      "path": "chapters\\ch05_well_performance\\figures\\nodal_analysis.png",
+      "caption": "Figure 5.6: Illustrative nodal intersection for specified inflow and outflow curves",
+      "image_sha256": "99698e8113b6b596b1e5b0d3e68724453de2360e5dd30c299725db67b162dc6d"
+    },
+    {
+      "chapter": 5,
+      "label": "5.7",
+      "path": "chapters\\ch05_well_performance\\figures\\ch05_fig01_vlp_curves.png",
+      "caption": "Figure 5.7: Vertical Lift Performance (VLP) Curves - Different Tubing Sizes",
+      "image_sha256": "9cf477f8377c07a11f48b174e4b063587b2a40ac7dc85c6fcb0c25d674bf0b0b"
+    },
+    {
+      "chapter": 5,
+      "label": "5.8",
+      "path": "chapters\\ch05_well_performance\\figures\\ch05_fig02_operating_point.png",
+      "caption": "Figure 5.8: Coupled operating point",
+      "image_sha256": "bd40eab248848e678226bb64623052e17b75702931323c0cb5b7377a619b2e00"
+    },
+    {
+      "chapter": 5,
+      "label": "5.9",
+      "path": "chapters\\ch05_well_performance\\figures\\ch05_fig03_gas_lift_optimization.png",
+      "caption": "Figure 5.9: Illustrative gas-lift response model. Illustrative analytical gas-lift response, not a NeqSim well simulation",
+      "image_sha256": "f2b2ae0d069a4393fd5a1daea28dcf559053236dcb10b2875b27b213062be035"
+    },
+    {
+      "chapter": 5,
+      "label": "5.10",
+      "path": "chapters\\ch05_well_performance\\figures\\ch05_fig04_watercut_effect.png",
+      "caption": "Figure 5.10: Wellhead Pressure vs Flow Rate at Different Water Mole Fractions",
+      "image_sha256": "f305ed3282ca63051e4a249dae6fcb72b246edd9fb80281a554e3990661b058d"
+    },
+    {
+      "chapter": 6,
+      "label": "6.1",
+      "path": "chapters\\ch06_wells_artificial_lift\\figures\\ch15w_choke_sensitivity.png",
+      "caption": "Figure 6.1: Choke Sensitivity Study: Pressure vs Choke Opening",
+      "image_sha256": "bad3ff299f96749b0babe133e87949d66fabf561f3dba523edfbe6a04cebc50c"
+    },
+    {
+      "chapter": 6,
+      "label": "6.2",
+      "path": "chapters\\ch06_wells_artificial_lift\\figures\\ch15w_well_network_comparison.png",
+      "caption": "Figure 6.2: Wellhead vs Manifold Arrival Pressure",
+      "image_sha256": "58d709a53e8d298b72078e7964c03c592b414fc3993ffb051cc62b664d1bdb04"
+    },
+    {
+      "chapter": 7,
+      "label": "7.1",
+      "path": "chapters\\ch07_subsea_production_systems\\figures\\subsea_system_overview.png",
+      "caption": "Figure 7.1: Overview of a subsea production system showing wells, trees, manifolds, flowlines, and host facility",
+      "image_sha256": "0682ebdc4edfe382feed94392066bb87be8cf58c6eaf2622a021ef095141d726"
+    },
+    {
+      "chapter": 7,
+      "label": "7.2",
+      "path": "chapters\\ch07_subsea_production_systems\\figures\\subsea_field_layout.png",
+      "caption": "Figure 7.2: Conceptual manifold-centered subsea tieback layout",
+      "image_sha256": "4b5e6aacf9368a50135103902e4bc7014f8363b0fd34b47b97fd24489f3213eb"
+    },
+    {
+      "chapter": 7,
+      "label": "7.3",
+      "path": "chapters\\ch07_subsea_production_systems\\figures\\surf_cost_breakdown.png",
+      "caption": "Figure 7.3: Illustrative allocation of an assumed 720 MNOK SURF budget",
+      "image_sha256": "84f3b9fba524ecd1930849d9ddccab3156bd589acc2048f9f964577280ab51b6"
+    },
+    {
+      "chapter": 7,
+      "label": "7.4",
+      "path": "chapters\\ch07_subsea_production_systems\\figures\\ch06_fig01_pressure_profile.png",
+      "caption": "Figure 7.4: Pressure Profile Along Subsea Pipeline",
+      "image_sha256": "af7f8e51ab8b25618befc31061c3e1e455c526ec5d6c52bce0c5262df5eeb345"
+    },
+    {
+      "chapter": 7,
+      "label": "7.5",
+      "path": "chapters\\ch07_subsea_production_systems\\figures\\ch06_fig02_temperature_profile.png",
+      "caption": "Figure 7.5: Isothermal Hydraulic Case: Temperature Held Constant. Specified isothermal boundary; no seabed heat-transfer calculation",
+      "image_sha256": "27c577d646d0eaccc70560e42d545335bc7f053020d572235f8bd4df06859ed5"
+    },
+    {
+      "chapter": 7,
+      "label": "7.6",
+      "path": "chapters\\ch07_subsea_production_systems\\figures\\ch06_fig03_hydrate_risk.png",
+      "caption": "Figure 7.6: Hydrate Formation Risk Assessment - T-P Overlay. Calculated hydrate equilibrium overlaid with the assumed isothermal operating path",
+      "image_sha256": "faddceaf9eeb41a6cb5c5b0ef4398d0d57e00c2468aacafe143a46582163739d"
+    },
+    {
+      "chapter": 7,
+      "label": "7.7",
+      "path": "chapters\\ch07_subsea_production_systems\\figures\\ch06_fig04_flow_regime_map.png",
+      "caption": "Figure 7.7: Illustrative Horizontal Flow-Regime Map. Conceptual regime boundaries, not a validated mechanistic flow map",
+      "image_sha256": "6b7d32ac7e80b59e4b8bb11613a2e74be1b617dfba41174130dac2bad55f49ee"
+    },
+    {
+      "chapter": 7,
+      "label": "7.8",
+      "path": "chapters\\ch07_subsea_production_systems\\figures\\ch06_fig05_pressure_budget.png",
+      "caption": "Figure 7.8: Illustrative subsea pressure budget. Prescribed pressure-budget entries",
+      "image_sha256": "889aaaf161a0928f12846441f3e3143545c09d10dd8c003eb4ebdad9f0c6cf46"
+    },
+    {
+      "chapter": 8,
+      "label": "8.1",
+      "path": "chapters\\ch08_flowlines_and_risers\\figures\\pipeline_system_overview.png",
+      "caption": "Figure 8.1: Conceptual sequence of wellhead, flowline, riser, receiving and separation functions",
+      "image_sha256": "c5ba83abde51b75a78e0ef179f9ed305545f3a1f72b216c53307094c6b434f86"
+    },
+    {
+      "chapter": 8,
+      "label": "8.2",
+      "path": "chapters\\ch08_flowlines_and_risers\\figures\\pipeline_pt_profiles.png",
+      "caption": "Figure 8.2: Pressure and temperature profiles along a 20 km subsea flowline for different pipe diameters",
+      "image_sha256": "ee6db311c7b104af8c9cb18089d0b7b9bcd3186b560d50288fc85d8d6b7e694f"
+    },
+    {
+      "chapter": 8,
+      "label": "8.3",
+      "path": "chapters\\ch08_flowlines_and_risers\\figures\\flowline_riser_profile.png",
+      "caption": "Figure 8.3: Illustrative seabed and riser elevation profile relative to sea level",
+      "image_sha256": "cbec25f91d67056bdb80699bacf6976200d17a234df2816bdc42a126f452dc21"
+    },
+    {
+      "chapter": 8,
+      "label": "8.4",
+      "path": "chapters\\ch08_flowlines_and_risers\\figures\\fig01_pressure_drop_vs_diameter.png",
+      "caption": "Figure 8.4: Pressure Drop vs Pipeline Diameter (Flow = 50 t/hr, L = 10 km, horizontal)",
+      "image_sha256": "6487e653f6524fbd70a11b84b0c0638ef6857e2ef184c610d647bee51e031788"
+    },
+    {
+      "chapter": 8,
+      "label": "8.5",
+      "path": "chapters\\ch08_flowlines_and_risers\\figures\\fig02_pressure_drop_vs_flow.png",
+      "caption": "Figure 8.5: Pressure Drop vs Flow Rate (Diameter = 8 inch, L = 10 km, horizontal)",
+      "image_sha256": "d1a9e3f647218bbf01faf4dc80d1b73a420861ffb63e11c0306602257424ae59"
+    },
+    {
+      "chapter": 8,
+      "label": "8.6",
+      "path": "chapters\\ch08_flowlines_and_risers\\figures\\fig03_liquid_holdup.png",
+      "caption": "Figure 8.6: Liquid Holdup vs Gas Velocity (8-inch pipe, 5 km, horizontal)",
+      "image_sha256": "734f6899e342b190951f56d27ed606feb066d1969e581a7b793ee070b908702e"
+    },
+    {
+      "chapter": 8,
+      "label": "8.7",
+      "path": "chapters\\ch08_flowlines_and_risers\\figures\\fig04_pipeline_capacity.png",
+      "caption": "Figure 8.7: Pipeline Capacity Curve (Available ΔP = 20 bar, L = 10 km)",
+      "image_sha256": "dc567dee20e56c080f2fc1e6ddbeb895e8dd3fd9edefa7b965de68bb11ade956"
+    },
+    {
+      "chapter": 9,
+      "label": "9.1",
+      "path": "chapters\\ch09_flow_assurance\\figures\\flow_assurance_threats.png",
+      "caption": "Figure 9.1: Flow assurance threats in a subsea production system",
+      "image_sha256": "a50d53f7d1d6afc1549fc18762e09f23b63992563c03304c85524490af3d1508"
+    },
+    {
+      "chapter": 9,
+      "label": "9.2",
+      "path": "chapters\\ch09_flow_assurance\\figures\\fig01_hydrate_equilibrium.png",
+      "caption": "Figure 9.2: Hydrate Equilibrium Curve — Natural Gas with Water",
+      "image_sha256": "6db285d5a31be866a9dd6365b779d2eac8bb8af6df94acff8fa4eddb40d45936"
+    },
+    {
+      "chapter": 9,
+      "label": "9.3",
+      "path": "chapters\\ch09_flow_assurance\\figures\\fig02_meg_inhibition.png",
+      "caption": "Figure 9.3: Hydrate Temperature vs MEG (P = 100 bara)",
+      "image_sha256": "9257c99fa2b3628a5746d3d040bb39e2fc1b49fd58df1fd5ab3c64ee3e4f1bd4"
+    },
+    {
+      "chapter": 9,
+      "label": "9.4",
+      "path": "chapters\\ch09_flow_assurance\\figures\\fig03_water_dewpoint.png",
+      "caption": "Figure 9.4: Water dew point at 50 ppmv water",
+      "image_sha256": "3385efcdacf919c03fd2fd99e4d5abb440e586ac9b3d7953eb8d220fb53c26b4"
+    },
+    {
+      "chapter": 9,
+      "label": "9.5",
+      "path": "chapters\\ch09_flow_assurance\\figures\\fig04_hydrate_operating_envelope.png",
+      "caption": "Figure 9.5: Pipeline Operating Envelope with Hydrate Boundary. Calculated hydrate equilibrium with assumed normal-operation and shutdown paths",
+      "image_sha256": "83407cfdccceb20cdc4cea23002b8413eabe7e5e80039d8ddc336ef3072cf252"
+    },
+    {
+      "chapter": 10,
+      "label": "10.1",
+      "path": "chapters\\ch10_separation_technology\\figures\\separator_cutaway_2026.png",
+      "caption": "Figure 10.1: Conceptual AI-generated illustration of a horizontal separator, showing the inlet region, liquid inventory and overhead gas outlet. The cutaway explains separation paths and is not a mechanical drawing or vendor performance guarantee.",
+      "image_sha256": "1e714ad6b17ede5a1b6b18ae27a0c0f056e7ff3939ac43506e665bde68132d0a"
+    },
+    {
+      "chapter": 10,
+      "label": "10.2",
+      "path": "chapters\\ch10_separation_technology\\figures\\three_stage_separation.png",
+      "caption": "Figure 10.2: Schematic of a typical three-stage separation train showing HP, MP, and LP separators",
+      "image_sha256": "20d56772def5e84e8679073d50aa9381c7b1b5e4320049ee5ae1b14c1e268c15"
+    },
+    {
+      "chapter": 10,
+      "label": "10.3",
+      "path": "chapters\\ch10_separation_technology\\figures\\horizontal_two_phase_separator.png",
+      "caption": "Figure 10.3: Cross-section of a horizontal two-phase separator showing internal zones",
+      "image_sha256": "c89b22688496972e9b22d8de58c9c89070ed5f6615acf0e82add134cbcab57e5"
+    },
+    {
+      "chapter": 10,
+      "label": "10.4",
+      "path": "chapters\\ch10_separation_technology\\figures\\mp_pressure_lp_liquid_recovery.png",
+      "caption": "Figure 10.4: LP separator liquid recovery at 2 bara vs. intermediate separator pressure",
+      "image_sha256": "4b498b8fe221c3b0aad20b1625595fe5ebce3369b096fbb05d59e0c108b0d5ad"
+    },
+    {
+      "chapter": 10,
+      "label": "10.5",
+      "path": "chapters\\ch10_separation_technology\\figures\\fig01_phase_split.png",
+      "caption": "Figure 10.5: Three-phase split across separator pressure",
+      "image_sha256": "65c20f43b8a3fe28e0c5460252e99074b897c095349d272611a6fca68b1f43a1"
+    },
+    {
+      "chapter": 10,
+      "label": "10.6",
+      "path": "chapters\\ch10_separation_technology\\figures\\fig02_souders_brown.png",
+      "caption": "Figure 10.6: Phase Densities vs Pressure (T = 60 °C)",
+      "image_sha256": "ed8cd84546c1a98869423d2d96b2686629538422baabcbb13ae5e8ca6a9a26d9"
+    },
+    {
+      "chapter": 10,
+      "label": "10.7",
+      "path": "chapters\\ch10_separation_technology\\figures\\fig03_separator_optimization.png",
+      "caption": "Figure 10.7: 3-Stage Separation Optimization (P₁ = 70 bara, P₃ = 1.5 bara)",
+      "image_sha256": "db65f6b10fd83a00d1accf1903c9fcf4bccbcc00cebe932459157b363f7687b8"
+    },
+    {
+      "chapter": 10,
+      "label": "10.8",
+      "path": "chapters\\ch10_separation_technology\\figures\\fig04_separation_train.png",
+      "caption": "Figure 10.8: Flow Split at Each Separation Stage (P₁=70, P₂=8, P₃=1.5 bara)",
+      "image_sha256": "eb0d60a95e2fbada085d11825b9c051a29c1e60aea279410811d1d1ca0bef7f6"
+    },
+    {
+      "chapter": 10,
+      "label": "10.9",
+      "path": "chapters\\ch10_separation_technology\\figures\\separator_utilization_profile.png",
+      "caption": "Figure 10.9: Separator utilization and K-factor vs. production rate",
+      "image_sha256": "799d49f9901218cb51cbe23fa3cb173143a25e682494fad13fd52b11891590f7"
+    },
+    {
+      "chapter": 10,
+      "label": "10.10",
+      "path": "chapters\\ch10_separation_technology\\figures\\separator_pressure_optimization.png",
+      "caption": "Figure 10.10: Oil recovery and separator utilization vs. MP separator pressure",
+      "image_sha256": "c67a9cb00c5cad667edb409df63491f311480df88c5776ba1e90ded6c782b069"
+    },
+    {
+      "chapter": 11,
+      "label": "11.1",
+      "path": "chapters\\ch11_oil_processing\\figures\\oil_processing_train_overview.png",
+      "caption": "Figure 11.1: Schematic of a typical offshore oil processing train showing multi-stage separation, dewatering, and stabilization",
+      "image_sha256": "e96fc9d9ed160b85dfc43e93c31375e8ea49e4082375e66f5fe2b4afde9d8d61"
+    },
+    {
+      "chapter": 11,
+      "label": "11.2",
+      "path": "chapters\\ch11_oil_processing\\figures\\mp_pressure_optimization.png",
+      "caption": "Figure 11.2: Optimization curve showing stock-tank oil rate vs. MP separator pressure",
+      "image_sha256": "7a54b405fcaacc89b94e3a14c9d4d4bb0b345c2c7612072593bb51003367834c"
+    },
+    {
+      "chapter": 11,
+      "label": "11.3",
+      "path": "chapters\\ch11_oil_processing\\figures\\fig10_1_rvp_vs_temperature.png",
+      "caption": "Figure 11.3: True vapor pressure vs stabilizer temperature",
+      "image_sha256": "be5b5f1c6e851619a18ebc7d3020cd6840a00802594448ffc3fba1f70a2c2ba8"
+    },
+    {
+      "chapter": 11,
+      "label": "11.4",
+      "path": "chapters\\ch11_oil_processing\\figures\\fig10_2_api_vs_pressure.png",
+      "caption": "Figure 11.4: Oil API Gravity and Density vs Separator Pressure",
+      "image_sha256": "cd689e7e4581e4ba35be0090fa78caae1e62fc94a9ffd78fedeeab0b52284b06"
+    },
+    {
+      "chapter": 11,
+      "label": "11.5",
+      "path": "chapters\\ch11_oil_processing\\figures\\fig10_3_multistage_oil_quality.png",
+      "caption": "Figure 11.5: Oil Quality vs Number of Separation Stages",
+      "image_sha256": "917f15b453aaf9c3739afc89388a8ebe2df77756985f1b3f0ae8ce73c968493b"
+    },
+    {
+      "chapter": 11,
+      "label": "11.6",
+      "path": "chapters\\ch11_oil_processing\\figures\\fig10_4_gas_shrinkage.png",
+      "caption": "Figure 11.6: Gas Shrinkage — Gas Released at Each Pressure",
+      "image_sha256": "ea53ee2da41223354709340cfc7ca766a3c5874913e5c8dee20665d7145afedd"
+    },
+    {
+      "chapter": 12,
+      "label": "12.1",
+      "path": "chapters\\ch12_gas_processing\\figures\\gas_processing_overview.png",
+      "caption": "Figure 12.1: Conceptual treatment sequence placing required contaminant removal before cryogenic processing",
+      "image_sha256": "0abef1e514081c4d80dfc65d98b71ea093c75b03f8206d99be0a912e610f7a34"
+    },
+    {
+      "chapter": 12,
+      "label": "12.2",
+      "path": "chapters\\ch12_gas_processing\\figures\\phase_envelope_gas.png",
+      "caption": "Figure 12.2: NeqSim SRK vapour-liquid saturation envelope for the explicitly specified fluid in Section 12.8. The traced maxima are 93.8 °C (cricondentherm) and 168.7 bara (cricondenbar). Markers are sampled continuation extrema; no critical point or production/export trajectory is inferred. Dew/bubble assignment was checked by fresh TP flashes at three pressures around each branch. Continuation gaps remain open; solids, hydrates and aqueous stability are outside this VLE calculation.",
+      "image_sha256": "fd78be9af8141068f55252d2fb9c9bd08cc91513fd90f745498cc0c6fb750399"
+    },
+    {
+      "chapter": 12,
+      "label": "12.3",
+      "path": "chapters\\ch12_gas_processing\\figures\\fig11_1_water_content.png",
+      "caption": "Figure 12.3: Water Content of Natural Gas vs Temperature",
+      "image_sha256": "c349bb4a4e9aff27802a34f6f890b9219c1ac0f6cbb70df37f51c4159bd774ba"
+    },
+    {
+      "chapter": 12,
+      "label": "12.4",
+      "path": "chapters\\ch12_gas_processing\\figures\\fig11_2_jt_cooling.png",
+      "caption": "Figure 12.4: JT Cooling (Inlet 30.0°C, Outlet 30.0 bara)",
+      "image_sha256": "515900d8434f878adcd72790448ab1c15fb8b01fbb9e318982aa337bd9a9d13b"
+    },
+    {
+      "chapter": 12,
+      "label": "12.5",
+      "path": "chapters\\ch12_gas_processing\\figures\\fig11_3_turbo_expander_profile.png",
+      "caption": "Figure 12.5: Turbo-Expander Process — Temperature and Pressure Profile",
+      "image_sha256": "0be9b755b588820287269b468f4ff8ea717e7027b0fe9687c1412a5ad889e866"
+    },
+    {
+      "chapter": 12,
+      "label": "12.6",
+      "path": "chapters\\ch12_gas_processing\\figures\\fig11_4_dewpoint_control.png",
+      "caption": "Figure 12.6: Dew Point Control — C3+ and C2+ Content vs Temperature",
+      "image_sha256": "a345fce9586141a22c64c68d468d2fe489c28f4f69b4f25cb8034b5892fa44e3"
+    },
+    {
+      "chapter": 13,
+      "label": "13.1",
+      "path": "chapters\\ch13_produced_water_treatment\\figures\\water_lifecycle_profile.png",
+      "caption": "Figure 13.1: Specified oil/water production scenario with water cut calculated from the same liquid volumes",
+      "image_sha256": "368dd53475843e0f7ad21da97feed984d0558fccb4adb1a46d6c383625c57752"
+    },
+    {
+      "chapter": 13,
+      "label": "13.2",
+      "path": "chapters\\ch13_produced_water_treatment\\figures\\ch16_watercut_sensitivity.png",
+      "caption": "Figure 13.2: Oil vs Water Production Rate",
+      "image_sha256": "249d316b67e2434dfb28883c8cde419cf2d5fcbfe267ce5e64449693e3cab2ca"
+    },
+    {
+      "chapter": 13,
+      "label": "13.3",
+      "path": "chapters\\ch13_produced_water_treatment\\figures\\ch16_pressure_effect.png",
+      "caption": "Figure 13.3: Separator Pressure Effect on Phase Split (40 mol% water)",
+      "image_sha256": "74c5fe2128beee40ae37c263c0ea042920c461a0c27c7e3e7d0aab7d1946afff"
+    },
+    {
+      "chapter": 14,
+      "label": "14.1",
+      "path": "chapters\\ch14_gas_compression\\figures\\compression_train_2026.png",
+      "caption": "Figure 14.1: Conceptual AI-generated illustration of a compression train with gas compression, cooling and driver equipment. It introduces process and shaft-load connections; geometry and displayed equipment do not represent an OEM map or mechanical design.",
+      "image_sha256": "aca583a76d2e016c3dbc7ce70c19451e0d766e734b1e8d7aaba919507d7deb9b"
+    },
+    {
+      "chapter": 14,
+      "label": "14.2",
+      "path": "chapters\\ch14_gas_compression\\figures\\compression_pr_sensitivity.png",
+      "caption": "Figure 14.2: Compressor power and discharge temperature vs. pressure ratio",
+      "image_sha256": "ea2aa688a13f09b4e624025ef1cb1f5e008b871bab4e0da0545afe672163c95c"
+    },
+    {
+      "chapter": 14,
+      "label": "14.3",
+      "path": "chapters\\ch14_gas_compression\\figures\\fig12_1_power_vs_ratio.png",
+      "caption": "Figure 14.3: Compressor Power vs Compression Ratio (Single Stage)",
+      "image_sha256": "397daf87151ccc294e7b233e527c63721fcb63ef4d6d33c44fd600fba45df836"
+    },
+    {
+      "chapter": 14,
+      "label": "14.4",
+      "path": "chapters\\ch14_gas_compression\\figures\\fig12_2_compressor_curve.png",
+      "caption": "Figure 14.4: Illustrative centrifugal compressor map. Assumed teaching curves, not a vendor compressor map",
+      "image_sha256": "8b8b146af9a53396702c47db32fb4a1988bb7a0f10d786deeb274e32caf6298f"
+    },
+    {
+      "chapter": 14,
+      "label": "14.5",
+      "path": "chapters\\ch14_gas_compression\\figures\\fig12_3_multistage_profile.png",
+      "caption": "Figure 14.5: 3-Stage Compression with Intercooling (5 → 150 bara)",
+      "image_sha256": "9b05d69592561415b0e7061101cf2cc14bc6724213cfd280cb1f9c23f873e8b5"
+    },
+    {
+      "chapter": 14,
+      "label": "14.6",
+      "path": "chapters\\ch14_gas_compression\\figures\\fig12_4_power_comparison.png",
+      "caption": "Figure 14.6: Single vs Multi-Stage Compression (5 → 150 bara)",
+      "image_sha256": "2e691d63bd3edbef87aedc1bbbcda5ddf8c625564b3d738490dc9fc5ba80df30"
+    },
+    {
+      "chapter": 14,
+      "label": "14.7",
+      "path": "chapters\\ch14_gas_compression\\figures\\fig12_5_discharge_temperature.png",
+      "caption": "Figure 14.7: Discharge Temperature vs Compression Ratio",
+      "image_sha256": "f59a32d087621b6508056aaa3cb173c6253b6238dc494d580dbc3f902d7d0e4c"
+    },
+    {
+      "chapter": 14,
+      "label": "14.8",
+      "path": "chapters\\ch14_gas_compression\\figures\\compressor_performance_map.png",
+      "caption": "Figure 14.8: Compressor performance map showing operating point and speed lines",
+      "image_sha256": "cc1038bf507d52f0e3813ba658d2fca957a53e0e61da854b8efb0b9a1f1b98f1"
+    },
+    {
+      "chapter": 14,
+      "label": "14.9",
+      "path": "chapters\\ch14_gas_compression\\figures\\compressor_speed_sensitivity.png",
+      "caption": "Figure 14.9: Compressor power and efficiency vs. flow rate",
+      "image_sha256": "2f294caaa4b1dfa66149e68fd2f4dfdca66c4ca78f80ccfe313f41a346b4b113"
+    },
+    {
+      "chapter": 15,
+      "label": "15.1",
+      "path": "chapters\\ch15_compressor_characteristics\\figures\\compressor_map_overview.png",
+      "caption": "Figure 15.1: Specified speed-curve family illustrating centrifugal-compressor map terminology",
+      "image_sha256": "2ffd5b0d637d8169054c320168909fb9d6a8146bce76ef6cda74483f1efce574"
+    },
+    {
+      "chapter": 15,
+      "label": "15.2",
+      "path": "chapters\\ch15_compressor_characteristics\\figures\\operating_envelope.png",
+      "caption": "Figure 15.2: Illustrative pressure-flow bounds and two assumed operating points",
+      "image_sha256": "60ea09b87d8c9097abb3602dd1c39812552ea2d6e7873b7c9eb24c2b6d5912a2"
+    },
+    {
+      "chapter": 15,
+      "label": "15.3",
+      "path": "chapters\\ch15_compressor_characteristics\\figures\\compressor_map_complete.png",
+      "caption": "Figure 15.3: Complete compressor performance map with head and efficiency curves at multiple speeds",
+      "image_sha256": "2a79e2db97f10a8e62ba925a450b3887a657a4c53dd3858ae0d116aa96929c63"
+    },
+    {
+      "chapter": 15,
+      "label": "15.4",
+      "path": "chapters\\ch15_compressor_characteristics\\figures\\ch13_head_vs_flow.png",
+      "caption": "Figure 15.4: Compressor Head vs. Flow — Multi-Speed Map. Assumed multi-speed teaching map",
+      "image_sha256": "5c7ff3a3daf98f6a113c5308874b1986a0ab688a2e3aaa45c18e5a52bfd4e3ce"
+    },
+    {
+      "chapter": 15,
+      "label": "15.5",
+      "path": "chapters\\ch15_compressor_characteristics\\figures\\ch13_efficiency_vs_flow.png",
+      "caption": "Figure 15.5: Compressor Efficiency vs. Flow. Assumed multi-speed teaching map",
+      "image_sha256": "66b629d145cae7e0deffa10e2dfd74626fe980ce2edeedd3803b37562744289f"
+    },
+    {
+      "chapter": 15,
+      "label": "15.6",
+      "path": "chapters\\ch15_compressor_characteristics\\figures\\ch13_operating_envelope.png",
+      "caption": "Figure 15.6: Compressor Operating Envelope. Assumed teaching surge and control boundaries",
+      "image_sha256": "a2bf2aae4f90b8bc7f32874cfcbdcdca7fed3f2780ad3890e794fa3648d7ee4a"
+    },
+    {
+      "chapter": 16,
+      "label": "16.1",
+      "path": "chapters\\ch16_heat_exchangers\\figures\\shell_tube_hx_cross_section.png",
+      "caption": "Figure 16.1: Schematic circular shell cross-section with an illustrative tube arrangement",
+      "image_sha256": "c78fa4254af33ad5dfd03f53f2626cdeca6f89e35078feaf30bde29a44635595"
+    },
+    {
+      "chapter": 16,
+      "label": "16.2",
+      "path": "chapters\\ch16_heat_exchangers\\figures\\composite_curves.png",
+      "caption": "Figure 16.2: Specified noncrossing hot and cold composite curves with a 25 K minimum vertical temperature gap",
+      "image_sha256": "9f30d2c98bc5c2912324cb62c937ffcdeb7929835a4614128f6ff618ff2cb88b"
+    },
+    {
+      "chapter": 16,
+      "label": "16.3",
+      "path": "chapters\\ch16_heat_exchangers\\figures\\ch14_temperature_profile.png",
+      "caption": "Figure 16.3: Counterflow temperatures on a heat-transfer coordinate. Linear interpolation between NeqSim endpoint temperatures on a heat-transfer coordinate",
+      "image_sha256": "ed9779316496a369cea2c570285ee0ce3467c003204b42db20757be47702b165"
+    },
+    {
+      "chapter": 16,
+      "label": "16.4",
+      "path": "chapters\\ch16_heat_exchangers\\figures\\ch14_duty_vs_flow.png",
+      "caption": "Figure 16.4: Heat Exchanger Sensitivity — Duty & Temperatures vs. Flow",
+      "image_sha256": "2f2c56cf1ff278f48297796f43b2a273ded003a825f9975d14a0a5a9192c1538"
+    },
+    {
+      "chapter": 16,
+      "label": "16.5",
+      "path": "chapters\\ch16_heat_exchangers\\figures\\ch14_ua_sizing.png",
+      "caption": "Figure 16.5: Duty vs. UA",
+      "image_sha256": "dcf6e5ac2c0ab0eed7c3d6955f4446dcbe06fd00c2f25e5a03b0f3ed44203cbd"
+    },
+    {
+      "chapter": 17,
+      "label": "17.1",
+      "path": "chapters\\ch17_valves_and_flow_control\\figures\\valve_characteristics_curves.png",
+      "caption": "Figure 17.1: Control valve inherent characteristics: linear, equal percentage, and quick opening",
+      "image_sha256": "51a2c3042e889bd0e4378f090964c4847d86afe306aab8f038273fcadce45554"
+    },
+    {
+      "chapter": 17,
+      "label": "17.2",
+      "path": "chapters\\ch17_valves_and_flow_control\\figures\\ch15_cv_and_jt_vs_flow.png",
+      "caption": "Figure 17.2: Required Valve Cv vs. Flow Rate",
+      "image_sha256": "8920a8aec0373bcf7a3e1248c9a6f68c0783c07ad479f3235d491a93801b0bfe"
+    },
+    {
+      "chapter": 17,
+      "label": "17.3",
+      "path": "chapters\\ch17_valves_and_flow_control\\figures\\ch15_jt_cooling_vs_dp.png",
+      "caption": "Figure 17.3: Joule–Thomson Cooling vs. Pressure Drop (Natural Gas at 150 bara)",
+      "image_sha256": "fb0bfc36f2281ae1d3f41b560c177294b3b312aa738feedd2ac985ed0ebf19b8"
+    },
+    {
+      "chapter": 17,
+      "label": "17.4",
+      "path": "chapters\\ch17_valves_and_flow_control\\figures\\ch15_pt_path.png",
+      "caption": "Figure 17.4: P-T Path Through Throttling Valve (Isenthalpic)",
+      "image_sha256": "c077813e4bfed4311d61c3467b16bfb388f5b33089cf8d792435d13ab9a3f6e3"
+    },
+    {
+      "chapter": 17,
+      "label": "17.5",
+      "path": "chapters\\ch17_valves_and_flow_control\\figures\\ch15_valve_opening.png",
+      "caption": "Figure 17.5: Effective Cv vs. Valve Opening",
+      "image_sha256": "6b2890ceed5d6235fd0b37de126fb80ce5cc0828dcff525f2b7d1b5c86d11739"
+    },
+    {
+      "chapter": 18,
+      "label": "18.1",
+      "path": "chapters\\ch18_power_production\\figures\\brayton_cycle_ts.png",
+      "caption": "Figure 18.1: Checked ideal Brayton cycle with isentropic compression/expansion and constant-pressure heat transfer",
+      "image_sha256": "59f89427c54bc05c48e8a6519f176c17bba39f81a1dade9482332d4bbb138e4c"
+    },
+    {
+      "chapter": 18,
+      "label": "18.2",
+      "path": "chapters\\ch18_power_production\\figures\\gt_ambient_performance.png",
+      "caption": "Figure 18.2: Gas turbine power output and efficiency as a function of ambient temperature",
+      "image_sha256": "ce34a16d08d26a60a5b17cb41a04c6311b1485eadf3c0895345861a0af643285"
+    },
+    {
+      "chapter": 18,
+      "label": "18.3",
+      "path": "chapters\\ch18_power_production\\figures\\power_demand_profile.png",
+      "caption": "Figure 18.3: Specified power-demand scenario with an assumed 50 MW supply limit",
+      "image_sha256": "8725ad3039db04a069b04b2d845d5932c56a0de7ae327f21ee0ed79206dc0a4c"
+    },
+    {
+      "chapter": 18,
+      "label": "18.4",
+      "path": "chapters\\ch18_power_production\\figures\\ch30_fuel_consumption.png",
+      "caption": "Figure 18.4: Fuel Gas Consumption. Screening energy balance with assumed driver efficiency and fuel LHV",
+      "image_sha256": "ee7688b52d8794ede521c177484d44dc75aafa77169126d8ab686d21412dfa2b"
+    },
+    {
+      "chapter": 18,
+      "label": "18.5",
+      "path": "chapters\\ch18_power_production\\figures\\ch30_power_demand_pie.png",
+      "caption": "Figure 18.5: Illustrative allocation of platform power demand. Assumed equipment load allocation",
+      "image_sha256": "453672f4da27b451628b544880a3e5bf07d22ea67de54d54433e2cd1a89826a4"
+    },
+    {
+      "chapter": 18,
+      "label": "18.6",
+      "path": "chapters\\ch18_power_production\\figures\\ch30_gt_ambient_temp.png",
+      "caption": "Figure 18.6: GT Available Power vs Ambient Temperature. Illustrative ambient-temperature derating correlation",
+      "image_sha256": "6683446ef54690a9e3c2ac77c38a12728140b434a5eb13b6d8a94f2a8bb02702"
+    },
+    {
+      "chapter": 18,
+      "label": "18.7",
+      "path": "chapters\\ch18_power_production\\figures\\ch30_co2_emissions.png",
+      "caption": "Figure 18.7: CO₂ Emissions vs Operating Load. Screening fuel and emissions factors, not a site inventory",
+      "image_sha256": "9fc30b8a3a94323c27c77b8cebd7d701b0a3aefc4fdfe5bfff5cb46479180703"
+    },
+    {
+      "chapter": 19,
+      "label": "19.1",
+      "path": "chapters\\ch19_export_and_metering\\figures\\gcv_wobbe_vs_ngl.png",
+      "caption": "Figure 19.1: Effect of NGL content on gas heating value and Wobbe index",
+      "image_sha256": "4087e0d588a659cebb4e54fb762cb385734e7b3c638ceb06682f1b01b1c5cbaf"
+    },
+    {
+      "chapter": 19,
+      "label": "19.2",
+      "path": "chapters\\ch19_export_and_metering\\figures\\phase_envelope_export_gas.png",
+      "caption": "Figure 19.2: NeqSim SRK vapour-liquid saturation envelope for the explicitly specified fluid in Section 19.6.2. The traced maxima are 27.3 °C (cricondentherm) and 111.0 bara (cricondenbar). Markers are sampled continuation extrema; no critical point or production/export trajectory is inferred. Dew/bubble assignment was checked by fresh TP flashes at three pressures around each branch. Continuation gaps remain open; solids, hydrates and aqueous stability are outside this VLE calculation.",
+      "image_sha256": "f0e7016aa046c2b4b287be80909f5507cad461ed93ba7bfec02699e296aa9dbd"
+    },
+    {
+      "chapter": 19,
+      "label": "19.3",
+      "path": "chapters\\ch19_export_and_metering\\figures\\pipeline_sizing_dp_vs_diameter.png",
+      "caption": "Figure 19.3: Pipeline sizing study: pressure drop vs. diameter for 15 MSm³/d over 300 km",
+      "image_sha256": "fd6a03c2f9875607592280e75ecea5dfdd108401d0f9880d20c5820d2e20796c"
+    },
+    {
+      "chapter": 19,
+      "label": "19.4",
+      "path": "chapters\\ch19_export_and_metering\\figures\\ch17_pipeline_profiles.png",
+      "caption": "Figure 19.4: Gas Export Pipeline: Pressure Profile",
+      "image_sha256": "59fef02468ff121c8b3568048639baaf99877a1eccea56da6a866234f0786a9c"
+    },
+    {
+      "chapter": 19,
+      "label": "19.5",
+      "path": "chapters\\ch19_export_and_metering\\figures\\ch17_diameter_sensitivity.png",
+      "caption": "Figure 19.5: Pressure Drop vs Pipeline Diameter (150 km, 5 MSm3/day)",
+      "image_sha256": "19814e3c41f0b2f5df47cfc02dae599a9ed5f6626a3b19345799714a6671fb28"
+    },
+    {
+      "chapter": 20,
+      "label": "20.1",
+      "path": "chapters\\ch20_capacity_checks_and_utilization\\figures\\separator_capacity_diagram.png",
+      "caption": "Figure 20.1: Conceptual gas/liquid capacity trade-off and assumed operating points",
+      "image_sha256": "e0ec73f0edbc30af86d224611dd7ee4d1fdac5d279096c5238b78b2e5a33251d"
+    },
+    {
+      "chapter": 20,
+      "label": "20.2",
+      "path": "chapters\\ch20_capacity_checks_and_utilization\\figures\\compressor_capacity_map.png",
+      "caption": "Figure 20.2: Analytical compressor-map illustration with explicit surge and high-flow endpoints",
+      "image_sha256": "0702beed5f3322addd94d80ac45e8d5ece67f178bde057668565006d3d27da21"
+    },
+    {
+      "chapter": 20,
+      "label": "20.3",
+      "path": "chapters\\ch20_capacity_checks_and_utilization\\figures\\capacity_staircase.png",
+      "caption": "Figure 20.3: Assumed individual equipment capacities on one common production basis",
+      "image_sha256": "4a622719a698653e749f522ab4cad70058f5c0864a7eab80c6a0b09029239908"
+    },
+    {
+      "chapter": 20,
+      "label": "20.4",
+      "path": "chapters\\ch20_capacity_checks_and_utilization\\figures\\utilization_vs_production.png",
+      "caption": "Figure 20.4: Unclipped utilization for three explicitly assumed independent equipment ratings",
+      "image_sha256": "9c5682e1e7a4971f4ae75e2ddf11b92ee666d866845b1c24f7f3cb6c65bf2b47"
+    },
+    {
+      "chapter": 20,
+      "label": "20.5",
+      "path": "chapters\\ch20_capacity_checks_and_utilization\\figures\\utilization_trend_field_life.png",
+      "caption": "Figure 20.5: Specified utilization scenario over a hypothetical field lifecycle",
+      "image_sha256": "e1b8d89b240a1a0796883f875ba546c20ad704f1b9d33f1b053ec6ac8e5aa7ce"
+    },
+    {
+      "chapter": 20,
+      "label": "20.6",
+      "path": "chapters\\ch20_capacity_checks_and_utilization\\figures\\ch18_utilization_bar_chart.png",
+      "caption": "Figure 20.6: Equipment Capacity Utilization at Nominal Feed Rate",
+      "image_sha256": "db4c30b1c496050e9122235df60b6adb7989cff33b7a3458f8a981a3bffa5f6f"
+    },
+    {
+      "chapter": 20,
+      "label": "20.7",
+      "path": "chapters\\ch20_capacity_checks_and_utilization\\figures\\ch18_utilization_vs_feed_rate.png",
+      "caption": "Figure 20.7: Equipment Utilization vs Feed Rate",
+      "image_sha256": "701fd7b046386fd5ce9e05356f0872d02dbcf6664fe83e792e56ffc85d835556"
+    },
+    {
+      "chapter": 21,
+      "label": "21.1",
+      "path": "chapters\\ch21_debottlenecking\\figures\\ch21_verified_waterfall_debottleneck.png",
+      "caption": "Figure 21.1: Conditional rate changes from three declared constraint relaxations",
+      "image_sha256": "fb0b68f2e31a5a2950461c1b257f37631f537563c1d971aac0f5f732635a7062"
+    },
+    {
+      "chapter": 21,
+      "label": "21.2",
+      "path": "chapters\\ch21_debottlenecking\\figures\\ch21_verified_utilization_dashboard.png",
+      "caption": "Figure 21.2: Capacity percentages after solving the generated screening compressor map",
+      "image_sha256": "f3d0dc40f48eabce02000db1f37ea2ccf8f5dd81278eef0efee6d1b9ba026e9b"
+    },
+    {
+      "chapter": 21,
+      "label": "21.3",
+      "path": "chapters\\ch21_debottlenecking\\figures\\ch21_verified_bottleneck_sensitivity.png",
+      "caption": "Figure 21.3: Rate sweep with numerical overloads and rejected compressor-map states shown separately",
+      "image_sha256": "6674011a22ff5079a25684346f0c7ba8257c4486c8945bb034a225c018ae28bc"
+    },
+    {
+      "chapter": 21,
+      "label": "21.4",
+      "path": "chapters\\ch21_debottlenecking\\figures\\ch21_debottleneck_cascade.png",
+      "caption": "Figure 21.4: Initial Bottleneck: Compressor Stage 2. Illustrative arithmetic capacity cascade",
+      "image_sha256": "630a13d16434deb2dab6c61beaf09f809684a5a4dbce40e243bf6a0447bc2c85"
+    },
+    {
+      "chapter": 22,
+      "label": "22.1",
+      "path": "chapters\\ch22_production_optimization_theory\\figures\\ch22_verified_nodal_solution.png",
+      "caption": "Figure 22.1: Checked operating point from the specified IPR and a forward 3000 m upward NeqSim tubing calculation",
+      "image_sha256": "8130558ad5bbf8a6f64cfd67b69e10b743ae2b3c29daede0cea743391242006c"
+    },
+    {
+      "chapter": 22,
+      "label": "22.2",
+      "path": "chapters\\ch22_production_optimization_theory\\figures\\separator_pressure_contour.png",
+      "caption": "Figure 22.2: Explicit algebraic objective surface for illustrating a constrained pressure-search problem",
+      "image_sha256": "b3ba84e68add2d01395285a5836e7c7ab15b83e2792a6776473bd9553cb27435"
+    },
+    {
+      "chapter": 22,
+      "label": "22.3",
+      "path": "chapters\\ch22_production_optimization_theory\\figures\\gas_lift_performance_curves.png",
+      "caption": "Figure 22.3: Conceptual gas-lift performance curves; the checked native allocation uses the explicitly stated empirical coefficients",
+      "image_sha256": "6fc96d7b324e023cf96ca52e513076b01ab4c98fc2aa94cb55fd10a89a9e7dcd"
+    },
+    {
+      "chapter": 22,
+      "label": "22.4",
+      "path": "chapters\\ch22_production_optimization_theory\\figures\\ch22_verified_interstage_power.png",
+      "caption": "Figure 22.4: Verified two-stage power sweep at 25 bara suction and 150 bara discharge, using the specified polytropic efficiencies",
+      "image_sha256": "abb5bc53ec13a93e586fa2a495cc625b5b4eb35dcd14e09f44cfc77f659a5667"
+    },
+    {
+      "chapter": 22,
+      "label": "22.5",
+      "path": "chapters\\ch22_production_optimization_theory\\figures\\ch22_verified_pareto_samples.png",
+      "caption": "Figure 22.5: Actual separator/compressor sweep with exhaustive nondominance checking; the sampled set has one nondominated point",
+      "image_sha256": "c875352d13fdf6abeeb6efce2dae3e8f331555dfb7184b7b2cc785ad923204d1"
+    },
+    {
+      "chapter": 22,
+      "label": "22.6",
+      "path": "chapters\\ch22_production_optimization_theory\\figures\\ch19_objective_function_landscape.png",
+      "caption": "Figure 22.6: Objective Function: Production Rate vs Feed Rate",
+      "image_sha256": "d9762e11af2136241b4aad50daa0e11eb595a72eb90409cb0fb19ce522cca2ea"
+    },
+    {
+      "chapter": 22,
+      "label": "22.7",
+      "path": "chapters\\ch22_production_optimization_theory\\figures\\ch19_sensitivity_tornado.png",
+      "caption": "Figure 22.7: Sensitivity Tornado: Equipment Capacity Impact on Max Production",
+      "image_sha256": "dc7f50c45b0db2bbf2c665161f6688be6217f2a396b7f4f12de065d1c4e887ed"
+    },
+    {
+      "chapter": 23,
+      "label": "23.1",
+      "path": "chapters\\ch23_neqsim_optimization_framework\\figures\\fig25_1_architecture.png",
+      "caption": "Figure 23.1: Conceptual layering of interfaces, optimization, process simulation and thermodynamic models",
+      "image_sha256": "03e2872a4bc7201a519f164e59ef066f409a4fc53136c5db76d3c288a05527bf"
+    },
+    {
+      "chapter": 23,
+      "label": "23.2",
+      "path": "chapters\\ch23_neqsim_optimization_framework\\figures\\fig25_2_component_diagram.png",
+      "caption": "Figure 23.2: Conceptual interaction among process, fluid, equipment, objective, automation and result roles",
+      "image_sha256": "990bdf58821889b48293c7a957e9533b637681fee2115df974c424a72c899c27"
+    },
+    {
+      "chapter": 23,
+      "label": "23.3",
+      "path": "chapters\\ch23_neqsim_optimization_framework\\figures\\optimization_evidence_loop_2026.svg",
+      "caption": "Figure 23.3: Conceptual sequence linking decisions, full-model solution, evidence checks and final-point replay",
+      "image_sha256": "4b06806f06148d595354aa5161d654e1ff5ce2817d66db602afba5dd524700f3"
+    },
+    {
+      "chapter": 23,
+      "label": "23.4",
+      "path": "chapters\\ch23_neqsim_optimization_framework\\figures\\ch25_utilization_vs_rate.png",
+      "caption": "Figure 23.4: Equipment Utilization vs Feed Rate",
+      "image_sha256": "5a1eaad1489509fe292458c0d0f9a7d20449d2571238fb749e1dc6e9712f2939"
+    },
+    {
+      "chapter": 23,
+      "label": "23.5",
+      "path": "chapters\\ch23_neqsim_optimization_framework\\figures\\ch25_feasibility_curve.png",
+      "caption": "Figure 23.5: Production Feasibility Curve",
+      "image_sha256": "3925760d277f7652e2fc8bbb1bd1f5d313e90670482676ebedd7de9da4832a38"
+    },
+    {
+      "chapter": 24,
+      "label": "24.1",
+      "path": "chapters\\ch24_production_optimization\\figures\\ch24_pressure_grid_acceptance.png",
+      "caption": "Figure 24.1: Acceptance and compressor power for all32 attempted pressure states",
+      "image_sha256": "1b8d658d317a18ba224c7515409b9e462b61cfe9f15d553dfb0f0413359c5bda"
+    },
+    {
+      "chapter": 24,
+      "label": "24.2",
+      "path": "chapters\\ch24_production_optimization\\figures\\ch18_optimization_convergence.png",
+      "caption": "Figure 24.2: Binary Search Convergence for Maximum Throughput",
+      "image_sha256": "e876baed70aae1a97fd19f39fb17baad4862814c22d9f25cccdf5f5ef37deca3"
+    },
+    {
+      "chapter": 24,
+      "label": "24.3",
+      "path": "chapters\\ch24_production_optimization\\figures\\ch18_algorithm_comparison.png",
+      "caption": "Figure 24.3: Optimal Throughput by Algorithm",
+      "image_sha256": "895712467ab6a4fc1905d3f05add75e8442693727ad7ef9ece348c6cfe7cee3a"
+    },
+    {
+      "chapter": 25,
+      "label": "25.1",
+      "path": "chapters\\ch25_utilization_monitoring\\figures\\fig26_1_utilization_profiles.png",
+      "caption": "Figure 25.1: Assumed separator, compressor and dehydration utilization profiles",
+      "image_sha256": "5a2c5c1abf53136721e7104f46efbd5fc6083ecb04c249a78af92096a9a4f337"
+    },
+    {
+      "chapter": 25,
+      "label": "25.2",
+      "path": "chapters\\ch25_utilization_monitoring\\figures\\fig26_2_monitoring_architecture.png",
+      "caption": "Figure 25.2: The four-layer utilization monitoring architecture: sensor data acquisition, process model execution, constraint evaluation, and dashboard presentation.",
+      "image_sha256": "2b038c4822fbb65c21b4107689c216f9b33b8e6fdda47697e695ed4f4d8669e9"
+    },
+    {
+      "chapter": 25,
+      "label": "25.3",
+      "path": "chapters\\ch25_utilization_monitoring\\figures\\fig26_3_utilization_heatmap.png",
+      "caption": "Figure 25.3: Synthetic monthly equipment-utilization matrix for illustrating a monitoring display",
+      "image_sha256": "f4e21e9693d5a8d5d5faff3cf0be79102cf96ed902d3a5c45ee26071f830e911"
+    },
+    {
+      "chapter": 25,
+      "label": "25.4",
+      "path": "chapters\\ch25_utilization_monitoring\\figures\\ch26_utilization_heatmap.png",
+      "caption": "Figure 25.4: Compressor power utilization across operating rates. NeqSim stage powers divided by assumed ratings",
+      "image_sha256": "8ab3e2665610b860b676066093a8bb1d91b91296c61135ba965bf8be4b0681ac"
+    },
+    {
+      "chapter": 25,
+      "label": "25.5",
+      "path": "chapters\\ch25_utilization_monitoring\\figures\\ch26_bottleneck_transition.png",
+      "caption": "Figure 25.5: Bottleneck Transition Analysis. Fixed-composition NeqSim compression sensitivity",
+      "image_sha256": "9b62a75adbdafbea03e4f5767aba47175e6c8da711471d363587d90ed7bd6c0d"
+    },
+    {
+      "chapter": 26,
+      "label": "26.1",
+      "path": "chapters\\ch26_well_network_optimization\\figures\\fig27_1_ipr_curves.png",
+      "caption": "Figure 26.1: Illustrative inflow curves for three separately parameterized wells",
+      "image_sha256": "ed0f6de8ed6cd33aa1b696de90a8adb02576f823b26b6ba6aefe4c071a2d546e"
+    },
+    {
+      "chapter": 26,
+      "label": "26.2",
+      "path": "chapters\\ch26_well_network_optimization\\figures\\fig27_2_vfp_curve.png",
+      "caption": "Figure 26.2: Illustrative required bottomhole-pressure curves and an inflow overlay",
+      "image_sha256": "94ef430dd09982e6c97eba2b08ad47083044746b802d8db841bc7f3606099a0c"
+    },
+    {
+      "chapter": 26,
+      "label": "26.3",
+      "path": "chapters\\ch26_well_network_optimization\\figures\\ch27_manifold_pressure_sweep.png",
+      "caption": "Figure 26.3: Individual Well Rates vs Manifold Pressure. NeqSim WellFlow inflow-only model",
+      "image_sha256": "65834956b038ccb3eaffb2a3b18526e41e6f822b92b5e9e62f235d5b9fd27b8f"
+    },
+    {
+      "chapter": 26,
+      "label": "26.4",
+      "path": "chapters\\ch26_well_network_optimization\\figures\\ch27_choke_sensitivity.png",
+      "caption": "Figure 26.4: Well A — Choke Sensitivity. Inflow sensitivity to an assumed additional pressure loss",
+      "image_sha256": "b9eba5cd422c94bc6a9033f096685705c0f1461045306a93dacd78ce9762fe1b"
+    },
+    {
+      "chapter": 27,
+      "label": "27.1",
+      "path": "chapters\\ch27_multi_scenario_optimization\\figures\\fig28_tornado.png",
+      "caption": "Figure 27.1: CPA three-phase separator gas-rate sensitivity at a prescribed feed rate. The water input is overall water mole fraction. Low/high bars use the declared input endpoints and include the base in their range; isentropic efficiency has exactly zero upstream gas-rate response because the compressor has no feedback to the feed or separator. All eleven cases pass material and energy checks.",
+      "image_sha256": "808b9d902c42fc3262b613e2d63eaeffbb0366735a8b22bc4e6cd9d81cd8eded"
+    },
+    {
+      "chapter": 27,
+      "label": "27.2",
+      "path": "chapters\\ch27_multi_scenario_optimization\\figures\\ch27_verified_resource_npv.png",
+      "caption": "Figure 27.2: Pre-tax NPV from 200 common LHS scenarios per plan, using a NeqSim isothermal gas tank and the declared annual withdrawal rule",
+      "image_sha256": "c9b914a337e14224465b1d5b9a3a19699981fc8fe1df8d7af28b86c23cbbaeca"
+    },
+    {
+      "chapter": 27,
+      "label": "27.3",
+      "path": "chapters\\ch27_multi_scenario_optimization\\figures\\ch28_scenario_utilization.png",
+      "caption": "Figure 27.3: Compressor Utilization by Scenario",
+      "image_sha256": "94b2508bea9acc7d7bf78a274a5b4cea127712068ca413c28cae3f66a0985260"
+    },
+    {
+      "chapter": 27,
+      "label": "27.4",
+      "path": "chapters\\ch27_multi_scenario_optimization\\figures\\ch28_scenario_comparison.png",
+      "caption": "Figure 27.4: Multi-Scenario Optimization Comparison",
+      "image_sha256": "d229dee56132fc1ec5a8dffaf723cbc72ada664469ca58dfc6116177c470f28b"
+    },
+    {
+      "chapter": 28,
+      "label": "28.1",
+      "path": "chapters\\ch28_field_development\\figures\\ch28_verified_recombination_density.png",
+      "caption": "Figure 28.1: Equilibrium bulk density of five actual reference-phase recombinations at 80 °C and 50 bara, with 10% standard-volume water cut. GOR is standard gas volume divided by standard oil volume; standard reference is 15 °C and 1.01325 bara.",
+      "image_sha256": "a5d6cbf244873e2ac7377e193080f73bdabb6d49dbd95608e4a773a246bc2c72"
+    },
+    {
+      "chapter": 28,
+      "label": "28.2",
+      "path": "chapters\\ch28_field_development\\figures\\ch28_verified_screening_surface.png",
+      "caption": "Figure 28.2: Six actual required-inlet-pressure samples at 5% water cut and GOR 1000 Sm³/Sm³ for the Python model: 2800 m upward tubing and 12 km horizontal flowline. Black markers identify the solved grid values; the connecting facets are a visual interpolation.",
+      "image_sha256": "a196e7b47b4215d947f4a449b4f0cbebb218c1fe57ca3aeda045e0beb9f1486f"
+    },
+    {
+      "chapter": 28,
+      "label": "28.3",
+      "path": "chapters\\ch28_field_development\\figures\\ch28_verified_gor_pressure.png",
+      "caption": "Figure 28.3: Two actual GOR scenarios for the same 2800 m upward tubing and 12 km flowline, at 5% water cut and 50 bara outlet pressure. Points are accepted pressure-table solutions; lines connect the sampled cases.",
+      "image_sha256": "64f34efb15d9aabfa378c3d9dbb95238307dacba8da91f643b1542d3f26e5771"
+    },
+    {
+      "chapter": 28,
+      "label": "28.4",
+      "path": "chapters\\ch28_field_development\\figures\\ch19_vfp_curves.png",
+      "caption": "Figure 28.4: VFP Curves: Bottomhole Pressure vs Flow Rate",
+      "image_sha256": "62b45e96b4ea7719a65c98b2d8f3a3cec4d774e8aaf3134d3f522e0d8dcc1f1f"
+    },
+    {
+      "chapter": 28,
+      "label": "28.5",
+      "path": "chapters\\ch28_field_development\\figures\\ch19_vfp_surface.png",
+      "caption": "Figure 28.5: Upward production VFP surface",
+      "image_sha256": "e409c29e5d6e86504fde171a98fd71d49d3282d382b8b3566b81ca4dce19ecdd"
+    },
+    {
+      "chapter": 29,
+      "label": "29.1",
+      "path": "chapters\\ch29_dynamic_simulation_and_control\\figures\\feedback_control_loop.png",
+      "caption": "Figure 29.1: Feedback control loop showing sensor, controller, final element, and process",
+      "image_sha256": "a988ac2753d08a7d838917c9e5ec5ffecbb918fa416520049b3453c4f7101c23"
+    },
+    {
+      "chapter": 29,
+      "label": "29.2",
+      "path": "chapters\\ch29_dynamic_simulation_and_control\\figures\\ch29_verified_level_inventory.png",
+      "caption": "Figure 29.2: Checked NeqSim liquid inventory, pressure and withdrawal with timestep comparison",
+      "image_sha256": "a1e18dab02b398b2f607a90e3997acdeee8cf708b06b04ed275d0e12ee3b0661"
+    },
+    {
+      "chapter": 29,
+      "label": "29.3",
+      "path": "chapters\\ch29_dynamic_simulation_and_control\\figures\\ch20_compressor_map_antisurge.png",
+      "caption": "Figure 29.3: Conceptual anti-surge action: opening recycle raises compressor inlet throughflow toward the right",
+      "image_sha256": "6e6648df71f93579150940215d60489cbe8e50cdeafc88101f9bf600cde34f25"
+    },
+    {
+      "chapter": 29,
+      "label": "29.4",
+      "path": "chapters\\ch29_dynamic_simulation_and_control\\figures\\ch29_verified_blowdown.png",
+      "caption": "Figure 29.4: Checked real-gas vessel depressurization with timestep comparison",
+      "image_sha256": "4f80b5e48694a4c42f06138d531d427d8f513840faa8414aaab64daa3a93eef5"
+    },
+    {
+      "chapter": 29,
+      "label": "29.5",
+      "path": "chapters\\ch29_dynamic_simulation_and_control\\figures\\ch29_verified_feed_pulse.png",
+      "caption": "Figure 29.5: Checked vessel response to the prescribed feed pulse",
+      "image_sha256": "a67e2ebd7f7c301ff6c1d77430a9fba923804907ec5ce38b4cd0f8c4f60e0d19"
+    },
+    {
+      "chapter": 29,
+      "label": "29.6",
+      "path": "chapters\\ch29_dynamic_simulation_and_control\\figures\\ch20_level_controller_response.png",
+      "caption": "Figure 29.6: Illustrative level response to a feed-rate step. Illustrative Python inventory and control model",
+      "image_sha256": "5446a750b1764c1172125afa2a04ba27670ba708991cc48ba4a1af1653c9f898"
+    },
+    {
+      "chapter": 29,
+      "label": "29.7",
+      "path": "chapters\\ch29_dynamic_simulation_and_control\\figures\\ch20_pid_tuning_comparison.png",
+      "caption": "Figure 29.7: Illustrative level control: proportional-gain comparison. Illustrative Python inventory and control model",
+      "image_sha256": "9d7fcdb771b80eb71670a8e48d3904e22d9192a2410683dd261f345626d8d783"
+    },
+    {
+      "chapter": 30,
+      "label": "30.1",
+      "path": "chapters\\ch30_digital_twins_and_automation\\figures\\ch21_digital_twin_architecture.png",
+      "caption": "Figure 30.1: Digital twin architecture showing the three pillars and their interactions",
+      "image_sha256": "0ebfda033d0c6c5716d4e4634109b78234a5f3d8a26be80c368b194af1e092ea"
+    },
+    {
+      "chapter": 30,
+      "label": "30.2",
+      "path": "chapters\\ch30_digital_twins_and_automation\\figures\\ch21_rto_cycle.png",
+      "caption": "Figure 30.2: Operational optimization cycle with verification and authorization before implementation",
+      "image_sha256": "008beaccbd2b044837cd1128760e8296531f6b874948282e5528b16291386552"
+    },
+    {
+      "chapter": 30,
+      "label": "30.3",
+      "path": "chapters\\ch30_digital_twins_and_automation\\figures\\ch21_digital_twin_tracking.png",
+      "caption": "Figure 30.3: Synthetic sensor/model residuals with a known 3 K injected offset and a declared rolling-mean correction",
+      "image_sha256": "329ea09edf9dc632dfbcebd24a7fd2f52f316ed2b0b2416736f3bea3be9b9064"
+    },
+    {
+      "chapter": 30,
+      "label": "30.4",
+      "path": "chapters\\ch30_digital_twins_and_automation\\figures\\ch21_domain_architecture.png",
+      "caption": "Figure 30.4: Conceptual software layers for presentation, application, domain and infrastructure services",
+      "image_sha256": "98d67c76070947a5bdeca6d8eb4fe2d1373a102d6dd2359479aa78b077828751"
+    },
+    {
+      "chapter": 30,
+      "label": "30.5",
+      "path": "chapters\\ch30_digital_twins_and_automation\\figures\\ch21_digital_twin_comparison.png",
+      "caption": "Figure 30.5: Digital twin with synthetic sensor noise. NeqSim predictions with synthetic comparison measurements",
+      "image_sha256": "a4fd8547d00cf8ff12f28d613e4b70740296331dff264195dd4797df4e5e2c8e"
+    },
+    {
+      "chapter": 31,
+      "label": "31.1",
+      "path": "chapters\\ch31_solver_methods\\figures\\ch29_flash_convergence.png",
+      "caption": "Figure 31.1: TP Flash Computation Time vs Pressure. Observed timings and NeqSim gas-labelled phase fraction; the high-pressure single-phase classification is not a critical-point determination",
+      "image_sha256": "5967f1f42a0c694620d8ac730fd084caefc67cc6d006e510314865e7286b1fcb"
+    },
+    {
+      "chapter": 31,
+      "label": "31.2",
+      "path": "chapters\\ch31_solver_methods\\figures\\ch29_initial_guess_effect.png",
+      "caption": "Figure 31.2: Effect of Initial Temperature Guess. Observed timings from this execution environment",
+      "image_sha256": "a83d9e5601b8a7c04633692ede8d811555fe7d618252a42870919154a2c6164f"
+    },
+    {
+      "chapter": 31,
+      "label": "31.3",
+      "path": "chapters\\ch31_solver_methods\\figures\\ch29_recycle_convergence.png",
+      "caption": "Figure 31.3: Recycle Loop Convergence — Direct Substitution",
+      "image_sha256": "bd64b5191f2b115e35779b0ff6dd2a15edc3fad67ccccdfbf680107f780cdd25"
+    },
+    {
+      "chapter": 31,
+      "label": "31.4",
+      "path": "chapters\\ch31_solver_methods\\figures\\ch29_component_scaling.png",
+      "caption": "Figure 31.4: Flash Computation Time vs Number of Components. Observed timings from this execution environment",
+      "image_sha256": "562d01bafded14c1b95105796b713011df2386d1e61b9755af9b11e68fc96b4d"
+    },
+    {
+      "chapter": 32,
+      "label": "32.1",
+      "path": "chapters\\ch32_advanced_topics\\figures\\ch22_pareto_front.png",
+      "caption": "Figure 32.1: Production and compression-power trade-off. Thirty full NeqSim compressor candidates",
+      "image_sha256": "dbc44feee5a2bd05ca5bb14f64c457ce9dbb1f0e105b79c4e4aa22b5ced9d970"
+    },
+    {
+      "chapter": 32,
+      "label": "32.2",
+      "path": "chapters\\ch32_advanced_topics\\figures\\ch22_scenario_comparison.png",
+      "caption": "Figure 32.2: Seasonal operation: process and utility comparison",
+      "image_sha256": "a7fb43019fe632197cfb40bf0d4148d27cfc574c5d38912923328db38c7d98fe"
+    },
+    {
+      "chapter": 33,
+      "label": "33.1",
+      "path": "chapters\\ch33_onshore_processing_plants\\figures\\ch22_onshore_plant_block_diagram.png",
+      "caption": "Figure 33.1: Block diagram of the executed dry-hydrocarbon plant with four external product streams",
+      "image_sha256": "95e79a4b36998db25d7eb22fb5872efffa93aa84ebd1db900f0b4ad639f6277e"
+    },
+    {
+      "chapter": 33,
+      "label": "33.2",
+      "path": "chapters\\ch33_onshore_processing_plants\\figures\\ch22_amine_unit_pfd.png",
+      "caption": "Figure 33.2: Simplified amine circuit with separate rich/lean sides of solvent heat recovery",
+      "image_sha256": "3075f5e4d54beadf4d1da92a44d51984512bccdf055fc574dbf61cc57304ed84"
+    },
+    {
+      "chapter": 33,
+      "label": "33.3",
+      "path": "chapters\\ch33_onshore_processing_plants\\figures\\ch22_turboexpander_pfd.png",
+      "caption": "Figure 33.3: Verified process topology with gas-only expansion, liquid bypass letdown, remixing and cold separation",
+      "image_sha256": "75d2f8b0d94c2718d0dfccb0a05b05272e555b2d1e384f69506b21e48f4e01b0"
+    },
+    {
+      "chapter": 33,
+      "label": "33.4",
+      "path": "chapters\\ch33_onshore_processing_plants\\figures\\ch22_ngl_sensitivity.png",
+      "caption": "Figure 33.4: Dry-hydrocarbon plant sensitivity; every point is a fresh accepted NeqSim calculation, with thermal duty distinguished from shaft power",
+      "image_sha256": "8d2fd04fe2986c797e71711448034b5443116356050a8e68e693f48e97ac7e73"
+    },
+    {
+      "chapter": 33,
+      "label": "33.5",
+      "path": "chapters\\ch33_onshore_processing_plants\\figures\\ch22_teg_water_content.png",
+      "caption": "Figure 33.5: TEG Dehydration: Effect of Circulation Rate on Water Content. CPA SimpleTEGAbsorber with explicit fixed-inventory energy reconstruction; 99.5 weight percent lean TEG, five stages and 70 percent stage efficiency",
+      "image_sha256": "1e3a094e0d0425d3226cbf49c4248e269068516988a77651fab0a4e1133ab266"
+    },
+    {
+      "chapter": 33,
+      "label": "33.6",
+      "path": "chapters\\ch33_onshore_processing_plants\\figures\\ch22_compression_power.png",
+      "caption": "Figure 33.6: Two-Stage Compression: Power vs Export Pressure",
+      "image_sha256": "9ccb8597cbbd7bfd4aefe847f3353e939964804ef6f28a5de46ae2497746694a"
+    },
+    {
+      "chapter": 34,
+      "label": "34.1",
+      "path": "chapters\\ch34_case_studies\\figures\\ch23_case1_platform_schematic.png",
+      "caption": "Figure 34.1: Gas condensate platform process schematic",
+      "image_sha256": "34bd11cbcdfe753f5db54871048335bda0eb76c5336834344ad3d4595eeb4e7a"
+    },
+    {
+      "chapter": 34,
+      "label": "34.2",
+      "path": "chapters\\ch34_case_studies\\figures\\ch23_case1_hp_optimization.png",
+      "caption": "Figure 34.2: HP separator pressure sensitivity in the reduced platform model",
+      "image_sha256": "a215f2054389f955af01745228f2f12528965e00df921966a79d6e9d8a26b968"
+    },
+    {
+      "chapter": 34,
+      "label": "34.3",
+      "path": "chapters\\ch34_case_studies\\figures\\ch23_case2_water_cut_sensitivity.png",
+      "caption": "Figure 34.3: FPSO performance sensitivity to water cut",
+      "image_sha256": "c65904773289c318026dfe69c6de18c23d9a4b0be8825e0b58b7e98ad904e75e"
+    },
+    {
+      "chapter": 34,
+      "label": "34.4",
+      "path": "chapters\\ch34_case_studies\\figures\\ch23_case3_debottleneck_analysis.png",
+      "caption": "Figure 34.4: Gas plant debottlenecking analysis showing equipment utilization vs feed rate",
+      "image_sha256": "2b0b22e7e8df5a5171e51e93f4b8a4a15c745a389b2ab015c41d83a55d18a988"
+    },
+    {
+      "chapter": 34,
+      "label": "34.5",
+      "path": "chapters\\ch34_case_studies\\figures\\ch23_process_conditions.png",
+      "caption": "Figure 34.5: Process Conditions Across the Offshore Platform",
+      "image_sha256": "a9a679e6145febe7f754dff8c83be631cbc602fd2b61eba7f9542bab77bdcede"
+    },
+    {
+      "chapter": 34,
+      "label": "34.6",
+      "path": "chapters\\ch34_case_studies\\figures\\ch23_power_consumption.png",
+      "caption": "Figure 34.6: Integrated case utility duties",
+      "image_sha256": "100adc2166a4a06bd65aa9f6c39787f744311f0f04f744549c3c9c95ac66c634"
+    },
+    {
+      "chapter": 35,
+      "label": "35.1",
+      "path": "chapters\\ch35_future_directions\\figures\\ch35_co2_density_compressibility.png",
+      "caption": "Figure 35.1: CO2-rich stream at 25 °C. SRK mixture-property screening",
+      "image_sha256": "1b58f633ae9b4c19a4fafe32b82dcfe42cf70417b534dfa11e80399ea91a6b40"
+    },
+    {
+      "chapter": 35,
+      "label": "35.2",
+      "path": "chapters\\ch35_future_directions\\figures\\ch24_h2_blending_wobbe.png",
+      "caption": "Figure 35.2: Effect of Hydrogen Blending on Gas Properties (CH4/H2 at 15 °C, 1.013 bara). ISO 6976 gas-quality calculation",
+      "image_sha256": "fc7b4add730689895badd01048bb66836515be7eb070b66ea50492b3ca6f7b36"
+    }
+  ],
+  "all_prose_numbered_figure_references": [
+    {
+      "chapter": 1,
+      "line": 109,
+      "label": "1.1",
+      "text": "A production system is not a collection of independent equipment items — it is an integrated chain where every element constrains and is constrained by the others. Figure 1.1 illustrates this chain schematically."
+    },
+    {
+      "chapter": 21,
+      "line": 980,
+      "label": "21.1",
+      "text": "**Discussion (Figure 21.1).**"
+    },
+    {
+      "chapter": 21,
+      "line": 1247,
+      "label": "21.2",
+      "text": "**Discussion (Figure 21.2).**"
+    },
+    {
+      "chapter": 21,
+      "line": 1315,
+      "label": "21.3",
+      "text": "**Discussion (Figure 21.3).**"
+    },
+    {
+      "chapter": 23,
+      "line": 32,
+      "label": "23.1",
+      "text": "NeqSim addresses this with three interlocking subsystems, illustrated in Figure 23.1:"
+    },
+    {
+      "chapter": 23,
+      "line": 1149,
+      "label": "23.2",
+      "text": "Figure 23.2 illustrates the relationships between the key classes in the optimization framework."
+    },
+    {
+      "chapter": 24,
+      "line": 2882,
+      "label": "24.1",
+      "text": "**Discussion (Figure 24.1).** Thirty states satisfy the declared 1 ppm mass/component and 10 ppm enthalpy acceptance checks. The 80 bara feed/140 bara discharge combination fails the material check at both rates: the native phase extraction loses 0.407180 kg/h at 250 t/h and 0.570052 kg/h at 350 t/h, or 2.345 ppm. Fresh separators and repeated equilibrium flashes reproduce the deficit. These are rejected numerical states; the gray cells do not imply a physical operating prohibition. Here acceptance means numerical material/energy consistency. Equipment-capacity and export-pressure requirements are separate gates, so the lowest-power sampled state is a sensitivity result, not an approved operating setpoint. Compare power at a common feed rate and use only accepted states for the sampled selection. Resolve the trace-phase extraction discrepancy before using either rejected point for design or claiming an optimum across the entire grid."
+    },
+    {
+      "chapter": 25,
+      "line": 163,
+      "label": "25.2",
+      "text": "A utilization monitoring system connects field measurements to a process model that evaluates equipment loading against constraints. The architecture has four layers, illustrated in Figure 25.2."
+    }
+  ],
+  "retained_intentional_repetition": [
+    "Chapter 30 repeats external historian prerequisites immediately before separately scoped integration patterns; these are necessary local prerequisites, not duplicated figure captions."
+  ],
+  "removed_asset_checks": {
+    "ch19_gas_quality_envelope": "No remaining source placement or dangling image-specific discussion.",
+    "ch26_gaslift_curve": "Removed image remains unplaced; obsolete three-region narrative corrected."
+  },
+  "limitations": [
+    "This pass checks editorial placement and consistency, not a new execution or visual-physics review of the already verified images.",
+    "Figure numbers inside frozen code-generated titles are not changed; manuscript prose no longer points at their obsolete numbering."
+  ],
+  "unresolved_editorial_placement_defects": []
+}

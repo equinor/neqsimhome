@@ -1,0 +1,695 @@
+{
+  "notebook": "chapters\\ch28_field_development\\notebooks\\ch19_field_development.ipynb",
+  "status": "passed",
+  "executed_at": "2026-09-12T20:13:24.150851+00:00",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "runtime_seconds": 57.17,
+  "code_cells": 8,
+  "executed_cells": 8,
+  "cell_runs": [
+    {
+      "cell_index": 1,
+      "execution_count": 1,
+      "runtime_seconds": 3.469,
+      "sha256": "f92b7c23d6ee48beff00dfb9258ee8918033270ce67a95b836c64b73615186b4",
+      "status": "passed"
+    },
+    {
+      "cell_index": 3,
+      "execution_count": 2,
+      "runtime_seconds": 1.422,
+      "sha256": "e96cb18027bbd50c76be2dfa4b4b21c7fa8e3636fd8f7bc7d315900586ff194f",
+      "status": "passed"
+    },
+    {
+      "cell_index": 5,
+      "execution_count": 3,
+      "runtime_seconds": 2.594,
+      "sha256": "42af972dea65d90b08de7dd389d34e09418af623b3e1fcdb123ab6ebc112bc72",
+      "status": "passed"
+    },
+    {
+      "cell_index": 7,
+      "execution_count": 4,
+      "runtime_seconds": 48.031,
+      "sha256": "f6673e15efb2d62353f3f21c99cdf375b9180497b80b5c353513435202c4f8b7",
+      "status": "passed"
+    },
+    {
+      "cell_index": 9,
+      "execution_count": 5,
+      "runtime_seconds": 0.891,
+      "sha256": "36433ff2174a148204448e303399bf0591c697eff84f3324bebf1c107e62e2bd",
+      "status": "passed"
+    },
+    {
+      "cell_index": 12,
+      "execution_count": 6,
+      "runtime_seconds": 0.718,
+      "sha256": "587bbe8d50e4e5ff7e68aaeeb3c94b3ae9a37780c6fb0379cc8ecafe24e133bd",
+      "status": "passed"
+    },
+    {
+      "cell_index": 17,
+      "execution_count": 7,
+      "runtime_seconds": 0.016,
+      "sha256": "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+      "status": "passed"
+    },
+    {
+      "cell_index": 19,
+      "execution_count": 8,
+      "runtime_seconds": 0.016,
+      "sha256": "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "source_revision": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "java_version": "25.0.4.1",
+  "neqsim_class_origin": "file:/C:/Users/solbraa/OneDrive%20-%20NTNU/Documents/ChatGPT/NeqSim/target/classes/",
+  "figures": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch28_field_development\\figures\\ch19_vfp_curves.png",
+      "sha256": "62b45e96b4ea7719a65c98b2d8f3a3cec4d774e8aaf3134d3f522e0d8dcc1f1f",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "VFP Curves: Bottomhole Pressure vs Flow Rate",
+          "series": "WHP = 40 bara",
+          "value_axis": "y",
+          "x_label": "Flow Rate (t/hr)",
+          "y_label": "Bottomhole Pressure (bara)",
+          "n_points": 12,
+          "n_nonfinite": 0,
+          "x_min": 5.0,
+          "x_max": 60.0,
+          "y_min": 53.79150390625,
+          "y_max": 216.92153930664062,
+          "x_at_y_max": 60.0
+        },
+        {
+          "panel": 1,
+          "title": "VFP Curves: Bottomhole Pressure vs Flow Rate",
+          "series": "WHP = 60 bara",
+          "value_axis": "y",
+          "x_label": "Flow Rate (t/hr)",
+          "y_label": "Bottomhole Pressure (bara)",
+          "n_points": 12,
+          "n_nonfinite": 0,
+          "x_min": 5.0,
+          "x_max": 60.0,
+          "y_min": 79.80712890625,
+          "y_max": 230.1580810546875,
+          "x_at_y_max": 60.0
+        },
+        {
+          "panel": 1,
+          "title": "VFP Curves: Bottomhole Pressure vs Flow Rate",
+          "series": "WHP = 80 bara",
+          "value_axis": "y",
+          "x_label": "Flow Rate (t/hr)",
+          "y_label": "Bottomhole Pressure (bara)",
+          "n_points": 12,
+          "n_nonfinite": 0,
+          "x_min": 5.0,
+          "x_max": 60.0,
+          "y_min": 113.82568359375,
+          "y_max": 245.455322265625,
+          "x_at_y_max": 60.0
+        },
+        {
+          "panel": 1,
+          "title": "VFP Curves: Bottomhole Pressure vs Flow Rate",
+          "series": "WHP = 100 bara",
+          "value_axis": "y",
+          "x_label": "Flow Rate (t/hr)",
+          "y_label": "Bottomhole Pressure (bara)",
+          "n_points": 12,
+          "n_nonfinite": 0,
+          "x_min": 5.0,
+          "x_max": 60.0,
+          "y_min": 145.81298828125,
+          "y_max": 257.72552490234375,
+          "x_at_y_max": 60.0
+        },
+        {
+          "panel": 1,
+          "title": "VFP Curves: Bottomhole Pressure vs Flow Rate",
+          "series": "WHP = 120 bara",
+          "value_axis": "y",
+          "x_label": "Flow Rate (t/hr)",
+          "y_label": "Bottomhole Pressure (bara)",
+          "n_points": 12,
+          "n_nonfinite": 0,
+          "x_min": 5.0,
+          "x_max": 60.0,
+          "y_min": 175.82763671875,
+          "y_max": 272.215576171875,
+          "x_at_y_max": 60.0
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch28_field_development\\figures\\ch19_vfp_surface.png",
+      "sha256": "e409c29e5d6e86504fde171a98fd71d49d3282d382b8b3566b81ca4dce19ecdd",
+      "dpi": 220,
+      "series": []
+    }
+  ],
+  "nonfinite_series": [],
+  "numeric_results": {
+    "well_depth_m": 3000.0,
+    "tubing_id_m": 0.1,
+    "roughness_m": 2.5e-05,
+    "whp_bara": 80.0,
+    "wht_C": 90.0,
+    "flow_rate_kg_hr": 30000.0,
+    "bhp": 155.869140625,
+    "bht": 90.0,
+    "whp_values": [
+      40.0,
+      60.0,
+      80.0,
+      100.0,
+      120.0
+    ],
+    "flow_values": [
+      5000.0,
+      10000.0,
+      15000.0,
+      20000.0,
+      25000.0,
+      30000.0,
+      35000.0,
+      40000.0,
+      45000.0,
+      50000.0,
+      55000.0,
+      60000.0
+    ],
+    "arrival_errors": [
+      0.0010254663697750743,
+      0.0006595437590206643,
+      0.0015675349089079305,
+      0.003899484314132451,
+      0.0032101420258641156,
+      0.0026986244123961,
+      0.0001718018851022407,
+      0.0009331428611005776,
+      0.0035607126785492937,
+      0.0028192010880232488,
+      0.003958682657554391,
+      0.0015241982870364268,
+      0.0038021343223988424,
+      0.0027586860354773535,
+      0.005052078607178601,
+      0.0014460355662464508,
+      0.004711357407046535,
+      0.0035138981520503876,
+      0.0010724155753223386,
+      0.0004022484006540594,
+      0.005251637884924776,
+      0.0016052831855546401,
+      0.0029700756564636777,
+      0.003100544145958395,
+      0.001053547310263525,
+      0.00604299701740274,
+      0.0035413024008477123,
+      0.006179124600748764,
+      0.0008551743160154501,
+      0.007246236197730127,
+      0.002202640956426194,
+      0.007862544150242456,
+      0.006036494359605626,
+      0.0035261485365793988,
+      0.005953538543039372,
+      0.006300946190691548,
+      0.004675182421948421,
+      0.001233612167069964,
+      0.009185020387604936,
+      0.0026465319805026866,
+      0.0019319812303848494,
+      0.008081146639469239,
+      0.00923555459290526,
+      0.0029524071407251995,
+      0.0062870266576879885,
+      0.00022282145546625998,
+      0.0007924190772996553,
+      0.005991399826115185,
+      0.0006520730105705752,
+      0.011933696761346368,
+      0.002143343610867987,
+      0.007406757702398181,
+      0.010269183333264209,
+      0.0071729897475592,
+      0.002909823865564931,
+      0.004349866515639178,
+      0.0023965970370909417,
+      0.005321610931233067,
+      0.0022024074609845457,
+      0.0047197029541621305
+    ],
+    "whp": 120.0,
+    "bhp_list": [
+      175.82763671875,
+      176.62109375,
+      179.44580078125,
+      182.4609375,
+      188.07861328125,
+      196.14013671875,
+      206.470947265625,
+      218.16650390625,
+      230.703125,
+      243.93798828125,
+      257.8033447265625,
+      272.215576171875
+    ],
+    "flow": 60000.0,
+    "bhp_val": 272.215576171875,
+    "arrival_error": 0.0047197029541621305,
+    "colors": [
+      [
+        0.253935,
+        0.265254,
+        0.529983,
+        1.0
+      ],
+      [
+        0.172719,
+        0.448791,
+        0.557885,
+        1.0
+      ],
+      [
+        0.119423,
+        0.611141,
+        0.538982,
+        1.0
+      ],
+      [
+        0.311925,
+        0.767822,
+        0.415586,
+        1.0
+      ],
+      [
+        0.741388,
+        0.873449,
+        0.149561,
+        1.0
+      ]
+    ],
+    "idx": 4.0,
+    "bhps": [
+      175.82763671875,
+      176.62109375,
+      179.44580078125,
+      182.4609375,
+      188.07861328125,
+      196.14013671875,
+      206.470947265625,
+      218.16650390625,
+      230.703125,
+      243.93798828125,
+      257.8033447265625,
+      272.215576171875
+    ],
+    "valid": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "WHP_grid": [
+      [
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      [
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      [
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      [
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      [
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      [
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      [
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      [
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      [
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      [
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      [
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      [
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ]
+    ],
+    "FLOW_grid": [
+      [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      [
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0
+      ],
+      [
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0
+      ],
+      [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      [
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0
+      ],
+      [
+        35.0,
+        35.0,
+        35.0,
+        35.0,
+        35.0
+      ],
+      [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      [
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0
+      ],
+      [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      [
+        55.0,
+        55.0,
+        55.0,
+        55.0,
+        55.0
+      ],
+      [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ]
+    ],
+    "BHP_grid": [
+      [
+        53.79150390625,
+        79.80712890625,
+        113.82568359375,
+        145.81298828125,
+        175.82763671875
+      ],
+      [
+        59.2901611328125,
+        84.2138671875,
+        116.56494140625,
+        147.406005859375,
+        176.62109375
+      ],
+      [
+        67.301025390625,
+        92.05322265625,
+        122.022705078125,
+        149.98779296875,
+        179.44580078125
+      ],
+      [
+        76.9268798828125,
+        103.3135986328125,
+        131.361083984375,
+        155.609130859375,
+        182.4609375
+      ],
+      [
+        93.01910400390625,
+        115.9075927734375,
+        143.0340576171875,
+        163.592529296875,
+        188.07861328125
+      ],
+      [
+        109.77783203125,
+        130.3570556640625,
+        155.869140625,
+        174.67041015625,
+        196.14013671875
+      ],
+      [
+        128.98468017578125,
+        149.735107421875,
+        169.5654296875,
+        186.810302734375,
+        206.470947265625
+      ],
+      [
+        146.59576416015625,
+        163.99322509765625,
+        183.88427734375,
+        199.79248046875,
+        218.16650390625
+      ],
+      [
+        165.43411254882812,
+        183.06976318359375,
+        198.7115478515625,
+        213.48876953125,
+        230.703125
+      ],
+      [
+        180.53298950195312,
+        198.45855712890625,
+        213.953857421875,
+        227.752685546875,
+        243.93798828125
+      ],
+      [
+        201.05361938476562,
+        214.1778564453125,
+        229.53857421875,
+        242.5201416015625,
+        257.8033447265625
+      ],
+      [
+        216.92153930664062,
+        230.1580810546875,
+        245.455322265625,
+        257.72552490234375,
+        272.215576171875
+      ]
+    ],
+    "j": 4.0,
+    "i": 11.0
+  },
+  "figure_discussions": [
+    {
+      "chapter": "ch28_field_development",
+      "chapter_number": 28,
+      "figure": "ch19_vfp_curves.png",
+      "figure_path": "figures/ch19_vfp_curves.png",
+      "caption": "VFP Curves: Bottomhole Pressure vs Flow Rate.",
+      "title": "VFP Curves: Bottomhole Pressure vs Flow Rate",
+      "observation": "WHP = 40 bara: bottomhole pressure spans 53.79–216.9 bara across the plotted cases. WHP = 60 bara: bottomhole pressure spans 79.81–230.2 bara across the plotted cases.",
+      "mechanism": "The upward production model solves bottomhole pressure to meet each imposed wellhead pressure at a specified rate.",
+      "implication": "The resulting surface is a production lift requirement, not a downward injection calculation.",
+      "recommendation": "Keep the upward elevation convention and outlet-pressure residual checks with every exported VFP point.",
+      "notebook": "notebooks/ch19_field_development.ipynb",
+      "dpi": 220,
+      "sha256": "62b45e96b4ea7719a65c98b2d8f3a3cec4d774e8aaf3134d3f522e0d8dcc1f1f",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": [
+          [
+            "WHP = 40 bara: bottomhole pressure",
+            53.79150390625,
+            216.92153930664062,
+            "bara"
+          ],
+          [
+            "WHP = 60 bara: bottomhole pressure",
+            79.80712890625,
+            230.1580810546875,
+            "bara"
+          ],
+          [
+            "WHP = 80 bara: bottomhole pressure",
+            113.82568359375,
+            245.455322265625,
+            "bara"
+          ],
+          [
+            "WHP = 100 bara: bottomhole pressure",
+            145.81298828125,
+            257.72552490234375,
+            "bara"
+          ],
+          [
+            "WHP = 120 bara: bottomhole pressure",
+            175.82763671875,
+            272.215576171875,
+            "bara"
+          ]
+        ]
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    },
+    {
+      "chapter": "ch28_field_development",
+      "chapter_number": 28,
+      "figure": "ch19_vfp_surface.png",
+      "figure_path": "figures/ch19_vfp_surface.png",
+      "caption": "Upward production VFP surface.",
+      "title": "Upward production VFP surface",
+      "observation": "The sixty upward-flow solutions span 53.79–272.22 bara required bottomhole pressure. The largest difference between solved and specified wellhead pressure is 0.0119 bar.",
+      "mechanism": "The surface combines sixty NeqSim solutions across five wellhead pressures and twelve flow rates.",
+      "implication": "Interpolation is justified only within this sampled fluid, temperature and geometry envelope.",
+      "recommendation": "Use the accompanying CSV and verify boundary residuals before linking the table to a reservoir model.",
+      "notebook": "notebooks/ch19_field_development.ipynb",
+      "dpi": 220,
+      "sha256": "e409c29e5d6e86504fde171a98fd71d49d3282d382b8b3566b81ca4dce19ecdd",
+      "table": {
+        "headers": [
+          "Quantity / series",
+          "Minimum",
+          "Maximum",
+          "Unit"
+        ],
+        "rows": []
+      },
+      "editorial_review": "Plot-specific interpretation reviewed against executed source and numerical data."
+    }
+  ],
+  "notebook_sha256": "43f17bbd79d5a5963581230dadf8cf76acb144144afa142d5f8e27d202004c55",
+  "editorial_review": {
+    "reviewed_at": "2026-09-12T20:15:02.505322+00:00",
+    "pre_review_notebook_sha256": "5f9708df20cfd9e964886368b0262f668b62e06a4d0a774cdbb09171ea22041c",
+    "code_and_outputs_unchanged": true,
+    "description": "Replaced generated discussion prose with plot-specific reviewed interpretation; every executed code hash rechecked."
+  },
+  "scientific_validation": {
+    "physics_report": "verification\\scientific_revision\\notebooks\\ch28_field_development.json",
+    "validation_helper_sha256": {
+      "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+      "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+      "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+    },
+    "pre_scope_markdown_sha256": "43f17bbd79d5a5963581230dadf8cf76acb144144afa142d5f8e27d202004c55",
+    "post_execution_edit": "Added scope and independent benchmark links only; every executed code-cell hash rechecked."
+  }
+}

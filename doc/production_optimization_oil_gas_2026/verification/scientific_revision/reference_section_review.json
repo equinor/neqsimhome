@@ -1,0 +1,528 @@
+{
+  "full_text_review": [
+    "glossary",
+    "nomenclature",
+    "preface",
+    "software_revision"
+  ],
+  "corrections": [
+    {
+      "section": "glossary",
+      "term": "Anti-surge control",
+      "before": "Control system that prevents a compressor from operating in the surge region by recycling gas or adjusting speed",
+      "after": "Control that maintains margin from compressor surge, commonly by recycling gas; its effectiveness depends on the map, sensors, valve dynamics and implemented logic."
+    },
+    {
+      "section": "glossary",
+      "term": "API gravity",
+      "before": "A measure of petroleum liquid density relative to water (\u00b0API)",
+      "after": "Petroleum-liquid density scale: 141.5/SG(60/60 \u00b0F) \u2212 131.5. The reference temperatures are part of the definition."
+    },
+    {
+      "section": "glossary",
+      "term": "Automatic differentiation (AD)",
+      "before": "Computing exact derivatives of a function by applying the chain rule algorithmically to each elementary operation",
+      "after": "Chain-rule differentiation of implemented elementary operations, accurate to floating-point arithmetic for the differentiable executed path; branches and numerical solvers need appropriate derivative treatment."
+    },
+    {
+      "section": "glossary",
+      "term": "BHP",
+      "before": "Bottomhole pressure \u2014 reservoir pressure at the wellbore face",
+      "after": "Bottomhole pressure at a stated well datum; flowing BHP differs from average reservoir pressure and from shut-in pressure."
+    },
+    {
+      "section": "glossary",
+      "term": "BOE",
+      "before": "Barrels of oil equivalent \u2014 standardized energy unit for production",
+      "after": "Barrel of oil equivalent; an energy-equivalent reporting quantity whose conversion factor and heating-value basis must be stated."
+    },
+    {
+      "section": "glossary",
+      "term": "Bubble point",
+      "before": "The pressure at which the first gas bubble forms from a liquid mixture",
+      "after": "For a specified mixture and temperature, the pressure at which an infinitesimal vapor phase first coexists with the liquid; a bubble-point temperature can instead be defined at fixed pressure."
+    },
+    {
+      "section": "glossary",
+      "term": "Capacity check",
+      "before": "Verification that equipment can handle the required flow rates, pressures, and temperatures",
+      "after": "Comparison of operating demands with explicitly configured equipment limits, subject to the rating basis, model applicability and completeness of the checked constraints."
+    },
+    {
+      "section": "glossary",
+      "term": "CCR",
+      "before": "Cricondenbar \u2014 the maximum pressure on the phase envelope",
+      "after": "Cricondenbar: maximum pressure of vapor\u2013liquid coexistence for a specified mixture; not necessarily the mixture critical pressure."
+    },
+    {
+      "section": "glossary",
+      "term": "CCT",
+      "before": "Cricondentherm \u2014 the maximum temperature on the phase envelope",
+      "after": "Cricondentherm: maximum temperature of vapor\u2013liquid coexistence for a specified mixture; not a standard or necessarily the critical temperature."
+    },
+    {
+      "section": "glossary",
+      "term": "Compressor surge",
+      "before": "Unstable operating condition where flow reverses through the compressor",
+      "after": "Low-flow system instability involving pressure and flow oscillations, potentially including flow reversal; the boundary depends on the compressor and connected system."
+    },
+    {
+      "section": "glossary",
+      "term": "Conformal prediction",
+      "before": "Distribution-free method producing prediction intervals with guaranteed coverage probability without model assumptions",
+      "after": "Prediction-set calibration with finite-sample marginal coverage under the method's assumptions, commonly exchangeability; it does not guarantee conditional coverage or remain valid under arbitrary distribution shift."
+    },
+    {
+      "section": "glossary",
+      "term": "Cv value",
+      "before": "Valve flow coefficient \u2014 relates flow rate to pressure drop across a valve",
+      "after": "Valve flow coefficient based on US gallons per minute of water at about 60 \u00b0F producing a 1 psi pressure drop. Gas, cavitation and choked-flow calculations require the appropriate sizing relations."
+    },
+    {
+      "section": "glossary",
+      "term": "DeepONet",
+      "before": "Deep Operator Network \u2014 neural network architecture that learns mappings between function spaces for rapid PDE solution",
+      "after": "Deep Operator Network: a learned mapping between function spaces, used as a surrogate for solution operators within a demonstrated training and validation domain."
+    },
+    {
+      "section": "glossary",
+      "term": "Digital twin",
+      "before": "A computational model that mirrors a physical system in real time",
+      "after": "A computational representation connected to observations of a physical asset, with defined update, synchronization and validation procedures; connection alone does not establish accuracy."
+    },
+    {
+      "section": "glossary",
+      "term": "Flash calculation",
+      "before": "Determination of phase equilibrium (vapor-liquid split) at given conditions",
+      "after": "Equilibrium phase amounts and compositions at specified constraints, such as temperature/pressure or enthalpy/pressure; more than two phases may be present."
+    },
+    {
+      "section": "glossary",
+      "term": "HYSYS",
+      "before": "Honeywell UniSim Design (formerly AspenTech HYSYS) process simulator",
+      "after": "Aspen HYSYS, an AspenTech process simulator. Honeywell UniSim Design is a separate product."
+    },
+    {
+      "section": "glossary",
+      "term": "JT cooling",
+      "before": "Joule-Thomson effect \u2014 temperature drop when gas expands through a valve",
+      "after": "Cooling during approximately isenthalpic throttling when the Joule\u2013Thomson coefficient is positive. Throttling can instead heat a fluid when that coefficient is negative."
+    },
+    {
+      "section": "glossary",
+      "term": "K-factor",
+      "before": "Souders-Brown factor \u2014 used to size separator gas capacity",
+      "after": "Here, the Souders\u2013Brown separator capacity factor, with velocity units; distinguish it from the dimensionless phase-equilibrium ratio K_i = y_i/x_i."
+    },
+    {
+      "section": "glossary",
+      "term": "Monte Carlo dropout",
+      "before": "UQ technique: randomly drop neurons during inference to estimate epistemic uncertainty from prediction variance",
+      "after": "Approximate uncertainty estimation from repeated stochastic network evaluations with dropout; prediction spread needs calibration and is not automatically a reliable physical-error bound."
+    },
+    {
+      "section": "glossary",
+      "term": "Multiphase flow",
+      "before": "Simultaneous flow of gas, oil, and water in pipes",
+      "after": "Simultaneous transport of two or more phases, for example gas\u2013liquid, oil\u2013water or gas\u2013oil\u2013water."
+    },
+    {
+      "section": "glossary",
+      "term": "NPV",
+      "before": "Net present value \u2014 discounted sum of future cash flows",
+      "after": "Net present value: the sum of cash flows, including initial investment, discounted to a specified valuation date using a stated discount-rate convention."
+    },
+    {
+      "section": "glossary",
+      "term": "OPR",
+      "before": "Outflow Performance Relationship \u2014 pressure drop in the tubing and flowline",
+      "after": "Outflow performance relationship: pressure required to transport a specified rate through tubing and downstream equipment for stated outlet and thermal conditions."
+    },
+    {
+      "section": "glossary",
+      "term": "PI",
+      "before": "Productivity index \u2014 rate per unit pressure drawdown (bbl/d/psi)",
+      "after": "Productivity index: production rate divided by pressure drawdown on a stated flow/pressure basis; the linear relation has an applicability range."
+    },
+    {
+      "section": "glossary",
+      "term": "Polytropic efficiency",
+      "before": "Compressor efficiency measure based on a polytropic (reversible) process path",
+      "after": "For compression, the ratio of differential ideal pressure work to differential actual enthalpy rise along the compression path; real-gas evaluation requires thermodynamic properties and a defined method."
+    },
+    {
+      "section": "glossary",
+      "term": "Utilization",
+      "before": "The ratio of actual throughput to maximum capacity of an equipment item",
+      "after": "Dimensionless operating demand divided by the relevant declared limit; separate limits may apply to power, actual volume, gas load, liquid retention or other quantities."
+    },
+    {
+      "section": "glossary",
+      "term": "Affinity laws",
+      "before": "Relationships for centrifugal machines: flow proportional to speed, head to speed squared, power to speed cubed",
+      "after": "Approximate centrifugal-machine similarity relations: flow scales with speed, head with speed squared and power with density times speed cubed, for fixed geometry and comparable operating conditions."
+    },
+    {
+      "section": "glossary",
+      "term": "Carbon intensity",
+      "before": "CO$_2$ emissions per unit of production (kg CO$_2$/boe)",
+      "after": "Emissions divided by a declared production or energy measure, with system boundary, gas coverage and CO2-equivalent convention stated."
+    },
+    {
+      "section": "glossary",
+      "term": "Decline curve",
+      "before": "Mathematical model (Arps) describing production rate decrease over time",
+      "after": "Empirical production-rate trend, such as an Arps model; fitted coefficients and flow-regime applicability do not by themselves establish recoverable reserves."
+    },
+    {
+      "section": "glossary",
+      "term": "IRR",
+      "before": "Internal rate of return \u2014 discount rate at which NPV of a project equals zero",
+      "after": "Discount rate at which project NPV is zero; cash-flow patterns can produce multiple IRRs or no economically useful root."
+    },
+    {
+      "section": "glossary",
+      "term": "Latin Hypercube Sampling",
+      "before": "Statistical sampling method ensuring uniform coverage of parameter space",
+      "after": "Stratified sampling that covers each marginal probability interval once; it does not guarantee uniform coverage of all joint combinations."
+    },
+    {
+      "section": "glossary",
+      "term": "P10/P50/P90",
+      "before": "Probabilistic estimates at 10%, 50%, and 90% confidence levels",
+      "after": "Quantile labels requiring an explicit convention. Under non-exceedance, P10 is the 10th percentile; petroleum resource exceedance notation commonly uses P10 for the high case and P90 for the low case."
+    },
+    {
+      "section": "glossary",
+      "term": "PINN",
+      "before": "Physics-Informed Neural Network \u2014 embeds governing equations (conservation laws) in the loss function to enforce physical consistency",
+      "after": "Physics-informed neural network: includes equation residuals or physical constraints in training. Soft penalty terms encourage, but do not guarantee, conservation or an accurate solution."
+    },
+    {
+      "section": "glossary",
+      "term": "Recycle",
+      "before": "NeqSim class for converging recycle streams in process simulations using successive substitution",
+      "after": "NeqSim recycle-stream convergence equipment supporting direct substitution and optional acceleration; acceptance still requires residual and conservation checks."
+    },
+    {
+      "section": "glossary",
+      "term": "Robust optimization",
+      "before": "Finding solutions that perform well across all uncertainty scenarios",
+      "after": "Optimization imposing feasibility or performance requirements over a specified uncertainty set; coverage is limited to that set and the chosen formulation."
+    },
+    {
+      "section": "glossary",
+      "term": "Scope 1/2 emissions",
+      "before": "Direct facility emissions (Scope 1) vs. purchased electricity emissions (Scope 2)",
+      "after": "Scope 1 covers direct emissions from owned or controlled sources; Scope 2 covers indirect emissions from purchased electricity, steam, heat and cooling."
+    },
+    {
+      "section": "glossary",
+      "term": "Stochastic optimization",
+      "before": "Optimization under uncertainty using probability-weighted scenarios",
+      "after": "Optimization using probability models for uncertain inputs, through sampling, probability-weighted scenarios or other stochastic formulations."
+    },
+    {
+      "section": "glossary",
+      "term": "Tornado diagram",
+      "before": "Bar chart ranking parameters by their impact on output uncertainty",
+      "after": "Ranked one-at-a-time sensitivity ranges for a declared input variation and baseline; the bars are not generally a variance decomposition or probability distribution."
+    },
+    {
+      "section": "glossary",
+      "term": "UQ",
+      "before": "Uncertainty Quantification \u2014 methods for estimating and communicating prediction confidence (ensemble, Bayesian, conformal)",
+      "after": "Uncertainty quantification: identifying, propagating and assessing uncertainties in inputs, observations, parameters and models with explicit assumptions and calibration evidence."
+    },
+    {
+      "section": "glossary",
+      "term": "Wobbe index",
+      "before": "A measure of gas interchangeability \u2014 heating value divided by square root of specific gravity",
+      "after": "Calorific value divided by the square root of gas relative density to air, using consistent reference conditions and gross/net basis; this is an interchangeability indicator, not a complete burner-compatibility test."
+    },
+    {
+      "section": "nomenclature",
+      "key": "Cp",
+      "before": {
+        "symbol": "$C_p$",
+        "description": "Heat capacity at constant pressure",
+        "unit": "J/(mol\u00b7K)"
+      },
+      "after": {
+        "symbol": "$C_p$",
+        "description": "Molar heat capacity at constant pressure",
+        "unit": "J/(mol\u00b7K)"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "Cv",
+      "before": {
+        "symbol": "$C_v$",
+        "description": "Heat capacity at constant volume / Valve flow coefficient",
+        "unit": "J/(mol\u00b7K) or US gpm"
+      },
+      "after": {
+        "symbol": "$C_v$",
+        "description": "Molar heat capacity at constant volume",
+        "unit": "J/(mol\u00b7K)"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "Cv_valve",
+      "before": null,
+      "after": {
+        "symbol": "$C_{v,\\mathrm{valve}}$",
+        "description": "Valve coefficient: water flow at 60 \u00b0F and 1 psi differential",
+        "unit": "US gpm on the stated reference basis"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "cp_mass",
+      "before": null,
+      "after": {
+        "symbol": "$c_p$",
+        "description": "Mass-specific heat capacity at constant pressure",
+        "unit": "J/(kg\u00b7K)"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "f",
+      "before": {
+        "symbol": "$f$",
+        "description": "Fugacity or friction factor",
+        "unit": "Pa or dimensionless"
+      },
+      "after": {
+        "symbol": "$f_i$",
+        "description": "Component fugacity",
+        "unit": "Pa"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "f_D",
+      "before": null,
+      "after": {
+        "symbol": "$f_D$",
+        "description": "Darcy friction factor; four times the Fanning factor",
+        "unit": "dimensionless"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "G",
+      "before": {
+        "symbol": "$G$",
+        "description": "Gibbs free energy",
+        "unit": "J/mol"
+      },
+      "after": {
+        "symbol": "$G$",
+        "description": "Molar Gibbs free energy in molar thermodynamic equations",
+        "unit": "J/mol"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "H",
+      "before": {
+        "symbol": "$H$",
+        "description": "Enthalpy or head",
+        "unit": "J/mol or m"
+      },
+      "after": {
+        "symbol": "$H$",
+        "description": "Enthalpy on the stated molar, mass or extensive basis",
+        "unit": "J/mol, J/kg or J; defined locally"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "H_dot",
+      "before": null,
+      "after": {
+        "symbol": "$\\dot{H}$",
+        "description": "Enthalpy flow rate",
+        "unit": "W"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "H_head",
+      "before": null,
+      "after": {
+        "symbol": "$H_p$",
+        "description": "Polytropic compressor head as specific work",
+        "unit": "J/kg; sometimes kJ/kg"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "h_head",
+      "before": null,
+      "after": {
+        "symbol": "$h_{\\mathrm{head}}$",
+        "description": "Hydraulic head as energy per unit weight",
+        "unit": "m"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "K",
+      "before": {
+        "symbol": "$K$",
+        "description": "Equilibrium ratio ($K_i = y_i/x_i$) or K-factor",
+        "unit": "dimensionless"
+      },
+      "after": {
+        "symbol": "$K_i$",
+        "description": "Phase-equilibrium ratio y_i/x_i",
+        "unit": "dimensionless"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "K_SB",
+      "before": null,
+      "after": {
+        "symbol": "$K_{SB}$",
+        "description": "Souders\u2013Brown separator gas-capacity factor",
+        "unit": "m/s"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "M",
+      "before": {
+        "symbol": "$M$",
+        "description": "Molecular weight",
+        "unit": "g/mol"
+      },
+      "after": {
+        "symbol": "$M$",
+        "description": "Molar mass; convert g/mol to kg/mol in SI mass balances",
+        "unit": "kg/mol"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "P",
+      "before": {
+        "symbol": "$P$",
+        "description": "Pressure",
+        "unit": "Pa or bara"
+      },
+      "after": {
+        "symbol": "$P$",
+        "description": "Absolute pressure unless explicitly marked gauge",
+        "unit": "Pa or bara; 1 bar = 100000 Pa"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "Q",
+      "before": {
+        "symbol": "$Q$",
+        "description": "Heat duty or volumetric flow rate",
+        "unit": "W or m\u00b3/s"
+      },
+      "after": {
+        "symbol": "$Q$",
+        "description": "Heat or volumetric flow, distinguished by local definition",
+        "unit": "J or m\u00b3/s; defined locally"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "Q_dot",
+      "before": null,
+      "after": {
+        "symbol": "$\\dot{Q}$",
+        "description": "Heat-transfer rate, positive into the stated control volume",
+        "unit": "W"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "q_volume",
+      "before": null,
+      "after": {
+        "symbol": "$q$",
+        "description": "Volumetric flow at stated actual or reference conditions",
+        "unit": "m\u00b3/s"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "R",
+      "before": {
+        "symbol": "$R$",
+        "description": "Universal gas constant",
+        "unit": "8.314 J/(mol\u00b7K)"
+      },
+      "after": {
+        "symbol": "$R$",
+        "description": "Universal gas constant, approximately 8.314462618",
+        "unit": "J/(mol\u00b7K)"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "T",
+      "before": {
+        "symbol": "$T$",
+        "description": "Temperature",
+        "unit": "K or \u00b0C"
+      },
+      "after": {
+        "symbol": "$T$",
+        "description": "Absolute temperature in thermodynamic ratios; Celsius may label reported states",
+        "unit": "K; \u00b0C only where stated"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "W",
+      "before": {
+        "symbol": "$W$",
+        "description": "Power or work",
+        "unit": "W or J"
+      },
+      "after": {
+        "symbol": "$W$",
+        "description": "Work crossing a stated system boundary",
+        "unit": "J"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "W_dot",
+      "before": null,
+      "after": {
+        "symbol": "$\\dot{W}$",
+        "description": "Shaft power, with sign convention defined locally",
+        "unit": "W"
+      }
+    },
+    {
+      "section": "nomenclature",
+      "key": "beta",
+      "before": null,
+      "after": {
+        "symbol": "$\\beta$",
+        "description": "Vapor mole fraction in the two-phase flash equations",
+        "unit": "dimensionless"
+      }
+    }
+  ],
+  "sources": {
+    "HYSYS": "https://www.aspentech.com/en/products/engineering/aspen-hysys",
+    "UniSim": "https://process.honeywell.com/us/en/products/industrial-software/process-optimization/unisim-design-suite",
+    "NeqSim": "source commit 6cc8026202a5d3f9383c9abd1d97d448993813f9",
+    "technical_definitions": "Corresponding reviewed textbook chapters and their cited primary sources"
+  }
+}

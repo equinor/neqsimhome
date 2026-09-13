@@ -1,0 +1,546 @@
+{
+  "chapter": "ch26_well_network_optimization",
+  "source_commit": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "python_executable": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "hook_module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\optimization_solution_hooks.py",
+  "hook_sha256": "9ffa8da5cacf5b82cebd317adc8e9c94da36ce0e84ba2d41958e1d0aabf71c38",
+  "hook_snapshot": "verification\\scientific_revision\\hook_sources\\9ffa8da5cacf5b82cebd317adc8e9c94da36ce0e84ba2d41958e1d0aabf71c38.py",
+  "helper_sources": [
+    {
+      "module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\verify_optimization_solution_hooks.py",
+      "sha256": "57ad44d5e87dd4aaa28e1fe34698976f0645f7b397658b3621b4bf854dab275b",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\57ad44d5e87dd4aaa28e1fe34698976f0645f7b397658b3621b4bf854dab275b.py"
+    },
+    {
+      "module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\optimization_solution_helpers.py",
+      "sha256": "066c566b280e6e5177b2fb30700f6d2d05cdd004e546c667a7b52c227e84514c",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\066c566b280e6e5177b2fb30700f6d2d05cdd004e546c667a7b52c227e84514c.py"
+    },
+    {
+      "module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\optimization_additional_solution_checks.py",
+      "sha256": "01a818429cec010878bb8da214f7e80c745f11858faee8f88856540f5370f907",
+      "snapshot": "verification\\scientific_revision\\hook_sources\\01a818429cec010878bb8da214f7e80c745f11858faee8f88856540f5370f907.py"
+    }
+  ],
+  "interpretation": "Exact literal execution with supplementary numerical/physical/software solution checks; not field calibration.",
+  "prerequisite_fences": [
+    {
+      "number": 1,
+      "sha256": "1c9a1d2e093ea5a2446b98679d986c54956db10c898ea26c7c7cc06a428e6b82",
+      "status": "passed"
+    },
+    {
+      "number": 2,
+      "sha256": "d0f0abebe607b7caca0300c1dfa4c5d4054bf4a5dcbe87834ea811e2e97e5f18",
+      "status": "passed"
+    },
+    {
+      "number": 4,
+      "sha256": "c8d42da2872f2544aea1b2dad1715f1fafa11a73ca2102be400fec3f5170ffee",
+      "status": "passed"
+    },
+    {
+      "number": 5,
+      "sha256": "9cbbcda899ffa9b665ad715856d416e95679223874644323ff70ae6eb9b5fc89",
+      "status": "passed"
+    },
+    {
+      "number": 6,
+      "sha256": "fd7d68d8a33e4928505a866778b0b089af0119d89e1eb7d899182b9854be43ad",
+      "status": "passed"
+    },
+    {
+      "number": 8,
+      "sha256": "a0edfed88f2fe46d04070c233c0205aa6347f1134c6559ae612a0c25bd326339",
+      "status": "passed"
+    },
+    {
+      "number": 9,
+      "sha256": "a0e58e25a5851e532aeaf153d938a3dc1d914898b9614db849defeae73780570",
+      "status": "passed"
+    },
+    {
+      "number": 11,
+      "sha256": "baf1a904522020d00d2252ecaba2591a0734a4a64b34450778e4fc3dd6862f92",
+      "status": "passed"
+    },
+    {
+      "number": 12,
+      "sha256": "ccc2f3f18f767003a7a937d54ee6e846440c909220c7b4f2c7bfd6bce724244b",
+      "status": "passed"
+    },
+    {
+      "number": 13,
+      "sha256": "c707fdb6c9dc3590abbc9e0c8fdbcc03a0afbb9a6921688e5a8508d2d4f9d63c",
+      "status": "passed"
+    },
+    {
+      "number": 14,
+      "sha256": "2fd2e828e283ab5e574df139d1edc4ce06760d6d2596f3b0faa82deff1bc345f",
+      "status": "passed"
+    },
+    {
+      "number": 15,
+      "sha256": "c75a0e818d139a112c9e5593b9dacc4b4c3357dae309aa3e3e7b758ba04ffe07",
+      "status": "passed"
+    },
+    {
+      "number": 16,
+      "sha256": "3b0ff330b53075c73799a85ba2f2ef1970cccec3dcc27c680d3d2112cdf3d03d",
+      "status": "passed"
+    }
+  ],
+  "entries": [
+    {
+      "number": 2,
+      "sha256": "d0f0abebe607b7caca0300c1dfa4c5d4054bf4a5dcbe87834ea811e2e97e5f18",
+      "code_sha256": "d0f0abebe607b7caca0300c1dfa4c5d4054bf4a5dcbe87834ea811e2e97e5f18",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Vogel shut-in zero flow",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-10
+        },
+        {
+          "name": "Vogel AOF endpoint",
+          "passed": true,
+          "observed": 5000.0,
+          "expected": 5000.0,
+          "tolerance": 1e-10
+        },
+        {
+          "name": "Fetkovich shut-in zero flow",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-10
+        },
+        {
+          "name": "IPR curves monotone on declared pressure interval",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        }
+      ],
+      "status": "passed",
+      "seconds": 10.48399999999674,
+      "output": "ch26_well_network_optimization:fence2:39: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n"
+    },
+    {
+      "number": 4,
+      "sha256": "c8d42da2872f2544aea1b2dad1715f1fafa11a73ca2102be400fec3f5170ffee",
+      "code_sha256": "c8d42da2872f2544aea1b2dad1715f1fafa11a73ca2102be400fec3f5170ffee",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Vogel native11-point interpolant against independent interpolation",
+          "passed": true,
+          "observed": 4310.4,
+          "expected": 4310.4,
+          "tolerance": 1e-08
+        },
+        {
+          "name": "Vogel interpolation error satisfies quadratic interpolation bound",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Vogel native AOF",
+          "passed": true,
+          "observed": 6000.0,
+          "expected": 6000.0,
+          "tolerance": 1e-08
+        },
+        {
+          "name": "Vogel negative local slope",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.031000000002677552,
+      "output": ""
+    },
+    {
+      "number": 5,
+      "sha256": "9cbbcda899ffa9b665ad715856d416e95679223874644323ff70ae6eb9b5fc89",
+      "code_sha256": "9cbbcda899ffa9b665ad715856d416e95679223874644323ff70ae6eb9b5fc89",
+      "language": "python",
+      "checks": [
+        {
+          "name": "matched Vogel finite pressure above observed BHP",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "matched analytic Vogel RMS independently recomputed",
+          "passed": true,
+          "observed": 76.79558488651863,
+          "expected": 76.79558488651895,
+          "tolerance": 1e-07
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.01599999999598367,
+      "output": "Reservoir pressure: 248.5 RMS error: 76.79558488651863\n"
+    },
+    {
+      "number": 6,
+      "sha256": "fd7d68d8a33e4928505a866778b0b089af0119d89e1eb7d899182b9854be43ad",
+      "code_sha256": "fd7d68d8a33e4928505a866778b0b089af0119d89e1eb7d899182b9854be43ad",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Tubing mass relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Tubing component relative",
+          "passed": true,
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Tubing finite positive p/T and nonnegative flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Tubing horizontal passive pressure decline",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "upward production tubing BHP exceeds WHP",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        }
+      ],
+      "status": "passed",
+      "seconds": 5.5310000000026776,
+      "output": "Tubing head pressure: 85.5 bara\n"
+    },
+    {
+      "number": 8,
+      "sha256": "a0edfed88f2fe46d04070c233c0205aa6347f1134c6559ae612a0c25bd326339",
+      "code_sha256": "a0edfed88f2fe46d04070c233c0205aa6347f1134c6559ae612a0c25bd326339",
+      "language": "python",
+      "checks": [
+        {
+          "name": "network solver converged",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "internal junction mass conservation kg/hr",
+          "passed": true,
+          "observed": 39036.84347516554,
+          "expected": 39036.84347516554,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "fixed pressure source boundary",
+          "passed": true,
+          "observed": 90.0,
+          "expected": 90.0,
+          "tolerance": 1e-09
+        },
+        {
+          "name": "fixed pressure sink boundary",
+          "passed": true,
+          "observed": 85.0,
+          "expected": 85.0,
+          "tolerance": 1e-09
+        },
+        {
+          "name": "no pump passive pressure ordering",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "finite network pressure and flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Flowline-A flow getter converts internal kg/s to kg/hr",
+          "passed": true,
+          "observed": 39036.84347516554,
+          "expected": 39036.84347516554,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export flow getter converts internal kg/s to kg/hr",
+          "passed": true,
+          "observed": 39036.84347516554,
+          "expected": 39036.84347516554,
+          "tolerance": 1e-06
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.125,
+      "output": "=== Network Solution Report ===\nNetwork: Gathering Network | Converged: true | Iterations: 17 | Max Residual: 0,00 Pa\r\n\n--- Nodes ---\nName                 Type           P (bara) Demand (kg/h)\r\nManifold             JUNCTION          86,94         0,00\r\nPlatform             SINK              85,00         0,00\r\nSupply-A             SOURCE            90,00    -10000,00\r\n\n--- Elements ---\nName                 Type         From         To        Flow (kg/h)     dP (bar)   Velocity\r\nFlowline-A           PIPE         Supply-A     Manifold     39036,84       3,0648       4,96\r\nExport               PIPE         Manifold     Platform     39036,84       1,9352       3,18\r\n\n--- Gas Composition at Nodes ---\nNode                   Components\r\nSupply-A                        2\r\n\nMass balance residual: 0.0\n"
+    },
+    {
+      "number": 11,
+      "sha256": "baf1a904522020d00d2252ecaba2591a0734a4a64b34450778e4fc3dd6862f92",
+      "code_sha256": "baf1a904522020d00d2252ecaba2591a0734a4a64b34450778e4fc3dd6862f92",
+      "language": "python",
+      "checks": [
+        {
+          "name": "native candidate within lift allocation budget",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "native lift objective direct replay",
+          "passed": true,
+          "observed": 6819.999938964845,
+          "expected": 6819.999938964845,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "native tabulated candidate fails independent optimality test",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "accepted segment LP matches independent grid",
+          "passed": true,
+          "observed": 7050.0,
+          "expected": 7050.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "accepted segment allocation consumes budget",
+          "passed": true,
+          "observed": 2500000.0,
+          "expected": 2500000.0,
+          "tolerance": 1e-06
+        }
+      ],
+      "status": "passed",
+      "seconds": 4.203000000001339,
+      "output": "Lift allocation: {'Well-A': 1019999.9389648444, 'Well-B': 1019999.9389648444}\nOil rates: {'Well-A': 3709.9999694824223, 'Well-B': 3109.9999694824223}\nTotal oil: 6819.999938964845 Sm3/d\nTotal lift used: 2039999.877929689 Sm3/d\nChecked allocation Sm3/day: [1000000. 1500000.] oil: 7050.0\nNative candidate objective gap: 230.00006103515534\nNative candidate rejected as an optimum for these tabulated curves.\n"
+    },
+    {
+      "number": 12,
+      "sha256": "ccc2f3f18f767003a7a937d54ee6e846440c909220c7b4f2c7bfd6bce724244b",
+      "code_sha256": "ccc2f3f18f767003a7a937d54ee6e846440c909220c7b4f2c7bfd6bce724244b",
+      "language": "python",
+      "checks": [
+        {
+          "name": "incremental gas lift budget",
+          "passed": true,
+          "observed": 500000.0,
+          "expected": 500000.0,
+          "tolerance": 1e-07
+        },
+        {
+          "name": "independent concave allocation optimizer success",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "incremental lift discretization objective gap under one oil-rate unit",
+          "passed": true,
+          "observed": "True",
+          "expected": true
+        },
+        {
+          "name": "incremental lift direct oil replay",
+          "passed": true,
+          "observed": 5551.7993550349875,
+          "expected": 5551.7993550349875,
+          "tolerance": 1e-08
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.031000000002677552,
+      "output": "  Well-A: GL = 205000 Sm3/d, Oil = 2418 Sm3/d\n  Well-B: GL = 155000 Sm3/d, Oil = 2111 Sm3/d\n  Well-C: GL = 140000 Sm3/d, Oil = 1023 Sm3/d\n"
+    },
+    {
+      "number": 13,
+      "sha256": "c707fdb6c9dc3590abbc9e0c8fdbcc03a0afbb9a6921688e5a8508d2d4f9d63c",
+      "code_sha256": "c707fdb6c9dc3590abbc9e0c8fdbcc03a0afbb9a6921688e5a8508d2d4f9d63c",
+      "language": "python",
+      "checks": [
+        {
+          "name": "network solver converged",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "internal junction mass conservation kg/hr",
+          "passed": true,
+          "observed": 39036.84347516554,
+          "expected": 39036.84347516554,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "fixed pressure source boundary",
+          "passed": true,
+          "observed": 90.0,
+          "expected": 90.0,
+          "tolerance": 1e-09
+        },
+        {
+          "name": "fixed pressure sink boundary",
+          "passed": true,
+          "observed": 85.0,
+          "expected": 85.0,
+          "tolerance": 1e-09
+        },
+        {
+          "name": "no pump passive pressure ordering",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "finite network pressure and flows",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "Flowline-A flow getter converts internal kg/s to kg/hr",
+          "passed": true,
+          "observed": 39036.84347516554,
+          "expected": 39036.84347516554,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "Export flow getter converts internal kg/s to kg/hr",
+          "passed": true,
+          "observed": 39036.84347516554,
+          "expected": 39036.84347516554,
+          "tolerance": 1e-06
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "Flowline-A 39036.84347516554 kg/hr 4.962067360224117 m/s\nExport 39036.84347516554 kg/hr 3.1757231105434354 m/s\nPlatform pressure: 85.0 bara\n"
+    },
+    {
+      "number": 14,
+      "sha256": "2fd2e828e283ab5e574df139d1edc4ce06760d6d2596f3b0faa82deff1bc345f",
+      "code_sha256": "2fd2e828e283ab5e574df139d1edc4ce06760d6d2596f3b0faa82deff1bc345f",
+      "language": "python",
+      "checks": [
+        {
+          "name": "repeated native lift candidate budget",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "repeated native candidate objective replay",
+          "passed": true,
+          "observed": 6819.999938964845,
+          "expected": 6819.999938964845,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "native candidate remains below accepted7050 LP optimum",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.0,
+      "output": "Allocated oil: 6819.999938964845 Sm3/day\n"
+    },
+    {
+      "number": 15,
+      "sha256": "c75a0e818d139a112c9e5593b9dacc4b4c3357dae309aa3e3e7b758ba04ffe07",
+      "code_sha256": "c75a0e818d139a112c9e5593b9dacc4b4c3357dae309aa3e3e7b758ba04ffe07",
+      "language": "python",
+      "checks": [
+        {
+          "name": "native utility allocation bounds and resource",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "native allocation utility replay",
+          "passed": true,
+          "observed": 5835.786549551755,
+          "expected": 5835.786549551755,
+          "tolerance": 1e-07
+        },
+        {
+          "name": "concave utility objective versus analytic constrained optimum",
+          "passed": true,
+          "observed": 5835.786549551755,
+          "expected": 5835.84510182739,
+          "tolerance": 0.1
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.062000000005355105,
+      "output": "[259908.04036458337, 1040242.5130208335, 1199849.4466145835] 5835.786549551755 True\n"
+    },
+    {
+      "number": 16,
+      "sha256": "3b0ff330b53075c73799a85ba2f2ef1970cccec3dcc27c680d3d2112cdf3d03d",
+      "code_sha256": "3b0ff330b53075c73799a85ba2f2ef1970cccec3dcc27c680d3d2112cdf3d03d",
+      "language": "python",
+      "checks": [
+        {
+          "name": "integrated reduced model converged",
+          "passed": true,
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "field flow equals wells",
+          "passed": true,
+          "observed": 1684230.0800661817,
+          "expected": 1684230.0800661817,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "revenue unit identity",
+          "passed": true,
+          "observed": 5052690.240198545,
+          "expected": 5052690.240198545,
+          "tolerance": 1e-05
+        },
+        {
+          "name": "energy intensity unit identity",
+          "passed": true,
+          "observed": 202107.6096079418,
+          "expected": 202107.6096079418,
+          "tolerance": 1e-05
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.01599999999598367,
+      "output": "Converged: True in 3 iters\nField rate: 1684230.0800661817 Sm3/d\nWell rates: {'Well-A': 926529.059339204, 'Well-B': 757701.0207269778}\nRevenue: 5052690.240198545 energy: 202107.6096079418 kWh/d\n"
+    }
+  ],
+  "all_targeted_checks_passed": true
+}

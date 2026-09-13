@@ -1,0 +1,342 @@
+{
+  "chapter": "ch03_fluid_characterization",
+  "file": "gas_condensate_phase_envelope.png",
+  "title": "Six-component gas-condensate surrogate: PR",
+  "eos": "SystemPrEos",
+  "basis_section": "3.7.5",
+  "substitute_basis": "Illustration-only six-defined-compound surrogate: methane/ethane/propane/n-butane/n-pentane/n-hexane = 70/10/8/5/4/3 mol%. This does not validate the original characterized-fluid envelope; original trace/TP-flash failures are retained in ch03_probe.json. An intermediate defined-compound C20 surrogate also left an unresolved bubble segment and is retained in ch03_c20_surrogate_evidence.json.",
+  "components": [
+    [
+      "methane",
+      70
+    ],
+    [
+      "ethane",
+      10
+    ],
+    [
+      "propane",
+      8
+    ],
+    [
+      "n-butane",
+      5
+    ],
+    [
+      "n-pentane",
+      4
+    ],
+    [
+      "n-hexane",
+      3
+    ]
+  ],
+  "raw_amount_sum": 100,
+  "normalization": "All component amounts are normalized by NeqSim to the recorded mole fractions; TBP density inputs are g/cm3 and molar masses kg/mol.",
+  "normalized_composition": [
+    {
+      "component": "methane",
+      "mole_fraction": 0.7,
+      "molar_mass_kg_mol": 0.016042999999999998
+    },
+    {
+      "component": "ethane",
+      "mole_fraction": 0.1,
+      "molar_mass_kg_mol": 0.03007
+    },
+    {
+      "component": "propane",
+      "mole_fraction": 0.08,
+      "molar_mass_kg_mol": 0.044097000000000004
+    },
+    {
+      "component": "n-butane",
+      "mole_fraction": 0.05,
+      "molar_mass_kg_mol": 0.058122999999999994
+    },
+    {
+      "component": "n-pentane",
+      "mole_fraction": 0.04,
+      "molar_mass_kg_mol": 0.07215
+    },
+    {
+      "component": "n-hexane",
+      "mole_fraction": 0.03,
+      "molar_mass_kg_mol": 0.086177
+    }
+  ],
+  "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch03_fluid_characterization\\figures\\gas_condensate_phase_envelope.png",
+  "sha256": "91ae60b5e414c99500ab39c73e37535df1913f3396475a0fc1f272a5d54aebcb",
+  "data_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\legacy_phase_envelopes\\ch03_envelope.csv",
+  "data_sha256": "c8cd21ffa157aad678c8eb0d3737dc03c625c04e898542b6a6974ece23d4a16a",
+  "backup_path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\.build\\backups\\scientific_revision_legacy_envelopes\\ch03_fluid_characterization\\gas_condensate_phase_envelope.png",
+  "caption": "NeqSim PR vapour-liquid saturation envelope for an illustration-only defined-compound surrogate, not the Section 3.7.5 TBP fluid. The traced maxima are 83.5 \u00b0C (cricondentherm) and 138.8 bara (cricondenbar). Markers are sampled continuation extrema; no critical point or production/export trajectory is inferred. Dew/bubble assignment was checked by fresh TP flashes at three pressures around each branch. Continuation gaps remain open; solids, hydrates and aqueous stability are outside this VLE calculation.",
+  "extrema": {
+    "sampled_cricondentherm": {
+      "T_C": 83.50113287018252,
+      "P_bara": 71.8320115996702
+    },
+    "sampled_cricondenbar": {
+      "T_C": 37.52636548218618,
+      "P_bara": 138.7696831791222
+    }
+  },
+  "branch_classification": "Dew branch has the larger maximum temperature; fresh TP flashes at T +/- 0.5 K at three traced points nearest 5, 20 and 40 bara bracket the single-phase/two-phase transition. The dense single-phase bubble side is identified by density continuity, since its NeqSim phase label can be GAS. Getter names alone were not trusted.",
+  "branch_probes": [
+    {
+      "branch": "Dew boundary",
+      "point_T_K": 300.9690790886085,
+      "point_P_bara": 5.248528181929398,
+      "minus_0_5K": {
+        "T_K": 300.4690790886085,
+        "P_bara": 5.248528181929398,
+        "gas_labelled_fraction": 0.9984955700401674,
+        "phases": [
+          {
+            "type": "GAS",
+            "beta": 0.9984955700401674,
+            "density_kg_m3": 5.637665335341571
+          },
+          {
+            "type": "OIL",
+            "beta": 0.001504429959832576,
+            "density_kg_m3": 619.6631614963538
+          }
+        ],
+        "component_closure_max_abs": 2.7755575615628914e-17,
+        "max_absolute_log_fugacity_ratio": 6.21724893790107e-14
+      },
+      "plus_0_5K": {
+        "T_K": 301.4690790886085,
+        "P_bara": 5.248528181929398,
+        "gas_labelled_fraction": 1.0,
+        "phases": [
+          {
+            "type": "GAS",
+            "beta": 1.0,
+            "density_kg_m3": 5.634346992439765
+          }
+        ],
+        "component_closure_max_abs": 0.0,
+        "max_absolute_log_fugacity_ratio": null
+      }
+    },
+    {
+      "branch": "Dew boundary",
+      "point_T_K": 336.79528252750237,
+      "point_P_bara": 22.14248886522176,
+      "minus_0_5K": {
+        "T_K": 336.29528252750237,
+        "P_bara": 22.14248886522176,
+        "gas_labelled_fraction": 0.9984431048606419,
+        "phases": [
+          {
+            "type": "GAS",
+            "beta": 0.9984431048606419,
+            "density_kg_m3": 22.541511498861876
+          },
+          {
+            "type": "OIL",
+            "beta": 0.0015568951393580832,
+            "density_kg_m3": 558.4747217717055
+          }
+        ],
+        "component_closure_max_abs": 1.1102230246251565e-16,
+        "max_absolute_log_fugacity_ratio": 1.6913137557153937e-12
+      },
+      "plus_0_5K": {
+        "T_K": 337.29528252750237,
+        "P_bara": 22.14248886522176,
+        "gas_labelled_fraction": 1.0,
+        "phases": [
+          {
+            "type": "GAS",
+            "beta": 1.0,
+            "density_kg_m3": 22.521541820939607
+          }
+        ],
+        "component_closure_max_abs": 0.0,
+        "max_absolute_log_fugacity_ratio": null
+      }
+    },
+    {
+      "branch": "Dew boundary",
+      "point_T_K": 351.03706511538974,
+      "point_P_bara": 42.14248886522175,
+      "minus_0_5K": {
+        "T_K": 350.53706511538974,
+        "P_bara": 42.14248886522175,
+        "gas_labelled_fraction": 0.9982470704533417,
+        "phases": [
+          {
+            "type": "GAS",
+            "beta": 0.9982470704533417,
+            "density_kg_m3": 43.57135387204097
+          },
+          {
+            "type": "OIL",
+            "beta": 0.0017529295466582884,
+            "density_kg_m3": 511.80102287837605
+          }
+        ],
+        "component_closure_max_abs": 1.3877787807814457e-17,
+        "max_absolute_log_fugacity_ratio": 3.2897018442722124e-12
+      },
+      "plus_0_5K": {
+        "T_K": 351.53706511538974,
+        "P_bara": 42.14248886522175,
+        "gas_labelled_fraction": 1.0,
+        "phases": [
+          {
+            "type": "GAS",
+            "beta": 1.0,
+            "density_kg_m3": 43.51697228151216
+          }
+        ],
+        "component_closure_max_abs": 0.0,
+        "max_absolute_log_fugacity_ratio": null
+      }
+    },
+    {
+      "branch": "Bubble boundary",
+      "point_T_K": 140.59959991695314,
+      "point_P_bara": 5.118762765607274,
+      "minus_0_5K": {
+        "T_K": 140.09959991695314,
+        "P_bara": 5.118762765607274,
+        "gas_labelled_fraction": 0.0,
+        "phases": [
+          {
+            "type": "OIL",
+            "beta": 1.0,
+            "density_kg_m3": 513.6358675376047
+          }
+        ],
+        "component_closure_max_abs": 0.0,
+        "max_absolute_log_fugacity_ratio": null
+      },
+      "plus_0_5K": {
+        "T_K": 141.09959991695314,
+        "P_bara": 5.118762765607274,
+        "gas_labelled_fraction": 0.07775621462414983,
+        "phases": [
+          {
+            "type": "GAS",
+            "beta": 0.07775621462414983,
+            "density_kg_m3": 7.757134777773063
+          },
+          {
+            "type": "OIL",
+            "beta": 0.9222437853758502,
+            "density_kg_m3": 521.1996548959276
+          }
+        ],
+        "component_closure_max_abs": 1.2945200467129325e-13,
+        "max_absolute_log_fugacity_ratio": 1.6191936680212044e-11
+      }
+    },
+    {
+      "branch": "Bubble boundary",
+      "point_T_K": 173.83282342455317,
+      "point_P_bara": 19.88935305083216,
+      "minus_0_5K": {
+        "T_K": 173.33282342455317,
+        "P_bara": 19.88935305083216,
+        "gas_labelled_fraction": 0.0,
+        "phases": [
+          {
+            "type": "OIL",
+            "beta": 1.0,
+            "density_kg_m3": 474.28784368290286
+          }
+        ],
+        "component_closure_max_abs": 0.0,
+        "max_absolute_log_fugacity_ratio": null
+      },
+      "plus_0_5K": {
+        "T_K": 174.33282342455317,
+        "P_bara": 19.88935305083216,
+        "gas_labelled_fraction": 0.04751968523370482,
+        "phases": [
+          {
+            "type": "GAS",
+            "beta": 0.04751968523370482,
+            "density_kg_m3": 29.20216202038983
+          },
+          {
+            "type": "OIL",
+            "beta": 0.9524803147662951,
+            "density_kg_m3": 478.8688477939763
+          }
+        ],
+        "component_closure_max_abs": 0.0,
+        "max_absolute_log_fugacity_ratio": 6.37525587856231e-11
+      }
+    },
+    {
+      "branch": "Bubble boundary",
+      "point_T_K": 200.31310910501367,
+      "point_P_bara": 42.625451454671904,
+      "minus_0_5K": {
+        "T_K": 199.81310910501367,
+        "P_bara": 42.625451454671904,
+        "gas_labelled_fraction": 0.0,
+        "phases": [
+          {
+            "type": "OIL",
+            "beta": 1.0,
+            "density_kg_m3": 437.00446774063784
+          }
+        ],
+        "component_closure_max_abs": 0.0,
+        "max_absolute_log_fugacity_ratio": null
+      },
+      "plus_0_5K": {
+        "T_K": 200.81310910501367,
+        "P_bara": 42.625451454671904,
+        "gas_labelled_fraction": 0.03300048322168489,
+        "phases": [
+          {
+            "type": "GAS",
+            "beta": 0.03300048322168489,
+            "density_kg_m3": 68.43928573299932
+          },
+          {
+            "type": "OIL",
+            "beta": 0.9669995167783151,
+            "density_kg_m3": 439.92372744389456
+          }
+        ],
+        "component_closure_max_abs": 0.0,
+        "max_absolute_log_fugacity_ratio": 1.3899992268307927e-13
+      }
+    }
+  ],
+  "raw_getter_mapping": [
+    {
+      "getter": "dewT",
+      "physical_label": "Dew boundary",
+      "valid_points": 33,
+      "gap_points": 1
+    },
+    {
+      "getter": "bubT",
+      "physical_label": "Bubble boundary",
+      "valid_points": 29,
+      "gap_points": 1
+    }
+  ],
+  "physics_scope": "Fixed-composition fluid saturation envelope; no solid, hydrate or aqueous stability envelope, lab tuning, critical-point certification, or operating trajectory. Extrema are sampled maxima, not independently optimized extrema.",
+  "basis_match": "illustration_only_surrogate",
+  "verification": {
+    "status": "passed_scoped_VLE_checks",
+    "fresh_TP_flash_states": 12,
+    "component_closure_max_abs": 1.2945200467129325e-13,
+    "component_closure_tolerance": 1e-07,
+    "phase_composition_sum_tolerance": 1e-07,
+    "two_phase_fugacity_max_abs_log_ratio": 6.37525587856231e-11,
+    "log_fugacity_ratio_tolerance": 1e-06,
+    "positive_finite_phase_densities": true,
+    "limitation": "Three low/moderate-pressure transition brackets per branch verify classification and local VLE consistency; they do not validate every continuation point or EOS accuracy against laboratory data. Sampled extrema and open continuation gaps remain explicitly qualified."
+  }
+}

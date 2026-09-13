@@ -1,0 +1,309 @@
+{
+  "chapter": "ch19_export_and_metering",
+  "source_commit": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "python_executable": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "hook_module": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\export_capacity_solution_hooks.py",
+  "hook_sha256": "056bf7106190d4167f199a5ba4c4589d2717526d4b3dff4b0cff88f48dedd87b",
+  "interpretation": "Exact literal execution with supplementary numerical/physical/software solution checks; not field calibration.",
+  "prerequisite_fences": [
+    {
+      "number": 1,
+      "sha256": "19cbf01e1b6472bc4213e45761b4fb6728e76727ebd47fffcf49383d7234290c",
+      "status": "passed"
+    },
+    {
+      "number": 2,
+      "sha256": "1f242295a4a0696d7b876799301609999185806a3aa137079fc4976815bf081c",
+      "status": "passed"
+    },
+    {
+      "number": 3,
+      "sha256": "fa9acb4436b78a3be4565bd4261c3f132cbf0d5edb7af15c30e25c136a85491a",
+      "status": "passed"
+    },
+    {
+      "number": 4,
+      "sha256": "221ef7f95b12eceaf7e968aa877c22e1da903fff13acc80bbfba75b14bd8e8ab",
+      "status": "failed"
+    }
+  ],
+  "entries": [
+    {
+      "number": 1,
+      "sha256": "19cbf01e1b6472bc4213e45761b4fb6728e76727ebd47fffcf49383d7234290c",
+      "code_sha256": "19cbf01e1b6472bc4213e45761b4fb6728e76727ebd47fffcf49383d7234290c",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Export gas quality",
+          "passed": true,
+          "observed": {
+            "GCV_MJ_Sm3": 40.84527794711126,
+            "NCV_MJ_Sm3": 36.93888761075336,
+            "Wobbe_MJ_Sm3": 51.02244428529839,
+            "relative_density": 0.640857086758925,
+            "molar_mass_g_mol": 18.521454319999997,
+            "Wobbe_identity_error": 7.105427357601002e-15,
+            "composition_molar_mass_g_mol": 18.522036999999997
+          },
+          "tolerance": {
+            "Wobbe_absolute": 1e-10,
+            "molar_mass_g_mol": 0.02
+          },
+          "scope": "Declared 15 C volume/25 C combustion reference; algebra/units, not custody-transfer certification."
+        }
+      ],
+      "status": "passed",
+      "seconds": 2.0,
+      "output": "=== ISO 6976:2016 Gas Quality Report ===\nReference conditions: volume at 15 °C, combustion at 25 °C\nSuperior Calorific Value (GCV):  40.85 MJ/Sm³\nInferior Calorific Value (NCV):  36.94 MJ/Sm³\nSuperior Wobbe Index:            51.02 MJ/Sm³\nRelative Density (air=1):        0.6409\nMolar Mass:                      18.52 g/mol\n"
+    },
+    {
+      "number": 2,
+      "sha256": "1f242295a4a0696d7b876799301609999185806a3aa137079fc4976815bf081c",
+      "code_sha256": "1f242295a4a0696d7b876799301609999185806a3aa137079fc4976815bf081c",
+      "language": "python",
+      "checks": [
+        {
+          "name": "C2+ fraction 0.02",
+          "passed": true,
+          "observed": {
+            "GCV_MJ_Sm3": 37.676606011667026,
+            "NCV_MJ_Sm3": 33.98311455529783,
+            "Wobbe_MJ_Sm3": 49.11363061209824,
+            "relative_density": 0.5884905161752196,
+            "molar_mass_g_mol": 17.016498979999998,
+            "Wobbe_identity_error": 7.105427357601002e-15,
+            "composition_molar_mass_g_mol": 17.017044
+          },
+          "tolerance": {
+            "Wobbe_absolute": 1e-10,
+            "molar_mass_g_mol": 0.02
+          },
+          "scope": "Declared 15 C volume/25 C combustion reference; algebra/units, not custody-transfer certification."
+        },
+        {
+          "name": "C2+ fraction 0.04",
+          "passed": true,
+          "observed": {
+            "GCV_MJ_Sm3": 38.5567885869496,
+            "NCV_MJ_Sm3": 34.804915600728336,
+            "Wobbe_MJ_Sm3": 49.62754042047003,
+            "relative_density": 0.6036096923675837,
+            "molar_mass_g_mol": 17.45132296,
+            "Wobbe_identity_error": 1.4210854715202004e-14,
+            "composition_molar_mass_g_mol": 17.451877999999997
+          },
+          "tolerance": {
+            "Wobbe_absolute": 1e-10,
+            "molar_mass_g_mol": 0.02
+          },
+          "scope": "Declared 15 C volume/25 C combustion reference; algebra/units, not custody-transfer certification."
+        },
+        {
+          "name": "C2+ fraction 0.06",
+          "passed": true,
+          "observed": {
+            "GCV_MJ_Sm3": 39.4373718383688,
+            "NCV_MJ_Sm3": 35.62708580516228,
+            "Wobbe_MJ_Sm3": 50.13666534751351,
+            "relative_density": 0.6187355083240509,
+            "molar_mass_g_mol": 17.886146939999996,
+            "Wobbe_identity_error": 7.105427357601002e-15,
+            "composition_molar_mass_g_mol": 17.886711999999996
+          },
+          "tolerance": {
+            "Wobbe_absolute": 1e-10,
+            "molar_mass_g_mol": 0.02
+          },
+          "scope": "Declared 15 C volume/25 C combustion reference; algebra/units, not custody-transfer certification."
+        },
+        {
+          "name": "C2+ fraction 0.08",
+          "passed": true,
+          "observed": {
+            "GCV_MJ_Sm3": 40.318366862096134,
+            "NCV_MJ_Sm3": 36.449635526651434,
+            "Wobbe_MJ_Sm3": 50.641139050601865,
+            "relative_density": 0.6338681545427683,
+            "molar_mass_g_mol": 18.320970919999997,
+            "Wobbe_identity_error": 0.0,
+            "composition_molar_mass_g_mol": 18.321545999999998
+          },
+          "tolerance": {
+            "Wobbe_absolute": 1e-10,
+            "molar_mass_g_mol": 0.02
+          },
+          "scope": "Declared 15 C volume/25 C combustion reference; algebra/units, not custody-transfer certification."
+        },
+        {
+          "name": "C2+ fraction 0.1",
+          "passed": true,
+          "observed": {
+            "GCV_MJ_Sm3": 41.1997847707923,
+            "NCV_MJ_Sm3": 37.27257513851913,
+            "Wobbe_MJ_Sm3": 51.141090193935696,
+            "relative_density": 0.6490078217990327,
+            "molar_mass_g_mol": 18.755794899999994,
+            "Wobbe_identity_error": 7.105427357601002e-15,
+            "composition_molar_mass_g_mol": 18.75638
+          },
+          "tolerance": {
+            "Wobbe_absolute": 1e-10,
+            "molar_mass_g_mol": 0.02
+          },
+          "scope": "Declared 15 C volume/25 C combustion reference; algebra/units, not custody-transfer certification."
+        },
+        {
+          "name": "C2+ fraction 0.12",
+          "passed": true,
+          "observed": {
+            "GCV_MJ_Sm3": 42.081636694078846,
+            "NCV_MJ_Sm3": 38.09591502980042,
+            "Wobbe_MJ_Sm3": 51.63664263150259,
+            "relative_density": 0.6641547011533857,
+            "molar_mass_g_mol": 19.19061888,
+            "Wobbe_identity_error": 0.0,
+            "composition_molar_mass_g_mol": 19.191214
+          },
+          "tolerance": {
+            "Wobbe_absolute": 1e-10,
+            "molar_mass_g_mol": 0.02
+          },
+          "scope": "Declared 15 C volume/25 C combustion reference; algebra/units, not custody-transfer certification."
+        },
+        {
+          "name": "C2+ fraction 0.15",
+          "passed": true,
+          "observed": {
+            "GCV_MJ_Sm3": 43.405252745433444,
+            "NCV_MJ_Sm3": 39.33169815649836,
+            "Wobbe_MJ_Sm3": 52.371983311591315,
+            "relative_density": 0.6868889615377151,
+            "molar_mass_g_mol": 19.84285485,
+            "Wobbe_identity_error": 0.0,
+            "composition_molar_mass_g_mol": 19.843465
+          },
+          "tolerance": {
+            "Wobbe_absolute": 1e-10,
+            "molar_mass_g_mol": 0.02
+          },
+          "scope": "Declared 15 C volume/25 C combustion reference; algebra/units, not custody-transfer certification."
+        },
+        {
+          "name": "Declared enrichment increases volumetric GCV",
+          "passed": true,
+          "observed": [
+            37.676606011667026,
+            38.5567885869496,
+            39.4373718383688,
+            40.318366862096134,
+            41.1997847707923,
+            42.081636694078846,
+            43.405252745433444
+          ],
+          "tolerance": null,
+          "scope": null
+        }
+      ],
+      "status": "passed",
+      "seconds": 0.3899999999994179,
+      "output": "  C2+ (mol%)   GCV (MJ/Sm³)   Wobbe (MJ/Sm³)    d (rel)\n------------------------------------------------------\n         2.0          37.68            49.11     0.5885\n         4.0          38.56            49.63     0.6036\n         6.0          39.44            50.14     0.6187\n         8.0          40.32            50.64     0.6339\n        10.0          41.20            51.14     0.6490\n        12.0          42.08            51.64     0.6642\n        15.0          43.41            52.37     0.6869\n"
+    },
+    {
+      "number": 3,
+      "sha256": "fa9acb4436b78a3be4565bd4261c3f132cbf0d5edb7af15c30e25c136a85491a",
+      "code_sha256": "fa9acb4436b78a3be4565bd4261c3f132cbf0d5edb7af15c30e25c136a85491a",
+      "language": "python",
+      "checks": [
+        {
+          "name": "Eight water VLE onset states bracketed by independent TP flashes",
+          "passed": true,
+          "observed": [
+            {
+              "pressure_bara": 20.0,
+              "water_dew_C": -35.14909210205076,
+              "aqueous_below_above": [
+                true,
+                false
+              ]
+            },
+            {
+              "pressure_bara": 40.0,
+              "water_dew_C": -29.28033294677732,
+              "aqueous_below_above": [
+                true,
+                false
+              ]
+            },
+            {
+              "pressure_bara": 60.0,
+              "water_dew_C": -26.53375091552732,
+              "aqueous_below_above": [
+                true,
+                false
+              ]
+            },
+            {
+              "pressure_bara": 70.0,
+              "water_dew_C": -25.78027191162107,
+              "aqueous_below_above": [
+                true,
+                false
+              ]
+            },
+            {
+              "pressure_bara": 80.0,
+              "water_dew_C": -25.329908752441384,
+              "aqueous_below_above": [
+                true,
+                false
+              ]
+            },
+            {
+              "pressure_bara": 100.0,
+              "water_dew_C": -25.100187683105446,
+              "aqueous_below_above": [
+                true,
+                false
+              ]
+            },
+            {
+              "pressure_bara": 120.0,
+              "water_dew_C": -25.338148498535134,
+              "aqueous_below_above": [
+                true,
+                false
+              ]
+            },
+            {
+              "pressure_bara": 150.0,
+              "water_dew_C": -25.816969299316384,
+              "aqueous_below_above": [
+                true,
+                false
+              ]
+            }
+          ],
+          "tolerance": 0.2,
+          "scope": "Metastable aqueous VLE below freezing; ice and hydrates excluded."
+        }
+      ],
+      "status": "passed",
+      "seconds": 13.625,
+      "output": "Water VLE dew point; ice/hydrate phases are outside this calculation\n  20.0 bara:  -35.15 C\n  40.0 bara:  -29.28 C\n  60.0 bara:  -26.53 C\n  70.0 bara:  -25.78 C\n  80.0 bara:  -25.33 C\n 100.0 bara:  -25.10 C\n 120.0 bara:  -25.34 C\n 150.0 bara:  -25.82 C\n"
+    },
+    {
+      "number": 4,
+      "sha256": "221ef7f95b12eceaf7e968aa877c22e1da903fff13acc80bbfba75b14bd8e8ab",
+      "code_sha256": "221ef7f95b12eceaf7e968aa877c22e1da903fff13acc80bbfba75b14bd8e8ab",
+      "language": "python",
+      "checks": [],
+      "status": "failed",
+      "error": "",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\devtools\\verify_optimization_solution_hooks.py\", line 58, in main\n    row['checks']=hooks.after_fence(n,i,ns,code)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\verification\\scientific_revision\\export_capacity_solution_hooks.py\", line 120, in after_fence\n    t=np.array(ns['dew_temps']);p=np.array(ns['dew_press']);assert len(t)==len(p)>20 and np.isfinite(t).all() and np.isfinite(p).all() and min(t)>0 and min(p)>0\n                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "seconds": 0.39099999999598367,
+      "output": "Sampled dew-curve maximum: 27.3 °C at 48.9 bara\n\n    T (°C)   P (bara)\n----------------------\n     -23.0        1.1\n     -21.6        1.2\n     -20.2        1.3\n     -18.8        1.5\n     -17.3        1.7\n     -15.5        1.9\n     -13.6        2.1\n     -11.5        2.5\n      -9.1        2.9\n      -6.5        3.5\n      -3.6        4.2\n      -0.3        5.2\n       3.3        6.5\n       7.2        8.4\n      11.5       11.0\n      15.9       14.9\n      20.4       20.6\n      24.5       29.2\n      26.7       39.0\n      27.3       48.9\n      26.6       58.7\n      24.9       68.4\n      22.0       78.0\n      18.0       87.5\n      12.4       96.7\n       6.2      103.5\n      -0.9      108.5\n      -8.9      111.0\n     -17.4      110.5\n     -25.4      107.5\n     -32.6      102.8\n     -39.4       96.6\n     -45.5       89.8\n     -50.1       83.7\n     -53.8       78.5\n     -56.2       74.7\n     -57.8       72.2\n     -58.8       70.6\n     -59.6       69.5\n     -59.7       69.2\n     -59.8       69.0\n     -60.0       68.8\n     -60.1       68.6\n     -60.1       68.5\n"
+    }
+  ],
+  "all_targeted_checks_passed": false
+}

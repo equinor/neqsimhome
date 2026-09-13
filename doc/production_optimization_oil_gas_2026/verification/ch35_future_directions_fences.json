@@ -1,0 +1,80 @@
+{
+  "chapter": "ch35_future_directions",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "execution_model": "Sequential literal Python in a fresh JVM; ordinary executions supplemented by exact-source hook runs. Per-example evidence links identify reused executions.",
+  "examples": [
+    {
+      "number": 1,
+      "language": "python",
+      "line": 113,
+      "sha256": "7b46c5203a59e3e5c41986615532365f89cd9f1106bcebe31739d4e1812e69a2",
+      "status": "passed",
+      "seconds": 3.953,
+      "output": "Gas to compressor: 1.20 MSm3/day\nGas to flare:      0.30 MSm3/day\nComplete-combustion CO2 accounting: 672464.5 kg/day\nCompressor power:  2.99 MW\n",
+      "execution_evidence": "verification\\scientific_revision\\ch35_solution_checks.json",
+      "execution_evidence_sha256": "76d082668199fd191261030aeaebae6f89c84ef8da8f7cea479faf85b8dc7c26",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9194c8bd6c2841a59e237753209a8687e3617e707a5012043a45f9de83d926f6.json"
+    },
+    {
+      "number": 2,
+      "language": "python",
+      "line": 226,
+      "sha256": "e717806c1ac8d734b39a3797a00971985977201be7a6c896839d5d243b927400",
+      "status": "passed",
+      "seconds": 0.25,
+      "output": "--- CO2 Pipeline Transport Conditions ---\nTemperature:  25.0 C\nPressure:     100.0 bara\nDensity:      669.3 kg/m3\nViscosity:    0.058 mPa.s\nCalculated phase count: 1\n40.0 1 90.03625676207672\n60.0 1 171.20124435993344\n80.0 1 573.6294181435042\n100.0 1 669.2534981861612\n120.0 1 721.9240697599629\n",
+      "execution_evidence": "verification\\scientific_revision\\ch35_solution_checks.json",
+      "execution_evidence_sha256": "76d082668199fd191261030aeaebae6f89c84ef8da8f7cea479faf85b8dc7c26",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9194c8bd6c2841a59e237753209a8687e3617e707a5012043a45f9de83d926f6.json"
+    },
+    {
+      "number": 3,
+      "language": "python",
+      "line": 279,
+      "sha256": "2ae054d36aa6abf27f618467b8bd95b9e7ced47d90bac3af599c5552411aa4c8",
+      "status": "passed",
+      "seconds": 0.187,
+      "output": "--- CO2-Oil Mixture at Reservoir Conditions ---\nTemperature: 90 C, Pressure: 250 bara\nNumber of phases: 1\nDensity: 667.3 kg/m3\nViscosity: 0.237 mPa.s\nSingle equilibrium phase for this overall composition at this P,T\nA single flash does not determine multicontact minimum miscibility pressure\n",
+      "execution_evidence": "verification\\scientific_revision\\ch35_solution_checks.json",
+      "execution_evidence_sha256": "76d082668199fd191261030aeaebae6f89c84ef8da8f7cea479faf85b8dc7c26",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9194c8bd6c2841a59e237753209a8687e3617e707a5012043a45f9de83d926f6.json"
+    },
+    {
+      "number": 4,
+      "language": "python",
+      "line": 359,
+      "sha256": "86c1bfec2f9bac0499765d48d8dc5b1131238c2682ef36cd47b2e3364377754f",
+      "status": "passed",
+      "seconds": 1.688,
+      "output": "--- Prescribed Syngas Conditioning Results ---\nMixed syngas rate:   94016 kg/hr\nSyngas pressure:       70 bara\nSyngas temperature:    30.0 C\nCompressor power:  9.73 MW\nH2 purity (molar): 75.8%\nHydrogen component within mixed syngas (kg/hr): 13192.19440291809\n",
+      "execution_evidence": "verification\\scientific_revision\\ch35_solution_checks.json",
+      "execution_evidence_sha256": "76d082668199fd191261030aeaebae6f89c84ef8da8f7cea479faf85b8dc7c26",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9194c8bd6c2841a59e237753209a8687e3617e707a5012043a45f9de83d926f6.json"
+    },
+    {
+      "number": 5,
+      "language": "python",
+      "line": 462,
+      "sha256": "1dd38f2ac5241a4189c4bbd494efd6d5abd762fbefea7067794cbc1222b3c380",
+      "status": "passed",
+      "seconds": 0.109,
+      "output": "H2 mol/s, O2 mol/s, stack kW, rejected heat kW, DC kWh/kg: 2.0 1.0 771.8826631999999 200.30355110039994 53.17754238315696\n",
+      "execution_evidence": "verification\\scientific_revision\\ch35_solution_checks.json",
+      "execution_evidence_sha256": "76d082668199fd191261030aeaebae6f89c84ef8da8f7cea479faf85b8dc7c26",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9194c8bd6c2841a59e237753209a8687e3617e707a5012043a45f9de83d926f6.json"
+    },
+    {
+      "number": 6,
+      "language": "python",
+      "line": 492,
+      "sha256": "256799054d6dc58640e0a54362a3215468c0b3ed1dc5469379b073fbf10e8fef",
+      "status": "passed",
+      "seconds": 1.9680000000007567,
+      "output": "H2 mol% | density kg/m3 | superior Wobbe MJ/m3 at 15 C reference\n    0.0 |        0.7576 |       52.765\n    2.0 |        0.7441 |       52.483\n    4.0 |        0.7305 |       52.201\n    6.0 |        0.7170 |       51.918\n    8.0 |        0.7035 |       51.634\n   10.0 |        0.6900 |       51.350\n   12.0 |        0.6765 |       51.065\n   14.0 |        0.6630 |       50.780\n   16.0 |        0.6495 |       50.494\n   18.0 |        0.6360 |       50.208\n   20.0 |        0.6225 |       49.922\n",
+      "execution_evidence": "verification\\scientific_revision\\ch35_solution_checks.json",
+      "execution_evidence_sha256": "76d082668199fd191261030aeaebae6f89c84ef8da8f7cea479faf85b8dc7c26",
+      "prior_execution_record": "verification\\scientific_revision\\prior_execution_records\\9194c8bd6c2841a59e237753209a8687e3617e707a5012043a45f9de83d926f6.json"
+    }
+  ]
+}
