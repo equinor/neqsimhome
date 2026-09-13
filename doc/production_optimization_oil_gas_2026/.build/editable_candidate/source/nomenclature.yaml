@@ -1,0 +1,252 @@
+# Nomenclature for Production Optimization of Oil and Gas Fields Using NeqSim
+
+# --- Greek letters ---
+alpha:
+  symbol: "$\\alpha$"
+  description: "Alpha function in cubic EOS"
+  unit: "dimensionless"
+
+gamma:
+  symbol: "$\\gamma$"
+  description: "Specific heat ratio ($C_p/C_v$)"
+  unit: "dimensionless"
+
+eta:
+  symbol: "$\\eta$"
+  description: "Efficiency (isentropic, polytropic, or mechanical)"
+  unit: "dimensionless"
+
+mu:
+  symbol: "$\\mu$"
+  description: "Dynamic viscosity"
+  unit: "Pa·s"
+
+rho:
+  symbol: "$\\rho$"
+  description: "Density"
+  unit: "kg/m³"
+
+omega:
+  symbol: "$\\omega$"
+  description: "Acentric factor"
+  unit: "dimensionless"
+
+sigma:
+  symbol: "$\\sigma$"
+  description: "Surface tension"
+  unit: "N/m"
+
+kappa:
+  symbol: "$\\kappa$"
+  description: "Polytropic exponent"
+  unit: "dimensionless"
+
+epsilon:
+  symbol: "$\\varepsilon$"
+  description: "Roughness or effectiveness"
+  unit: "m or dimensionless"
+
+# --- Roman letters ---
+a:
+  symbol: "$a$"
+  description: "Attraction parameter in cubic EOS"
+  unit: "Pa·m⁶/mol²"
+
+b:
+  symbol: "$b$"
+  description: "Co-volume parameter in cubic EOS"
+  unit: "m³/mol"
+
+Cp:
+  symbol: "$C_p$"
+  description: "Heat capacity at constant pressure"
+  unit: "J/(mol·K)"
+
+Cv:
+  symbol: "$C_v$"
+  description: "Heat capacity at constant volume / Valve flow coefficient"
+  unit: "J/(mol·K) or US gpm"
+
+D:
+  symbol: "$D$"
+  description: "Diameter"
+  unit: "m"
+
+f:
+  symbol: "$f$"
+  description: "Fugacity or friction factor"
+  unit: "Pa or dimensionless"
+
+G:
+  symbol: "$G$"
+  description: "Gibbs free energy"
+  unit: "J/mol"
+
+g:
+  symbol: "$g$"
+  description: "Gravitational acceleration"
+  unit: "m/s²"
+
+H:
+  symbol: "$H$"
+  description: "Enthalpy or head"
+  unit: "J/mol or m"
+
+h:
+  symbol: "$h$"
+  description: "Heat transfer coefficient"
+  unit: "W/(m²·K)"
+
+K:
+  symbol: "$K$"
+  description: "Equilibrium ratio ($K_i = y_i/x_i$) or K-factor"
+  unit: "dimensionless"
+
+k_ij:
+  symbol: "$k_{ij}$"
+  description: "Binary interaction parameter"
+  unit: "dimensionless"
+
+L:
+  symbol: "$L$"
+  description: "Length"
+  unit: "m"
+
+M:
+  symbol: "$M$"
+  description: "Molecular weight"
+  unit: "g/mol"
+
+m_dot:
+  symbol: "$\\dot{m}$"
+  description: "Mass flow rate"
+  unit: "kg/s"
+
+N:
+  symbol: "$N$"
+  description: "Rotational speed"
+  unit: "rpm"
+
+P:
+  symbol: "$P$"
+  description: "Pressure"
+  unit: "Pa or bara"
+
+Q:
+  symbol: "$Q$"
+  description: "Heat duty or volumetric flow rate"
+  unit: "W or m³/s"
+
+R:
+  symbol: "$R$"
+  description: "Universal gas constant"
+  unit: "8.314 J/(mol·K)"
+
+Re:
+  symbol: "$\\text{Re}$"
+  description: "Reynolds number"
+  unit: "dimensionless"
+
+S:
+  symbol: "$S$"
+  description: "Entropy"
+  unit: "J/(mol·K)"
+
+T:
+  symbol: "$T$"
+  description: "Temperature"
+  unit: "K or °C"
+
+Tc:
+  symbol: "$T_c$"
+  description: "Critical temperature"
+  unit: "K"
+
+Tr:
+  symbol: "$T_r$"
+  description: "Reduced temperature ($T/T_c$)"
+  unit: "dimensionless"
+
+U:
+  symbol: "$U$"
+  description: "Overall heat transfer coefficient"
+  unit: "W/(m²·K)"
+
+V:
+  symbol: "$V$"
+  description: "Volume or molar volume"
+  unit: "m³ or m³/mol"
+
+v:
+  symbol: "$v$"
+  description: "Velocity"
+  unit: "m/s"
+
+W:
+  symbol: "$W$"
+  description: "Power or work"
+  unit: "W or J"
+
+x:
+  symbol: "$x_i$"
+  description: "Liquid phase mole fraction of component $i$"
+  unit: "dimensionless"
+
+y:
+  symbol: "$y_i$"
+  description: "Vapor phase mole fraction of component $i$"
+  unit: "dimensionless"
+
+z:
+  symbol: "$z_i$"
+  description: "Overall mole fraction of component $i$"
+  unit: "dimensionless"
+
+Z:
+  symbol: "$Z$"
+  description: "Compressibility factor ($PV/nRT$)"
+  unit: "dimensionless"
+
+# --- Subscripts and superscripts ---
+subscripts:
+  bubble: "Bubble point"
+  c: "Critical"
+  dew: "Dew point"
+  g: "Gas phase"
+  i: "Component index"
+  in: "Inlet"
+  is: "Isentropic"
+  l: "Liquid phase"
+  o: "Oil phase"
+  out: "Outlet"
+  p: "Polytropic"
+  r: "Reduced"
+  s: "Suction / standard conditions"
+  w: "Water phase"
+
+# --- Abbreviations ---
+abbreviations:
+  EOS: "Equation of state"
+  SRK: "Soave-Redlich-Kwong"
+  PR: "Peng-Robinson"
+  CPA: "Cubic Plus Association"
+  VLE: "Vapor-liquid equilibrium"
+  VLLE: "Vapor-liquid-liquid equilibrium"
+  GOR: "Gas-oil ratio"
+  WGR: "Water-gas ratio"
+  IPR: "Inflow performance relationship"
+  VFP: "Vertical flow performance"
+  TEG: "Triethylene glycol"
+  MEG: "Mono-ethylene glycol"
+  NGL: "Natural gas liquids"
+  LNG: "Liquefied natural gas"
+  LPG: "Liquefied petroleum gas"
+  FPSO: "Floating production, storage, and offloading"
+  CAPEX: "Capital expenditure"
+  OPEX: "Operational expenditure"
+  NPV: "Net present value"
+  LMTD: "Log-mean temperature difference"
+  TEMA: "Tubular Exchanger Manufacturers Association"
+  API: "American Petroleum Institute"
+  ASME: "American Society of Mechanical Engineers"
+  ISO: "International Organization for Standardization"

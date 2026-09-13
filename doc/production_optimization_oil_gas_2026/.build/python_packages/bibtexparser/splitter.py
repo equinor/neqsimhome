@@ -1,0 +1,491 @@
+import logging
+import re
+
+from .exceptions import BlockAbortedException
+from .exceptions import ParserStateException
+from .library import Library
+from .model import DuplicateFieldKeyBlock
+from .model import Entry
+from .model import ExplicitComment
+from .model import Field
+from .model import ImplicitComment
+from .model import ParsingFailedBlock
+from .model import Preamble
+from .model import String
+
+logger = logging.getLogger(__name__)
+
+# "Marks" are the characters the splitter jumps between: value delimiters, field
+#   separators, newlines (for line counting) and block starts (`@type` followed by `{` or `(`).
+#   The opening delimiter is not part of the block start mark, so that a `{` after an
+#   `@` within a value (e.g. `LeQua @ {CLEF}`) is still counted as a mark of its own.
+_BLOCK_START = r"@[\w]*( |\t)*(?=[{(])"
+_MARK_PATTERN = re.compile(r"(?<!\\)[\{\}\",=\n]|" + _BLOCK_START)
+# Inside a `(`-delimited block, the closing `)` is a mark too.
+#   It is not a mark elsewhere, so `)` in `{`-delimited blocks needs no special handling.
+_PAREN_BLOCK_MARK_PATTERN = re.compile(r"(?<!\\)[\{\}\",=\n)]|" + _BLOCK_START)
+
+
+class Splitter:
+    """Object responsible for splitting a BibTeX string into blocks.
+
+    For each bibtex string, a new Splitter object should be created.
+    The splitter is kept as basic as possible in its functionality
+    (e.g., enclosing such as `{...}` are not removed).
+
+    This allows for maximum flexibility in the parsing process,
+    by subsequently applying middleware."""
+
+    def __init__(self, bibstr: str):
+        # Add a newline at the beginning to simplify parsing
+        #   (we only allow "@"-block starts after a newline)
+        self.bibstr = f"\n{bibstr}"
+
+        self._markiter = None
+        self._unaccepted_mark = None
+
+        # `}` or `)`, matching the delimiter that opened the block being parsed
+        self._closing_delimiter = "}"
+
+        # Keep track of line we're currently looking at.
+        #   `-1` compensates for manually added `\n` above
+        self._current_line = -1
+
+        self._reset_block_status(current_char_index=0)
+
+    def _reset_block_status(self, current_char_index: int) -> None:
+        # By default, we assume that an implicit comment is started
+        #   at the beginning of the file and after each @{...} block.
+        #   We then ignore empty implicit comments.
+        self._implicit_comment_start_line = self._current_line
+        self._implicit_comment_start: int | None = current_char_index
+
+    def _is_at_line_start(self, pos: int) -> bool:
+        """Check if position is at the start of a line (after optional whitespace).
+
+        This is used to determine whether an @ sign should be treated as a new
+        block start (for error recovery) or as content within a field value.
+        We only want to abort parsing and start a new block if the @ is at the
+        beginning of a line, to avoid false positives with @ signs in content.
+        """
+        # Scan backwards from pos to find either newline or non-whitespace
+        for i in range(pos - 1, -1, -1):
+            char = self.bibstr[i]
+            if char == "\n":
+                return True
+            elif not char.isspace():
+                return False
+        # Start of string counts as line start
+        return True
+
+    def _end_implicit_comment(self, end_char_index) -> ImplicitComment | None:
+        if self._implicit_comment_start is None:
+            return  # No implicit comment started
+
+        comment = self.bibstr[self._implicit_comment_start : end_char_index]
+
+        # Clear leading and trailing empty lines,
+        #   and count how many lines were removed, to adapt start_line below
+        leading_empty_lines = 0
+        i = 0
+        for i, char in enumerate(comment):
+            if char == "\n":
+                leading_empty_lines += 1
+            elif not char.isspace():
+                break
+
+        comment = comment[i:].rstrip()
+
+        if len(comment) > 0:
+            return ImplicitComment(
+                start_line=self._implicit_comment_start_line + leading_empty_lines,
+                raw=comment,
+                comment=comment,
+            )
+        else:
+            return None
+
+    def _next_mark(self, accept_eof: bool) -> re.Match | None:
+        # Check if there is a mark that was previously not consumed
+        #   and return it if so
+        if self._unaccepted_mark is not None:
+            m = self._unaccepted_mark
+            self._unaccepted_mark = None
+            self._current_char_index = m.start()
+            return m
+
+        while True:
+            m = next(self._markiter, None)
+            if m is None:
+                # Reached end of file
+                self._current_char_index = len(self.bibstr)
+                if not accept_eof:
+                    raise BlockAbortedException(
+                        abort_reason="Unexpectedly reached end of file.",
+                        end_index=self._current_char_index,
+                    )
+                return None
+
+            self._current_char_index = m.start()
+            if m.group(0) != "\n":
+                return m
+
+            self._current_line += 1
+
+    def _open_block(self, m: re.Match) -> None:
+        """Consume the delimiter opening the block started by mark `m`, and set the closing one."""
+        if self.bibstr[m.end()] == "(":
+            self._closing_delimiter = ")"
+            # `(` is not a mark, hence the block-specific marks start right after it.
+            self._markiter = _PAREN_BLOCK_MARK_PATTERN.finditer(self.bibstr, m.end() + 1)
+        else:
+            self._closing_delimiter = "}"
+            # The `{` is a mark (guaranteed to be the next one by the block start regex)
+            self._next_mark(accept_eof=False)
+
+    def _close_block(self) -> None:
+        """Undo `_open_block` once the block was parsed (or its parsing aborted)."""
+        if self._closing_delimiter == ")":
+            # Resume default marks right after the last consumed mark,
+            #   which is either put back by an abort, or a single character.
+            if self._unaccepted_mark is not None:
+                resume_index = self._unaccepted_mark.end()
+            else:
+                resume_index = self._current_char_index + 1
+            self._markiter = _MARK_PATTERN.finditer(self.bibstr, resume_index)
+            self._closing_delimiter = "}"
+
+    def _move_to_closing_delimiter(self, track_quotes: bool) -> int:
+        """Index of the delimiter closing the current block, skipping nested `{...}`.
+
+        With `track_quotes`, a `)` within a `"..."` string is skipped as well:
+        Unlike `}`, which must be balanced within such strings, a `)` may occur there.
+        Free-text blocks (comments) do not track quotes, as these may be unbalanced there.
+        """
+        num_open_curls = 0
+        in_quotes = False
+        track_quotes = track_quotes and self._closing_delimiter == ")"
+        while True:
+            m = self._next_mark(accept_eof=False)
+            if m.group(0) == "{":
+                num_open_curls += 1
+            elif m.group(0) == "}" and num_open_curls > 0:
+                num_open_curls -= 1
+            elif num_open_curls == 0 and m.group(0) == '"' and track_quotes:
+                in_quotes = not in_quotes
+            elif num_open_curls == 0 and m.group(0) == self._closing_delimiter and not in_quotes:
+                return m.start()
+            elif m.group(0).startswith("@") and self._is_at_line_start(m.start()):
+                # Only abort if the @ is at the start of a line.
+                # This allows @ signs in field values (e.g., "LeQua @ {CLEF}")
+                # while still providing error recovery when a new block starts
+                # on a new line within an unclosed block.
+                self._unaccepted_mark = m
+                raise BlockAbortedException(
+                    abort_reason=f"Unexpected block start: `{m.group(0)}`. "
+                    f"Was still looking for closing bracket",
+                    end_index=m.start() - 1,
+                )
+
+    def _move_to_comma_or_closing_delimiter(
+        self, currently_quote_escaped: bool = False, num_open_curls: int = 0
+    ) -> int:
+        """Index of the end of the field, taking quote-escape into account."""
+
+        if num_open_curls > 0 and currently_quote_escaped:
+            raise ParserStateException(
+                message="Internal error in parser. "
+                "Found a field-value that is both quote-escaped and curly-escaped. "
+                "Please report this bug."
+            )
+
+        def _is_escaped():
+            return currently_quote_escaped or num_open_curls > 0
+
+        # iterate over marks until we find end of field
+        while True:
+            next_mark = self._next_mark(accept_eof=False)
+
+            # Handle "escape" characters
+            if next_mark.group(0) == '"' and not num_open_curls > 0:
+                # Check for {"} escape sequence when inside quotes (issue #487).
+                # Per https://tug.ctan.org/info/bibtex/tamethebeast/ttb_en.pdf,
+                # {"} represents a literal quote in a quoted field.
+                # We verify this by checking:
+                # 1. We're inside quotes
+                # 2. The " is surrounded by { and }
+                # 3. There's more content after the } (i.e., pos+2 is in bounds)
+                #    This distinguishes {"} escapes from cases like @article{"}
+                #    where " closes the field and } closes the entry.
+                if currently_quote_escaped:
+                    pos = next_mark.start()
+                    if (
+                        pos > 0
+                        and pos + 2 < len(self.bibstr)
+                        and self.bibstr[pos - 1] == "{"
+                        and self.bibstr[pos + 1] == "}"
+                    ):
+                        continue
+                currently_quote_escaped = not currently_quote_escaped
+                continue
+            elif next_mark.group(0) == "{" and not currently_quote_escaped:
+                num_open_curls += 1
+                continue
+            elif next_mark.group(0) == "}" and not currently_quote_escaped and num_open_curls > 0:
+                num_open_curls -= 1
+                continue
+
+            # Check for end of field
+            elif next_mark.group(0) == "," and not _is_escaped():
+                self._unaccepted_mark = next_mark
+                return next_mark.start()
+            # Check for end of entry:
+            elif next_mark.group(0) == self._closing_delimiter and not _is_escaped():
+                self._unaccepted_mark = next_mark
+                return next_mark.start()
+
+            # Sanity-check: If new block is starting at line start, we abort.
+            # We only abort if the @ is at the start of a line to allow @ signs
+            # in field values (e.g., "LeQua @ {CLEF}") while still providing
+            # error recovery when a new block starts on a new line.
+            elif next_mark.group(0).startswith("@") and self._is_at_line_start(next_mark.start()):
+                self._unaccepted_mark = next_mark
+
+                if currently_quote_escaped:
+                    looking_for = '`"`'
+                elif num_open_curls > 0:
+                    looking_for = "`}`"
+                else:
+                    looking_for = f"`,` or `{self._closing_delimiter}`"
+
+                raise BlockAbortedException(
+                    abort_reason=f"Unexpected block start: `{next_mark.group(0)}`. "
+                    f"Was still looking for field-value closing {looking_for} ",
+                    end_index=next_mark.start() - 1,
+                )
+
+    def _move_to_end_of_entry(self, first_key_start: int) -> tuple[list[Field], int, set[str]]:
+        """Move to the end of the entry and return the fields and the end index."""
+        result = []
+        keys = set()
+        duplicate_keys = set()
+
+        key_start = first_key_start
+        while True:
+            equals_mark = self._next_mark(accept_eof=False)
+            if equals_mark.group(0) == self._closing_delimiter:
+                dangling_key = self.bibstr[key_start : equals_mark.start()].strip()
+                if dangling_key:
+                    raise BlockAbortedException(
+                        abort_reason=f"Expected a `=` after entry key `{dangling_key}`, "
+                        f"but found the end of the entry (`{self._closing_delimiter}`).",
+                        end_index=equals_mark.end(),
+                    )
+                # End of entry
+                return result, equals_mark.end(), duplicate_keys
+
+            if equals_mark.group(0) != "=":
+                self._unaccepted_mark = equals_mark
+                raise BlockAbortedException(
+                    abort_reason="Expected a `=` after entry key, "
+                    f"but found `{equals_mark.group(0)}`.",
+                    end_index=equals_mark.start(),
+                )
+
+            # We follow the convention that the field start line
+            #   is where the `=` between key and value is.
+            start_line = self._current_line
+            key_end = equals_mark.start()
+            value_start = equals_mark.end()
+            value_end = self._move_to_comma_or_closing_delimiter(
+                currently_quote_escaped=False, num_open_curls=0
+            )
+
+            key = self.bibstr[key_start:key_end].strip()
+            value = self.bibstr[value_start:value_end].strip()
+
+            if key in keys:
+                duplicate_keys.add(key)
+
+            keys.add(key)
+            result.append(Field(start_line=start_line, key=key, value=value))
+
+            # If next mark is a comma, continue
+            after_field_mark = self._next_mark(accept_eof=False)
+            if after_field_mark.group(0) == ",":
+                key_start = after_field_mark.end()
+            elif after_field_mark.group(0) == self._closing_delimiter:
+                # If next mark is the closing delimiter, put it back (will return in next loop iteration)
+                self._unaccepted_mark = after_field_mark
+                # Advance past the value, else the check above aborts a valid entry.
+                key_start = after_field_mark.start()
+                continue
+            else:
+                self._unaccepted_mark = after_field_mark
+                raise BlockAbortedException(
+                    abort_reason=f"Expected either a `,` or `{self._closing_delimiter}` "
+                    f"after a closed entry field value, but found a {after_field_mark.group(0)} before.",
+                    end_index=after_field_mark.start(),
+                )
+
+    def split(self) -> Library:
+        """Split the bibtex-string into blocks and return them as a new library.
+
+        Returns:
+            A new library containing the split blocks.
+        """
+        self._markiter = _MARK_PATTERN.finditer(self.bibstr)
+
+        library = Library()
+
+        while True:
+            m = self._next_mark(accept_eof=True)
+            if m is None:
+                break
+
+            m_val = m.group(0).lower()
+
+            if m_val.startswith("@"):
+                # Clean up previous block implicit_comment
+                implicit_comment = self._end_implicit_comment(m.start())
+                if implicit_comment is not None:
+                    library.add(implicit_comment, fail_on_duplicate_key=False)
+                self._implicit_comment_start = None
+
+                start_line = self._current_line
+                try:
+                    # Start new block parsing
+                    self._open_block(m)
+                    if m_val.startswith("@comment"):
+                        library.add(self._handle_explicit_comment(m), fail_on_duplicate_key=False)
+                    elif m_val.startswith("@preamble"):
+                        library.add(self._handle_preamble(m), fail_on_duplicate_key=False)
+                    elif m_val.startswith("@string"):
+                        library.add(self._handle_string(m), fail_on_duplicate_key=False)
+                    else:
+                        library.add(self._handle_entry(m, m_val), fail_on_duplicate_key=False)
+
+                except BlockAbortedException as e:
+                    logger.warning(
+                        f"Parsing of `{m_val}` block (line {start_line}) "
+                        f"aborted on line {self._current_line} "
+                        f"due to syntactical error in bibtex:\n {e.abort_reason}"
+                    )
+                    logger.info(
+                        "We will try to continue parsing, but this might lead to unexpected results. "
+                        "The failed block will be stored in the `failed_blocks` of the library."
+                    )
+                    library.add(
+                        ParsingFailedBlock(
+                            start_line=start_line,
+                            raw=self.bibstr[m.start() : e.end_index],
+                            error=e,
+                        ),
+                        fail_on_duplicate_key=False,
+                    )
+
+                except ParserStateException as e:
+                    # This is a bug in the parser, not in the bibtex. We should not continue.
+                    logger.error(
+                        "python-bibtexparser detected an invalid state. Please report this bug."
+                    )
+                    logger.error(e.message)
+                    raise
+                except Exception:
+                    # For unknown exceptions, we want to fail hard and get the info in our issue tracker.
+                    logger.error(
+                        f"Unexpected exception while parsing `{m_val}` block (line {start_line}). "
+                        "Please report this bug."
+                    )
+                    raise
+
+                self._close_block()
+                self._reset_block_status(current_char_index=self._current_char_index + 1)
+            else:
+                # Part of implicit comment
+                continue
+
+        # Check if there's an implicit comment at the EOF
+        if self._implicit_comment_start is not None:
+            comment = self._end_implicit_comment(len(self.bibstr))
+            if comment is not None:
+                library.add(comment, fail_on_duplicate_key=False)
+
+        return library
+
+    def _handle_explicit_comment(self, m) -> ExplicitComment:
+        """Handle explicit comment block. Return end index"""
+        start_line = self._current_line
+        end_index = self._move_to_closing_delimiter(track_quotes=False)
+        return ExplicitComment(
+            start_line=start_line,
+            comment=self.bibstr[m.end() + 1 : end_index].strip(),
+            raw=self.bibstr[m.start() : end_index + 1],
+        )
+
+    def _handle_entry(self, m, m_val) -> Entry | ParsingFailedBlock:
+        """Handle entry block. Return end index"""
+        start_line = self._current_line
+        entry_type = m_val[1:].strip()
+        comma_mark = self._next_mark(accept_eof=False)
+        if comma_mark.group(0) == self._closing_delimiter:
+            # This is an entry without any comma after the key, and with no fields
+            #   Used e.g. by RefTeX (see issue #384)
+            key = self.bibstr[m.end() + 1 : comma_mark.start()].strip()
+            fields, end_index, duplicate_keys = [], comma_mark.end(), []
+        elif comma_mark.group(0) != ",":
+            self._unaccepted_mark = comma_mark
+            raise BlockAbortedException(
+                abort_reason=f"Expected comma after entry key, but found {comma_mark.group(0)}",
+                end_index=comma_mark.end(),
+            )
+        else:
+            key = self.bibstr[m.end() + 1 : comma_mark.start()].strip()
+            fields, end_index, duplicate_keys = self._move_to_end_of_entry(comma_mark.end())
+
+        entry = Entry(
+            start_line=start_line,
+            entry_type=entry_type,
+            key=key,
+            fields=fields,
+            raw=self.bibstr[m.start() : end_index],
+        )
+
+        # If there were duplicate field keys, we return a DuplicateFieldKeyBlock wrapping
+        if len(duplicate_keys) > 0:
+            return DuplicateFieldKeyBlock(duplicate_keys=duplicate_keys, entry=entry)
+        else:
+            return entry
+
+    def _handle_string(self, m) -> String:
+        """Handle string block. Return end index"""
+        start_line = self._current_line
+        # Get next mark, which should be an equals sign
+        equals_mark = self._next_mark(accept_eof=False)
+        if equals_mark.group(0) != "=":
+            self._unaccepted_mark = equals_mark
+            raise BlockAbortedException(
+                abort_reason="Expected equals sign after field key,"
+                f" but found {equals_mark.group(0)}",
+                end_index=equals_mark.end(),
+            )
+        key = self.bibstr[m.end() + 1 : equals_mark.start()].strip()
+        value_start = equals_mark.end()
+        end_index = self._move_to_closing_delimiter(track_quotes=True)
+        value = self.bibstr[value_start:end_index].strip()
+        return String(
+            start_line=start_line,
+            key=key,
+            value=value,
+            raw=self.bibstr[m.start() : end_index + 1],
+        )
+
+    def _handle_preamble(self, m) -> Preamble:
+        """Handle preamble block. Return end index"""
+        start_line = self._current_line
+        end_index = self._move_to_closing_delimiter(track_quotes=True)
+        return Preamble(
+            start_line=start_line,
+            value=self.bibstr[m.end() + 1 : end_index],
+            raw=self.bibstr[m.start() : end_index + 1],
+        )

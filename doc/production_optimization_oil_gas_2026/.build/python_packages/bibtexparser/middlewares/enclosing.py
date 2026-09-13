@@ -1,0 +1,297 @@
+import re
+
+from bibtexparser.library import Library
+from bibtexparser.model import Entry
+from bibtexparser.model import Field
+from bibtexparser.model import String
+
+from .middleware import BlockMiddleware
+
+REMOVED_ENCLOSING_KEY = "removed_enclosing"
+
+# Delimiters relevant when scanning a value, using the splitter's escaping
+# convention: a delimiter is escaped iff it is directly preceded by a backslash.
+_BRACES = re.compile(r"(?<!\\)[{}]")
+_BRACES_AND_QUOTE = re.compile(r"(?<!\\)[{}\"]")
+_UNENCLOSED_MARKS = re.compile(r"(?<!\\)[{}\",=\n]")
+
+
+def _is_writable_unenclosed(value: str) -> bool:
+    """Whether writing the value verbatim yields the same value when re-parsed.
+
+    Values that are written without enclosing (e.g. string references and
+    concatenations) must not contain anything the splitter would read as the
+    end of the value: an unbalanced brace or, outside braces and quotes,
+    a comma, an equals sign or a newline.
+    """
+    depth = 0
+    in_quotes = False
+    for match in _UNENCLOSED_MARKS.finditer(value):
+        char = match.group()
+        if char == "{":
+            depth += 1
+        elif char == "}":
+            depth -= 1
+            if depth < 0:
+                return False
+        elif depth == 0:
+            if char == '"':
+                in_quotes = not in_quotes
+            elif not in_quotes:
+                return False
+    return depth == 0 and not in_quotes
+
+
+STRINGS_CAN_BE_UNESCAPED_INTS = False
+ENTRY_POTENTIALLY_INT_FIELDS = [
+    "year",
+    "month",
+    "volume",
+    "number",
+    "pages",
+    "edition",
+    "chapter",
+    "issue",
+]
+
+
+class RemoveEnclosingMiddleware(BlockMiddleware):
+    """Remove enclosing characters from values such as field and strings.
+
+    This middleware removes enclosing characters from a field value.
+    It is useful when the field value is enclosed in braces or quotes
+    (which is the case for the vast majority of values).
+
+    Only a delimiter pair enclosing the *whole* value is removed:
+    `pages = {intro} # {outro}` merely starts and ends in braces,
+    but these do not belong to the same pair and are thus kept.
+
+    Values that were not enclosed and are not plain integers
+    (i.e., unresolved bibtex string references such as `month = jan`
+    and concatenation expressions such as `pages = intro # outro`
+    or `pages = {intro} # {outro}`)
+    get a `no-enclosing` demand (see `Field.enclosing`),
+    as enclosing them when writing would change their semantics.
+
+    Note: If you want to interpolate strings, you should do so
+    before removing any enclosing.
+    """
+
+    def __init__(self, allow_inplace_modification: bool = True):
+        super().__init__(
+            allow_inplace_modification=allow_inplace_modification,
+            allow_parallel_execution=True,
+        )
+
+    # docstr-coverage: inherited
+    @classmethod
+    def metadata_key(cls) -> str:
+        return REMOVED_ENCLOSING_KEY
+
+    @staticmethod
+    def _is_enclosed_in_braces(value: str) -> bool:
+        """Whether the brace opened at the first char is the one closed at the last char.
+
+        This is False for values that merely start and end in braces, such as the
+        concatenation expression `{intro} # {outro}`, whose outer braces do not enclose
+        the whole value. Escaped braces are not counted.
+        """
+        inner = value[1:-1]
+        if "{" not in inner and "}" not in inner:
+            # Fast path for the common case of a plainly braced value.
+            return not inner.endswith("\\")
+        depth = 0
+        last_index = len(value) - 1
+        for match in _BRACES.finditer(value):
+            if match.group() == "{":
+                depth += 1
+                continue
+            depth -= 1
+            if depth < 0:
+                return False
+            if depth == 0 and match.start() != last_index:
+                return False
+        return depth == 0
+
+    @staticmethod
+    def _is_enclosed_in_quotes(value: str) -> bool:
+        """Whether the quote at the first char is the one closed at the last char.
+
+        This is False for values that merely start and end in quotes, such as the
+        concatenation expression `"intro" # "outro"`. Escaped quotes and quotes
+        inside braces are not counted.
+        """
+        last_index = len(value) - 1
+        if value.find('"', 1, last_index) < 0:
+            # Fast path for the common case of a value without inner quotes.
+            return True
+        depth = 0
+        for match in _BRACES_AND_QUOTE.finditer(value):
+            index = match.start()
+            if index == 0 or index == last_index:
+                continue
+            char = match.group()
+            if char == "{":
+                depth += 1
+            elif char == "}":
+                depth = max(depth - 1, 0)
+            elif depth == 0:
+                return False
+        return True
+
+    @classmethod
+    def _strip_enclosing(cls, value: str) -> tuple[str, str | None]:
+        value = value.strip()
+        # A single `{` or `"` starts and ends with the same char, but is no enclosing.
+        if len(value) >= 2:
+            if value.startswith("{") and value.endswith("}") and cls._is_enclosed_in_braces(value):
+                return value[1:-1], "{"
+            if value.startswith('"') and value.endswith('"') and cls._is_enclosed_in_quotes(value):
+                return value[1:-1], '"'
+        return value, "no-enclosing"
+
+    # docstr-coverage: inherited
+    def transform_entry(self, entry: Entry, library: Library) -> Entry:
+        field: Field
+        metadata = dict()
+        for field in entry.fields:
+            stripped, enclosing = self._strip_enclosing(field.value)
+            field.value = stripped
+            if enclosing == "no-enclosing" and not stripped.isdigit():
+                # String references and concatenations must remain unenclosed,
+                # as enclosing them would change their semantics.
+                field.enclosing = "no-enclosing"
+            metadata[field.key] = enclosing
+        entry.parser_metadata[self.metadata_key()] = metadata
+        return entry
+
+    # docstr-coverage: inherited
+    def transform_string(self, string: String, library: Library) -> String:
+        stripped, enclosing = self._strip_enclosing(string.value)
+        string.value = stripped
+        if enclosing == "no-enclosing" and not stripped.isdigit():
+            # See corresponding comment in `transform_entry`
+            string.enclosing = "no-enclosing"
+        string.parser_metadata[self.metadata_key()] = enclosing
+        return string
+
+
+class AddEnclosingMiddleware(BlockMiddleware):
+    """Add enclosing characters to values such as field and strings.
+
+    This middleware adds enclosing characters to a field value.
+    It is useful when the field value is enclosed in braces or quotes.
+
+    The enclosing to add is determined with the following precedence:
+
+    1. An enclosing demanded on the field or string itself
+       (i.e., a non-None ``field.enclosing``, e.g. set by a month middleware)
+       is always honored.
+    2. If ``reuse_previous_enclosing`` is True, the enclosing removed by the
+       ``RemoveEnclosingMiddleware`` (if any) is used.
+    3. If the value is an integer in a common int field
+       and ``enclose_integers`` is False, no enclosing is added.
+    4. Otherwise, the ``default_enclosing`` is used.
+
+    A ``no-enclosing`` resulting from 1. or 2. is overruled by the
+    ``default_enclosing`` if the value cannot be written verbatim,
+    i.e. if writing it as-is would not parse back to the same value.
+    This happens when a middleware changed the value after the demand was set.
+    """
+
+    def __init__(
+        self,
+        reuse_previous_enclosing: bool,
+        enclose_integers: bool,
+        default_enclosing: str,
+        allow_inplace_modification: bool = True,
+    ):
+        """
+        :param reuse_previous_enclosing: Whether to reuse the previous enclosing character,
+            i.e., the enclosing removed by the RemoveEnclosingMiddleware.
+            (this has precedence over the default_enclosing)
+        :param enclose_integers: Whether to enclose integers
+            (only of no previous enclosing was applied)
+        :param default_enclosing: The default enclosing character to use ('{', '"', or 'no-enclosing')
+            (only of no previous enclosing was applied, and - for ints - enclose_integers is False)
+        :param allow_inplace_modification: Whether to allow inplace modification
+            (see BlockMiddleware docs).
+        """
+        super().__init__(
+            allow_inplace_modification=allow_inplace_modification,
+            allow_parallel_execution=True,
+        )
+
+        if default_enclosing not in ("{", '"'):
+            raise ValueError(
+                "default_enclosing must be either '{' or '\"', " f"not '{default_enclosing}'"
+            )
+        self._default_enclosing = default_enclosing
+        self._reuse_previous_enclosing = reuse_previous_enclosing
+        self._enclose_integers = enclose_integers
+
+    # docstr-coverage: inherited
+    @classmethod
+    def metadata_key(cls) -> str:
+        return "add_enclosing"
+
+    def _enclose(
+        self,
+        value: str,
+        metadata_enclosing: str | None,
+        apply_int_rule: bool,
+        demanded_enclosing: str | None = None,
+    ) -> str:
+        enclosing = self._default_enclosing
+        if demanded_enclosing is not None:
+            enclosing = demanded_enclosing
+        elif self._reuse_previous_enclosing and metadata_enclosing is not None:
+            enclosing = metadata_enclosing
+        elif apply_int_rule and not self._enclose_integers and str(value).isdigit():
+            return str(value)
+
+        if enclosing == "no-enclosing" and not _is_writable_unenclosed(str(value)):
+            # The value cannot be written verbatim: writing it as-is would produce
+            # bibtex that does not parse back to this value. This happens when a
+            # middleware changed the value after the demand was set.
+            enclosing = self._default_enclosing
+
+        if enclosing == "{":
+            return f"{{{value}}}"
+        if enclosing == '"':
+            return f'"{value}"'
+        if enclosing == "no-enclosing":
+            return str(value)
+        raise ValueError(
+            f"enclosing must be either '{{' or '\"' or 'no-enclosing', " f"not '{enclosing}'"
+        )
+
+    # docstr-coverage: inherited
+    def transform_entry(self, entry: Entry, library: Library) -> Entry:
+        field: Field
+        metadata_enclosing = entry.parser_metadata.pop(
+            RemoveEnclosingMiddleware.metadata_key(), None
+        )
+        for field in entry.fields:
+            apply_int_rule = field.key in ENTRY_POTENTIALLY_INT_FIELDS
+            prev_encoding = (
+                metadata_enclosing.get(field.key, None) if metadata_enclosing is not None else None
+            )
+            field.value = self._enclose(
+                field.value,
+                prev_encoding,
+                apply_int_rule=apply_int_rule,
+                demanded_enclosing=field.enclosing,
+            )
+        return entry
+
+    # docstr-coverage: inherited
+    def transform_string(self, string: String, library: Library) -> String:
+        metadata_key = RemoveEnclosingMiddleware.metadata_key()
+        string.value = self._enclose(
+            string.value,
+            string.parser_metadata.get(metadata_key),
+            apply_int_rule=STRINGS_CAN_BE_UNESCAPED_INTS,
+            demanded_enclosing=string.enclosing,
+        )
+        return string

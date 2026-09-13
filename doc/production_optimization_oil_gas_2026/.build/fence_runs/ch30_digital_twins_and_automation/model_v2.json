@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "1.1",
+  "name": "Process system",
+  "version": "2.0.0",
+  "createdAt": "2026-09-12T20:34:48.638864100Z",
+  "lastModifiedAt": "2026-09-12T20:34:48.639418300Z",
+  "metadata": {
+    "lifecyclePhase": "CONCEPT",
+    "calibrationStatus": "UNCALIBRATED",
+    "calibrationAccuracy": NaN,
+    "validationHistory": [],
+    "modificationHistory": [],
+    "tags": {}
+  },
+  "equipmentStates": [
+    {
+      "name": "Feed Gas",
+      "type": "Stream",
+      "numericProperties": {
+        "molarFlowRate": 1074.0831679782298,
+        "lockedInactive": 0.0,
+        "temperature": 333.15,
+        "flowRate": 100000.0,
+        "pressure": 50.0,
+        "minimumFlow": 0.09999999999999999
+      },
+      "stringProperties": {},
+      "fluidState": {
+        "temperature": 333.15,
+        "pressure": 50.0,
+        "numberOfPhases": 2,
+        "composition": {
+          "ethane": 0.1,
+          "n-heptane": 0.05,
+          "propane": 0.05,
+          "methane": 0.75,
+          "n-pentane": 0.05
+        },
+        "thermoModelClass": "SystemSrkEos"
+      }
+    },
+    {
+      "name": "HP Separator",
+      "type": "Separator",
+      "numericProperties": {
+        "liquidLevel": 0.5,
+        "lockedInactive": 0.0,
+        "temperature": 333.15,
+        "pressure": 50.0,
+        "minimumFlow": 0.09999999999999999
+      },
+      "stringProperties": {},
+      "fluidState": {
+        "temperature": 333.15,
+        "pressure": 50.0,
+        "numberOfPhases": 2,
+        "composition": {
+          "ethane": 0.1,
+          "n-heptane": 0.05,
+          "propane": 0.05,
+          "methane": 0.75,
+          "n-pentane": 0.05
+        },
+        "thermoModelClass": "SystemSrkEos"
+      }
+    },
+    {
+      "name": "Export Compressor",
+      "type": "Compressor",
+      "numericProperties": {
+        "lockedInactive": 0.0,
+        "polytropicEfficiency": 1.0,
+        "outletPressure": 170.0,
+        "isentropicEfficiency": 1.0,
+        "power": 3405812.796531172,
+        "minimumFlow": 0.09999999999999999,
+        "speed": 3000.0
+      },
+      "stringProperties": {},
+      "fluidState": {
+        "temperature": 424.4178392992526,
+        "pressure": 170.0,
+        "numberOfPhases": 1,
+        "composition": {
+          "ethane": 0.1027080521107505,
+          "n-heptane": 0.008655095894188617,
+          "propane": 0.046301652415091536,
+          "methane": 0.8158711490143526,
+          "n-pentane": 0.02646405056561673
+        },
+        "thermoModelClass": "SystemSrkEos"
+      }
+    },
+    {
+      "name": "Aftercooler",
+      "type": "Cooler",
+      "numericProperties": {
+        "outletTemperature": 308.15,
+        "lockedInactive": 0.0,
+        "duty": -7520318.971298511,
+        "minimumFlow": 0.09999999999999999
+      },
+      "stringProperties": {}
+    },
+    {
+      "name": "Liq Valve",
+      "type": "ThrottlingValve",
+      "numericProperties": {
+        "cv": 6.588551695426036,
+        "lockedInactive": 0.0,
+        "outletPressure": 10.0,
+        "minimumFlow": 1.0E-20,
+        "percentValveOpening": 100.0
+      },
+      "stringProperties": {},
+      "fluidState": {
+        "temperature": 324.10171299057663,
+        "pressure": 10.0,
+        "numberOfPhases": 2,
+        "composition": {
+          "ethane": 0.07641703079740596,
+          "n-heptane": 0.4100505309114394,
+          "propane": 0.0822069198185458,
+          "methane": 0.1763635945637474,
+          "n-pentane": 0.2549619239088614
+        },
+        "thermoModelClass": "SystemSrkEos"
+      }
+    }
+  ],
+  "streamStates": {
+    "Feed Gas": {
+      "temperature": 333.15,
+      "pressure": 50.0,
+      "molarFlowRate": 1074.0831679782298,
+      "composition": {
+        "ethane": 0.1,
+        "n-heptane": 0.05,
+        "propane": 0.05,
+        "methane": 0.75,
+        "n-pentane": 0.05
+      }
+    }
+  },
+  "connectionStates": [
+    {
+      "sourceEquipmentName": "HP Separator",
+      "sourcePortName": "gasOutStream",
+      "targetEquipmentName": "gasOutStream",
+      "targetPortName": "inlet"
+    },
+    {
+      "sourceEquipmentName": "HP Separator",
+      "sourcePortName": "liquidOutStream",
+      "targetEquipmentName": "liquidOutStream",
+      "targetPortName": "inlet"
+    },
+    {
+      "sourceEquipmentName": "Export Compressor",
+      "sourcePortName": "outletStream",
+      "targetEquipmentName": "Export Compressor out stream",
+      "targetPortName": "inlet"
+    },
+    {
+      "sourceEquipmentName": "Aftercooler",
+      "sourcePortName": "outletStream",
+      "targetEquipmentName": "outStream",
+      "targetPortName": "inlet"
+    },
+    {
+      "sourceEquipmentName": "Liq Valve",
+      "sourcePortName": "outletStream",
+      "targetEquipmentName": "Liq Valve out stream",
+      "targetPortName": "inlet"
+    }
+  ],
+  "customProperties": {},
+  "checksum": "db6c2a38"
+}

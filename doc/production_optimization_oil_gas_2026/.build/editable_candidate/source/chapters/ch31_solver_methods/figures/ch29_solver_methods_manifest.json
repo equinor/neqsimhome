@@ -1,0 +1,285 @@
+{
+  "notebook": "ch29_solver_methods.ipynb",
+  "figures": [
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch31_solver_methods\\figures\\ch29_flash_convergence.png",
+      "sha256": "90ab219318ff36b40a6d4934bbaed838428e459f41ad2cbe83458c1920b3c8a7",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "TP Flash Computation Time vs Pressure",
+          "series": "T = 25.0 °C",
+          "x_label": "Pressure (bara)",
+          "y_label": "Flash Time (ms)",
+          "n_points": 40,
+          "n_nonfinite": 0,
+          "x_min": 5.0,
+          "x_max": 200.0,
+          "y_min": 1.3834999990649521,
+          "y_max": 94.47910000017146,
+          "x_at_y_max": 135.0
+        },
+        {
+          "panel": 1,
+          "title": "TP Flash Computation Time vs Pressure",
+          "series": "T = 50.0 °C",
+          "x_label": "Pressure (bara)",
+          "y_label": "Flash Time (ms)",
+          "n_points": 40,
+          "n_nonfinite": 0,
+          "x_min": 5.0,
+          "x_max": 200.0,
+          "y_min": 0.43450000157463364,
+          "y_max": 185.29599999965285,
+          "x_at_y_max": 110.0
+        },
+        {
+          "panel": 1,
+          "title": "TP Flash Computation Time vs Pressure",
+          "series": "T = 100.0 °C",
+          "x_label": "Pressure (bara)",
+          "y_label": "Flash Time (ms)",
+          "n_points": 40,
+          "n_nonfinite": 0,
+          "x_min": 5.0,
+          "x_max": 200.0,
+          "y_min": 0.4124000006413553,
+          "y_max": 45.802000000549015,
+          "x_at_y_max": 100.0
+        },
+        {
+          "panel": 2,
+          "title": "Vapor Fraction vs Pressure (SRK EOS)",
+          "series": "T = 25.0 °C",
+          "x_label": "Pressure (bara)",
+          "y_label": "Vapor Fraction (-)",
+          "n_points": 40,
+          "n_nonfinite": 0,
+          "x_min": 5.0,
+          "x_max": 200.0,
+          "y_min": 0.5191092605932357,
+          "y_max": 1.0,
+          "x_at_y_max": 140.0
+        },
+        {
+          "panel": 2,
+          "title": "Vapor Fraction vs Pressure (SRK EOS)",
+          "series": "T = 50.0 °C",
+          "x_label": "Pressure (bara)",
+          "y_label": "Vapor Fraction (-)",
+          "n_points": 40,
+          "n_nonfinite": 0,
+          "x_min": 5.0,
+          "x_max": 200.0,
+          "y_min": 0.8115600185060224,
+          "y_max": 1.0,
+          "x_at_y_max": 5.0
+        },
+        {
+          "panel": 2,
+          "title": "Vapor Fraction vs Pressure (SRK EOS)",
+          "series": "T = 100.0 °C",
+          "x_label": "Pressure (bara)",
+          "y_label": "Vapor Fraction (-)",
+          "n_points": 40,
+          "n_nonfinite": 0,
+          "x_min": 5.0,
+          "x_max": 200.0,
+          "y_min": 1.0,
+          "y_max": 1.0,
+          "x_at_y_max": 5.0
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch31_solver_methods\\figures\\ch29_initial_guess_effect.png",
+      "sha256": "7b0ba665b5b65f86516d275d7d17865d028135b9182672a49eaa5c5f56bb0874",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Effect of Initial Temperature Guess",
+          "series": "Curve 1",
+          "x_label": "Initial Temperature (°C)",
+          "y_label": "Flash Time (ms)",
+          "n_points": 30,
+          "n_nonfinite": 0,
+          "x_min": -50.0,
+          "x_max": 200.0,
+          "y_min": 0.4578000007313676,
+          "y_max": 17.604700002266327,
+          "x_at_y_max": -32.758620689655174
+        },
+        {
+          "panel": 1,
+          "title": "Effect of Initial Temperature Guess",
+          "series": "Target T = 40 °C",
+          "x_label": "Initial Temperature (°C)",
+          "y_label": "Flash Time (ms)",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 40.0,
+          "x_max": 40.0,
+          "y_min": 0.0,
+          "y_max": 1.0,
+          "x_at_y_max": 40.0
+        },
+        {
+          "panel": 2,
+          "title": "Effect of Initial Pressure Guess",
+          "series": "Curve 1",
+          "x_label": "Initial Pressure (bara)",
+          "y_label": "Flash Time (ms)",
+          "n_points": 30,
+          "n_nonfinite": 0,
+          "x_min": 5.0,
+          "x_max": 300.0,
+          "y_min": 0.4275999999663327,
+          "y_max": 23.80050000283518,
+          "x_at_y_max": 55.86206896551724
+        },
+        {
+          "panel": 2,
+          "title": "Effect of Initial Pressure Guess",
+          "series": "Target P = 80 bara",
+          "x_label": "Initial Pressure (bara)",
+          "y_label": "Flash Time (ms)",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 80.0,
+          "x_max": 80.0,
+          "y_min": 0.0,
+          "y_max": 1.0,
+          "x_at_y_max": 80.0
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch31_solver_methods\\figures\\ch29_recycle_convergence.png",
+      "sha256": "599ecaabbcd90588a3202610b761238529eeb9d15993e16091169ed57b11e624",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Recycle Loop Convergence — Direct Substitution",
+          "series": "Flow change / fresh-feed flow",
+          "x_label": "Iteration Number",
+          "y_label": "Normalized residual (-)",
+          "n_points": 14,
+          "n_nonfinite": 0,
+          "x_min": 1.0,
+          "x_max": 14.0,
+          "y_min": 1e-16,
+          "y_max": 0.2659261784120015,
+          "x_at_y_max": 1.0
+        },
+        {
+          "panel": 1,
+          "title": "Recycle Loop Convergence — Direct Substitution",
+          "series": "Temperature change / 303.15 K",
+          "x_label": "Iteration Number",
+          "y_label": "Normalized residual (-)",
+          "n_points": 14,
+          "n_nonfinite": 0,
+          "x_min": 1.0,
+          "x_max": 14.0,
+          "y_min": 1e-16,
+          "y_max": 0.06597394029358404,
+          "x_at_y_max": 1.0
+        },
+        {
+          "panel": 1,
+          "title": "Recycle Loop Convergence — Direct Substitution",
+          "series": "Maximum mole-fraction change",
+          "x_label": "Iteration Number",
+          "y_label": "Normalized residual (-)",
+          "n_points": 14,
+          "n_nonfinite": 0,
+          "x_min": 1.0,
+          "x_max": 14.0,
+          "y_min": 1e-16,
+          "y_max": 0.06182320737290725,
+          "x_at_y_max": 1.0
+        },
+        {
+          "panel": 1,
+          "title": "Recycle Loop Convergence — Direct Substitution",
+          "series": "Tolerance (1e-7)",
+          "x_label": "Iteration Number",
+          "y_label": "Normalized residual (-)",
+          "n_points": 2,
+          "n_nonfinite": 0,
+          "x_min": 0.0,
+          "x_max": 1.0,
+          "y_min": 1e-07,
+          "y_max": 1e-07,
+          "x_at_y_max": 0.0
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch31_solver_methods\\figures\\ch29_component_scaling.png",
+      "sha256": "454993214d8dab23d73686f0d9c8b32083b3de79e7c838fa2f363bd0be56f573",
+      "dpi": 220,
+      "series": [
+        {
+          "panel": 1,
+          "title": "Flash Computation Time vs Number of Components",
+          "series": "2 comp (C1-C3)",
+          "x_label": "Pressure (bara)",
+          "y_label": "Flash Time (ms)",
+          "n_points": 30,
+          "n_nonfinite": 0,
+          "x_min": 10.0,
+          "x_max": 150.0,
+          "y_min": 0.2668000015546568,
+          "y_max": 42.15879999901517,
+          "x_at_y_max": 92.06896551724138
+        },
+        {
+          "panel": 1,
+          "title": "Flash Computation Time vs Number of Components",
+          "series": "4 comp",
+          "x_label": "Pressure (bara)",
+          "y_label": "Flash Time (ms)",
+          "n_points": 30,
+          "n_nonfinite": 0,
+          "x_min": 10.0,
+          "x_max": 150.0,
+          "y_min": 0.3022999990207609,
+          "y_max": 17.056000000593485,
+          "x_at_y_max": 77.58620689655172
+        },
+        {
+          "panel": 1,
+          "title": "Flash Computation Time vs Number of Components",
+          "series": "6 comp",
+          "x_label": "Pressure (bara)",
+          "y_label": "Flash Time (ms)",
+          "n_points": 30,
+          "n_nonfinite": 0,
+          "x_min": 10.0,
+          "x_max": 150.0,
+          "y_min": 0.3528000015649013,
+          "y_max": 26.187799998297123,
+          "x_at_y_max": 121.03448275862068
+        },
+        {
+          "panel": 1,
+          "title": "Flash Computation Time vs Number of Components",
+          "series": "8 comp",
+          "x_label": "Pressure (bara)",
+          "y_label": "Flash Time (ms)",
+          "n_points": 30,
+          "n_nonfinite": 0,
+          "x_min": 10.0,
+          "x_max": 150.0,
+          "y_min": 0.49989999752142467,
+          "y_max": 24.947900001279777,
+          "x_at_y_max": 135.51724137931035
+        }
+      ]
+    }
+  ]
+}

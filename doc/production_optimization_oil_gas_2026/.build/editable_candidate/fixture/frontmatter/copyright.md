@@ -1,0 +1,1 @@
+Copyright fixture preserved 2026.

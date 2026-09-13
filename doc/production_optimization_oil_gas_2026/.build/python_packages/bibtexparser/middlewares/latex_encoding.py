@@ -1,0 +1,233 @@
+import abc
+import logging
+import re
+
+import pylatexenc
+from pylatexenc.latex2text import LatexNodes2Text
+from pylatexenc.latex2text import MacroTextSpec
+from pylatexenc.latexencode import RULE_REGEX
+from pylatexenc.latexencode import UnicodeToLatexConversionRule
+from pylatexenc.latexencode import UnicodeToLatexEncoder
+
+from bibtexparser.exceptions import PartialMiddlewareException
+from bibtexparser.library import Library
+from bibtexparser.model import Block
+from bibtexparser.model import Entry
+from bibtexparser.model import MiddlewareErrorBlock
+from bibtexparser.model import String
+
+from .middleware import BlockMiddleware
+from .names import NameParts
+
+logger = logging.getLogger(__name__)
+
+
+class _PyStringTransformerMiddleware(BlockMiddleware, abc.ABC):
+    """Abstract utility class allowing to modify python-strings"""
+
+    @abc.abstractmethod
+    def _transform_python_value_string(self, python_string: str) -> tuple[str, str]:
+        """Called for every python (value, not key) string found on Entry and String blocks.
+
+        Returns:
+            - The transformed string, if the transformation was successful
+            - An error message, if any, or an empty string
+        """
+        raise NotImplementedError("called abstract method")
+
+    # docstr-coverage: inherited
+    def _transform_all_strings(self, list_of_strings: list[str], errors: list[str]) -> list[str]:
+        """Called for every python (value, not key) string found on Entry and String blocks"""
+        res = []
+        for s in list_of_strings:
+            r, e = self._transform_python_value_string(s)
+            res.append(r)
+            errors.append(e)
+        return res
+
+    # docstr-coverage: inherited
+    def transform_entry(self, entry: Entry, library: Library) -> Block:
+        errors = []
+        for field in entry.fields:
+            if isinstance(field.value, str):
+                # The value setter resets `enclosing`; only the representation changes here.
+                enclosing = field.enclosing
+                field.value, e = self._transform_python_value_string(field.value)
+                field.enclosing = enclosing
+                errors.append(e)
+            elif isinstance(field.value, NameParts):
+                field.value.first = self._transform_all_strings(field.value.first, errors)
+                field.value.last = self._transform_all_strings(field.value.last, errors)
+                field.value.von = self._transform_all_strings(field.value.von, errors)
+                field.value.jr = self._transform_all_strings(field.value.jr, errors)
+            else:
+                logger.info(
+                    f" [{self.metadata_key()}] Cannot python-str transform field {field.key}"
+                    f" with value type {type(field.value)}"
+                )
+
+        errors = [e for e in errors if e != ""]
+        if len(errors) > 0:
+            errors = PartialMiddlewareException(errors)
+            return MiddlewareErrorBlock(block=entry, error=errors)
+        else:
+            return entry
+
+    # docstr-coverage: inherited
+    def transform_string(self, string: String, library: "Library") -> Block:
+        if isinstance(string.value, str):
+            # See `transform_entry`.
+            enclosing = string.enclosing
+            string.value, error = self._transform_python_value_string(string.value)
+            string.enclosing = enclosing
+            if error != "":
+                return MiddlewareErrorBlock(block=string, error=PartialMiddlewareException([error]))
+        else:
+            logger.info(
+                f" [{self.metadata_key()}] Cannot python-str transform string {string.key}"
+                f" with value type {type(string.value)}"
+            )
+        return string
+
+
+class LatexEncodingMiddleware(_PyStringTransformerMiddleware):
+    """Latex-Encodes all strings in the library"""
+
+    def __init__(
+        self,
+        keep_math: bool | None = None,
+        enclose_urls: bool | None = None,
+        encoder: UnicodeToLatexEncoder | None = None,
+        allow_inplace_modification: bool = True,
+    ):
+        super().__init__(
+            allow_inplace_modification=allow_inplace_modification,
+            allow_parallel_execution=True,
+        )
+
+        if encoder is not None and (keep_math is not None or enclose_urls is not None):
+            raise ValueError(
+                "Cannot specify both encoder and keep_math or enclose_urls. "
+                "If you want to use a custom encoder, you have to specify it completely."
+            )
+
+        if encoder is not None and not isinstance(encoder, UnicodeToLatexEncoder):
+            raise TypeError(
+                f"encoder must be a UnicodeToLatexEncoder instance, got {type(encoder).__name__}"
+            )
+
+        # Defaults (not specified as defaults in args,
+        #   to make sure we can identify if they were specified)
+        keep_math = keep_math if keep_math is not None else True
+        enclose_urls = enclose_urls if enclose_urls is not None else True
+
+        # Build encoder if no encoder was specified
+        if encoder is None:
+            conversion_rules = []
+            if keep_math is True:
+                conversion_rules.append(
+                    UnicodeToLatexConversionRule(
+                        rule_type=RULE_REGEX,
+                        # keep math mode parts as is
+                        rule=[(re.compile(r"(?<!\\)(\$.*[^\\]\$)"), r"\1")],
+                    )
+                )
+            if enclose_urls is True:
+                conversion_rules.append(
+                    UnicodeToLatexConversionRule(
+                        rule_type=RULE_REGEX,
+                        rule=[
+                            (re.compile(r"(https?://\S*\.\S*)"), r"\\url{\1}"),
+                            (re.compile(r"(www.\S*\.\S*)"), r"\\url{\1}"),
+                        ],
+                    )
+                )
+
+            conversion_rules.append("defaults")
+            encoder = UnicodeToLatexEncoder(conversion_rules=conversion_rules)
+        self._encoder = encoder
+
+    # docstr-coverage: inherited
+    @classmethod
+    def metadata_key(cls) -> str:
+        return "latex_encoding"
+
+    # docstr-coverage: inherited
+    def _transform_python_value_string(self, python_string: str) -> tuple[str, str]:
+        try:
+            return self._encoder.unicode_to_latex(python_string), ""
+        except Exception as e:
+            return python_string, str(e)
+
+
+class LatexDecodingMiddleware(_PyStringTransformerMiddleware):
+    """Latex-Decodes all strings in the library"""
+
+    def __init__(
+        self,
+        allow_inplace_modification: bool = True,
+        keep_braced_groups: bool | None = None,
+        keep_math_mode: bool | None = None,
+        decoder: LatexNodes2Text | None = None,
+    ):
+        super().__init__(
+            allow_inplace_modification=allow_inplace_modification,
+            allow_parallel_execution=True,
+        )
+
+        if decoder is not None and (keep_braced_groups is not None or keep_math_mode is not None):
+            raise ValueError(
+                "Cannot specify both decoder and one of "
+                "`keep_braced_groups` or `keep_math_mode`. "
+                "If you want to use a custom decoder, "
+                "you have to specify it completely."
+            )
+
+        if decoder is not None and not isinstance(decoder, LatexNodes2Text):
+            raise TypeError(
+                f"decoder must be a LatexNodes2Text instance, got {type(decoder).__name__}"
+            )
+
+        # Defaults (not specified as defaults in args,
+        #   to make sure we can identify if they were specified)
+        keep_braced_groups = keep_braced_groups if keep_braced_groups is not None else False
+        keep_math_mode = keep_math_mode if keep_math_mode is not None else True
+
+        if decoder is None:
+            lw_context_db = pylatexenc.latex2text.get_default_latex_context_db()
+            lw_context_db.add_context_category(
+                "bibtexparse-default-context",
+                prepend=True,
+                macros=[
+                    # Do not wrap urls in '< ... >'
+                    MacroTextSpec("url", simplify_repl="%s")
+                ],
+            )
+
+            decoder = LatexNodes2Text(
+                # Use custom latex context
+                latex_context=lw_context_db,
+                # Optionally, do not remove curly braces
+                keep_braced_groups=keep_braced_groups,
+                # Optionally, decode math notation
+                math_mode="verbatim" if keep_math_mode is True else "text",
+            )
+
+        self._decoder = decoder
+
+    # docstr-coverage: inherited
+    @classmethod
+    def metadata_key(cls) -> str:
+        return "latex_decoding"
+
+    # docstr-coverage: inherited
+    def _transform_python_value_string(self, python_string: str) -> tuple[str, str]:
+        """Transforms a python string to a latex string
+
+        Returns:
+            Tuple[str, str]: The transformed string and a possible error message
+        """
+        try:
+            return self._decoder.latex_to_text(python_string), ""
+        except Exception as e:
+            return python_string, str(e)

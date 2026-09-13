@@ -1,0 +1,18 @@
+LoopedPipeNetwork network = new LoopedPipeNetwork("Gathering System");
+network.setFluidTemplate(fluid);
+network.addSourceNode("Well-1", 90.0, 0.0);
+network.addSourceNode("Well-2", 85.0, 0.0);
+network.addSourceNode("Well-3", 88.0, 0.0);
+network.addJunctionNode("Junction-A");
+network.addJunctionNode("Junction-B");
+network.addSinkNode("Plant Inlet", 0.0);
+network.getNode("Plant Inlet").setPressure(70.0e5);
+network.getNode("Plant Inlet").setPressureFixed(true);
+network.addPipe("Well-1", "Junction-A", "Line 1", 5000.0, 0.2032);
+network.addPipe("Well-2", "Junction-A", "Line 2", 3000.0, 0.1524);
+network.addPipe("Well-3", "Junction-B", "Line 3", 8000.0, 0.2032);
+network.addPipe("Junction-A", "Junction-B", "Crossover", 2000.0, 0.254);
+network.addPipe("Junction-B", "Plant Inlet", "Export", 10000.0, 0.3048);
+network.setSolverType(LoopedPipeNetwork.SolverType.NEWTON_RAPHSON);
+network.run();
+logger.info("Network results: {}", network.getSolutionSummary());

@@ -1,0 +1,2239 @@
+{
+  "status": "passed_scoped_validation",
+  "generated_at": "2026-09-12T20:15:04.073396+00:00",
+  "source_root": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\ChatGPT\\NeqSim",
+  "source_revision": "6cc8026202a5d3f9383c9abd1d97d448993813f9",
+  "python": "C:\\Users\\solbraa\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "notebooks_passed": 35,
+  "code_cells_executed": 300,
+  "explicit_notebook_assertions": 273,
+  "distinct_check_labels": 9852,
+  "physical_check_evaluations": 153316,
+  "rejected_candidates": 0,
+  "benchmark_comparisons": 89,
+  "benchmark_failures": 0,
+  "important_limitations": [
+    "NIST values are independent reference-EOS calculations, not raw experimental measurements.",
+    "No external validation of multicomponent transport, TBP characterization, hydrate/MEG/TEG prediction, vendor maps, field hydraulics, dynamics or economics.",
+    "Passing a conservation identity does not establish independent predictive model accuracy."
+  ],
+  "classified_findings": [
+    {
+      "type": "property_initialization",
+      "chapters": [
+        12,
+        26
+      ],
+      "finding": "Valve outlets may have uninitialized phase-density caches. Initialize properties before testing density; no new equilibrium flash is performed."
+    },
+    {
+      "type": "model_approximation",
+      "chapters": [
+        33
+      ],
+      "finding": "Native SimpleTEGAbsorber transfers water after a PH flash and leaves an energy residual. The example explicitly reconstructs common outlet temperature at fixed component inventories; it does not claim native rigorous stage energy closure."
+    },
+    {
+      "type": "solver_cache_applicability",
+      "chapters": [
+        31
+      ],
+      "finding": "Separator skips changes below 1e-6 relative input tolerance. A tighter 1e-7 recycle demonstration now creates fresh separator phase allocations rather than weakening conservation assertions."
+    },
+    {
+      "type": "sensitivity_applicability",
+      "chapters": [
+        21,
+        33
+      ],
+      "finding": "Utilization can rise when both capacity and loads increase; warm solvent can cause a shallow water-content minimum. Replaced unjustified monotonic assertions with the actual case equations and material-removal bounds."
+    },
+    {
+      "type": "reference_basis",
+      "chapters": [
+        19
+      ],
+      "finding": "ISO6976 real-gas relative density differs from the ideal molecular-weight ratio. Verified Wobbe=GHV/sqrt(relative density) on the same ISO basis."
+    }
+  ],
+  "validation_helper_sha256": {
+    "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+    "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+    "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+  },
+  "benchmark_results_sha256": "74e7a1670b4171276bc3dbbd3dad775d281637ac514c014da6c42a8d2c89ea86",
+  "benchmark_notebook_sha256": "b5e8ee4415fa554b9b8923031a5709b418b9a0acf9db3e75cce63d29628644bb",
+  "reference_manifest_sha256": "c1fd6dbf255c631a4891c73afd0e9ec034fbf54d909dc2ed41430b9a8bfd0b47",
+  "ledger": [
+    {
+      "chapter": "ch01_introduction",
+      "number": 1,
+      "notebook": "chapters\\ch01_introduction\\notebooks\\ch01_introduction_figures.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Natural-gas PVT and actual volume",
+      "limitations": "SRK/PR methane NIST density benchmark is contextual; mixture data are not independently calibrated.",
+      "code_cells": 9,
+      "explicit_notebook_assertions": 8,
+      "distinct_check_labels": 76,
+      "evaluations": 948,
+      "category_evaluations": {
+        "physical_domain": 600,
+        "composition_balance": 264,
+        "component_balance": 66,
+        "analytic_identity": 5,
+        "figure_domain": 13
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "47755771c9ecd1a69beba36c613b36e5e8d84be9b8978e870b6129f6f990b247",
+      "code_cell_sha256": [
+        "1cf9b39e866608dc243d43111f76e03c47229f5fe0a97fa81cde466cb28a2f9d",
+        "4cc474adff386a4fe2f0e12b80900a83fa13d1f9a0a3029bb71682cc244fb578",
+        "3cec4e92e365d6595b147af16f4126a8d29d912c3842b6e6f2506b804fa38b30",
+        "5a940d290f9521e28b1d9f67ddc4f6969f253887138fc19701636ba25a9657d4",
+        "b64e7f19a65911151a4d7663b2a67b380f282815ff616facc0a68b314b0de70c",
+        "be3ef2e3cd552ef77fecb6da6809896bc46d59ab9fc86efec361237cdcb72ddb",
+        "a0b394e6e250f06de19f2711fc1f897ce0c903ae32ea43941e8fcda68488064e",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "a0035f1b8949edc61c964f023f1aa07cb72341cdbd15a18c2fe7f167e67a24e6",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch01_introduction.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 7.16,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch01_introduction\\figures\\fig01_density_vs_pressure.png",
+          "sha256": "dc072b091821824e1fc8c3d5f0c9952e48b38f3d9ca92e9088966fed1638c396",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch01_introduction\\figures\\fig02_z_factor_vs_pressure.png",
+          "sha256": "77145aeaa873d754c2a912b5abf8f75ae37f56790b2d1451a28777b5f8a17058",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch01_introduction\\figures\\fig03_phase_envelope.png",
+          "sha256": "3300c23b0883f27c98b1f9244a90ebdd682f19e79c3b84cecf80d43ece05e8a5",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch01_introduction\\figures\\fig04_production_sensitivity.png",
+          "sha256": "a41eeeb6bf66845bc48f4a48e8d22dfe9fb333f97afe4ccb0c78dbeb002450f4",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch02_thermodynamic_foundations",
+      "number": 2,
+      "notebook": "chapters\\ch02_thermodynamic_foundations\\notebooks\\ch02_thermodynamics_figures.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "EOS comparisons, heat capacity, enthalpy and transport",
+      "limitations": "Methane density and dilute limits benchmark EOS; no independent mixture viscosity or JT dataset.",
+      "code_cells": 10,
+      "explicit_notebook_assertions": 8,
+      "distinct_check_labels": 108,
+      "evaluations": 2364,
+      "category_evaluations": {
+        "physical_domain": 1515,
+        "composition_balance": 672,
+        "component_balance": 162,
+        "justified_sensitivity": 1,
+        "figure_domain": 14
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "bf9e1597637e67093ba3d7beee6d630151f8e30a3f0250b618bf11b570525d90",
+      "code_cell_sha256": [
+        "f819313ee49db732690ba1fafbf0603ebad3f2393241745aac5ec089113131cd",
+        "0c767fecb0f50dfba7e142112297b2f659dc0a6a92271009a781c6fe8bef465e",
+        "988d02c19098fdac07153071f6e9458b9eb140d2aa872c0f7ca110bd7734a278",
+        "8ae770b2c1f67cd6df3f148c1e0565a9bf679a63485eaeffff46986545a82f07",
+        "ff62a21a22f47c50289bb89ac3b8307f78d27ac26d00988f0ff26580fd209622",
+        "fe019bbd92cfab2249b6681db242f22c255e16f0f0a7fcd11e2ce73486d7fc93",
+        "0f20b2d809f19a99a909703aed9799b34f4e2d3409ec75a2dfa9bb31f6d75423",
+        "f8f09b326a75c7b43ebdb7f2fbfecc846e668805f1bbf29f3d379e25f44bc405",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "fe7e654f0761992cdf62362bd2e5eecc0856e48d8aca93a4e82b0db2ee9e45da",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch02_thermodynamic_foundations.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 8.67,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch02_thermodynamic_foundations\\figures\\fig01_density_srk_vs_pr.png",
+          "sha256": "02d51b6ff354412dd29dcb8cfd5fa8bdca3c924f96d22a53a992657dda84ae0f",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch02_thermodynamic_foundations\\figures\\fig02_cp_vs_temperature.png",
+          "sha256": "4ace7e44fe69fb666b1f99957100728836e5b49eeec2a77e016dc6f01c97c00e",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch02_thermodynamic_foundations\\figures\\fig03_enthalpy_vs_temperature.png",
+          "sha256": "3ac2c4644b699522dadfde445a9273eaeb9c35b4a1221bdba0c7392c9a97a837",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch02_thermodynamic_foundations\\figures\\fig04_viscosity_vs_pressure.png",
+          "sha256": "2fb8d3da99d83d54f7285f362035487631d54ea77fbeeac2aa5d85831344a711",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch02_thermodynamic_foundations\\figures\\fig05_jt_coefficient_vs_pressure.png",
+          "sha256": "d3738e6b751960a40da88742fc3e7113925907a935c33de9af5b0ed122d92944",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch03_fluid_characterization",
+      "number": 3,
+      "notebook": "chapters\\ch03_fluid_characterization\\notebooks\\ch03_fluid_characterization_figures.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "CCE liquid dropout, phase volumes and sample-specific Bo",
+      "limitations": "CCE is not CVD. TBP characterization and reservoir PVT need laboratory calibration.",
+      "code_cells": 11,
+      "explicit_notebook_assertions": 11,
+      "distinct_check_labels": 115,
+      "evaluations": 2717,
+      "category_evaluations": {
+        "physical_domain": 1761,
+        "composition_balance": 808,
+        "component_balance": 138,
+        "analytic_identity": 1,
+        "figure_domain": 9
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "5b9d876c9b8b052942ac198fc165b81b50e69349f99302f8846439e6e42237d2",
+      "code_cell_sha256": [
+        "0b263eec308434537810cd2c03dadaf2602d0291de257a6a04560c1f87f02d5d",
+        "4cc474adff386a4fe2f0e12b80900a83fa13d1f9a0a3029bb71682cc244fb578",
+        "12cd5253a4dd6e536039ec4156241c62fc23a8f30d2647f2f58d651aba314667",
+        "a3ac280f556e9e729074d1a35d36896a611140b9b86f9a27c506b8f5927d190f",
+        "7a54f4d472adeb0346bf8764374369730887976eaf4fc38c0e00e95425a95a88",
+        "6bc523791e88a875796cbd929e6e056612345f0dd506a9dc2eb2f321e3e5037f",
+        "b006a969860cb81db2fab422673f0ff8ebc92855499257e3001d05ee76eda58e",
+        "cdd41ed8496891976f6dc4a8e751625079cf032478b705231452c2220b3becdd",
+        "2e1a5f2a9c9707ef94bedb3cc3525374f810df0fb7cc482cd03b87920cf5bac6",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "c2ae4e58e98687e8c3e5de46431343ab9f27d876b442a2f880f89bcea7fa2698",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch03_fluid_characterization.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 13.38,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch03_fluid_characterization\\figures\\fig01_molecular_weight_distribution.png",
+          "sha256": "e1ec917dc221255ba60f6de1d372f0376e144f6c92bdc5aa99db88bc6cd60fc9",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch03_fluid_characterization\\figures\\fig02_phase_envelope_condensate.png",
+          "sha256": "2173ba9d1cc743ddd9b4276338fe762a26f73fee8dc97efed20c90067bd6b23f",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch03_fluid_characterization\\figures\\fig03_liquid_dropout_curve.png",
+          "sha256": "38be30185e5bb10da3f4d3e8955db2db9a79911438fb38b37838e75fa10bb950",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch03_fluid_characterization\\figures\\fig04_gor_vs_pressure.png",
+          "sha256": "57446d4d08e543cb31513d03d31037b7fabd85860abd81c2b9e4c7185ea969e3",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch03_fluid_characterization\\figures\\fig05_bo_vs_pressure.png",
+          "sha256": "263d49bd8dbe06d7b8fc4b592cf363cef40629e673f2db27e4083d30ed0e092c",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch04_reservoir_engineering",
+      "number": 4,
+      "notebook": "chapters\\ch04_reservoir_engineering\\notebooks\\ch04_reservoir_figures.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "PI/Vogel endpoints and Corey saturation bounds",
+      "limitations": "Inflow and relative-permeability curves are specified correlations; imposed depth gradients are not a coupled hydrostatic solution.",
+      "code_cells": 9,
+      "explicit_notebook_assertions": 5,
+      "distinct_check_labels": 74,
+      "evaluations": 1406,
+      "category_evaluations": {
+        "physical_domain": 900,
+        "composition_balance": 404,
+        "component_balance": 81,
+        "analytic_identity": 3,
+        "justified_sensitivity": 2,
+        "figure_domain": 16
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "bc18bdae1f7219ce76c74ea854e828b5494eadf49ea9356236cb2f905fa15c46",
+      "code_cell_sha256": [
+        "2abc78687433d97fa66b98592efd3850d68cd83def37bbddf523aa528bbc0ebb",
+        "18305e9a201cf25e21eee5993d34071b809a683297dee5aaaf0138397f868073",
+        "f1cfee5bbbdb061a545875333256f58506255c888c83c3ea83070b3c752ed726",
+        "e79fab86449f058a2cf09bc219c52badf37b8b309b828598a5560ec62013c1f2",
+        "2da1f94508e52ad238c7ae64aa4c091968705f0f463bafa464d4ac47e5e73ed3",
+        "3d9afa688086fe05ca8e2b438a3874c210737bd5581c74f73c1555cd3303a961",
+        "c98e4c236c483adcae58cc7c5921655a95b7ecc37985f5a8f0e751c0828bf152",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "356f835dc8bef92f0f60517e33562d16fb7d7d822cbb3da28fba2b0bab3c0536",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch04_reservoir_engineering.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 6.99,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch04_reservoir_engineering\\figures\\ch04_fig01_ipr_curves.png",
+          "sha256": "14ef430a519517df04b3a454c801d5771dee4efb33df0134ddfb6ade8ce7bcf6",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch04_reservoir_engineering\\figures\\ch04_fig02_gor_vs_pressure.png",
+          "sha256": "e3dbba48440073b16d9eebecf736edbaadb63cd5ffc4e2523a3eb08a202d31c8",
+          "series": 1,
+          "nonfinite_plotted_values": 21
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch04_reservoir_engineering\\figures\\ch04_fig03_density_vs_depth.png",
+          "sha256": "6ce8aaca1a4e3157a8870a2c545a74292b524adb2fcc860e5d399cadae820fb0",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch04_reservoir_engineering\\figures\\ch04_fig04_rel_perm_curves.png",
+          "sha256": "fd9e61d3eae5eb1a64b74a3e2aa779ab672f68b23473530c6c0f037c11c8926a",
+          "series": 5,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch05_well_performance",
+      "number": 5,
+      "notebook": "chapters\\ch05_well_performance\\notebooks\\ch05_well_performance_figures.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Nodal pressure residual and production bounds",
+      "limitations": "Gas-lift response is an illustrative correlation. No measured well test or lift calibration.",
+      "code_cells": 9,
+      "explicit_notebook_assertions": 10,
+      "distinct_check_labels": 182,
+      "evaluations": 6002,
+      "category_evaluations": {
+        "physical_domain": 3803,
+        "composition_balance": 1716,
+        "component_balance": 363,
+        "mass_balance": 89,
+        "analytic_identity": 3,
+        "figure_domain": 28
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "24ad1443fc444f7e0b6853fe6f775206c8d91cf359f6c92fb949cae57805fa1c",
+      "code_cell_sha256": [
+        "37beabe66cb0f0447e68e5d22138fc668192bc94254d537b637faaf11d29df4d",
+        "6ed20abbae845260e7642472624953413ff8ef091cafa38fb1d9929f3a9d82b3",
+        "ed2fa9d07723d1a28a6274474c79d1c97e568821f7105fad353a4977ee104dbd",
+        "31521a2327ff7b68d55071661058e4b783cfffedb069852c61bc16d268fec274",
+        "a132025054f38c6813c5ab4826bc81b5c1182384bcc19c046b92c52af7446db8",
+        "abb1a1f80dfce08dbde6beb6ed65e7d7835bb33126c18bb8e89cb3f61b289972",
+        "8153387c35a1270b4e451985198bc4f320db2300ce931e95740783194901f713",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "918ad24c500819dcc5c579748e51c653dd1d4c462ce39cbf5f52c1b3f1f1c4a9",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch05_well_performance.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 21.3,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch05_well_performance\\figures\\ch05_fig01_vlp_curves.png",
+          "sha256": "9cf477f8377c07a11f48b174e4b063587b2a40ac7dc85c6fcb0c25d674bf0b0b",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch05_well_performance\\figures\\ch05_fig02_operating_point.png",
+          "sha256": "bd40eab248848e678226bb64623052e17b75702931323c0cb5b7377a619b2e00",
+          "series": 5,
+          "nonfinite_plotted_values": 6
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch05_well_performance\\figures\\ch05_fig03_gas_lift_optimization.png",
+          "sha256": "f2b2ae0d069a4393fd5a1daea28dcf559053236dcb10b2875b27b213062be035",
+          "series": 4,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch05_well_performance\\figures\\ch05_fig04_watercut_effect.png",
+          "sha256": "f305ed3282ca63051e4a249dae6fcb72b246edd9fb80281a554e3990661b058d",
+          "series": 4,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch06_wells_artificial_lift",
+      "number": 6,
+      "notebook": "chapters\\ch06_wells_artificial_lift\\notebooks\\ch15w_well_networks.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Well, choke and manifold conservation",
+      "limitations": "Fixed-rate manifold example is not a pressure-coupled field network validation.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 6,
+      "distinct_check_labels": 423,
+      "evaluations": 1928,
+      "category_evaluations": {
+        "physical_domain": 1213,
+        "composition_balance": 556,
+        "component_balance": 107,
+        "mass_balance": 31,
+        "energy_balance": 10,
+        "justified_sensitivity": 1,
+        "analytic_identity": 1,
+        "figure_domain": 9
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "fc7023b0ff7376887bd81ab8066f6d91b2cd6805b13e294d284288b282b0c552",
+      "code_cell_sha256": [
+        "c6b39cb92ef3f1acdbc7f2f13af76f46e41ade4b55b5cfcb98699380767a12da",
+        "dbb5f6660872935efc84ebf70843a337240e3345ad127e6a43433b0e3f288fe6",
+        "95ca8b20b513cdb6ba11296960930c874f6464f19ca80232afa1411069325823",
+        "e3b1c537dbcafcf59d23d989b16630315c0d1130e29d00b15bc1553577f086d0",
+        "df4e99a71fbf127fefd4fa02f11f26052cd7de3c6ac4a2613bb0c820a31f467c",
+        "44dce50a558d542eef2f09db84164fdd26dc3facc59653807c6d22df349614a0",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "1cdaa1e0c18f06208cf01cb34aec55ebf60f76fbbd3f73307d9a9a8c05adf0a5",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch06_wells_artificial_lift.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 12.16,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch06_wells_artificial_lift\\figures\\ch15w_choke_sensitivity.png",
+          "sha256": "bad3ff299f96749b0babe133e87949d66fabf561f3dba523edfbe6a04cebc50c",
+          "series": 2,
+          "nonfinite_plotted_values": 4
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch06_wells_artificial_lift\\figures\\ch15w_well_network_comparison.png",
+          "sha256": "58d709a53e8d298b72078e7964c03c592b414fc3993ffb051cc62b664d1bdb04",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch07_subsea_production_systems",
+      "number": 7,
+      "notebook": "chapters\\ch07_subsea_production_systems\\notebooks\\ch06_subsea_figures.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Segmented flowline state and pressure budget",
+      "limitations": "Flow-regime map and waterfall allocations are conceptual; hydrate boundary lacks external validation.",
+      "code_cells": 11,
+      "explicit_notebook_assertions": 5,
+      "distinct_check_labels": 499,
+      "evaluations": 685,
+      "category_evaluations": {
+        "physical_domain": 416,
+        "composition_balance": 186,
+        "component_balance": 41,
+        "mass_balance": 10,
+        "analytic_identity": 2,
+        "justified_sensitivity": 1,
+        "figure_domain": 29
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "718c7457d2bbe63a1ae0ec7caff2605664cb62d7ca81f4560be989baf75d83cd",
+      "code_cell_sha256": [
+        "058316300151b8ca3d476d3f9c09fa623a85eca809ca5c9b2d1c92dd29ba5af9",
+        "98d5e018ac19fe7df0e59666024f9f8c70d27a825545c3c77819da66ea6e7475",
+        "07d4fa5e58d81d4761500cc8227f4f55a81e2e2bfcb6297f9573e92192a3e18b",
+        "a85619dc1419479c7adc6c0fab34c55b157fe7cb4c5789cd4c35e667e37c5a22",
+        "1efcd133df4031c63cad688565e60b76fe118ef4fac32b2704d12fe18e35e386",
+        "d2f3b28b57690bfb79e7adc2f224ffa20cfcd0a5d15f9aa896f5a247c153499e",
+        "0d4b726a8a807f4d3ff2a5998d38021019f395199391ef653fbd9984f3933887",
+        "7ca070b69deb4045524cc81c96322929aabd0cdd963869caa6a94f2514548d0f",
+        "1bb77ece0733197c42d18c8c9f237388e71509c89ef3a25fd68dc875b06664df",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "922b32307723fb02ccdef2e8869a491c283e940481c20e508dc199c445d85d4a",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch07_subsea_production_systems.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 11.59,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch07_subsea_production_systems\\figures\\ch06_fig01_pressure_profile.png",
+          "sha256": "af7f8e51ab8b25618befc31061c3e1e455c526ec5d6c52bce0c5262df5eeb345",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch07_subsea_production_systems\\figures\\ch06_fig02_temperature_profile.png",
+          "sha256": "27c577d646d0eaccc70560e42d545335bc7f053020d572235f8bd4df06859ed5",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch07_subsea_production_systems\\figures\\ch06_fig03_hydrate_risk.png",
+          "sha256": "faddceaf9eeb41a6cb5c5b0ef4398d0d57e00c2468aacafe143a46582163739d",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch07_subsea_production_systems\\figures\\ch06_fig04_flow_regime_map.png",
+          "sha256": "6b7d32ac7e80b59e4b8bb11613a2e74be1b617dfba41174130dac2bad55f49ee",
+          "series": 5,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch07_subsea_production_systems\\figures\\ch06_fig05_pressure_budget.png",
+          "sha256": "889aaaf161a0928f12846441f3e3143545c09d10dd8c003eb4ebdad9f0c6cf46",
+          "series": 8,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch08_flowlines_and_risers",
+      "number": 8,
+      "notebook": "chapters\\ch08_flowlines_and_risers\\notebooks\\ch07_flowlines_figures.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Hydraulic domains, holdup and diameter conversion",
+      "limitations": "Hydrostatic and no-flow limits do not validate Beggs-Brill against multiphase field data.",
+      "code_cells": 9,
+      "explicit_notebook_assertions": 9,
+      "distinct_check_labels": 223,
+      "evaluations": 6764,
+      "category_evaluations": {
+        "physical_domain": 4299,
+        "composition_balance": 1932,
+        "component_balance": 425,
+        "mass_balance": 103,
+        "analytic_identity": 1,
+        "figure_domain": 4
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "b09ea50d4f8f8796be394b0cff5729a26671d5b91c965915b1fb4a2840c958f5",
+      "code_cell_sha256": [
+        "e32e83e7a7c67dfc193e533210a79966a16e83a618d50f40927b4ae7b434f4c8",
+        "3483a3439c41e2cfb1764213344321b869cf53e4df6ab7c6f356d3b6b17d06fa",
+        "126da0c80a40902d2f1c09bda6d7774da198b177068efad1026822c773d3568a",
+        "2656df5720a9e145db8e9d3835996d099a635440056cabc97191c93c4f5e475a",
+        "f94089abe5b3fda56718ec7a976615f20e7b36bdb22af6799d2f10bc4a11f3a6",
+        "24d208abb623bc4cf96269a700f6114190456fb58437ad05c11ace3e8ee27042",
+        "5804e68ad32af57c9fbc9dbea4f3118eb41d22e552256f03e64c71993c5de704",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "c965bf46672a14780dbe987df26b0e22947e4ee5640dc18ce53e4b565eacb5fa",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch08_flowlines_and_risers.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 12.36,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch08_flowlines_and_risers\\figures\\fig01_pressure_drop_vs_diameter.png",
+          "sha256": "6487e653f6524fbd70a11b84b0c0638ef6857e2ef184c610d647bee51e031788",
+          "series": 1,
+          "nonfinite_plotted_values": 1
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch08_flowlines_and_risers\\figures\\fig02_pressure_drop_vs_flow.png",
+          "sha256": "d1a9e3f647218bbf01faf4dc80d1b73a420861ffb63e11c0306602257424ae59",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch08_flowlines_and_risers\\figures\\fig03_liquid_holdup.png",
+          "sha256": "734f6899e342b190951f56d27ed606feb066d1969e581a7b793ee070b908702e",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch08_flowlines_and_risers\\figures\\fig04_pipeline_capacity.png",
+          "sha256": "dc567dee20e56c080f2fc1e6ddbeb895e8dd3fd9edefa7b965de68bb11ade956",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch09_flow_assurance",
+      "number": 9,
+      "notebook": "chapters\\ch09_flow_assurance\\notebooks\\ch08_flow_assurance_figures.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Hydrate/inhibitor/dew-point domains and monotonic sensitivities",
+      "limitations": "No measured hydrate or inhibited-water dataset; composition and inhibitor basis must match the application.",
+      "code_cells": 9,
+      "explicit_notebook_assertions": 5,
+      "distinct_check_labels": 33,
+      "evaluations": 33,
+      "category_evaluations": {
+        "physical_domain": 14,
+        "justified_sensitivity": 2,
+        "figure_domain": 17
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "afa026b8e323bd351a5a49deaf80afaf28c09551620c8ea1cfa5582e7b8ef371",
+      "code_cell_sha256": [
+        "41b9ad08f99ef7b76525105d7ac9b8f5ef9b3368e177819e82f0ee5073270fec",
+        "47209650e02093105be3f27601fa7fb43566efd8ce3991c0b2059a2166881583",
+        "7602f4a326da911d2c6c3c1eff5ef0edbc36be5474f3eeb49ce7d5f869226fb4",
+        "7a3503183bd556da5048ffe2d845b0f871cbf964a76eda4a297da687ebc1cb3f",
+        "22e300590b9d70ed6e384ab4df081abe19fa37c932d8acffd1e1d6463bc72871",
+        "60e9de4f2871035dcbb5191ea89cd5d48b3f424e016828fb86811ee24e9cca50",
+        "a344c8c58e22e2a137f2cb51c5b7ecb6132aebabb81fe618daf249355242b924",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "f3466ee6824a64659558740a9574eb8092cb7cb0ecd7f8bbadacba48c0fb6865",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch09_flow_assurance.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 20.84,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch09_flow_assurance\\figures\\fig01_hydrate_equilibrium.png",
+          "sha256": "6db285d5a31be866a9dd6365b779d2eac8bb8af6df94acff8fa4eddb40d45936",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch09_flow_assurance\\figures\\fig02_meg_inhibition.png",
+          "sha256": "9257c99fa2b3628a5746d3d040bb39e2fc1b49fd58df1fd5ab3c64ee3e4f1bd4",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch09_flow_assurance\\figures\\fig03_water_dewpoint.png",
+          "sha256": "3385efcdacf919c03fd2fd99e4d5abb440e586ac9b3d7953eb8d220fb53c26b4",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch09_flow_assurance\\figures\\fig04_hydrate_operating_envelope.png",
+          "sha256": "83407cfdccceb20cdc4cea23002b8413eabe7e5e80039d8ddc336ef3072cf252",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch10_separation_technology",
+      "number": 10,
+      "notebook": "chapters\\ch10_separation_technology\\notebooks\\ch09_separation_figures.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Phase mass splits and Souders-Brown identity",
+      "limitations": "K factor and residence criteria are assumed screening inputs, not separator vendor performance.",
+      "code_cells": 9,
+      "explicit_notebook_assertions": 7,
+      "distinct_check_labels": 599,
+      "evaluations": 5595,
+      "category_evaluations": {
+        "physical_domain": 3474,
+        "composition_balance": 1560,
+        "component_balance": 375,
+        "mass_balance": 84,
+        "energy_balance": 84,
+        "analytic_identity": 3,
+        "figure_domain": 15
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "55f76ba6064aebcbecc7791c3b9abcc7910b8e934a773f9aaca0ebd5166e7c2a",
+      "code_cell_sha256": [
+        "e018a237a60060003afcedf1e1fa42f80023a5e4c633d24dc435cf90ee9a12b6",
+        "c25ce4f28610f145dbec8935fb66c788221001ac9e50c112bbc90a2a7e8e92b7",
+        "cef0ca02c9de4b08841b1e31ddf9b4ff176e99b0b5595abc513e8bcbe7ea57bd",
+        "f35cabbbce6ca66dfd87aa94ae6cde0a932c0ec356fc22944f238e0f6b00678f",
+        "eedef6fc6f23a3656c35930b90e9216e35d81d97f036dd4fd2aea6db8f9a6a30",
+        "918d2e63a093e77bdb5e75b605a350040a67a323303c164bc05b9c9f65c40ca2",
+        "d4ee3270c56f4e6a60824d151d1d8e99a3a9bdf00a66a427edc4762b69be7057",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "5292ee73d01f2dd821b83570004c0c2dc6b19cdba3fe8953a74fb27ccfac63ec",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch10_separation_technology.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 10.64,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch10_separation_technology\\figures\\fig01_phase_split.png",
+          "sha256": "65c20f43b8a3fe28e0c5460252e99074b897c095349d272611a6fca68b1f43a1",
+          "series": 0,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch10_separation_technology\\figures\\fig02_souders_brown.png",
+          "sha256": "ed8cd84546c1a98869423d2d96b2686629538422baabcbb13ae5e8ca6a9a26d9",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch10_separation_technology\\figures\\fig03_separator_optimization.png",
+          "sha256": "db65f6b10fd83a00d1accf1903c9fcf4bccbcc00cebe932459157b363f7687b8",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch10_separation_technology\\figures\\fig04_separation_train.png",
+          "sha256": "eb0d60a95e2fbada085d11825b9c051a29c1e60aea279410811d1d1ca0bef7f6",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch11_oil_processing",
+      "number": 11,
+      "notebook": "chapters\\ch11_oil_processing\\notebooks\\ch10_oil_processing_figures.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "TVP, reference-density API gravity and staged material release",
+      "limitations": "37.8 C bubble pressure is TVP, not ASTM RVP. No crude assay benchmark.",
+      "code_cells": 9,
+      "explicit_notebook_assertions": 12,
+      "distinct_check_labels": 150,
+      "evaluations": 1594,
+      "category_evaluations": {
+        "physical_domain": 1028,
+        "composition_balance": 470,
+        "component_balance": 80,
+        "analytic_identity": 2,
+        "figure_domain": 14
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "f4574302b5e10e849a1dfd0d090332995011f75e4d6147cebe01e729208be08f",
+      "code_cell_sha256": [
+        "c4586b75b71a352fbab4d91a64217bd6eb5787dcce4c53bd4bea9aaaa52b2b7a",
+        "bb38fb9b57e03626a90aff3e00fa78f4bd3d0376d2ec024d69f8e156397ec00a",
+        "ab0d199e5cc8bb31001d6bbf8f33ce1a6938653a6696d44223a5cde492bd4cf1",
+        "2ab20a5aa6ef03b7f0797dacb0b688b166998b05faa846e8f78ef1e6e6691203",
+        "02cbd310cb18df93eb2a0efd4d370f156ca61453a75c7767daf63e2b95a3cbef",
+        "c2bd571ffebc5fd45315adb14b48f6d389685e4aafff7818874c209b95167d8a",
+        "8a518536ad20302a5a03f508a3d0de182795b426c890cac4a810e5a3b74ffa52",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "fd215d38fbc1b641427057ba42d976a7e6cfc72f7f511e82a5c704de173bac68",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch11_oil_processing.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 18.42,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch11_oil_processing\\figures\\fig10_1_rvp_vs_temperature.png",
+          "sha256": "be5b5f1c6e851619a18ebc7d3020cd6840a00802594448ffc3fba1f70a2c2ba8",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch11_oil_processing\\figures\\fig10_2_api_vs_pressure.png",
+          "sha256": "cd689e7e4581e4ba35be0090fa78caae1e62fc94a9ffd78fedeeab0b52284b06",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch11_oil_processing\\figures\\fig10_3_multistage_oil_quality.png",
+          "sha256": "917f15b453aaf9c3739afc89388a8ebe2df77756985f1b3f0ae8ce73c968493b",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch11_oil_processing\\figures\\fig10_4_gas_shrinkage.png",
+          "sha256": "ea53ee2da41223354709340cfc7ca766a3c5874913e5c8dee20665d7145afedd",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch12_gas_processing",
+      "number": 12,
+      "notebook": "chapters\\ch12_gas_processing\\notebooks\\ch11_gas_processing_figures.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Water-content bounds, JT first law and heavy-component nesting",
+      "limitations": "No independent gas-conditioning recovery or dew-point dataset.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 11,
+      "distinct_check_labels": 242,
+      "evaluations": 2844,
+      "category_evaluations": {
+        "physical_domain": 1803,
+        "composition_balance": 802,
+        "component_balance": 168,
+        "mass_balance": 27,
+        "energy_balance": 27,
+        "justified_sensitivity": 1,
+        "figure_domain": 16
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "cc3a57a2e4a6f458a6d87d6c2b2221896105cc2749604788cf3869dca4968be9",
+      "code_cell_sha256": [
+        "f36731af00e2727bbb8e92e99c6277957807584683e9b3d949471803230e754e",
+        "26b39594b67cc97a49b44a2b26ffba152afb9930d0f0fe3bf378bc7a1b127102",
+        "c18532da7bca3dd2951773384de60bc7c841f93af0f159673bdb331c80f56ce8",
+        "c7822597bb96a69bc211d8440d4a85de2bf1637ddb9a5f3ec711928431c7e7a9",
+        "b5019596e8ed441fe262e1dd3cbc1e0c69d3be2ef2292212e7ede49a7295b1dc",
+        "45a28448a97c20924e44d47cc4d23f2df1c7b3a4fdf479ec164a1eb94cd36774",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "be624531689263600fbe2c8ce54234fc51d2666a93a1f3e73854a653fc183f22",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch12_gas_processing.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 22.39,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch12_gas_processing\\figures\\fig11_1_water_content.png",
+          "sha256": "c349bb4a4e9aff27802a34f6f890b9219c1ac0f6cbb70df37f51c4159bd774ba",
+          "series": 5,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch12_gas_processing\\figures\\fig11_2_jt_cooling.png",
+          "sha256": "515900d8434f878adcd72790448ab1c15fb8b01fbb9e318982aa337bd9a9d13b",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch12_gas_processing\\figures\\fig11_3_turbo_expander_profile.png",
+          "sha256": "0be9b755b588820287269b468f4ff8ea717e7027b0fe9687c1412a5ad889e866",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch12_gas_processing\\figures\\fig11_4_dewpoint_control.png",
+          "sha256": "a345fce9586141a22c64c68d468d2fe489c28f4f69b4f25cb8034b5892fa44e3",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch13_produced_water_treatment",
+      "number": 13,
+      "notebook": "chapters\\ch13_produced_water_treatment\\notebooks\\ch16_water_treatment.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Three-phase material conservation",
+      "limitations": "Equilibrium phase split does not predict emulsions, droplet separation or water-treatment removal efficiency.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 6,
+      "distinct_check_labels": 342,
+      "evaluations": 2986,
+      "category_evaluations": {
+        "physical_domain": 1884,
+        "composition_balance": 848,
+        "component_balance": 183,
+        "mass_balance": 31,
+        "energy_balance": 31,
+        "analytic_identity": 1,
+        "figure_domain": 8
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "8927a2a205e654db0414d8847b2e5910bcd98ff203a794f97da0097875ad639f",
+      "code_cell_sha256": [
+        "299a4c95c3b4e99df3b9f3114b52c705937b2e8b8d583d75f4b103e61012525b",
+        "70973ad020192498d476553f2b5a571da01c76615a847f5ce0377c6147bd2869",
+        "ba277e41efa903e3261f47803694391f41053ae4bda7b5aedb155ad83778faa8",
+        "3625d8681e586330b1dd825972532a2ca71f7177a5355193744fa3ad97c28f45",
+        "0eac52be7e7809e6b2bd9d64af9e932b00bbb6e636f4edc2fc902cb31fbc26e5",
+        "36650bc45b0f45de33d0880a3127ac47088065387aebcccf6b8a5cc49c326e8f",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "cb277ddde84924d29cc52d74250641d06852a41c722fff4726dd9831b9142fdb",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch13_produced_water_treatment.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 20.84,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch13_produced_water_treatment\\figures\\ch16_watercut_sensitivity.png",
+          "sha256": "249d316b67e2434dfb28883c8cde419cf2d5fcbfe267ce5e64449693e3cab2ca",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch13_produced_water_treatment\\figures\\ch16_pressure_effect.png",
+          "sha256": "74c5fe2128beee40ae37c263c0ea042920c461a0c27c7e3e7d0aab7d1946afff",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch14_gas_compression",
+      "number": 14,
+      "notebook": "chapters\\ch14_gas_compression\\notebooks\\ch12_compression_figures.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Compressor first law and efficiency sensitivity",
+      "limitations": "Independent dilute-argon limit supports equations; assumed efficiencies and temperature limits are not vendor guarantees.",
+      "code_cells": 10,
+      "explicit_notebook_assertions": 13,
+      "distinct_check_labels": 302,
+      "evaluations": 4346,
+      "category_evaluations": {
+        "physical_domain": 2690,
+        "composition_balance": 1080,
+        "component_balance": 365,
+        "mass_balance": 95,
+        "energy_balance": 95,
+        "analytic_identity": 1,
+        "justified_sensitivity": 1,
+        "constraint_screening": 1,
+        "figure_domain": 18
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "7de672e2bcf82664e7fe5b5853d4957ea377f15adf825e680f6a371108525fbb",
+      "code_cell_sha256": [
+        "9dac1d541bc4a0d32f4bfe7545eb031b0e5dccb59a45b9de0a2d33ef59b3e1cc",
+        "7e827edc95e00723280997044ccee78d6397bf3774049b3655ca7b0a6598c553",
+        "487813ee58a9b5b9e9bb02cb367e2ee523ed1d6d2e34cf6f672a4a9758d57670",
+        "c3aaa464717b7df028a5c86d5bbd4885fb868dc7072a721c404423c69ee0b7aa",
+        "0ef292ff61b30fade2044132096941186766d872f9afb6b9bdf9bfa912743a9a",
+        "e1bd5be6149dc74e0de91c75a666bcef9b942598ed31e15a3f47843c459e02cf",
+        "e56127ef300fba3354d00a61bf8574d5772f6a53da61118cd341c89ebc0ac39b",
+        "233f1f68f2e4a63178cbe8fede0d4415eb9b892ed7a8098809322f4e0adf6fd8",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "f0fcd19238a6f4fcfea43fff2e346858e98e8291a4263cbbf7add89d771edd9d",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch14_gas_compression.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 36.17,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch14_gas_compression\\figures\\fig12_1_power_vs_ratio.png",
+          "sha256": "397daf87151ccc294e7b233e527c63721fcb63ef4d6d33c44fd600fba45df836",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch14_gas_compression\\figures\\fig12_2_compressor_curve.png",
+          "sha256": "8b8b146af9a53396702c47db32fb4a1988bb7a0f10d786deeb274e32caf6298f",
+          "series": 5,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch14_gas_compression\\figures\\fig12_3_multistage_profile.png",
+          "sha256": "9b05d69592561415b0e7061101cf2cc14bc6724213cfd280cb1f9c23f873e8b5",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch14_gas_compression\\figures\\fig12_4_power_comparison.png",
+          "sha256": "2e691d63bd3edbef87aedc1bbbcda5ddf8c625564b3d738490dc9fc5ba80df30",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch14_gas_compression\\figures\\fig12_5_discharge_temperature.png",
+          "sha256": "f59a32d087621b6508056aaa3cb173c6253b6238dc494d580dbc3f902d7d0e4c",
+          "series": 4,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch15_compressor_characteristics",
+      "number": 15,
+      "notebook": "chapters\\ch15_compressor_characteristics\\notebooks\\ch13_compressor_curves.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Assumed compressor-map affinity scaling",
+      "limitations": "Map curves are pedagogical, not measured machine curves; no surge or choke certification.",
+      "code_cells": 9,
+      "explicit_notebook_assertions": 5,
+      "distinct_check_labels": 144,
+      "evaluations": 152,
+      "category_evaluations": {
+        "physical_domain": 73,
+        "composition_balance": 28,
+        "component_balance": 9,
+        "mass_balance": 2,
+        "energy_balance": 2,
+        "analytic_identity": 10,
+        "figure_domain": 28
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "26a0dfc0f974bfb731cc676f888956d6b7c454efdeb7a65084496aeb8974beb9",
+      "code_cell_sha256": [
+        "1a313ef50070c526a58c7655370c88a37ebfa3b911ba43d6cc7f094715f4be8a",
+        "437219943c661776b62ca73a1c0abb37b13c483d5b502dba458a6dd5918b2dbb",
+        "cf515e3767227577b23c2e7f268924c06f8ad8e2c06665db23c150eb2611923d",
+        "ddf17d0ad6d99908c97081d51e1fbbe865cee0a78a6fea024a11bff06afd92a5",
+        "6a5ac75ebbf5554f363e5fef6aa7ce77f941ec28a6e0aea4276f9f93f8065d72",
+        "41f3ce6361ccdc3d8d43b0664cb9d4840d552eac3a0ba04d1edcfcf3f790f817",
+        "1e585292ef5a8fb01288354e041326f900491d0ee439b61c819975a658df2566",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "48419bcee3c4e57b553e9c8961d1e92b1730c94b90b092c985ce3312d729171a",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch15_compressor_characteristics.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 24.81,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch15_compressor_characteristics\\figures\\ch13_head_vs_flow.png",
+          "sha256": "5c7ff3a3daf98f6a113c5308874b1986a0ab688a2e3aaa45c18e5a52bfd4e3ce",
+          "series": 7,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch15_compressor_characteristics\\figures\\ch13_efficiency_vs_flow.png",
+          "sha256": "66b629d145cae7e0deffa10e2dfd74626fe980ce2edeedd3803b37562744289f",
+          "series": 6,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch15_compressor_characteristics\\figures\\ch13_operating_envelope.png",
+          "sha256": "a2bf2aae4f90b8bc7f32874cfcbdcdca7fed3f2780ad3890e794fa3648d7ee4a",
+          "series": 15,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch16_heat_exchangers",
+      "number": 16,
+      "notebook": "chapters\\ch16_heat_exchangers\\notebooks\\ch14_heat_exchanger_design.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Two-stream energy closure, driving forces and effectiveness",
+      "limitations": "Linear temperature profiles interpolate endpoints; exchanger UA and fouling need design data.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 9,
+      "distinct_check_labels": 287,
+      "evaluations": 2690,
+      "category_evaluations": {
+        "physical_domain": 1693,
+        "composition_balance": 720,
+        "component_balance": 210,
+        "mass_balance": 30,
+        "energy_balance": 30,
+        "figure_domain": 7
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "3b70fecdeab8569b5ddfd58520d9c99e622cd7764494120d5ec8a5770003a4de",
+      "code_cell_sha256": [
+        "5dbf05c8446b5285f27234f83788d808d6c9a414fc8e944f11e71f532323e7ee",
+        "588b1957afa9b98ff0f4f8cde20b95c0ec477e16025ab30fab31d9def5d551ee",
+        "ee81c21576f535b7ff15c05f44146322d1803b22c00b06dec5cacada601acc8d",
+        "d83cf63da259ed53faeff3feb645f558a3c39117771956119effae03c1548c27",
+        "80302251d30fb23a9bf92d47d693b52bbcce6a573476ad2afd0dc80b97798298",
+        "a006807f705a9aff6925a66f8d98a1a52a1c9efc39c5b09c41d081136cf82661",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "0ad71892169d4292e1b48462c22815fea306d21712f27e5ce74619b1b8f81843",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch16_heat_exchangers.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 15.99,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch16_heat_exchangers\\figures\\ch14_temperature_profile.png",
+          "sha256": "ed9779316496a369cea2c570285ee0ce3467c003204b42db20757be47702b165",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch16_heat_exchangers\\figures\\ch14_duty_vs_flow.png",
+          "sha256": "2f2c56cf1ff278f48297796f43b2a273ded003a825f9975d14a0a5a9192c1538",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch16_heat_exchangers\\figures\\ch14_ua_sizing.png",
+          "sha256": "dcf6e5ac2c0ab0eed7c3d6955f4446dcbe06fd00c2f25e5a03b0f3ed44203cbd",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch17_valves_and_flow_control",
+      "number": 17,
+      "notebook": "chapters\\ch17_valves_and_flow_control\\notebooks\\ch15_valves_flow_control.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Valve mass and enthalpy conservation",
+      "limitations": "Fixed-state Cv sizing and opening sweeps do not validate cavitation, noise or vendor trim performance.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 14,
+      "distinct_check_labels": 297,
+      "evaluations": 3493,
+      "category_evaluations": {
+        "physical_domain": 2150,
+        "composition_balance": 888,
+        "component_balance": 296,
+        "mass_balance": 74,
+        "energy_balance": 74,
+        "analytic_identity": 2,
+        "figure_domain": 9
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "ecedc6bb6329f41ab7f54b83d09f3dd47bb08aacefb0cd4038da70f209d9e8c0",
+      "code_cell_sha256": [
+        "4b72b7fb123b3f491e78a17a8ce163383b8a788f0491cd48c23b33b6166b0ff6",
+        "d8a711067b9d0975b6dbaa0ce20e52a6755962b529d33b57f734c4a43ae694f8",
+        "e279c958d1c3e3b45024666219617d55eb16e523d0e3ef125868d3426cb6df7e",
+        "390d7fd8126283f28faddbd3a65b70d27c76b3bb2c95536424a699500e93cf01",
+        "13107a58b46bd8f036ea0a7005c5ba6b23ff97e0dd9c7a3d6d5300b5d0854a1d",
+        "1361a15890f99c44e013a5b21f33623907d49402034189085f7b524a655385ab",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "933ed5061cd12b80ed39b62e7a1dcf1367fe9127b52a8e9242158d775584734e",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch17_valves_and_flow_control.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 18.24,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch17_valves_and_flow_control\\figures\\ch15_cv_and_jt_vs_flow.png",
+          "sha256": "8920a8aec0373bcf7a3e1248c9a6f68c0783c07ad479f3235d491a93801b0bfe",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch17_valves_and_flow_control\\figures\\ch15_jt_cooling_vs_dp.png",
+          "sha256": "fb0bfc36f2281ae1d3f41b560c177294b3b312aa738feedd2ac985ed0ebf19b8",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch17_valves_and_flow_control\\figures\\ch15_pt_path.png",
+          "sha256": "c077813e4bfed4311d61c3467b16bfb388f5b33089cf8d792435d13ab9a3f6e3",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch17_valves_and_flow_control\\figures\\ch15_valve_opening.png",
+          "sha256": "6b2890ceed5d6235fd0b37de126fb80ce5cc0828dcff525f2b7d1b5c86d11739",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch18_power_production",
+      "number": 18,
+      "notebook": "chapters\\ch18_power_production\\notebooks\\ch30_power_production.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Fuel-energy and annual-emissions unit identities",
+      "limitations": "Gas-turbine part-load curve, carbon factor and annual hours are assumptions; no emissions certification.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 3,
+      "distinct_check_labels": 27,
+      "evaluations": 27,
+      "category_evaluations": {
+        "physical_domain": 12,
+        "composition_balance": 4,
+        "component_balance": 1,
+        "analytic_identity": 3,
+        "figure_domain": 7
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "44d59ae4a4b175c684ddbead3522352dde82372fc507d493ecbb87df9e54667c",
+      "code_cell_sha256": [
+        "4e62093ce21e1a10db22df128147c98122db955436cf7248cbde09e61b1f8957",
+        "d2e2ce76a3cf589be707623172394c146586c06d2db05b97527993e65c7c5263",
+        "974d517bc6413b7593cd1dcfc6eeb8b539151b5f4c559e7ef5ce4f90ec8f6343",
+        "eaaf844f18d0002fa75fe16473f0adc3e5396c1e58deddf647908ef332503c2a",
+        "c97ca1fc4b56d19dc830437bcaba3de66397169f0d83b72cc9778a52847343e1",
+        "ddac5d007ddd1298e824511f18a7b1c3b54b696390d75c2417acc8fda0ade2cf",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "4f3753a7afe54ec2306b49c7861685e7384db5529bce8126e0fbbc35b5a461a2",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch18_power_production.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 15.97,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch18_power_production\\figures\\ch30_fuel_consumption.png",
+          "sha256": "ee7688b52d8794ede521c177484d44dc75aafa77169126d8ab686d21412dfa2b",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch18_power_production\\figures\\ch30_power_demand_pie.png",
+          "sha256": "453672f4da27b451628b544880a3e5bf07d22ea67de54d54433e2cd1a89826a4",
+          "series": 0,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch18_power_production\\figures\\ch30_gt_ambient_temp.png",
+          "sha256": "6683446ef54690a9e3c2ac77c38a12728140b434a5eb13b6d8a94f2a8bb02702",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch18_power_production\\figures\\ch30_co2_emissions.png",
+          "sha256": "9fc30b8a3a94323c27c77b8cebd7d701b0a3aefc4fdfe5bfff5cb46479180703",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch19_export_and_metering",
+      "number": 19,
+      "notebook": "chapters\\ch19_export_and_metering\\notebooks\\ch17_export_metering.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Export hydraulics and calorific-value unit basis",
+      "limitations": "ISO calculator execution is not custody-transfer certification or metering uncertainty validation.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 5,
+      "distinct_check_labels": 124,
+      "evaluations": 529,
+      "category_evaluations": {
+        "physical_domain": 323,
+        "composition_balance": 136,
+        "component_balance": 45,
+        "mass_balance": 11,
+        "analytic_identity": 2,
+        "figure_domain": 12
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "340a76de6d45af4c8815d5a7aafd86a820ce422564fd71b9f33ae3f702ef5769",
+      "code_cell_sha256": [
+        "032ef60a00130dede6c852476b4033ebc68e9969739accac3074f6d81310147a",
+        "1370cc49ff6768cdb39009a22f52e22bdd271ec7138c47d8150bcd99d5973716",
+        "43437babdfc6c866b50962528872171de13cb83724577077edc5550fec4355c4",
+        "cf16a4d32c88129c8a545e1161ca8b11b9159eb3e4ee991d16abff4edfa4c91c",
+        "6da27b83599a298757071797f7d93f637ac887f15904bda15905d4a054932895",
+        "d74236f9aa5c0b371dd429482a8efabf6958f2eda4a71f28a7e74ce00a3b8018",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "364501fa5afe467210ac0337f7bbc307412db89ce4acdf89019915cf26db0d74",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch19_export_and_metering.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 16.83,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch19_export_and_metering\\figures\\ch17_pipeline_profiles.png",
+          "sha256": "59fef02468ff121c8b3568048639baaf99877a1eccea56da6a866234f0786a9c",
+          "series": 4,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch19_export_and_metering\\figures\\ch17_diameter_sensitivity.png",
+          "sha256": "19814e3c41f0b2f5df47cfc02dae599a9ed5f6626a3b19345799714a6671fb28",
+          "series": 4,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch20_capacity_checks_and_utilization",
+      "number": 20,
+      "notebook": "chapters\\ch20_capacity_checks_and_utilization\\notebooks\\ch18_capacity_checks.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Equipment utilization domains and fixed-rating capacity sweep",
+      "limitations": "Autosizing establishes teaching ratings, not installed equipment capacity.",
+      "code_cells": 9,
+      "explicit_notebook_assertions": 6,
+      "distinct_check_labels": 478,
+      "evaluations": 3328,
+      "category_evaluations": {
+        "physical_domain": 2044,
+        "composition_balance": 900,
+        "component_balance": 252,
+        "mass_balance": 72,
+        "energy_balance": 54,
+        "figure_domain": 6
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "51a6795cdc5f5875c751365653f0fc6f5a27a6091121c5dfcc455d5f9d35ef9e",
+      "code_cell_sha256": [
+        "6e7d9d9370e0fa9ef57769445093d5a8c7b02b0488f73ee2f496b4596a766065",
+        "fb0e3fc2be6e6e6f0ec4bd26e0e74fd178979dbe29f29cb827f27537fbc430e6",
+        "1ccfdd80a88723ffcafc42f15bf6f026476c99041834732162b7836e107ba94b",
+        "a09ef84191598b6c20f0a61e05dfd4bf7eb6515f0fbb824359f420f5969645e3",
+        "c6fcfbbe9a9a1304bb7f1bad46dfb261e4cc9faed2c8818772b065a673e58724",
+        "3ef50f537ab31b732df1248ea75d9a0326b5969b5a9c88ba8e415e2bd570d589",
+        "70e408824c781cb929f457463544a73fe5182441a8088582601cab9077eb5c8f",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "1de6778cb06be862d83b7d11ce99ee332daf924f46aa2d20787ae22e4c81b931",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch20_capacity_checks_and_utilization.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 20.38,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch20_capacity_checks_and_utilization\\figures\\ch18_utilization_bar_chart.png",
+          "sha256": "db4c30b1c496050e9122235df60b6adb7989cff33b7a3458f8a981a3bffa5f6f",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch20_capacity_checks_and_utilization\\figures\\ch18_utilization_vs_feed_rate.png",
+          "sha256": "701fd7b046386fd5ce9e05356f0872d02dbcf6664fe83e792e56ffc85d835556",
+          "series": 4,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch21_debottlenecking",
+      "number": 21,
+      "notebook": "chapters\\ch21_debottlenecking\\notebooks\\ch21_debottlenecking.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Dimensionless utilization and debottleneck arithmetic",
+      "limitations": "Capacity changes are assigned scenarios; no CAPEX or production optimum is independently validated.",
+      "code_cells": 7,
+      "explicit_notebook_assertions": 3,
+      "distinct_check_labels": 200,
+      "evaluations": 233,
+      "category_evaluations": {
+        "physical_domain": 135,
+        "composition_balance": 58,
+        "component_balance": 17,
+        "mass_balance": 5,
+        "energy_balance": 5,
+        "analytic_identity": 5,
+        "figure_domain": 8
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "601a1306e30f3fc766dba080ff66246f6a491b59bed1dbc77daf330503cc5e94",
+      "code_cell_sha256": [
+        "9ca84ea5cc021a9ee6d8c733fb339352cbd82c8fe101c174bbb6f5a1acaef2cc",
+        "4aa8348ede613222dcd5e9ae4b3381ca63791d7d66ff4ccac9e81b1868e9548f",
+        "d7f80c96b1a5b0921b3eed5a12b46c0434dd62fa1e54610182d13ac24c4942cd",
+        "e414a7514e91119ffb5cefadca0649787b8631c6b3082b47ac0f7260f851aa5c",
+        "02753d0991c51bd5cb4d71db5ed7f296ed71f73b84e49ffc6a90bb70462a5f60",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "5b910dde00d9ffd9beead0080366b535181ded24ac593eed77b3b7800fb85a94",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch21_debottlenecking.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 16.59,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch21_debottlenecking\\figures\\ch21_debottleneck_cascade.png",
+          "sha256": "630a13d16434deb2dab6c61beaf09f809684a5a4dbce40e243bf6a0447bc2c85",
+          "series": 8,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch22_production_optimization_theory",
+      "number": 22,
+      "notebook": "chapters\\ch22_production_optimization_theory\\notebooks\\ch19_optimization_theory.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Feasible throughput bracket and search agreement",
+      "limitations": "Search checks use the same process model. Monotone feasibility is case-specific.",
+      "code_cells": 10,
+      "explicit_notebook_assertions": 19,
+      "distinct_check_labels": 672,
+      "evaluations": 13872,
+      "category_evaluations": {
+        "physical_domain": 8320,
+        "composition_balance": 3528,
+        "component_balance": 1260,
+        "mass_balance": 378,
+        "energy_balance": 378,
+        "search_verification": 1,
+        "constraint_satisfaction": 1,
+        "figure_domain": 6
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "1deba501b1bcfdd18766fd02e7eea076917477c14937e06c41a533be2ddb1cef",
+      "code_cell_sha256": [
+        "76731116f6e92415a7bedb4a3cb52efc6fe2bd0160c8a46e6d7e5e52bb4852a3",
+        "6b0b4ff6de12eafd236eb4837881bd5841ea80456cf69334de5d4e0a67352685",
+        "9190b7e94892eb0e71cb38eaee05bc7cccff6a6bd35a9ead03f70a2a54c03cbd",
+        "88929846e5ae05cc19ab3ae57d4a7ccc5c7f35d506ca37267fae28fc8c5dc6a3",
+        "2b5b7117d9fadbd1f021fd855a2b22c57a8bee4a1cfb0d998e2d7fd8c88749b7",
+        "8e7860764a893368bd4df3dc820c442532b6c108b1db2832f35deb92331ebc01",
+        "5f89328e7ed237e01c487e76d736fb98b18e10ada61a5a8289bd13b951326a05",
+        "fa88957264466d7bcaab554f0d796091a04e2f9eb632d10017897f1744f9eebd",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "1168158eb50feb14a24ebc095f9f65a3d066914eb77bc2ead7d958e24d7218cd",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch22_production_optimization_theory.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 17.2,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch22_production_optimization_theory\\figures\\ch19_objective_function_landscape.png",
+          "sha256": "d9762e11af2136241b4aad50daa0e11eb595a72eb90409cb0fb19ce522cca2ea",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch22_production_optimization_theory\\figures\\ch19_sensitivity_tornado.png",
+          "sha256": "dc7f50c45b0db2bbf2c665161f6688be6217f2a396b7f4f12de065d1c4e887ed",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch23_neqsim_optimization_framework",
+      "number": 23,
+      "notebook": "chapters\\ch23_neqsim_optimization_framework\\notebooks\\ch25_optimization_framework.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Power-limited optimizer feasibility and independent grid search",
+      "limitations": "Independent search algorithm comparison uses the same EOS; unspecified mechanical constraints remain outside scope.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 9,
+      "distinct_check_labels": 383,
+      "evaluations": 3819,
+      "category_evaluations": {
+        "physical_domain": 2327,
+        "composition_balance": 1008,
+        "component_balance": 308,
+        "mass_balance": 84,
+        "energy_balance": 84,
+        "constraint_satisfaction": 1,
+        "figure_domain": 7
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "9ccb019b89ab3f87f2605358c6574c7dde768d0016cd2f460cf97a33e658830b",
+      "code_cell_sha256": [
+        "6c7057cc212cf33e39ba6119ebdafe07542319dccb2f4ece6c7e9e9e75324134",
+        "34d94a8a6bac59d096eb21e340fe4f9a2812c5b0913702fdaed50d9f54e7f25b",
+        "32dccb63afdf16bdbe9ec57d7ee3f86459e995eceb82da5b924267e7691dd397",
+        "a56be84e23244a58fb8eb401e11df36cbb5609ee8595c2cdba3c9beebd31a20f",
+        "da4ddbe551fce077f9abce58d01b04378eb757a4b3b095afa001b7fa4f66a741",
+        "00601ed156da0919f7d16101c8c780b2b22360464ff161b109df01a8eae672f2",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "65120dedce12e3630c313951e70abbfc4525da46c63bfe0aeb5f5650f63e9827",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch23_neqsim_optimization_framework.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 14.61,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch23_neqsim_optimization_framework\\figures\\ch25_utilization_vs_rate.png",
+          "sha256": "5a1eaad1489509fe292458c0d0f9a7d20449d2571238fb749e1dc6e9712f2939",
+          "series": 4,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch23_neqsim_optimization_framework\\figures\\ch25_feasibility_curve.png",
+          "sha256": "3925760d277f7652e2fc8bbb1bd1f5d313e90670482676ebedd7de9da4832a38",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch24_production_optimization",
+      "number": 24,
+      "notebook": "chapters\\ch24_production_optimization\\notebooks\\ch18_prod_optimization.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Manual and engine throughput feasibility",
+      "limitations": "Screening constraints are not a complete installed facility envelope.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 16,
+      "distinct_check_labels": 634,
+      "evaluations": 3330,
+      "category_evaluations": {
+        "physical_domain": 2043,
+        "composition_balance": 900,
+        "component_balance": 252,
+        "mass_balance": 72,
+        "energy_balance": 54,
+        "search_verification": 1,
+        "figure_domain": 8
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "be78b090e5be78d8b27fa9f08aced81a3daa82c2ce1b70b7f04132ccd01a3309",
+      "code_cell_sha256": [
+        "b5bca40728b9cb313b22f11db50f949665cfe9715c632ea1fe187d87d31efcf1",
+        "621053b485ebc2a170632f9499af7a2d6ea0af445a2ec3ef510aed6bbc84c15c",
+        "58089fd930148397dec98c10a8dca57f3eb4a5d66c6c03fae15e60a539cd7b86",
+        "7749e76c20a25aeaf080a209afaec5cbddf501420d43d196391cb1477255e486",
+        "f7db048934323ed771a6ef4e66f43324cab7f37841d5cf0eea62fbcc8f1ca151",
+        "827df1b52ffb9c2d31e960c4e22ef8815695a6abe190e1c3a0c17c8ed3b9001e",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "d711e70031b8f1d98808092e11a44a49b06777f4f052370dcd18e931591e0b82",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch24_production_optimization.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 17.44,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch24_production_optimization\\figures\\ch18_optimization_convergence.png",
+          "sha256": "e876baed70aae1a97fd19f39fb17baad4862814c22d9f25cccdf5f5ef37deca3",
+          "series": 6,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch24_production_optimization\\figures\\ch18_algorithm_comparison.png",
+          "sha256": "895712467ab6a4fc1905d3f05add75e8442693727ad7ef9ece348c6cfe7cee3a",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch25_utilization_monitoring",
+      "number": 25,
+      "notebook": "chapters\\ch25_utilization_monitoring\\notebooks\\ch26_utilization_monitoring.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Power utilization ratios",
+      "limitations": "Overloads are deliberately plotted; a positive value is not an acceptance decision.",
+      "code_cells": 7,
+      "explicit_notebook_assertions": 7,
+      "distinct_check_labels": 576,
+      "evaluations": 9612,
+      "category_evaluations": {
+        "physical_domain": 5817,
+        "composition_balance": 2496,
+        "component_balance": 816,
+        "mass_balance": 240,
+        "energy_balance": 240,
+        "figure_domain": 3
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "b00e758f5e2cd98922add923be7aff0535b73325437416c9d424b9a72263771c",
+      "code_cell_sha256": [
+        "85f6ac170f0c6b5136a1cd647b7414a8e7d2ac309168071b95da2a8ef0aa5b11",
+        "ffda65e5a750a33a51731b6a889eae21c48813fa4ce18ee5961fd50b2bcd9f4b",
+        "a5ce174e0607a842de6ab8fb0efd9f7ccdb00c6835dafda2506ed5cf2aac56eb",
+        "d11acfb8ab3625e3fdb5d0c8d5bb88f6cfdd6bee17171ff05bb24c16fd5cac13",
+        "18df27678240bc3523f010742fdebedffb930b01764c7d276a67cb489c107d7b",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "b30a16bc54d8be6aa5b7ba561c383213cf509ee3b2d6db04fef930cc6054a36b",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch25_utilization_monitoring.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 14.3,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch25_utilization_monitoring\\figures\\ch26_utilization_heatmap.png",
+          "sha256": "8ab3e2665610b860b676066093a8bb1d91b91296c61135ba965bf8be4b0681ac",
+          "series": 0,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch25_utilization_monitoring\\figures\\ch26_bottleneck_transition.png",
+          "sha256": "9b62a75adbdafbea03e4f5767aba47175e6c8da711471d363587d90ed7bd6c0d",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch26_well_network_optimization",
+      "number": 26,
+      "notebook": "chapters\\ch26_well_network_optimization\\notebooks\\ch27_well_network.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Network stream conservation and bounded rate response",
+      "limitations": "No independent multiwell production history; well response and boundary conditions are illustrative.",
+      "code_cells": 6,
+      "explicit_notebook_assertions": 8,
+      "distinct_check_labels": 820,
+      "evaluations": 30925,
+      "category_evaluations": {
+        "physical_domain": 19268,
+        "composition_balance": 8340,
+        "component_balance": 2270,
+        "mass_balance": 515,
+        "energy_balance": 515,
+        "justified_sensitivity": 1,
+        "figure_domain": 16
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [
+        "WellFlow: requires a domain-specific check rather than the generic steady-state balance"
+      ],
+      "notebook_sha256": "fa243f8b4a2907537aca67b286aa46bd0bb5559258d1ecf0cbce076f3a883d5a",
+      "code_cell_sha256": [
+        "06b115502076f86aa4f6b8e02576b895f3d0925ec0dee491d0432618b54f40e6",
+        "65b65aee0bfd8d6ff65cea925fa528105d040d2b6ce1ed2e7b8ce55bcbb9eb99",
+        "8f40b78b1f13c814333e24e42d15136017312951813476c523f4199504627129",
+        "94e5fe39970f4e4938e9f757a6f5d52723f063a6d3199b005a1a8dc13584f3bc",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "8a76a2f883451fa1098932539d3f69f4572fe8831914ed8adfeda793de5c4cc2",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch26_well_network_optimization.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 14.89,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch26_well_network_optimization\\figures\\ch27_manifold_pressure_sweep.png",
+          "sha256": "65834956b038ccb3eaffb2a3b18526e41e6f822b92b5e9e62f235d5b9fd27b8f",
+          "series": 6,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch26_well_network_optimization\\figures\\ch27_choke_sensitivity.png",
+          "sha256": "b9eba5cd422c94bc6a9033f096685705c0f1461045306a93dacd78ce9762fe1b",
+          "series": 4,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch27_multi_scenario_optimization",
+      "number": 27,
+      "notebook": "chapters\\ch27_multi_scenario_optimization\\notebooks\\ch28_multi_scenario.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Selected scenario constraint satisfaction",
+      "limitations": "Discrete scenario comparison is not a probability model or an uncertainty quantile.",
+      "code_cells": 7,
+      "explicit_notebook_assertions": 3,
+      "distinct_check_labels": 141,
+      "evaluations": 26003,
+      "category_evaluations": {
+        "physical_domain": 15926,
+        "composition_balance": 6954,
+        "component_balance": 2013,
+        "mass_balance": 549,
+        "energy_balance": 549,
+        "constraint_satisfaction": 3,
+        "figure_domain": 9
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "4536db9b21ac43abb76c0d716f43ddc1a76683e7eb47e8aa36b4fac93f6c6b7a",
+      "code_cell_sha256": [
+        "c1902a3bc3090a9595994ee549c86c4b1005e47af476fe9713e91184d11fbebf",
+        "268b0fd86f7b25ad9bbcd31581e650fe5fd25d5fbb7ed34a160d2ace992e35df",
+        "c711b9426db58c2e4478352b93fb1bd1429ecc882d67a746401fa05d24adbfc0",
+        "db2de9af34ffe73b08d078e22262a7feff1bc347a4388b64481f4fead7f2b1a8",
+        "da044dd6870d0ef59f1e721538f79452b6c81521903701dc73663c9fa474e934",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "f85bc3ac01a1f2fc70ecadd046d5968148a8264c15a35ed4f5c96ac658d79ae1",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch27_multi_scenario_optimization.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 14.31,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch27_multi_scenario_optimization\\figures\\ch28_scenario_utilization.png",
+          "sha256": "94b2508bea9acc7d7bf78a274a5b4cea127712068ca413c28cae3f66a0985260",
+          "series": 7,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch27_multi_scenario_optimization\\figures\\ch28_scenario_comparison.png",
+          "sha256": "d229dee56132fc1ec5a8dffaf723cbc72ada664469ca58dfc6116177c470f28b",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch28_field_development",
+      "number": 28,
+      "notebook": "chapters\\ch28_field_development\\notebooks\\ch19_field_development.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "VFP inverse-solution pressure residuals",
+      "limitations": "Measured VFP and thermal profiles are required for well prediction; analytic hydrostatics covers only a limit.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 10,
+      "distinct_check_labels": 103,
+      "evaluations": 3604,
+      "category_evaluations": {
+        "physical_domain": 2274,
+        "composition_balance": 1014,
+        "component_balance": 244,
+        "mass_balance": 61,
+        "boundary_condition": 1,
+        "figure_domain": 10
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "43f17bbd79d5a5963581230dadf8cf76acb144144afa142d5f8e27d202004c55",
+      "code_cell_sha256": [
+        "f92b7c23d6ee48beff00dfb9258ee8918033270ce67a95b836c64b73615186b4",
+        "e96cb18027bbd50c76be2dfa4b4b21c7fa8e3636fd8f7bc7d315900586ff194f",
+        "42af972dea65d90b08de7dd389d34e09418af623b3e1fcdb123ab6ebc112bc72",
+        "f6673e15efb2d62353f3f21c99cdf375b9180497b80b5c353513435202c4f8b7",
+        "36433ff2174a148204448e303399bf0591c697eff84f3324bebf1c107e62e2bd",
+        "587bbe8d50e4e5ff7e68aaeeb3c94b3ae9a37780c6fb0379cc8ecafe24e133bd",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "8c396e9881f523da15200517d7ccc7410a25c914f051e41a1b53c23688131710",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch28_field_development.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 57.17,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch28_field_development\\figures\\ch19_vfp_curves.png",
+          "sha256": "62b45e96b4ea7719a65c98b2d8f3a3cec4d774e8aaf3134d3f522e0d8dcc1f1f",
+          "series": 5,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch28_field_development\\figures\\ch19_vfp_surface.png",
+          "sha256": "e409c29e5d6e86504fde171a98fd71d49d3282d382b8b3566b81ca4dce19ecdd",
+          "series": 0,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch29_dynamic_simulation_and_control",
+      "number": 29,
+      "notebook": "chapters\\ch29_dynamic_simulation_and_control\\notebooks\\ch20_dynamic_simulation.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Lumped controller discrete inventory equation and actuator bounds",
+      "limitations": "Python lumped dynamics illustrate control; these are not NeqSim equipment transients or a calibrated plant response.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 3,
+      "distinct_check_labels": 124,
+      "evaluations": 154,
+      "category_evaluations": {
+        "physical_domain": 92,
+        "composition_balance": 38,
+        "component_balance": 9,
+        "mass_balance": 2,
+        "energy_balance": 2,
+        "analytic_identity": 1,
+        "figure_domain": 10
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "520216a4bd2f8b9a1435aea222ef9996a271dc66368695d4828fc147459da783",
+      "code_cell_sha256": [
+        "58a0d28e8da8f1b00dbeb36d3ef5e07fd7fc51f96614e3502b87d817630c9536",
+        "c9f9fd35f5494b0f3e406755f1cf093e865a6bf95a4b7fb80e789acb022e74bb",
+        "f4b2d450100f1c566453132c7f0a57c9ebc19cfec0a6873cf1496147b100e46e",
+        "337be2bcd3920ce92640393b4830e2b4b994e4ff2ad1f47d1a96f1ffb69c32eb",
+        "2a5c0b95573e13220846a20d91b964391544e4bf9f95728c70445afb94e7bb60",
+        "db7946c6b1459b164b0ef4a1dedd88461b5fdde8441d747ef9743ed136b2fb84",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "51d852f0261505fb53e32208fd1a5813ac9eec24044ae93272c5a37b72fa2c7e",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch29_dynamic_simulation_and_control.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 9.31,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch29_dynamic_simulation_and_control\\figures\\ch20_level_controller_response.png",
+          "sha256": "5446a750b1764c1172125afa2a04ba27670ba708991cc48ba4a1af1653c9f898",
+          "series": 5,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch29_dynamic_simulation_and_control\\figures\\ch20_pid_tuning_comparison.png",
+          "sha256": "9d7fcdb771b80eb71670a8e48d3904e22d9192a2410683dd261f345626d8d783",
+          "series": 5,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch30_digital_twins_and_automation",
+      "number": 30,
+      "notebook": "chapters\\ch30_digital_twins_and_automation\\notebooks\\ch21_digital_twins.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Synthetic measurement residual and normalization identities",
+      "limitations": "Noise-generated observations are not independent field validation or calibration.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 3,
+      "distinct_check_labels": 132,
+      "evaluations": 168,
+      "category_evaluations": {
+        "physical_domain": 102,
+        "composition_balance": 44,
+        "component_balance": 11,
+        "mass_balance": 3,
+        "energy_balance": 3,
+        "analytic_identity": 2,
+        "figure_domain": 3
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "67eeefb068ee8ad05d8daf8ac3c6bceae377a9801eaf616abcc79b21002c9d85",
+      "code_cell_sha256": [
+        "77e2c83ba8c47d23bc550e315c49fffabcb9f4e655ff64f4602c94b2ed91707a",
+        "468b3b79e8b55827470a297cdd0b2abbfb6992c78a3868184e9f0aa95b479258",
+        "691da31bff49affad16adaab23413f9a88cc385548714beb25cf7f849d9f81bf",
+        "04243217e0f0cf55e2ba3d183de18f8605102cf9f29a40aaf2947f6181ac9135",
+        "6a3e431a50afe48c54bb8e60085804830893cda03e188282c5c25458f3765f5a",
+        "3185a1c575e26403682cb3ea53b1b5c3a70410d1ae0ac610670d353cb853fcf5",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "575e1004b2a75bf2d9a82a3d0e3a3d9ec5ef6845b4f26eb6b66fb6536a6aeff4",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch30_digital_twins_and_automation.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 8.14,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch30_digital_twins_and_automation\\figures\\ch21_digital_twin_comparison.png",
+          "sha256": "a4fd8547d00cf8ff12f28d613e4b70740296331dff264195dd4797df4e5e2c8e",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch31_solver_methods",
+      "number": 31,
+      "notebook": "chapters\\ch31_solver_methods\\notebooks\\ch29_solver_methods.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Recycle residuals and achieved adjuster target",
+      "limitations": "Timing is machine-dependent. Convergence does not establish model accuracy.",
+      "code_cells": 10,
+      "explicit_notebook_assertions": 11,
+      "distinct_check_labels": 266,
+      "evaluations": 5251,
+      "category_evaluations": {
+        "physical_domain": 3251,
+        "composition_balance": 1470,
+        "component_balance": 366,
+        "mass_balance": 65,
+        "energy_balance": 65,
+        "solver_residual": 3,
+        "boundary_condition": 1,
+        "figure_domain": 30
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [
+        "Adjuster: requires a domain-specific check rather than the generic steady-state balance"
+      ],
+      "notebook_sha256": "83741ade8195fef503cdc71de5612114136d6500a9363fda4a786b7734785a0d",
+      "code_cell_sha256": [
+        "04c6904fa66fe7a74931b2fe86f37455d27a3de8942fcd2dff1305d2b0c4e758",
+        "18015d56af2664d330ed6729e59ee176645e75f4d219761374429ea3ae36bf89",
+        "8ac251b9acd6780be1382a4989d75c87fca2a17676d1588fd124cbe24b88d735",
+        "3b9536ffce3b150ca04a14ea0c09e6429b11700fcb73a38f4aaa18fecc40ebbc",
+        "bacabca36e2e4768ec2a9ba0bf5bb28d9ddce5fedf0acf422be02dee87ab8927",
+        "e43f3a910ce1ce5dc21cfcdf9c6abfc8622fede389d567a9a783e8a60be340d4",
+        "12c9e79b6cfa18d531838e8b0087150e5b1012cb9b7ec27f9f584cbdf9f47d0a",
+        "732b2a901d9dda98384ff2985616eee93cb8548a9c21b24bc7a59ad75fd200e0",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "65b60b2e42edffccb8e51024eb37725fdcfcac71b9be2b37d304c2ec296e912c",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch31_solver_methods.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 23.81,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch31_solver_methods\\figures\\ch29_flash_convergence.png",
+          "sha256": "5967f1f42a0c694620d8ac730fd084caefc67cc6d006e510314865e7286b1fcb",
+          "series": 6,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch31_solver_methods\\figures\\ch29_initial_guess_effect.png",
+          "sha256": "a83d9e5601b8a7c04633692ede8d811555fe7d618252a42870919154a2c6164f",
+          "series": 4,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch31_solver_methods\\figures\\ch29_recycle_convergence.png",
+          "sha256": "bd64b5191f2b115e35779b0ff6dd2a15edc3fad67ccccdfbf680107f780cdd25",
+          "series": 4,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch31_solver_methods\\figures\\ch29_component_scaling.png",
+          "sha256": "562d01bafded14c1b95105796b713011df2386d1e61b9755af9b11e68fc96b4d",
+          "series": 4,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch32_advanced_topics",
+      "number": 32,
+      "notebook": "chapters\\ch32_advanced_topics\\notebooks\\ch22_advanced_optimization.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Enumerated Pareto nondominance",
+      "limitations": "Efficiency is an assumed scenario/design input; tradeoffs are not an implementable optimal controller.",
+      "code_cells": 8,
+      "explicit_notebook_assertions": 7,
+      "distinct_check_labels": 189,
+      "evaluations": 2101,
+      "category_evaluations": {
+        "physical_domain": 1303,
+        "composition_balance": 520,
+        "component_balance": 174,
+        "mass_balance": 44,
+        "energy_balance": 44,
+        "search_verification": 10,
+        "figure_domain": 6
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "1d16097b649379bc8e109b8a39f262e3ef82d6dd564a0e8047e7fd56fcccc819",
+      "code_cell_sha256": [
+        "b066f6f4bb9266e111538b486fb470ceb3b88724db214fbc39635b857e844021",
+        "9c8cc759b69f68633fb3af661bd265784abb8814b2fdb3023367c2ce63bcffa5",
+        "0295ee054304bbb2a59e8ad2bb6f6e4f4a33f658700ab07d3f7a075224e6c23e",
+        "0ecd42ad3a1fcbf331251975ba948a23bdaaa6abbc5e2e0606c02d1d124dc3d7",
+        "24a3825fbcc40ec8b245007a74e5ab3ef13ec5930b4cedf407bc1d226864a4a7",
+        "2003f4583275b6c91c158c6bd448c9d23a2159d2173ed079ec4a98a59901fc3a",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "4743cd18869584afb98a939cd62deff37c0c3cd7878d00de3cc1e73c0a962f88",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch32_advanced_topics.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 7.95,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch32_advanced_topics\\figures\\ch22_pareto_front.png",
+          "sha256": "dbc44feee5a2bd05ca5bb14f64c457ce9dbb1f0e105b79c4e4aa22b5ced9d970",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch32_advanced_topics\\figures\\ch22_scenario_comparison.png",
+          "sha256": "a7fb43019fe632197cfb40bf0d4148d27cfc574c5d38912923328db38c7d98fe",
+          "series": 4,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch33_onshore_processing_plants",
+      "number": 33,
+      "notebook": "chapters\\ch33_onshore_processing_plants\\notebooks\\ch22_onshore_plant.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "TEG material balance, explicit energy reconstruction and compression",
+      "limitations": "Native SimpleTEGAbsorber has an energy residual after water transfer; reconstructed outlets close energy without validating stage mass transfer.",
+      "code_cells": 9,
+      "explicit_notebook_assertions": 7,
+      "distinct_check_labels": 411,
+      "evaluations": 2709,
+      "category_evaluations": {
+        "physical_domain": 1653,
+        "composition_balance": 694,
+        "component_balance": 230,
+        "mass_balance": 70,
+        "energy_balance": 58,
+        "justified_sensitivity": 1,
+        "figure_domain": 3
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "5678bc66bddb3f406eaaa04d843522bc961ee0a8407e4ef76eec0538a0836c80",
+      "code_cell_sha256": [
+        "c626337c3f3caa2e101ecdb6ae952b0be55a822c2e23ea7bd7d6b99bcaa6fe5a",
+        "7e3c57b3bd68244337845eb0f52a62d066d733cc70d8b5b35f0cc7d11b57c1a3",
+        "6ee832a8e6114614ba80d780b95065e1eb92231dbeee76917f1762db3a705843",
+        "34253a4b4cb5fe00f08622c532b2d02d77d7d592a669a6d59b3ccc280321a373",
+        "c34cd184c651096bccf7b0fdaab7cdf361b22234eb1282d154e43490cbf68b35",
+        "d81484db9739986e474b6d3e8fc56d6729b44a80b3d16381a852af29dd006afe",
+        "6d1aedb0b7cde8211a67ad53034396c9bc104c18ea6aa3571d1ad6e703db79d7",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "166ffcc26095592f1aefb79c4cacc12f63fe24698067450046d85b19bc9bacbf",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch33_onshore_processing_plants.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 19.83,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch33_onshore_processing_plants\\figures\\ch22_teg_water_content.png",
+          "sha256": "1e3a094e0d0425d3226cbf49c4248e269068516988a77651fab0a4e1133ab266",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch33_onshore_processing_plants\\figures\\ch22_compression_power.png",
+          "sha256": "9ccb8597cbbd7bfd4aefe847f3353e939964804ef6f28a5de46ae2497746694a",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch34_case_studies",
+      "number": 34,
+      "notebook": "chapters\\ch34_case_studies\\notebooks\\ch23_case_studies.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "Integrated process material/energy accounting",
+      "limitations": "Illustrative facility inputs lack plant calibration, operability and full equipment design evidence.",
+      "code_cells": 10,
+      "explicit_notebook_assertions": 3,
+      "distinct_check_labels": 428,
+      "evaluations": 530,
+      "category_evaluations": {
+        "physical_domain": 324,
+        "composition_balance": 142,
+        "component_balance": 37,
+        "mass_balance": 10,
+        "energy_balance": 10,
+        "analytic_identity": 2,
+        "figure_domain": 5
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "e892c2ffbf6b83e0c3e287dfb99678829a2f2434def00e28645fd13c0b87c27b",
+      "code_cell_sha256": [
+        "bd0def39787624e68f4bc67fa370096572c65e1f9b20b0cbd81432223b89cc7d",
+        "aee2b6bf273e0aaeb79e37ccfb9d449c39ee2696435ee30e43b3f9f7d1499540",
+        "42d4049a0b423d7ac958ee87752c908ea8614b153e0820cba21d4323baa7feb3",
+        "aa4fbc746206f16022d351b466948c2e8c7af163b06934cf741a1832b1976e2b",
+        "b1274d6f1f7b2779cf3bdf8d1dc8a410371bb29bd2f26fd1a1c1ab387614290b",
+        "7c2fd985847cc4d1e9a47a2ff4cde93663b5a9c83a8dcac001d03bfe2328909e",
+        "9d22cf3bf9ecbd28bff4a9118439821a29e2aa068fb51f94090b784da02a804a",
+        "88ceb4389ddaec701a126f11f30d85b6160cee9a4e634ffee7f0c30d7695c0f9",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "5f8c09d9df6226a8c3198004b0a80caddb454e0a2c7952337fc709c39c1da98b",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch34_case_studies.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 9.67,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch34_case_studies\\figures\\ch23_process_conditions.png",
+          "sha256": "a9a679e6145febe7f754dff8c83be631cbc602fd2b61eba7f9542bab77bdcede",
+          "series": 3,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch34_case_studies\\figures\\ch23_power_consumption.png",
+          "sha256": "100adc2166a4a06bd65aa9f6c39787f744311f0f04f744549c3c9c95ac66c634",
+          "series": 1,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    },
+    {
+      "chapter": "ch35_future_directions",
+      "number": 35,
+      "notebook": "chapters\\ch35_future_directions\\notebooks\\ch24_future_directions.ipynb",
+      "status": "passed_scoped_checks",
+      "scope": "CO2 PVT domains and hydrogen-mixture calorific trends",
+      "limitations": "Single-phase CO2 is not miscibility evidence; H2 Wobbe trends do not establish material compatibility or burner interchangeability.",
+      "code_cells": 7,
+      "explicit_notebook_assertions": 6,
+      "distinct_check_labels": 48,
+      "evaluations": 574,
+      "category_evaluations": {
+        "physical_domain": 369,
+        "composition_balance": 164,
+        "component_balance": 31,
+        "justified_sensitivity": 1,
+        "analytic_identity": 1,
+        "figure_domain": 8
+      },
+      "rejected_candidates": 0,
+      "uncovered_equipment": [],
+      "notebook_sha256": "5b1c6666336584203d751ad1af591d90314e4a79e8f2120854740e6fb4f46f49",
+      "code_cell_sha256": [
+        "6e4533f7cdbc5d04e4b3e0267687fd9285d053a1eb216d3961a322f5293f57a1",
+        "89510cf0d91ca8e70d4aad32fea40a105be8028be344c7cacbfe3c39a642cfef",
+        "836bc964ee5d0b8a588a8e0fb4a9f246fdb320ca5a244c724a9fee390b8e2318",
+        "0be2d6fc1997ec338abc5f0bafd627e947d1dfd57dd4cd38a656f8ec24723e9c",
+        "55bf9610af6e32770f78916664a5989bc2ae42b681f744b33df4bce6035ba375",
+        "3ffca0679c40accf754599f9ffe1690718ba77dec2893dddffaf0c7734a53342",
+        "23bef7b0b50d247cc7d41dc38e88dab7bb0dfe6935303d2feeac18cb8285b9fe"
+      ],
+      "physics_report_sha256": "b4c606f541e3cf18af376104f2b10d124e3c8b6db1728817ceb6adbabbf73c4e",
+      "physics_report": "verification\\scientific_revision\\notebooks\\ch35_future_directions.json",
+      "validation_helper_sha256": {
+        "notebook_physics_checks.py": "6a52910fc5bb6104f1d71147c6ac052a2c82c40736ee0c5013c9cc4d35596b01",
+        "chapter_specific_checks.py": "826b3db103a3ef54809a3f18cc959834a70944075632d58d7303535de3bf8f4d",
+        "teg_energy_reconstruction.py": "2a66befcfd23465467b873e43857ea8efc0ffacd7e9d497bcd5220eedf46fb44"
+      },
+      "runtime_seconds": 7.16,
+      "figure_coverage": [
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch35_future_directions\\figures\\ch35_co2_density_compressibility.png",
+          "sha256": "1b58f633ae9b4c19a4fafe32b82dcfe42cf70417b534dfa11e80399ea91a6b40",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        },
+        {
+          "path": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\production_optimization_oil_gas_2026\\chapters\\ch35_future_directions\\figures\\ch24_h2_blending_wobbe.png",
+          "sha256": "fc7b4add730689895badd01048bb66836515be7eb070b66ea50492b3ca6f7b36",
+          "series": 2,
+          "nonfinite_plotted_values": 0
+        }
+      ]
+    }
+  ]
+}
