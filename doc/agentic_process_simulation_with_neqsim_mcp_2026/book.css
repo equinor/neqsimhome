@@ -1,0 +1,9 @@
+/* Preserve native PaperLab structure and improve narrow-screen reading. */
+table code { overflow-wrap: anywhere; word-break: break-word; }
+table { display: block; max-width: 100%; overflow-x: auto; }
+pre { max-width: 100%; overflow-x: auto; }
+p, li { overflow-wrap: break-word; }
+@media (max-width: 768px) {
+  .table-wrapper { max-width: 100%; overflow-x: auto; }
+  .chapter p, .chapter li { text-align: left; }
+}

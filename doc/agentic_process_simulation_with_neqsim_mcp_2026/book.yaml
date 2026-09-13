@@ -1,0 +1,73 @@
+title: "Agentic Engineering for Oil and Gas Facility Operations"
+subtitle: "Connecting Data, Tools and NeqSim in Engineering Workflows"
+authors:
+- name: "Even Solbraa"
+  affiliation: "NeqSim Project"
+  email: "even.solbraa@gmail.com"
+edition: "1st"
+revision:
+  date: "2026-09-13"
+  source_commit: "9a95440e194a6fdc2890e4efafff647711beedce"
+  scope: "Industry-wide tool cooperation, current interface review and source-backed calculation checks"
+year: 2026
+publisher: "NeqSim Project and NTNU"
+language: en
+isbn: ''
+settings:
+  book_type: textbook
+  page_size: "176x250mm"
+  chapter_hero_images: false
+  custom_css: book.css
+  font_size: 10.5
+  code_font_size: 8
+  table_font_size: 9
+  line_spacing: 1.2
+  two_sided: true
+  chapter_numbering: true
+  equation_numbering: chapter
+frontmatter:
+- title_page
+- copyright
+- dedication
+- preface
+parts:
+- title: "Part I: The Agentic Engineering Workbench"
+  chapters:
+  - dir: ch01_new_era
+    title: "Agentic Engineering and the Facility Operations Challenge"
+  - dir: ch02_mcp_docker_copilot
+    title: "Connecting NeqSim MCP, Industry Tools, Agents, and Skills"
+  - dir: ch03_agents_skills
+    title: "Agents, Skills, and Engineering Memory"
+
+- title: "Part II: Data, Models, and Evidence"
+  chapters:
+  - dir: ch04_data_foundation
+    title: "Operational Data and Evidence Foundation"
+  - dir: ch05_modular_field_models
+    title: "From Modular Field Models to Equipment Studies"
+
+- title: "Part III: Industrial Studies, Operations, and Governance"
+  chapters:
+  - dir: ch07_safety_and_standards
+    title: "Safety, Standards, and Barrier Studies"
+  - dir: ch08_operational_workflows
+    title: "Operational Studies and Decision Workflows"
+  - dir: ch09_governance_and_quality
+    title: "Governance, Quality, and Adoption Roadmap"
+
+- title: "Part IV: Worked Patterns and Practical Playbooks"
+  chapters:
+  - dir: ch11_worked_field_case
+    title: "Worked Pattern: From Field Model to Recommendation"
+  - dir: ch12_playbooks_checklists
+    title: "Playbooks, Checklists, and Discipline Patterns"
+backmatter:
+- glossary
+- author_bio
+nomenclature:
+  file: nomenclature.yaml
+  position: after_toc
+bibliography:
+  style: numeric
+  file: refs.bib
