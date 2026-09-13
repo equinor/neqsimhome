@@ -1,3 +1,0 @@
-# Glossary
-
-Fixture glossary preserved.
