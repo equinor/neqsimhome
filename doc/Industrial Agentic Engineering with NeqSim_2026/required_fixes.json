@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.1",
+  "review_date": "2026-09-13",
+  "generated_at": "2026-09-13T13:50:54.763875+00:00",
+  "review_stage": "integrated_release",
+  "grade": "RELEASE",
+  "roles": [
+    "book_adversarial_reviewer.paperlab.md",
+    "book_author.paperlab.md"
+  ],
+  "skills": [
+    "paperlab_student_readability",
+    "paperlab_chapter_flow_editor",
+    "book_creation"
+  ],
+  "manuscript_chapters_reviewed": 13,
+  "review_scope": "All 13 current chapters manually read for correctness, reader flow and CLI consistency; source/evidence inspection and read-only native checks. No manuscript or rendered-output edits in this review pass.",
+  "required_fixes": [
+    {
+      "id": "ER13-01",
+      "severity": "minor",
+      "category": "content",
+      "status": "resolved",
+      "location": "Chapter 9, Figure 9.1 observation",
+      "finding": "The new conceptual discussion used measured-state labels for a comparison that uses NIST reference-model values.",
+      "required_action": "Use specified-state or evaluated-state labels; preserve the explicit distinction from measurements.",
+      "owner": "coordinating author"
+    },
+    {
+      "id": "ER13-02",
+      "severity": "release_gate",
+      "category": "provenance",
+      "status": "resolved",
+      "location": "references/SOURCES.md opening source snapshot and related current-edition manifests",
+      "finding": "The Sep12 source index cannot identify the newly reviewed Sep13 checkout by itself.",
+      "required_action": "Identify the current source commit and locally changed diagnostic files, retaining old reference retrieval and regression baseline dates as history.",
+      "owner": "coordinating release agent",
+      "resolution_evidence": [
+        "references/SOURCES.md",
+        "verification/artifact_freshness.json",
+        "verification/visual_review.json",
+        "verification/browser_checks.json"
+      ]
+    },
+    {
+      "id": "ER13-03",
+      "severity": "release_gate",
+      "category": "rendering_and_traceability",
+      "status": "resolved",
+      "location": "Native scientific/figure reports and final HTML/PDF/Word/EPUB package",
+      "finding": "Sep12 figure/API/claim and rendered-artifact passes do not certify the integrated Sep13 text, source and illustrations.",
+      "required_action": "Refresh native evidence and figure dossiers, current snippet/claim links and artifact hashes; render and inspect final editions before marking release passed.",
+      "owner": "coordinating release agent",
+      "resolution_evidence": [
+        "references/SOURCES.md",
+        "verification/artifact_freshness.json",
+        "verification/visual_review.json",
+        "verification/browser_checks.json"
+      ]
+    },
+    {
+      "id": "ER13-04",
+      "severity": "workflow_defect",
+      "category": "software",
+      "status": "resolved",
+      "location": "devtools/neqsim_doctor.py and devtools/test_neqsim_doctor.py",
+      "finding": "JAR selection used the first glob result, reporting a stale old shaded artifact after a successful current package build.",
+      "required_action": "Prefer current POM-version runtime artifacts, then modification time. Implemented with regression coverage and actual CLI verification.",
+      "evidence": "verification/doctor_selection_2026-09-13.json",
+      "owner": "editorial reviewer"
+    },
+    {
+      "id": "ER13-05",
+      "severity": "coverage",
+      "category": "content",
+      "status": "resolved",
+      "location": "Chapter 3.3",
+      "finding": "The model-family orientation omitted current GERG model-selection paths and EOS-CG.",
+      "required_action": "Short orientation integrated; source-linked derivative and validation limitations inspected against both Java commonInitialization methods.",
+      "owner": "coordinating author"
+    }
+  ],
+  "remaining_required_content_fixes": 0,
+  "final_render_status": "passed_for_primary_editions",
+  "historical_required_fixes": [
+    {
+      "id": "BR-01",
+      "priority": "high",
+      "status": "resolved_in_manuscript",
+      "locations": [
+        "chapters/*/chapter.md",
+        "figure_dossier.json",
+        "evidence_report.json"
+      ],
+      "finding": "All 18 figures have existing prose discussion but lack the native caption number, numbered nearby reference and recognised discussion integration; initial evidence report has 54 warnings.",
+      "action": "Integrate native figure syntax with the existing meaningful discussion and refresh scientific-review artifacts. Avoid double numbering in rendered captions.",
+      "acceptance": "Final strict book-evidence-check passes, or every remaining issue has an explicit justified disposition; figures and nearby discussions remain readable in final outputs.",
+      "resolution_evidence": [
+        "evidence_report.json: issue_count=0",
+        "figure_dossier.json: figure_count=18, no missing numbers, references or discussions"
+      ]
+    },
+    {
+      "id": "BR-02",
+      "priority": "medium",
+      "status": "resolved_in_manuscript",
+      "locations": [
+        "chapters/ch10/chapter.md:63",
+        "verify_examples.py",
+        "results.json"
+      ],
+      "finding": "Cooling duty magnitude exceeds compressor power and only separator mass closure is reported; the energy interpretation is incomplete for a learner.",
+      "action": "Add a verified whole-train enthalpy balance with all material outlets, declared heat/work sign convention and a short explanation of real-gas pressure-dependent enthalpy.",
+      "acceptance": "Computed balance residual and convention are recorded, checked against the same model basis and explained without claiming independent validation.",
+      "resolution_evidence": [
+        "chapters/ch10/chapter.md section 10.3",
+        "verify_examples.py: enthalpy_rate_kW, both material outlets and residual assertion",
+        "results.json: energy_balance_residual_kW=-5.684341886080802e-14 for base case"
+      ]
+    },
+    {
+      "id": "BR-03",
+      "priority": "medium",
+      "status": "resolved_in_manuscript",
+      "locations": [
+        "chapters/ch10/chapter.md:69"
+      ],
+      "finding": "The physical-estimate section gives an equation but no actual estimate.",
+      "action": "Add a numerical isentropic temperature estimate with a stated illustrative heat-capacity ratio and explain differences from the real-gas polytropic calculation.",
+      "acceptance": "Inputs, arithmetic, units, meaning and limitations of the estimate are explicit and checked.",
+      "resolution_evidence": [
+        "chapters/ch10/chapter.md section 10.4",
+        "303.15 * 2 ** (0.30 / 1.30) = 355.73453845040245 K (rounded 355.73 K)"
+      ]
+    },
+    {
+      "id": "BR-04",
+      "priority": "medium",
+      "status": "resolved_in_manuscript",
+      "locations": [
+        "chapters/ch11/chapter.md",
+        "chapters/ch10/chapter.md"
+      ],
+      "finding": "The printed pipe fragment could inherit an altered fluid state if a reader executes it after the compressor example.",
+      "action": "State that the Chapter 11 pipe calculation constructs a fresh dry fluid using the original 60 bara, 303.15 K running-case basis; it does not implicitly take the compressed outlet.",
+      "acceptance": "The manuscript case handoff and printed-example execution context match the notebook's fresh-object basis.",
+      "resolution_evidence": [
+        "chapters/ch11/chapter.md section 11.3: fresh SystemSrkEos(303.15,60.0), explicit dry composition and mixing rule"
+      ]
+    },
+    {
+      "id": "BR-05",
+      "priority": "medium",
+      "status": "resolved_in_manuscript",
+      "locations": [
+        "chapters/ch10/chapter.md:117",
+        "chapters/ch12/chapter.md:11",
+        "REVISION_NOTES.md"
+      ],
+      "finding": "Two textbook passages recount errors in an earlier draft instead of teaching the current material directly.",
+      "action": "Move retrospective detail to revision notes and retain concise present-tense instructions on flow basis and synthetic versus industrial evidence.",
+      "acceptance": "Chapters read independently of drafting history; the useful unit and evidence boundaries remain.",
+      "resolution_evidence": [
+        "chapters/ch10/chapter.md section 10.6: direct flow basis guidance",
+        "chapters/ch12/chapter.md section 12.1: direct industrial study scope",
+        "REVISION_NOTES.md"
+      ]
+    },
+    {
+      "id": "BR-06",
+      "priority": "medium",
+      "status": "resolved_in_manuscript",
+      "locations": [
+        "chapters/ch01_getting_started/chapter.md",
+        "chapters/ch03/chapter.md",
+        "chapters/ch07/chapter.md:126",
+        "chapters/ch12/chapter.md:57",
+        "backmatter/glossary.md"
+      ],
+      "finding": "Several essential model, runtime and industrial acronyms precede explanation; thermodynamic prerequisites are implicit.",
+      "action": "Add brief first-use expansions for SRK/JVM/JAR, GIP/STOIIP, P&ID/OCR/SIL where needed and a short Chapter 3 prerequisite bridge; align glossary entries.",
+      "acceptance": "A reader following the book in order can identify the important terms without assuming specialist shorthand knowledge.",
+      "resolution_evidence": [
+        "chapters/ch01_getting_started/chapter.md: SRK, JVM and JAR explanations",
+        "chapters/ch03/chapter.md: prerequisite bridge",
+        "chapters/ch07/chapter.md: GIP/STOIIP expanded",
+        "chapters/ch12/chapter.md: P&ID/OCR/SIL expanded",
+        "backmatter/glossary.md"
+      ]
+    }
+  ],
+  "historical_review_date": "2026-09-12",
+  "release_scope": "Current content review does not certify final render, current artifact freshness or field suitability.",
+  "chapter_sha256": {
+    "chapters/ch01_getting_started/chapter.md": "007d45b960838e766ea79a615a51582f8f4a1983fe8aa8f3dcaca30181935a24",
+    "chapters/ch02/chapter.md": "76e268822bfac743c4fcd12e6e73b43250c11fc807a4c28d243fadb638305eeb",
+    "chapters/ch03/chapter.md": "8a326f2790bfdb5f2279456e7afdb28be5a5ead98e5dd21a6975900b40a4a26d",
+    "chapters/ch04/chapter.md": "30800e776e6026ab53af37caeb2db51eacf609e90f45ddebf68f04e725294950",
+    "chapters/ch05/chapter.md": "8a88782b3d4be2c6a494c6e76813fd103adac59f32ea35f11d404dcbf725abfd",
+    "chapters/ch06/chapter.md": "69c667a40e79cdbf22d181b34c8983babd1b8572bc3114fc69e254c6cb715def",
+    "chapters/ch07/chapter.md": "766b64e842a5d5c19794fd4a5628e17b338584bcdcec2028744b9350afb3c680",
+    "chapters/ch08/chapter.md": "b7a5895ce03d615790623d69b87b5681c8ce2af4c39ee7d5875b5ccfdbf32a6b",
+    "chapters/ch09/chapter.md": "8f2b5e3d370da5ba76a33a48cd43ab9aaad166b3d6f60f39dd6ff11296bf416f",
+    "chapters/ch10/chapter.md": "649494bb9383e525833bfd78ddfa6f8be80ab8b22ed2587ae1dc1c73714ed88f",
+    "chapters/ch11/chapter.md": "867bad6e8acb60563da59902ffbbb1f496ebbf14fe69254c9df747e635e57cd0",
+    "chapters/ch12/chapter.md": "696a90b4ea2d8be62478cfc3729ab059a514dbc56fbb83ddfb872166a1ff42e7",
+    "chapters/ch13/chapter.md": "e80979ce5f9b5da7540ee514a3e3231c962296380b63aeaf943ddcfeeec4ea44"
+  },
+  "optional_improvements": [
+    "Add selected exercise self-checks in a future instructor supplement.",
+    "Use glossary expansions for EOS/PVT where early readers need them; no broad acronym rewrite is required.",
+    "Retain separate Chapters12 and13 and purposeful local reminders about units, evidence and output ownership."
+  ],
+  "integrated_at": "2026-09-13T16:09:04.683408+00:00",
+  "integrated_chapter_sha256": {
+    "chapters/ch01_getting_started/chapter.md": "24a0388c90d4ba2330a07581f2a0754807cadabc7ee9f756047e3e3ce6a904c9",
+    "chapters/ch02/chapter.md": "76e268822bfac743c4fcd12e6e73b43250c11fc807a4c28d243fadb638305eeb",
+    "chapters/ch03/chapter.md": "8a326f2790bfdb5f2279456e7afdb28be5a5ead98e5dd21a6975900b40a4a26d",
+    "chapters/ch04/chapter.md": "30800e776e6026ab53af37caeb2db51eacf609e90f45ddebf68f04e725294950",
+    "chapters/ch05/chapter.md": "c777deb38d371f80f4b76794efd1c4c116c2122a7a852bf4d5227c105e374716",
+    "chapters/ch06/chapter.md": "69c667a40e79cdbf22d181b34c8983babd1b8572bc3114fc69e254c6cb715def",
+    "chapters/ch07/chapter.md": "6b72a478c23b4d1b22d6a987074783bd18c844881c6ec086c8db2194e12b1b60",
+    "chapters/ch08/chapter.md": "b7a5895ce03d615790623d69b87b5681c8ce2af4c39ee7d5875b5ccfdbf32a6b",
+    "chapters/ch09/chapter.md": "8f2b5e3d370da5ba76a33a48cd43ab9aaad166b3d6f60f39dd6ff11296bf416f",
+    "chapters/ch10/chapter.md": "649494bb9383e525833bfd78ddfa6f8be80ab8b22ed2587ae1dc1c73714ed88f",
+    "chapters/ch11/chapter.md": "867bad6e8acb60563da59902ffbbb1f496ebbf14fe69254c9df747e635e57cd0",
+    "chapters/ch12/chapter.md": "696a90b4ea2d8be62478cfc3729ab059a514dbc56fbb83ddfb872166a1ff42e7",
+    "chapters/ch13/chapter.md": "e80979ce5f9b5da7540ee514a3e3231c962296380b63aeaf943ddcfeeec4ea44"
+  }
+}

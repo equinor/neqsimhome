@@ -21,7 +21,7 @@ Support related to the use and development of NeqSim is provided by the [Departm
 - [Hydrogen production](doc/hydrogen/book.html)
 - Open, scriptable & extensible  
 - Digital process twins & AI integration  
-- [Agentic Engineering](doc/agentic%20engineering/book.html)
+- Agentic Engineering ([HTML](doc/Industrial%20Agentic%20Engineering%20with%20NeqSim_2026/submission/book.html) / [PDF](doc/Industrial%20Agentic%20Engineering%20with%20NeqSim_2026/submission/book.pdf))
 - Agentic Engineering for Operation ([HTML](doc/agentic_process_simulation_with_neqsim_mcp_2026/submission/book.html) / [PDF](doc/agentic_process_simulation_with_neqsim_mcp_2026/submission/book.pdf))
 
 

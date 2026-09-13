@@ -1,0 +1,209 @@
+conventions:
+  equations: Use coherent SI units when evaluating equations directly.
+  API: The examples explicitly use K, bara, kg/hr and unit-aware result accessors.
+  temperature_differences: A difference of 1 K equals a difference of 1 degree C;
+    absolute temperature ratios require kelvin.
+  percentiles: Non-exceedance; do not interpret q10/q90 as petroleum exceedance P10/P90.
+symbols:
+  P:
+    description: Absolute pressure
+    unit: Pa
+    allowed_display_or_api_units:
+    - bara
+    - bar
+    - MPa
+  T:
+    description: Thermodynamic temperature
+    unit: K
+    allowed_display_or_api_units:
+    - C
+    - degrees C
+  v:
+    description: Molar volume
+    unit: m3/mol
+    allowed_display_or_api_units: []
+  R:
+    description: Molar gas constant
+    unit: J/(mol K)
+    allowed_display_or_api_units: []
+  b:
+    description: Cubic EOS co-volume parameter
+    unit: m3/mol
+    allowed_display_or_api_units: []
+  a(T):
+    description: Temperature-dependent cubic EOS attraction parameter
+    unit: Pa m6/mol2
+    allowed_display_or_api_units: []
+  z_i:
+    description: Overall component mole fraction
+    unit: '1'
+    allowed_display_or_api_units: []
+  x_i:
+    description: Liquid component mole fraction
+    unit: '1'
+    allowed_display_or_api_units: []
+  y_i:
+    description: Vapour component mole fraction
+    unit: '1'
+    allowed_display_or_api_units: []
+  K_i:
+    description: Phase-equilibrium ratio y_i/x_i
+    unit: '1'
+    allowed_display_or_api_units: []
+  beta:
+    description: Vapour mole fraction in the two-phase split
+    unit: '1'
+    allowed_display_or_api_units: []
+  rho:
+    description: Mass density
+    unit: kg/m3
+    allowed_display_or_api_units: []
+  delta_rho:
+    description: Relative density deviation reported in percent
+    unit: '1'
+    allowed_display_or_api_units:
+    - '%'
+  M:
+    description: Molar mass
+    unit: kg/mol
+    allowed_display_or_api_units: []
+  Z:
+    description: Compressibility factor
+    unit: '1'
+    allowed_display_or_api_units: []
+  k:
+    description: Ideal-gas heat-capacity ratio
+    unit: '1'
+    allowed_display_or_api_units: []
+  T_1:
+    description: Compressor inlet absolute temperature
+    unit: K
+    allowed_display_or_api_units: []
+  T_2s:
+    description: Idealised isentropic outlet absolute temperature
+    unit: K
+    allowed_display_or_api_units: []
+  P_1:
+    description: Compressor inlet absolute pressure
+    unit: Pa
+    allowed_display_or_api_units:
+    - bara
+  P_2:
+    description: Compressor outlet absolute pressure
+    unit: Pa
+    allowed_display_or_api_units:
+    - bara
+  r_stage:
+    description: Idealised stage pressure ratio
+    unit: '1'
+    allowed_display_or_api_units: []
+  N:
+    description: Number of compression stages or stated sample count
+    unit: '1'
+    allowed_display_or_api_units: []
+  P_out:
+    description: Final absolute pressure
+    unit: Pa
+    allowed_display_or_api_units:
+    - bara
+  P_in:
+    description: Initial absolute pressure
+    unit: Pa
+    allowed_display_or_api_units:
+    - bara
+  Delta P_f:
+    description: Frictional pressure drop
+    unit: Pa
+    allowed_display_or_api_units:
+    - bar
+  f_D:
+    description: Darcy friction factor; four times the Fanning factor
+    unit: '1'
+    allowed_display_or_api_units: []
+  L:
+    description: Pipe length
+    unit: m
+    allowed_display_or_api_units: []
+  D:
+    description: Pipe internal diameter
+    unit: m
+    allowed_display_or_api_units: []
+  u:
+    description: Mean flow velocity
+    unit: m/s
+    allowed_display_or_api_units: []
+  T_hydrate:
+    description: Model hydrate-equilibrium temperature
+    unit: K
+    allowed_display_or_api_units:
+    - C
+  T_fluid:
+    description: Fluid temperature
+    unit: K
+    allowed_display_or_api_units:
+    - C
+  mass_flow:
+    description: Mass flow rate
+    unit: kg/s
+    allowed_display_or_api_units:
+    - kg/hr
+    - kg/h
+  power:
+    description: Compressor power
+    unit: W
+    allowed_display_or_api_units:
+    - kW
+  duty:
+    description: Signed heat-transfer duty; negative for heat removed in the worked
+      case
+    unit: W
+    allowed_display_or_api_units:
+    - kW
+  eta_p:
+    description: Polytropic efficiency
+    unit: '1'
+    allowed_display_or_api_units: []
+  q10:
+    description: Non-exceedance 10th percentile of the stated output
+    unit: same as output
+    allowed_display_or_api_units: []
+  q50:
+    description: Non-exceedance median of the stated output
+    unit: same as output
+    allowed_display_or_api_units: []
+  q90:
+    description: Non-exceedance 90th percentile of the stated output
+    unit: same as output
+    allowed_display_or_api_units: []
+  q_p:
+    description: Non-exceedance quantile at cumulative probability p
+    unit: same as Y
+    allowed_display_or_api_units: []
+  p:
+    description: Cumulative probability
+    unit: '1'
+    allowed_display_or_api_units: []
+  Y:
+    description: Output random variable; units declared in each application
+    unit: as specified
+    allowed_display_or_api_units: []
+  h:
+    description: Specific enthalpy
+    unit: J/kg
+    allowed_display_or_api_units:
+    - kJ/kg
+  dot m:
+    description: Mass flow rate through an energy-balance boundary
+    unit: kg/s
+    allowed_display_or_api_units:
+    - kg/hr
+  dot Q_in:
+    description: Heat flow entering the control volume
+    unit: W
+    allowed_display_or_api_units:
+    - kW
+  dot W_in:
+    description: Work flow entering the control volume
+    unit: W
+    allowed_display_or_api_units:
+    - kW

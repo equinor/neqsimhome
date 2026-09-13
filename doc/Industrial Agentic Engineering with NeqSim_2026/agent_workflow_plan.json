@@ -1,0 +1,130 @@
+{
+  "date": "2026-09-13",
+  "workflow_type": "PaperLab specialist composition",
+  "authorization": "User explicitly requested book agents and skills in NeqSim PaperLab",
+  "book": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\Industrial Agentic Engineering with NeqSim_2026",
+  "source_commit": "9a95440e194a6fdc2890e4efafff647711beedce",
+  "agents": [
+    {
+      "task": "root",
+      "definitions": [
+        "agents/book_author.paperlab.md",
+        "agents/book_release_orchestrator.paperlab.md"
+      ],
+      "skills": [
+        "book_creation",
+        "neqsim_in_writing",
+        "paperlab_book_release_orchestration",
+        "paperlab_book_typesetting_release",
+        "paperlab_chapter_health_dashboard",
+        "imagegen"
+      ],
+      "role": "Integrate current-source manuscript, 14 image-generator assets, numerical evidence, native publishing, visual proofs and release"
+    },
+    {
+      "task": "paperlab_book_review",
+      "definitions": [
+        "agents/book_adversarial_reviewer.paperlab.md",
+        "agents/book_conciseness_editor.paperlab.md"
+      ],
+      "skills": [
+        "book_creation",
+        "paperlab_student_readability",
+        "paperlab_chapter_flow_editor",
+        "paperlab_chapter_health_dashboard"
+      ],
+      "outputs": [
+        "book_adversarial_review.md",
+        "required_fixes.json",
+        "learning_design_audit.md",
+        "chapter_flow_review.md",
+        "conciseness_restructure_plan.md",
+        "chapter_health_dashboard.json",
+        "coverage_matrix.md"
+      ]
+    },
+    {
+      "task": "paperlab_traceability",
+      "definitions": [
+        "agents/book_author.paperlab.md"
+      ],
+      "skills": [
+        "neqsim_in_writing",
+        "paperlab_scientific_traceability_audit"
+      ],
+      "role": "Current-source numerical and Java regression, isolated CLI verification, shared native renderer repairs and regression fixtures",
+      "outputs": [
+        "verification/computation_verification_2026-09-13.json",
+        "verification/cli_examples_2026-09-13.json",
+        "verification/renderer_tests_2026-09-13.json"
+      ]
+    },
+    {
+      "task": "paperlab_bibliography",
+      "definitions": [
+        "agents/book_author.paperlab.md"
+      ],
+      "skills": [
+        "book_creation",
+        "paperlab_book_typesetting_release"
+      ],
+      "role": "Community and core repository claims, bibliography metadata, source inventory and source/runtime skill improvements",
+      "outputs": [
+        "verification/repository_claim_review_2026-09-13.md",
+        "verification/bibliography_validation_2026-09-13.json",
+        "references/SOURCES.md",
+        "references/collection_manifest.json"
+      ]
+    }
+  ],
+  "sequence": [
+    "source and bibliography assessment",
+    "chapter and learning review",
+    "numerical/API/equation/figure verification",
+    "integrated corrections",
+    "frozen-baseline notebooks and book-specific Java tests",
+    "native strict checks",
+    "native staged book-build and EPUB render",
+    "page and responsive web review",
+    "freshness checks and companion packaging"
+  ],
+  "integration": {
+    "illustrations": "illustrations/imagegen_manifest_2026-09-13.json",
+    "scientific_traceability": "verification/scientific_traceability_audit.json",
+    "primary_visual_proofs": "verification/visual_review.json",
+    "release": "verification/release_gate_report.json"
+  },
+  "agent_configuration_followup": {
+    "date": "2026-09-13",
+    "coordinator": "book author and release coordinator",
+    "specialist": "paperlab_traceability",
+    "skills": [
+      "book_creation",
+      "neqsim_in_writing",
+      "paperlab_student_readability",
+      "paperlab_scientific_traceability_audit",
+      "paperlab_book_typesetting_release"
+    ],
+    "outputs": [
+      "verification/agent_configuration_revision_2026-09-13.json",
+      "verification/agent_execution_configuration_source_audit_2026-09-13.json"
+    ],
+    "scope": "Source/prose audit, YAML comparison, unchanged-computation comparison, current format proofs. No live AI-host or runner execution."
+  },
+  "enterprise_followup": {
+    "source_auditor": "paperlab_traceability",
+    "author": "root",
+    "skills": [
+      "book_creation",
+      "paperlab_student_readability",
+      "paperlab_scientific_traceability_audit",
+      "paperlab_book_typesetting_release",
+      "openai-docs"
+    ],
+    "evidence": [
+      "verification/enterprise_agent_source_audit_2026-09-13.json",
+      "verification/enterprise_host_documentation_review_2026-09-13.json"
+    ],
+    "live_host_execution": false
+  }
+}

@@ -1,0 +1,19 @@
+/* Book-specific reading layout. Loaded by PaperLab from settings.custom_css. */
+body { background: #f4f6f7; color: #233746; }
+main, .main-content { min-width: 0; }
+nav.sidebar { width: 265px; min-width: 265px; background: #f9fbfc; }
+nav.sidebar a { line-height: 1.45; }
+.chapter, .frontmatter, .backmatter { max-width: 860px; }
+p, li { line-height: 1.65; }
+main p { text-align: left; }
+h1, h2, h3 { text-wrap: balance; }
+img { max-width: 100%; height: auto; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .82em; line-height: 1.45; }
+code { overflow-wrap: anywhere; }
+table { display: block; overflow-x: auto; max-width: 100%; font-size: .90em; }
+th, td { padding: .65em .75em; line-height: 1.4; }
+figcaption, .figure-caption { font-size: .87em; line-height: 1.45; color: #536575; }
+a { overflow-wrap: anywhere; }
+@media(max-width: 900px) { nav.sidebar { display: none; } main { width: 100%; padding: 1.2rem; } }
+@media(max-width: 550px) { body { display: block; } main { padding: 1rem .85rem; } h1 { font-size: 1.8rem; } }
+@media print { nav.sidebar { display: none; } main { max-width: none; } }

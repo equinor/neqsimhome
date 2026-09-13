@@ -1,0 +1,87 @@
+title: "Industrial Agentic Engineering with NeqSim"
+subtitle: "Physics, Agents, Skills and Reproducible Engineering Workflows"
+authors:
+  - name: "Even Solbraa"
+    affiliation: "Equinor ASA / NTNU"
+    email: "even.solbraa@gmail.com"
+edition: "1st, updated 13 September 2026"
+year: 2026
+publisher: "Equinor ASA and NTNU"
+language: "en"
+isbn: ""
+revision:
+  date: "2026-09-13"
+  neqsim_release: "3.20.0"
+  source_commit: "9a95440e194a6fdc2890e4efafff647711beedce"
+  scope: "Release 3.20.0 plus explicitly identified source-snapshot developments"
+cover:
+  emblem: "network"
+settings:
+  book_type: "textbook"
+  page_size: "176x250mm"
+  font_family: "Libertinus Serif"
+  font_size: 10.5
+  code_font_size: 8
+  table_font_size: 9
+  line_spacing: 1.15
+  margins:
+    top: "19mm"
+    bottom: "20mm"
+    inner: "22mm"
+    outer: "18mm"
+  two_sided: true
+  toc_depth: 2
+  chapter_numbering: true
+  equation_numbering: "chapter"
+  chapter_hero_images: false
+  custom_css: "book.css"
+frontmatter:
+  - title_page
+  - copyright
+  - dedication
+  - preface
+parts:
+  - title: "Part I: Foundations"
+    chapters:
+      - dir: "ch01_getting_started"
+        title: "Getting Started"
+      - dir: "ch02"
+        title: "What Agentic Engineering Changes"
+      - dir: "ch03"
+        title: "The NeqSim Physics Engine"
+      - dir: "ch04"
+        title: "How Agents Use Skills and Tools"
+  - title: "Part II: The Agentic Platform"
+    chapters:
+      - dir: "ch05"
+        title: "Agents and Repositories"
+      - dir: "ch06"
+        title: "Building and Maintaining Skills"
+      - dir: "ch07"
+        title: "The Task Solving Workflow"
+      - dir: "ch08"
+        title: "MCP and Governed Calculation Services"
+  - title: "Part III: Worked Examples"
+    chapters:
+      - dir: "ch09"
+        title: "Thermodynamic Property Calculations"
+      - dir: "ch10"
+        title: "Process Simulation and Equipment Design"
+      - dir: "ch11"
+        title: "Flow Assurance and Pipeline Studies"
+  - title: "Part IV: Industrial Practice and Future Directions"
+    chapters:
+      - dir: "ch12"
+        title: "From Teaching Cases to Industrial Studies"
+      - dir: "ch13"
+        title: "The Future of Agentic Engineering"
+backmatter:
+  - glossary
+  - reproducibility
+  - author_bio
+bibliography:
+  style: "numeric"
+  file: "refs.bib"
+nomenclature:
+  file: "nomenclature.yaml"
+  format: "definitions"

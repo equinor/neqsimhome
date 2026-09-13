@@ -1,0 +1,939 @@
+{
+  "schema_version": "1.1",
+  "generated_at": "2026-09-13T13:50:54.763875+00:00",
+  "review_date": "2026-09-13",
+  "skill": "paperlab_chapter_health_dashboard",
+  "book_dir": "C:\\Users\\solbraa\\OneDrive - NTNU\\Documents\\GitHub\\neqsim\\neqsim-paperlab\\books\\Industrial Agentic Engineering with NeqSim_2026",
+  "source_commit": "9a95440e194a6fdc2890e4efafff647711beedce",
+  "overall": {
+    "content_status": "ready_with_stated_scope",
+    "content_ready_chapters": 13,
+    "release_class": "ready",
+    "render_status": "passed_for_primary_editions",
+    "confidence": "medium",
+    "required_content_fixes_remaining": 0,
+    "blocker_policy": "No weighted average: unresolved current rendering/evidence/API/computation gates withhold release.",
+    "reason": "Current PDF, Word and web proofs and hashes passed; secondary-format limitations remain explicit."
+  },
+  "counts": {
+    "chapters": 13,
+    "figures": 21,
+    "ai_generated_chapter_illustrations": 13,
+    "notebooks": 13,
+    "notebooks_passed": 13,
+    "printed_python_snippets": 11,
+    "printed_python_snippets_passed": 11,
+    "cli_commands": 50,
+    "cli_assertions": 17,
+    "current_native_structure_issues": 0,
+    "lecture_folders": 0,
+    "external_exercise_pdfs": 0,
+    "exam_pdfs": 0
+  },
+  "missing_audit_data": [
+    {
+      "artifact": "External curriculum and standalone formal accessibility conformance audit",
+      "effect": "No syllabus or accessibility certification; confidence remains bounded."
+    }
+  ],
+  "course_coverage": {
+    "status": "not_a_course_completeness_metric",
+    "evidence": "coverage_audit.md",
+    "interpretation": "Native coverage_audit has 0 lecture folders, 0 exam PDFs and 0 exercise PDFs. These source counts are not a course-completeness metric."
+  },
+  "fix_queue": [
+    {
+      "id": "ER13-03",
+      "severity": "release_gate",
+      "category": "rendering_and_traceability",
+      "status": "resolved",
+      "location": "Native scientific/figure reports and final HTML/PDF/Word/EPUB package",
+      "finding": "Sep12 figure/API/claim and rendered-artifact passes do not certify the integrated Sep13 text, source and illustrations.",
+      "required_action": "Refresh native evidence and figure dossiers, current snippet/claim links and artifact hashes; render and inspect final editions before marking release passed.",
+      "owner": "coordinating release agent",
+      "evidence": "verification/release_gate_report.json"
+    }
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "dir": "ch01_getting_started",
+      "title": "Getting Started",
+      "manuscript_sha256": "007d45b960838e766ea79a615a51582f8f4a1983fe8aa8f3dcaca30181935a24",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 1,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "24a0388c90d4ba2330a07581f2a0754807cadabc7ee9f756047e3e3ce6a904c9"
+    },
+    {
+      "number": 2,
+      "dir": "ch02",
+      "title": "What Agentic Engineering Changes",
+      "manuscript_sha256": "76e268822bfac743c4fcd12e6e73b43250c11fc807a4c28d243fadb638305eeb",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 1,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "76e268822bfac743c4fcd12e6e73b43250c11fc807a4c28d243fadb638305eeb"
+    },
+    {
+      "number": 3,
+      "dir": "ch03",
+      "title": "The NeqSim Physics Engine",
+      "manuscript_sha256": "8a326f2790bfdb5f2279456e7afdb28be5a5ead98e5dd21a6975900b40a4a26d",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 1,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "8a326f2790bfdb5f2279456e7afdb28be5a5ead98e5dd21a6975900b40a4a26d"
+    },
+    {
+      "number": 4,
+      "dir": "ch04",
+      "title": "How Agents Use Skills and Tools",
+      "manuscript_sha256": "30800e776e6026ab53af37caeb2db51eacf609e90f45ddebf68f04e725294950",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 1,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "30800e776e6026ab53af37caeb2db51eacf609e90f45ddebf68f04e725294950"
+    },
+    {
+      "number": 5,
+      "dir": "ch05",
+      "title": "Agents and Repositories",
+      "manuscript_sha256": "8a88782b3d4be2c6a494c6e76813fd103adac59f32ea35f11d404dcbf725abfd",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 1,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "c777deb38d371f80f4b76794efd1c4c116c2122a7a852bf4d5227c105e374716"
+    },
+    {
+      "number": 6,
+      "dir": "ch06",
+      "title": "Building and Maintaining Skills",
+      "manuscript_sha256": "69c667a40e79cdbf22d181b34c8983babd1b8572bc3114fc69e254c6cb715def",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 1,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "69c667a40e79cdbf22d181b34c8983babd1b8572bc3114fc69e254c6cb715def"
+    },
+    {
+      "number": 7,
+      "dir": "ch07",
+      "title": "The Task Solving Workflow",
+      "manuscript_sha256": "766b64e842a5d5c19794fd4a5628e17b338584bcdcec2028744b9350afb3c680",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 1,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "6b72a478c23b4d1b22d6a987074783bd18c844881c6ec086c8db2194e12b1b60"
+    },
+    {
+      "number": 8,
+      "dir": "ch08",
+      "title": "MCP and Governed Calculation Services",
+      "manuscript_sha256": "b7a5895ce03d615790623d69b87b5681c8ce2af4c39ee7d5875b5ccfdbf32a6b",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 1,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "b7a5895ce03d615790623d69b87b5681c8ce2af4c39ee7d5875b5ccfdbf32a6b"
+    },
+    {
+      "number": 9,
+      "dir": "ch09",
+      "title": "Thermodynamic Property Calculations",
+      "manuscript_sha256": "8f2b5e3d370da5ba76a33a48cd43ab9aaad166b3d6f60f39dd6ff11296bf416f",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 3,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "8f2b5e3d370da5ba76a33a48cd43ab9aaad166b3d6f60f39dd6ff11296bf416f"
+    },
+    {
+      "number": 10,
+      "dir": "ch10",
+      "title": "Process Simulation and Equipment Design",
+      "manuscript_sha256": "649494bb9383e525833bfd78ddfa6f8be80ab8b22ed2587ae1dc1c73714ed88f",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 4,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "649494bb9383e525833bfd78ddfa6f8be80ab8b22ed2587ae1dc1c73714ed88f"
+    },
+    {
+      "number": 11,
+      "dir": "ch11",
+      "title": "Flow Assurance and Pipeline Studies",
+      "manuscript_sha256": "867bad6e8acb60563da59902ffbbb1f496ebbf14fe69254c9df747e635e57cd0",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 3,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "867bad6e8acb60563da59902ffbbb1f496ebbf14fe69254c9df747e635e57cd0"
+    },
+    {
+      "number": 12,
+      "dir": "ch12",
+      "title": "From Teaching Cases to Industrial Studies",
+      "manuscript_sha256": "696a90b4ea2d8be62478cfc3729ab059a514dbc56fbb83ddfb872166a1ff42e7",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 2,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "696a90b4ea2d8be62478cfc3729ab059a514dbc56fbb83ddfb872166a1ff42e7"
+    },
+    {
+      "number": 13,
+      "dir": "ch13",
+      "title": "The Future of Agentic Engineering",
+      "manuscript_sha256": "e80979ce5f9b5da7540ee514a3e3231c962296380b63aeaf943ddcfeeec4ea44",
+      "content_status": "ready",
+      "release_class": "ready",
+      "render_status": "passed_for_primary_editions",
+      "confidence": "medium",
+      "main_blocker": null,
+      "next_fix": {
+        "owner": "future edition",
+        "action": "Optional external peer review and additional independent benchmarks"
+      },
+      "dimensions": {
+        "structure": {
+          "status": "ready",
+          "evidence": "verification/editorial_review_2026-09-13.json",
+          "native_issue_count": 0
+        },
+        "evidence": {
+          "status": "current_linkage_checked",
+          "evidence": "verification/scientific_traceability_audit.json"
+        },
+        "learning": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "learning_design_audit.md",
+            "chapter_flow_review.md",
+            "coverage_matrix.md"
+          ],
+          "scope": "Manual objectives/example/exercise review, not external syllabus certification."
+        },
+        "technical": {
+          "status": "ready_with_stated_scope",
+          "evidence": [
+            "verification/computation_verification_2026-09-13.json",
+            "verification/cli_examples_2026-09-13.json",
+            "verification/doctor_selection_2026-09-13.json"
+          ]
+        },
+        "computation": {
+          "status": "passed_recorded_execution",
+          "evidence": [
+            "verification/notebook_execution.json",
+            "verification/notebook_regression_audit.json",
+            "verification/snippet_verification.json"
+          ]
+        },
+        "figures": {
+          "status": "passed_for_primary_editions",
+          "count": 1,
+          "ai_generated_chapter_illustrations": 1,
+          "limitation": "Final PDF, Word and web visual review passed; no formal accessibility-conformance audit.",
+          "evidence": [
+            "figure_provenance.json",
+            "verification/visual_review.json",
+            "verification/browser_checks.json"
+          ]
+        },
+        "prose": {
+          "status": "ready_with_stated_scope",
+          "evidence": "verification/editorial_review_2026-09-13.json"
+        }
+      },
+      "integrated_manuscript_sha256": "e80979ce5f9b5da7540ee514a3e3231c962296380b63aeaf943ddcfeeec4ea44"
+    }
+  ],
+  "evidence_sha256": {
+    "verification/editorial_review_2026-09-13.json": "b995e32d575498fc506e5ab48712579af574bb074fa7de9e1413e02807baa578",
+    "verification/notebook_execution.json": "72012d92cc1023e16e02668f87fef9e2a9a3689392843447ad7317a1e19c380f",
+    "verification/notebook_regression_audit.json": "8e33aec4aa01fddf2d0c20c1a559b1364742a05c132bdeea10cf590c9ee9b979",
+    "verification/snippet_verification.json": "7c8bcc42fa755d53a12ed0baf57f3e48325c0552a88d10c831b4a220816b34a1",
+    "verification/computation_verification_2026-09-13.json": "c77bdaf94f76b8c8aceda6fba7bd979bdd5bd60eafbe451b3a53b29f946e6bf2",
+    "verification/cli_examples_2026-09-13.json": "cc5471084d231493db2e7955335dc138ce568ee7be19a90c6ee8be6d30d4634b"
+  },
+  "release_verified_at": "2026-09-13T16:09:04.699305+00:00"
+}
