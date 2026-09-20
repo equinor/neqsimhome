@@ -134,3 +134,39 @@ NeqSim Process Reinforcement Learning Agents is an open-source project that leve
 See the [NeqSim benchmark project](https://github.com/equinor/neqsim-benchmark).
 
 A benchmark of computational speed is published on the [benchmark page](/benchmark.html).
+
+---
+
+## How to Cite NeqSim
+If NeqSim contributes to a publication, report, or product, please cite it so the work can be traced and credited. The authoritative, machine-readable citation metadata is maintained in [`CITATION.cff`](https://github.com/equinor/neqsim/blob/master/CITATION.cff) in the main repository; GitHub renders this automatically as a **"Cite this repository"** button on the [equinor/neqsim](https://github.com/equinor/neqsim) page, which also lets you export the citation in APA, BibTeX, or other formats.
+
+**APA-style citation** (software):
+
+> Solbraa, E., & NeqSim contributors. (2026). *NeqSim: A library for thermodynamic and process simulation* (Version 3.21.0) [Computer software]. Equinor / NTNU. https://github.com/equinor/neqsim
+
+**BibTeX:**
+
+```bibtex
+@software{neqsim2026,
+  author       = {Solbraa, Even and {NeqSim contributors}},
+  title        = {NeqSim: A library for thermodynamic and process simulation},
+  year         = {2026},
+  version      = {3.21.0},
+  publisher    = {Equinor / NTNU},
+  url          = {https://github.com/equinor/neqsim},
+  license      = {Apache-2.0}
+}
+```
+
+When citing the thermodynamic models underlying NeqSim rather than the software itself, cite the originating academic work:
+
+```bibtex
+@phdthesis{solbraa2002,
+  author = {Solbraa, Even},
+  title  = {Equilibrium and non-equilibrium thermodynamics of natural gas systems},
+  school = {Norwegian University of Science and Technology},
+  year   = {2002}
+}
+```
+
+Always cite the specific NeqSim **version** used (see the `version` field above, or the release tag on [GitHub Releases](https://github.com/equinor/neqsim/releases)) so results remain reproducible as the library evolves. If you use one of the companion books or notebooks in this repository, cite the corresponding book/notebook in addition to the software itself; see each book's own references/bibliography section for its recommended citation.
