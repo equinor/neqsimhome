@@ -142,17 +142,17 @@ If NeqSim contributes to a publication, report, or product, please cite it so th
 
 **APA-style citation** (software):
 
-> Solbraa, E., & NeqSim contributors. (2026). *NeqSim: A library for thermodynamic and process simulation* (Version 3.21.0) [Computer software]. Equinor / NTNU. https://github.com/equinor/neqsim
+> Solbraa, E., & NeqSim Contributors. (2026). *NeqSim: A library for thermodynamic and process simulation* (Version 3.21.0) [Computer software]. Equinor. https://github.com/equinor/neqsim
 
 **BibTeX:**
 
 ```bibtex
 @software{neqsim2026,
-  author       = {Solbraa, Even and {NeqSim contributors}},
+  author       = {Solbraa, Even and {NeqSim Contributors}},
   title        = {NeqSim: A library for thermodynamic and process simulation},
   year         = {2026},
   version      = {3.21.0},
-  publisher    = {Equinor / NTNU},
+  publisher    = {Equinor},
   url          = {https://github.com/equinor/neqsim},
   license      = {Apache-2.0}
 }
