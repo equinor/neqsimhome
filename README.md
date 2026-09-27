@@ -9,25 +9,27 @@ Support related to the use and development of NeqSim is provided by the [Departm
 ---
 
 ## NeqSim — Key Capabilities
-- Advanced thermodynamics and property models  
-- Integrated process simulation  
-- PVT simulation  
-- Flow assurance & production chemistry  
-- Fluid flow & pipeline simulation  
-- Production optimization ([HTML](doc/production_optimization_oil_gas_2026/submission/book.html) / [PDF](doc/production_optimization_oil_gas_2026/submission/book.pdf))  
-- Risk-based process safety analysis  
-- Sustainability & emissions tracking  
+
+- Advanced thermodynamics and property models
+- Integrated process simulation
+- PVT simulation
+- Flow assurance & production chemistry
+- Fluid flow & pipeline simulation
+- Production optimization ([HTML](doc/production_optimization_oil_gas_2026/submission/book.html) / [PDF](doc/production_optimization_oil_gas_2026/submission/book.pdf))
+- Risk-based process safety analysis
+- Sustainability & emissions tracking
 - [Field development and operations](doc/field_development_and_operations/book_standalone.html)
 - [Hydrogen production](doc/hydrogen/book.html)
-- Open, scriptable & extensible  
-- Digital process twins & AI integration  
-- Agentic Engineering ([HTML](doc/Industrial%20Agentic%20Engineering%20with%20NeqSim_2026/submission/book.html) / [PDF](doc/Industrial%20Agentic%20Engineering%20with%20NeqSim_2026/submission/book.pdf))
+- Open, scriptable & extensible
+- Digital process twins & AI integration
+- Agentic Engineering ([HTML](<doc/Industrial%20Agentic%20Engineering%20with%20NeqSim_2026/submission/book.html>) / [PDF](<doc/Industrial%20Agentic%20Engineering%20with%20NeqSim_2026/submission/book.pdf>))
 - Agentic Engineering for Operation ([HTML](doc/agentic_process_simulation_with_neqsim_mcp_2026/submission/book.html) / [PDF](doc/agentic_process_simulation_with_neqsim_mcp_2026/submission/book.pdf))
-
+- Continuous Agentic Engineering - Goal Driven Live Engineering ([HTML](<doc/continous agentic engineering with neqsim/Continuous_Agentic_Engineering_with_NeqSim.html>) / [PDF](<doc/continous agentic engineering with neqsim/Continuous_Agentic_Engineering_with_NeqSim.pdf>))
 
 ---
 
 ## NeqSim Project on GitHub
+
 The NeqSim library is written in the Java programming language. The source code and libraries are hosted on GitHub.
 
 * [NeqSim Java](https://github.com/equinor/neqsim)
@@ -37,39 +39,43 @@ Also see the [experimental data and parameter fitting project](https://github.co
 ---
 
 ## NeqSim Toolboxes on GitHub
+
 NeqSim toolboxes are available on GitHub for alternative programming languages.
 
-* [NeqSim MATLAB](https://github.com/equinor/neqsimmatlab)  
-* [NeqSim Python](https://github.com/equinor/neqsimpython)  
-* [NeqSim .NET](https://github.com/equinor/neqsimNET)  
-* [NeqSim Excel/CAPE-OPEN](https://github.com/equinor/neqsimcapeopen)  
+* [NeqSim MATLAB](https://github.com/equinor/neqsimmatlab)
+* [NeqSim Python](https://github.com/equinor/neqsimpython)
+* [NeqSim .NET](https://github.com/equinor/neqsimNET)
+* [NeqSim Excel/CAPE-OPEN](https://github.com/equinor/neqsimcapeopen)
 * [NeqSim native compilation using GraalVM](https://github.com/equinor/neqsim-native)
 
 ---
 
 ## NeqSim User Documentation
+
 A comprehensive user manual is available for NeqSim, covering thermodynamic models, methods, and usage examples.
 
-* [NeqSim Documentation Page](https://equinor.github.io/neqsim/)  
-* [NeqSim User Manual (HTML)](https://equinor.github.io/neqsim/manual/neqsim_reference_manual.html)  
+* [NeqSim Documentation Page](https://equinor.github.io/neqsim/)
+* [NeqSim User Manual (HTML)](https://equinor.github.io/neqsim/manual/neqsim_reference_manual.html)
 * [API Documentation (Javadoc)](javadoc/site/apidocs/index.html)
 * [Process Modeling with NeqSim in Python](doc/neqsim-python/book_single.html)
 
 ---
 
 ## Getting Started
+
 NeqSim can be integrated into computer programs via interfaces in Java, Python, .NET, and MATLAB.
 
-* [Getting started using NeqSim in Java](https://github.com/equinor/neqsim/wiki/Getting-started-with-NeqSim-and-Github)  
-* [Getting started using NeqSim in MATLAB](https://github.com/equinor/neqsimmatlab/wiki/Getting-started-with-NeqSim-in-Matlab)  
-* [Getting started using NeqSim in Python](https://github.com/equinor/neqsimpython/wiki/Getting-started-with-NeqSim-in-Python)  
-* [Getting started using NeqSim in Excel](https://github.com/equinor/neqsim.NET/wiki/Getting-started-with-NeqSim-in-Excel)  
-* [Demo of NeqSim in Colab (Python)](https://colab.research.google.com/github/EvenSol/NeqSim-Colab/blob/master/notebooks/examples_of_NeqSim_in_Colab.ipynb)  
+* [Getting started using NeqSim in Java](https://github.com/equinor/neqsim/wiki/Getting-started-with-NeqSim-and-Github)
+* [Getting started using NeqSim in MATLAB](https://github.com/equinor/neqsimmatlab/wiki/Getting-started-with-NeqSim-in-Matlab)
+* [Getting started using NeqSim in Python](https://github.com/equinor/neqsimpython/wiki/Getting-started-with-NeqSim-in-Python)
+* [Getting started using NeqSim in Excel](https://github.com/equinor/neqsim.NET/wiki/Getting-started-with-NeqSim-in-Excel)
+* [Demo of NeqSim in Colab (Python)](https://colab.research.google.com/github/EvenSol/NeqSim-Colab/blob/master/notebooks/examples_of_NeqSim_in_Colab.ipynb)
 * [Getting started as a NeqSim developer](https://github.com/equinor/neqsim/wiki/Getting-started-as-a-NeqSim-developer)
 
 ---
 
 ## NeqSim Discussions
+
 Questions related to use and development can be asked on the [NeqSim GitHub Discussions](https://github.com/equinor/neqsim/discussions) page.
 
 ---
@@ -77,53 +83,62 @@ Questions related to use and development can be asked on the [NeqSim GitHub Disc
 ## Examples
 
 ### Java
-* [Thermodynamic calculations](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/thermo/util/example)  
-* [Calculation of physical properties](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/physicalProperties/util/examples)  
+
+* [Thermodynamic calculations](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/thermo/util/example)
+* [Calculation of physical properties](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/physicalProperties/util/examples)
 * [Process simulation](https://github.com/equinor/neqsim/tree/master/src/test/java/neqsim/processSimulation/util/example)
 
 ### MATLAB
+
 * [Thermodynamic and process calculations](https://github.com/equinor/neqsimmatlab/tree/master/example)
 
 ### Python
-* [Python examples](https://github.com/equinor/neqsimpython/tree/master/examples)  
-* [Notebook examples (Jupyter/Google Colab)](https://github.com/EvenSol/NeqSim-Colab)  
+
+* [Python examples](https://github.com/equinor/neqsimpython/tree/master/examples)
+* [Notebook examples (Jupyter/Google Colab)](https://github.com/EvenSol/NeqSim-Colab)
 * [NeqSim process project](https://github.com/equinor/neqsimprocess) — A project to build a library of prebuilt process models
 
 ### NeqSim.NET
+
 * [NeqSim .NET examples](https://github.com/equinor/neqsimNET/tree/master/examples)
 
 ### Excel/CAPE-OPEN
+
 * [NeqSim Excel user interface](https://github.com/equinor/neqsim.NET/wiki/Getting-started-with-NeqSim-in-Excel)
 
 ---
 
 ## NeqSim API
+
 NeqSim is well suited as a basis for developing APIs for thermodynamic and process calculations.
 
-* API development in [Java API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java) and [Python API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/python)  
+* API development in [Java API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/java) and [Python API](https://github.com/EvenSol/NeqSim-Colab/tree/master/API/python)
 * [Example of API usage from Python](https://github.com/EvenSol/NeqSim-Colab/blob/master/API/java/example/TEGprocess.ipynb)
 
 ---
 
 ## NeqSimLive
+
 NeqSimLive is a collection of container-based APIs used for simulation and performance monitoring of process plants. NeqSimLive APIs are typically consumed by company-specific tools for scheduling calculations, visualization, and data writing.
 
 Support for developing digital twin components for flow assurance, process, and transport can be requested from the [Energy and Process Technology group](https://www.ntnu.no/ansatte/even.solbraa) at NTNU.
 
-* [NeqSimLive Process Digital Twin API template](https://github.com/equinor/NeqSimLive-api-template)  
+* [NeqSimLive Process Digital Twin API template](https://github.com/equinor/NeqSimLive-api-template)
 * [NeqSimLive API components](https://github.com/equinor/NeqSimAPI)
 
 ---
 
 ## NeqSim Web Applications
+
 A web application has been developed to run calculations using NeqSim via a web interface. Calculations such as TPflash, dew points, phase envelopes, and hydrate equilibrium calculations can be performed in the web application. An alternative web interface is available via Google Colab (Python).
 
-* [NeqSim Streamlit Web application](https://github.com/equinor/neqsimweb2)  
+* [NeqSim Streamlit Web application](https://github.com/equinor/neqsimweb2)
 * [NeqSim Web on GitHub](https://github.com/equinor/neqsimweb)
 
 ---
 
 ## NeqSim AI
+
 NeqSim Process Reinforcement Learning Agents is an open-source project that leverages multi-agent reinforcement learning (RL) to optimize oil and gas processes simulated using the NeqSim package. The framework allows intelligent agents to control different process components — compressors, valves, pumps, and heat exchangers — to minimize emissions, CO₂ footprint, power consumption, and heat input while maintaining product quality and operational stability.
 
 * [NeqSim-Process-RL-Agents](https://github.com/equinor/NeqSim-Process-RL-Agents)
@@ -131,6 +146,7 @@ NeqSim Process Reinforcement Learning Agents is an open-source project that leve
 ---
 
 ## Benchmark
+
 See the [NeqSim benchmark project](https://github.com/equinor/neqsim-benchmark).
 
 A benchmark of computational speed is published on the [benchmark page](/benchmark.html).
@@ -138,6 +154,7 @@ A benchmark of computational speed is published on the [benchmark page](/benchma
 ---
 
 ## How to Cite NeqSim
+
 If NeqSim contributes to a publication, report, or product, please cite it so the work can be traced and credited. The authoritative, machine-readable citation metadata is maintained in [`CITATION.cff`](https://github.com/equinor/neqsim/blob/master/CITATION.cff) in the main repository; GitHub renders this automatically as a **"Cite this repository"** button on the [equinor/neqsim](https://github.com/equinor/neqsim) page, which also lets you export the citation in APA, BibTeX, or other formats.
 
 **APA-style citation** (software):
